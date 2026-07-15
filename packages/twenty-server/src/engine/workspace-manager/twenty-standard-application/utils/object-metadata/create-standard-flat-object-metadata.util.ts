@@ -1059,6 +1059,270 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
+  executiveProfile: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executiveProfile'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executiveProfile',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executiveProfile.universalIdentifier,
+        nameSingular: 'executiveProfile',
+        namePlural: 'executiveProfiles',
+        labelSingular: i18nLabel(msg`Executive Profile`),
+        labelPlural: i18nLabel(msg`Executive Profiles`),
+        description: i18nLabel(msg`Executive profile record`),
+        icon: 'IconUser',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  executiveCareer: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executiveCareer'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executiveCareer',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executiveCareer.universalIdentifier,
+        nameSingular: 'executiveCareer',
+        namePlural: 'executiveCareers',
+        labelSingular: i18nLabel(msg`Executive Career`),
+        labelPlural: i18nLabel(msg`Executive Careers`),
+        description: i18nLabel(msg`Executive career entry`),
+        icon: 'IconBriefcase',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  executiveEducation: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executiveEducation'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executiveEducation',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executiveEducation.universalIdentifier,
+        nameSingular: 'executiveEducation',
+        namePlural: 'executiveEducations',
+        labelSingular: i18nLabel(msg`Executive Education`),
+        labelPlural: i18nLabel(msg`Executive Educations`),
+        description: i18nLabel(msg`Executive education entry`),
+        icon: 'IconBook',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  executiveBoardService: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executiveBoardService'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executiveBoardService',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executiveBoardService.universalIdentifier,
+        nameSingular: 'executiveBoardService',
+        namePlural: 'executiveBoardServices',
+        labelSingular: i18nLabel(msg`Executive Board Service`),
+        labelPlural: i18nLabel(msg`Executive Board Services`),
+        description: i18nLabel(msg`Executive board service entry`),
+        icon: 'IconBuilding',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  executiveCapability: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executiveCapability'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executiveCapability',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executiveCapability.universalIdentifier,
+        nameSingular: 'executiveCapability',
+        namePlural: 'executiveCapabilities',
+        labelSingular: i18nLabel(msg`Executive Capability`),
+        labelPlural: i18nLabel(msg`Executive Capabilities`),
+        description: i18nLabel(msg`Executive capability entry`),
+        icon: 'IconStar',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  executiveLanguage: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executiveLanguage'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executiveLanguage',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executiveLanguage.universalIdentifier,
+        nameSingular: 'executiveLanguage',
+        namePlural: 'executiveLanguages',
+        labelSingular: i18nLabel(msg`Executive Language`),
+        labelPlural: i18nLabel(msg`Executive Languages`),
+        description: i18nLabel(msg`Executive language entry`),
+        icon: 'IconLanguage',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  executivePreference: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executivePreference'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executivePreference',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executivePreference.universalIdentifier,
+        nameSingular: 'executivePreference',
+        namePlural: 'executivePreferences',
+        labelSingular: i18nLabel(msg`Executive Preference`),
+        labelPlural: i18nLabel(msg`Executive Preferences`),
+        description: i18nLabel(msg`Executive preference entry`),
+        icon: 'IconSettings',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  executiveArtifact: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executiveArtifact'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executiveArtifact',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executiveArtifact.universalIdentifier,
+        nameSingular: 'executiveArtifact',
+        namePlural: 'executiveArtifacts',
+        labelSingular: i18nLabel(msg`Executive Artifact`),
+        labelPlural: i18nLabel(msg`Executive Artifacts`),
+        description: i18nLabel(msg`Executive artifact entry`),
+        icon: 'IconFile',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
 } satisfies {
   [P in AllStandardObjectName]: (
     args: Omit<CreateStandardObjectArgs<P>, 'context' | 'objectName'>,

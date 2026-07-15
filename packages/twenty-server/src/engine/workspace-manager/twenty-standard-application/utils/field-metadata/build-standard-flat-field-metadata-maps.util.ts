@@ -19,6 +19,14 @@ import { buildExternalSyncDLQStandardFlatFieldMetadatas } from 'src/engine/works
 import { buildExternalSyncInboxStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util';
 import { buildExternalSyncOutboxStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util';
 import { buildExternalSyncReconciliationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util';
+import { buildExecutiveArtifactStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-artifact-standard-flat-field-metadata.util';
+import { buildExecutiveBoardServiceStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-board-service-standard-flat-field-metadata.util';
+import { buildExecutiveCapabilityStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-capability-standard-flat-field-metadata.util';
+import { buildExecutiveCareerStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-career-standard-flat-field-metadata.util';
+import { buildExecutiveEducationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-education-standard-flat-field-metadata.util';
+import { buildExecutiveLanguageStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-language-standard-flat-field-metadata.util';
+import { buildExecutivePreferenceStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-preference-standard-flat-field-metadata.util';
+import { buildExecutiveProfileStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-profile-standard-flat-field-metadata.util';
 import { buildMessageCampaignStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util';
 import { buildMessageListStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-list-standard-flat-field-metadata.util';
 import { buildMessageListMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-list-member-standard-flat-field-metadata.util';
@@ -64,6 +72,18 @@ const STANDARD_FLAT_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   externalSyncOutbox: buildExternalSyncOutboxStandardFlatFieldMetadatas,
   externalSyncReconciliation:
     buildExternalSyncReconciliationStandardFlatFieldMetadatas,
+  executiveArtifact: buildExecutiveArtifactStandardFlatFieldMetadatas,
+  executiveBoardService:
+    buildExecutiveBoardServiceStandardFlatFieldMetadatas,
+  executiveCapability:
+    buildExecutiveCapabilityStandardFlatFieldMetadatas,
+  executiveCareer: buildExecutiveCareerStandardFlatFieldMetadatas,
+  executiveEducation:
+    buildExecutiveEducationStandardFlatFieldMetadatas,
+  executiveLanguage: buildExecutiveLanguageStandardFlatFieldMetadatas,
+  executivePreference:
+    buildExecutivePreferenceStandardFlatFieldMetadatas,
+  executiveProfile: buildExecutiveProfileStandardFlatFieldMetadatas,
   messageCampaign: buildMessageCampaignStandardFlatFieldMetadatas,
   messageList: buildMessageListStandardFlatFieldMetadatas,
   messageListMember: buildMessageListMemberStandardFlatFieldMetadatas,

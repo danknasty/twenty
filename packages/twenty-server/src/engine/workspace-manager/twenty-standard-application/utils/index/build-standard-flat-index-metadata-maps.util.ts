@@ -15,6 +15,14 @@ import { buildExternalSyncCheckpointStandardFlatIndexMetadatas } from 'src/engin
 import { buildExternalSyncInboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-inbox-standard-flat-index-metadata.util';
 import { buildExternalSyncOutboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-outbox-standard-flat-index-metadata.util';
 import { buildMessageCampaignStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-message-campaign-standard-flat-index-metadata.util';
+import { buildExecutiveArtifactStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-artifact-standard-flat-index-metadata.util';
+import { buildExecutiveBoardServiceStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-board-service-standard-flat-index-metadata.util';
+import { buildExecutiveCapabilityStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-capability-standard-flat-index-metadata.util';
+import { buildExecutiveCareerStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-career-standard-flat-index-metadata.util';
+import { buildExecutiveEducationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-education-standard-flat-index-metadata.util';
+import { buildExecutiveLanguageStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-language-standard-flat-index-metadata.util';
+import { buildExecutivePreferenceStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-preference-standard-flat-index-metadata.util';
+import { buildExecutiveProfileStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-profile-standard-flat-index-metadata.util';
 import { buildMessageListStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-message-list-standard-flat-index-metadata.util';
 import { buildMessageListMemberStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-message-list-member-standard-flat-index-metadata.util';
 import { buildMessageChannelMessageAssociationMessageFolderStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-message-channel-message-association-message-folder-standard-flat-index-metadata.util';
@@ -54,6 +62,18 @@ const STANDARD_FLAT_INDEX_METADATA_BUILDERS_BY_OBJECT_NAME = {
     buildExternalSyncCheckpointStandardFlatIndexMetadatas,
   externalSyncInbox: buildExternalSyncInboxStandardFlatIndexMetadatas,
   externalSyncOutbox: buildExternalSyncOutboxStandardFlatIndexMetadatas,
+  executiveArtifact: buildExecutiveArtifactStandardFlatIndexMetadatas,
+  executiveBoardService:
+    buildExecutiveBoardServiceStandardFlatIndexMetadatas,
+  executiveCapability:
+    buildExecutiveCapabilityStandardFlatIndexMetadatas,
+  executiveCareer: buildExecutiveCareerStandardFlatIndexMetadatas,
+  executiveEducation:
+    buildExecutiveEducationStandardFlatIndexMetadatas,
+  executiveLanguage: buildExecutiveLanguageStandardFlatIndexMetadatas,
+  executivePreference:
+    buildExecutivePreferenceStandardFlatIndexMetadatas,
+  executiveProfile: buildExecutiveProfileStandardFlatIndexMetadatas,
   messageCampaign: buildMessageCampaignStandardFlatIndexMetadatas,
   messageList: buildMessageListStandardFlatIndexMetadatas,
   messageListMember: buildMessageListMemberStandardFlatIndexMetadatas,

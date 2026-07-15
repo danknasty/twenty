@@ -2847,6 +2847,257 @@ export const STANDARD_OBJECTS = {
     },
     indexes: {},
   },
+  executiveProfile: {
+    universalIdentifier: '215b041f-e9ae-5eb6-b555-b6e430441d30',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '215b041f-e9ae-5eb6-b555-b6e430441d30',
+      ),
+      position: {
+        universalIdentifier: '3e0cdf83-e830-5a62-b25a-a3d29bc1e885',
+      },
+      personId: {
+        universalIdentifier: 'e59d5d76-149b-567d-bb34-0125de624faf',
+      },
+      status: {
+        universalIdentifier: 'f42b560b-f774-5c4d-80a5-5807b8e6513c',
+      },
+      source: {
+        universalIdentifier: '864d667b-df8e-59cc-ad75-5fb9153e842b',
+      },
+      sourceUpdatedAt: {
+        universalIdentifier: '4e781a11-ab75-5f14-ac16-65d814b23e8c',
+      },
+      atsUuid: {
+        universalIdentifier: '5f2d76b5-e624-545b-83fa-527cdd03dedf',
+      },
+      primaryEmail: {
+        universalIdentifier: '60c4b3ee-6b32-5d27-9ec3-d68d04582d4d',
+      },
+      linkedInUrl: {
+        universalIdentifier: '34327dbe-17d4-5e7a-b5ea-f26293c8b7ae',
+      },
+      claimedPrimaryEmail: {
+        universalIdentifier: '878861e5-0abe-59a8-a8fa-ea329862fb28',
+      },
+      verifiedFlags: {
+        universalIdentifier: 'f58caccb-b75f-57d2-8537-244e24572963',
+      },
+      displayNameOverride: {
+        universalIdentifier: '8c447f59-a94b-516c-b28b-1f5011875d8f',
+      },
+      mergeStatus: {
+        universalIdentifier: 'e6bab8b0-0924-52f3-8bd3-1941b9043abb',
+      },
+      mergeCandidatePersonId: {
+        universalIdentifier: '02039b56-828e-5bf7-bfe3-9126a32e051c',
+      },
+    },
+    indexes: {
+      personIdUniqueIndex: {
+        universalIdentifier: '121c74c3-1483-50b2-ab12-a07ec1c51a69',
+      },
+      atsUuidIndex: {
+        universalIdentifier: 'cfcda522-423c-5189-a2b3-4bf898ec8831',
+      },
+    },
+  },
+  executiveCareer: {
+    universalIdentifier: '324f08d3-4aa0-5639-b7bb-49cdd5e669fb',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '324f08d3-4aa0-5639-b7bb-49cdd5e669fb',
+      ),
+      position: {
+        universalIdentifier: '9ea074a8-176a-583b-a5e6-d6e6f2d6165f',
+      },
+      executiveProfileId: {
+        universalIdentifier: 'a6b8c1f8-66a1-5fe5-a09b-95cec1c71c7b',
+      },
+      companyName: {
+        universalIdentifier: '34436dff-a040-5644-beb6-1ccce2ecac70',
+      },
+      startDate: {
+        universalIdentifier: '5b3ebbd0-7d3f-59f1-a954-38568b34b141',
+      },
+      endDate: {
+        universalIdentifier: '9edef084-6610-5946-83b2-2304d64ab184',
+      },
+      description: {
+        universalIdentifier: 'e447586d-6277-5ba5-9718-875a0be2da57',
+      },
+    },
+    indexes: {
+      executiveProfileIdIndex: {
+        universalIdentifier: '1357b77d-d4e4-5783-a115-6a456ae8ee76',
+      },
+    },
+  },
+  executiveEducation: {
+    universalIdentifier: '572557cf-b6f9-537a-a59a-258e6d1860e9',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '572557cf-b6f9-537a-a59a-258e6d1860e9',
+      ),
+      executiveProfileId: {
+        universalIdentifier: 'af5b1995-9281-536b-9ee5-7449376cd1f4',
+      },
+      institution: {
+        universalIdentifier: '82ff773d-f7b5-5910-a867-7f98d98a615a',
+      },
+      degree: {
+        universalIdentifier: 'a2fe3561-a8d4-5bf5-9293-48b6cea755aa',
+      },
+      fieldOfStudy: {
+        universalIdentifier: '362c95eb-df15-5cae-b72d-955022a6647f',
+      },
+      startDate: {
+        universalIdentifier: '4d7319c8-f32e-5f53-ad47-73265e0cf7fc',
+      },
+      endDate: {
+        universalIdentifier: '51f88fa3-4187-596b-9f97-066a4dc9cc09',
+      },
+    },
+    indexes: {
+      executiveProfileIdIndex: {
+        universalIdentifier: 'fc96cf72-d97d-5e4e-b2b8-2ae6102a4567',
+      },
+    },
+  },
+  executiveBoardService: {
+    universalIdentifier: '3d13eeeb-f5f0-52a8-b4bb-d8d37a673611',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '3d13eeeb-f5f0-52a8-b4bb-d8d37a673611',
+      ),
+      executiveProfileId: {
+        universalIdentifier: '5453169f-da06-5c4c-bb3a-7dbf4ebbbc81',
+      },
+      organization: {
+        universalIdentifier: '6dc9aa38-d85f-59a4-a359-4ed16826c6cc',
+      },
+      role: {
+        universalIdentifier: '3129758d-f1f2-502f-b085-b52709690d81',
+      },
+      startDate: {
+        universalIdentifier: 'e2aca738-221a-5c3e-8b7b-8031d6f07eb1',
+      },
+      endDate: {
+        universalIdentifier: '1966b5a4-18a7-5c60-8ad5-cfc4b8809af1',
+      },
+    },
+    indexes: {
+      executiveProfileIdIndex: {
+        universalIdentifier: '46a1c8a4-18a7-5b7c-87d8-666ac3fa1657',
+      },
+    },
+  },
+  executiveCapability: {
+    universalIdentifier: '8a46e8c8-4718-5e89-b8c3-5f31194aac73',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '8a46e8c8-4718-5e89-b8c3-5f31194aac73',
+      ),
+      executiveProfileId: {
+        universalIdentifier: 'd0c094ac-945e-57b1-b606-2f9e4a80cfbc',
+      },
+      capability: {
+        universalIdentifier: '67d656a9-1b7f-5c7f-a2ad-ea74b83a2e3e',
+      },
+      level: {
+        universalIdentifier: 'baff9af8-e2af-516d-b7ed-a784c5f2797f',
+      },
+      verified: {
+        universalIdentifier: 'd23f8dd6-f3ca-565b-939b-8e8aa6ba9965',
+      },
+      notes: {
+        universalIdentifier: 'db3d18b9-5c34-5735-9645-71d61cef06f9',
+      },
+    },
+    indexes: {
+      executiveProfileIdIndex: {
+        universalIdentifier: '0e78afa0-4ae4-53fb-ae55-9aed86c2f654',
+      },
+    },
+  },
+  executiveLanguage: {
+    universalIdentifier: 'fa5b97bc-b734-59d4-9b94-8795828565b8',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'fa5b97bc-b734-59d4-9b94-8795828565b8',
+      ),
+      executiveProfileId: {
+        universalIdentifier: 'dc51c28c-f11d-5f3a-9a99-f3f79493298e',
+      },
+      language: {
+        universalIdentifier: '201b9d1d-0bfa-5d45-8231-31df7afd0a63',
+      },
+      proficiency: {
+        universalIdentifier: 'c310813a-d519-5085-a8af-b4f1bab1f918',
+      },
+    },
+    indexes: {
+      executiveProfileIdIndex: {
+        universalIdentifier: 'c60a172e-1aa1-5016-8ad2-1d03613f25ef',
+      },
+    },
+  },
+  executivePreference: {
+    universalIdentifier: 'c0b8f414-7f44-5d10-bdfe-23aa8dfafae5',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'c0b8f414-7f44-5d10-bdfe-23aa8dfafae5',
+      ),
+      executiveProfileId: {
+        universalIdentifier: 'd5f0016c-4698-5a4e-8430-5736e9dd1af3',
+      },
+      preferenceKey: {
+        universalIdentifier: '385186d3-7585-5f2b-8b60-d0db56b3fd40',
+      },
+      preferenceValue: {
+        universalIdentifier: '72a5a9da-dd39-5b12-b0ba-05acaba17e27',
+      },
+    },
+    indexes: {
+      executiveProfileIdIndex: {
+        universalIdentifier: '74f4747a-cbb2-5480-858b-6048aa712f99',
+      },
+    },
+  },
+  executiveArtifact: {
+    universalIdentifier: '2d121561-50ba-5af3-b3b2-1b6f8e7a7c59',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '2d121561-50ba-5af3-b3b2-1b6f8e7a7c59',
+      ),
+      executiveProfileId: {
+        universalIdentifier: 'bfde4f9c-9fb7-5c8b-a217-a318d6407116',
+      },
+      artifactType: {
+        universalIdentifier: '1ac5554b-6162-579a-8f2a-fbbce05dbb34',
+      },
+      title: {
+        universalIdentifier: 'd0f97027-da92-5768-88d8-eef27f57a547',
+      },
+      url: {
+        universalIdentifier: '30dab162-279e-5601-82c6-be2afe5a48fd',
+      },
+      fileId: {
+        universalIdentifier: '10a828c5-a115-583c-a1fd-3330bb5c3b55',
+      },
+      source: {
+        universalIdentifier: '2000f027-8b6b-57af-9667-1c64c3f6d3ec',
+      },
+      retrievedAt: {
+        universalIdentifier: 'ae2d079b-7782-5182-a419-cc2761bc5023',
+      },
+    },
+    indexes: {
+      executiveProfileIdIndex: {
+        universalIdentifier: '3e922c94-64e8-5687-aaf7-6c5fabd4fd35',
+      },
+    },
+  },
 } as const satisfies Record<
   string,
   {

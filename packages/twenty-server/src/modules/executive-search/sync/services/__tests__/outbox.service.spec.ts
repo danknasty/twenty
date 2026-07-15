@@ -20,9 +20,7 @@ const createMockOrmManager = (
   mockRepo: ReturnType<typeof createMockRepository>,
 ) => ({
   getRepository: jest.fn().mockResolvedValue(mockRepo),
-  executeInWorkspaceContext: jest.fn(
-    async (fn: () => unknown) => await fn(),
-  ),
+  executeInWorkspaceContext: jest.fn(async (fn: () => unknown) => await fn()),
 });
 
 describe('ExecutiveSearchOutboxService', () => {

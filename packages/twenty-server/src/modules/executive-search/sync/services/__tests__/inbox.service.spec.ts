@@ -17,9 +17,7 @@ const createMockOrmManager = (
   mockRepo: ReturnType<typeof createMockRepository>,
 ) => ({
   getRepository: jest.fn().mockResolvedValue(mockRepo),
-  executeInWorkspaceContext: jest.fn(
-    async (fn: () => unknown) => await fn(),
-  ),
+  executeInWorkspaceContext: jest.fn(async (fn: () => unknown) => await fn()),
 });
 
 describe('ExecutiveSearchInboxService', () => {
@@ -71,7 +69,10 @@ describe('ExecutiveSearchInboxService', () => {
     it('should persist a new inbox entry', async () => {
       inboxRepo.findOneBy.mockResolvedValue(null);
       inboxRepo.create.mockReturnValue({ id: 'in-1' });
-      inboxRepo.save.mockResolvedValue({ id: 'in-1', status: INBOX_STATUS.PENDING });
+      inboxRepo.save.mockResolvedValue({
+        id: 'in-1',
+        status: INBOX_STATUS.PENDING,
+      });
 
       const result = await service.receive(baseInput);
 
@@ -142,7 +143,10 @@ describe('ExecutiveSearchInboxService', () => {
 
   describe('isEcho', () => {
     it('should return true when eventId exists in outbox', async () => {
-      outboxRepo.findOneBy.mockResolvedValue({ id: 'out-1', eventId: 'ext-ev-1' });
+      outboxRepo.findOneBy.mockResolvedValue({
+        id: 'out-1',
+        eventId: 'ext-ev-1',
+      });
 
       const result = await service.isEcho('ws-1', 'ext-ev-1');
 

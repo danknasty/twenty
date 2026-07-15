@@ -9,7 +9,11 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stringifyCanonicalJson } from './lib/canonical-json.mjs';
 import { readCsv } from './lib/csv.mjs';
-import { SENTINEL } from './lib/constants.mjs';
+import {
+  SENTINEL,
+  VALID_AUTHORITIES,
+  VALID_DISPOSITIONS,
+} from './lib/constants.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..'); // docs/executive-search/
@@ -39,22 +43,8 @@ function buildInventory() {
     );
   }
 
-  const dispositions = [
-    'MAPPED',
-    'REFERENCE_ONLY',
-    'PORTAL_ONLY',
-    'LEGACY',
-    'OUT_OF_SCOPE',
-  ];
-  const authorities = [
-    'DIRECTUS_AUTHORITATIVE',
-    'TWENTY_AUTHORITATIVE',
-    'APPEND_ONLY_BOTH_WITH_SHARED_IDEMPOTENCY',
-    'DERIVED_IN_TWENTY_FROM_DIRECTUS',
-    'DERIVED_IN_DIRECTUS_FROM_TWENTY',
-    'REFERENCE_ONLY_NO_REPLICATION',
-    'NOT_ALLOWED_TO_SYNC',
-  ];
+  const dispositions = VALID_DISPOSITIONS;
+  const authorities = VALID_AUTHORITIES;
 
   const dispCounts = Object.fromEntries(dispositions.map((d) => [d, 0]));
   const authCounts = Object.fromEntries(authorities.map((a) => [a, 0]));

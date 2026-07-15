@@ -112,7 +112,7 @@ describe('Collection map', () => {
       const cells = parseCsvLine(lines[i]);
       for (const cell of cells) {
         const t = cell.trim();
-        if (t && /^[=+\-@\t\r]/.test(t) && !t.match(/^-?\d/)) {
+        if (t && /^[=+\-@\t\r]/.test(t) && !t.match(/^-?\d+(\.\d+)?$/)) {
           assert.fail(
             `CSV formula injection at line ${i + 1}: "${t.substring(0, 20)}"`,
           );

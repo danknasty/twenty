@@ -74,7 +74,10 @@ function main() {
     const existingMatrixHash = existing.sources?.find(
       (s) => s.logicalName === 'directus-compatibility-matrix',
     )?.sha256;
-    if (existingMatrixHash === matrixHash) {
+    const existingPromptHash = existing.sources?.find(
+      (s) => s.logicalName === 'directus-master-prompt',
+    )?.sha256;
+    if (existingMatrixHash === matrixHash && existingPromptHash === promptHash) {
       console.log('Source hashes unchanged — re-bootstrap not needed.');
       console.log('To force, delete sources/source-manifest.json first.');
       return;

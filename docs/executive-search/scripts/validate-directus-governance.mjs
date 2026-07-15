@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 // validate-directus-governance.mjs — validates all governance artifacts.
 // Checks: collection count, set equality, authority enums, sentinel usage,
-// CSV formula safety, denylist intersections, object-family ownership,
-// local link resolution, and inventory JSON validity.
+// CSV formula safety, object-family ownership, and inventory JSON validity.
+// Note: denylist intersection and local-link-resolution checks are
+// deferred until later phases when candidate-facing and client
+// collaboration boundaries are implemented.
 
 import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -32,7 +34,7 @@ function checkCsvFormulaSafe(path) {
     const cells = parseCsvLine(lines[i]);
     for (const cell of cells) {
       const trimmed = cell.trim();
-      if (trimmed && /^[=+\-@\t\r]/.test(trimmed) && !trimmed.match(/^-?\d/)) {
+      if (trimmed && /^[=+\-@\t\r]/.test(trimmed) && !trimmed.match(/^-?\d+(\.\d+)?$/)) {
         errors.push(
           `CSV formula injection risk in ${path}:${i + 1}: cell starts with dangerous char: "${trimmed.substring(0, 20)}"`,
         );

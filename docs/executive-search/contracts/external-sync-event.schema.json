@@ -25,13 +25,13 @@
     "sourceSystem": { "enum": ["DIRECTUS", "TWENTY"] },
     "sourceCollection": { "type": "string", "minLength": 1 },
     "sourceRecordId": { "type": "string", "minLength": 1 },
-    "sourceUpdatedAt": { "type": "string" },
+    "sourceUpdatedAt": { "type": "string", "format": "date-time" },
     "sourceHash": { "type": ["string", "null"] },
     "workspaceKey": { "type": "string", "minLength": 1 },
     "correlationId": { "type": "string", "minLength": 1 },
     "causationId": { "type": ["string", "null"] },
     "idempotencyKey": { "type": "string", "minLength": 1 },
-    "occurredAt": { "type": "string" },
+    "occurredAt": { "type": "string", "format": "date-time" },
     "actor": {
       "type": ["object", "null"],
       "properties": {

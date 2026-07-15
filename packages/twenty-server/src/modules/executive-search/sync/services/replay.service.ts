@@ -1,5 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 
+import { LessThan, IsNull } from 'typeorm';
+
 import { buildSystemAuthContext } from 'src/engine/twenty-orm/utils/build-system-auth-context.util';
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { ExternalSyncOutboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-outbox.workspace-entity';
@@ -39,8 +41,13 @@ export class ExecutiveSearchReplayService {
         { shouldBypassPermissionChecks: true },
       );
 
+      const now = new Date().toISOString();
+
       return repository.find({
-        where: { status: 'PENDING' },
+        where: [
+          { status: 'PENDING', nextRetryAt: IsNull() },
+          { status: 'PENDING', nextRetryAt: LessThan(now) },
+        ],
         order: { createdAt: 'ASC' },
         take: ExecutiveSearchReplayService.MAX_BATCH_SIZE,
       });

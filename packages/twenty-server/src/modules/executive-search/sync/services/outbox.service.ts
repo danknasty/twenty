@@ -1,5 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 
+import { LessThan, IsNull } from 'typeorm';
 import { v4 } from 'uuid';
 
 import { InjectMessageQueue } from 'src/engine/core-modules/message-queue/decorators/message-queue.decorator';
@@ -58,7 +59,11 @@ export class ExecutiveSearchOutboxService {
         { shouldBypassPermissionChecks: true },
       );
 
-      // Deduplicate by domain idempotency key
+      // Deduplicate by domain idempotency key.
+      // The unique index on domainIdempotencyKey provides the true guard;
+      // the pre-check is an optimisation to avoid a constraint error in
+      // the common case.  When two concurrent enqueues race past the
+      // pre-check we catch the unique-violation and return the winner.
       const existing = await repository.findOneBy({
         domainIdempotencyKey: input.domainIdempotencyKey,
       });
@@ -85,21 +90,42 @@ export class ExecutiveSearchOutboxService {
         nextRetryAt: null,
       });
 
-      const saved = await repository.save(entity);
+      try {
+        const saved = await repository.save(entity);
 
-      // Enqueue for async processing
-      await this.messageQueueService.add(
-        ExecutiveSyncProcessOutboxJob.name,
-        {
-          workspaceId: input.workspaceId,
-          outboxId: saved.id,
-        },
-        {
-          retryLimit: 3,
-        },
-      );
+        // Only enqueue when this call actually created the row
+        await this.messageQueueService.add(
+          ExecutiveSyncProcessOutboxJob.name,
+          {
+            workspaceId: input.workspaceId,
+            outboxId: saved.id,
+          },
+          {
+            retryLimit: 3,
+          },
+        );
 
-      return saved;
+        return saved;
+      } catch (error: any) {
+        // Unique constraint violation — another concurrent call won.
+        // PostgreSQL error code 23505, SQLite SQLITE_CONSTRAINT.
+        if (
+          error?.code === '23505' ||
+          error?.message?.includes?.('UNIQUE constraint') ||
+          error?.message?.includes?.('SQLITE_CONSTRAINT')
+        ) {
+          const winner = await repository.findOneBy({
+            domainIdempotencyKey: input.domainIdempotencyKey,
+          });
+
+          this.logger.debug(
+            `Outbox event already exists for key "${input.domainIdempotencyKey}" (race resolved)`,
+          );
+          return winner ?? null;
+        }
+
+        throw error;
+      }
     }, authContext);
   }
 
@@ -180,8 +206,8 @@ export class ExecutiveSearchOutboxService {
 
       return repository.find({
         where: [
-          { status: OUTBOX_STATUS.PENDING, nextRetryAt: null },
-          { status: OUTBOX_STATUS.PENDING, nextRetryAt: { $lt: now } } as any,
+          { status: OUTBOX_STATUS.PENDING, nextRetryAt: IsNull() },
+          { status: OUTBOX_STATUS.PENDING, nextRetryAt: LessThan(now) },
         ],
         order: { createdAt: 'ASC' },
         take: limit,

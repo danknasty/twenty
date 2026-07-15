@@ -18,6 +18,7 @@ import {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
+process.chdir(ROOT); // stable CSV reads regardless of invocation cwd
 
 function readJson(path) {
   return JSON.parse(readFileSync(join(ROOT, path), 'utf8'));

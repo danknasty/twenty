@@ -17,16 +17,8 @@ import { computeTwentyStandardApplicationAllFlatEntityMaps } from 'src/engine/wo
 import { WorkspaceMigrationValidateBuildAndRunService } from 'src/engine/workspace-manager/workspace-migration/services/workspace-migration-validate-build-and-run-service';
 
 const EXECUTIVE_OBJECT_NAMES = [
-  'executiveProfile',
-  'executiveCareerExperience',
-  'executiveEducation',
-  'executiveBoardService',
-  'executiveCapability',
-  'executiveLanguage',
-  'executiveArtifact',
-  'executiveAward',
-  'executiveExternalProfile',
-  'executiveSearchPreference',
+  // Child executive objects (careerExperience, education, etc.) will be added
+  // in a follow-up phase once their standard-object definitions land.
 ] as const satisfies (keyof typeof STANDARD_OBJECTS)[];
 
 const EXECUTIVE_OBJECTS = EXECUTIVE_OBJECT_NAMES.map(

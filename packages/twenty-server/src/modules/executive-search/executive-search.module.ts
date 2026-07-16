@@ -11,6 +11,9 @@ import { ExecutiveSearchReplayService } from 'src/modules/executive-search/sync/
 import { ExecutiveSearchReconciliationService } from 'src/modules/executive-search/sync/services/reconciliation.service';
 import { ExecutiveSearchOutboxRedriveCronCommand } from 'src/modules/executive-search/sync/jobs/executive-sync-outbox-redrive.cron.command';
 import { OutboundEventMapperService } from 'src/modules/executive-search/outbound/services/outbound-event-mapper.service';
+import { OutboundHmacSignerService } from 'src/modules/executive-search/outbound/services/outbound-hmac-signer.service';
+import { DirectusConnectionConfigService } from 'src/modules/executive-search/outbound/services/directus-connection-config.service';
+import { OutboundProjectionService } from 'src/modules/executive-search/outbound/services/outbound-projection.service';
 import { OutboundProjectionListener } from 'src/modules/executive-search/outbound/listeners/outbound-projection.listener';
 import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
 import { ExternalSyncOutboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-outbox.workspace-entity';

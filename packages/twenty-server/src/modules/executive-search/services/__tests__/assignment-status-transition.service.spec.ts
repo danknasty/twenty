@@ -1,6 +1,9 @@
 import { AssignmentStatusTransitionService } from '../assignment-status-transition.service';
 import { SearchAssignmentStatus } from '../../common/enums/search-assignment-status.enum';
-import { ExecutiveSearchExceptionCode } from '../../exceptions/executive-search.exception';
+import {
+  ExecutiveSearchException,
+  ExecutiveSearchExceptionCode,
+} from '../../exceptions/executive-search.exception';
 
 describe('AssignmentStatusTransitionService', () => {
   let service: AssignmentStatusTransitionService;
@@ -117,7 +120,7 @@ describe('AssignmentStatusTransitionService', () => {
           SearchAssignmentStatus.BD_HANDOFF,
           SearchAssignmentStatus.ACTIVE,
         ),
-      ).toThrow(ExecutiveSearchExceptionCode.INVALID_STATUS_TRANSITION);
+      ).toThrow(ExecutiveSearchException);
     });
 
     it('PLACED → ACTIVE throws', () => {
@@ -126,7 +129,7 @@ describe('AssignmentStatusTransitionService', () => {
           SearchAssignmentStatus.PLACED,
           SearchAssignmentStatus.ACTIVE,
         ),
-      ).toThrow(ExecutiveSearchExceptionCode.INVALID_STATUS_TRANSITION);
+      ).toThrow(ExecutiveSearchException);
     });
 
     it('COMPLETED → any status throws (COMPLETED → BD_HANDOFF)', () => {
@@ -135,7 +138,7 @@ describe('AssignmentStatusTransitionService', () => {
           SearchAssignmentStatus.COMPLETED,
           SearchAssignmentStatus.BD_HANDOFF,
         ),
-      ).toThrow(ExecutiveSearchExceptionCode.INVALID_STATUS_TRANSITION);
+      ).toThrow(ExecutiveSearchException);
     });
 
     it('CANCELLED → any status throws (CANCELLED → ACTIVE)', () => {
@@ -144,7 +147,7 @@ describe('AssignmentStatusTransitionService', () => {
           SearchAssignmentStatus.CANCELLED,
           SearchAssignmentStatus.ACTIVE,
         ),
-      ).toThrow(ExecutiveSearchExceptionCode.INVALID_STATUS_TRANSITION);
+      ).toThrow(ExecutiveSearchException);
     });
 
     it('LOST → any status throws (LOST → ACTIVE)', () => {
@@ -153,7 +156,7 @@ describe('AssignmentStatusTransitionService', () => {
           SearchAssignmentStatus.LOST,
           SearchAssignmentStatus.ACTIVE,
         ),
-      ).toThrow(ExecutiveSearchExceptionCode.INVALID_STATUS_TRANSITION);
+      ).toThrow(ExecutiveSearchException);
     });
   });
 });

@@ -321,7 +321,7 @@ export class BullMQDriver
       );
     }
 
-    // --- Idempotency-key path (native BullMQ dedup) ---
+// --- Idempotency-key path (native BullMQ dedup) ---
     // When an idempotencyKey is set, pass it verbatim as the BullMQ jobId.
     // BullMQ natively dedupes on jobId: a second add() with the same jobId
     // is a no-op while any job with that id exists (waiting, active, or
@@ -331,7 +331,9 @@ export class BullMQDriver
     //
     // Note: once a job completes and is removed after the retention window,
     // the same idempotencyKey becomes available again, which enables
-    // at-least-once re-delivery for downstream consumers.
+    // at-least-once re-delivery for downstream consumers.,
+// When idempotencyKey is set, skip the waiting-job guard and pass it verbatim as jobId.
+    // BullMQ natively dedupes on jobId, so a second add with the same idempotencyKey is a no-op.
     if (options?.idempotencyKey) {
       const queueOptions: JobsOptions = {
         jobId: options.idempotencyKey,
@@ -349,13 +351,17 @@ export class BullMQDriver
       };
 
       await this.queueMap[queueName].add(jobName, data, queueOptions);
-      return;
+return;
     }
 
     // --- Legacy id-based guard path ---
     // This ensures only one waiting job can be queued for a specific option.id.
     // Each job gets a unique V4 suffix on its id so that a running job does not
-    // prevent a new waiting job with the same option.id from being enqueued.
+    // prevent a new waiting job with the same option.id from being enqueued.,
+return;
+    }
+
+    // This ensures only one waiting job can be queued for a specific option.id
     if (options?.id) {
       const waitingJobs = await this.queueMap[queueName].getJobs(['waiting']);
 

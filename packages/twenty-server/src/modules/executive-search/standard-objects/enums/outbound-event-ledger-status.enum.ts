@@ -1,7 +1,0 @@
-export enum OutboundEventLedgerStatus {
-  PENDING = 'PENDING',
-  SENDING = 'SENDING',
-  DELIVERED = 'DELIVERED',
-  FAILED = 'FAILED',
-  DEAD_LETTERED = 'DEAD_LETTERED',
-}

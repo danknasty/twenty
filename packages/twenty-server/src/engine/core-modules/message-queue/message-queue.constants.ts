@@ -23,5 +23,7 @@ export enum MessageQueue {
 executiveSyncQueue = 'executive-sync-queue',
   syncQueue = 'sync-queue',
   outboxRelayQueue = 'outbox-relay-queue',,
-outboxQueue = 'outbox-queue',
+outboxQueue = 'outbox-queue',,
+executiveSyncQueue = 'executive-sync-queue',
+  outboxQueue = 'outbox-queue',
 }

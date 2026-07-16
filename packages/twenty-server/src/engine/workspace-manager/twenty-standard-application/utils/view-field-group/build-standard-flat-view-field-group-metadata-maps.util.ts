@@ -22,6 +22,7 @@ import { computeStandardPersonViewFieldGroups } from 'src/engine/workspace-manag
 import { computeStandardTaskViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-task-view-field-groups.util';
 import { computeStandardWorkflowAutomatedTriggerViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workflow-automated-trigger-view-field-groups.util';
 import { computeStandardWorkflowRunViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workflow-run-view-field-groups.util';
+import { computeStandardWorkspaceEventOutboxViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workspace-event-outbox-view-field-groups.util';
 import { computeStandardWorkflowVersionViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workflow-version-view-field-groups.util';
 import { computeStandardWorkspaceEventOutboxViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workspace-event-outbox-view-field-groups.util';
 import { type CreateStandardViewFieldGroupArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
@@ -55,6 +56,8 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowAutomatedTrigger:
     computeStandardWorkflowAutomatedTriggerViewFieldGroups,
   workflowRun: computeStandardWorkflowRunViewFieldGroups,
+  workspaceEventOutbox:
+    computeStandardWorkspaceEventOutboxViewFieldGroups,
   workflowVersion: computeStandardWorkflowVersionViewFieldGroups,
   workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFieldGroups,
 } as const satisfies {

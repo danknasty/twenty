@@ -880,6 +880,12 @@ msgstr "Tunnistautuminen vaaditaan."
 msgid "Authentication required."
 msgstr "Tunnistautuminen vaaditaan."
 
+#. js-lingui-id: 9gFF4b
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "Authority"
+msgstr ""
+
 #. js-lingui-id: cvSznK
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-automated-trigger-standard-flat-field-metadata.util.ts
 msgid "Automated Trigger Type"
@@ -1426,6 +1432,11 @@ msgstr "Keskusteluketjua ei löytynyt."
 msgid "Chat thread title cannot be empty."
 msgstr "Keskusteluketjun otsikko ei saa olla tyhjä."
 
+#. js-lingui-id: wyEoFN
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "Checkpoint status"
+msgstr ""
+
 #. js-lingui-id: NGL+Sl
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-navigation-menu-item-validator.service.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-navigation-menu-item-validator.service.ts
@@ -1519,6 +1530,11 @@ msgstr "Valitusten määrä"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-run-standard-flat-field-metadata.util.ts
 msgid "Completed"
 msgstr "Valmis"
+
+#. js-lingui-id: KKlc8t
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Completed At"
+msgstr ""
 
 #. js-lingui-id: L1uQuF
 #: src/engine/metadata-modules/permissions/permissions.exception.ts
@@ -1766,6 +1782,11 @@ msgstr "Päivitetyn kentän metatietoja ei löytynyt"
 msgid "Could not resolve parent object metadata \"{0}\" for field unique index side effect"
 msgstr "Kentän uniikin indeksin sivuvaikutuksen vanhemman objektin metatietoa \"{0}\" ei voitu selvittää"
 
+#. js-lingui-id: VQjJKg
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Count of differences found"
+msgstr ""
+
 #. js-lingui-id: hYgDIe
 #: src/engine/core-modules/tool-provider/utils/get-crud-tool-label.util.ts
 #: src/engine/core-modules/tool-provider/utils/get-crud-tool-label.util.ts
@@ -1786,6 +1807,12 @@ msgstr "Luo kalenteritapahtuma"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -1830,6 +1857,18 @@ msgstr "Kentän metatiedot luotu, emäobjektin metatietoja ei löytynyt"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
@@ -1980,6 +2019,12 @@ msgstr "Päiväysmuoto"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -2013,6 +2058,11 @@ msgstr "Päivä ensin"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-version-standard-flat-field-metadata.util.ts
 msgid "Deactivated"
 msgstr "Poistettu käytöstä"
+
+#. js-lingui-id: rSDkkT
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "Dead-letter queue for failed external sync events"
+msgstr ""
 
 #. js-lingui-id: 3jX0AP
 #: src/engine/metadata-modules/view-field-group/constants/standard-view-field-group-names.ts
@@ -2092,6 +2142,12 @@ msgstr "Poista"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -2126,6 +2182,16 @@ msgstr "Toimituksen tila"
 msgid "Description"
 msgstr "Kuvaus"
 
+#. js-lingui-id: HtZIu6
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Detailed reconciliation findings"
+msgstr ""
+
+#. js-lingui-id: CT1dW4
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Difference Count"
+msgstr ""
+
 #. js-lingui-id: m2jBI/
 #: src/engine/core-modules/file/file-upload/services/file-upload.service.ts
 msgid "Direct upload is not supported for this file type."
@@ -2149,6 +2215,11 @@ msgstr "Näyttönimi"
 msgid "Domain already used for workspace custom domain"
 msgstr "Toimialue on jo käytössä työtilan mukautetuksi toimialueeksi."
 
+#. js-lingui-id: a6T87u
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Domain Idempotency Key"
+msgstr ""
+
 #. js-lingui-id: 2sIVDj
 #: src/engine/core-modules/dns-manager/services/dns-manager.service.ts
 msgid "Domain is already registered"
@@ -2163,6 +2234,11 @@ msgstr "Toimialue on jo rekisteröity julkiseksi toimialueeksi."
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 msgid "Domain Name"
 msgstr "Verkkotunnus"
+
+#. js-lingui-id: RFoFX6
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Domain-level idempotency key"
+msgstr ""
 
 #. js-lingui-id: DPfwMq
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-task-standard-flat-field-metadata.util.ts
@@ -2360,6 +2436,30 @@ msgstr "Anna kaksivaiheisen todennuksen koodisi hallitaksesi palvelinylläpitäj
 msgid "Enterprise validity token is not valid."
 msgstr "Enterprise-kelpoisuustunnus ei ole voimassa."
 
+#. js-lingui-id: SLuq/l
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Entity ID"
+msgstr ""
+
+#. js-lingui-id: bNUu7E
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Entity name"
+msgstr ""
+
+#. js-lingui-id: P+HAeH
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Entity Name"
+msgstr ""
+
 #. js-lingui-id: qpXqpa
 #: src/engine/core-modules/application/application.exception.ts
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-runner/exceptions/workspace-migration-action-execution.exception.ts
@@ -2379,8 +2479,25 @@ msgstr "Ympäristömuuttuja CLOUDFLARE_API_KEY on määritettävä tämän omina
 #. js-lingui-id: SlfejT
 #: src/engine/core-modules/feature-flag/validates/feature-flag.validate.spec.ts
 #: src/engine/core-modules/feature-flag/validates/feature-flag.validate.spec.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
 msgid "Error"
 msgstr "Virhe"
+
+#. js-lingui-id: EgEwoy
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Error Class"
+msgstr ""
+
+#. js-lingui-id: zZisTU
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Error class for categorization"
+msgstr ""
+
+#. js-lingui-id: xi4nE2
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Error message"
+msgstr ""
 
 #. js-lingui-id: kJDmsI
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
@@ -2398,8 +2515,15 @@ msgstr "Tapahtuman ulkoinen ID"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-channel-event-association-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-event-participant-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-event-participant-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
 msgid "Event ID"
 msgstr "Tapahtuman ID"
+
+#. js-lingui-id: Rjtg3l
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Event identifier"
+msgstr ""
 
 #. js-lingui-id: PYs3rP
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
@@ -2412,6 +2536,13 @@ msgstr "Tapahtuman nimi"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-event-standard-flat-field-metadata.util.ts
 msgid "Event Participants"
 msgstr "Tapahtuman osallistujat"
+
+#. js-lingui-id: 9MAwjD
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Event payload"
+msgstr ""
 
 #. js-lingui-id: 8B2x9+
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
@@ -2427,6 +2558,20 @@ msgstr "Tapahtuman osallistujat"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
 msgid "Event target"
 msgstr "Tapahtuman kohde"
+
+#. js-lingui-id: cW8SdW
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Event type"
+msgstr ""
+
+#. js-lingui-id: ailPEn
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Event Type"
+msgstr ""
 
 #. js-lingui-id: LxOGsB
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-timeline-activity-standard-flat-field-metadata.util.ts
@@ -2481,10 +2626,146 @@ msgstr "Odotettiin, että samoja rajoitekenttiä käytetään johdonmukaisesti k
 msgid "External Bot ID"
 msgstr "Ulkoisen botin ID"
 
+#. js-lingui-id: lx2tkl
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Entity Link"
+msgstr ""
+
+#. js-lingui-id: 9L/YaI
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "External entity link record position"
+msgstr ""
+
+#. js-lingui-id: j4yfFM
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Entity Links"
+msgstr ""
+
+#. js-lingui-id: W/7aUu
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "External entity name"
+msgstr ""
+
+#. js-lingui-id: Vsw74k
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "External Entity Name"
+msgstr ""
+
+#. js-lingui-id: vWD5pX
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+msgid "External Event ID"
+msgstr ""
+
+#. js-lingui-id: HL6j+R
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+msgid "External event identifier"
+msgstr ""
+
+#. js-lingui-id: Hu+YJm
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "External record ID"
+msgstr ""
+
+#. js-lingui-id: IOr8Sz
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "External Record ID"
+msgstr ""
+
 #. js-lingui-id: Z6g/24
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 msgid "External Recording ID"
 msgstr "Ulkoisen tallenteen ID"
+
+#. js-lingui-id: APmCOE
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync Checkpoint"
+msgstr ""
+
+#. js-lingui-id: SxuCe9
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "External sync checkpoint record position"
+msgstr ""
+
+#. js-lingui-id: WTPFP8
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync Checkpoints"
+msgstr ""
+
+#. js-lingui-id: vxQGL4
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync DLQ"
+msgstr ""
+
+#. js-lingui-id: 6lOU13
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "External sync DLQ record position"
+msgstr ""
+
+#. js-lingui-id: 4TUuq9
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync DLQs"
+msgstr ""
+
+#. js-lingui-id: RjWknf
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync Inbox"
+msgstr ""
+
+#. js-lingui-id: xGsEMn
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+msgid "External sync inbox record position"
+msgstr ""
+
+#. js-lingui-id: +E6whM
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync Inboxes"
+msgstr ""
+
+#. js-lingui-id: 8O8cRb
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync Outbox"
+msgstr ""
+
+#. js-lingui-id: CSUNlK
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "External sync outbox record position"
+msgstr ""
+
+#. js-lingui-id: qVxsfq
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync Outboxes"
+msgstr ""
+
+#. js-lingui-id: 5p/VGW
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync Reconciliation"
+msgstr ""
+
+#. js-lingui-id: JgvOYx
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "External sync reconciliation record position"
+msgstr ""
+
+#. js-lingui-id: ZUiNxM
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "External Sync Reconciliations"
+msgstr ""
+
+#. js-lingui-id: JC7iBU
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "External system name"
+msgstr ""
+
+#. js-lingui-id: XPpvBh
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "External System Name"
+msgstr ""
 
 #. js-lingui-id: 7Bj3x9
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
@@ -2492,6 +2773,11 @@ msgstr "Ulkoisen tallenteen ID"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-run-standard-flat-field-metadata.util.ts
 msgid "Failed"
 msgstr "Epäonnistui"
+
+#. js-lingui-id: 8uOlgz
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Failed At"
+msgstr ""
 
 #. js-lingui-id: H4WnCd
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
@@ -2817,6 +3103,12 @@ msgstr "Kenttätyypin validointivirhe."
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -2969,6 +3261,11 @@ msgstr "Suodatin käyttää valintavaihtoehtoa, jota ei ole olemassa"
 #: src/engine/core-modules/tool-provider/utils/get-crud-tool-label.util.ts
 msgid "Find"
 msgstr "Etsi"
+
+#. js-lingui-id: 4MqIEr
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Findings"
+msgstr ""
 
 #. js-lingui-id: 4GaFCQ
 #: src/engine/workspace-manager/workspace-migration/interceptors/utils/__tests__/build-metadata-validation-error-payload.util.spec.ts
@@ -3237,6 +3534,18 @@ msgstr "iCal-tunniste"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
@@ -3305,6 +3614,11 @@ msgstr "Käynnissä"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
 msgid "Incoming"
 msgstr "Saapuva"
+
+#. js-lingui-id: Ma5AJs
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "Incoming external sync events to be processed"
+msgstr ""
 
 #. js-lingui-id: Kfy/ML
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-index-metadata-validator.service.ts
@@ -4382,10 +4696,55 @@ msgstr "Tunniste ei saa sisältää pilkkua"
 msgid "Language"
 msgstr "Kieli"
 
+#. js-lingui-id: cDD5xY
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Last Error"
+msgstr ""
+
+#. js-lingui-id: hWfV26
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Last error message"
+msgstr ""
+
+#. js-lingui-id: I0Ik5Q
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "Last External Event ID"
+msgstr ""
+
+#. js-lingui-id: nLaBNp
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "Last external event ID processed"
+msgstr ""
+
+#. js-lingui-id: S1Ad0m
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "Last External Event Timestamp"
+msgstr ""
+
 #. js-lingui-id: WvYp6o
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-standard-flat-field-metadata.util.ts
 msgid "Last published Version Id"
 msgstr "Viimeksi julkaistun version tunniste"
+
+#. js-lingui-id: El70yl
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "Last Sync Completed At"
+msgstr ""
+
+#. js-lingui-id: wIGKTX
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "Last Sync Started At"
+msgstr ""
+
+#. js-lingui-id: JvAHvd
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "Last synced at"
+msgstr ""
+
+#. js-lingui-id: /4dkwQ
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "Last Synced At"
+msgstr ""
 
 #. js-lingui-id: tGwswq
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-attachment-standard-flat-field-metadata.util.ts
@@ -4396,6 +4755,12 @@ msgstr "Viimeksi julkaistun version tunniste"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -4428,6 +4793,12 @@ msgstr "Tietueen viimeisin muokkausaika"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -4489,6 +4860,11 @@ msgstr "Linkitetyn tietueen id"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-person-standard-flat-field-metadata.util.ts
 msgid "Linkedin"
 msgstr "LinkedIn"
+
+#. js-lingui-id: 6CN5y7
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "Links between Twenty records and external entity records"
+msgstr ""
 
 #. js-lingui-id: 2BBAbc
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
@@ -4598,6 +4974,11 @@ msgstr "Maaliskuu"
 msgid "Marketing sending is on hold until the unsubscribe domain is verified."
 msgstr "Markkinointilähetys on keskeytetty, kunnes peruutusverkkotunnus on vahvistettu."
 
+#. js-lingui-id: i36gcP
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Matched"
+msgstr ""
+
 #. js-lingui-id: Dq8Em0
 #: src/engine/twenty-orm/field-operations/files-field-sync/files-field-sync.ts
 msgid "Max number of files is {filesFieldMaxNumberOfValues}"
@@ -4608,10 +4989,20 @@ msgstr "Tiedostojen enimmäismäärä on {filesFieldMaxNumberOfValues}"
 msgid "Max number of files is {maxNumberOfValues} for field \"{fieldName}\""
 msgstr "Kentän \"{fieldName}\" tiedostojen enimmäismäärä on {maxNumberOfValues}"
 
+#. js-lingui-id: 47e97a
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Max Retries"
+msgstr ""
+
 #. js-lingui-id: hw7Mwk
 #: src/engine/api/common/common-query-runners/common-create-many-query-runner/common-create-many-query-runner.service.ts
 msgid "Maximum number of records to upsert is {QUERY_MAX_RECORDS}."
 msgstr "Tietueiden enimmäismäärä, jotka voidaan lisätä tai päivittää, on {QUERY_MAX_RECORDS}."
+
+#. js-lingui-id: ViUH0U
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Maximum number of retry attempts"
+msgstr ""
 
 #. js-lingui-id: b85bAt
 #: src/engine/metadata-modules/flat-field-metadata/validators/utils/validate-files-flat-field-metadata.util.ts
@@ -5036,6 +5427,16 @@ msgstr "Uusi"
 msgid "New email must be different from current email"
 msgstr ""
 
+#. js-lingui-id: yk5LDC
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Next Retry At"
+msgstr ""
+
+#. js-lingui-id: 0qyUWN
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Next scheduled retry time"
+msgstr ""
+
 #. js-lingui-id: 1UzENP
 #: src/modules/dashboard/chart-data/utils/format-dimension-value.util.ts
 msgid "No"
@@ -5255,6 +5656,11 @@ msgstr "Palautuneiden sähköpostien määrä"
 msgid "Number of emails that failed to send"
 msgstr "Sähköpostien määrä, joiden lähetys epäonnistui"
 
+#. js-lingui-id: 5L9i+I
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Number of retry attempts"
+msgstr ""
+
 #. js-lingui-id: Q3mfq7
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 msgid "Number of spam complaints received"
@@ -5469,6 +5875,16 @@ msgstr "Ainoa virhe"
 msgid "Only field restrictions are allowed."
 msgstr "Vain kenttärajoitukset ovat sallittuja."
 
+#. js-lingui-id: uOD2c4
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Only in External"
+msgstr ""
+
+#. js-lingui-id: H8TcF9
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Only in Twenty"
+msgstr ""
+
 #. js-lingui-id: vX5t8O
 #. placeholder {0}: allowedOperands.join(', ')
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-view-filter-validator.service.ts
@@ -5611,6 +6027,11 @@ msgstr "Vaihtoehdon arvon on oltava merkkijono, jossa on vähintään yksi merkk
 msgid "Options are required for enum fields"
 msgstr "Valintavaihtoehdot vaaditaan enum-kentille"
 
+#. js-lingui-id: b5ggP6
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Original record ID from inbox or outbox"
+msgstr ""
+
 #. js-lingui-id: /IX/7x
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-attachment-standard-flat-field-metadata.util.ts
 msgid "Other"
@@ -5625,6 +6046,11 @@ msgstr "Muu virhe"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
 msgid "Outgoing"
 msgstr "Lähtevä"
+
+#. js-lingui-id: c/wli1
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "Outgoing outbound sync events to be sent to external systems"
+msgstr ""
 
 #. js-lingui-id: NFhGiX
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/utils/validate-agent-response-format.util.ts
@@ -5788,6 +6214,13 @@ msgstr "Salasanan palautustunnus on jo luotu. Odota {timeToWait} ennen kuin voit
 #: src/engine/core-modules/auth/services/sign-in-up.service.ts
 msgid "Password too weak"
 msgstr "Salasana on liian heikko"
+
+#. js-lingui-id: c2/9VE
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Payload"
+msgstr ""
 
 #. js-lingui-id: DpnDl6
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-command-menu-item-validator.service.ts
@@ -6042,6 +6475,12 @@ msgstr "Yhteyshenkilö"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -6118,10 +6557,26 @@ msgstr "Viivakaavio edellyttää pääakselin ryhmittelykenttää"
 msgid "Primary axis group by field is required for line chart widget \"{widgetTitle}\""
 msgstr "Viivakaavio-widget \"{widgetTitle}\" edellyttää pääakselin ryhmittelykenttää"
 
+#. js-lingui-id: ubvpkD
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+msgid "Processed At"
+msgstr ""
+
 #. js-lingui-id: vrnnn9
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 msgid "Processing"
 msgstr "Käsitellään"
+
+#. js-lingui-id: tbznwj
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+msgid "Processing error message"
+msgstr ""
+
+#. js-lingui-id: BkEHUE
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Processing status"
+msgstr ""
 
 #. js-lingui-id: t/0e9D
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/utils/validate-agent-required-properties.util.ts
@@ -6219,6 +6674,11 @@ msgstr "Vastaanotettu"
 msgid "Recipients"
 msgstr "Vastaanottajat"
 
+#. js-lingui-id: z32jBW
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Reconciliation status"
+msgstr ""
+
 #. js-lingui-id: EESfI5
 #: src/engine/twenty-orm/exceptions/twenty-orm.exception.ts
 msgid "Record does not satisfy security constraints."
@@ -6259,6 +6719,26 @@ msgstr "Tallennuspyynnön tila"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 msgid "Recording summary"
 msgstr "Tallenteen yhteenveto"
+
+#. js-lingui-id: UAIEzv
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Records only in external system"
+msgstr ""
+
+#. js-lingui-id: ixMdzW
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Records only in Twenty"
+msgstr ""
+
+#. js-lingui-id: 4Ay9Wr
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Records that matched"
+msgstr ""
+
+#. js-lingui-id: PHQTZT
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "Records the results of data reconciliation between Twenty and external systems"
+msgstr ""
 
 #. js-lingui-id: 9gXJw8
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-channel-event-association-standard-flat-field-metadata.util.ts
@@ -6424,6 +6904,11 @@ msgstr "Tyyppiä \"text\" käyttävässä vastausmuodossa ei tulisi olla skeemaa
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-event-participant-standard-flat-field-metadata.util.ts
 msgid "Response Status"
 msgstr "Vastauksen tila"
+
+#. js-lingui-id: UyKrJg
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Retry Count"
+msgstr ""
 
 #. js-lingui-id: 1AYnSb
 #: src/engine/metadata-modules/page-layout-widget/constants/standard-page-layout-widget-titles.ts
@@ -6736,6 +7221,12 @@ msgstr "Hae ohjekeskuksesta"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -6940,6 +7431,16 @@ msgstr "Lähdekäsittelijän polku on virheellinen"
 msgid "Source object cannot be the target object"
 msgstr ""
 
+#. js-lingui-id: awMESe
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Source Record ID"
+msgstr ""
+
+#. js-lingui-id: vkA4W/
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Source Type"
+msgstr ""
+
 #. js-lingui-id: xqlr9R
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workspace-member-standard-flat-field-metadata.util.ts
 msgid "Spaces and comma"
@@ -6999,6 +7500,7 @@ msgstr "Viikon alku"
 
 #. js-lingui-id: 0zMm7e
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 msgid "Started At"
 msgstr "Aloitusaika"
 
@@ -7014,6 +7516,10 @@ msgstr "Työnkulun suorituksen tila"
 
 #. js-lingui-id: uAQUqI
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-task-standard-flat-field-metadata.util.ts
 msgid "Status"
@@ -7428,6 +7934,12 @@ msgstr "Yhteydentarjoajan manifestista puuttuu pakollisia kenttiä."
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -7697,6 +8209,12 @@ msgstr "Työnkulun version tila"
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -8164,6 +8682,11 @@ msgstr "Aikajanatapahtuma"
 msgid "Timeline activity record position"
 msgstr "Aikajanatapahtuman tietueen sijainti"
 
+#. js-lingui-id: w1nnFV
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "Timestamp of the last external event"
+msgstr ""
+
 #. js-lingui-id: MHrjPM
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-event-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-event-standard-flat-field-metadata.util.ts
@@ -8215,6 +8738,21 @@ msgstr "Liian monta pyyntöä. Yritä myöhemmin uudelleen."
 msgid "Too many workspace invitations sent. Please try again later."
 msgstr ""
 
+#. js-lingui-id: I5KBVl
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Total Compared"
+msgstr ""
+
+#. js-lingui-id: s0MRxc
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Total records compared"
+msgstr ""
+
+#. js-lingui-id: d/BuvF
+#: src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util.ts
+msgid "Tracks the last synchronized position for each external system and entity"
+msgstr ""
+
 #. js-lingui-id: DDziIo
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 msgid "Transcript"
@@ -8250,6 +8788,26 @@ msgstr "TS_VECTOR-kenttämetatietoja ei löytynyt"
 msgid "Tuesday"
 msgstr "Tiistai"
 
+#. js-lingui-id: wesY2U
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "Twenty entity name"
+msgstr ""
+
+#. js-lingui-id: UlfK0a
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "Twenty Entity Name"
+msgstr ""
+
+#. js-lingui-id: BXuYjN
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "Twenty record ID"
+msgstr ""
+
+#. js-lingui-id: cWUr24
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+msgid "Twenty Record ID"
+msgstr ""
+
 #. js-lingui-id: T+yZIr
 #: src/engine/core-modules/two-factor-authentication/two-factor-authentication.exception.ts
 msgid "Two-factor authentication is already set up."
@@ -8270,6 +8828,11 @@ msgstr "Kaksivaiheisen todennuksen käyttöönotto vaaditaan."
 msgid "Two-factor authentication verification is required."
 msgstr "Kaksivaiheisen todennuksen vahvistus vaaditaan."
 
+#. js-lingui-id: W4SQ3L
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "Type of the source (inbox or outbox)"
+msgstr ""
+
 #. js-lingui-id: Qx95XY
 #: src/engine/metadata-modules/flat-field-metadata/validators/utils/validate-morph-or-relation-flat-field-metadata.util.ts
 msgid "Udpated field is not a morph relation or a relation"
@@ -8279,6 +8842,11 @@ msgstr "Päivitetty kenttä ei ole morph-relaatio eikä relaatio"
 #: src/engine/core-modules/application/application.exception.ts
 msgid "Unable to retrieve the application package."
 msgstr "Sovelluspakettia ei voitu noutaa."
+
+#. js-lingui-id: JUO8ql
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+msgid "Unique event identifier"
+msgstr ""
 
 #. js-lingui-id: WWSSTx
 #: src/engine/workspace-manager/workspace-migration/workspace-migration-builder/validators/services/flat-index-metadata-validator.service.ts
@@ -8368,6 +8936,12 @@ msgstr "Päivitystä koskevat kenttärajoitukset koskevat vain päivitettäviä 
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-message-folder-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-message-association-standard-flat-field-metadata.util.ts
@@ -8975,6 +9549,36 @@ msgstr "Tervetuloa Twentyyn: Vahvista sähköpostisi"
 msgid "When the campaign finished sending"
 msgstr "Ajankohta, jolloin kampanjan lähetys valmistui"
 
+#. js-lingui-id: HeITWx
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+msgid "When the event was processed"
+msgstr ""
+
+#. js-lingui-id: MP4u/H
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+msgid "When the failure occurred"
+msgstr ""
+
+#. js-lingui-id: 0ME/Kz
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "When the last sync completed"
+msgstr ""
+
+#. js-lingui-id: zZZDQ5
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+msgid "When the last sync started"
+msgstr ""
+
+#. js-lingui-id: gnadNF
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "When the reconciliation completed"
+msgstr ""
+
+#. js-lingui-id: F8u/vZ
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "When the reconciliation started"
+msgstr ""
+
 #. js-lingui-id: xm/brR
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-standard-flat-field-metadata.util.ts
 msgid "Whether this message is an unsent draft synced from the provider"
@@ -9263,6 +9867,22 @@ msgstr "Työtilojen luominen on rajoitettu ylläpitäjille"
 #: src/engine/core-modules/auth/services/auth.service.ts
 msgid "Workspace does not exist."
 msgstr "Työtilaa ei ole olemassa."
+
+#. js-lingui-id: Cqh21C
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util.ts
+msgid "Workspace ID"
+msgstr ""
 
 #. js-lingui-id: oLh4c+
 #: src/engine/metadata-modules/permissions/permissions.exception.ts

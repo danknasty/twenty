@@ -648,7 +648,27 @@ searchEngagementTerms: {
         universalIdentifier: '20e1c9dc-8348-4627-a414-430dc690beb3',
       },
       searchAssignments: {
-        universalIdentifier: '3a87d9fc-4da9-4284-afd4-8f0719330b58',
+        universalIdentifier: '3a87d9fc-4da9-4284-afd4-8f0719330b58',,
+targetCompanies: {
+        universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f',
+      },
+      offLimitsRestrictions: {
+        universalIdentifier: '20202020-b2c3-4d5e-9f0a-7b8c9d0e1f2a',
+      },
+      clientOffLimitsRestrictions: {
+        universalIdentifier: '20202020-c3d4-4e5f-0a1b-8c9d0e1f2a3b',
+      },
+      confidentialityRecords: {
+        universalIdentifier: '20202020-d4e5-4f60-1b2c-9d0e1f2a3b4c',
+      },
+      conflictCheckSubjectCompanies: {
+        universalIdentifier: '20202020-e5f6-4071-2c3d-0e1f2a3b4c5d',
+      },
+      sourceOfRelationshipEdges: {
+        universalIdentifier: '20202020-f6a7-4182-3d4e-1f2a3b4c5d6e',
+      },
+      targetOfRelationshipEdges: {
+        universalIdentifier: '20202020-a7b8-4293-4e5f-2a3b4c5d6e7f',
       },
     },
     indexes: {
@@ -1705,12 +1725,29 @@ universalIdentifier: '9a210eaa-18a7-4cf5-9e22-be2aabd832c0',
       listMemberships: {
         universalIdentifier: '8b8d1be0-4c94-4413-a2c9-c7ede205a81d',
       },
-      clientStakeholderRoles: {
+clientStakeholderRoles: {
 universalIdentifier: '20202020-b3cc-4d21-8f42-bb8c81c54432',
       },
       billingContactForClientAccountProfiles: {
         universalIdentifier: '20202020-3d7e-4ea4-9d8d-a87e5e325040',,
-universalIdentifier: '9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d',
+universalIdentifier: '9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d',,
+offLimitsRestrictions: {
+        universalIdentifier: '20202020-b8c9-4304-5f60-3b4c5d6e7f8a',
+      },
+      confidentialityRecords: {
+        universalIdentifier: '20202020-c9d0-4415-6071-4c5d6e7f8a9b',
+      },
+      conflictCheckSubjectPersons: {
+        universalIdentifier: '20202020-d0e1-4526-7182-5d6e7f8a9b0c',
+      },
+      targetOfSourceRelationshipEdges: {
+        universalIdentifier: '20202020-e1f2-4637-8293-6e7f8a9b0c1d',
+      },
+      targetOfTargetRelationshipEdges: {
+        universalIdentifier: '20202020-f2a3-4748-9304-7f8a9b0c1d2e',
+      },
+      researchCandidates: {
+        universalIdentifier: '20202020-a3b4-4859-0415-8a9b0c1d2e3f',
       },
     },
     indexes: {
@@ -2708,14 +2745,19 @@ universalIdentifier: '9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d',
       numberFormat: {
         universalIdentifier: '20202020-7f40-4e7f-b126-11c0eda6b141',
       },
-      ownedClientStakeholderRoles: {
+ownedClientStakeholderRoles: {
         universalIdentifier: 'd1e2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a',
       },
       ownedSearchEngagementTerms: {
         universalIdentifier: '20202020-7a3e-4c9d-b2f8-1e5c6d7a8bc5',
       },
       ownedClientAccountProfiles: {
-        universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0f02',
+        universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0f02',,
+ownedResearchStrategies: {
+        universalIdentifier: '20202020-b4c5-4960-1526-9b0c1d2e3f4a',
+      },
+      confidentialityRecords: {
+        universalIdentifier: '20202020-c5d6-4071-2637-0c1d2e3f4a5b',
       },
     },
     indexes: {
@@ -2828,6 +2870,9 @@ location: {
       },
       searchPreferences: {
         universalIdentifier: 'e35d2471-a079-4318-b94e-b8485ff2896b',
+      },
+      researchCandidates: {
+        universalIdentifier: 'd5d279c4-0001-4000-8000-000000000001',
       },
     },
     indexes: {
@@ -3111,10 +3156,10 @@ location: {
       searchAssignmentId: {
         universalIdentifier: '70658dbd-dbde-4136-8444-29d6bd336e44',
       },
-      companyId: {
+      company: {
         universalIdentifier: '45d76ef3-2d08-4124-aca2-18e7a4eec83c',
       },
-      personId: {
+      person: {
         universalIdentifier: 'f8f15951-b93c-47ae-b957-5ec14145dbb4',
       },
       summary: {
@@ -3141,7 +3186,7 @@ location: {
       notes: {
         universalIdentifier: '4abda535-d226-4fe8-9ad9-f0c8a7c58786',
       },
-      ownerId: {
+      owner: {
         universalIdentifier: 'baad4a5f-db62-461a-b154-859c33b80f1a',
       },
     },
@@ -3178,13 +3223,13 @@ location: {
       searchAssignmentId: {
         universalIdentifier: 'b52568ab-ab31-45c2-92ea-81b13495c444',
       },
-      subjectPersonId: {
+      subjectPerson: {
         universalIdentifier: '9dd4ad90-9600-4233-9c2f-6c23f84c4f12',
       },
-      subjectCompanyId: {
+      subjectCompany: {
         universalIdentifier: '1fb44de1-cdac-4f9a-baa1-aba7b4e22ef9',
       },
-      matchedRestrictionId: {
+      matchedRestriction: {
         universalIdentifier: 'd7fa2385-9a16-48f7-879e-25deb7a7ff70',
       },
       summary: {
@@ -4950,13 +4995,13 @@ searchEngagementTerms: {
       ...buildStandardObjectSystemFields(
         'e111382e-ffdd-4d96-ba02-10df8240fa76',
       ),
-      companyId: {
+      company: {
         universalIdentifier: '493fdfc9-81a4-4e37-be20-a57f8ac01a3c',
       },
-      personId: {
+      person: {
         universalIdentifier: '1214482c-57f3-4ff1-9950-58b2659c75b6',
       },
-      clientCompanyId: {
+      clientCompany: {
         universalIdentifier: '07402159-f38e-4566-82ce-1c8d00332c2e',
       },
       summary: {
@@ -4994,6 +5039,9 @@ searchEngagementTerms: {
       },
       reviewReason: {
         universalIdentifier: '5a3bb748-37f6-4095-93a2-941396d7e3a5',
+      },
+      conflictChecks: {
+        universalIdentifier: 'e111382e-0001-4000-8000-000000000001',
       },
     },
     indexes: {},

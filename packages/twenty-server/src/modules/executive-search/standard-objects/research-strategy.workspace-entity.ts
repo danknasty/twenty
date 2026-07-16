@@ -5,8 +5,6 @@ import { type ResearchStrategyStatus } from 'src/modules/executive-search/common
 import { type MarketMapWorkspaceEntity } from 'src/modules/executive-search/standard-objects/market-map.workspace-entity';
 import { type ResearchCandidateWorkspaceEntity } from 'src/modules/executive-search/standard-objects/research-candidate.workspace-entity';
 import { type WorkspaceMemberWorkspaceEntity } from 'src/modules/workspace-member/standard-objects/workspace-member.workspace-entity';
-import { type PriorityLevel } from 'src/modules/executive-search/common/enums/priority-level.enum';
-import { type ResearchStrategyStatus } from 'src/modules/executive-search/common/enums/research-strategy-status.enum';
 
 export class ResearchStrategyWorkspaceEntity extends BaseWorkspaceEntity {
   name: string;

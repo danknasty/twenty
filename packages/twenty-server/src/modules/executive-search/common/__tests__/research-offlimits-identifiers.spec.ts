@@ -135,9 +135,9 @@ describe('Research/offlimits object identifiers determinism', () => {
     it('the matchedRestriction relation exists on conflictCheck', () => {
       const conflictCheck = STANDARD_OBJECTS.conflictCheck;
 
-      expect(conflictCheck.fields.matchedRestrictionId).toBeDefined();
+      expect(conflictCheck.fields.matchedRestriction).toBeDefined();
       expect(
-        conflictCheck.fields.matchedRestrictionId.universalIdentifier,
+        conflictCheck.fields.matchedRestriction.universalIdentifier,
       ).toMatch(UUID_V4_REGEX);
     });
   });

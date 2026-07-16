@@ -1,9 +1,7 @@
 import { Test, type TestingModule } from '@nestjs/testing';
 
-import { WorkspaceEventOutboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/workspace-event-outbox.workspace-entity';
 import {
   DrainOutboxJob,
-  type DrainOutboxJobData,
 } from 'src/engine/core-modules/transactional-outbox/jobs/drain-outbox.job';
 import { OutboxStatus } from 'src/engine/core-modules/transactional-outbox/enums/outbox-status.enum';
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';

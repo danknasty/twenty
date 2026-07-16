@@ -5,17 +5,27 @@ import {
   createStandardIndexFlatMetadata,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/create-standard-index-flat-metadata.util';
 
-export const buildOutboundEventLedgerStandardFlatIndexMetadatas = ({
+export const buildOutboxEventStandardFlatIndexMetadatas = ({
   now,
   objectName,
   workspaceId,
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<CreateStandardIndexArgs<'outboundEventLedger'>, 'context'>): Record<
-  AllStandardObjectIndexName<'outboundEventLedger'>,
+}: Omit<CreateStandardIndexArgs<'outboxEvent'>, 'context'>): Record<
+  AllStandardObjectIndexName<'outboxEvent'>,
   FlatIndexMetadata
-> => ({} as Record<
-  AllStandardObjectIndexName<'outboundEventLedger'>,
-  FlatIndexMetadata
->);
+> => ({
+  statusCreatedAtIndex: createStandardIndexFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      indexName: 'statusCreatedAtIndex',
+      relatedFieldNames: ['status', 'createdAt'],
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+});

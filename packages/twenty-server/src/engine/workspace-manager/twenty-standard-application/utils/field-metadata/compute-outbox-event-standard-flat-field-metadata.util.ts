@@ -1,5 +1,5 @@
 import { msg } from '@lingui/core/macro';
-import { DateDisplayFormat, FieldMetadataType } from 'twenty-shared/types';
+import { FieldMetadataType } from 'twenty-shared/types';
 
 import { type FlatFieldMetadata } from 'src/engine/metadata-modules/flat-field-metadata/types/flat-field-metadata.type';
 import { type AllStandardObjectFieldName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
@@ -7,9 +7,11 @@ import {
   type CreateStandardFieldArgs,
   createStandardFieldFlatMetadata,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
+import { createStandardRelationFieldFlatMetadata } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-relation-field-flat-metadata.util';
 import { i18nLabel } from 'src/engine/workspace-manager/twenty-standard-application/utils/i18n-label.util';
+import { DateDisplayFormat } from 'twenty-shared/types';
 
-export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
+export const buildOutboxEventStandardFlatFieldMetadatas = ({
   now,
   objectName,
   workspaceId,
@@ -17,10 +19,10 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
 }: Omit<
-  CreateStandardFieldArgs<'outboundEventLedger', FieldMetadataType>,
+  CreateStandardFieldArgs<'outboxEvent', FieldMetadataType>,
   'context'
 >): Record<
-  AllStandardObjectFieldName<'outboundEventLedger'>,
+  AllStandardObjectFieldName<'outboxEvent'>,
   FlatFieldMetadata
 > => ({
   // System fields
@@ -56,7 +58,9 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
       isNullable: false,
       isUIEditable: false,
       defaultValue: 'now',
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {
+        displayFormat: DateDisplayFormat.RELATIVE,
+      },
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -76,7 +80,9 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
       isNullable: false,
       isUIEditable: false,
       defaultValue: 'now',
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {
+        displayFormat: DateDisplayFormat.RELATIVE,
+      },
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -95,7 +101,9 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
       isSystem: true,
       isNullable: true,
       isUIEditable: false,
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {
+        displayFormat: DateDisplayFormat.RELATIVE,
+      },
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -157,7 +165,7 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
       fieldName: 'position',
       type: FieldMetadataType.POSITION,
       label: i18nLabel(msg`Position`),
-      description: i18nLabel(msg`Outbound event ledger record position`),
+      description: i18nLabel(msg`Outbox event record position`),
       icon: 'IconHierarchy2',
       isSystem: true,
       isNullable: false,
@@ -186,15 +194,32 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     now,
   }),
 
-  // OutboundEventLedger-specific fields
-  eventId: createStandardFieldFlatMetadata({
+  // Outbox event-specific fields
+  aggregateType: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'eventId',
+      fieldName: 'aggregateType',
       type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Event ID`),
-      description: i18nLabel(msg`Unique event identifier`),
+      label: i18nLabel(msg`Aggregate Type`),
+      description: i18nLabel(msg`Type of aggregate root`),
+      icon: 'IconCategory',
+      isNullable: true,
+      isUIEditable: false,
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  aggregateId: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'aggregateId',
+      type: FieldMetadataType.TEXT,
+      label: i18nLabel(msg`Aggregate ID`),
+      description: i18nLabel(msg`ID of the aggregate root`),
       icon: 'IconId',
       isNullable: true,
       isUIEditable: false,
@@ -211,7 +236,7 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
       fieldName: 'eventType',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Event Type`),
-      description: i18nLabel(msg`Type of event`),
+      description: i18nLabel(msg`Type of outbox event`),
       icon: 'IconTag',
       isNullable: true,
       isUIEditable: false,
@@ -221,32 +246,15 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  targetCollection: createStandardFieldFlatMetadata({
+  payload: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'targetCollection',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Target Collection`),
-      description: i18nLabel(msg`Target collection or entity name`),
-      icon: 'IconAbc',
-      isNullable: true,
-      isUIEditable: false,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  targetRecordId: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'targetRecordId',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Target Record ID`),
-      description: i18nLabel(msg`ID of the target record`),
-      icon: 'IconAbc',
+      fieldName: 'payload',
+      type: FieldMetadataType.RAW_JSON,
+      label: i18nLabel(msg`Payload`),
+      description: i18nLabel(msg`Event payload data`),
+      icon: 'IconFileJson',
       isNullable: true,
       isUIEditable: false,
     },
@@ -262,59 +270,26 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
       fieldName: 'status',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Status`),
-      description: i18nLabel(msg`Delivery status`),
+      description: i18nLabel(msg`Outbox event status`),
       icon: 'IconProgress',
       isNullable: true,
       isUIEditable: false,
+      defaultValue: "'PENDING'",
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
   }),
-  beforeHash: createStandardFieldFlatMetadata({
+  publishedAt: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'beforeHash',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Before Hash`),
-      description: i18nLabel(msg`Hash of the record before the change`),
-      icon: 'IconAbc',
-      isNullable: true,
-      isUIEditable: false,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  afterHash: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'afterHash',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`After Hash`),
-      description: i18nLabel(msg`Hash of the record after the change`),
-      icon: 'IconAbc',
-      isNullable: true,
-      isUIEditable: false,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  sentAt: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'sentAt',
+      fieldName: 'publishedAt',
       type: FieldMetadataType.DATE_TIME,
-      label: i18nLabel(msg`Sent At`),
-      description: i18nLabel(msg`When the event was sent`),
-      icon: 'IconCalendarArrowUp',
+      label: i18nLabel(msg`Published At`),
+      description: i18nLabel(msg`When the event was published`),
+      icon: 'IconCalendarClock',
       isNullable: true,
       isUIEditable: false,
     },
@@ -323,17 +298,18 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  errorMessage: createStandardFieldFlatMetadata({
+  attempts: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'errorMessage',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Error Message`),
-      description: i18nLabel(msg`Error message if delivery failed`),
-      icon: 'IconX',
+      fieldName: 'attempts',
+      type: FieldMetadataType.NUMBER,
+      label: i18nLabel(msg`Attempts`),
+      description: i18nLabel(msg`Number of publication attempts`),
+      icon: 'IconRepeat',
       isNullable: true,
       isUIEditable: false,
+      defaultValue: 0,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,

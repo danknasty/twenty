@@ -9,7 +9,7 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 import { i18nLabel } from 'src/engine/workspace-manager/twenty-standard-application/utils/i18n-label.util';
 
-export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
+export const buildReconciliationFindingStandardFlatFieldMetadatas = ({
   now,
   objectName,
   workspaceId,
@@ -17,10 +17,10 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
 }: Omit<
-  CreateStandardFieldArgs<'outboundEventLedger', FieldMetadataType>,
+  CreateStandardFieldArgs<'reconciliationFinding', FieldMetadataType>,
   'context'
 >): Record<
-  AllStandardObjectFieldName<'outboundEventLedger'>,
+  AllStandardObjectFieldName<'reconciliationFinding'>,
   FlatFieldMetadata
 > => ({
   // System fields
@@ -157,7 +157,7 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
       fieldName: 'position',
       type: FieldMetadataType.POSITION,
       label: i18nLabel(msg`Position`),
-      description: i18nLabel(msg`Outbound event ledger record position`),
+      description: i18nLabel(msg`Reconciliation finding record position`),
       icon: 'IconHierarchy2',
       isSystem: true,
       isNullable: false,
@@ -186,15 +186,49 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     now,
   }),
 
-  // OutboundEventLedger-specific fields
-  eventId: createStandardFieldFlatMetadata({
+  // ReconciliationFinding-specific fields
+  runId: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'eventId',
+      fieldName: 'runId',
+      type: FieldMetadataType.UUID,
+      label: i18nLabel(msg`Run ID`),
+      description: i18nLabel(msg`ID of the reconciliation run`),
+      icon: 'IconLink',
+      isNullable: true,
+      isUIEditable: false,
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  externalCollection: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'externalCollection',
       type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Event ID`),
-      description: i18nLabel(msg`Unique event identifier`),
+      label: i18nLabel(msg`External Collection`),
+      description: i18nLabel(msg`External collection name`),
+      icon: 'IconDatabase',
+      isNullable: true,
+      isUIEditable: false,
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  externalId: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'externalId',
+      type: FieldMetadataType.TEXT,
+      label: i18nLabel(msg`External ID`),
+      description: i18nLabel(msg`External record ID`),
       icon: 'IconId',
       isNullable: true,
       isUIEditable: false,
@@ -204,31 +238,14 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  eventType: createStandardFieldFlatMetadata({
+  twentyRecordId: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'eventType',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Event Type`),
-      description: i18nLabel(msg`Type of event`),
-      icon: 'IconTag',
-      isNullable: true,
-      isUIEditable: false,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  targetCollection: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'targetCollection',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Target Collection`),
-      description: i18nLabel(msg`Target collection or entity name`),
+      fieldName: 'twentyRecordId',
+      type: FieldMetadataType.UUID,
+      label: i18nLabel(msg`Twenty Record ID`),
+      description: i18nLabel(msg`Twenty record ID`),
       icon: 'IconAbc',
       isNullable: true,
       isUIEditable: false,
@@ -238,15 +255,15 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  targetRecordId: createStandardFieldFlatMetadata({
+  findingType: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'targetRecordId',
+      fieldName: 'findingType',
       type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Target Record ID`),
-      description: i18nLabel(msg`ID of the target record`),
-      icon: 'IconAbc',
+      label: i18nLabel(msg`Finding Type`),
+      description: i18nLabel(msg`Type of finding`),
+      icon: 'IconCategory',
       isNullable: true,
       isUIEditable: false,
     },
@@ -255,15 +272,15 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  status: createStandardFieldFlatMetadata({
+  severity: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'status',
+      fieldName: 'severity',
       type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Status`),
-      description: i18nLabel(msg`Delivery status`),
-      icon: 'IconProgress',
+      label: i18nLabel(msg`Severity`),
+      description: i18nLabel(msg`Severity of the finding`),
+      icon: 'IconAlertTriangle',
       isNullable: true,
       isUIEditable: false,
     },
@@ -272,15 +289,15 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  beforeHash: createStandardFieldFlatMetadata({
+  details: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'beforeHash',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Before Hash`),
-      description: i18nLabel(msg`Hash of the record before the change`),
-      icon: 'IconAbc',
+      fieldName: 'details',
+      type: FieldMetadataType.RAW_JSON,
+      label: i18nLabel(msg`Details`),
+      description: i18nLabel(msg`Detailed finding information`),
+      icon: 'IconFileJson',
       isNullable: true,
       isUIEditable: false,
     },
@@ -289,49 +306,15 @@ export const buildOutboundEventLedgerStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  afterHash: createStandardFieldFlatMetadata({
+  resolvedAt: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'afterHash',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`After Hash`),
-      description: i18nLabel(msg`Hash of the record after the change`),
-      icon: 'IconAbc',
-      isNullable: true,
-      isUIEditable: false,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  sentAt: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'sentAt',
+      fieldName: 'resolvedAt',
       type: FieldMetadataType.DATE_TIME,
-      label: i18nLabel(msg`Sent At`),
-      description: i18nLabel(msg`When the event was sent`),
-      icon: 'IconCalendarArrowUp',
-      isNullable: true,
-      isUIEditable: false,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  errorMessage: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'errorMessage',
-      type: FieldMetadataType.TEXT,
-      label: i18nLabel(msg`Error Message`),
-      description: i18nLabel(msg`Error message if delivery failed`),
-      icon: 'IconX',
+      label: i18nLabel(msg`Resolved At`),
+      description: i18nLabel(msg`When the finding was resolved`),
+      icon: 'IconCalendarCheck',
       isNullable: true,
       isUIEditable: false,
     },

@@ -32635,7 +32635,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expr-eval-fork@npm:3.0.3, expr-eval-fork@npm:^3.0.1":
+"expr-eval-fork@npm:3.0.3, expr-eval-fork@npm:^3.0.1, expr-eval-fork@npm:^3.0.3":
   version: 3.0.3
   resolution: "expr-eval-fork@npm:3.0.3"
   checksum: 10c0/26655b5e059d404de67ab374008ee03ff94c4b4af13904714404fca7fdfed4a27498032e48e75b5bbe5eac26cbcd360cd999eb9d5bbceb542824d9c588ab44ab
@@ -53533,6 +53533,7 @@ __metadata:
     "@types/react-dom": "npm:^19.2.0"
     "@yarnpkg/types": "npm:^4.0.0"
     concurrently: "npm:^8.2.2"
+    expr-eval-fork: "npm:^3.0.3"
     http-server: "npm:^14.1.1"
     nx: "npm:22.7.5"
     oxfmt: "npm:0.50.0"

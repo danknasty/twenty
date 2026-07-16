@@ -631,57 +631,57 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
     },
   },
   clientAccountProfileRecordPage: {
-    universalIdentifier: '20202020-0823-3a18-3206-7ea8d96955d1',
+    universalIdentifier: '20202020-f3a8-4632-8543-c49beb879d43',
     tabs: {
       home: {
-        universalIdentifier: '20202020-35c3-79c1-4286-02e61f4359d0',
+        universalIdentifier: '20202020-a229-4d6e-aad5-d669a48d470b',
         widgets: {
           fields: {
-            universalIdentifier: '20202020-7e62-36b7-ec86-813c39cd1d87',
+            universalIdentifier: '20202020-8bd0-4922-8a0d-ad0d29287ad6',
           },
           company: {
-            universalIdentifier: '20202020-fbb9-8195-5cb8-332d0d929c50',
+            universalIdentifier: '20202020-4b08-45c3-b8d5-b8c617e41c98',
           },
           clientBillingContact: {
-            universalIdentifier: '20202020-2e0e-26b0-f56b-d2c15f3cd19e',
+            universalIdentifier: '20202020-171b-4d2f-a171-5432bfa119d3',
           },
         },
       },
       timeline: {
-        universalIdentifier: '20202020-b498-5a0d-02e9-72bb1100c4c1',
+        universalIdentifier: '20202020-57a8-46b0-ae1a-5647d44e9a64',
         widgets: {
           timeline: {
-            universalIdentifier: '20202020-02a0-a9d7-8063-b6720fd5c9f3',
+            universalIdentifier: '20202020-6b5d-4bf5-9378-c1fd73bb615f',
           },
         },
       },
     },
   },
   clientStakeholderRoleRecordPage: {
-    universalIdentifier: '20202020-9084-e383-193f-3e483e723a66',
+    universalIdentifier: '20202020-01bb-4f16-bc9c-f8f8ed921b69',
     tabs: {
       home: {
-        universalIdentifier: '20202020-dc78-d2d5-5edc-808b3dbdd2f4',
+        universalIdentifier: '20202020-0562-4cd7-b6b2-93a80ba3ee7e',
         widgets: {
           fields: {
-            universalIdentifier: '20202020-e380-0196-aa27-8360bdf88d38',
+            universalIdentifier: '20202020-a53c-4895-a440-545e04380c9b',
           },
           person: {
-            universalIdentifier: '20202020-9dc0-5752-cf19-ff54fac1230a',
+            universalIdentifier: '20202020-1f41-4ff8-8b1e-903a54a33ab9',
           },
           company: {
-            universalIdentifier: '20202020-e0a1-ab3b-04b0-4359a9a6f9df',
+            universalIdentifier: '20202020-51ed-48fa-b6cd-29b0ae385775',
           },
           clientAccountProfile: {
-            universalIdentifier: '20202020-38ca-33c5-ae09-73544d04c2ca',
+            universalIdentifier: '20202020-830b-4654-99ba-a2fa232b0f01',
           },
         },
       },
       timeline: {
-        universalIdentifier: '20202020-7c62-2c49-d2ae-dfdd886d1365',
+        universalIdentifier: '20202020-2209-432d-bd55-8e189ed4c3dd',
         widgets: {
           timeline: {
-            universalIdentifier: '20202020-dc54-84eb-7948-e08c10f529c5',
+            universalIdentifier: '20202020-65a0-4abe-8739-17ab1783d1d8',
           },
         },
       },

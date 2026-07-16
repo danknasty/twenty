@@ -439,6 +439,7 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
       morphId: null,
       fieldName: 'clientAccountProfile',
       label: i18nLabel(msg`Client Account Profile`),
+      description: i18nLabel(msg`Client account profile tied to the company`),
       icon: 'IconBriefcase',
       isNullable: true,
       targetObjectName: 'clientAccountProfile',

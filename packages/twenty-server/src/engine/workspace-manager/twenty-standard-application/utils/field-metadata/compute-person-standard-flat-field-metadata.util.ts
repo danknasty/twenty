@@ -554,6 +554,7 @@ export const buildPersonStandardFlatFieldMetadatas = ({
       morphId: null,
       fieldName: 'billingContactForClientAccountProfiles',
       label: i18nLabel(msg`Billing Contact For`),
+      description: i18nLabel(msg`Client account profiles this person is the billing contact for`),
       icon: 'IconReceipt',
       isNullable: true,
       targetObjectName: 'clientAccountProfile',

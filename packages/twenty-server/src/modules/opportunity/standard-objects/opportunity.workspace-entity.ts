@@ -37,6 +37,6 @@ export class OpportunityWorkspaceEntity extends BaseWorkspaceEntity {
   expectedFeeFloor: CurrencyMetadata | null;
   expectedFeeCeiling: CurrencyMetadata | null;
   expectedTimeline: string;
-  decisionDate: string | null;
+  decisionDate: Date | null;
   decisionCriteria: string | null;
 }

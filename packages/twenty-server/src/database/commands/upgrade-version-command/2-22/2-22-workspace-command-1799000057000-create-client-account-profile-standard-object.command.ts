@@ -226,7 +226,7 @@ export class CreateClientAccountProfileStandardObjectCommand extends ActiveOrSus
         {
           isSystemBuild: true,
           applicationUniversalIdentifier:
-            twentyStandardFlatApplication.applicationUniversalIdentifier,
+            twentyStandardFlatApplication.universalIdentifier,
           workspaceId,
           allFlatEntityOperationByMetadataName,
         },

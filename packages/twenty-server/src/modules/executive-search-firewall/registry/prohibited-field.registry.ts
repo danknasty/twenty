@@ -1,4 +1,4 @@
-import { camelToSnakeCase } from 'src/utils/camel-to-snake-case';
+import { camelToSnakeCase } from 'twenty-shared/utils';
 
 import {
   FIREWALL_DENYLIST_PATTERNS,

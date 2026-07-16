@@ -1,5 +1,4 @@
 import { Test, type TestingModule } from '@nestjs/testing';
-import { getRepositoryToken } from '@nestjs/typeorm';
 
 import { WorkspaceEventOutboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/workspace-event-outbox.workspace-entity';
 import {
@@ -36,6 +35,7 @@ describe('DrainOutboxJob', () => {
         .mockImplementation(
           (fn: () => Promise<void>, _authContext: any) => fn(),
         ),
+      getRepository: jest.fn().mockResolvedValue(mockRepository),
     };
 
     const module: TestingModule = await Test.createTestingModule({
@@ -49,13 +49,6 @@ describe('DrainOutboxJob', () => {
           provide: WorkspaceEventEmitter,
           useValue: mockWorkspaceEventEmitter,
         },
-        {
-          provide: getRepositoryToken(
-            WorkspaceEventOutboxWorkspaceEntity,
-            'workspace',
-          ),
-          useValue: mockRepository,
-        },
       ],
     }).compile();
 
@@ -67,15 +60,14 @@ describe('DrainOutboxJob', () => {
   });
 
   it('should do nothing when there are no pending entries', async () => {
-    mockRepository.find.mockResolvedValue([]);
+    // Stale find returns empty
+    mockRepository.find.mockResolvedValueOnce([]);
+    // Pending find returns empty
+    mockRepository.find.mockResolvedValueOnce([]);
 
     await job.handle({ workspaceId: 'workspace-1' });
 
-    expect(mockRepository.find).toHaveBeenCalledWith({
-      where: { status: OutboxStatus.PENDING },
-      order: { createdAt: 'ASC' },
-      take: 100,
-    });
+    expect(mockRepository.find).toHaveBeenCalledTimes(2);
     expect(mockRepository.update).not.toHaveBeenCalled();
     expect(
       mockWorkspaceEventEmitter.emitDatabaseBatchEvent,
@@ -91,24 +83,37 @@ describe('DrainOutboxJob', () => {
       attemptCount: 0,
     };
 
-    mockRepository.find.mockResolvedValue([pendingEntry]);
-    mockRepository.update.mockResolvedValue({});
+    // Stale find returns empty
+    mockRepository.find.mockResolvedValueOnce([]);
+    // Pending find returns the entry
+    mockRepository.find.mockResolvedValueOnce([pendingEntry]);
+    // Atomic claim succeeds
+    mockRepository.update.mockResolvedValue({ affected: 1 });
 
     await job.handle({ workspaceId: 'workspace-1' });
 
-    expect(mockRepository.find).toHaveBeenCalled();
-    expect(mockRepository.update).toHaveBeenCalledWith('entry-1', {
-      status: OutboxStatus.IN_PROGRESS,
-      lastAttemptAt: expect.any(String),
-      attemptCount: 1,
-    });
+    expect(mockRepository.find).toHaveBeenCalledTimes(2);
+    // Atomic claim with conditional update
+    expect(mockRepository.update).toHaveBeenNthCalledWith(
+      1,
+      { id: 'entry-1', status: OutboxStatus.PENDING },
+      {
+        status: OutboxStatus.IN_PROGRESS,
+        lastAttemptAt: expect.any(String),
+        attemptCount: 1,
+      },
+    );
     expect(
       mockWorkspaceEventEmitter.emitDatabaseBatchEvent,
     ).toHaveBeenCalled();
-    expect(mockRepository.update).toHaveBeenCalledWith('entry-1', {
-      status: OutboxStatus.DELIVERED,
-      deliveredAt: expect.any(String),
-    });
+    expect(mockRepository.update).toHaveBeenNthCalledWith(
+      2,
+      'entry-1',
+      {
+        status: OutboxStatus.DELIVERED,
+        deliveredAt: expect.any(String),
+      },
+    );
   });
 
   it('should mark entry as DEAD_LETTERED after max attempts', async () => {
@@ -120,13 +125,17 @@ describe('DrainOutboxJob', () => {
       attemptCount: 4, // max is 5, so next attempt will reach it
     };
 
-    mockRepository.find.mockResolvedValue([pendingEntry]);
+    // Stale find returns empty
+    mockRepository.find.mockResolvedValueOnce([]);
+    // Pending find returns the entry
+    mockRepository.find.mockResolvedValueOnce([pendingEntry]);
+    // Atomic claim succeeds
+    mockRepository.update.mockResolvedValue({ affected: 1 });
     mockWorkspaceEventEmitter.emitDatabaseBatchEvent.mockImplementation(
       () => {
         throw new Error('Delivery failed');
       },
     );
-    mockRepository.update.mockResolvedValue({});
 
     await job.handle({ workspaceId: 'workspace-1' });
 
@@ -138,7 +147,7 @@ describe('DrainOutboxJob', () => {
     });
   });
 
-  it('should re-enqueue entry as PENDING when below max attempts', async () => {
+  it('should re-enqueue entry as PENDING with backoff when below max attempts', async () => {
     const pendingEntry = {
       id: 'entry-3',
       eventName: 'opportunity.deleted',
@@ -147,13 +156,17 @@ describe('DrainOutboxJob', () => {
       attemptCount: 1,
     };
 
-    mockRepository.find.mockResolvedValue([pendingEntry]);
+    // Stale find returns empty
+    mockRepository.find.mockResolvedValueOnce([]);
+    // Pending find returns the entry
+    mockRepository.find.mockResolvedValueOnce([pendingEntry]);
+    // Atomic claim succeeds
+    mockRepository.update.mockResolvedValue({ affected: 1 });
     mockWorkspaceEventEmitter.emitDatabaseBatchEvent.mockImplementation(
       () => {
         throw new Error('Temporary error');
       },
     );
-    mockRepository.update.mockResolvedValue({});
 
     await job.handle({ workspaceId: 'workspace-1' });
 
@@ -162,6 +175,7 @@ describe('DrainOutboxJob', () => {
       lastAttemptAt: expect.any(String),
       attemptCount: 2,
       lastErrorMessage: 'Temporary error',
+      nextAttemptAt: expect.any(String),
     });
   });
 });

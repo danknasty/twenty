@@ -19,6 +19,7 @@ import { TrashCleanupCronCommand } from 'src/engine/trash-cleanup/commands/trash
 import { CleanOnboardingWorkspacesCronCommand } from 'src/engine/workspace-manager/workspace-cleaner/commands/clean-onboarding-workspaces.cron.command';
 import { CleanSuspendedWorkspacesCronCommand } from 'src/engine/workspace-manager/workspace-cleaner/commands/clean-suspended-workspaces.cron.command';
 import { CalendarEventListFetchCronCommand } from 'src/modules/calendar/calendar-event-import-manager/crons/commands/calendar-event-list-fetch.cron.command';
+import { DrainOutboxCronCommand } from 'src/engine/core-modules/transactional-outbox/crons/commands/drain-outbox.cron.command';
 import { CalendarEventsImportCronCommand } from 'src/modules/calendar/calendar-event-import-manager/crons/commands/calendar-import.cron.command';
 import { CalendarOngoingStaleCronCommand } from 'src/modules/calendar/calendar-event-import-manager/crons/commands/calendar-ongoing-stale.cron.command';
 import { CalendarRelaunchFailedCalendarChannelsCronCommand } from 'src/modules/calendar/calendar-event-import-manager/crons/commands/calendar-relaunch-failed-calendar-channels.cron.command';
@@ -70,6 +71,7 @@ export class CronRegisterAllCommand extends CommandRunner {
     private readonly pendingFileCleanupCronCommand: PendingFileCleanupCronCommand,
     private readonly billingReminderCronCommand: BillingReminderCronCommand,
     private readonly executiveSearchOutboxRedriveCronCommand: ExecutiveSearchOutboxRedriveCronCommand,
+    private readonly drainOutboxCronCommand: DrainOutboxCronCommand,
     private readonly twentyConfigService: TwentyConfigService,
   ) {
     super();
@@ -199,6 +201,10 @@ export class CronRegisterAllCommand extends CommandRunner {
       {
         name: 'ExecutiveSearchOutboxRedrive',
         command: this.executiveSearchOutboxRedriveCronCommand,
+      },
+      {
+        name: 'DrainOutbox',
+        command: this.drainOutboxCronCommand,
       },
     ];
 

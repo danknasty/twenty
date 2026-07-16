@@ -50,6 +50,12 @@ import { buildClientAccountProfileStandardFlatFieldMetadatas } from 'src/engine/
 import { buildClientStakeholderRoleStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-stakeholder-role-standard-flat-field-metadata.util';
 import { buildSearchEngagementTermsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-engagement-terms-standard-flat-field-metadata.util';
 import { buildWorkspaceMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workspace-member-standard-flat-field-metadata.util';
+import { buildSearchEngagementTermsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-engagement-terms-standard-flat-field-metadata.util';
+import { buildSearchAssignmentStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-assignment-standard-flat-field-metadata.util';
+import { buildAssignmentTeamMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-assignment-team-member-standard-flat-field-metadata.util';
+import { buildSearchMilestoneStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-milestone-standard-flat-field-metadata.util';
+import { buildPositionSpecificationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-position-specification-standard-flat-field-metadata.util';
+import { buildSearchCriterionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-criterion-standard-flat-field-metadata.util';
 import { type CreateStandardFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
@@ -106,12 +112,18 @@ const STANDARD_FLAT_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowRun: buildWorkflowRunStandardFlatFieldMetadatas,
   workflowVersion: buildWorkflowVersionStandardFlatFieldMetadatas,
   workspaceMember: buildWorkspaceMemberStandardFlatFieldMetadatas,
-  clientStakeholderRole:
+clientStakeholderRole:
     buildClientStakeholderRoleStandardFlatFieldMetadatas,
   searchEngagementTerms:
     buildSearchEngagementTermsStandardFlatFieldMetadatas,
   clientAccountProfile:
-    buildClientAccountProfileStandardFlatFieldMetadatas,
+    buildClientAccountProfileStandardFlatFieldMetadatas,,
+searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
+  searchAssignment: buildSearchAssignmentStandardFlatFieldMetadatas,
+  assignmentTeamMember: buildAssignmentTeamMemberStandardFlatFieldMetadatas,
+  searchMilestone: buildSearchMilestoneStandardFlatFieldMetadatas,
+  positionSpecification: buildPositionSpecificationStandardFlatFieldMetadatas,
+  searchCriterion: buildSearchCriterionStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };

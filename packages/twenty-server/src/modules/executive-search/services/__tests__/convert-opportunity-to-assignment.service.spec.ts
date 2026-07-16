@@ -49,11 +49,26 @@ describe('ConvertOpportunityToAssignmentService', () => {
   let mockTransactionImpl: any;
 
   const workspaceId = 'workspace-1';
+  const userFields = {
+    id: 'user-1',
+    firstName: 'Test',
+    lastName: 'User',
+    email: 'test@example.com',
+    isEmailVerified: true,
+    disabled: false,
+    canImpersonate: false,
+    canAccessFullAdminPanel: false,
+    createdAt: '2024-01-01T00:00:00.000Z',
+    updatedAt: '2024-01-01T00:00:00.000Z',
+    deletedAt: '2024-01-01T00:00:00.000Z',
+    locale: 'en' as const,
+  };
+
   const authContext = {
     type: 'user' as const,
     workspace: { id: workspaceId },
     workspaceMemberId: 'member-1',
-    user: { id: 'user-1' },
+    user: userFields,
     userWorkspaceId: 'user-workspace-1',
     workspaceMember: { id: 'member-1', name: { firstName: 'Test', lastName: 'User' } },
   };
@@ -200,7 +215,7 @@ describe('ConvertOpportunityToAssignmentService', () => {
       const result = await service.convertOpportunityToAssignment(
         opportunityId,
         workspaceId,
-        authContext,
+        authContext as any,
       );
 
       expect(result).toEqual({
@@ -263,7 +278,7 @@ describe('ConvertOpportunityToAssignmentService', () => {
       const result = await service.convertOpportunityToAssignment(
         opportunityId,
         workspaceId,
-        authContext,
+        authContext as any,
       );
 
       expect(result).toEqual({
@@ -286,7 +301,7 @@ describe('ConvertOpportunityToAssignmentService', () => {
         service.convertOpportunityToAssignment(
           opportunityId,
           workspaceId,
-          authContext,
+          authContext as any,
         ),
       ).rejects.toThrow(
         expect.objectContaining({
@@ -307,7 +322,7 @@ describe('ConvertOpportunityToAssignmentService', () => {
         service.convertOpportunityToAssignment(
           opportunityId,
           workspaceId,
-          authContext,
+          authContext as any,
         ),
       ).rejects.toThrow(
         expect.objectContaining({
@@ -328,7 +343,7 @@ describe('ConvertOpportunityToAssignmentService', () => {
         service.convertOpportunityToAssignment(
           opportunityId,
           workspaceId,
-          authContext,
+          authContext as any,
         ),
       ).rejects.toThrow(
         expect.objectContaining({
@@ -348,7 +363,7 @@ describe('ConvertOpportunityToAssignmentService', () => {
         service.convertOpportunityToAssignment(
           opportunityId,
           workspaceId,
-          authContext,
+          authContext as any,
         ),
       ).rejects.toThrow(
         expect.objectContaining({
@@ -376,7 +391,7 @@ describe('ConvertOpportunityToAssignmentService', () => {
         service.convertOpportunityToAssignment(
           opportunityId,
           workspaceId,
-          authContext,
+          authContext as any,
         ),
       ).rejects.toThrow('DB failure');
 

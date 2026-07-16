@@ -41,6 +41,12 @@ import { buildWorkflowRunStandardFlatIndexMetadatas } from 'src/engine/workspace
 import { buildWorkflowStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-workflow-standard-flat-index-metadata.util';
 import { buildWorkflowVersionStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-workflow-version-standard-flat-index-metadata.util';
 import { buildWorkspaceMemberStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-workspace-member-standard-flat-index-metadata.util';
+import { buildSearchEngagementTermsStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-engagement-terms-standard-flat-index-metadata.util';
+import { buildSearchAssignmentStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-assignment-standard-flat-index-metadata.util';
+import { buildAssignmentTeamMemberStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-assignment-team-member-standard-flat-index-metadata.util';
+import { buildSearchMilestoneStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-milestone-standard-flat-index-metadata.util';
+import { buildPositionSpecificationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-position-specification-standard-flat-index-metadata.util';
+import { buildSearchCriterionStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-criterion-standard-flat-index-metadata.util';
 import { type CreateStandardIndexArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/create-standard-index-flat-metadata.util';
 
 type StandardIndexBuilder<P extends AllStandardObjectName> = (
@@ -95,6 +101,12 @@ clientAccountProfile: buildClientAccountProfileStandardFlatIndexMetadatas,
   workflowRun: buildWorkflowRunStandardFlatIndexMetadatas,
   workflowVersion: buildWorkflowVersionStandardFlatIndexMetadatas,
   workspaceMember: buildWorkspaceMemberStandardFlatIndexMetadatas,
+  searchEngagementTerms: buildSearchEngagementTermsStandardFlatIndexMetadatas,
+  searchAssignment: buildSearchAssignmentStandardFlatIndexMetadatas,
+  assignmentTeamMember: buildAssignmentTeamMemberStandardFlatIndexMetadatas,
+  searchMilestone: buildSearchMilestoneStandardFlatIndexMetadatas,
+  positionSpecification: buildPositionSpecificationStandardFlatIndexMetadatas,
+  searchCriterion: buildSearchCriterionStandardFlatIndexMetadatas,
 } satisfies {
   [P in AllStandardObjectName]?: StandardIndexBuilder<P>;
 };

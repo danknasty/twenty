@@ -16,8 +16,8 @@ export class AssignmentStatusTransitionService {
 
     if (!allowed.includes(to)) {
       throw new ExecutiveSearchException(
-        `Invalid status transition from ${from} to ${to}`,
         ExecutiveSearchExceptionCode.INVALID_STATUS_TRANSITION,
+        `Invalid status transition from ${from} to ${to}`,
       );
     }
   }

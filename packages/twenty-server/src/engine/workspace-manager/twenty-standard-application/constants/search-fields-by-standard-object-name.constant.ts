@@ -69,7 +69,7 @@ export const SEARCH_FIELDS_BY_STANDARD_OBJECT_NAME = {
     { name: 'name', type: FieldMetadataType.FULL_NAME },
     { name: 'userEmail', type: FieldMetadataType.TEXT },
   ],
-  executiveProfile: [
+executiveProfile: [
     { name: 'headline', type: FieldMetadataType.TEXT },
     { name: 'currentTitle', type: FieldMetadataType.TEXT },
   ],
@@ -100,7 +100,13 @@ export const SEARCH_FIELDS_BY_STANDARD_OBJECT_NAME = {
   executiveExternalProfile: [
     { name: 'handle', type: FieldMetadataType.TEXT },
   ],
-  executiveSearchPreference: [],
+  executiveSearchPreference: [],,
+searchEngagementTerms: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  searchAssignment: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  assignmentTeamMember: [],
+  searchMilestone: [],
+  positionSpecification: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  searchCriterion: [],
 } satisfies {
   [ObjectName in AllStandardObjectName]: {
     name: AllStandardObjectFieldName<ObjectName>;

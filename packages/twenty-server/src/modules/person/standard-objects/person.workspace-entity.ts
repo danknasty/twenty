@@ -15,6 +15,8 @@ import { type CompanyWorkspaceEntity } from 'src/modules/company/standard-object
 import { type MessageListMemberWorkspaceEntity } from 'src/modules/emailing/standard-objects/message-list-member.workspace-entity';
 import { type MessageParticipantWorkspaceEntity } from 'src/modules/messaging/common/standard-objects/message-participant.workspace-entity';
 import { type NoteTargetWorkspaceEntity } from 'src/modules/note/standard-objects/note-target.workspace-entity';
+import { type ClientAccountProfileWorkspaceEntity } from 'src/modules/client-account-profile/standard-objects/client-account-profile.workspace-entity';
+import { type ClientStakeholderRoleWorkspaceEntity } from 'src/modules/client-stakeholder-role/standard-objects/client-stakeholder-role.workspace-entity';
 import { type OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { type TaskTargetWorkspaceEntity } from 'src/modules/task/standard-objects/task-target.workspace-entity';
 import { type TimelineActivityWorkspaceEntity } from 'src/modules/timeline/standard-objects/timeline-activity.workspace-entity';
@@ -46,4 +48,8 @@ export class PersonWorkspaceEntity extends BaseWorkspaceEntity {
   timelineActivities: EntityRelation<TimelineActivityWorkspaceEntity[]>;
   listMemberships: EntityRelation<MessageListMemberWorkspaceEntity[]>;
   searchVector: string;
+
+  // Client CRM relations
+  clientStakeholderRoles: EntityRelation<ClientStakeholderRoleWorkspaceEntity[]>;
+  billingContactForClientAccountProfiles: EntityRelation<ClientAccountProfileWorkspaceEntity[]>;
 }

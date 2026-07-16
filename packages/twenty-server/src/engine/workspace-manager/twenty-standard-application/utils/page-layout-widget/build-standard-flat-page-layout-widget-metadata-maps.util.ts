@@ -71,6 +71,8 @@ const RECORD_PAGE_FIELDS_VIEW_NAME_BY_OBJECT: Partial<
   calendarEvent: 'calendarEventRecordPageFields',
   calendarEventParticipant: 'calendarEventParticipantRecordPageFields',
   callRecording: 'callRecordingRecordPageFields',
+  clientAccountProfile: 'clientAccountProfileRecordPageFields',
+  clientStakeholderRole: 'clientStakeholderRoleRecordPageFields',
   company: 'companyRecordPageFields',
   messageChannelMessageAssociation:
     'messageChannelMessageAssociationRecordPageFields',

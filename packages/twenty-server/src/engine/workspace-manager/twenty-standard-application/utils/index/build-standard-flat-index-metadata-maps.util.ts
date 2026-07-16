@@ -8,6 +8,8 @@ import { buildBlocklistStandardFlatIndexMetadatas } from 'src/engine/workspace-m
 import { buildCalendarChannelEventAssociationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-calendar-channel-event-association-standard-flat-index-metadata.util';
 import { buildCalendarEventParticipantStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-calendar-event-participant-standard-flat-index-metadata.util';
 import { buildCallRecordingStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-call-recording-standard-flat-index-metadata.util';
+import { buildClientAccountProfileStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-account-profile-standard-flat-index-metadata.util';
+import { buildClientStakeholderRoleStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-stakeholder-role-standard-flat-index-metadata.util';
 import { buildCompanyStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-company-standard-flat-index-metadata.util';
 import { buildExternalEntityLinkStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-entity-link-standard-flat-index-metadata.util';
 import { buildInboundEventLedgerStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-inbound-event-ledger-standard-flat-index-metadata.util';
@@ -50,6 +52,10 @@ const STANDARD_FLAT_INDEX_METADATA_BUILDERS_BY_OBJECT_NAME = {
   calendarEventParticipant:
     buildCalendarEventParticipantStandardFlatIndexMetadatas,
   callRecording: buildCallRecordingStandardFlatIndexMetadatas,
+  clientAccountProfile:
+    buildClientAccountProfileStandardFlatIndexMetadatas,
+  clientStakeholderRole:
+    buildClientStakeholderRoleStandardFlatIndexMetadatas,
   company: buildCompanyStandardFlatIndexMetadatas,
   externalEntityLink: buildExternalEntityLinkStandardFlatIndexMetadatas,
   inboundEventLedger: buildInboundEventLedgerStandardFlatIndexMetadatas,

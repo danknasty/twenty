@@ -9,6 +9,8 @@ import { computeStandardCalendarChannelEventAssociationViews } from 'src/engine/
 import { computeStandardCalendarEventParticipantViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-calendar-event-participant-views.util';
 import { computeStandardCalendarEventViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-calendar-event-views.util';
 import { computeStandardCallRecordingViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-call-recording-views.util';
+import { computeStandardClientAccountProfileViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-client-account-profile-views.util';
+import { computeStandardClientStakeholderRoleViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-client-stakeholder-role-views.util';
 import { computeStandardCompanyViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-company-views.util';
 import { computeStandardDashboardViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-dashboard-views.util';
 import {
@@ -56,6 +58,8 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   calendarEvent: computeStandardCalendarEventViews,
   calendarEventParticipant: computeStandardCalendarEventParticipantViews,
   callRecording: computeStandardCallRecordingViews,
+  clientAccountProfile: computeStandardClientAccountProfileViews,
+  clientStakeholderRole: computeStandardClientStakeholderRoleViews,
   company: computeStandardCompanyViews,
   dashboard: computeStandardDashboardViews,
   executiveArtifact: computeStandardExecutiveArtifactViews,

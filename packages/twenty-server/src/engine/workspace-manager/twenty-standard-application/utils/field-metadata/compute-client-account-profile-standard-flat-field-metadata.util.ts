@@ -7,7 +7,6 @@ import {
   RelationType,
 } from 'twenty-shared/types';
 
-import { STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT } from 'src/engine/metadata-modules/object-metadata/constants/standard-relation-field-properties.constant';
 import { type FlatFieldMetadata } from 'src/engine/metadata-modules/flat-field-metadata/types/flat-field-metadata.type';
 import { type AllStandardObjectFieldName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
 import {
@@ -15,7 +14,8 @@ import {
   createStandardFieldFlatMetadata,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 import { createStandardRelationFieldFlatMetadata } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-relation-field-flat-metadata.util';
-export const buildCompanyStandardFlatFieldMetadatas = ({
+
+export const buildClientAccountProfileStandardFlatFieldMetadatas = ({
   now,
   objectName,
   workspaceId,
@@ -23,9 +23,12 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
 }: Omit<
-  CreateStandardFieldArgs<'company', FieldMetadataType>,
+  CreateStandardFieldArgs<'clientAccountProfile', FieldMetadataType>,
   'context'
->): Record<AllStandardObjectFieldName<'company'>, FlatFieldMetadata> => ({
+>): Record<
+  AllStandardObjectFieldName<'clientAccountProfile'>,
+  FlatFieldMetadata
+> => ({
   // Base fields from BaseWorkspaceEntity
   id: createStandardFieldFlatMetadata({
     objectName,
@@ -112,7 +115,7 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
     now,
   }),
 
-  // Company-specific fields
+  // clientAccountProfile-specific fields
   name: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
@@ -120,8 +123,125 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
       fieldName: 'name',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Name`),
-      description: i18nLabel(msg`The company name`),
-      icon: 'IconBuildingSkyscraper',
+      description: i18nLabel(msg`Client account profile name`),
+      icon: 'IconBriefcase',
+      isNullable: false,
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  clientAccountType: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'clientAccountType',
+      type: FieldMetadataType.SELECT,
+      label: i18nLabel(msg`Account Type`),
+      description: i18nLabel(msg`Client account type`),
+      icon: 'IconCategory',
+      isNullable: false,
+      defaultValue: "'PROSPECT'",
+      options: [
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca001',
+          value: 'PROSPECT',
+          label: i18nLabel(msg`Prospect`),
+          position: 0,
+          color: 'gray',
+        },
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca002',
+          value: 'ACTIVE',
+          label: i18nLabel(msg`Active`),
+          position: 1,
+          color: 'green',
+        },
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca003',
+          value: 'ALUMNI',
+          label: i18nLabel(msg`Alumni`),
+          position: 2,
+          color: 'blue',
+        },
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca004',
+          value: 'DORMANT',
+          label: i18nLabel(msg`Dormant`),
+          position: 3,
+          color: 'turquoise',
+        },
+      ],
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  clientOnboardingStatus: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'clientOnboardingStatus',
+      type: FieldMetadataType.SELECT,
+      label: i18nLabel(msg`Onboarding Status`),
+      description: i18nLabel(msg`Client onboarding status`),
+      icon: 'IconProgressCheck',
+      isNullable: false,
+      defaultValue: "'NOT_STARTED'",
+      options: [
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca005',
+          value: 'NOT_STARTED',
+          label: i18nLabel(msg`Not Started`),
+          position: 0,
+          color: 'gray',
+        },
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca006',
+          value: 'IN_PROGRESS',
+          label: i18nLabel(msg`In Progress`),
+          position: 1,
+          color: 'yellow',
+        },
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca007',
+          value: 'ONBOARDED',
+          label: i18nLabel(msg`Onboarded`),
+          position: 2,
+          color: 'green',
+        },
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca008',
+          value: 'PAUSED',
+          label: i18nLabel(msg`Paused`),
+          position: 3,
+          color: 'orange',
+        },
+        {
+          id: '20202020-9a01-4a01-8a01-c0aba11ca009',
+          value: 'OFFBOARDED',
+          label: i18nLabel(msg`Offboarded`),
+          position: 4,
+          color: 'red',
+        },
+      ],
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  clientSince: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'clientSince',
+      type: FieldMetadataType.DATE_TIME,
+      label: i18nLabel(msg`Client Since`),
+      description: i18nLabel(msg`Date when the client relationship started`),
+      icon: 'IconCalendarTime',
       isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
@@ -129,37 +249,15 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  domainName: createStandardFieldFlatMetadata({
+  clientPaymentTerms: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'domainName',
-      type: FieldMetadataType.LINKS,
-      label: i18nLabel(msg`Domain Name`),
-      description: i18nLabel(
-        msg`The company website URL. We use this url to fetch the company icon`,
-      ),
-      icon: 'IconLink',
-      isNullable: true,
-      isUnique: true,
-      settings: {
-        maxNumberOfValues: 1,
-      },
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  address: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'address',
-      type: FieldMetadataType.ADDRESS,
-      label: i18nLabel(msg`Address`),
-      description: i18nLabel(msg`Address of the company`),
-      icon: 'IconMap',
+      fieldName: 'clientPaymentTerms',
+      type: FieldMetadataType.TEXT,
+      label: i18nLabel(msg`Payment Terms`),
+      description: i18nLabel(msg`Client payment terms`),
+      icon: 'IconCurrencyDollar',
       isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
@@ -167,31 +265,15 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  linkedinLink: createStandardFieldFlatMetadata({
+  clientNotes: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      fieldName: 'linkedinLink',
-      type: FieldMetadataType.LINKS,
-      label: i18nLabel(msg`Linkedin`),
-      description: i18nLabel(msg`The company Linkedin account`),
-      icon: 'IconBrandLinkedin',
-      isNullable: true,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  annualRevenue: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'annualRevenue',
-      type: FieldMetadataType.CURRENCY,
-      label: i18nLabel(msg`Annual Revenue`),
-      description: i18nLabel(msg`The company's total annual revenue`),
-      icon: 'IconMoneybag',
+      fieldName: 'clientNotes',
+      type: FieldMetadataType.TEXT,
+      label: i18nLabel(msg`Notes`),
+      description: i18nLabel(msg`Client account notes`),
+      icon: 'IconNotes',
       isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
@@ -206,7 +288,7 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
       fieldName: 'position',
       type: FieldMetadataType.POSITION,
       label: i18nLabel(msg`Position`),
-      description: i18nLabel(msg`Company record position`),
+      description: i18nLabel(msg`Client account profile record position`),
       icon: 'IconHierarchy2',
       isSystem: true,
       isNullable: false,
@@ -284,47 +366,23 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
   }),
 
   // Relation fields
-  people: createStandardRelationFieldFlatMetadata({
+  clientBillingContact: createStandardRelationFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
       type: FieldMetadataType.RELATION,
       morphId: null,
-      fieldName: 'people',
-      label: i18nLabel(msg`People`),
-      description: i18nLabel(msg`People linked to the company.`),
-      icon: 'IconUsers',
+      fieldName: 'clientBillingContact',
+      label: i18nLabel(msg`Billing Contact`),
+      description: i18nLabel(msg`Client billing contact`),
+      icon: 'IconUser',
       isNullable: true,
       targetObjectName: 'person',
-      targetFieldName: 'company',
-      settings: {
-        relationType: RelationType.ONE_TO_MANY,
-      },
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  accountOwner: createStandardRelationFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      type: FieldMetadataType.RELATION,
-      morphId: null,
-      fieldName: 'accountOwner',
-      label: i18nLabel(msg`Account Owner`),
-      description: i18nLabel(
-        msg`Your team member responsible for managing the company account`,
-      ),
-      icon: 'IconUserCircle',
-      isNullable: true,
-      targetObjectName: 'workspaceMember',
-      targetFieldName: 'accountOwnerForCompanies',
+      targetFieldName: 'billingContactForClientAccountProfiles',
       settings: {
         relationType: RelationType.MANY_TO_ONE,
         onDelete: RelationOnDeleteAction.SET_NULL,
-        joinColumnName: 'accountOwnerId',
+        joinColumnName: 'clientBillingContactId',
       },
     },
     standardObjectMetadataRelatedEntityIds,
@@ -332,120 +390,23 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  taskTargets: createStandardRelationFieldFlatMetadata({
+  company: createStandardRelationFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
       type: FieldMetadataType.RELATION,
       morphId: null,
-      fieldName: 'taskTargets',
-      label: i18nLabel(
-        STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT.taskTarget.label,
-      ),
-      description: i18nLabel(msg`Tasks tied to the company`),
-      icon: STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT.taskTarget
-        .icon,
-      isUIEditable: false,
-      isNullable: true,
-      targetObjectName: 'taskTarget',
-      targetFieldName: 'targetCompany',
+      fieldName: 'company',
+      label: i18nLabel(msg`Company`),
+      description: i18nLabel(msg`Client account company`),
+      icon: 'IconBuildingSkyscraper',
+      isNullable: false,
+      targetObjectName: 'company',
+      targetFieldName: 'clientAccountProfiles',
       settings: {
-        relationType: RelationType.ONE_TO_MANY,
-      },
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  noteTargets: createStandardRelationFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      type: FieldMetadataType.RELATION,
-      morphId: null,
-      fieldName: 'noteTargets',
-      label: i18nLabel(
-        STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT.noteTarget.label,
-      ),
-      description: i18nLabel(msg`Notes tied to the company`),
-      icon: STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT.noteTarget
-        .icon,
-      isUIEditable: false,
-      isNullable: true,
-      targetObjectName: 'noteTarget',
-      targetFieldName: 'targetCompany',
-      settings: {
-        relationType: RelationType.ONE_TO_MANY,
-      },
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  opportunities: createStandardRelationFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      type: FieldMetadataType.RELATION,
-      morphId: null,
-      fieldName: 'opportunities',
-      label: i18nLabel(msg`Opportunities`),
-      description: i18nLabel(msg`Opportunities linked to the company.`),
-      icon: 'IconTargetArrow',
-      isNullable: true,
-      targetObjectName: 'opportunity',
-      targetFieldName: 'company',
-      settings: {
-        relationType: RelationType.ONE_TO_MANY,
-      },
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  attachments: createStandardRelationFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      type: FieldMetadataType.RELATION,
-      morphId: null,
-      fieldName: 'attachments',
-      label: i18nLabel(
-        STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT.attachment.label,
-      ),
-      description: i18nLabel(msg`Attachments linked to the company`),
-      icon: STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT.attachment
-        .icon,
-      isNullable: true,
-      targetObjectName: 'attachment',
-      targetFieldName: 'targetCompany',
-      settings: {
-        relationType: RelationType.ONE_TO_MANY,
-      },
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  clientAccountProfiles: createStandardRelationFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      type: FieldMetadataType.RELATION,
-      morphId: null,
-      fieldName: 'clientAccountProfiles',
-      label: i18nLabel(msg`Client Account Profile`),
-      description: i18nLabel(msg`Client account profile tied to the company`),
-      icon: 'IconBriefcase',
-      isNullable: true,
-      targetObjectName: 'clientAccountProfile',
-      targetFieldName: 'company',
-      settings: {
-        relationType: RelationType.ONE_TO_MANY,
+        relationType: RelationType.MANY_TO_ONE,
+        onDelete: RelationOnDeleteAction.CASCADE,
+        joinColumnName: 'companyId',
       },
     },
     standardObjectMetadataRelatedEntityIds,
@@ -460,38 +421,13 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
       type: FieldMetadataType.RELATION,
       morphId: null,
       fieldName: 'clientStakeholderRoles',
-      label: i18nLabel(msg`Client Stakeholder Roles`),
-      description: i18nLabel(msg`Stakeholder roles tied to the company`),
-      icon: 'IconUserStar',
+      label: i18nLabel(msg`Stakeholder Roles`),
+      description: i18nLabel(msg`Stakeholder roles tied to the client account`),
+      icon: 'IconUsersGroup',
+      isUIEditable: false,
       isNullable: true,
       targetObjectName: 'clientStakeholderRole',
-      targetFieldName: 'company',
-      settings: {
-        relationType: RelationType.ONE_TO_MANY,
-      },
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  timelineActivities: createStandardRelationFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      type: FieldMetadataType.RELATION,
-      morphId: null,
-      fieldName: 'timelineActivities',
-      label: i18nLabel(
-        STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT.timelineActivity
-          .label,
-      ),
-      description: i18nLabel(msg`Timeline Activities linked to the company`),
-      icon: STANDARD_RELATION_FIELD_PROPERTIES_BY_RELATION_OBJECT
-        .timelineActivity.icon,
-      isNullable: true,
-      targetObjectName: 'timelineActivity',
-      targetFieldName: 'targetCompany',
+      targetFieldName: 'clientAccountProfile',
       settings: {
         relationType: RelationType.ONE_TO_MANY,
       },

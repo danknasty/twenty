@@ -12,6 +12,15 @@ export const SEARCH_FIELDS_BY_STANDARD_OBJECT_NAME = {
   calendarEvent: [{ name: 'title', type: FieldMetadataType.TEXT }],
   calendarEventParticipant: [{ name: 'handle', type: FieldMetadataType.TEXT }],
   callRecording: [{ name: 'title', type: FieldMetadataType.TEXT }],
+  clientAccountProfile: [
+    { name: 'name', type: FieldMetadataType.TEXT },
+    { name: 'clientPaymentTerms', type: FieldMetadataType.TEXT },
+    { name: 'clientNotes', type: FieldMetadataType.TEXT },
+  ],
+  clientStakeholderRole: [
+    { name: 'name', type: FieldMetadataType.TEXT },
+    { name: 'notes', type: FieldMetadataType.TEXT },
+  ],
   company: [
     { name: 'name', type: FieldMetadataType.TEXT },
     { name: 'domainName', type: FieldMetadataType.LINKS },

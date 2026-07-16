@@ -630,4 +630,61 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
       },
     },
   },
+  clientAccountProfileRecordPage: {
+    universalIdentifier: '20202020-0823-3a18-3206-7ea8d96955d1',
+    tabs: {
+      home: {
+        universalIdentifier: '20202020-35c3-79c1-4286-02e61f4359d0',
+        widgets: {
+          fields: {
+            universalIdentifier: '20202020-7e62-36b7-ec86-813c39cd1d87',
+          },
+          company: {
+            universalIdentifier: '20202020-fbb9-8195-5cb8-332d0d929c50',
+          },
+          clientBillingContact: {
+            universalIdentifier: '20202020-2e0e-26b0-f56b-d2c15f3cd19e',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '20202020-b498-5a0d-02e9-72bb1100c4c1',
+        widgets: {
+          timeline: {
+            universalIdentifier: '20202020-02a0-a9d7-8063-b6720fd5c9f3',
+          },
+        },
+      },
+    },
+  },
+  clientStakeholderRoleRecordPage: {
+    universalIdentifier: '20202020-9084-e383-193f-3e483e723a66',
+    tabs: {
+      home: {
+        universalIdentifier: '20202020-dc78-d2d5-5edc-808b3dbdd2f4',
+        widgets: {
+          fields: {
+            universalIdentifier: '20202020-e380-0196-aa27-8360bdf88d38',
+          },
+          person: {
+            universalIdentifier: '20202020-9dc0-5752-cf19-ff54fac1230a',
+          },
+          company: {
+            universalIdentifier: '20202020-e0a1-ab3b-04b0-4359a9a6f9df',
+          },
+          clientAccountProfile: {
+            universalIdentifier: '20202020-38ca-33c5-ae09-73544d04c2ca',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '20202020-7c62-2c49-d2ae-dfdd886d1365',
+        widgets: {
+          timeline: {
+            universalIdentifier: '20202020-dc54-84eb-7948-e08c10f529c5',
+          },
+        },
+      },
+    },
+  },
 };

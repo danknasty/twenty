@@ -722,6 +722,270 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
   },
+  "clientAccountProfile": {
+    "fields": {
+      "clientAccountType": {
+        "universalIdentifier": "20202020-ce0b-d224-26af-ac21f70ec83c",
+      },
+      "clientBillingContact": {
+        "universalIdentifier": "20202020-92b8-e95a-329f-9ed2594f3f3f",
+      },
+      "clientNotes": {
+        "universalIdentifier": "20202020-3760-9857-e169-aca6887f8955",
+      },
+      "clientOnboardingStatus": {
+        "universalIdentifier": "20202020-4f47-5fab-61f7-62ee752feff7",
+      },
+      "clientPaymentTerms": {
+        "universalIdentifier": "20202020-7071-c951-02d0-12de2f4fe099",
+      },
+      "clientSince": {
+        "universalIdentifier": "20202020-1919-09f7-af75-dd43caf5e40e",
+      },
+      "clientStakeholderRoles": {
+        "universalIdentifier": "20202020-5450-9568-86ce-5501bbb409c3",
+      },
+      "company": {
+        "universalIdentifier": "20202020-45a6-877f-b560-c96f15919b47",
+      },
+      "createdAt": {
+        "universalIdentifier": "de26e8d8-7c92-51f5-bb85-435369b0dae2",
+      },
+      "createdBy": {
+        "universalIdentifier": "fec51515-ba31-5fae-9e19-0d2cc5b4cba2",
+      },
+      "deletedAt": {
+        "universalIdentifier": "9bfb5b21-0ccd-5754-b621-9083501726e8",
+      },
+      "id": {
+        "universalIdentifier": "d9ea156a-3395-53e6-a1cb-b9e30a7696aa",
+      },
+      "name": {
+        "universalIdentifier": "20202020-bad8-e622-f265-da04ab51efb2",
+      },
+      "position": {
+        "universalIdentifier": "4067e178-a1d9-5c49-a51a-cc91bbce9da3",
+      },
+      "searchVector": {
+        "universalIdentifier": "7c413086-cdaa-5a8e-83f6-89e9a0691c98",
+      },
+      "updatedAt": {
+        "universalIdentifier": "e241a992-114a-5013-8a13-659afb326e81",
+      },
+      "updatedBy": {
+        "universalIdentifier": "f96b99b4-4568-546a-9693-d74308fb9584",
+      },
+    },
+    "indexes": {
+      "companyIdUniqueIndex": {
+        "universalIdentifier": "20202020-6d6b-a306-ae28-c944ab33d6e4",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "20202020-2fd5-4aa6-6894-12d95ac2c4c0",
+      },
+    },
+    "universalIdentifier": "20202020-97be-1db5-a660-a9e87fef8e88",
+    "views": {
+      "allClientAccountProfiles": {
+        "universalIdentifier": "20202020-13ac-64ad-f5c0-077592fb307b",
+        "viewFields": {
+          "clientAccountType": {
+            "universalIdentifier": "20202020-9a71-0483-408b-c17089bb0156",
+          },
+          "clientOnboardingStatus": {
+            "universalIdentifier": "20202020-3d61-df33-037d-4d90bde1222b",
+          },
+          "clientSince": {
+            "universalIdentifier": "20202020-0cc1-e19d-e90a-7d70bdfc6635",
+          },
+          "company": {
+            "universalIdentifier": "20202020-3fb8-2839-a032-27c4ff42cf72",
+          },
+          "createdAt": {
+            "universalIdentifier": "20202020-02d9-cf89-4c0f-938f7c2bbd84",
+          },
+          "name": {
+            "universalIdentifier": "20202020-70d1-1297-9a5f-639bc8e02427",
+          },
+        },
+      },
+      "clientAccountProfileRecordPageFields": {
+        "universalIdentifier": "20202020-96b3-51f2-0e39-495280867fee",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "20202020-d1b8-6d54-13bc-54f2b82fe46e",
+          },
+          "relations": {
+            "universalIdentifier": "20202020-93d9-8c9a-d308-6482eea1e7d2",
+          },
+          "system": {
+            "universalIdentifier": "20202020-7ce8-9f86-fc43-96e903d80cde",
+          },
+        },
+        "viewFields": {
+          "clientAccountType": {
+            "universalIdentifier": "20202020-b5bd-6005-920c-ef4e0f5b4b3f",
+          },
+          "clientBillingContact": {
+            "universalIdentifier": "20202020-d1ab-42e0-99c0-45b1eec40bc2",
+          },
+          "clientNotes": {
+            "universalIdentifier": "20202020-d0cc-7fe0-e7c4-83167d8dde00",
+          },
+          "clientOnboardingStatus": {
+            "universalIdentifier": "20202020-f925-b85d-194b-84a2a69fe331",
+          },
+          "clientPaymentTerms": {
+            "universalIdentifier": "20202020-40ef-3b50-cdf6-3e75c4ca0c0c",
+          },
+          "clientSince": {
+            "universalIdentifier": "20202020-eb73-195e-1ece-a012bde77337",
+          },
+          "company": {
+            "universalIdentifier": "20202020-f7a1-d8a9-6141-8f04bc00314d",
+          },
+          "createdAt": {
+            "universalIdentifier": "20202020-8ac9-2e04-fe09-42ed8bab63c2",
+          },
+          "name": {
+            "universalIdentifier": "20202020-073b-7300-6ba7-4517b2b5eb59",
+          },
+          "updatedAt": {
+            "universalIdentifier": "20202020-4522-6809-a2de-8be5d600ebad",
+          },
+        },
+      },
+    },
+  },
+  "clientStakeholderRole": {
+    "fields": {
+      "clientAccountProfile": {
+        "universalIdentifier": "20202020-5696-4bcd-d3fc-247a40b83744",
+      },
+      "company": {
+        "universalIdentifier": "20202020-c2df-ea46-9d46-b4c5a04cbe3f",
+      },
+      "createdAt": {
+        "universalIdentifier": "8c4aa56b-5f78-538a-9f71-fdd675e2f2d7",
+      },
+      "createdBy": {
+        "universalIdentifier": "0e774a97-54fe-5272-825b-d59937d228ee",
+      },
+      "deletedAt": {
+        "universalIdentifier": "a654fd5c-ce12-50e3-83bd-c34ccc460939",
+      },
+      "id": {
+        "universalIdentifier": "fb455838-fae0-5bed-b8fb-989c6ba2d12e",
+      },
+      "isPrimary": {
+        "universalIdentifier": "20202020-7c91-5658-1fad-2e4b997fec80",
+      },
+      "name": {
+        "universalIdentifier": "20202020-cb55-8d02-a633-19a04f07adcc",
+      },
+      "notes": {
+        "universalIdentifier": "20202020-4fee-b43d-4cee-a5cba3323767",
+      },
+      "person": {
+        "universalIdentifier": "20202020-aac4-05c3-c31c-19e3bde0a0fe",
+      },
+      "position": {
+        "universalIdentifier": "db9cd7c9-5c93-5212-bf83-75a3d16715fd",
+      },
+      "role": {
+        "universalIdentifier": "20202020-02d8-a722-deb7-2e240c03eda4",
+      },
+      "searchVector": {
+        "universalIdentifier": "d248957b-f4c7-5622-b5f5-84e9d7ff96ea",
+      },
+      "updatedAt": {
+        "universalIdentifier": "e4cf8586-6256-5566-afc6-33142b76045d",
+      },
+      "updatedBy": {
+        "universalIdentifier": "c9827726-cedc-5a95-aa3b-93e7827c6d27",
+      },
+    },
+    "indexes": {
+      "companyIdIndex": {
+        "universalIdentifier": "20202020-1b0b-23d9-4d25-26136fa2abb7",
+      },
+      "personCompanyUniqueIndex": {
+        "universalIdentifier": "20202020-243c-c736-2ace-c2f54391c8c6",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "20202020-2452-3453-cd8b-d3f4089f0f67",
+      },
+    },
+    "universalIdentifier": "20202020-82ac-bd5a-97cf-a9d57e940be8",
+    "views": {
+      "allClientStakeholderRoles": {
+        "universalIdentifier": "20202020-09f2-844a-d477-5360220acbc1",
+        "viewFields": {
+          "company": {
+            "universalIdentifier": "20202020-a935-09af-6eca-c919150d0e85",
+          },
+          "createdAt": {
+            "universalIdentifier": "20202020-5ebb-9cf8-9ce5-a512af595fce",
+          },
+          "isPrimary": {
+            "universalIdentifier": "20202020-f792-aa78-2fa1-aba18b37af7a",
+          },
+          "name": {
+            "universalIdentifier": "20202020-6bb8-d8dc-a1fe-847a58251461",
+          },
+          "person": {
+            "universalIdentifier": "20202020-fcc3-6dc1-45f6-f4e05814bacf",
+          },
+          "role": {
+            "universalIdentifier": "20202020-fd11-82ab-ea04-53d3c7b01127",
+          },
+        },
+      },
+      "clientStakeholderRoleRecordPageFields": {
+        "universalIdentifier": "20202020-c380-9b31-2c47-24388dd9fd08",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "20202020-4c08-42d3-063d-eb86d5e9b9e4",
+          },
+          "relations": {
+            "universalIdentifier": "20202020-07c5-0828-1ac4-b51e2acdc765",
+          },
+          "system": {
+            "universalIdentifier": "20202020-d11d-42c4-1b38-85f4b7eec147",
+          },
+        },
+        "viewFields": {
+          "clientAccountProfile": {
+            "universalIdentifier": "20202020-7db7-7833-5700-c08f510b5dff",
+          },
+          "company": {
+            "universalIdentifier": "20202020-882d-da03-3b69-439b0d588107",
+          },
+          "createdAt": {
+            "universalIdentifier": "20202020-f641-b3ad-c33d-676777812bb1",
+          },
+          "isPrimary": {
+            "universalIdentifier": "20202020-dc96-fbc0-a566-df0b0b9831f4",
+          },
+          "name": {
+            "universalIdentifier": "20202020-35ca-6191-452b-0af99e249562",
+          },
+          "notes": {
+            "universalIdentifier": "20202020-a132-3c6a-009f-4db2b8b91894",
+          },
+          "person": {
+            "universalIdentifier": "20202020-5dce-a4fa-295b-e904ea0b554d",
+          },
+          "role": {
+            "universalIdentifier": "20202020-1464-bfe2-93d3-f679baa0cef0",
+          },
+          "updatedAt": {
+            "universalIdentifier": "20202020-8b6c-45ab-4c7f-a8e812556d6b",
+          },
+        },
+      },
+    },
+  },
   "company": {
     "fields": {
       "accountOwner": {
@@ -735,6 +999,12 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
       "attachments": {
         "universalIdentifier": "20202020-c1b5-4120-b0f0-987ca401ed53",
+      },
+      "clientAccountProfile": {
+        "universalIdentifier": "20202020-d41d-eb2b-44a3-4fa3f12f1f30",
+      },
+      "clientStakeholderRoles": {
+        "universalIdentifier": "20202020-5607-4b0e-a914-475700d441fd",
       },
       "createdAt": {
         "universalIdentifier": "d206d586-fd61-56e1-80a8-9993beb7be0b",
@@ -2544,8 +2814,14 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "avatarUrl": {
         "universalIdentifier": "20202020-b8a6-40df-961c-373dc5d2ec21",
       },
+      "billingContactForClientAccountProfiles": {
+        "universalIdentifier": "20202020-dd0d-40ae-302b-380f561e8dab",
+      },
       "calendarEventParticipants": {
         "universalIdentifier": "20202020-52ee-45e9-a702-b64b3753e3a9",
+      },
+      "clientStakeholderRoles": {
+        "universalIdentifier": "20202020-9138-3faf-34b2-d5e120e1d22f",
       },
       "company": {
         "universalIdentifier": "20202020-e2f3-448e-b34c-2d625f0025fd",

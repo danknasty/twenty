@@ -628,6 +628,12 @@ export const STANDARD_OBJECTS = {
       timelineActivities: {
         universalIdentifier: '20202020-0414-4daf-9c0d-64fe7b27f89f',
       },
+      clientAccountProfile: {
+        universalIdentifier: '20202020-d8ba-49a9-b6c1-8b9d5f11592d',
+      },
+      clientStakeholderRoles: {
+        universalIdentifier: '20202020-28b6-41b5-9a7d-102db20ed51b',
+      },
     },
     indexes: {
       accountOwnerIdIndex: {
@@ -1650,6 +1656,12 @@ export const STANDARD_OBJECTS = {
       },
       listMemberships: {
         universalIdentifier: '8b8d1be0-4c94-4413-a2c9-c7ede205a81d',
+      },
+      clientStakeholderRoles: {
+        universalIdentifier: '20202020-b3cc-4d21-8f42-bb8c81c54432',
+      },
+      billingContactForClientAccountProfiles: {
+        universalIdentifier: '20202020-3d7e-4ea4-9d8d-a87e5e325040',
       },
     },
     indexes: {
@@ -3038,6 +3050,218 @@ export const STANDARD_OBJECTS = {
       },
     },
     indexes: {},
+  },
+  clientAccountProfile: {
+    universalIdentifier: '20202020-2f8c-46f5-acde-795c5851b425',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '20202020-2f8c-46f5-acde-795c5851b425',
+      ),
+      name: { universalIdentifier: '20202020-dc66-4b2c-8be2-a82b0894d421' },
+      clientAccountType: {
+        universalIdentifier: '20202020-9bf3-4c6c-9cd2-d45563d127c1',
+      },
+      clientOnboardingStatus: {
+        universalIdentifier: '20202020-d94a-4c97-81b9-79b0af118962',
+      },
+      clientSince: {
+        universalIdentifier: '20202020-1de0-4612-a28d-b49cd2bda741',
+      },
+      clientPaymentTerms: {
+        universalIdentifier: '20202020-ec7f-4f13-8454-47e27fa7512d',
+      },
+      clientNotes: {
+        universalIdentifier: '20202020-8c67-40a1-a429-55976fcdbbc5',
+      },
+      clientBillingContact: {
+        universalIdentifier: '20202020-c5b1-466a-8b6d-126e6ef9d306',
+      },
+      company: {
+        universalIdentifier: '20202020-ea4e-48ed-a8c0-ac44b61dcdbe',
+      },
+      clientStakeholderRoles: {
+        universalIdentifier: '20202020-6995-4a44-905c-5c42f138afe4',
+      },
+    },
+    indexes: {
+      companyIdUniqueIndex: {
+        universalIdentifier: '20202020-488a-49b5-97c7-d879c87f0bdd',
+      },
+      searchVectorGinIndex: {
+        universalIdentifier: '20202020-414e-41e0-b380-4a8e88a0d1c0',
+      },
+    },
+    views: {
+      allClientAccountProfiles: {
+        universalIdentifier: '20202020-c84e-4bf5-826f-1737f3a3034d',
+        viewFields: {
+          name: {
+            universalIdentifier: '20202020-3f41-446f-b93c-de136c1844c7',
+          },
+          company: {
+            universalIdentifier: '20202020-0d83-4c4d-8aa7-0d37c4189b2f',
+          },
+          clientAccountType: {
+            universalIdentifier: '20202020-9a3c-475a-9b56-338312d0aa63',
+          },
+          clientOnboardingStatus: {
+            universalIdentifier: '20202020-47a3-4a49-aa63-3b3fdf6eb555',
+          },
+          clientSince: {
+            universalIdentifier: '20202020-5381-43b7-ba78-e333dd23dfc8',
+          },
+          createdAt: {
+            universalIdentifier: '20202020-e48d-481c-82df-7e5fecb776e8',
+          },
+        },
+      },
+      clientAccountProfileRecordPageFields: {
+        universalIdentifier: '20202020-17fa-4ab3-9e6a-1d5ab59c3954',
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: '20202020-bf6f-4357-9bee-e459c5f6c04d',
+          },
+          relations: {
+            universalIdentifier: '20202020-c708-4109-91e9-4324d3a36dd0',
+          },
+          system: {
+            universalIdentifier: '20202020-1bce-49f5-a0cd-2ec58e43d0a9',
+          },
+        },
+        viewFields: {
+          name: {
+            universalIdentifier: '20202020-5054-4b57-b6e6-a80ed2dee5d6',
+          },
+          company: {
+            universalIdentifier: '20202020-ada5-4078-ad54-0e2e46d3c319',
+          },
+          clientAccountType: {
+            universalIdentifier: '20202020-848f-4c80-a06d-307bfcaa297c',
+          },
+          clientOnboardingStatus: {
+            universalIdentifier: '20202020-6c7d-415f-92c1-c35da8b1f504',
+          },
+          clientSince: {
+            universalIdentifier: '20202020-c06c-4344-86e9-3c07d46d19e6',
+          },
+          clientPaymentTerms: {
+            universalIdentifier: '20202020-b3a8-49fa-b489-130d918962c7',
+          },
+          clientBillingContact: {
+            universalIdentifier: '20202020-dae6-4a22-93d4-f109ea6ad6b7',
+          },
+          clientNotes: {
+            universalIdentifier: '20202020-f848-47e2-a062-b35eee975ee5',
+          },
+          createdAt: {
+            universalIdentifier: '20202020-9e62-43ea-9be3-b0a6a3ecd0fe',
+          },
+          updatedAt: {
+            universalIdentifier: '20202020-14e5-4368-a7dc-58e5c1c81d98',
+          },
+        },
+      },
+    },
+  },
+  clientStakeholderRole: {
+    universalIdentifier: '20202020-6fbf-44b3-9797-60fe520e0927',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '20202020-6fbf-44b3-9797-60fe520e0927',
+      ),
+      name: { universalIdentifier: '20202020-a0b0-445a-a128-f1d72efbdb3c' },
+      role: { universalIdentifier: '20202020-396a-415a-ab4c-d1e473c05af4' },
+      isPrimary: {
+        universalIdentifier: '20202020-73a6-4b72-9d36-8fa2240c4c12',
+      },
+      notes: { universalIdentifier: '20202020-5e4c-494d-9473-afc0b884eb31' },
+      person: { universalIdentifier: '20202020-c7f7-49bb-941c-81dfde307370' },
+      company: {
+        universalIdentifier: '20202020-ed0a-4d0a-b977-21e61a039eed',
+      },
+      clientAccountProfile: {
+        universalIdentifier: '20202020-9cd9-4c20-b0cf-50ba3ed5e65d',
+      },
+    },
+    indexes: {
+      personCompanyUniqueIndex: {
+        universalIdentifier: '20202020-3bf7-4920-a283-d1363c5dcc5f',
+      },
+      companyIdIndex: {
+        universalIdentifier: '20202020-0ece-43c5-a5d3-6cfa973756af',
+      },
+      searchVectorGinIndex: {
+        universalIdentifier: '20202020-3216-4e8d-8221-c0a1bff7c30c',
+      },
+    },
+    views: {
+      allClientStakeholderRoles: {
+        universalIdentifier: '20202020-5ba2-49d0-a586-2a7777dddb21',
+        viewFields: {
+          name: {
+            universalIdentifier: '20202020-e5a4-4d0e-af34-3fea62f4ee93',
+          },
+          person: {
+            universalIdentifier: '20202020-924c-4563-94f8-806662c1df8e',
+          },
+          company: {
+            universalIdentifier: '20202020-35a8-4bae-b7c7-dd3d0e8e44f1',
+          },
+          role: {
+            universalIdentifier: '20202020-c7a7-4eb4-9e6b-8131cbd532f3',
+          },
+          isPrimary: {
+            universalIdentifier: '20202020-fbfd-4e1a-8efe-3c401c02cf86',
+          },
+          createdAt: {
+            universalIdentifier: '20202020-040c-45e6-a55b-9d4045b3b376',
+          },
+        },
+      },
+      clientStakeholderRoleRecordPageFields: {
+        universalIdentifier: '20202020-caea-4ffc-8579-f666f5cf3ce0',
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: '20202020-e766-4273-83ae-f970a12f72c4',
+          },
+          relations: {
+            universalIdentifier: '20202020-eba4-4201-bcba-ce802da6c20f',
+          },
+          system: {
+            universalIdentifier: '20202020-c78d-471d-9885-e0e08600d5e4',
+          },
+        },
+        viewFields: {
+          name: {
+            universalIdentifier: '20202020-ec8e-4a8b-8ce3-b831bab9db6e',
+          },
+          person: {
+            universalIdentifier: '20202020-f377-43b5-af98-dc7e2861c15c',
+          },
+          company: {
+            universalIdentifier: '20202020-2e50-419d-85ff-2f8b57fd6faf',
+          },
+          role: {
+            universalIdentifier: '20202020-7036-4307-9e08-274616b9d9c0',
+          },
+          isPrimary: {
+            universalIdentifier: '20202020-9e5e-4b40-8755-974ca93e3aa0',
+          },
+          notes: {
+            universalIdentifier: '20202020-9845-4773-b802-96e73c1288a1',
+          },
+          clientAccountProfile: {
+            universalIdentifier: '20202020-944c-4dff-b19b-13a19c1c8d4e',
+          },
+          createdAt: {
+            universalIdentifier: '20202020-23fa-4e05-9df1-8500cc682117',
+          },
+          updatedAt: {
+            universalIdentifier: '20202020-8a00-43f4-8864-be66c70cd93f',
+          },
+        },
+      },
+    },
   },
 } as const satisfies Record<
   string,

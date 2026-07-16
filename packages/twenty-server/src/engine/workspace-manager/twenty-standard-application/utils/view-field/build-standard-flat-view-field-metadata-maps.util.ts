@@ -13,6 +13,8 @@ import { computeStandardClientAccountProfileViewFields } from 'src/engine/worksp
 import { computeStandardClientStakeholderRoleViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-client-stakeholder-role-view-fields.util';
 import { computeStandardCompanyViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-company-view-fields.util';
 import { computeStandardDashboardViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-dashboard-view-fields.util';
+import { computeStandardExecutiveProfileViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-executive-profile-view-fields.util';
+import { computeStandardExternalEntityLinkViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-external-entity-link-view-fields.util';
 import { computeStandardMessageCampaignViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-message-campaign-view-fields.util';
 import { computeStandardMessageChannelMessageAssociationMessageFolderViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-message-channel-message-association-message-folder-view-fields.util';
 import { computeStandardMessageChannelMessageAssociationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-message-channel-message-association-view-fields.util';
@@ -56,6 +58,8 @@ const STANDARD_FLAT_VIEW_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   clientStakeholderRole: computeStandardClientStakeholderRoleViewFields,
   company: computeStandardCompanyViewFields,
   dashboard: computeStandardDashboardViewFields,
+  executiveProfile: computeStandardExecutiveProfileViewFields,
+  externalEntityLink: computeStandardExternalEntityLinkViewFields,
   message: computeStandardMessageViewFields,
   messageCampaign: computeStandardMessageCampaignViewFields,
   messageChannelMessageAssociation:

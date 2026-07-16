@@ -1,0 +1,38 @@
+import { ViewKey, ViewType } from 'twenty-shared/types';
+
+import { type FlatView } from 'src/engine/metadata-modules/flat-view/types/flat-view.type';
+import {
+  createStandardViewFlatMetadata,
+  type CreateStandardViewArgs,
+} from 'src/engine/workspace-manager/twenty-standard-application/utils/view/create-standard-view-flat-metadata.util';
+
+export const computeStandardExternalEntityLinkViews = (
+  args: Omit<CreateStandardViewArgs<'externalEntityLink'>, 'context'>,
+): Record<string, FlatView> => {
+  return {
+    allExternalEntityLinks: createStandardViewFlatMetadata({
+      ...args,
+      objectName: 'externalEntityLink',
+      context: {
+        viewName: 'allExternalEntityLinks',
+        name: 'All {objectLabelPlural}',
+        type: ViewType.TABLE,
+        key: ViewKey.INDEX,
+        position: 0,
+        icon: 'IconList',
+      },
+    }),
+    externalEntityLinkRecordPageFields: createStandardViewFlatMetadata({
+      ...args,
+      objectName: 'externalEntityLink',
+      context: {
+        viewName: 'externalEntityLinkRecordPageFields',
+        name: 'External Entity Link Record Page Fields',
+        type: ViewType.FIELDS_WIDGET,
+        key: null,
+        position: 0,
+        icon: 'IconList',
+      },
+    }),
+  };
+};

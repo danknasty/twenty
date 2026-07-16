@@ -7,6 +7,8 @@ export { STANDARD_CLIENT_ACCOUNT_PROFILE_PAGE_LAYOUT_CONFIG } from './standard-c
 export { STANDARD_CLIENT_STAKEHOLDER_ROLE_PAGE_LAYOUT_CONFIG } from './standard-client-stakeholder-role-page-layout.config';
 export { STANDARD_COMPANY_PAGE_LAYOUT_CONFIG } from './standard-company-page-layout.config';
 export { STANDARD_DASHBOARD_PAGE_LAYOUT_CONFIG } from './standard-dashboard-page-layout.config';
+export { STANDARD_EXECUTIVE_PROFILE_PAGE_LAYOUT_CONFIG } from './standard-executive-profile-page-layout.config';
+export { STANDARD_EXTERNAL_ENTITY_LINK_PAGE_LAYOUT_CONFIG } from './standard-external-entity-link-page-layout.config';
 export { STANDARD_MESSAGE_CAMPAIGN_PAGE_LAYOUT_CONFIG } from './standard-message-campaign-page-layout.config';
 export { STANDARD_MESSAGE_CHANNEL_MESSAGE_ASSOCIATION_MESSAGE_FOLDER_PAGE_LAYOUT_CONFIG } from './standard-message-channel-message-association-message-folder-page-layout.config';
 export { STANDARD_MESSAGE_CHANNEL_MESSAGE_ASSOCIATION_PAGE_LAYOUT_CONFIG } from './standard-message-channel-message-association-page-layout.config';

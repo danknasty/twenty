@@ -1467,6 +1467,74 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
+  clientAccountProfile: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'clientAccountProfile'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'clientAccountProfile',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.clientAccountProfile.universalIdentifier,
+        nameSingular: 'clientAccountProfile',
+        namePlural: 'clientAccountProfiles',
+        labelSingular: i18nLabel(msg`Client Account Profile`),
+        labelPlural: i18nLabel(msg`Client Account Profiles`),
+        description: i18nLabel(
+          msg`Client account profile with engagement metadata`,
+        ),
+        icon: 'IconBriefcase',
+        isSystem: true,
+        isUICreatable: true,
+        isSearchable: true,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  clientStakeholderRole: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'clientStakeholderRole'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'clientStakeholderRole',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.clientStakeholderRole.universalIdentifier,
+        nameSingular: 'clientStakeholderRole',
+        namePlural: 'clientStakeholderRoles',
+        labelSingular: i18nLabel(msg`Client Stakeholder Role`),
+        labelPlural: i18nLabel(msg`Client Stakeholder Roles`),
+        description: i18nLabel(
+          msg`Role of a stakeholder at a client company`,
+        ),
+        icon: 'IconUserStar',
+        isSystem: true,
+        isUICreatable: true,
+        isSearchable: true,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
 } satisfies {
   [P in AllStandardObjectName]: (
     args: Omit<CreateStandardObjectArgs<P>, 'context' | 'objectName'>,

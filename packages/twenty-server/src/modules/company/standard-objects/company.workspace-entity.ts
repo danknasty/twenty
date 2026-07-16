@@ -8,6 +8,8 @@ import {
 import { type EntityRelation } from 'src/engine/workspace-manager/workspace-migration/types/entity-relation.interface';
 import { type AttachmentWorkspaceEntity } from 'src/modules/attachment/standard-objects/attachment.workspace-entity';
 import { type NoteTargetWorkspaceEntity } from 'src/modules/note/standard-objects/note-target.workspace-entity';
+import { type ClientAccountProfileWorkspaceEntity } from 'src/modules/client-account-profile/standard-objects/client-account-profile.workspace-entity';
+import { type ClientStakeholderRoleWorkspaceEntity } from 'src/modules/client-stakeholder-role/standard-objects/client-stakeholder-role.workspace-entity';
 import { type OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { type PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
 import { type TaskTargetWorkspaceEntity } from 'src/modules/task/standard-objects/task-target.workspace-entity';
@@ -43,4 +45,8 @@ export class CompanyWorkspaceEntity {
   opportunities: EntityRelation<OpportunityWorkspaceEntity[]>;
   attachments: EntityRelation<AttachmentWorkspaceEntity[]>;
   timelineActivities: EntityRelation<TimelineActivityWorkspaceEntity[]>;
+
+  // Client CRM relations
+  clientAccountProfile: EntityRelation<ClientAccountProfileWorkspaceEntity[]>;
+  clientStakeholderRoles: EntityRelation<ClientStakeholderRoleWorkspaceEntity[]>;
 }

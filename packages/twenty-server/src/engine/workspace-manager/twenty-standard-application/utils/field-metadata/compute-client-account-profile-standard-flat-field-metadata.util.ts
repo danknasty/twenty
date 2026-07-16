@@ -402,7 +402,7 @@ export const buildClientAccountProfileStandardFlatFieldMetadatas = ({
       icon: 'IconBuildingSkyscraper',
       isNullable: false,
       targetObjectName: 'company',
-      targetFieldName: 'clientAccountProfile',
+      targetFieldName: 'clientAccountProfiles',
       settings: {
         relationType: RelationType.MANY_TO_ONE,
         onDelete: RelationOnDeleteAction.CASCADE,

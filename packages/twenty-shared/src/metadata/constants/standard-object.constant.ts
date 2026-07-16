@@ -628,7 +628,7 @@ export const STANDARD_OBJECTS = {
       timelineActivities: {
         universalIdentifier: '20202020-0414-4daf-9c0d-64fe7b27f89f',
       },
-      clientAccountProfile: {
+      clientAccountProfiles: {
         universalIdentifier: '20202020-d8ba-49a9-b6c1-8b9d5f11592d',
       },
       clientStakeholderRoles: {

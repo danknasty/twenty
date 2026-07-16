@@ -20,7 +20,7 @@ export const computeStandardClientStakeholderRoleViews = (
         type: ViewType.TABLE,
         key: ViewKey.INDEX,
         position: 0,
-        icon: 'IconUsers',
+        icon: 'IconList',
       },
     }),
     clientStakeholderRoleRecordPageFields: createStandardViewFlatMetadata({

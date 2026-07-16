@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`STANDARD_OBJECTS universal identifiers should never change without an explicit snapshot update 1`] = `
 {
@@ -1000,7 +1000,7 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "attachments": {
         "universalIdentifier": "20202020-c1b5-4120-b0f0-987ca401ed53",
       },
-      "clientAccountProfile": {
+      "clientAccountProfiles": {
         "universalIdentifier": "20202020-d8ba-49a9-b6c1-8b9d5f11592d",
       },
       "clientStakeholderRoles": {
@@ -1606,6 +1606,106 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
     },
     "indexes": {},
     "universalIdentifier": "ab5eb338-796f-5ca3-b5ac-dd46cbfbd649",
+  },
+  "inboundEventLedger": {
+    "fields": {
+      "causationId": {
+        "universalIdentifier": "d21265b0-0ffc-45bb-b5a9-996e44e7817a",
+      },
+      "correlationId": {
+        "universalIdentifier": "4642830e-4de0-483c-8a7f-3e9876ed98d9",
+      },
+      "createdAt": {
+        "universalIdentifier": "3f4d7307-7e8e-5996-8d3e-29915c4dc89f",
+      },
+      "createdBy": {
+        "universalIdentifier": "941f570d-4cf7-5aea-810d-1fe4a873a8d9",
+      },
+      "deletedAt": {
+        "universalIdentifier": "f7db178a-a2cd-5539-8aaa-9a74470ce136",
+      },
+      "eventId": {
+        "universalIdentifier": "1a6f7edf-dbb4-40a3-a194-085d3eaa8dfb",
+      },
+      "eventType": {
+        "universalIdentifier": "2706c8f5-8068-4dcf-ad71-a577688c8d12",
+      },
+      "eventVersion": {
+        "universalIdentifier": "592ca8f7-c7d3-49c3-b886-470270857864",
+      },
+      "id": {
+        "universalIdentifier": "1ef9ca43-6adc-5d17-a8bb-507ef4810df1",
+      },
+      "idempotencyKey": {
+        "universalIdentifier": "ff848447-0b8e-47cd-8335-a02e5a4f1014",
+      },
+      "lastAttemptAt": {
+        "universalIdentifier": "97bfc70e-9894-4e2a-8b8a-ce1fabd53224",
+      },
+      "occurredAt": {
+        "universalIdentifier": "68c1eadf-7ce9-480a-8b98-c17f696e938c",
+      },
+      "payload": {
+        "universalIdentifier": "2f3c512c-a8d4-4e09-a4cd-dc99d3e0fe92",
+      },
+      "position": {
+        "universalIdentifier": "5c6e3fc3-6bc7-5816-8687-cc13db4ef757",
+      },
+      "processedAt": {
+        "universalIdentifier": "e4eb6016-8a54-4ca2-9965-e46dd85e7312",
+      },
+      "processingAttempts": {
+        "universalIdentifier": "950ec02e-4ec7-4e9d-80d0-e37157fdbdcb",
+      },
+      "searchVector": {
+        "universalIdentifier": "620ba535-57c3-57d7-83f7-b52dee70b649",
+      },
+      "sourceCollection": {
+        "universalIdentifier": "ee983ff8-4065-4d9c-9283-220fab663e5f",
+      },
+      "sourceHash": {
+        "universalIdentifier": "fc985620-b66b-4cf5-8665-e11f82abc404",
+      },
+      "sourceRecordId": {
+        "universalIdentifier": "849a52c9-878d-4aed-9987-25519f9ac79b",
+      },
+      "sourceSystem": {
+        "universalIdentifier": "f7352590-933f-4fbf-89f4-b9146da691ab",
+      },
+      "sourceUpdatedAt": {
+        "universalIdentifier": "dc7fde85-6829-4aad-bcbb-ea6496c030c5",
+      },
+      "status": {
+        "universalIdentifier": "4f141466-b6a6-4087-96b4-2d785dbf98d2",
+      },
+      "statusMessage": {
+        "universalIdentifier": "d1907f93-3179-4cc4-baa9-eaded53765e4",
+      },
+      "updatedAt": {
+        "universalIdentifier": "ea7cc15c-e3ae-56a8-a867-5287fe46abd8",
+      },
+      "updatedBy": {
+        "universalIdentifier": "dc5ec2dc-fdba-5ea0-9712-c5fe7e477e1e",
+      },
+      "workspaceKey": {
+        "universalIdentifier": "a6c20710-74c4-480d-97c9-7e9f37a53a10",
+      },
+    },
+    "indexes": {
+      "eventIdIndex": {
+        "universalIdentifier": "4f0d22d7-7c85-419f-ba76-1c947ffe530f",
+      },
+      "idempotencyKeyIndex": {
+        "universalIdentifier": "0e59fbe1-f409-429a-862a-c14fd04fb242",
+      },
+      "sourceRecordIdIndex": {
+        "universalIdentifier": "66e0ce8f-1120-4b64-86cd-7140e3021a8f",
+      },
+      "statusIndex": {
+        "universalIdentifier": "f0713976-b374-4a92-9e78-315a4d9dce2e",
+      },
+    },
+    "universalIdentifier": "fde06047-5a3c-4004-bbb0-3ee331f198b7",
   },
   "message": {
     "fields": {
@@ -2815,13 +2915,13 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
         "universalIdentifier": "20202020-b8a6-40df-961c-373dc5d2ec21",
       },
       "billingContactForClientAccountProfiles": {
-        "universalIdentifier": "20202020-b5ef-4feb-86b3-6c21f9956695",
+        "universalIdentifier": "20202020-3d7e-4ea4-9d8d-a87e5e325040",
       },
       "calendarEventParticipants": {
         "universalIdentifier": "20202020-52ee-45e9-a702-b64b3753e3a9",
       },
       "clientStakeholderRoles": {
-        "universalIdentifier": "20202020-c1ad-47fe-b129-6b4128a70118",
+        "universalIdentifier": "20202020-b3cc-4d21-8f42-bb8c81c54432",
       },
       "company": {
         "universalIdentifier": "20202020-e2f3-448e-b34c-2d625f0025fd",

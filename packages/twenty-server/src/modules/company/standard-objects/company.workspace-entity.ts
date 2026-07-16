@@ -47,6 +47,6 @@ export class CompanyWorkspaceEntity {
   timelineActivities: EntityRelation<TimelineActivityWorkspaceEntity[]>;
 
   // Client CRM relations
-  clientAccountProfile: EntityRelation<ClientAccountProfileWorkspaceEntity[]>;
+  clientAccountProfiles: EntityRelation<ClientAccountProfileWorkspaceEntity[]>;
   clientStakeholderRoles: EntityRelation<ClientStakeholderRoleWorkspaceEntity[]>;
 }

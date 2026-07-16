@@ -431,13 +431,13 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  clientAccountProfile: createStandardRelationFieldFlatMetadata({
+  clientAccountProfiles: createStandardRelationFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
       type: FieldMetadataType.RELATION,
       morphId: null,
-      fieldName: 'clientAccountProfile',
+      fieldName: 'clientAccountProfiles',
       label: i18nLabel(msg`Client Account Profile`),
       description: i18nLabel(msg`Client account profile tied to the company`),
       icon: 'IconBriefcase',

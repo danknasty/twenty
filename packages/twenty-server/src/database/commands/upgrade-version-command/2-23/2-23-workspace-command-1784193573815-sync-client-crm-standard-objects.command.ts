@@ -40,7 +40,7 @@ const CLIENT_CRM_OBJECT_METADATA_UNIVERSAL_IDENTIFIERS = [
 const CLIENT_CRM_FIELD_METADATA_UNIVERSAL_IDENTIFIERS = [
   ...getUniversalIdentifiers(STANDARD_OBJECTS.clientAccountProfile.fields),
   ...getUniversalIdentifiers(STANDARD_OBJECTS.clientStakeholderRole.fields),
-  STANDARD_OBJECTS.company.fields.clientAccountProfile.universalIdentifier,
+  STANDARD_OBJECTS.company.fields.clientAccountProfiles.universalIdentifier,
   STANDARD_OBJECTS.company.fields.clientStakeholderRoles.universalIdentifier,
   STANDARD_OBJECTS.person.fields.billingContactForClientAccountProfiles
     .universalIdentifier,

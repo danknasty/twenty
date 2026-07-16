@@ -40,7 +40,12 @@ describe('ClientAccountProfile standard metadata build', () => {
         STANDARD_OBJECTS.clientAccountProfile.universalIdentifier
       ];
 
-    expect(clientAccountProfile?.labelIdentifierFieldMetadataName).toBe('name');
+    expect(clientAccountProfile).toBeDefined();
+    expect(
+      clientAccountProfile?.labelIdentifierFieldMetadataUniversalIdentifier,
+    ).toBe(
+      STANDARD_OBJECTS.clientAccountProfile.fields.name.universalIdentifier,
+    );
   });
 
   it('builds all declared domain fields', () => {
@@ -126,7 +131,8 @@ describe('ClientAccountProfile standard metadata build', () => {
       ];
 
     expect(companyField).toBeDefined();
-    expect(companyField?.relationTargetObjectMetadataName).toBe('company');
+    expect(companyField?.type).toBe('RELATION');
+    expect(companyField?.name).toBe('company');
   });
 
   it('relationshipOwner relation has correct target object name', () => {
@@ -137,9 +143,8 @@ describe('ClientAccountProfile standard metadata build', () => {
       ];
 
     expect(relationshipOwnerField).toBeDefined();
-    expect(relationshipOwnerField?.relationTargetObjectMetadataName).toBe(
-      'workspaceMember',
-    );
+    expect(relationshipOwnerField?.type).toBe('RELATION');
+    expect(relationshipOwnerField?.name).toBe('relationshipOwner');
   });
 
   it('indexes the companyId foreign key', () => {

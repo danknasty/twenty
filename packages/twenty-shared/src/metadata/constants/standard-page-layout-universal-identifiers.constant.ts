@@ -630,4 +630,25 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
       },
     },
   },
+  executiveProfileRecordPage: {
+    universalIdentifier: 'c0b29e38-404f-4e58-a8e9-b37fc59b46df',
+    tabs: {
+      home: {
+        universalIdentifier: '9d16eb67-95ca-425d-adb5-65a318c5b6a2',
+        widgets: {
+          fields: {
+            universalIdentifier: 'bf979ebc-024a-4a4f-807f-54892bcc0e31',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '145b6419-3a1f-43d0-9224-f42099b475ee',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'ff8dea87-f478-4b22-8e1c-682804dfe120',
+          },
+        },
+      },
+    },
+  },
 };

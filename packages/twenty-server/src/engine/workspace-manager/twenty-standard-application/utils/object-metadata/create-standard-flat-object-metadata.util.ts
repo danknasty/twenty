@@ -245,6 +245,38 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
+  executiveProfile: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'executiveProfile'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'executiveProfile',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.executiveProfile.universalIdentifier,
+        nameSingular: 'executiveProfile',
+        namePlural: 'executiveProfiles',
+        labelSingular: i18nLabel(msg`Executive Profile`),
+        labelPlural: i18nLabel(msg`Executive Profiles`),
+        description: i18nLabel(msg`Executive profile for a person`),
+        icon: 'IconUserCircle',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'person',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
   messageCampaign: ({
     now,
     workspaceId,

@@ -628,6 +628,9 @@ export const STANDARD_OBJECTS = {
       timelineActivities: {
         universalIdentifier: '20202020-0414-4daf-9c0d-64fe7b27f89f',
       },
+      executiveProfiles: {
+        universalIdentifier: '9a928d73-a9fb-4f24-aff0-4b51a6dd69b3',
+      },
     },
     indexes: {
       accountOwnerIdIndex: {
@@ -1651,6 +1654,9 @@ export const STANDARD_OBJECTS = {
       listMemberships: {
         universalIdentifier: '8b8d1be0-4c94-4413-a2c9-c7ede205a81d',
       },
+      executiveProfile: {
+        universalIdentifier: '0a15ce88-115e-481e-97fe-35acd58ff542',
+      },
     },
     indexes: {
       companyIdIndex: {
@@ -2586,6 +2592,132 @@ export const STANDARD_OBJECTS = {
           },
           assignedTasks: {
             universalIdentifier: 'af16226e-6375-4676-8bd9-9d1a57076fc4',
+          },
+        },
+      },
+    },
+  },
+  executiveProfile: {
+    universalIdentifier: 'c074d37e-857d-4a77-a1fa-dabbd088bb2d',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'c074d37e-857d-4a77-a1fa-dabbd088bb2d',
+      ),
+      person: {
+        universalIdentifier: 'fcdb1e4d-df64-4f08-b474-64f305f195f9',
+      },
+      headline: {
+        universalIdentifier: '5e195816-4d09-4e84-9c6c-1a0859e98ebc',
+      },
+      summary: {
+        universalIdentifier: 'aa325eaa-8eb1-490b-9c32-c7158e67d1ec',
+      },
+      currentCompany: {
+        universalIdentifier: '62f5a0e1-43b1-4e73-8c9a-c399c7f85890',
+      },
+      location: {
+        universalIdentifier: '465bf4ab-f518-4ed0-91e5-467a6a283a8d',
+      },
+      yearsOfExperience: {
+        universalIdentifier: 'de83e3c1-463b-4265-97bb-e5a092905b59',
+      },
+      availabilityStatus: {
+        universalIdentifier: '202a1c8d-8cd5-4eb2-9afc-981c7dc80bce',
+      },
+      profileVisibility: {
+        universalIdentifier: '00e79e74-285c-42dd-979b-202c05b64b11',
+      },
+      isBoardReady: {
+        universalIdentifier: 'b7cfe9d7-7aa7-4d5f-8bb7-54ea66599dd5',
+      },
+      sourceSystem: {
+        universalIdentifier: 'a913a578-9df0-4872-92f8-6ed46d94ee95',
+      },
+      sourceRecordId: {
+        universalIdentifier: 'f899bdf6-dc96-4fa5-8b78-0e9a3559f484',
+      },
+      sourceUpdatedAt: {
+        universalIdentifier: '58e5092c-af5d-4e61-89ea-de653b4df41f',
+      },
+      sourceHash: {
+        universalIdentifier: 'ae9e5834-10ec-45ea-a1f4-2f16429ecc7b',
+      },
+    },
+    indexes: {
+      personIdIndex: {
+        universalIdentifier: 'efe53369-4236-485c-8f03-5d99a9847a9b',
+      },
+    },
+    views: {
+      allExecutiveProfiles: {
+        universalIdentifier: '5448ee99-d539-47f8-a6cd-4ccb56c910ca',
+        viewFields: {
+          person: {
+            universalIdentifier: 'ace36f8e-67e6-4256-9962-ceea6cfe07fb',
+          },
+          headline: {
+            universalIdentifier: 'fcff3844-2a9e-4e72-b451-e4755d727c04',
+          },
+          location: {
+            universalIdentifier: '80597e87-588f-439a-b284-7db2025c5e34',
+          },
+          yearsOfExperience: {
+            universalIdentifier: 'd1e76e64-8479-4552-b2d4-5c2ba8d9ac98',
+          },
+          availabilityStatus: {
+            universalIdentifier: 'ea935c88-81e6-41dc-be5a-f4d166198d53',
+          },
+        },
+      },
+      executiveProfileRecordPageFields: {
+        universalIdentifier: '2f8785c0-8d67-4b18-99df-f746db48569c',
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: 'f05c5bfe-7344-4695-8b73-0f06d88d0b96',
+          },
+          system: {
+            universalIdentifier: '9f6ac9ab-da2d-45bf-b9b7-091e62e342b4',
+          },
+        },
+        viewFields: {
+          person: {
+            universalIdentifier: '779ad5ea-e47f-4000-8530-5f3f7e44ba50',
+          },
+          headline: {
+            universalIdentifier: '5b2a0de9-5de9-45cd-ad0b-2ec8a664220c',
+          },
+          summary: {
+            universalIdentifier: 'aa813275-5e3a-4f8a-80f6-1a165f0e2456',
+          },
+          currentCompany: {
+            universalIdentifier: '0e227128-c55f-424b-af4e-b5594de7e3eb',
+          },
+          location: {
+            universalIdentifier: '17603e6f-5fcf-4e42-850d-35d9b1f63a3c',
+          },
+          yearsOfExperience: {
+            universalIdentifier: 'f6e33e4d-faa0-45f9-9e5f-18d2f33781d4',
+          },
+          availabilityStatus: {
+            universalIdentifier: '245cf8d4-a242-4a10-9700-66f4623f6ccf',
+          },
+          profileVisibility: {
+            universalIdentifier: '8e011afc-2a59-47b4-8b2b-8e89a3572850',
+          },
+          isBoardReady: {
+            universalIdentifier: '07fc3cc5-7ee0-4f56-8222-a8a2bf61c656',
+          },
+          sourceSystem: {
+            universalIdentifier: '63d21856-e6bc-4eae-9dd4-4f6fd2e78ba1',
+          },
+          sourceRecordId: {
+            universalIdentifier: '6469b131-2c2f-4127-89bc-3bcc8bd6a0be',
+          },
+          sourceUpdatedAt: {
+            universalIdentifier: '80e2b9be-5e33-4277-80a9-1091d3fb3a95',
+          },
+          sourceHash: {
+            universalIdentifier: '8be0f760-a0e2-41ba-8ff1-2b394fc3f28d',
           },
         },
       },

@@ -1,4 +1,4 @@
-export type SyncSystem = string & {};
+export type SyncSystem = 'DIRECTUS' | (string & {});
 
 export type InboundEvent = {
   system: SyncSystem;

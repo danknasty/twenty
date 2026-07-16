@@ -2,7 +2,7 @@ import { BaseWorkspaceEntity } from 'src/engine/twenty-orm/base.workspace-entity
 
 export class WorkspaceEventOutboxWorkspaceEntity extends BaseWorkspaceEntity {
   eventName: string;
-  eventPayload: Record<string, unknown>;
+  eventPayload: Record<string, unknown> | null;
   idempotencyKey: string;
   status: string;
   attemptCount: number;

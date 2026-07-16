@@ -52,6 +52,8 @@ const STANDARD_FLAT_INDEX_METADATA_BUILDERS_BY_OBJECT_NAME = {
   calendarEventParticipant:
     buildCalendarEventParticipantStandardFlatIndexMetadatas,
   callRecording: buildCallRecordingStandardFlatIndexMetadatas,
+  clientAccountProfile:
+    buildClientAccountProfileStandardFlatIndexMetadatas,
   clientStakeholderRole:
     buildClientStakeholderRoleStandardFlatIndexMetadatas,
   company: buildCompanyStandardFlatIndexMetadatas,

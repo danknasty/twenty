@@ -1,4 +1,4 @@
-import { ViewType, ViewKey } from 'twenty-shared/types';
+import { ViewKey, ViewType } from 'twenty-shared/types';
 
 import { type FlatView } from 'src/engine/metadata-modules/flat-view/types/flat-view.type';
 

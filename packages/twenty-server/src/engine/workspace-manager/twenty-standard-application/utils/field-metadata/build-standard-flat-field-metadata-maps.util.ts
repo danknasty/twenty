@@ -18,7 +18,6 @@ import { buildExternalEntityLinkStandardFlatFieldMetadatas } from 'src/engine/wo
 import { buildInboundEventLedgerStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-inbound-event-ledger-standard-flat-field-metadata.util';
 import { buildOutboundEventLedgerStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-outbound-event-ledger-standard-flat-field-metadata.util';
 import { buildDashboardStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util';
-import { buildExternalEntityLinkStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util';
 import { buildExternalSyncCheckpointStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util';
 import { buildExternalSyncDLQStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util';
 import { buildExternalSyncInboxStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util';

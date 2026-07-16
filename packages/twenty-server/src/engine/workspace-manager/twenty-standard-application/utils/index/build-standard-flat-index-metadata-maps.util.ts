@@ -19,7 +19,6 @@ import { buildDeadLetterRecordStandardFlatIndexMetadatas } from 'src/engine/work
 import { buildReconciliationRunStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-reconciliation-run-standard-flat-index-metadata.util';
 import { buildReconciliationFindingStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-reconciliation-finding-standard-flat-index-metadata.util';
 import { buildDashboardStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-dashboard-standard-flat-index-metadata.util';
-import { buildExternalEntityLinkStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-entity-link-standard-flat-index-metadata.util';
 import { buildExternalSyncCheckpointStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-checkpoint-standard-flat-index-metadata.util';
 import { buildExternalSyncInboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-inbox-standard-flat-index-metadata.util';
 import { buildExternalSyncOutboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-outbox-standard-flat-index-metadata.util';

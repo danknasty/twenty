@@ -19,11 +19,13 @@ export class OutboxRelayCronCommand extends CommandRunner {
   }
 
   async run(): Promise<void> {
-    await this.outboxRelayQueue.addCron(
-      OUTBOX_RELAY_JOB_NAME,
-      '*/1 * * * *', // Every minute
-      undefined, // no data — job handles workspace iteration
-      { priority: 7 },
-    );
+    await this.outboxRelayQueue.addCron<{ workspaceId: string }>({
+      jobName: OUTBOX_RELAY_JOB_NAME,
+      data: { workspaceId: '00000000-0000-0000-0000-000000000001' },
+      options: {
+        repeat: { pattern: '*/1 * * * *' },
+        priority: 7,
+      },
+    });
   }
 }

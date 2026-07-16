@@ -34,6 +34,16 @@ const EXECUTIVE_EXTERNAL_PROFILE_UID =
 const EXECUTIVE_SEARCH_PREFERENCE_UID =
   '304cabb0-42d9-4d78-a302-5106d73ed6bc';
 
+// Phase 7 — research domain object UUIDs (from STANDARD_OBJECTS)
+const CONFIDENTIALITY_RECORD_UID = '526d8232-bccb-42df-b5b6-e3a143dba557';
+const CONFLICT_CHECK_UID = '84e9dfc7-cabe-47c9-915b-0c8a21dd0c7f';
+const MARKET_MAP_UID = 'e8b87567-1e12-4434-b390-1962c05388d4';
+const OFF_LIMITS_RESTRICTION_UID = 'e111382e-ffdd-4d96-ba02-10df8240fa76';
+const RELATIONSHIP_EDGE_UID = 'e10e3d9f-8ee3-469a-af73-fbca7bb12f3c';
+const RESEARCH_CANDIDATE_UID = '414f051b-9f66-474f-b12f-d4ce8be498d3';
+const RESEARCH_STRATEGY_UID = '39b454ce-1c6f-4312-a003-43a82f19955a';
+const TARGET_COMPANY_UID = 'e84ba25c-c010-4ed9-858d-c03639d604ad';
+
 export default defineApplicationRole({
   universalIdentifier: DEFAULT_ROLE_UNIVERSAL_IDENTIFIER,
 
@@ -53,6 +63,132 @@ export default defineApplicationRole({
   canBeAssignedToApiKeys: false,
 
   objectPermissions: [
+    {
+      objectUniversalIdentifier: CONFIDENTIALITY_RECORD_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: CONFLICT_CHECK_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_PROFILE_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_CAREER_EXPERIENCE_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_EDUCATION_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_BOARD_SERVICE_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_CAPABILITY_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_LANGUAGE_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_ARTIFACT_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_AWARD_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_EXTERNAL_PROFILE_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: EXECUTIVE_SEARCH_PREFERENCE_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: MARKET_MAP_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: OFF_LIMITS_RESTRICTION_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: RELATIONSHIP_EDGE_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: RESEARCH_CANDIDATE_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: RESEARCH_STRATEGY_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
+    {
+      objectUniversalIdentifier: TARGET_COMPANY_UID,
+      canReadObjectRecords: true,
+      canUpdateObjectRecords: false,
+      canSoftDeleteObjectRecords: false,
+      canDestroyObjectRecords: false,
+    },
     {
       objectUniversalIdentifier:
         SEARCH_ENGAGEMENT_TERMS_OBJECT_UNIVERSAL_IDENTIFIER,

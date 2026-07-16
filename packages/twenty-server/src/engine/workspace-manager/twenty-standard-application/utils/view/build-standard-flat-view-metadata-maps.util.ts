@@ -49,7 +49,17 @@ import { computeStandardSearchAssignmentViews } from 'src/engine/workspace-manag
 import { computeStandardAssignmentTeamMemberViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-assignment-team-member-views.util';
 import { computeStandardSearchMilestoneViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-milestone-views.util';
 import { computeStandardPositionSpecificationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-position-specification-views.util';
-import { computeStandardSearchCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';
+import { computeStandardSearchCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';,
+import {
+  computeStandardConfidentialityRecordViews,
+  computeStandardConflictCheckViews,
+  computeStandardMarketMapViews,
+  computeStandardOffLimitsRestrictionViews,
+  computeStandardRelationshipEdgeViews,
+  computeStandardResearchCandidateViews,
+  computeStandardResearchStrategyViews,
+  computeStandardTargetCompanyViews,
+} from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-research-offlimits-views.util';
 import { type CreateStandardViewArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/create-standard-view-flat-metadata.util';
 
 type StandardViewBuilder<P extends AllStandardObjectName> = (
@@ -67,6 +77,9 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   clientAccountProfile: computeStandardClientAccountProfileViews,
   clientStakeholderRole: computeStandardClientStakeholderRoleViews,
   company: computeStandardCompanyViews,
+  confidentialityRecord:
+    computeStandardConfidentialityRecordViews,
+  conflictCheck: computeStandardConflictCheckViews,
   dashboard: computeStandardDashboardViews,
   executiveArtifact: computeStandardExecutiveArtifactViews,
   executiveAward: computeStandardExecutiveAwardViews,
@@ -78,6 +91,7 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   executiveLanguage: computeStandardExecutiveLanguageViews,
   executiveProfile: computeStandardExecutiveProfileViews,
   executiveSearchPreference: computeStandardExecutiveSearchPreferenceViews,
+  marketMap: computeStandardMarketMapViews,
   message: computeStandardMessageViews,
   messageCampaign: computeStandardMessageCampaignViews,
   messageChannelMessageAssociation:
@@ -89,8 +103,14 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   messageThread: computeStandardMessageThreadViews,
   note: computeStandardNoteViews,
   noteTarget: computeStandardNoteTargetViews,
+  offLimitsRestriction:
+    computeStandardOffLimitsRestrictionViews,
   opportunity: computeStandardOpportunityViews,
   person: computeStandardPersonViews,
+  relationshipEdge: computeStandardRelationshipEdgeViews,
+  researchCandidate: computeStandardResearchCandidateViews,
+  researchStrategy: computeStandardResearchStrategyViews,
+  targetCompany: computeStandardTargetCompanyViews,
   task: computeStandardTaskViews,
   taskTarget: computeStandardTaskTargetViews,
   timelineActivity: computeStandardTimelineActivityViews,

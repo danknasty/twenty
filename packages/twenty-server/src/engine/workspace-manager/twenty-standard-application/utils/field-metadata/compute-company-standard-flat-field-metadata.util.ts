@@ -501,4 +501,52 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
+  clientStakeholderRoles: createStandardRelationFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      type: FieldMetadataType.RELATION,
+      morphId: null,
+      fieldName: 'clientStakeholderRoles',
+      label: i18nLabel(msg`Client Stakeholder Roles`),
+      description: i18nLabel(
+        msg`Client stakeholder roles linked to this company`,
+      ),
+      icon: 'IconUser',
+      isNullable: true,
+      targetObjectName: 'clientStakeholderRole',
+      targetFieldName: 'company',
+      settings: {
+        relationType: RelationType.ONE_TO_MANY,
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  clientAccountProfiles: createStandardRelationFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      type: FieldMetadataType.RELATION,
+      morphId: null,
+      fieldName: 'clientAccountProfiles',
+      label: i18nLabel(msg`Client Account Profiles`),
+      description: i18nLabel(
+        msg`Client account profiles linked to this company`,
+      ),
+      icon: 'IconBuilding',
+      isNullable: true,
+      targetObjectName: 'clientAccountProfile',
+      targetFieldName: 'company',
+      settings: {
+        relationType: RelationType.ONE_TO_MANY,
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
 });

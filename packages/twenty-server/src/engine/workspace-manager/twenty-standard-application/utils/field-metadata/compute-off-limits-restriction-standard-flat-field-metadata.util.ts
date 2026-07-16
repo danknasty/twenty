@@ -118,7 +118,7 @@ export const buildOffLimitsRestrictionStandardFlatFieldMetadatas = ({
       description: i18nLabel(msg`Company subject to the restriction`),
       icon: 'IconBuilding',
       isNullable: true,
-      isUIEditable: true,
+      isUIEditable: false,
       targetObjectName: 'company',
       targetFieldName: 'offLimitsRestrictions',
       settings: {
@@ -143,7 +143,7 @@ export const buildOffLimitsRestrictionStandardFlatFieldMetadatas = ({
       description: i18nLabel(msg`Person subject to the restriction`),
       icon: 'IconUser',
       isNullable: true,
-      isUIEditable: true,
+      isUIEditable: false,
       targetObjectName: 'person',
       targetFieldName: 'offLimitsRestrictions',
       settings: {
@@ -168,7 +168,7 @@ export const buildOffLimitsRestrictionStandardFlatFieldMetadatas = ({
       description: i18nLabel(msg`Client whose agreement created the restriction`),
       icon: 'IconBuilding',
       isNullable: true,
-      isUIEditable: true,
+      isUIEditable: false,
       targetObjectName: 'company',
       targetFieldName: 'clientOffLimitsRestrictions',
       settings: {

@@ -115,7 +115,7 @@ export const buildConfidentialityRecordStandardFlatFieldMetadatas = ({
       type: FieldMetadataType.UUID,
       label: i18nLabel(msg`Search Assignment`),
       description: i18nLabel(
-        msg`Related search assignment (Phase 4 app object)`,
+        msg`Associated search assignment`,
       ),
       icon: 'IconSearch',
       isNullable: true,

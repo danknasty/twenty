@@ -132,23 +132,6 @@ export const buildResearchStrategyStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  ownerId: createStandardFieldFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      fieldName: 'ownerId',
-      type: FieldMetadataType.UUID,
-      label: i18nLabel(msg`Owner Id`),
-      description: i18nLabel(msg`Owner id (foreign key)`),
-      icon: 'IconUser',
-      isNullable: true,
-      isUIEditable: false,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
   marketMaps: createStandardRelationFieldFlatMetadata({
     objectName,
     workspaceId,
@@ -479,7 +462,7 @@ export const buildResearchStrategyStandardFlatFieldMetadatas = ({
     context: {
       fieldName: 'searchAssignmentId',
       type: FieldMetadataType.UUID,
-      label: i18nLabel(msg`Search Assignment ID`),
+      label: i18nLabel(msg`Search Assignment`),
       description: i18nLabel(msg`Associated search assignment`),
       icon: 'IconSearch',
       isNullable: true,

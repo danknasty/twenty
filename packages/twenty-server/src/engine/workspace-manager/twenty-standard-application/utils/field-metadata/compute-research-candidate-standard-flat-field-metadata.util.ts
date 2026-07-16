@@ -213,7 +213,7 @@ export const buildResearchCandidateStandardFlatFieldMetadatas = ({
     context: {
       fieldName: 'searchAssignmentId',
       type: FieldMetadataType.UUID,
-      label: i18nLabel(msg`Search Assignment ID`),
+      label: i18nLabel(msg`Search Assignment`),
       description: i18nLabel(msg`Associated search assignment`),
       icon: 'IconSearch',
       isNullable: true,

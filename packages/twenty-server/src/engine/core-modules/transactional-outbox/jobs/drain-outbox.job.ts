@@ -52,7 +52,7 @@ export class DrainOutboxJob {
       await queryRunner.startTransaction();
 
       const pendingRows = await queryRunner.manager.query(
-        `SELECT * FROM "workspaceEventOutbox" WHERE "status" = $1 ORDER BY "createdAt" ASC LIMIT $2`,
+        `SELECT * FROM "workspaceEventOutbox" WHERE "status" = $1 AND ("nextAttemptAt" IS NULL OR "nextAttemptAt" <= NOW()) ORDER BY "createdAt" ASC LIMIT $2`,
         [OutboxStatus.PENDING, OUTBOX_DRAIN_BATCH_SIZE],
       );
 
@@ -126,6 +126,7 @@ export class DrainOutboxJob {
               1000 * Math.pow(2, newAttemptCount - 1),
               300_000,
             );
+            updateData.status = OutboxStatus.PENDING;
             updateData.nextAttemptAt = new Date(Date.now() + backoffMs);
           }
 

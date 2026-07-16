@@ -82,6 +82,22 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
       inject: options.inject || [],
     };
 
+    const bullMqDriverProvider: Provider = {
+      provide: BullMQDriver,
+      // oxlint-disable-next-line typescript/no-explicit-any
+      useFactory: async (...args: any[]) => {
+        if (options.useFactory) {
+          const config = await options.useFactory(...args);
+          const driver = this.createDriver(config);
+
+          return driver instanceof BullMQDriver ? driver : null;
+        }
+
+        return null;
+      },
+      inject: options.inject || [],
+    };
+
     const queueProviders = MessageQueueCoreModule.createQueueProviders();
 
     return {
@@ -90,6 +106,8 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
       providers: [
         ...(dynamicModule.providers ?? []),
         driverProvider,
+        bullMqDriverProvider,
+        DeadLetterRedriveService,
         ...queueProviders,
       ],
       exports: [

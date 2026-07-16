@@ -52,7 +52,7 @@ export class DeadLetterRedriveService {
       // redrive again for the same failed job produces the same jobId,
       // which BullMQ dedupes.
       const options: QueueJobOptions = {
-        idempotencyKey: failedJob.id ?? undefined,
+        idempotencyKey: failedJob.opts?.jobId ?? failedJob.id ?? undefined,
       };
 
       // Re-add through the driver so the idempotency-key path is used.

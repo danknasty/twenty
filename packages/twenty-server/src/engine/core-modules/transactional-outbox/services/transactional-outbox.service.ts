@@ -79,6 +79,7 @@ export class TransactionalOutboxService {
     if (nextAttemptAt === null) {
       updateData.status = OutboxStatus.DEAD_LETTERED;
     } else {
+      updateData.status = OutboxStatus.PENDING;
       updateData.nextAttemptAt = nextAttemptAt;
     }
 

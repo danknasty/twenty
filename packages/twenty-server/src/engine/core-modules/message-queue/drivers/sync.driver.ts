@@ -35,6 +35,12 @@ export class SyncDriver implements MessageQueueDriver {
     }
 
     await this.processJob(queueName, { id: '', name: jobName, data });
+
+    // Remove the key once the job is processed so it can be reused,
+    // matching BullMQ semantics where the key is freed after the job completes.
+    if (options?.idempotencyKey) {
+      this.seenIdempotencyKeys.delete(options.idempotencyKey);
+    }
   }
 
   async addCron<T extends MessageQueueJobData | undefined>({

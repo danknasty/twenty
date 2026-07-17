@@ -100,13 +100,37 @@ executiveProfile: [
   executiveExternalProfile: [
     { name: 'handle', type: FieldMetadataType.TEXT },
   ],
-  executiveSearchPreference: [],,
+executiveSearchPreference: [],,
 searchEngagementTerms: [{ name: 'name', type: FieldMetadataType.TEXT }],
   searchAssignment: [{ name: 'name', type: FieldMetadataType.TEXT }],
   assignmentTeamMember: [],
   searchMilestone: [],
   positionSpecification: [{ name: 'name', type: FieldMetadataType.TEXT }],
-  searchCriterion: [],
+  searchCriterion: [],,
+executiveSearchPreference: [],
+  researchStrategy: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  marketMap: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  targetCompany: [{ name: 'companyName', type: FieldMetadataType.TEXT }],
+  researchCandidate: [
+    { name: 'currentTitle', type: FieldMetadataType.TEXT },
+    { name: 'currentCompany', type: FieldMetadataType.TEXT },
+  ],
+  relationshipEdge: [
+    { name: 'summary', type: FieldMetadataType.TEXT },
+    { name: 'context', type: FieldMetadataType.TEXT },
+  ],
+  offLimitsRestriction: [
+    { name: 'summary', type: FieldMetadataType.TEXT },
+    { name: 'clientName', type: FieldMetadataType.TEXT },
+  ],
+  conflictCheck: [
+    { name: 'summary', type: FieldMetadataType.TEXT },
+    { name: 'outcomeReason', type: FieldMetadataType.TEXT },
+  ],
+  confidentialityRecord: [
+    { name: 'summary', type: FieldMetadataType.TEXT },
+    { name: 'counterpartyName', type: FieldMetadataType.TEXT },
+  ],
 } satisfies {
   [ObjectName in AllStandardObjectName]: {
     name: AllStandardObjectFieldName<ObjectName>;

@@ -1,0 +1,8 @@
+export enum MarketMapType {
+  COMPETITOR = 'COMPETITOR',
+  PEER = 'PEER',
+  ADJACENT = 'ADJACENT',
+  SUPPLIER = 'SUPPLIER',
+  CUSTOMER = 'CUSTOMER',
+  PORTFOLIO = 'PORTFOLIO',
+}

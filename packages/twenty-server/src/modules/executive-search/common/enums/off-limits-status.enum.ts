@@ -1,0 +1,7 @@
+export enum OffLimitsStatus {
+  ACTIVE = 'ACTIVE',
+  EXPIRED = 'EXPIRED',
+  WAIVED = 'WAIVED',
+  SUPERSEDED = 'SUPERSEDED',
+  PENDING_REVIEW = 'PENDING_REVIEW',
+}

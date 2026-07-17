@@ -54,7 +54,7 @@ describe('application-config validation', () => {
       'd908b08c-fd00-40be-9824-0e47ddf066fe',
     );
     expect(result.config.canReadAllObjectRecords).toBe(false);
-    const perms = result.config.objectPermissions!;
+const perms = result.config.objectPermissions!;
     expect(perms.length).toBe(1);
     expect(perms[0].canReadObjectRecords).toBe(true);
     expect(perms[0].canUpdateObjectRecords).toBe(true);
@@ -178,6 +178,45 @@ describe('permission flag universal identifiers', () => {
 
     for (const uid of flagUids) {
       expect(existingAppAndRoleUids).not.toContain(uid);
+    },
+expect(result.config.objectPermissions).toBeDefined();
+    const permissions = result.config.objectPermissions;
+    if (!permissions) throw new Error('objectPermissions missing');
+    expect(permissions).toHaveLength(19);
+    for (const perm of permissions) {
+      expect(perm.canReadObjectRecords).toBe(true);
+      expect(perm.canUpdateObjectRecords).toBe(false);
+      expect(perm.canSoftDeleteObjectRecords).toBe(false);
+      expect(perm.canDestroyObjectRecords).toBe(false);
+    }
+    expect(
+      permissions.some(
+        (p) =>
+          p.objectUniversalIdentifier === '20202020-e674-48e5-a542-72570eee7213',
+      ),
+    ).toBe(true);
+  });
+
+  it('includes Phase 7 research domain object permissions', async () => {
+    const mod = await import('src/default-role');
+    const result = mod.default;
+    const permissions = result.config.objectPermissions;
+    if (!permissions) throw new Error('objectPermissions missing');
+
+    const researchUuids = [
+      '526d8232-bccb-42df-b5b6-e3a143dba557', // confidentialityRecord
+      '84e9dfc7-cabe-47c9-915b-0c8a21dd0c7f', // conflictCheck
+      'e8b87567-1e12-4434-b390-1962c05388d4', // marketMap
+      'e111382e-ffdd-4d96-ba02-10df8240fa76', // offLimitsRestriction
+      'e10e3d9f-8ee3-469a-af73-fbca7bb12f3c', // relationshipEdge
+      '414f051b-9f66-474f-b12f-d4ce8be498d3', // researchCandidate
+      '39b454ce-1c6f-4312-a003-43a82f19955a', // researchStrategy
+      'e84ba25c-c010-4ed9-858d-c03639d604ad', // targetCompany
+    ];
+    for (const uuid of researchUuids) {
+      expect(
+        permissions.some((p) => p.objectUniversalIdentifier === uuid),
+      ).toBe(true);
     }
   });
 });

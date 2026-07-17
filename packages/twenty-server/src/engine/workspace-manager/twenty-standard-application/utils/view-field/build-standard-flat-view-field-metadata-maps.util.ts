@@ -32,6 +32,12 @@ import { computeStandardWorkflowRunViewFields } from 'src/engine/workspace-manag
 import { computeStandardWorkflowVersionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-workflow-version-view-fields.util';
 import { computeStandardWorkflowViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-workflow-view-fields.util';
 import { computeStandardWorkspaceMemberViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-workspace-member-view-fields.util';
+import { computeStandardSearchEngagementTermsViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-engagement-terms-view-fields.util';
+import { computeStandardSearchAssignmentViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-assignment-view-fields.util';
+import { computeStandardAssignmentTeamMemberViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-assignment-team-member-view-fields.util';
+import { computeStandardSearchMilestoneViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-milestone-view-fields.util';
+import { computeStandardPositionSpecificationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-position-specification-view-fields.util';
+import { computeStandardSearchCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-criterion-view-fields.util';
 import { type CreateStandardViewFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
 
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
@@ -71,6 +77,12 @@ const STANDARD_FLAT_VIEW_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowRun: computeStandardWorkflowRunViewFields,
   workflowVersion: computeStandardWorkflowVersionViewFields,
   workspaceMember: computeStandardWorkspaceMemberViewFields,
+  searchEngagementTerms: computeStandardSearchEngagementTermsViewFields,
+  searchAssignment: computeStandardSearchAssignmentViewFields,
+  assignmentTeamMember: computeStandardAssignmentTeamMemberViewFields,
+  searchMilestone: computeStandardSearchMilestoneViewFields,
+  positionSpecification: computeStandardPositionSpecificationViewFields,
+  searchCriterion: computeStandardSearchCriterionViewFields,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;
 };

@@ -44,6 +44,12 @@ import { computeStandardWorkflowRunViews } from 'src/engine/workspace-manager/tw
 import { computeStandardWorkflowVersionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-workflow-version-views.util';
 import { computeStandardWorkflowViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-workflow-views.util';
 import { computeStandardWorkspaceMemberViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-workspace-member-views.util';
+import { computeStandardSearchEngagementTermsViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-engagement-terms-views.util';
+import { computeStandardSearchAssignmentViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-assignment-views.util';
+import { computeStandardAssignmentTeamMemberViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-assignment-team-member-views.util';
+import { computeStandardSearchMilestoneViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-milestone-views.util';
+import { computeStandardPositionSpecificationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-position-specification-views.util';
+import { computeStandardSearchCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';
 import { type CreateStandardViewArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/create-standard-view-flat-metadata.util';
 
 type StandardViewBuilder<P extends AllStandardObjectName> = (
@@ -93,6 +99,12 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowRun: computeStandardWorkflowRunViews,
   workflowVersion: computeStandardWorkflowVersionViews,
   workspaceMember: computeStandardWorkspaceMemberViews,
+  searchEngagementTerms: computeStandardSearchEngagementTermsViews,
+  searchAssignment: computeStandardSearchAssignmentViews,
+  assignmentTeamMember: computeStandardAssignmentTeamMemberViews,
+  searchMilestone: computeStandardSearchMilestoneViews,
+  positionSpecification: computeStandardPositionSpecificationViews,
+  searchCriterion: computeStandardSearchCriterionViews,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewBuilder<P>;
 };

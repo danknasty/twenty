@@ -1124,7 +1124,8 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       now,
     }),
 executiveProfile: ({,
-clientStakeholderRole: ({
+clientStakeholderRole: ({,
+searchEngagementTerms: ({
     now,
     workspaceId,
     standardObjectMetadataRelatedEntityIds,
@@ -1574,6 +1575,7 @@ CreateStandardObjectArgs<'reconciliationRun'>,
         isAuditLogged: false,
         isUICreatable: false,
         labelIdentifierFieldMetadataName: 'id',,
+CreateStandardObjectArgs<'searchEngagementTerms'>,,
 CreateStandardObjectArgs<'searchEngagementTerms'>,
     'context' | 'objectName'
   >) =>
@@ -1584,14 +1586,22 @@ CreateStandardObjectArgs<'searchEngagementTerms'>,
         universalIdentifier:
           STANDARD_OBJECTS.searchEngagementTerms.universalIdentifier,
         nameSingular: 'searchEngagementTerms',
-        namePlural: 'searchEngagementTerms',
+namePlural: 'searchEngagementTerms',
         labelSingular: i18nLabel(msg`Search Engagement Terms`),
         labelPlural: i18nLabel(msg`Search Engagement Terms`),
         description: i18nLabel(
           msg`Terms, fee structure, exclusivity, and payment schedule for a retained-search engagement`,
         ),
         icon: 'IconFileDollar',
-        isSearchable: false,
+        isSearchable: false,,
+namePlural: 'searchEngagementsTerms',
+        labelSingular: i18nLabel(msg`Search Engagement Terms`),
+        labelPlural: i18nLabel(msg`Search Engagement Terms`),
+        description: i18nLabel(msg`Terms of engagement for a search`),
+        icon: 'IconFileContract',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
         labelIdentifierFieldMetadataName: 'name',
       },
       workspaceId,
@@ -1600,7 +1610,8 @@ CreateStandardObjectArgs<'searchEngagementTerms'>,
       now,
     }),
 reconciliationFinding: ({,
-clientAccountProfile: ({
+clientAccountProfile: ({,
+searchAssignment: ({
     now,
     workspaceId,
     standardObjectMetadataRelatedEntityIds,
@@ -1641,7 +1652,153 @@ CreateStandardObjectArgs<'clientAccountProfile'>,
         labelPlural: i18nLabel(msg`Client Account Profiles`),
         description: i18nLabel(msg`A client account profile`),
         icon: 'IconBuilding',
-        isSearchable: false,
+        isSearchable: false,,
+CreateStandardObjectArgs<'searchAssignment'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'searchAssignment',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.searchAssignment.universalIdentifier,
+        nameSingular: 'searchAssignment',
+        namePlural: 'searchAssignments',
+        labelSingular: i18nLabel(msg`Search Assignment`),
+        labelPlural: i18nLabel(msg`Search Assignments`),
+        description: i18nLabel(msg`An executive search assignment`),
+        icon: 'IconTargetArrow',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  assignmentTeamMember: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'assignmentTeamMember'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'assignmentTeamMember',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.assignmentTeamMember.universalIdentifier,
+        nameSingular: 'assignmentTeamMember',
+        namePlural: 'assignmentTeamMembers',
+        labelSingular: i18nLabel(msg`Assignment Team Member`),
+        labelPlural: i18nLabel(msg`Assignment Team Members`),
+        description: i18nLabel(msg`A team member on a search assignment`),
+        icon: 'IconUsers',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'role',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  searchMilestone: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'searchMilestone'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'searchMilestone',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.searchMilestone.universalIdentifier,
+        nameSingular: 'searchMilestone',
+        namePlural: 'searchMilestones',
+        labelSingular: i18nLabel(msg`Search Milestone`),
+        labelPlural: i18nLabel(msg`Search Milestones`),
+        description: i18nLabel(msg`A milestone on a search assignment`),
+        icon: 'IconFlag3',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  positionSpecification: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'positionSpecification'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'positionSpecification',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.positionSpecification.universalIdentifier,
+        nameSingular: 'positionSpecification',
+        namePlural: 'positionSpecifications',
+        labelSingular: i18nLabel(msg`Position Specification`),
+        labelPlural: i18nLabel(msg`Position Specifications`),
+        description: i18nLabel(msg`A position specification for a search`),
+        icon: 'IconClipboardList',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  searchCriterion: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'searchCriterion'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'searchCriterion',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.searchCriterion.universalIdentifier,
+        nameSingular: 'searchCriterion',
+        namePlural: 'searchCriteria',
+        labelSingular: i18nLabel(msg`Search Criterion`),
+        labelPlural: i18nLabel(msg`Search Criteria`),
+        description: i18nLabel(msg`A search criterion for a position`),
+        icon: 'IconChecklist',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
         labelIdentifierFieldMetadataName: 'name',
       },
       workspaceId,

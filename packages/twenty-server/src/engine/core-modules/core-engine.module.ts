@@ -77,6 +77,7 @@ import { WorkspaceEventEmitterModule } from 'src/engine/workspace-event-emitter/
 import { ChannelSyncModule } from 'src/modules/connected-account/channel-sync/channel-sync.module';
 import { CreateCalendarEventModule } from 'src/modules/calendar/calendar-event-creation-manager/create-calendar-event.module';
 import { DashboardModule } from 'src/modules/dashboard/dashboard.module';
+import { ExecutiveSearchModule } from 'src/modules/executive-search/executive-search.module';
 import { SendEmailModule } from 'src/modules/messaging/message-outbound-manager/send-email.module';
 import { ClientConfigModule } from './client-config/client-config.module';
 import { EventLogsViewerModule } from './event-logs/event-logs-viewer.module';
@@ -166,6 +167,7 @@ import { FileModule } from './file/file.module';
     TrashCleanupModule,
     CodeInterpreterSessionCleanupModule,
     DashboardModule,
+    ExecutiveSearchModule,
     EventLogsViewerModule,
     ExternalSyncModule,
     PreInstalledAppsModule,

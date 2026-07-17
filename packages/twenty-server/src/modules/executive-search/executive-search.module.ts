@@ -18,6 +18,10 @@ import { ExternalSyncInboxWorkspaceEntity } from 'src/modules/executive-search/s
 import { ExternalSyncDLQWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-dlq.workspace-entity';
 import { ExternalSyncCheckpointWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-checkpoint.workspace-entity';
 import { ExternalSyncReconciliationWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-reconciliation.workspace-entity';
+import { AssignmentStatusTransitionService } from 'src/modules/executive-search/services/assignment-status-transition.service';
+import { ConvertOpportunityToAssignmentService } from 'src/modules/executive-search/services/convert-opportunity-to-assignment.service';
+import { OffLimitsGuardService } from 'src/modules/executive-search/services/off-limits-guard.service';
+import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-search/resolvers/convert-opportunity-to-assignment.resolver';
 
 @Module({
   imports: [
@@ -44,6 +48,10 @@ import { ExternalSyncReconciliationWorkspaceEntity } from 'src/modules/executive
     OutboundEventMapperService,
     OutboundProjectionService,
     OutboundProjectionListener,
+    ConvertOpportunityToAssignmentService,
+    AssignmentStatusTransitionService,
+    OffLimitsGuardService,
+    ConvertOpportunityToAssignmentResolver,
   ],
   exports: [
     ExecutiveSearchOutboxService,
@@ -56,6 +64,8 @@ import { ExternalSyncReconciliationWorkspaceEntity } from 'src/modules/executive
     DirectusConnectionConfigService,
     OutboundEventMapperService,
     OutboundProjectionService,
+    ConvertOpportunityToAssignmentService,
   ],
+})
 })
 export class ExecutiveSearchModule {}

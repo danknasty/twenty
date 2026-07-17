@@ -16,17 +16,12 @@ export const buildExternalEntityLinkStandardFlatIndexMetadatas = ({
   AllStandardObjectIndexName<'externalEntityLink'>,
   FlatIndexMetadata
 > => ({
-  workspaceExternalEntityUniqueIndex: createStandardIndexFlatMetadata({
+  systemExternalCollectionExternalIdIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'workspaceExternalEntityUniqueIndex',
-      relatedFieldNames: [
-        'workspaceId',
-        'externalSystemName',
-        'externalEntityName',
-        'externalRecordId',
-      ],
+      indexName: 'systemExternalCollectionExternalIdIndex',
+      relatedFieldNames: ['system', 'externalCollection', 'externalId'],
       isUnique: true,
     },
     standardObjectMetadataRelatedEntityIds,
@@ -34,12 +29,12 @@ export const buildExternalEntityLinkStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  workspaceTwentyEntityUniqueIndex: createStandardIndexFlatMetadata({
+  systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'workspaceTwentyEntityUniqueIndex',
-      relatedFieldNames: ['workspaceId', 'twentyEntityName', 'twentyRecordId'],
+      indexName: 'systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex',
+      relatedFieldNames: ['system', 'twentyObjectUniversalIdentifier', 'twentyRecordId'],
       isUnique: true,
     },
     standardObjectMetadataRelatedEntityIds,

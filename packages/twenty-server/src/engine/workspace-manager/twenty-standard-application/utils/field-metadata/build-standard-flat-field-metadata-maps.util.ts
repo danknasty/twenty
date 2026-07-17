@@ -18,12 +18,15 @@ import { buildExternalEntityLinkStandardFlatFieldMetadatas } from 'src/engine/wo
 import { buildInboundEventLedgerStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-inbound-event-ledger-standard-flat-field-metadata.util';
 import { buildOutboundEventLedgerStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-outbound-event-ledger-standard-flat-field-metadata.util';
 import { buildDashboardStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dashboard-standard-flat-field-metadata.util';
-import { buildExternalEntityLinkStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util';
 import { buildExternalSyncCheckpointStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-checkpoint-standard-flat-field-metadata.util';
 import { buildExternalSyncDLQStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-dlq-standard-flat-field-metadata.util';
 import { buildExternalSyncInboxStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-inbox-standard-flat-field-metadata.util';
 import { buildExternalSyncOutboxStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-outbox-standard-flat-field-metadata.util';
 import { buildExternalSyncReconciliationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-sync-reconciliation-standard-flat-field-metadata.util';
+import { buildOutboxEventStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-outbox-event-standard-flat-field-metadata.util';
+import { buildDeadLetterRecordStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dead-letter-record-standard-flat-field-metadata.util';
+import { buildReconciliationRunStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-reconciliation-run-standard-flat-field-metadata.util';
+import { buildReconciliationFindingStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-reconciliation-finding-standard-flat-field-metadata.util';
 import { buildMessageCampaignStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util';
 import { buildMessageListStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-list-standard-flat-field-metadata.util';
 import { buildMessageListMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-list-member-standard-flat-field-metadata.util';
@@ -66,8 +69,11 @@ const STANDARD_FLAT_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
   inboundEventLedger: buildInboundEventLedgerStandardFlatFieldMetadatas,
   outboundEventLedger: buildOutboundEventLedgerStandardFlatFieldMetadatas,
+  outboxEvent: buildOutboxEventStandardFlatFieldMetadatas,
+  deadLetterRecord: buildDeadLetterRecordStandardFlatFieldMetadatas,
+  reconciliationRun: buildReconciliationRunStandardFlatFieldMetadatas,
+  reconciliationFinding: buildReconciliationFindingStandardFlatFieldMetadatas,
   dashboard: buildDashboardStandardFlatFieldMetadatas,
-  externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
   externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatFieldMetadatas,
   externalSyncDLQ: buildExternalSyncDLQStandardFlatFieldMetadatas,
   externalSyncInbox: buildExternalSyncInboxStandardFlatFieldMetadatas,

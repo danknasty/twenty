@@ -16,48 +16,26 @@ export const buildInboundEventLedgerStandardFlatIndexMetadatas = ({
   AllStandardObjectIndexName<'inboundEventLedger'>,
   FlatIndexMetadata
 > => ({
-  idempotencyKeyIndex: createStandardIndexFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      indexName: 'idempotencyKeyIndex',
-      relatedFieldNames: ['idempotencyKey'],
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
   eventIdIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
       indexName: 'eventIdIndex',
       relatedFieldNames: ['eventId'],
+      isUnique: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
   }),
-  sourceRecordIdIndex: createStandardIndexFlatMetadata({
+  idempotencyKeyIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'sourceRecordIdIndex',
-      relatedFieldNames: ['sourceRecordId'],
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  statusIndex: createStandardIndexFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      indexName: 'statusIndex',
-      relatedFieldNames: ['status'],
+      indexName: 'idempotencyKeyIndex',
+      relatedFieldNames: ['idempotencyKey'],
+      isUnique: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,

@@ -190,40 +190,6 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
-  externalEntityLink: ({
-    now,
-    workspaceId,
-    standardObjectMetadataRelatedEntityIds,
-    twentyStandardApplicationId,
-    dependencyFlatEntityMaps,
-  }: Omit<
-    CreateStandardObjectArgs<'externalEntityLink'>,
-    'context' | 'objectName'
-  >) =>
-    createStandardObjectFlatMetadata({
-      objectName: 'externalEntityLink',
-      dependencyFlatEntityMaps,
-      context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.externalEntityLink.universalIdentifier,
-        nameSingular: 'externalEntityLink',
-        namePlural: 'externalEntityLinks',
-        labelSingular: i18nLabel(msg`External Entity Link`),
-        labelPlural: i18nLabel(msg`External Entity Links`),
-        description: i18nLabel(
-          msg`Link between an external entity and a local record`,
-        ),
-        icon: 'IconLink',
-        isSystem: true,
-        isAuditLogged: false,
-        isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'externalRecordId',
-      },
-      workspaceId,
-      standardObjectMetadataRelatedEntityIds,
-      twentyStandardApplicationId,
-      now,
-    }),
   inboundEventLedger: ({
     now,
     workspaceId,
@@ -371,7 +337,7 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         isSearchable: false,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'id',
+        labelIdentifierFieldMetadataName: 'externalId',
       },
       workspaceId,
       standardObjectMetadataRelatedEntityIds,
@@ -1467,14 +1433,15 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
-  clientAccountProfile: ({
+clientAccountProfile: ({,
+outboxEvent: ({
     now,
     workspaceId,
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
   }: Omit<
-    CreateStandardObjectArgs<'clientAccountProfile'>,
+CreateStandardObjectArgs<'clientAccountProfile'>,
     'context' | 'objectName'
   >) =>
     createStandardObjectFlatMetadata({
@@ -1494,21 +1461,41 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         isSystem: true,
         isUICreatable: true,
         isSearchable: true,
-        labelIdentifierFieldMetadataName: 'name',
+        labelIdentifierFieldMetadataName: 'name',,
+CreateStandardObjectArgs<'outboxEvent'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'outboxEvent',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.outboxEvent.universalIdentifier,
+        nameSingular: 'outboxEvent',
+        namePlural: 'outboxEvents',
+        labelSingular: i18nLabel(msg`Outbox Event`),
+        labelPlural: i18nLabel(msg`Outbox Events`),
+        description: i18nLabel(msg`An outbox event for sync`),
+        icon: 'IconMailForward',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'eventType',
       },
       workspaceId,
       standardObjectMetadataRelatedEntityIds,
       twentyStandardApplicationId,
       now,
     }),
-  clientStakeholderRole: ({
+clientStakeholderRole: ({,
+deadLetterRecord: ({
     now,
     workspaceId,
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
   }: Omit<
-    CreateStandardObjectArgs<'clientStakeholderRole'>,
+CreateStandardObjectArgs<'clientStakeholderRole'>,
     'context' | 'objectName'
   >) =>
     createStandardObjectFlatMetadata({
@@ -1528,7 +1515,90 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         isSystem: true,
         isUICreatable: true,
         isSearchable: true,
-        labelIdentifierFieldMetadataName: 'name',
+        labelIdentifierFieldMetadataName: 'name',,
+CreateStandardObjectArgs<'deadLetterRecord'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'deadLetterRecord',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.deadLetterRecord.universalIdentifier,
+        nameSingular: 'deadLetterRecord',
+        namePlural: 'deadLetterRecords',
+        labelSingular: i18nLabel(msg`Dead Letter Record`),
+        labelPlural: i18nLabel(msg`Dead Letter Records`),
+        description: i18nLabel(msg`A dead-letter record for failed sync events`),
+        icon: 'IconAlertTriangle',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'eventId',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  reconciliationRun: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'reconciliationRun'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'reconciliationRun',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.reconciliationRun.universalIdentifier,
+        nameSingular: 'reconciliationRun',
+        namePlural: 'reconciliationRuns',
+        labelSingular: i18nLabel(msg`Reconciliation Run`),
+        labelPlural: i18nLabel(msg`Reconciliation Runs`),
+        description: i18nLabel(msg`A reconciliation run`),
+        icon: 'IconChecklist',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  reconciliationFinding: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'reconciliationFinding'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'reconciliationFinding',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.reconciliationFinding.universalIdentifier,
+        nameSingular: 'reconciliationFinding',
+        namePlural: 'reconciliationFindings',
+        labelSingular: i18nLabel(msg`Reconciliation Finding`),
+        labelPlural: i18nLabel(msg`Reconciliation Findings`),
+        description: i18nLabel(msg`A finding from a reconciliation run`),
+        icon: 'IconSearch',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'findingType',
       },
       workspaceId,
       standardObjectMetadataRelatedEntityIds,

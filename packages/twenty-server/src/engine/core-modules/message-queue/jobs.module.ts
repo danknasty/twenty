@@ -57,6 +57,9 @@ import { WorkflowModule } from 'src/modules/workflow/workflow.module';
 import { ExecutiveSearchModule } from 'src/modules/executive-search/executive-search.module';
 import { ExecutiveSearchOutboxRedriveJob } from 'src/modules/executive-search/sync/jobs/executive-sync-outbox-redrive.job';
 import { ExecutiveSyncProcessOutboxJob } from 'src/modules/executive-search/sync/jobs/executive-sync-process-outbox.job';
+import { ExecutiveSearchSyncModule } from 'src/engine/core-modules/executive-search/executive-search.module';
+import { ReconciliationCronJob } from 'src/engine/core-modules/executive-search/jobs/reconciliation.cron.job';
+import { ReconciliationRunnerJob } from 'src/engine/core-modules/executive-search/jobs/reconciliation-runner.job';
 
 @Module({
   imports: [
@@ -101,6 +104,7 @@ import { ExecutiveSyncProcessOutboxJob } from 'src/modules/executive-search/sync
     OnboardingModule,
     BillingReminderModule,
     ExecutiveSearchModule,
+    ExecutiveSearchSyncModule,
   ],
   providers: [
     BillingReminderCronJob,
@@ -119,6 +123,8 @@ import { ExecutiveSyncProcessOutboxJob } from 'src/modules/executive-search/sync
     InstallOnboardingAppsJob,
     ExecutiveSyncProcessOutboxJob,
     ExecutiveSearchOutboxRedriveJob,
+    ReconciliationCronJob,
+    ReconciliationRunnerJob,
   ],
 })
 export class JobsModule {

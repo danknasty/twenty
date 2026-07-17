@@ -14,8 +14,11 @@ import { buildCompanyStandardFlatIndexMetadatas } from 'src/engine/workspace-man
 import { buildExternalEntityLinkStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-entity-link-standard-flat-index-metadata.util';
 import { buildInboundEventLedgerStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-inbound-event-ledger-standard-flat-index-metadata.util';
 import { buildOutboundEventLedgerStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-outbound-event-ledger-standard-flat-index-metadata.util';
+import { buildOutboxEventStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-outbox-event-standard-flat-index-metadata.util';
+import { buildDeadLetterRecordStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-dead-letter-record-standard-flat-index-metadata.util';
+import { buildReconciliationRunStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-reconciliation-run-standard-flat-index-metadata.util';
+import { buildReconciliationFindingStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-reconciliation-finding-standard-flat-index-metadata.util';
 import { buildDashboardStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-dashboard-standard-flat-index-metadata.util';
-import { buildExternalEntityLinkStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-entity-link-standard-flat-index-metadata.util';
 import { buildExternalSyncCheckpointStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-checkpoint-standard-flat-index-metadata.util';
 import { buildExternalSyncInboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-inbox-standard-flat-index-metadata.util';
 import { buildExternalSyncOutboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-outbox-standard-flat-index-metadata.util';
@@ -60,8 +63,11 @@ const STANDARD_FLAT_INDEX_METADATA_BUILDERS_BY_OBJECT_NAME = {
   externalEntityLink: buildExternalEntityLinkStandardFlatIndexMetadatas,
   inboundEventLedger: buildInboundEventLedgerStandardFlatIndexMetadatas,
   outboundEventLedger: buildOutboundEventLedgerStandardFlatIndexMetadatas,
+  outboxEvent: buildOutboxEventStandardFlatIndexMetadatas,
+  deadLetterRecord: buildDeadLetterRecordStandardFlatIndexMetadatas,
+  reconciliationRun: buildReconciliationRunStandardFlatIndexMetadatas,
+  reconciliationFinding: buildReconciliationFindingStandardFlatIndexMetadatas,
   dashboard: buildDashboardStandardFlatIndexMetadatas,
-  externalEntityLink: buildExternalEntityLinkStandardFlatIndexMetadatas,
   externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatIndexMetadatas,
   externalSyncInbox: buildExternalSyncInboxStandardFlatIndexMetadatas,
   externalSyncOutbox: buildExternalSyncOutboxStandardFlatIndexMetadatas,

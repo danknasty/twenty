@@ -2492,197 +2492,90 @@ export const STANDARD_OBJECTS = {
       },
     },
   },
-  externalEntityLink: {
-    universalIdentifier: '5c4cd3e1-6585-4bfa-ac28-446fb95c568d',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        '5c4cd3e1-6585-4bfa-ac28-446fb95c568d',
-      ),
-      externalSystem: {
-        universalIdentifier: '53eca022-b8d3-439a-a6c4-99652094a7fc',
-      },
-      externalCollection: {
-        universalIdentifier: '47cf6857-a023-40f2-ac85-6b175087c08e',
-      },
-      externalRecordId: {
-        universalIdentifier: 'b932271f-e30d-4b39-ac1d-a7530200f0f6',
-      },
-      targetObjectMetadataId: {
-        universalIdentifier: '6ec16bce-b9a2-4c9d-afd6-e0c5aa75137a',
-      },
-      targetRecordId: {
-        universalIdentifier: '11e11c21-64e8-4d59-b344-91c56be851d1',
-      },
-      isActive: {
-        universalIdentifier: '0015722f-9a0f-4f88-9d42-1c5d108ba6c1',
-      },
-      deactivatedAt: {
-        universalIdentifier: '674fafc1-ef5f-4899-9575-7c2a61c3b187',
-      },
-    },
-    indexes: {
-      externalLookupIndex: {
-        universalIdentifier: 'e127e776-10f5-4719-bcfa-21ae24ca69bb',
-      },
-      targetLookupIndex: {
-        universalIdentifier: '15f3f5ec-04ee-4d4b-b24f-8b72abce1dba',
-      },
-    },
-  },
   inboundEventLedger: {
-    universalIdentifier: 'fde06047-5a3c-4004-bbb0-3ee331f198b7',
+    universalIdentifier: 'e5b9f029-6dfe-44e8-88b2-ae8ba5ec141a',
     fields: {
       ...buildStandardObjectSystemFields(
-        'fde06047-5a3c-4004-bbb0-3ee331f198b7',
+        'e5b9f029-6dfe-44e8-88b2-ae8ba5ec141a',
       ),
       eventId: {
-        universalIdentifier: '1a6f7edf-dbb4-40a3-a194-085d3eaa8dfb',
+        universalIdentifier: '38ae8bdc-9dc3-4e3c-b5bf-541a0d5c1107',
       },
       eventType: {
-        universalIdentifier: '2706c8f5-8068-4dcf-ad71-a577688c8d12',
-      },
-      eventVersion: {
-        universalIdentifier: '592ca8f7-c7d3-49c3-b886-470270857864',
-      },
-      sourceSystem: {
-        universalIdentifier: 'f7352590-933f-4fbf-89f4-b9146da691ab',
-      },
-      sourceCollection: {
-        universalIdentifier: 'ee983ff8-4065-4d9c-9283-220fab663e5f',
-      },
-      sourceRecordId: {
-        universalIdentifier: '849a52c9-878d-4aed-9987-25519f9ac79b',
-      },
-      sourceHash: {
-        universalIdentifier: 'fc985620-b66b-4cf5-8665-e11f82abc404',
-      },
-      sourceUpdatedAt: {
-        universalIdentifier: 'dc7fde85-6829-4aad-bcbb-ea6496c030c5',
-      },
-      workspaceKey: {
-        universalIdentifier: 'a6c20710-74c4-480d-97c9-7e9f37a53a10',
-      },
-      correlationId: {
-        universalIdentifier: '4642830e-4de0-483c-8a7f-3e9876ed98d9',
-      },
-      causationId: {
-        universalIdentifier: 'd21265b0-0ffc-45bb-b5a9-996e44e7817a',
+        universalIdentifier: '9574a671-09e5-4c8a-a0dc-a3bb100148b3',
       },
       idempotencyKey: {
-        universalIdentifier: 'ff848447-0b8e-47cd-8335-a02e5a4f1014',
+        universalIdentifier: '069466e6-44b8-4b09-b80c-0e01756b6188',
       },
-      occurredAt: {
-        universalIdentifier: '68c1eadf-7ce9-480a-8b98-c17f696e938c',
+      sourceSystem: {
+        universalIdentifier: '1a52d108-cd65-45eb-a604-2cb7d18e4a68',
       },
-      payload: {
-        universalIdentifier: '2f3c512c-a8d4-4e09-a4cd-dc99d3e0fe92',
+      sourceCollection: {
+        universalIdentifier: 'e4a625db-c0e9-42a2-a14d-0d9d5ed8e6ab',
+      },
+      sourceRecordId: {
+        universalIdentifier: '4afa8e3c-0df1-4443-9f77-4445ca3bc74a',
       },
       status: {
-        universalIdentifier: '4f141466-b6a6-4087-96b4-2d785dbf98d2',
+        universalIdentifier: '0e371906-2184-4438-b8d8-c31ef5afb56c',
       },
-      statusMessage: {
-        universalIdentifier: 'd1907f93-3179-4cc4-baa9-eaded53765e4',
+      payloadHash: {
+        universalIdentifier: 'b5df41fa-0e08-47e4-abe4-bbcb8789ab64',
       },
-      processingAttempts: {
-        universalIdentifier: '950ec02e-4ec7-4e9d-80d0-e37157fdbdcb',
-      },
-      lastAttemptAt: {
-        universalIdentifier: '97bfc70e-9894-4e2a-8b8a-ce1fabd53224',
+      receivedAt: {
+        universalIdentifier: 'f41df463-cd96-45ce-b210-c38906da9dd2',
       },
       processedAt: {
-        universalIdentifier: 'e4eb6016-8a54-4ca2-9965-e46dd85e7312',
+        universalIdentifier: 'c7411103-7d1f-4c13-9db3-4e264eaf6d49',
+      },
+      errorMessage: {
+        universalIdentifier: '88b45c33-dd05-4326-b6c7-97f885b41120',
       },
     },
     indexes: {
-      idempotencyKeyIndex: {
-        universalIdentifier: '0e59fbe1-f409-429a-862a-c14fd04fb242',
-      },
       eventIdIndex: {
-        universalIdentifier: '4f0d22d7-7c85-419f-ba76-1c947ffe530f',
+        universalIdentifier: '3c57b005-3963-4721-b085-886a75702515',
       },
-      sourceRecordIdIndex: {
-        universalIdentifier: '66e0ce8f-1120-4b64-86cd-7140e3021a8f',
-      },
-      statusIndex: {
-        universalIdentifier: 'f0713976-b374-4a92-9e78-315a4d9dce2e',
+      idempotencyKeyIndex: {
+        universalIdentifier: '41d0cc81-f2db-4faa-8c55-76da8bafdb67',
       },
     },
   },
   outboundEventLedger: {
-    universalIdentifier: '0ed927ff-d4f5-4c01-89eb-bbe2c1081de7',
+    universalIdentifier: '20a6174b-3ddf-4169-8f34-52fc117a0d2d',
     fields: {
       ...buildStandardObjectSystemFields(
-        '0ed927ff-d4f5-4c01-89eb-bbe2c1081de7',
+        '20a6174b-3ddf-4169-8f34-52fc117a0d2d',
       ),
       eventId: {
-        universalIdentifier: 'c8f50671-868b-47a0-bc4b-6cb617407d02',
+        universalIdentifier: 'cfd782b2-418a-409c-8af1-b10c832d28b1',
       },
       eventType: {
-        universalIdentifier: 'a3e4d8c9-b8b4-4f7d-a41b-c95f1da43dd1',
+        universalIdentifier: 'b03016ab-19a2-4612-a509-f585922ad24c',
       },
-      eventVersion: {
-        universalIdentifier: '8c80a331-2b42-4716-ad70-5251f8bc0aef',
+      targetCollection: {
+        universalIdentifier: 'ea0da39a-f2c9-4d1e-8a10-0e74192335c1',
       },
-      sourceSystem: {
-        universalIdentifier: '5c4dfea1-2fca-49cd-8fc2-053de68e62b2',
-      },
-      sourceCollection: {
-        universalIdentifier: '8a61f562-0095-4a35-9c4e-87c0cf407734',
-      },
-      sourceRecordId: {
-        universalIdentifier: '8a2e7c90-ee35-4ba8-883c-aa94415cb394',
-      },
-      sourceHash: {
-        universalIdentifier: 'fe39423c-d542-4750-9c74-58d49a461c18',
-      },
-      sourceUpdatedAt: {
-        universalIdentifier: 'ee5ea9ed-5ba9-4d99-acaf-d1d3c9a9e730',
-      },
-      workspaceKey: {
-        universalIdentifier: 'cc00f238-16b0-434d-bb08-0e1a9e96e407',
-      },
-      correlationId: {
-        universalIdentifier: '4e19b379-ac25-4f5d-9349-52a3ead9655c',
-      },
-      causationId: {
-        universalIdentifier: '363d9a8e-e79f-417b-ae32-4a0e27df5548',
-      },
-      idempotencyKey: {
-        universalIdentifier: '124de3db-3ae8-4a48-b942-e411da5fe665',
-      },
-      occurredAt: {
-        universalIdentifier: '3320f03f-309a-4de5-887e-a0578c96baf6',
-      },
-      payload: {
-        universalIdentifier: '604231f4-c0ff-45e8-84b9-36bc30116e0d',
+      targetRecordId: {
+        universalIdentifier: 'beed17b4-55e7-4b70-ab1e-a49019b7d0e0',
       },
       status: {
-        universalIdentifier: '23635d0b-0914-4a5d-a4bf-c3938ab338a0',
+        universalIdentifier: '88e25855-76af-49f9-a3a5-3446fbf9f106',
       },
-      statusMessage: {
-        universalIdentifier: '4af5ab85-17cd-49f5-a3dd-103392f4451d',
+      beforeHash: {
+        universalIdentifier: '2f36501a-12fe-44dd-89f3-9ddcb22670d3',
       },
-      deliveryAttempts: {
-        universalIdentifier: '9eb240d1-77bb-4be0-9b83-f7b1f1c2ea71',
+      afterHash: {
+        universalIdentifier: '8a384b19-e934-494e-bb74-2b57dee59ae7',
       },
-      lastDeliveryAttemptAt: {
-        universalIdentifier: 'bcb5d353-ed4c-4912-bf54-b90bcc704aa0',
+      sentAt: {
+        universalIdentifier: '2f56f23d-0da3-42e7-b75c-c862b9fe62db',
       },
-      deliveredAt: {
-        universalIdentifier: 'e80356b8-5bbf-49f4-8756-172dc36a63e2',
-      },
-    },
-    indexes: {
-      idempotencyKeyIndex: {
-        universalIdentifier: 'a80b9832-b0d0-4d28-b892-922d8dce8d3a',
-      },
-      eventIdIndex: {
-        universalIdentifier: 'd2b25ab9-e7ec-4166-b686-ca7c5a459481',
-      },
-      statusIndex: {
-        universalIdentifier: 'f2fd5668-fc6b-489e-a86c-4f0859821bb1',
+      errorMessage: {
+        universalIdentifier: 'b24ac577-169f-4531-a990-f30407fb14d8',
       },
     },
+    indexes: {},
   },
   workspaceMember: {
     universalIdentifier: '20202020-3319-4234-a34c-82d5c0e881a6',
@@ -2796,42 +2689,69 @@ export const STANDARD_OBJECTS = {
     },
   },
   externalEntityLink: {
-    universalIdentifier: 'a8ea9890-3fb3-5ef9-8436-43f278ddda99',
+    universalIdentifier: '83a0c657-2e64-47c5-a363-bf7f23b5bb58',
     fields: {
       ...buildStandardObjectSystemFields(
-        'a8ea9890-3fb3-5ef9-8436-43f278ddda99',
+        '83a0c657-2e64-47c5-a363-bf7f23b5bb58',
       ),
-      workspaceId: {
-        universalIdentifier: '84f2e0d0-14ff-57b4-9375-1a2f1f1db260',
+      system: {
+        universalIdentifier: 'b0d3e716-8c84-4262-82c1-facad5b2bfb8',
       },
-      twentyEntityName: {
-        universalIdentifier: '04916c5d-1587-51f3-807f-ca15d9bcc2f6',
+      externalCollection: {
+        universalIdentifier: 'f09b8319-4cfd-4e49-af76-e6b83b894e0b',
+      },
+      externalId: {
+        universalIdentifier: 'd4fd91bd-2ea6-4c10-ac78-9c2e0083a20c',
+      },
+      twentyObjectUniversalIdentifier: {
+        universalIdentifier: '6252a551-04a6-4669-ab88-604076aeab92',
       },
       twentyRecordId: {
-        universalIdentifier: '87467b36-2058-5c0c-97fb-a658a5a8dd5d',
+        universalIdentifier: '06974d24-f0e8-4ea5-b71c-3aca591a6b65',
       },
-      externalSystemName: {
-        universalIdentifier: 'eedb74e0-e13c-51d5-a62a-d67bced684b2',
+      externalNaturalKey: {
+        universalIdentifier: '47388e8a-1fd2-4e16-bdc9-723f3e1d04dc',
       },
-      externalEntityName: {
-        universalIdentifier: '86c398f3-eb11-5e94-a492-69d7ddc18a35',
+      sourceVersion: {
+        universalIdentifier: '3a53950c-9516-4881-ac54-8d3ce89e5c7c',
       },
-      externalRecordId: {
-        universalIdentifier: 'd5ccd676-5ad3-5c04-a4e8-3ba467707114',
+      sourceUpdatedAt: {
+        universalIdentifier: '383f2a5b-267b-44c2-bf50-b52bd3d49a83',
       },
-      authority: {
-        universalIdentifier: 'e0cb928f-cad9-529f-a686-65b9f2e21626',
+      sourceHash: {
+        universalIdentifier: 'c6333c35-7045-44a5-96d2-162ccc5e2699',
       },
-      lastSyncedAt: {
-        universalIdentifier: '6be4d82c-c9ef-5d91-a3c2-ec1ff6300fc4',
+      lastInboundSyncAt: {
+        universalIdentifier: '881db3ab-9dae-46e6-b1c8-3dc60f25c29e',
+      },
+      lastOutboundSyncAt: {
+        universalIdentifier: '3e7e4f11-d34e-4977-beee-7f16aefdb58d',
+      },
+      syncStatus: {
+        universalIdentifier: '1a6b68dc-90c8-4bd5-b275-f005a99de7fa',
+      },
+      conflictStatus: {
+        universalIdentifier: 'a02c861a-0686-4d92-b3fb-de2000b0e377',
+      },
+      lastErrorCode: {
+        universalIdentifier: '2a161c81-84be-4c1f-957d-e0dbbd3eb0fe',
+      },
+      lastErrorAt: {
+        universalIdentifier: '5f048077-3ccd-476c-9ce4-17a9cbcd0296',
+      },
+      isAuthoritativeLink: {
+        universalIdentifier: '7a4efc36-4e82-4e3c-9cc1-83498f44d448',
+      },
+      metadata: {
+        universalIdentifier: 'ea4943c8-d856-4da3-92af-e66bf139504d',
       },
     },
     indexes: {
-      workspaceExternalEntityUniqueIndex: {
-        universalIdentifier: 'a9994297-33f5-530e-8358-24ab1bbceebf',
+      systemExternalCollectionExternalIdIndex: {
+        universalIdentifier: '34097f88-2524-421d-85c8-dff16c0c63de',
       },
-      workspaceTwentyEntityUniqueIndex: {
-        universalIdentifier: '20b9d59d-a36c-5329-b261-fee3054d13a3',
+      systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex: {
+        universalIdentifier: '921b0777-f13f-468c-bebb-a35f6e41ab1a',
       },
     },
   },
@@ -3051,7 +2971,7 @@ export const STANDARD_OBJECTS = {
     },
     indexes: {},
   },
-  clientAccountProfile: {
+clientAccountProfile: {
     universalIdentifier: '20202020-2f8c-46f5-acde-795c5851b425',
     fields: {
       ...buildStandardObjectSystemFields(
@@ -3261,7 +3181,133 @@ export const STANDARD_OBJECTS = {
           },
         },
       },
+    },,
+outboxEvent: {
+    universalIdentifier: '1ea65bc5-3b7c-49e7-8565-c7b2e005de3f',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '1ea65bc5-3b7c-49e7-8565-c7b2e005de3f',
+      ),
+      aggregateType: {
+        universalIdentifier: 'd1cf6246-a4e3-4259-afe1-28307aa50139',
+      },
+      aggregateId: {
+        universalIdentifier: '631e1db7-68cd-48e4-bd9d-0119d476844a',
+      },
+      eventType: {
+        universalIdentifier: 'c3c6daf6-2acf-4c63-9fe2-d1f271538cb7',
+      },
+      payload: {
+        universalIdentifier: 'f61ab938-f79e-4130-ab71-3971f6b4149d',
+      },
+      status: {
+        universalIdentifier: '0b787f7b-ecc0-4f34-af03-61397b2cd64d',
+      },
+      publishedAt: {
+        universalIdentifier: '6b2a09fc-179a-48f1-a414-df2c54dd1168',
+      },
+      attempts: {
+        universalIdentifier: 'bdb2242f-18e7-4882-9484-4958e5c9ea10',
+      },
     },
+    indexes: {
+      statusCreatedAtIndex: {
+        universalIdentifier: 'ec580f26-242f-49b0-b1ae-3ef01c9f50da',
+      },
+    },
+  },
+  deadLetterRecord: {
+    universalIdentifier: 'f6ee0fc1-463a-449a-a03b-1ebaf43244b4',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'f6ee0fc1-463a-449a-a03b-1ebaf43244b4',
+      ),
+      eventId: {
+        universalIdentifier: 'a742b070-64da-4d86-8ec1-52c1735b5091',
+      },
+      idempotencyKey: {
+        universalIdentifier: '2f0866a9-d51c-4543-8edf-3cfe9d5a97c2',
+      },
+      originalQueue: {
+        universalIdentifier: 'a31fd7c2-0f9a-4f29-9311-1148768f3877',
+      },
+      payload: {
+        universalIdentifier: 'bfcebd11-78b1-4ef2-8c4f-8d69eb525258',
+      },
+      lastErrorCode: {
+        universalIdentifier: 'f8c607c2-2742-4618-99ca-d46a575c6d14',
+      },
+      lastErrorAt: {
+        universalIdentifier: '135add85-7e8e-42d8-bc85-8221e65551c9',
+      },
+      attempts: {
+        universalIdentifier: 'ae7f4778-be66-4bb6-acd5-91abc6dfe429',
+      },
+      isReplayed: {
+        universalIdentifier: '666455bb-e95a-4308-802f-4e4a3f48e40b',
+      },
+      replayedAt: {
+        universalIdentifier: 'e4a522ad-8448-43ed-b774-f1504ca9fc45',
+      },
+    },
+    indexes: {},
+  },
+  reconciliationRun: {
+    universalIdentifier: '96ae8734-dd75-4d7b-9861-69e49129d540',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '96ae8734-dd75-4d7b-9861-69e49129d540',
+      ),
+      status: {
+        universalIdentifier: '7257e141-95db-4931-9799-a97766bee3be',
+      },
+      startedAt: {
+        universalIdentifier: '07460985-88db-4de5-88cf-e9f7a28158fc',
+      },
+      completedAt: {
+        universalIdentifier: '643b81b6-c23a-4344-9848-67ff40451aa8',
+      },
+      recordsCompared: {
+        universalIdentifier: '1bb00cc0-1289-44a4-aa7b-123149a0da0f',
+      },
+      findingsCount: {
+        universalIdentifier: 'f479e2aa-7537-44b8-b442-d1155313da93',
+      },
+    },
+    indexes: {},
+  },
+  reconciliationFinding: {
+    universalIdentifier: 'a08275a6-9f9e-434b-8725-4b02f3b62761',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'a08275a6-9f9e-434b-8725-4b02f3b62761',
+      ),
+      runId: {
+        universalIdentifier: '82e38c6d-be3e-42f4-ac3d-f50d7e38f41d',
+      },
+      externalCollection: {
+        universalIdentifier: '2e361597-3178-46f1-804c-e3846657bbee',
+      },
+      externalId: {
+        universalIdentifier: '929508d3-3ec4-4ab6-9663-4891e3106748',
+      },
+      twentyRecordId: {
+        universalIdentifier: 'dc4e256d-48de-4b28-b084-a2ca27f14dbe',
+      },
+      findingType: {
+        universalIdentifier: '327c58b1-acf3-47cf-b9bd-1ca3a7b3f442',
+      },
+      severity: {
+        universalIdentifier: 'bf63ee16-188e-472e-bba6-732926ca475b',
+      },
+      details: {
+        universalIdentifier: '9880540d-ca9f-44e9-9e2e-9eccd0bc02fc',
+      },
+      resolvedAt: {
+        universalIdentifier: 'b154cd03-4bd4-40b5-ae84-dcb9700d940c',
+      },
+    },
+    indexes: {},
   },
 } as const satisfies Record<
   string,

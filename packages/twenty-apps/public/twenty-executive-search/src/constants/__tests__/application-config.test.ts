@@ -6,6 +6,7 @@ import { APP_DISPLAY_NAME } from 'src/constants/app-display-name';
 import {
   DIRECTUS_API_KEY_ENV_VAR_NAME,
   DIRECTUS_URL_ENV_VAR_NAME,
+  DIRECTUS_WEBHOOK_SECRET_ENV_VAR_NAME,
 } from 'src/constants/server-variable-names';
 
 describe('executive-search app constants', () => {
@@ -26,6 +27,7 @@ describe('executive-search app constants', () => {
   it('server variable names are defined', () => {
     expect(DIRECTUS_URL_ENV_VAR_NAME).toBe('DIRECTUS_URL');
     expect(DIRECTUS_API_KEY_ENV_VAR_NAME).toBe('DIRECTUS_API_KEY');
+    expect(DIRECTUS_WEBHOOK_SECRET_ENV_VAR_NAME).toBe('DIRECTUS_WEBHOOK_SECRET');
   });
 });
 
@@ -36,6 +38,11 @@ describe('application-config validation', () => {
     expect(result.success, result.errors.join('; ')).toBe(true);
     expect(result.errors).toEqual([]);
     expect(result.config.universalIdentifier).toBe('b64e7e15-e7bf-468e-8bfb-83a4d92ea966');
+
+    const serverVars = result.config.serverVariables;
+    expect(serverVars[DIRECTUS_WEBHOOK_SECRET_ENV_VAR_NAME]).toBeDefined();
+    expect(serverVars[DIRECTUS_WEBHOOK_SECRET_ENV_VAR_NAME].isSecret).toBe(true);
+    expect(serverVars[DIRECTUS_WEBHOOK_SECRET_ENV_VAR_NAME].type).toBe('TEXT');
   });
 
   it('default role validates without errors', async () => {

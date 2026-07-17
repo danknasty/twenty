@@ -1123,14 +1123,15 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
-  executiveProfile: ({
+executiveProfile: ({,
+clientStakeholderRole: ({
     now,
     workspaceId,
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
   }: Omit<
-    CreateStandardObjectArgs<'executiveProfile'>,
+CreateStandardObjectArgs<'executiveProfile'>,
     'context' | 'objectName'
   >) =>
     createStandardObjectFlatMetadata({
@@ -1495,6 +1496,7 @@ deadLetterRecord: ({
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
   }: Omit<
+CreateStandardObjectArgs<'clientStakeholderRole'>,,
 CreateStandardObjectArgs<'clientStakeholderRole'>,
     'context' | 'objectName'
   >) =>
@@ -1509,7 +1511,7 @@ CreateStandardObjectArgs<'clientStakeholderRole'>,
         labelSingular: i18nLabel(msg`Client Stakeholder Role`),
         labelPlural: i18nLabel(msg`Client Stakeholder Roles`),
         description: i18nLabel(
-          msg`Role of a stakeholder at a client company`,
+msg`Role of a stakeholder at a client company`,
         ),
         icon: 'IconUserStar',
         isSystem: true,
@@ -1534,21 +1536,26 @@ CreateStandardObjectArgs<'deadLetterRecord'>,
         isSystem: true,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'eventId',
+        labelIdentifierFieldMetadataName: 'eventId',,
+msg`A stakeholder role at a client organization`,
+        ),
+        icon: 'IconUser',
+        labelIdentifierFieldMetadataName: 'name',
       },
       workspaceId,
       standardObjectMetadataRelatedEntityIds,
       twentyStandardApplicationId,
       now,
     }),
-  reconciliationRun: ({
+reconciliationRun: ({,
+searchEngagementTerms: ({
     now,
     workspaceId,
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
   }: Omit<
-    CreateStandardObjectArgs<'reconciliationRun'>,
+CreateStandardObjectArgs<'reconciliationRun'>,
     'context' | 'objectName'
   >) =>
     createStandardObjectFlatMetadata({
@@ -1566,21 +1573,41 @@ CreateStandardObjectArgs<'deadLetterRecord'>,
         isSystem: true,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'id',
+        labelIdentifierFieldMetadataName: 'id',,
+CreateStandardObjectArgs<'searchEngagementTerms'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'searchEngagementTerms',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.searchEngagementTerms.universalIdentifier,
+        nameSingular: 'searchEngagementTerms',
+        namePlural: 'searchEngagementTerms',
+        labelSingular: i18nLabel(msg`Search Engagement Terms`),
+        labelPlural: i18nLabel(msg`Search Engagement Terms`),
+        description: i18nLabel(
+          msg`Terms, fee structure, exclusivity, and payment schedule for a retained-search engagement`,
+        ),
+        icon: 'IconFileDollar',
+        isSearchable: false,
+        labelIdentifierFieldMetadataName: 'name',
       },
       workspaceId,
       standardObjectMetadataRelatedEntityIds,
       twentyStandardApplicationId,
       now,
     }),
-  reconciliationFinding: ({
+reconciliationFinding: ({,
+clientAccountProfile: ({
     now,
     workspaceId,
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
   }: Omit<
-    CreateStandardObjectArgs<'reconciliationFinding'>,
+CreateStandardObjectArgs<'reconciliationFinding'>,
     'context' | 'objectName'
   >) =>
     createStandardObjectFlatMetadata({
@@ -1598,7 +1625,24 @@ CreateStandardObjectArgs<'deadLetterRecord'>,
         isSystem: true,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'findingType',
+        labelIdentifierFieldMetadataName: 'findingType',,
+CreateStandardObjectArgs<'clientAccountProfile'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'clientAccountProfile',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.clientAccountProfile.universalIdentifier,
+        nameSingular: 'clientAccountProfile',
+        namePlural: 'clientAccountProfiles',
+        labelSingular: i18nLabel(msg`Client Account Profile`),
+        labelPlural: i18nLabel(msg`Client Account Profiles`),
+        description: i18nLabel(msg`A client account profile`),
+        icon: 'IconBuilding',
+        isSearchable: false,
+        labelIdentifierFieldMetadataName: 'name',
       },
       workspaceId,
       standardObjectMetadataRelatedEntityIds,

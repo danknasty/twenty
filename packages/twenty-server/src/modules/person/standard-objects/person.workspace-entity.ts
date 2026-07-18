@@ -21,7 +21,6 @@ import { type ClientStakeholderRoleWorkspaceEntity } from 'src/modules/client-st
 import { type OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { type TaskTargetWorkspaceEntity } from 'src/modules/task/standard-objects/task-target.workspace-entity';
 import { type TimelineActivityWorkspaceEntity } from 'src/modules/timeline/standard-objects/timeline-activity.workspace-entity';
-import { type ClientStakeholderRoleWorkspaceEntity } from 'src/modules/client-stakeholder-role/standard-objects/client-stakeholder-role.workspace-entity';
 import { type SearchCandidacyWorkspaceEntity } from 'src/modules/executive-search/standard-objects/search-candidacy.workspace-entity';
 
 export class PersonWorkspaceEntity extends BaseWorkspaceEntity {
@@ -50,8 +49,7 @@ export class PersonWorkspaceEntity extends BaseWorkspaceEntity {
   >;
   timelineActivities: EntityRelation<TimelineActivityWorkspaceEntity[]>;
   listMemberships: EntityRelation<MessageListMemberWorkspaceEntity[]>;
-clientStakeholderRoles: EntityRelation<ClientStakeholderRoleWorkspaceEntity[]>;,
-executiveProfile: EntityRelation<ExecutiveProfileWorkspaceEntity> | null;
+  executiveProfile: EntityRelation<ExecutiveProfileWorkspaceEntity> | null;
   candidacies: EntityRelation<SearchCandidacyWorkspaceEntity[]>;
   searchVector: string;
 

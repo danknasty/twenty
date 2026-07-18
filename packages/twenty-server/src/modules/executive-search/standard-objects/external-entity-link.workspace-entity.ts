@@ -4,13 +4,13 @@ export class ExternalEntityLinkWorkspaceEntity extends BaseWorkspaceEntity {
   workspaceId: string;
   twentyEntityName: string;
   twentyRecordId: string;
-externalSystemName: string;
+  externalSystemName: string;
   externalEntityName: string;
   externalRecordId: string;
   authority: string;
   lastSyncedAt: string | null;
-  searchVector: string;,
-externalNaturalKey: string | null;
+  searchVector: string;
+  externalNaturalKey: string | null;
   sourceVersion: string | null;
   sourceUpdatedAt: Date | null;
   sourceHash: string | null;

@@ -1256,8 +1256,8 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
-executiveProfile: ({,
-clientStakeholderRole: ({,
+executiveProfile: ({
+clientStakeholderRole: ({
 searchEngagementTerms: ({
     now,
     workspaceId,
@@ -1568,8 +1568,8 @@ CreateStandardObjectArgs<'executiveProfile'>,
       twentyStandardApplicationId,
       now,
     }),
-clientAccountProfile: ({,
-outboxEvent: ({,
+clientAccountProfile: ({
+outboxEvent: ({
 relationshipEdge: ({
     now,
     workspaceId,
@@ -1597,7 +1597,7 @@ CreateStandardObjectArgs<'clientAccountProfile'>,
         isSystem: true,
         isUICreatable: true,
         isSearchable: true,
-        labelIdentifierFieldMetadataName: 'name',,
+        labelIdentifierFieldMetadataName: 'name',
 CreateStandardObjectArgs<'outboxEvent'>,
     'context' | 'objectName'
   >) =>
@@ -1616,7 +1616,7 @@ CreateStandardObjectArgs<'outboxEvent'>,
         isSystem: true,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'eventType',,
+        labelIdentifierFieldMetadataName: 'eventType',
 CreateStandardObjectArgs<'relationshipEdge'>,
     'context' | 'objectName'
   >) =>
@@ -1643,8 +1643,8 @@ CreateStandardObjectArgs<'relationshipEdge'>,
       twentyStandardApplicationId,
       now,
     }),
-clientStakeholderRole: ({,
-deadLetterRecord: ({,
+clientStakeholderRole: ({
+deadLetterRecord: ({
 marketMap: ({
     now,
     workspaceId,
@@ -1652,7 +1652,7 @@ marketMap: ({
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
   }: Omit<
-CreateStandardObjectArgs<'clientStakeholderRole'>,,
+CreateStandardObjectArgs<'clientStakeholderRole'>,
 CreateStandardObjectArgs<'clientStakeholderRole'>,
     'context' | 'objectName'
   >) =>
@@ -1673,7 +1673,7 @@ msg`Role of a stakeholder at a client company`,
         isSystem: true,
         isUICreatable: true,
         isSearchable: true,
-        labelIdentifierFieldMetadataName: 'name',,
+        labelIdentifierFieldMetadataName: 'name',
 CreateStandardObjectArgs<'deadLetterRecord'>,
     'context' | 'objectName'
   >) =>
@@ -1692,7 +1692,7 @@ CreateStandardObjectArgs<'deadLetterRecord'>,
         isSystem: true,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'eventId',,
+        labelIdentifierFieldMetadataName: 'eventId',
 msg`A stakeholder role at a client organization`,
         ),
         icon: 'IconUser',
@@ -1703,7 +1703,7 @@ msg`A stakeholder role at a client organization`,
       twentyStandardApplicationId,
       now,
     }),
-reconciliationRun: ({,
+reconciliationRun: ({
 searchEngagementTerms: ({
     now,
     workspaceId,
@@ -1729,8 +1729,8 @@ CreateStandardObjectArgs<'reconciliationRun'>,
         isSystem: true,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'id',,
-CreateStandardObjectArgs<'searchEngagementTerms'>,,
+        labelIdentifierFieldMetadataName: 'id',
+CreateStandardObjectArgs<'searchEngagementTerms'>,
 CreateStandardObjectArgs<'searchEngagementTerms'>,
     'context' | 'objectName'
   >) =>
@@ -1748,14 +1748,14 @@ namePlural: 'searchEngagementTerms',
           msg`Terms, fee structure, exclusivity, and payment schedule for a retained-search engagement`,
         ),
         icon: 'IconFileDollar',
-        isSearchable: false,,
+        isSearchable: false,
 namePlural: 'searchEngagementsTerms',
         labelSingular: i18nLabel(msg`Search Engagement Terms`),
         labelPlural: i18nLabel(msg`Search Engagement Terms`),
         description: i18nLabel(msg`Terms of engagement for a search`),
         icon: 'IconFileContract',
         isSystem: true,
-        isAuditLogged: false,,
+        isAuditLogged: false,
 CreateStandardObjectArgs<'marketMap'>,
     'context' | 'objectName'
   >) =>
@@ -1780,9 +1780,9 @@ CreateStandardObjectArgs<'marketMap'>,
       twentyStandardApplicationId,
       now,
     }),
-reconciliationFinding: ({,
-clientAccountProfile: ({,
-searchAssignment: ({,
+reconciliationFinding: ({
+clientAccountProfile: ({
+searchAssignment: ({
 researchCandidate: ({
     now,
     workspaceId,
@@ -1808,7 +1808,7 @@ CreateStandardObjectArgs<'reconciliationFinding'>,
         isSystem: true,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'findingType',,
+        labelIdentifierFieldMetadataName: 'findingType',
 CreateStandardObjectArgs<'clientAccountProfile'>,
     'context' | 'objectName'
   >) =>
@@ -1824,7 +1824,7 @@ CreateStandardObjectArgs<'clientAccountProfile'>,
         labelPlural: i18nLabel(msg`Client Account Profiles`),
         description: i18nLabel(msg`A client account profile`),
         icon: 'IconBuilding',
-        isSearchable: false,,
+        isSearchable: false,
 CreateStandardObjectArgs<'searchAssignment'>,
     'context' | 'objectName'
   >) =>
@@ -1841,7 +1841,7 @@ CreateStandardObjectArgs<'searchAssignment'>,
         description: i18nLabel(msg`An executive search assignment`),
         icon: 'IconTargetArrow',
         isSystem: true,
-        isAuditLogged: false,,
+        isAuditLogged: false,
 CreateStandardObjectArgs<'researchCandidate'>,
     'context' | 'objectName'
   >) =>
@@ -1897,7 +1897,7 @@ CreateStandardObjectArgs<'researchCandidate'>,
       twentyStandardApplicationId,
       now,
     }),
-assignmentTeamMember: ({,
+assignmentTeamMember: ({
 targetCompany: ({
     now,
     workspaceId,
@@ -2019,7 +2019,7 @@ CreateStandardObjectArgs<'assignmentTeamMember'>,
         isSystem: true,
         isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'name',,
+        labelIdentifierFieldMetadataName: 'name',
 CreateStandardObjectArgs<'targetCompany'>,
     'context' | 'objectName'
   >) =>

@@ -22,9 +22,8 @@ import { buildReconciliationFindingStandardFlatIndexMetadatas } from 'src/engine
 import { buildDashboardStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-dashboard-standard-flat-index-metadata.util';
 import { buildExternalSyncCheckpointStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-checkpoint-standard-flat-index-metadata.util';
 import { buildExternalSyncInboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-inbox-standard-flat-index-metadata.util';
-import { buildExternalSyncOutboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-outbox-standard-flat-index-metadata.util';,
+import { buildExternalSyncOutboxStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-sync-outbox-standard-flat-index-metadata.util';
 import { buildExecutiveProfileStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-profile-standard-flat-index-metadata.util';
-import { buildExternalEntityLinkStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-entity-link-standard-flat-index-metadata.util';
 import { buildMessageCampaignStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-message-campaign-standard-flat-index-metadata.util';
 import { buildMessageListStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-message-list-standard-flat-index-metadata.util';
 import { buildMessageListMemberStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-message-list-member-standard-flat-index-metadata.util';
@@ -69,7 +68,7 @@ const STANDARD_FLAT_INDEX_METADATA_BUILDERS_BY_OBJECT_NAME = {
 clientAccountProfile:
     buildClientAccountProfileStandardFlatIndexMetadatas,
   clientStakeholderRole:
-    buildClientStakeholderRoleStandardFlatIndexMetadatas,,
+    buildClientStakeholderRoleStandardFlatIndexMetadatas,
 clientAccountProfile: buildClientAccountProfileStandardFlatIndexMetadatas,
   clientStakeholderRole: buildClientStakeholderRoleStandardFlatIndexMetadatas,
   company: buildCompanyStandardFlatIndexMetadatas,
@@ -83,7 +82,7 @@ clientAccountProfile: buildClientAccountProfileStandardFlatIndexMetadatas,
   dashboard: buildDashboardStandardFlatIndexMetadatas,
 externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatIndexMetadatas,
   externalSyncInbox: buildExternalSyncInboxStandardFlatIndexMetadatas,
-  externalSyncOutbox: buildExternalSyncOutboxStandardFlatIndexMetadatas,,
+  externalSyncOutbox: buildExternalSyncOutboxStandardFlatIndexMetadatas,
 executiveProfile: buildExecutiveProfileStandardFlatIndexMetadatas,
   externalEntityLink: buildExternalEntityLinkStandardFlatIndexMetadatas,
   messageCampaign: buildMessageCampaignStandardFlatIndexMetadatas,
@@ -107,7 +106,7 @@ executiveProfile: buildExecutiveProfileStandardFlatIndexMetadatas,
     buildWorkflowAutomatedTriggerStandardFlatIndexMetadatas,
   workflowRun: buildWorkflowRunStandardFlatIndexMetadatas,
   workflowVersion: buildWorkflowVersionStandardFlatIndexMetadatas,
-workspaceEventOutbox: buildWorkspaceEventOutboxStandardFlatIndexMetadatas,,
+workspaceEventOutbox: buildWorkspaceEventOutboxStandardFlatIndexMetadatas,
 workspaceEventOutbox:
     buildWorkspaceEventOutboxStandardFlatIndexMetadatas,
   workspaceMember: buildWorkspaceMemberStandardFlatIndexMetadatas,

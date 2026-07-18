@@ -72,7 +72,6 @@ import { PageLayoutModule } from 'src/engine/metadata-modules/page-layout/page-l
 import { RoleModule } from 'src/engine/metadata-modules/role/role.module';
 import { RowLevelPermissionModule } from 'src/engine/metadata-modules/row-level-permission-predicate/row-level-permission.module';
 import { SubscriptionsModule } from 'src/engine/subscriptions/subscriptions.module';
-import { TransactionalOutboxModule } from 'src/engine/core-modules/transactional-outbox/transactional-outbox.module';
 import { CodeInterpreterSessionCleanupModule } from 'src/engine/core-modules/code-interpreter/crons/code-interpreter-session-cleanup.module';
 import { TrashCleanupModule } from 'src/engine/trash-cleanup/trash-cleanup.module';
 import { WorkspaceEventEmitterModule } from 'src/engine/workspace-event-emitter/workspace-event-emitter.module';
@@ -82,7 +81,6 @@ import { DashboardModule } from 'src/modules/dashboard/dashboard.module';
 import { ExecutiveSearchModule } from 'src/modules/executive-search/executive-search.module';
 import { SendEmailModule } from 'src/modules/messaging/message-outbound-manager/send-email.module';
 import { ClientConfigModule } from './client-config/client-config.module';
-import { ExecutiveSearchModule } from 'src/modules/executive-search/executive-search.module';
 import { EventLogsViewerModule } from './event-logs/event-logs-viewer.module';
 import { ExternalSyncModule } from './external-sync/external-sync.module';
 import { FileModule } from './file/file.module';

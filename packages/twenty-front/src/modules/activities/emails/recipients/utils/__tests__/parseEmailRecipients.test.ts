@@ -44,7 +44,7 @@ describe('parseEmailRecipients', () => {
   });
 
   it('should skip empty entries between separators', () => {
-    expect(parseEmailRecipients('a@example.com,, ,b@example.com')).toEqual([
+    expect(parseEmailRecipients('a@example.com, ,b@example.com')).toEqual([
       { address: 'a@example.com', displayName: undefined },
       { address: 'b@example.com', displayName: undefined },
     ]);

@@ -49,3 +49,9 @@ export { STANDARD_COMPENSATION_EXPECTATION_PAGE_LAYOUT_CONFIG } from './standard
 export { STANDARD_OFFER_NEGOTIATION_PAGE_LAYOUT_CONFIG } from './standard-offer-negotiation-page-layout.config';
 export { STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG } from './standard-placement-page-layout.config';
 export { STANDARD_GUARANTEE_CASE_PAGE_LAYOUT_CONFIG } from './standard-guarantee-case-page-layout.config';
+export { STANDARD_BOARD_COMPOSITION_PROFILE_PAGE_LAYOUT_CONFIG } from './standard-board-composition-profile-page-layout.config';
+export { STANDARD_BOARD_MATRIX_CRITERION_PAGE_LAYOUT_CONFIG } from './standard-board-matrix-criterion-page-layout.config';
+export { STANDARD_CANDIDATE_BOARD_MATRIX_EVALUATION_PAGE_LAYOUT_CONFIG } from './standard-candidate-board-matrix-evaluation-page-layout.config';
+export { STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG } from './standard-director-independence-review-page-layout.config';
+export { STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG } from './standard-board-commitment-review-page-layout.config';
+

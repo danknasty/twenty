@@ -138,6 +138,27 @@ searchEngagementTerms: [{ name: 'name', type: FieldMetadataType.TEXT }],
     { name: 'summary', type: FieldMetadataType.TEXT },
     { name: 'counterpartyName', type: FieldMetadataType.TEXT },
   ],
+  boardCompositionProfile: [
+    { name: 'name', type: FieldMetadataType.TEXT },
+  ],
+  boardMatrixCriterion: [
+    { name: 'name', type: FieldMetadataType.TEXT },
+  ],
+  candidateBoardMatrixEvaluation: [],
+  directorIndependenceReview: [
+    { name: 'name', type: FieldMetadataType.TEXT },
+  ],
+  boardCommitmentReview: [
+    { name: 'name', type: FieldMetadataType.TEXT },
+  ],
+  compensationExpectation: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  offerNegotiation: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  placement: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  guaranteeCase: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  searchInterview: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  referenceCheck: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  diligenceCheck: [{ name: 'name', type: FieldMetadataType.TEXT }],
+
 } satisfies {
   [ObjectName in AllStandardObjectName]: {
     name: AllStandardObjectFieldName<ObjectName>;

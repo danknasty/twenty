@@ -3,6 +3,10 @@ import { Module } from '@nestjs/common';
 import { ObjectMetadataRepositoryModule } from 'src/engine/object-metadata-repository/object-metadata-repository.module';
 import { TwentyORMModule } from 'src/engine/twenty-orm/twenty-orm.module';
 import { WorkspaceEventEmitterModule } from 'src/engine/workspace-event-emitter/workspace-event-emitter.module';
+import { DirectusModule } from 'src/modules/executive-search/directus/directus.module';
+import { CountReconciliationEngine } from 'src/modules/executive-search/reconciliation/engines/count-reconciliation.engine';
+import { ReferentialIntegrityEngine } from 'src/modules/executive-search/reconciliation/engines/referential-integrity.engine';
+import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
 import { ExecutiveSearchOutboxService } from 'src/modules/executive-search/sync/services/outbox.service';
 import { ExecutiveSearchInboxService } from 'src/modules/executive-search/sync/services/inbox.service';
 import { ExecutiveSearchDLQService } from 'src/modules/executive-search/sync/services/dlq.service';
@@ -25,6 +29,14 @@ import { ConvertOpportunityToAssignmentService } from 'src/modules/executive-sea
 import { OffLimitsGuardService } from 'src/modules/executive-search/services/off-limits-guard.service';
 import { CandidacyStateTransitionService } from 'src/modules/executive-search/services/candidacy-state-transition.service';
 import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-search/resolvers/convert-opportunity-to-assignment.resolver';
+import { ShadowSyncDriftReconciliationEngine } from 'src/modules/executive-search/reconciliation/engines/shadow-sync-drift.engine';
+import { ExecutiveShadowSyncDriftCronCommand } from 'src/modules/executive-search/migration/jobs/executive-shadow-sync-drift.cron.command';
+import { IdentityMatchingService } from 'src/modules/executive-search/migration/services/identity-matching.service';
+import { RetentionActionService } from 'src/modules/executive-search/migration/services/retention-action.service';
+import { RetentionActionReconciliationEngine } from 'src/modules/executive-search/reconciliation/engines/retention-action-reconciliation.engine';
+import { RetentionActionLogWorkspaceEntity } from 'src/modules/executive-search/standard-objects/retention-action-log.workspace-entity';
+import { ExternalIdentityMatchQueueWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-identity-match-queue.workspace-entity';
+import { CutoverService } from 'src/modules/executive-search/migration/services/cutover.service';
 
 @Module({
   imports: [
@@ -35,11 +47,17 @@ import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-se
       ExternalSyncDLQWorkspaceEntity,
       ExternalSyncCheckpointWorkspaceEntity,
       ExternalSyncReconciliationWorkspaceEntity,
+      RetentionActionLogWorkspaceEntity,
+      ExternalIdentityMatchQueueWorkspaceEntity,
     ]),
     TwentyORMModule,
+    DirectusModule,
     WorkspaceEventEmitterModule,
   ],
   providers: [
+    ReconciliationEngineRegistry,
+    CountReconciliationEngine,
+    ReferentialIntegrityEngine,
     ExecutiveSearchOutboxService,
     ExecutiveSearchInboxService,
     ExecutiveSearchDLQService,
@@ -56,6 +74,12 @@ import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-se
     OffLimitsGuardService,
     CandidacyStateTransitionService,
     ConvertOpportunityToAssignmentResolver,
+    ShadowSyncDriftReconciliationEngine,
+    ExecutiveShadowSyncDriftCronCommand,
+    IdentityMatchingService,
+    RetentionActionService,
+    RetentionActionReconciliationEngine,
+    CutoverService,
   ],
   exports: [
     ExecutiveSearchOutboxService,
@@ -72,6 +96,11 @@ import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-se
     AssignmentStatusTransitionService,
     OffLimitsGuardService,
     CandidacyStateTransitionService,
+    ReconciliationEngineRegistry,
+    ShadowSyncDriftReconciliationEngine,
+    IdentityMatchingService,
+    RetentionActionService,
+    CutoverService,
   ],
 })
 export class ExecutiveSearchModule {}

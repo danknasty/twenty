@@ -6,6 +6,7 @@ import { DatabaseEventAction } from 'src/engine/api/graphql/graphql-query-runner
 import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
 import { WorkspaceEventBatch } from 'src/engine/workspace-event-emitter/types/workspace-event-batch.type';
 import { OutboundEventMapperService } from 'src/modules/executive-search/outbound/services/outbound-event-mapper.service';
+import { RetentionActionService } from 'src/modules/executive-search/migration/services/retention-action.service';
 import { ExecutiveSearchOutboxService } from 'src/modules/executive-search/sync/services/outbox.service';
 import { ObjectRecordCreateEvent, ObjectRecordDestroyEvent, ObjectRecordDeleteEvent, ObjectRecordUpdateEvent } from 'twenty-shared/database-events';
 
@@ -17,6 +18,7 @@ export class OutboundProjectionListener {
     private readonly outboxService: ExecutiveSearchOutboxService,
     private readonly mapper: OutboundEventMapperService,
     private readonly featureFlagService: FeatureFlagService,
+    private readonly retentionActionService: RetentionActionService,
   ) {}
 
   @OnDatabaseBatchEvent('company', DatabaseEventAction.CREATED)
@@ -67,13 +69,31 @@ export class OutboundProjectionListener {
     }
 
     for (const event of events) {
-      const record =
+      const isDeletion =
         action === DatabaseEventAction.DELETED ||
-        action === DatabaseEventAction.DESTROYED
-          ? event.properties.before
-          : event.properties.after;
+        action === DatabaseEventAction.DESTROYED;
+      const record = isDeletion ? event.properties.before : event.properties.after;
 
       if (!record) continue;
+
+      // Legal-hold hold-check: block outbound DELETE / DESTROY propagation for
+      // records currently under legal hold. The hold is recorded in
+      // `retentionActionLog` and queried via `isUnderLegalHold`.
+      if (isDeletion) {
+        const underLegalHold =
+          await this.retentionActionService.isUnderLegalHold(
+            workspaceId,
+            'company',
+            event.recordId,
+          );
+
+        if (underLegalHold) {
+          this.logger.warn(
+            `Blocking outbound DELETE for company ${event.recordId} — record is under legal hold`,
+          );
+          continue;
+        }
+      }
 
       // Map to event type (the mapper returns correct eventType per action)
       const mapped = this.mapper.mapCompanyEvent(action, record);

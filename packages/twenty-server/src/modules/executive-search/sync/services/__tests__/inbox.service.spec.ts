@@ -4,6 +4,7 @@ import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspac
 import {
   ExecutiveSearchInboxService,
   INBOX_STATUS,
+  isShadowSyncEvent,
 } from 'src/modules/executive-search/sync/services/inbox.service';
 
 const createMockRepository = () => ({
@@ -162,6 +163,63 @@ describe('ExecutiveSearchInboxService', () => {
       const result = await service.isEcho('ws-1', 'ext-ev-2');
 
       expect(result).toBe(false);
+    });
+  });
+
+  describe('isShadowSyncEvent', () => {
+    it('detects collection-scoped shadow_sync events', () => {
+      expect(isShadowSyncEvent('executives.shadow_sync')).toBe(true);
+      expect(isShadowSyncEvent('companies.shadow_sync')).toBe(true);
+    });
+
+    it('detects the bare shadow_sync event type', () => {
+      expect(isShadowSyncEvent('shadow_sync')).toBe(true);
+    });
+
+    it('does not classify normal update events as shadow_sync', () => {
+      expect(isShadowSyncEvent('executiveProfile.updated')).toBe(false);
+      expect(isShadowSyncEvent('applications.created')).toBe(false);
+    });
+  });
+
+  describe('apply (shadow_sync guard)', () => {
+    it('never applies shadow_sync events (comparison-only)', async () => {
+      const result = await service.apply('ws-1', {
+        id: 'in-1',
+        eventType: 'executives.shadow_sync',
+        entityName: 'executives',
+        entityId: 'ext-1',
+      });
+
+      expect(result.applied).toBe(false);
+      expect(result.reason).toEqual(
+        expect.stringContaining('comparison-only'),
+      );
+      // No persistence is invoked when skipping.
+      expect(inboxRepo.update).not.toHaveBeenCalled();
+      expect(inboxRepo.save).not.toHaveBeenCalled();
+    });
+
+    it('skips the bare shadow_sync event type too', async () => {
+      const result = await service.apply('ws-1', {
+        id: 'in-2',
+        eventType: 'shadow_sync',
+        entityName: 'executives',
+        entityId: 'ext-2',
+      });
+
+      expect(result.applied).toBe(false);
+    });
+
+    it('falls through to the normal apply path for non-shadow events', async () => {
+      const result = await service.apply('ws-1', {
+        id: 'in-3',
+        eventType: 'executiveProfile.updated',
+        entityName: 'executiveProfile',
+        entityId: 'ext-3',
+      });
+
+      expect(result.applied).toBe(true);
     });
   });
 });

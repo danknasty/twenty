@@ -1,0 +1,8 @@
+export enum RetentionActionType {
+  DELETE = 'DELETE',
+  RECTIFY = 'RECTIFY',
+  RESTORE = 'RESTORE',
+  LEGAL_HOLD = 'LEGAL_HOLD',
+  LEGAL_HOLD_RELEASE = 'LEGAL_HOLD_RELEASE',
+  PURGE = 'PURGE',
+}

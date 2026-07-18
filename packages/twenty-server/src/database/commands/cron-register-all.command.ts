@@ -24,6 +24,7 @@ import { CalendarEventsImportCronCommand } from 'src/modules/calendar/calendar-e
 import { CalendarOngoingStaleCronCommand } from 'src/modules/calendar/calendar-event-import-manager/crons/commands/calendar-ongoing-stale.cron.command';
 import { CalendarRelaunchFailedCalendarChannelsCronCommand } from 'src/modules/calendar/calendar-event-import-manager/crons/commands/calendar-relaunch-failed-calendar-channels.cron.command';
 import { ExecutiveSearchOutboxRedriveCronCommand } from 'src/modules/executive-search/sync/jobs/executive-sync-outbox-redrive.cron.command';
+import { ExecutiveShadowSyncDriftCronCommand } from 'src/modules/executive-search/migration/jobs/executive-shadow-sync-drift.cron.command';
 import { MessagingMessageListFetchCronCommand } from 'src/modules/messaging/message-import-manager/crons/commands/messaging-message-list-fetch.cron.command';
 import { MessagingMessagesImportCronCommand } from 'src/modules/messaging/message-import-manager/crons/commands/messaging-messages-import.cron.command';
 import { MessagingOngoingStaleCronCommand } from 'src/modules/messaging/message-import-manager/crons/commands/messaging-ongoing-stale.cron.command';
@@ -71,6 +72,7 @@ export class CronRegisterAllCommand extends CommandRunner {
     private readonly pendingFileCleanupCronCommand: PendingFileCleanupCronCommand,
     private readonly billingReminderCronCommand: BillingReminderCronCommand,
     private readonly executiveSearchOutboxRedriveCronCommand: ExecutiveSearchOutboxRedriveCronCommand,
+    private readonly executiveShadowSyncDriftCronCommand: ExecutiveShadowSyncDriftCronCommand,
     private readonly drainOutboxCronCommand: DrainOutboxCronCommand,
     private readonly twentyConfigService: TwentyConfigService,
   ) {
@@ -201,6 +203,10 @@ export class CronRegisterAllCommand extends CommandRunner {
       {
         name: 'ExecutiveSearchOutboxRedrive',
         command: this.executiveSearchOutboxRedriveCronCommand,
+      },
+      {
+        name: 'ExecutiveShadowSyncDrift',
+        command: this.executiveShadowSyncDriftCronCommand,
       },
       {
         name: 'DrainOutbox',

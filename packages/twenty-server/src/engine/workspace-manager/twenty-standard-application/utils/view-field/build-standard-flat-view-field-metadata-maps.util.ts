@@ -72,12 +72,17 @@ import { computeStandardBoardMatrixCriterionViewFields } from 'src/engine/worksp
 import { computeStandardCandidateBoardMatrixEvaluationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-candidate-board-matrix-evaluation-view-fields.util';
 import { computeStandardDirectorIndependenceReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-director-independence-review-view-fields.util';
 import { computeStandardBoardCommitmentReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-commitment-review-view-fields.util';
+
 import { computeStandardRetentionActionLogViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-retention-action-log-view-fields.util';
 import { computeStandardExternalIdentityMatchQueueViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-external-identity-match-queue-view-fields.util';
 import { computeStandardAnalyticsDomainMetricViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-domain-metric-view-fields.util';
 import { computeStandardAnalyticsMetricSnapshotViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-metric-snapshot-view-fields.util';
 import { computeStandardAnalyticsDashboardConfigViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-dashboard-config-view-fields.util';
 import { computeAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-ai-prompt-template-view-fields.util';
+import { computeStandardAiModelRegistryViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-model-registry-view-fields.util';
+import { computeStandardAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-prompt-template-view-fields.util';
+import { computeStandardAiProviderCallLogViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-provider-call-log-view-fields.util';
+import { computeStandardAppAgentsViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-app-agents-view-fields.util';
 
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldArgs<P>, 'context'>,
@@ -156,6 +161,7 @@ boardCompositionProfile:
     computeStandardDirectorIndependenceReviewViewFields,
   boardCommitmentReview:
     computeStandardBoardCommitmentReviewViewFields,
+
 retentionActionLog: computeStandardRetentionActionLogViewFields,
   externalIdentityMatchQueue:
     computeStandardExternalIdentityMatchQueueViewFields,
@@ -163,6 +169,10 @@ analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFields,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViewFields,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFields,
 aiPromptTemplate: computeAiPromptTemplateViewFields,
+  aiModelRegistry: computeStandardAiModelRegistryViewFields,
+  aiPromptTemplate: computeStandardAiPromptTemplateViewFields,
+  aiProviderCallLog: computeStandardAiProviderCallLogViewFields,
+  appAgents: computeStandardAppAgentsViewFields,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;
 };

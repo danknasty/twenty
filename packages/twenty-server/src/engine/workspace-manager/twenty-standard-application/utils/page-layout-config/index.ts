@@ -54,10 +54,14 @@ export { STANDARD_BOARD_MATRIX_CRITERION_PAGE_LAYOUT_CONFIG } from './standard-b
 export { STANDARD_CANDIDATE_BOARD_MATRIX_EVALUATION_PAGE_LAYOUT_CONFIG } from './standard-candidate-board-matrix-evaluation-page-layout.config';
 export { STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG } from './standard-director-independence-review-page-layout.config';
 export { STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG } from './standard-board-commitment-review-page-layout.config';
+
 export { STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG } from './standard-ai-prompt-template-page-layout.config';
 export { STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG } from './standard-external-identity-match-queue-page-layout.config';
 export { STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG } from './standard-retention-action-log-page-layout.config';
 export { STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG } from './standard-analytics-dashboard-config-page-layout.config';
 export { STANDARD_ANALYTICS_DOMAIN_METRIC_PAGE_LAYOUT_CONFIG } from './standard-analytics-domain-metric-page-layout.config';
 export { STANDARD_ANALYTICS_METRIC_SNAPSHOT_PAGE_LAYOUT_CONFIG } from './standard-analytics-metric-snapshot-page-layout.config';
+export { STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG } from './standard-ai-model-registry-page-layout.config';
+export { STANDARD_AI_PROVIDER_CALL_LOG_PAGE_LAYOUT_CONFIG } from './standard-ai-provider-call-log-page-layout.config';
+export { STANDARD_APP_AGENTS_PAGE_LAYOUT_CONFIG } from './standard-app-agents-page-layout.config';
 

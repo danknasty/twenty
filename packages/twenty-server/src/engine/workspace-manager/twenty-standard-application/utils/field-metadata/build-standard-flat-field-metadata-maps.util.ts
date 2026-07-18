@@ -102,12 +102,16 @@ import { buildBoardMatrixCriterionStandardFlatFieldMetadatas } from 'src/engine/
 import { buildCandidateBoardMatrixEvaluationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-candidate-board-matrix-evaluation-standard-flat-field-metadata.util';
 import { buildDirectorIndependenceReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-director-independence-review-standard-flat-field-metadata.util';
 import { buildBoardCommitmentReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-commitment-review-standard-flat-field-metadata.util';
+
 import { buildRetentionActionLogStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-retention-action-log-standard-flat-field-metadata.util';
 import { buildExternalIdentityMatchQueueStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-identity-match-queue-standard-flat-field-metadata.util';
 import { buildAnalyticsDomainMetricStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-domain-metric-standard-flat-field-metadata.util';
 import { buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-metric-snapshot-standard-flat-field-metadata.util';
 import { buildAnalyticsDashboardConfigStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-config-standard-flat-field-metadata.util';
 import { buildAiPromptTemplateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-prompt-template-standard-flat-field-metadata.util';
+import { buildAiModelRegistryStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-model-registry-standard-flat-field-metadata.util';
+import { buildAiProviderCallLogStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-provider-call-log-standard-flat-field-metadata.util';
+import { buildAppAgentsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-app-agents-standard-flat-field-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardFieldArgs<P, FieldMetadataType>, 'context'>,
@@ -232,6 +236,7 @@ boardCompositionProfile:
     buildDirectorIndependenceReviewStandardFlatFieldMetadatas,
   boardCommitmentReview:
     buildBoardCommitmentReviewStandardFlatFieldMetadatas,
+
 retentionActionLog: buildRetentionActionLogStandardFlatFieldMetadatas,
   externalIdentityMatchQueue:
     buildExternalIdentityMatchQueueStandardFlatFieldMetadatas,
@@ -239,6 +244,9 @@ analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatFieldMetadatas,
   analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas,
   analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatFieldMetadatas,
 aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,
+  aiModelRegistry: buildAiModelRegistryStandardFlatFieldMetadatas,
+  aiProviderCallLog: buildAiProviderCallLogStandardFlatFieldMetadatas,
+  appAgents: buildAppAgentsStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };

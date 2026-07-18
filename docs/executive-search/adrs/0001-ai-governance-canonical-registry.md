@@ -1,7 +1,8 @@
-# ADR-0001: AI Governance Canonical Registry (PROPOSED)
+# ADR-0001: AI Governance Canonical Registry (ACCEPTED)
 
-**Status:** PROPOSED — decision gate immediately before PR30.
+**Status:** ACCEPTED — Option C (Twenty-canonical-after-migration).
 **Date:** 2026-07-15.
+**Decided:** 2026-07-18.
 
 ## Context
 
@@ -50,3 +51,19 @@ Twenty becomes canonical after explicit migration, with backward-compatible Dire
 ## Recommendation
 
 Defer until PR30. Until then, both systems may reference each other's records by ID/hash but must not create contradictory "current" designations.
+
+## Decision (2026-07-18)
+
+**Option C — Twenty-canonical-after-migration** selected.
+
+**Rationale:**
+- Directus is being migrated away from. Making it canonical for AI governance would create an ongoing dependency on a legacy system, contradicting the migration trajectory.
+- Twenty's AI infrastructure (`engine/metadata-modules/ai/`) is already richer than Directus's — agent entities, execution records with full audit trails, per-turn evaluation scoring, model config registry, queue-backed chat, and role-scoped agent tools. Most of what a canonical registry needs already exists.
+- Option B (shared service) is overengineered for a two-system landscape where one system is being phased out.
+- Option A's coupling cost is ongoing and grows with every AI capability added in later phases. Option C's migration cost is one-time.
+
+**Implementation requirements:**
+- Migrate Directus AI governance history into Twenty (`ai_model_registry`, `prompt_templates`, `assessment_runs`, `assessment_evidence`, `assessment_guardrail_checks`, `ai_request_log`, `audit_runs`, `audit_metrics`, `audit_findings`, `user_contest_ai_score`).
+- Build backward-compatible read projections for the Directus portal so candidate consent/contest flows remain functional.
+- Twenty permission engine governs all AI access.
+- Timeline: migration work spans PR35 (migration/backfill phase), with registry declarations in PR30 (AI governance).

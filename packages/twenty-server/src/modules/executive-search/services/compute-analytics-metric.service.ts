@@ -1,18 +1,25 @@
 import { Injectable } from '@nestjs/common';
 
-import { TwentyORMModule } from 'src/engine/twenty-orm/twenty-orm.module';
+import { type WorkspaceAuthContext } from 'src/engine/core-modules/auth/types/workspace-auth-context.type';
+import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { ComputeAnalyticsMetricDTO } from 'src/modules/executive-search/dtos/compute-analytics-metric.dto';
+import {
+  ExecutiveSearchException,
+  ExecutiveSearchExceptionCode,
+} from 'src/modules/executive-search/exceptions/executive-search.exception';
+import { AnalyticsDomainMetricWorkspaceEntity } from 'src/modules/executive-search/standard-objects/analytics-domain-metric.workspace-entity';
+import { AnalyticsMetricSnapshotWorkspaceEntity } from 'src/modules/executive-search/standard-objects/analytics-metric-snapshot.workspace-entity';
 
 @Injectable()
 export class ComputeAnalyticsMetricService {
   constructor(
-    private readonly twentyORMModule: TwentyORMModule,
+    private readonly globalWorkspaceOrmManager: GlobalWorkspaceOrmManager,
   ) {}
 
   async computeMetric(
     metricCode: string,
     workspaceId: string,
-    authContext: any,
+    authContext: WorkspaceAuthContext,
     options?: {
       periodStart?: string;
       periodEnd?: string;
@@ -20,81 +27,121 @@ export class ComputeAnalyticsMetricService {
       forceRecompute?: boolean;
     },
   ): Promise<ComputeAnalyticsMetricDTO> {
-    const forceRecompute = options?.forceRecompute ?? false;
-    const periodStart = options?.periodStart ?? this.defaultPeriodStart();
-    const periodEnd = options?.periodEnd ?? this.defaultPeriodEnd();
+    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
+      async () => {
+        const forceRecompute = options?.forceRecompute ?? false;
+        const periodStart = options?.periodStart ?? this.defaultPeriodStart();
+        const periodEnd = options?.periodEnd ?? this.defaultPeriodEnd();
+        const parsedDimensions: Record<string, unknown> | null =
+          options?.dimensions ? JSON.parse(options.dimensions) : null;
 
-    const workspaceDataSource = await this.twentyORMModule.getWorkspaceDataSource(workspaceId);
-    const analyticsDomainMetricRepo = workspaceDataSource.getRepository('analyticsDomainMetric');
+        const metricRepo =
+          await this.globalWorkspaceOrmManager.getRepository<AnalyticsDomainMetricWorkspaceEntity>(
+            workspaceId,
+            AnalyticsDomainMetricWorkspaceEntity,
+            { shouldBypassPermissionChecks: true },
+          );
 
-    const metric = await analyticsDomainMetricRepo.findOne({ where: { code: metricCode } });
-    if (!metric) {
-      throw new Error(`Metric not found: ${metricCode}`);
-    }
+        const metric = await metricRepo.findOne({
+          where: { code: metricCode },
+        });
 
-    const snapshotRepo = workspaceDataSource.getRepository('analyticsMetricSnapshot');
-    if (!forceRecompute) {
-      const existingSnapshot = await snapshotRepo.findOne({
-        where: {
+        if (!metric) {
+          throw new ExecutiveSearchException(
+            ExecutiveSearchExceptionCode.METRIC_NOT_FOUND,
+            `Metric not found: ${metricCode}`,
+          );
+        }
+
+        const snapshotRepo =
+          await this.globalWorkspaceOrmManager.getRepository<AnalyticsMetricSnapshotWorkspaceEntity>(
+            workspaceId,
+            AnalyticsMetricSnapshotWorkspaceEntity,
+            { shouldBypassPermissionChecks: true },
+          );
+
+        if (!forceRecompute) {
+          const existingSnapshot = await snapshotRepo.findOne({
+            where: {
+              metricId: metric.id,
+              periodStart,
+              periodEnd,
+              dimensions: parsedDimensions,
+              computationStatus: 'SUCCESS' as any,
+            },
+            order: { computedAt: 'DESC' as any },
+          });
+
+          if (existingSnapshot) {
+            return {
+              value: existingSnapshot.value,
+              valueText: existingSnapshot.valueText,
+              sourceCount: existingSnapshot.sourceCount,
+              computedAt: this.formatDateOrString(
+                existingSnapshot.computedAt,
+              ),
+              computationStatus: 'SUCCESS',
+              snapshotId: existingSnapshot.id,
+              periodStart: this.formatDateOrString(
+                existingSnapshot.periodStart,
+              ),
+              periodEnd: this.formatDateOrString(existingSnapshot.periodEnd),
+            };
+          }
+        }
+
+        const now = new Date();
+        const result = await this.computeMetricValue(
+          metric,
+          workspaceId,
+          options,
+          now,
+        );
+        const snapshot = await snapshotRepo.save({
+          name: `${metric.name} — ${periodStart} to ${periodEnd}`,
           metricId: metric.id,
+          periodStart: periodStart as any,
+          periodEnd: periodEnd as any,
+          periodLabel: this.formatPeriodLabel(periodStart, periodEnd),
+          granularity: metric.timeWindow,
+          value: result.value,
+          valueText: result.valueText,
+          sourceCount: result.sourceCount,
+          computedAt: now as any,
+          computationStatus: (result.error ? 'PARTIAL' : 'SUCCESS') as any,
+          computationNotes: result.error ?? null,
+          computedById: authContext.type === 'user'
+            ? authContext.workspaceMemberId
+            : null,
+          dimensions: parsedDimensions as any,
+        } as any);
+
+        return {
+          value: result.value,
+          valueText: result.valueText,
+          sourceCount: result.sourceCount,
+          computedAt: now.toISOString(),
+          computationStatus: result.error ? 'PARTIAL' : 'SUCCESS',
+          snapshotId: snapshot.id,
           periodStart,
           periodEnd,
-          dimensions: options?.dimensions ?? null,
-          computationStatus: 'SUCCESS',
-        },
-        order: { computedAt: 'DESC' },
-      });
-      if (existingSnapshot) {
-        return {
-          value: existingSnapshot.value,
-          valueText: existingSnapshot.valueText,
-          sourceCount: existingSnapshot.sourceCount,
-          computedAt: existingSnapshot.computedAt?.toISOString() ?? new Date().toISOString(),
-          computationStatus: 'SUCCESS',
-          snapshotId: existingSnapshot.id,
-          periodStart: existingSnapshot.periodStart?.toISOString() ?? null,
-          periodEnd: existingSnapshot.periodEnd?.toISOString() ?? null,
         };
-      }
-    }
-
-    const now = new Date();
-    const result = await this.computeMetricValue(metric, workspaceDataSource, options, now);
-    const snapshot = await snapshotRepo.save({
-      name: `${metric.name} — ${periodStart} to ${periodEnd}`,
-      metricId: metric.id,
-      periodStart,
-      periodEnd,
-      periodLabel: this.formatPeriodLabel(periodStart, periodEnd),
-      granularity: metric.timeWindow,
-      value: result.value,
-      valueText: result.valueText,
-      sourceCount: result.sourceCount,
-      computedAt: now,
-      computationStatus: result.error ? 'PARTIAL' : 'SUCCESS',
-      computationNotes: result.error ?? null,
-      computedById: authContext.workspaceMemberId ?? null,
-      dimensions: options?.dimensions ?? null,
-    });
-
-    return {
-      value: result.value,
-      valueText: result.valueText,
-      sourceCount: result.sourceCount,
-      computedAt: now.toISOString(),
-      computationStatus: result.error ? 'PARTIAL' : 'SUCCESS',
-      snapshotId: snapshot.id,
-      periodStart,
-      periodEnd,
-    };
+      },
+      authContext,
+    );
   }
 
   private async computeMetricValue(
     metric: any,
-    dataSource: any,
+    workspaceId: string,
     options: any,
     now: Date,
-  ): Promise<{ value: number | null; valueText: string | null; sourceCount: number | null; error?: string }> {
+  ): Promise<{
+    value: number | null;
+    valueText: string | null;
+    sourceCount: number | null;
+    error?: string;
+  }> {
     return {
       value: null,
       valueText: `${metric.code} computed at ${now.toISOString()}`,
@@ -102,9 +149,22 @@ export class ComputeAnalyticsMetricService {
     };
   }
 
+  /**
+   * Safely formats a value that may be a Date or a string (e.g. DATE columns
+   * stored as YYYY-MM-DD strings) into an ISO string. Returns null if the
+   * value is null/undefined.
+   */
+  private formatDateOrString(value: any): string | null {
+    if (value == null) return null;
+    if (value instanceof Date) return value.toISOString();
+    return String(value);
+  }
+
   private defaultPeriodStart(): string {
     const now = new Date();
-    return new Date(now.getFullYear(), now.getMonth(), 1).toISOString().split('T')[0];
+    return new Date(now.getFullYear(), now.getMonth(), 1)
+      .toISOString()
+      .split('T')[0];
   }
 
   private defaultPeriodEnd(): string {

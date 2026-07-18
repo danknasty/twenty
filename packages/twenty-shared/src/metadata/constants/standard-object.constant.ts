@@ -638,17 +638,17 @@ clientAccountProfiles: {
         universalIdentifier: '20202020-d8ba-49a9-b6c1-8b9d5f11592d',
       },
       clientStakeholderRoles: {
-        universalIdentifier: '20202020-28b6-41b5-9a7d-102db20ed51b',,
+        universalIdentifier: '20202020-28b6-41b5-9a7d-102db20ed51b',
 clientStakeholderRoles: {
         universalIdentifier: '0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d',
       },
       clientAccountProfiles: {
-        universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0f01',,
+        universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0f01',
 searchEngagementTerms: {
         universalIdentifier: '20e1c9dc-8348-4627-a414-430dc690beb3',
       },
       searchAssignments: {
-        universalIdentifier: '3a87d9fc-4da9-4284-afd4-8f0719330b58',,
+        universalIdentifier: '3a87d9fc-4da9-4284-afd4-8f0719330b58',
 targetCompanies: {
         universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f',
       },
@@ -668,7 +668,7 @@ targetCompanies: {
         universalIdentifier: '20202020-f6a7-4182-3d4e-1f2a3b4c5d6e',
       },
       targetOfRelationshipEdges: {
-        universalIdentifier: '20202020-a7b8-4293-4e5f-2a3b4c5d6e7f',,
+        universalIdentifier: '20202020-a7b8-4293-4e5f-2a3b4c5d6e7f',
 executiveProfiles: {
         universalIdentifier: '9a928d73-a9fb-4f24-aff0-4b51a6dd69b3',
       },
@@ -1538,7 +1538,7 @@ universalIdentifier: '20202020-7a3e-4c9d-b2f8-1e5c6d7a8bb3',
         universalIdentifier: '20202020-0105-4105-8105-010101010005',
       },
       decisionCriteria: {
-        universalIdentifier: '20202020-0106-4106-8106-010101010006',,
+        universalIdentifier: '20202020-0106-4106-8106-010101010006',
 universalIdentifier: '9a210eaa-18a7-4cf5-9e22-be2aabd832c0',
       },
       searchAssignments: {
@@ -1731,8 +1731,8 @@ clientStakeholderRoles: {
 universalIdentifier: '20202020-b3cc-4d21-8f42-bb8c81c54432',
       },
       billingContactForClientAccountProfiles: {
-        universalIdentifier: '20202020-3d7e-4ea4-9d8d-a87e5e325040',,
-universalIdentifier: '9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d',,
+        universalIdentifier: '20202020-3d7e-4ea4-9d8d-a87e5e325040',
+universalIdentifier: '9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d',
 offLimitsRestrictions: {
         universalIdentifier: '20202020-b8c9-4304-5f60-3b4c5d6e7f8a',
       },
@@ -1749,7 +1749,7 @@ offLimitsRestrictions: {
         universalIdentifier: '20202020-f2a3-4748-9304-7f8a9b0c1d2e',
       },
       researchCandidates: {
-        universalIdentifier: '20202020-a3b4-4859-0415-8a9b0c1d2e3f',,
+        universalIdentifier: '20202020-a3b4-4859-0415-8a9b0c1d2e3f',
 executiveProfile: {
         universalIdentifier: '0a15ce88-115e-481e-97fe-35acd58ff542',
       },
@@ -2756,7 +2756,7 @@ ownedClientStakeholderRoles: {
         universalIdentifier: '20202020-7a3e-4c9d-b2f8-1e5c6d7a8bc5',
       },
       ownedClientAccountProfiles: {
-        universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0f02',,
+        universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0f02',
 ownedResearchStrategies: {
         universalIdentifier: '20202020-b4c5-4960-1526-9b0c1d2e3f4a',
       },
@@ -2838,7 +2838,7 @@ externalEntityLink: {
         universalIdentifier: '47388e8a-1fd2-4e16-bdc9-723f3e1d04dc',
       },
 sourceVersion: {
-        universalIdentifier: '3a53950c-9516-4881-ac54-8d3ce89e5c7c',,
+        universalIdentifier: '3a53950c-9516-4881-ac54-8d3ce89e5c7c',
 location: {
         universalIdentifier: '07122700-58cc-457b-b636-a2dd9954e07e',
       },
@@ -2881,7 +2881,7 @@ location: {
     },
     indexes: {
       personIdUniqueIndex: {
-        universalIdentifier: '3c5cdcfb-e7da-4f5f-9541-aabea51d8e23',,
+        universalIdentifier: '3c5cdcfb-e7da-4f5f-9541-aabea51d8e23',
 externalEntityLink: {
     universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0001',
     fields: {
@@ -3881,7 +3881,7 @@ clientAccountProfile: {
         universalIdentifier: '20202020-488a-49b5-97c7-d879c87f0bdd',
       },
       searchVectorGinIndex: {
-        universalIdentifier: '20202020-414e-41e0-b380-4a8e88a0d1c0',,
+        universalIdentifier: '20202020-414e-41e0-b380-4a8e88a0d1c0',
 clientAccountProfile: {
     universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f',
     fields: {
@@ -3963,7 +3963,7 @@ universalIdentifier: '20202020-c84e-4bf5-826f-1737f3a3034d',
             universalIdentifier: '20202020-5381-43b7-ba78-e333dd23dfc8',
           },
           createdAt: {
-            universalIdentifier: '20202020-e48d-481c-82df-7e5fecb776e8',,
+            universalIdentifier: '20202020-e48d-481c-82df-7e5fecb776e8',
 universalIdentifier: 'b1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e',
         viewFields: {
           name: {
@@ -3990,7 +3990,7 @@ universalIdentifier: '20202020-17fa-4ab3-9e6a-1d5ab59c3954',
             universalIdentifier: '20202020-c708-4109-91e9-4324d3a36dd0',
           },
           system: {
-            universalIdentifier: '20202020-1bce-49f5-a0cd-2ec58e43d0a9',,
+            universalIdentifier: '20202020-1bce-49f5-a0cd-2ec58e43d0a9',
 universalIdentifier: 'a2b3c4d5-e6f7-4a8b-9c0d-1e2f3a4b5c6d',
         viewFieldGroups: {
           general: {
@@ -4029,7 +4029,7 @@ universalIdentifier: '20202020-5054-4b57-b6e6-a80ed2dee5d6',
             universalIdentifier: '20202020-9e62-43ea-9be3-b0a6a3ecd0fe',
           },
           updatedAt: {
-            universalIdentifier: '20202020-14e5-4368-a7dc-58e5c1c81d98',,
+            universalIdentifier: '20202020-14e5-4368-a7dc-58e5c1c81d98',
 universalIdentifier: '20202020-9b60-56b8-e3f7-4f7688394d88',
           },
           accountTier: {
@@ -4097,7 +4097,7 @@ universalIdentifier: '20202020-9b60-56b8-e3f7-4f7688394d88',
     },
   },
 clientStakeholderRole: {
-universalIdentifier: '20202020-6fbf-44b3-9797-60fe520e0927',,
+universalIdentifier: '20202020-6fbf-44b3-9797-60fe520e0927',
 marketMap: {
     universalIdentifier: 'e8b87567-1e12-4434-b390-1962c05388d4',
     fields: {
@@ -4472,7 +4472,7 @@ marketMap: {
         universalIdentifier: '20202020-0ece-43c5-a5d3-6cfa973756af',
       },
       searchVectorGinIndex: {
-        universalIdentifier: '20202020-3216-4e8d-8221-c0a1bff7c30c',,
+        universalIdentifier: '20202020-3216-4e8d-8221-c0a1bff7c30c',
 universalIdentifier: '20202020-a1b1-4c1d-8e1f-0a1b2c3d4e5f',
     fields: {
       ...buildStandardObjectSystemFields(
@@ -4538,7 +4538,7 @@ universalIdentifier: '20202020-5ba2-49d0-a586-2a7777dddb21',
             universalIdentifier: '20202020-fbfd-4e1a-8efe-3c401c02cf86',
           },
           createdAt: {
-            universalIdentifier: '20202020-040c-45e6-a55b-9d4045b3b376',,
+            universalIdentifier: '20202020-040c-45e6-a55b-9d4045b3b376',
 universalIdentifier: 'd4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a',
         viewFields: {
           name: {
@@ -4568,7 +4568,7 @@ universalIdentifier: '20202020-caea-4ffc-8579-f666f5cf3ce0',
             universalIdentifier: '20202020-eba4-4201-bcba-ce802da6c20f',
           },
           system: {
-            universalIdentifier: '20202020-c78d-471d-9885-e0e08600d5e4',,
+            universalIdentifier: '20202020-c78d-471d-9885-e0e08600d5e4',
 universalIdentifier: 'e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b',
         viewFieldGroups: {
           general: {
@@ -4608,7 +4608,7 @@ universalIdentifier: '20202020-ec8e-4a8b-8ce3-b831bab9db6e',
           },
         },
       },
-    },,
+    },
 outboxEvent: {
     universalIdentifier: '1ea65bc5-3b7c-49e7-8565-c7b2e005de3f',
     fields: {
@@ -4735,7 +4735,7 @@ outboxEvent: {
       },
     },
     indexes: {},
-  },,
+  },
 universalIdentifier: 'a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d',
           },
           roleType: {
@@ -4945,7 +4945,7 @@ universalIdentifier: 'a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d',
           },
           timelineActivities: {
             universalIdentifier: '9c5a0d4e-1f3a-4b7c-0d5e-8f9a0b1c2d3e',
-          },,
+          },
 searchEngagementTerms: {
     universalIdentifier: 'fecd6794-4baa-42ae-a4aa-8c30bce1f5de',
     fields: {
@@ -5418,7 +5418,7 @@ searchEngagementTerms: {
             universalIdentifier: 'f52c7958-3eaa-48d1-811f-377d64f1e144',
           },
           targetCompany: {
-            universalIdentifier: 'cb8f3ed0-5791-4934-9059-12897315d656',,
+            universalIdentifier: 'cb8f3ed0-5791-4934-9059-12897315d656',
 universalIdentifier: '5448ee99-d539-47f8-a6cd-4ccb56c910ca',
         viewFields: {
           person: {
@@ -5556,6 +5556,578 @@ universalIdentifier: '5448ee99-d539-47f8-a6cd-4ccb56c910ca',
           createdAt: {
             universalIdentifier: 'f9a1c3d5-e6b7-4c8d-1f0a-2b3c4d5e6f7a',
           },
+        },
+      },
+    },
+  },
+  },
+
+executiveAssessment: {
+    universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a001-0001-4000-8001-aeb1a0000001',
+      ),
+      name: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000101' },
+      status: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000102' },
+      overallAssessment: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000103' },
+      strengthsSummary: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000104' },
+      riskFactorsSummary: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000105' },
+      recommendation: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000106' },
+      assessmentDate: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000107' },
+      assessor: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000108' },
+      assessorId: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000109' },
+      candidacy: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000110' },
+      candidacyId: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000111' },
+      searchAssignment: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000112' },
+      searchAssignmentId: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000113' },
+      consentToShare: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000114' },
+      isClientVisible: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000115' },
+      evaluations: { universalIdentifier: 'aeb1a001-0001-4000-8001-aeb1a0000116' },
+    },
+    indexes: {
+      candidacyIdIndex: { universalIdentifier: 'aeb1a001-0002-4000-8001-aeb1a0001001' },
+      searchAssignmentIdIndex: { universalIdentifier: 'aeb1a001-0002-4000-8001-aeb1a0001002' },
+      statusIndex: { universalIdentifier: 'aeb1a001-0002-4000-8001-aeb1a0001003' },
+      assessorIdIndex: { universalIdentifier: 'aeb1a001-0002-4000-8001-aeb1a0001004' },
+    },
+    views: {
+      executiveAssessmentRecordPageFields: {
+        universalIdentifier: 'aeb1a001-0030-4000-8001-aeb1a0002001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a001-0040-4000-8001-aeb1a0003001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004001' },
+          status: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004002' },
+          overallAssessment: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004003' },
+          strengthsSummary: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004004' },
+          riskFactorsSummary: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004005' },
+          recommendation: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004006' },
+          assessmentDate: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004007' },
+          assessor: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004008' },
+          candidacy: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004009' },
+          searchAssignment: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004010' },
+          createdAt: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004011' },
+          createdBy: { universalIdentifier: 'aeb1a001-0050-4000-8001-aeb1a0004012' },
+        },
+      },
+    },
+  },
+
+  criterionEvaluation: {
+    universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000002',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a002-0001-4000-8002-aeb1a0000002',
+      ),
+      name: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000201' },
+      rating: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000202' },
+      evidenceSummary: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000203' },
+      evidenceReferences: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000204' },
+      aiDraft: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000205' },
+      aiDraftGeneratedAt: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000206' },
+      aiModelVersion: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000207' },
+      isHumanReviewed: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000208' },
+      assessorNotes: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000209' },
+      assessment: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000210' },
+      assessmentId: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000211' },
+      criterion: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000212' },
+      criterionId: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000213' },
+      candidacy: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000214' },
+      candidacyId: { universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000215' },
+    },
+    indexes: {
+      assessmentIdIndex: { universalIdentifier: 'aeb1a002-0002-4000-8002-aeb1a0002001' },
+      criterionIdIndex: { universalIdentifier: 'aeb1a002-0002-4000-8002-aeb1a0002002' },
+      candidacyIdIndex: { universalIdentifier: 'aeb1a002-0002-4000-8002-aeb1a0002003' },
+    },
+    views: {
+      criterionEvaluationRecordPageFields: {
+        universalIdentifier: 'aeb1a002-0030-4000-8002-aeb1a0004001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a002-0040-4000-8002-aeb1a0005001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006001' },
+          rating: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006002' },
+          evidenceSummary: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006003' },
+          isHumanReviewed: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006004' },
+          assessment: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006005' },
+          criterion: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006006' },
+          candidacy: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006007' },
+          createdAt: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006008' },
+          createdBy: { universalIdentifier: 'aeb1a002-0050-4000-8002-aeb1a0006009' },
+        },
+      },
+    },
+  },
+
+  searchSlate: {
+    universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000003',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a003-0001-4000-8003-aeb1a0000003',
+      ),
+      name: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000301' },
+      slateType: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000302' },
+      version: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000303' },
+      status: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000304' },
+      submittedAt: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000305' },
+      submittedBy: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000306' },
+      submittedById: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000307' },
+      clientNotes: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000308' },
+      searchAssignment: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000309' },
+      searchAssignmentId: { universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000310' },
+    },
+    indexes: {
+      searchAssignmentIdIndex: { universalIdentifier: 'aeb1a003-0002-4000-8003-aeb1a0003001' },
+      statusIndex: { universalIdentifier: 'aeb1a003-0002-4000-8003-aeb1a0003002' },
+      slateTypeIndex: { universalIdentifier: 'aeb1a003-0002-4000-8003-aeb1a0003003' },
+    },
+    views: {
+      searchSlateRecordPageFields: {
+        universalIdentifier: 'aeb1a003-0030-4000-8003-aeb1a0005001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a003-0040-4000-8003-aeb1a0006001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007001' },
+          slateType: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007002' },
+          version: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007003' },
+          status: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007004' },
+          submittedAt: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007005' },
+          submittedBy: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007006' },
+          clientNotes: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007007' },
+          searchAssignment: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007008' },
+          createdAt: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007009' },
+          createdBy: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007010' },
+        },
+      },
+    },
+  },
+
+  slateMembership: {
+    universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a004-0001-4000-8004-aeb1a0000004',
+      ),
+      name: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000401' },
+      position: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000402' },
+      status: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000403' },
+      presentationConsentObtained: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000404' },
+      consentObtainedAt: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000405' },
+      consentExpiresAt: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000406' },
+      consentMethod: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000407' },
+      slate: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000408' },
+      slateId: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000409' },
+      candidacy: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000410' },
+      candidacyId: { universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000411' },
+    },
+    indexes: {
+      slateIdIndex: { universalIdentifier: 'aeb1a004-0002-4000-8004-aeb1a0004001' },
+      candidacyIdIndex: { universalIdentifier: 'aeb1a004-0002-4000-8004-aeb1a0004002' },
+      statusIndex: { universalIdentifier: 'aeb1a004-0002-4000-8004-aeb1a0004003' },
+    },
+    views: {
+      slateMembershipRecordPageFields: {
+        universalIdentifier: 'aeb1a004-0030-4000-8004-aeb1a0006001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a004-0040-4000-8004-aeb1a0007001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a004-0050-4000-8004-aeb1a0008001' },
+          position: { universalIdentifier: 'aeb1a004-0050-4000-8004-aeb1a0008002' },
+          status: { universalIdentifier: 'aeb1a004-0050-4000-8004-aeb1a0008003' },
+          presentationConsentObtained: { universalIdentifier: 'aeb1a004-0050-4000-8004-aeb1a0008004' },
+          slate: { universalIdentifier: 'aeb1a004-0050-4000-8004-aeb1a0008005' },
+          candidacy: { universalIdentifier: 'aeb1a004-0050-4000-8004-aeb1a0008006' },
+          createdAt: { universalIdentifier: 'aeb1a004-0050-4000-8004-aeb1a0008007' },
+          createdBy: { universalIdentifier: 'aeb1a004-0050-4000-8004-aeb1a0008008' },
+        },
+      },
+    },
+  },
+
+  candidatePresentation: {
+    universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000005',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a005-0001-4000-8005-aeb1a0000005',
+      ),
+      name: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000501' },
+      version: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000502' },
+      status: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000503' },
+      sourceSnapshot: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000504' },
+      restrictedFieldLeakageScanResult: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000505' },
+      reviewer: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000506' },
+      reviewerId: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000507' },
+      reviewedAt: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000508' },
+      reviewDecision: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000509' },
+      approvedAt: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000510' },
+      publishedAt: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000511' },
+      slateMembership: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000512' },
+      slateMembershipId: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000513' },
+      candidacy: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000514' },
+      candidacyId: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000515' },
+      searchAssignment: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000516' },
+      searchAssignmentId: { universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000517' },
+    },
+    indexes: {
+      slateMembershipIdIndex: { universalIdentifier: 'aeb1a005-0002-4000-8005-aeb1a0005001' },
+      candidacyIdIndex: { universalIdentifier: 'aeb1a005-0002-4000-8005-aeb1a0005002' },
+      searchAssignmentIdIndex: { universalIdentifier: 'aeb1a005-0002-4000-8005-aeb1a0005003' },
+      statusIndex: { universalIdentifier: 'aeb1a005-0002-4000-8005-aeb1a0005004' },
+    },
+    views: {
+      candidatePresentationRecordPageFields: {
+        universalIdentifier: 'aeb1a005-0030-4000-8005-aeb1a0007001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a005-0040-4000-8005-aeb1a0008001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009001' },
+          version: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009002' },
+          status: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009003' },
+          reviewDecision: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009004' },
+          reviewedAt: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009005' },
+          reviewer: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009006' },
+          slateMembership: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009007' },
+          candidacy: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009008' },
+          searchAssignment: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009009' },
+          createdAt: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009010' },
+          createdBy: { universalIdentifier: 'aeb1a005-0050-4000-8005-aeb1a0009011' },
+        },
+      },
+    },
+  },
+
+  clientFeedback: {
+    universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000006',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a006-0001-4000-8006-aeb1a0000006',
+      ),
+      name: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000601' },
+      feedbackType: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000602' },
+      rating: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000603' },
+      comments: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000604' },
+      receivedAt: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000605' },
+      receivedFrom: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000606' },
+      isSharedWithCandidate: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000607' },
+      sharedWithCandidateAt: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000608' },
+      candidacy: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000609' },
+      candidacyId: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000610' },
+      slate: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000611' },
+      slateId: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000612' },
+      presentation: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000613' },
+      presentationId: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000614' },
+      searchAssignment: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000615' },
+      searchAssignmentId: { universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000616' },
+    },
+    indexes: {
+      candidacyIdIndex: { universalIdentifier: 'aeb1a006-0002-4000-8006-aeb1a0006001' },
+      slateIdIndex: { universalIdentifier: 'aeb1a006-0002-4000-8006-aeb1a0006002' },
+      presentationIdIndex: { universalIdentifier: 'aeb1a006-0002-4000-8006-aeb1a0006003' },
+      searchAssignmentIdIndex: { universalIdentifier: 'aeb1a006-0002-4000-8006-aeb1a0006004' },
+    },
+    views: {
+      clientFeedbackRecordPageFields: {
+        universalIdentifier: 'aeb1a006-0030-4000-8006-aeb1a0008001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a006-0040-4000-8006-aeb1a0009001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010001' },
+          feedbackType: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010002' },
+          rating: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010003' },
+          comments: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010004' },
+          receivedAt: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010005' },
+          receivedFrom: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010006' },
+          candidacy: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010007' },
+          slate: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010008' },
+          presentation: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010009' },
+          searchAssignment: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010010' },
+          createdAt: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010011' },
+          createdBy: { universalIdentifier: 'aeb1a006-0050-4000-8006-aeb1a0010012' },
+        },
+      },
+    },
+  },
+
+  searchStatusReport: {
+    universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000007',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a007-0001-4000-8007-aeb1a0000007',
+      ),
+      name: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000701' },
+      reportType: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000702' },
+      status: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000703' },
+      reportDate: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000704' },
+      periodStart: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000705' },
+      periodEnd: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000706' },
+      activitiesSummary: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000707' },
+      candidatePipelineSummary: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000708' },
+      nextSteps: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000709' },
+      clientFeedbackRequested: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000710' },
+      submittedBy: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000711' },
+      submittedById: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000712' },
+      acknowledgedBy: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000713' },
+      acknowledgedById: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000714' },
+      searchAssignment: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000715' },
+      searchAssignmentId: { universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000716' },
+    },
+    indexes: {
+      searchAssignmentIdIndex: { universalIdentifier: 'aeb1a007-0002-4000-8007-aeb1a0007001' },
+      statusIndex: { universalIdentifier: 'aeb1a007-0002-4000-8007-aeb1a0007002' },
+      reportTypeIndex: { universalIdentifier: 'aeb1a007-0002-4000-8007-aeb1a0007003' },
+      reportDateIndex: { universalIdentifier: 'aeb1a007-0002-4000-8007-aeb1a0007004' },
+    },
+    views: {
+      searchStatusReportRecordPageFields: {
+        universalIdentifier: 'aeb1a007-0030-4000-8007-aeb1a0009001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a007-0040-4000-8007-aeb1a0010001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011001' },
+          reportType: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011002' },
+          status: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011003' },
+          reportDate: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011004' },
+          periodStart: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011005' },
+          periodEnd: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011006' },
+          activitiesSummary: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011007' },
+          submittedBy: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011008' },
+          searchAssignment: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011009' },
+          createdAt: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011010' },
+          createdBy: { universalIdentifier: 'aeb1a007-0050-4000-8007-aeb1a0011011' },
+        },
+      },
+    },
+  },
+  compensationExpectation: {
+    universalIdentifier: 'a1a1b2b2-c0e1-4a01-8c01-ac11e0000001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'a1a1b2b2-c0e1-4a01-8c01-ac11e0000001',
+      ),
+      name: { universalIdentifier: 'a1a1b2b2-e001-4a01-8c01-ac11e000e001' },
+      expectedBaseSalary: { universalIdentifier: 'a1a1b2b2-e002-4a01-8c01-ac11e000e002' },
+      expectedTotalCompensation: { universalIdentifier: 'a1a1b2b2-e003-4a01-8c01-ac11e000e003' },
+      expectedEquity: { universalIdentifier: 'a1a1b2b2-e004-4a01-8c01-ac11e000e004' },
+      expectedBonus: { universalIdentifier: 'a1a1b2b2-e005-4a01-8c01-ac11e000e005' },
+      currencyCode: { universalIdentifier: 'a1a1b2b2-e006-4a01-8c01-ac11e000e006' },
+      expectationSource: { universalIdentifier: 'a1a1b2b2-e007-4a01-8c01-ac11e000e007' },
+      notes: { universalIdentifier: 'a1a1b2b2-e008-4a01-8c01-ac11e000e008' },
+      isVerifiedWithCandidate: { universalIdentifier: 'a1a1b2b2-e009-4a01-8c01-ac11e000e009' },
+      verifiedAt: { universalIdentifier: 'a1a1b2b2-e00a-4a01-8c01-ac11e000e00a' },
+      candidacy: { universalIdentifier: 'a1a1b2b2-e00b-4a01-8c01-ac11e000e00b' },
+      candidacyId: { universalIdentifier: 'a1a1b2b2-e00c-4a01-8c01-ac11e000e00c' },
+      searchAssignment: { universalIdentifier: 'a1a1b2b2-e00d-4a01-8c01-ac11e000e00d' },
+      searchAssignmentId: { universalIdentifier: 'a1a1b2b2-e00e-4a01-8c01-ac11e000e00e' },
+    },
+    indexes: {
+      candidacyIdIndex: { universalIdentifier: 'a1a1b2b2-f001-4a01-8c01-ac11e000f001' },
+      searchAssignmentIdIndex: { universalIdentifier: 'a1a1b2b2-f002-4a01-8c01-ac11e000f002' },
+    },
+    views: {
+      compensationExpectationRecordPageFields: {
+        universalIdentifier: 'a1a1b2b2-d001-4a01-8c01-ac11e000d001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'a1a1b2b2-d101-4a01-8c01-ac11e000d101' },
+          system: { universalIdentifier: 'a1a1b2b2-d102-4a01-8c01-ac11e000d102' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'a1a1b2b2-c001-4a01-8c01-ac11e000c001' },
+          expectedBaseSalary: { universalIdentifier: 'a1a1b2b2-c002-4a01-8c01-ac11e000c002' },
+          expectedTotalCompensation: { universalIdentifier: 'a1a1b2b2-c003-4a01-8c01-ac11e000c003' },
+          expectedEquity: { universalIdentifier: 'a1a1b2b2-c004-4a01-8c01-ac11e000c004' },
+          expectedBonus: { universalIdentifier: 'a1a1b2b2-c005-4a01-8c01-ac11e000c005' },
+          currencyCode: { universalIdentifier: 'a1a1b2b2-c006-4a01-8c01-ac11e000c006' },
+          expectationSource: { universalIdentifier: 'a1a1b2b2-c007-4a01-8c01-ac11e000c007' },
+          isVerifiedWithCandidate: { universalIdentifier: 'a1a1b2b2-c008-4a01-8c01-ac11e000c008' },
+          verifiedAt: { universalIdentifier: 'a1a1b2b2-c009-4a01-8c01-ac11e000c009' },
+          candidacy: { universalIdentifier: 'a1a1b2b2-c00a-4a01-8c01-ac11e000c00a' },
+          searchAssignment: { universalIdentifier: 'a1a1b2b2-c00b-4a01-8c01-ac11e000c00b' },
+          notes: { universalIdentifier: 'a1a1b2b2-c00c-4a01-8c01-ac11e000c00c' },
+          createdAt: { universalIdentifier: 'a1a1b2b2-c00d-4a01-8c01-ac11e000c00d' },
+          createdBy: { universalIdentifier: 'a1a1b2b2-c00e-4a01-8c01-ac11e000c00e' },
+        },
+      },
+    },
+  },
+  offerNegotiation: {
+    universalIdentifier: 'b2b2c3c3-c0e2-4a02-8c02-ac11e0000001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'b2b2c3c3-c0e2-4a02-8c02-ac11e0000001',
+      ),
+      name: { universalIdentifier: 'b2b2c3c3-e001-4a02-8c02-ac11e000e001' },
+      status: { universalIdentifier: 'b2b2c3c3-e002-4a02-8c02-ac11e000e002' },
+      offerAmount: { universalIdentifier: 'b2b2c3c3-e003-4a02-8c02-ac11e000e003' },
+      currencyCode: { universalIdentifier: 'b2b2c3c3-e004-4a02-8c02-ac11e000e004' },
+      equityTerms: { universalIdentifier: 'b2b2c3c3-e005-4a02-8c02-ac11e000e005' },
+      bonusTerms: { universalIdentifier: 'b2b2c3c3-e006-4a02-8c02-ac11e000e006' },
+      otherBenefits: { universalIdentifier: 'b2b2c3c3-e007-4a02-8c02-ac11e000e007' },
+      proposedStartDate: { universalIdentifier: 'b2b2c3c3-e008-4a02-8c02-ac11e000e008' },
+      offerLetterSentAt: { universalIdentifier: 'b2b2c3c3-e009-4a02-8c02-ac11e000e009' },
+      offerLetterUrl: { universalIdentifier: 'b2b2c3c3-e00a-4a02-8c02-ac11e000e00a' },
+      acceptedAt: { universalIdentifier: 'b2b2c3c3-e00b-4a02-8c02-ac11e000e00b' },
+      acceptedSalary: { universalIdentifier: 'b2b2c3c3-e00c-4a02-8c02-ac11e000e00c' },
+      acceptedTotalCompensation: { universalIdentifier: 'b2b2c3c3-e00d-4a02-8c02-ac11e000e00d' },
+      declinedReason: { universalIdentifier: 'b2b2c3c3-e00e-4a02-8c02-ac11e000e00e' },
+      notes: { universalIdentifier: 'b2b2c3c3-e00f-4a02-8c02-ac11e000e00f' },
+      candidacy: { universalIdentifier: 'b2b2c3c3-e010-4a02-8c02-ac11e000e010' },
+      candidacyId: { universalIdentifier: 'b2b2c3c3-e011-4a02-8c02-ac11e000e011' },
+      searchAssignment: { universalIdentifier: 'b2b2c3c3-e012-4a02-8c02-ac11e000e012' },
+      searchAssignmentId: { universalIdentifier: 'b2b2c3c3-e013-4a02-8c02-ac11e000e013' },
+      compensationExpectation: { universalIdentifier: 'b2b2c3c3-e014-4a02-8c02-ac11e000e014' },
+      compensationExpectationId: { universalIdentifier: 'b2b2c3c3-e015-4a02-8c02-ac11e000e015' },
+    },
+    indexes: {
+      candidacyIdIndex: { universalIdentifier: 'b2b2c3c3-f001-4a02-8c02-ac11e000f001' },
+      searchAssignmentIdIndex: { universalIdentifier: 'b2b2c3c3-f002-4a02-8c02-ac11e000f002' },
+      compensationExpectationIdIndex: { universalIdentifier: 'b2b2c3c3-f003-4a02-8c02-ac11e000f003' },
+    },
+    views: {
+      offerNegotiationRecordPageFields: {
+        universalIdentifier: 'b2b2c3c3-d001-4a02-8c02-ac11e000d001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'b2b2c3c3-d101-4a02-8c02-ac11e000d101' },
+          system: { universalIdentifier: 'b2b2c3c3-d102-4a02-8c02-ac11e000d102' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'b2b2c3c3-c001-4a02-8c02-ac11e000c001' },
+          status: { universalIdentifier: 'b2b2c3c3-c002-4a02-8c02-ac11e000c002' },
+          offerAmount: { universalIdentifier: 'b2b2c3c3-c003-4a02-8c02-ac11e000c003' },
+          currencyCode: { universalIdentifier: 'b2b2c3c3-c004-4a02-8c02-ac11e000c004' },
+          equityTerms: { universalIdentifier: 'b2b2c3c3-c005-4a02-8c02-ac11e000c005' },
+          bonusTerms: { universalIdentifier: 'b2b2c3c3-c006-4a02-8c02-ac11e000c006' },
+          proposedStartDate: { universalIdentifier: 'b2b2c3c3-c007-4a02-8c02-ac11e000c007' },
+          acceptedSalary: { universalIdentifier: 'b2b2c3c3-c008-4a02-8c02-ac11e000c008' },
+          acceptedTotalCompensation: { universalIdentifier: 'b2b2c3c3-c009-4a02-8c02-ac11e000c009' },
+          candidacy: { universalIdentifier: 'b2b2c3c3-c00a-4a02-8c02-ac11e000c00a' },
+          searchAssignment: { universalIdentifier: 'b2b2c3c3-c00b-4a02-8c02-ac11e000c00b' },
+          compensationExpectation: { universalIdentifier: 'b2b2c3c3-c00c-4a02-8c02-ac11e000c00c' },
+          createdAt: { universalIdentifier: 'b2b2c3c3-c00d-4a02-8c02-ac11e000c00d' },
+          createdBy: { universalIdentifier: 'b2b2c3c3-c00e-4a02-8c02-ac11e000c00e' },
+        },
+      },
+    },
+  },
+  placement: {
+    universalIdentifier: 'c3c3d4d4-c0e3-4a03-8c03-ac11e0000001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'c3c3d4d4-c0e3-4a03-8c03-ac11e0000001',
+      ),
+      name: { universalIdentifier: 'c3c3d4d4-e001-4a03-8c03-ac11e000e001' },
+      status: { universalIdentifier: 'c3c3d4d4-e002-4a03-8c03-ac11e000e002' },
+      placementDate: { universalIdentifier: 'c3c3d4d4-e003-4a03-8c03-ac11e000e003' },
+      startDate: { universalIdentifier: 'c3c3d4d4-e004-4a03-8c03-ac11e000e004' },
+      endDate: { universalIdentifier: 'c3c3d4d4-e005-4a03-8c03-ac11e000e005' },
+      feeAmount: { universalIdentifier: 'c3c3d4d4-e006-4a03-8c03-ac11e000e006' },
+      feeCurrencyCode: { universalIdentifier: 'c3c3d4d4-e007-4a03-8c03-ac11e000e007' },
+      feeType: { universalIdentifier: 'c3c3d4d4-e008-4a03-8c03-ac11e000e008' },
+      feeCalculation: { universalIdentifier: 'c3c3d4d4-e009-4a03-8c03-ac11e000e009' },
+      commissionableAmount: { universalIdentifier: 'c3c3d4d4-e00a-4a03-8c03-ac11e000e00a' },
+      invoiceReference: { universalIdentifier: 'c3c3d4d4-e00b-4a03-8c03-ac11e000e00b' },
+      guaranteePeriodMonths: { universalIdentifier: 'c3c3d4d4-e00c-4a03-8c03-ac11e000e00c' },
+      guaranteeEndDate: { universalIdentifier: 'c3c3d4d4-e00d-4a03-8c03-ac11e000e00d' },
+      billingContact: { universalIdentifier: 'c3c3d4d4-e00e-4a03-8c03-ac11e000e00e' },
+      billingContactId: { universalIdentifier: 'c3c3d4d4-e00f-4a03-8c03-ac11e000e00f' },
+      placementConfirmedBy: { universalIdentifier: 'c3c3d4d4-e010-4a03-8c03-ac11e000e010' },
+      placementConfirmedById: { universalIdentifier: 'c3c3d4d4-e011-4a03-8c03-ac11e000e011' },
+      candidacy: { universalIdentifier: 'c3c3d4d4-e012-4a03-8c03-ac11e000e012' },
+      candidacyId: { universalIdentifier: 'c3c3d4d4-e013-4a03-8c03-ac11e000e013' },
+      offerNegotiation: { universalIdentifier: 'c3c3d4d4-e014-4a03-8c03-ac11e000e014' },
+      offerNegotiationId: { universalIdentifier: 'c3c3d4d4-e015-4a03-8c03-ac11e000e015' },
+      searchAssignment: { universalIdentifier: 'c3c3d4d4-e016-4a03-8c03-ac11e000e016' },
+      searchAssignmentId: { universalIdentifier: 'c3c3d4d4-e017-4a03-8c03-ac11e000e017' },
+    },
+    indexes: {
+      candidacyIdIndex: { universalIdentifier: 'c3c3d4d4-f001-4a03-8c03-ac11e000f001' },
+      searchAssignmentIdIndex: { universalIdentifier: 'c3c3d4d4-f002-4a03-8c03-ac11e000f002' },
+      offerNegotiationIdIndex: { universalIdentifier: 'c3c3d4d4-f003-4a03-8c03-ac11e000f003' },
+    },
+    views: {
+      placementRecordPageFields: {
+        universalIdentifier: 'c3c3d4d4-d001-4a03-8c03-ac11e000d001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'c3c3d4d4-d101-4a03-8c03-ac11e000d101' },
+          system: { universalIdentifier: 'c3c3d4d4-d102-4a03-8c03-ac11e000d102' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'c3c3d4d4-c001-4a03-8c03-ac11e000c001' },
+          status: { universalIdentifier: 'c3c3d4d4-c002-4a03-8c03-ac11e000c002' },
+          placementDate: { universalIdentifier: 'c3c3d4d4-c003-4a03-8c03-ac11e000c003' },
+          startDate: { universalIdentifier: 'c3c3d4d4-c004-4a03-8c03-ac11e000c004' },
+          feeAmount: { universalIdentifier: 'c3c3d4d4-c005-4a03-8c03-ac11e000c005' },
+          feeCurrencyCode: { universalIdentifier: 'c3c3d4d4-c006-4a03-8c03-ac11e000c006' },
+          invoiceReference: { universalIdentifier: 'c3c3d4d4-c007-4a03-8c03-ac11e000c007' },
+          guaranteePeriodMonths: { universalIdentifier: 'c3c3d4d4-c008-4a03-8c03-ac11e000c008' },
+          guaranteeEndDate: { universalIdentifier: 'c3c3d4d4-c009-4a03-8c03-ac11e000c009' },
+          billingContact: { universalIdentifier: 'c3c3d4d4-c00a-4a03-8c03-ac11e000c00a' },
+          candidacy: { universalIdentifier: 'c3c3d4d4-c00b-4a03-8c03-ac11e000c00b' },
+          offerNegotiation: { universalIdentifier: 'c3c3d4d4-c00c-4a03-8c03-ac11e000c00c' },
+          searchAssignment: { universalIdentifier: 'c3c3d4d4-c00d-4a03-8c03-ac11e000c00d' },
+          createdAt: { universalIdentifier: 'c3c3d4d4-c00e-4a03-8c03-ac11e000c00e' },
+          createdBy: { universalIdentifier: 'c3c3d4d4-c00f-4a03-8c03-ac11e000c00f' },
+        },
+      },
+    },
+  },
+  guaranteeCase: {
+    universalIdentifier: 'd4d4e5e5-c0e4-4a04-8c04-ac11e0000001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'd4d4e5e5-c0e4-4a04-8c04-ac11e0000001',
+      ),
+      name: { universalIdentifier: 'd4d4e5e5-e001-4a04-8c04-ac11e000e001' },
+      status: { universalIdentifier: 'd4d4e5e5-e002-4a04-8c04-ac11e000e002' },
+      activeFrom: { universalIdentifier: 'd4d4e5e5-e003-4a04-8c04-ac11e000e003' },
+      activeUntil: { universalIdentifier: 'd4d4e5e5-e004-4a04-8c04-ac11e000e004' },
+      guaranteeType: { universalIdentifier: 'd4d4e5e5-e005-4a04-8c04-ac11e000e005' },
+      claimFiledAt: { universalIdentifier: 'd4d4e5e5-e006-4a04-8c04-ac11e000e006' },
+      claimReason: { universalIdentifier: 'd4d4e5e5-e007-4a04-8c04-ac11e000e007' },
+      claimAmount: { universalIdentifier: 'd4d4e5e5-e008-4a04-8c04-ac11e000e008' },
+      claimCurrencyCode: { universalIdentifier: 'd4d4e5e5-e009-4a04-8c04-ac11e000e009' },
+      claimOutcome: { universalIdentifier: 'd4d4e5e5-e00a-4a04-8c04-ac11e000e00a' },
+      claimResolvedAt: { universalIdentifier: 'd4d4e5e5-e00b-4a04-8c04-ac11e000e00b' },
+      placement: { universalIdentifier: 'd4d4e5e5-e00c-4a04-8c04-ac11e000e00c' },
+      placementId: { universalIdentifier: 'd4d4e5e5-e00d-4a04-8c04-ac11e000e00d' },
+      replacementPlacement: { universalIdentifier: 'd4d4e5e5-e00e-4a04-8c04-ac11e000e00e' },
+      replacementPlacementId: { universalIdentifier: 'd4d4e5e5-e00f-4a04-8c04-ac11e000e00f' },
+      searchAssignment: { universalIdentifier: 'd4d4e5e5-e010-4a04-8c04-ac11e000e010' },
+      searchAssignmentId: { universalIdentifier: 'd4d4e5e5-e011-4a04-8c04-ac11e000e011' },
+    },
+    indexes: {
+      placementIdIndex: { universalIdentifier: 'd4d4e5e5-f001-4a04-8c04-ac11e000f001' },
+      searchAssignmentIdIndex: { universalIdentifier: 'd4d4e5e5-f002-4a04-8c04-ac11e000f002' },
+    },
+    views: {
+      guaranteeCaseRecordPageFields: {
+        universalIdentifier: 'd4d4e5e5-d001-4a04-8c04-ac11e000d001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'd4d4e5e5-d101-4a04-8c04-ac11e000d101' },
+          system: { universalIdentifier: 'd4d4e5e5-d102-4a04-8c04-ac11e000d102' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'd4d4e5e5-c001-4a04-8c04-ac11e000c001' },
+          status: { universalIdentifier: 'd4d4e5e5-c002-4a04-8c04-ac11e000c002' },
+          activeFrom: { universalIdentifier: 'd4d4e5e5-c003-4a04-8c04-ac11e000c003' },
+          activeUntil: { universalIdentifier: 'd4d4e5e5-c004-4a04-8c04-ac11e000c004' },
+          guaranteeType: { universalIdentifier: 'd4d4e5e5-c005-4a04-8c04-ac11e000c005' },
+          claimFiledAt: { universalIdentifier: 'd4d4e5e5-c006-4a04-8c04-ac11e000c006' },
+          claimAmount: { universalIdentifier: 'd4d4e5e5-c007-4a04-8c04-ac11e000c007' },
+          claimCurrencyCode: { universalIdentifier: 'd4d4e5e5-c008-4a04-8c04-ac11e000c008' },
+          claimOutcome: { universalIdentifier: 'd4d4e5e5-c009-4a04-8c04-ac11e000c009' },
+          placement: { universalIdentifier: 'd4d4e5e5-c00a-4a04-8c04-ac11e000c00a' },
+          searchAssignment: { universalIdentifier: 'd4d4e5e5-c00b-4a04-8c04-ac11e000c00b' },
+          createdAt: { universalIdentifier: 'd4d4e5e5-c00c-4a04-8c04-ac11e000c00c' },
+          createdBy: { universalIdentifier: 'd4d4e5e5-c00d-4a04-8c04-ac11e000c00d' },
         },
       },
     },

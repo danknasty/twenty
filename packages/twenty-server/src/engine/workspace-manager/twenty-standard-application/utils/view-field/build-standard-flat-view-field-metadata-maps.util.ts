@@ -40,8 +40,24 @@ import { computeStandardSearchAssignmentViewFields } from 'src/engine/workspace-
 import { computeStandardAssignmentTeamMemberViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-assignment-team-member-view-fields.util';
 import { computeStandardSearchMilestoneViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-milestone-view-fields.util';
 import { computeStandardPositionSpecificationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-position-specification-view-fields.util';
-import { computeStandardSearchCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-criterion-view-fields.util';
+import { computeStandardSearchCriterionViewFields }
+import { computeStandardSearchInterviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-interview-view-fields.util';
+import { computeStandardReferenceCheckViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-reference-check-view-fields.util';
+import { computeStandardDiligenceCheckViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-diligence-check-view-fields.util';
+import { computeStandardCompensationExpectationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-compensation-expectation-view-fields.util';
+import { computeStandardOfferNegotiationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-offer-negotiation-view-fields.util';
+import { computeStandardPlacementViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-placement-view-fields.util';
+import { computeStandardGuaranteeCaseViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-guarantee-case-view-fields.util';
+ from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-criterion-view-fields.util';
 import { type CreateStandardViewFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
+
+import { computeExecutiveAssessmentViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-executive-assessment-view-fields.util';
+import { computeCriterionEvaluationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-criterion-evaluation-view-fields.util';
+import { computeSearchSlateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-search-slate-view-fields.util';
+import { computeSlateMembershipViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-slate-membership-view-fields.util';
+import { computeCandidatePresentationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-candidate-presentation-view-fields.util';
+import { computeClientFeedbackViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-client-feedback-view-fields.util';
+import { computeSearchStatusReportViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-search-status-report-view-fields.util';
 
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldArgs<P>, 'context'>,
@@ -81,7 +97,7 @@ const STANDARD_FLAT_VIEW_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowAutomatedTrigger: computeStandardWorkflowAutomatedTriggerViewFields,
   workflowRun: computeStandardWorkflowRunViewFields,
   workflowVersion: computeStandardWorkflowVersionViewFields,
-workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFields,,
+workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFields,
 workspaceEventOutbox:
     computeStandardWorkspaceEventOutboxViewFields,
   workspaceMember: computeStandardWorkspaceMemberViewFields,
@@ -91,6 +107,22 @@ workspaceEventOutbox:
   searchMilestone: computeStandardSearchMilestoneViewFields,
   positionSpecification: computeStandardPositionSpecificationViewFields,
   searchCriterion: computeStandardSearchCriterionViewFields,
+  searchInterview: computeStandardSearchInterviewViewFields,
+  referenceCheck: computeStandardReferenceCheckViewFields,
+  diligenceCheck: computeStandardDiligenceCheckViewFields,
+  compensationExpectation: computeStandardCompensationExpectationViewFields,
+  offerNegotiation: computeStandardOfferNegotiationViewFields,
+  placement: computeStandardPlacementViewFields,
+  guaranteeCase: computeStandardGuaranteeCaseViewFields,
+
+  executiveAssessment: computeExecutiveAssessmentViewFields,
+  criterionEvaluation: computeCriterionEvaluationViewFields,
+  searchSlate: computeSearchSlateViewFields,
+  slateMembership: computeSlateMembershipViewFields,
+  candidatePresentation: computeCandidatePresentationViewFields,
+  clientFeedback: computeClientFeedbackViewFields,
+  searchStatusReport: computeSearchStatusReportViewFields,
+
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;
 };

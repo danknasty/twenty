@@ -26,6 +26,22 @@ import { computeStandardWorkspaceEventOutboxViewFieldGroups } from 'src/engine/w
 import { computeStandardWorkflowVersionViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workflow-version-view-field-groups.util';
 import { computeStandardWorkspaceEventOutboxViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workspace-event-outbox-view-field-groups.util';
 import { type CreateStandardViewFieldGroupArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
+import { computeStandardSearchInterviewViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-search-interview-view-field-groups.util';
+import { computeStandardReferenceCheckViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-reference-check-view-field-groups.util';
+import { computeStandardDiligenceCheckViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-diligence-check-view-field-groups.util';
+import { computeStandardCompensationExpectationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-compensation-expectation-view-field-groups.util';
+import { computeStandardOfferNegotiationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-offer-negotiation-view-field-groups.util';
+import { computeStandardPlacementViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-placement-view-field-groups.util';
+import { computeStandardGuaranteeCaseViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-guarantee-case-view-field-groups.util';
+
+import { computeStandardExecutiveAssessmentViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-executive-assessment-view-field-groups.util';
+import { computeStandardCriterionEvaluationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-criterion-evaluation-view-field-groups.util';
+import { computeStandardSearchSlateViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-search-slate-view-field-groups.util';
+import { computeStandardSlateMembershipViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-slate-membership-view-field-groups.util';
+import { computeStandardCandidatePresentationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-candidate-presentation-view-field-groups.util';
+import { computeStandardClientFeedbackViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-client-feedback-view-field-groups.util';
+import { computeStandardSearchStatusReportViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-search-status-report-view-field-groups.util';
+
 
 type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldGroupArgs<P>, 'context'>,
@@ -60,6 +76,18 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
     computeStandardWorkspaceEventOutboxViewFieldGroups,
   workflowVersion: computeStandardWorkflowVersionViewFieldGroups,
   workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFieldGroups,
+
+  executiveAssessment: computeStandardExecutiveAssessmentViewFieldGroups,
+  criterionEvaluation: computeStandardCriterionEvaluationViewFieldGroups,
+  searchSlate: computeStandardSearchSlateViewFieldGroups,
+  slateMembership: computeStandardSlateMembershipViewFieldGroups,
+  candidatePresentation: computeStandardCandidatePresentationViewFieldGroups,
+  clientFeedback: computeStandardClientFeedbackViewFieldGroups,
+  searchStatusReport: computeStandardSearchStatusReportViewFieldGroups,
+  compensationExpectation: computeStandardCompensationExpectationViewFieldGroups,
+  offerNegotiation: computeStandardOfferNegotiationViewFieldGroups,
+  placement: computeStandardPlacementViewFieldGroups,
+  guaranteeCase: computeStandardGuaranteeCaseViewFieldGroups,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldGroupBuilder<P>;
 };
@@ -96,6 +124,9 @@ export const buildStandardFlatViewFieldGroupMetadataMaps = (
     flatViewFieldGroupMaps = addFlatEntityToFlatEntityMapsOrThrow({
       flatEntity: viewFieldGroupMetadata,
       flatEntityMaps: flatViewFieldGroupMaps,
+  searchInterview: computeStandardSearchInterviewViewFieldGroups,
+  referenceCheck: computeStandardReferenceCheckViewFieldGroups,
+  diligenceCheck: computeStandardDiligenceCheckViewFieldGroups,
     });
   }
 

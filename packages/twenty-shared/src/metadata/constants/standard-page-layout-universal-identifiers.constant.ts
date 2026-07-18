@@ -1022,4 +1022,18 @@ universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0302',
       timeline: { universalIdentifier: '03eac2cf-0623-450d-9d54-073bf4c49e94', widgets: { timeline: { universalIdentifier: 'fb1d2320-961d-4540-b991-a014d8b74c16' }, }, },
     },
   },
+  analyticsMetricRecordPage: {
+    universalIdentifier: '21a31623-62c1-4c93-b987-95a057926824',
+    tabs: {
+      home: { universalIdentifier: '7ca58390-cac3-46cb-a77f-9ede750826c8', widgets: { fields: { universalIdentifier: 'a1501b70-2ad8-425f-94cd-4507041424df' }, }, },
+      timeline: { universalIdentifier: '41005f01-4933-4c93-8ada-6dae9d82d67d', widgets: { timeline: { universalIdentifier: 'af18f8e5-7fc7-42f4-a311-3da10bfd58de' }, }, },
+    },
+  },
+  analyticsDashboardRecordPage: {
+    universalIdentifier: 'f46e1fb3-1ab2-4e48-bb6f-fdb212c7ccee',
+    tabs: {
+      home: { universalIdentifier: '02d50911-b564-4b39-8b73-65078432eaea', widgets: { fields: { universalIdentifier: 'f8d2359f-8819-4373-b080-c6dd6d1bb5db' }, }, },
+      timeline: { universalIdentifier: '9305ffae-3c60-4af7-95f5-ce3afcecfd1b', widgets: { timeline: { universalIdentifier: '0531bb0f-e3ff-4848-91d5-7313e73ee3e4' }, }, },
+    },
+  },
 };

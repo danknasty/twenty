@@ -72,6 +72,8 @@ import { computeStandardBoardMatrixCriterionViewFields } from 'src/engine/worksp
 import { computeStandardCandidateBoardMatrixEvaluationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-candidate-board-matrix-evaluation-view-fields.util';
 import { computeStandardDirectorIndependenceReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-director-independence-review-view-fields.util';
 import { computeStandardBoardCommitmentReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-commitment-review-view-fields.util';
+import { computeAnalyticsMetricViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-analytics-metric-view-fields.util';
+import { computeAnalyticsDashboardViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-analytics-dashboard-view-fields.util';
 
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldArgs<P>, 'context'>,
@@ -150,6 +152,8 @@ boardCompositionProfile:
     computeStandardDirectorIndependenceReviewViewFields,
   boardCommitmentReview:
     computeStandardBoardCommitmentReviewViewFields,
+  analyticsMetric: computeAnalyticsMetricViewFields,
+  analyticsDashboard: computeAnalyticsDashboardViewFields,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;
 };

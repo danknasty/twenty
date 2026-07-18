@@ -558,7 +558,7 @@ description: i18nLabel(msg`Stakeholder roles tied to the person`),
       icon: 'IconReceipt',
       isNullable: true,
       targetObjectName: 'clientAccountProfile',
-      targetFieldName: 'clientBillingContact',,
+      targetFieldName: 'clientBillingContact',
 description: i18nLabel(
         msg`Client stakeholder roles held by this person`,
       ),

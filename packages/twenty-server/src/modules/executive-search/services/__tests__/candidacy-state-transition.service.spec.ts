@@ -525,8 +525,10 @@ describe('CandidacyStateTransitionService', () => {
         expect.objectContaining({
           id: 'event-1',
           candidacyId: 'candidacy-1',
+          stage: CandidacyStatus.RESEARCHING,
           stageFrom: CandidacyStatus.IDENTIFIED,
           stageTo: CandidacyStatus.RESEARCHING,
+          transitionedAt: expect.any(String),
           transitionedById: 'actor-1',
           actorKind: 'user',
           reason: 'Starting research phase',
@@ -542,8 +544,10 @@ describe('CandidacyStateTransitionService', () => {
       expect(mockStageEventRepository.insert).toHaveBeenCalledWith(
         expect.objectContaining({
           candidacyId: 'candidacy-1',
+          stage: CandidacyStatus.RESEARCHING,
           stageFrom: CandidacyStatus.IDENTIFIED,
           stageTo: CandidacyStatus.RESEARCHING,
+          transitionedAt: expect.any(String),
           transitionedById: 'actor-1',
           actorKind: 'user',
           reason: 'Starting research phase',

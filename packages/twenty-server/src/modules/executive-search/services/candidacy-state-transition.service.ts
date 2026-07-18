@@ -82,12 +82,15 @@ export class CandidacyStateTransitionService {
             );
 
             // 4. Create the stage event record
+            const transitionedAt = new Date().toISOString();
+
             const eventInsert = await stageEventRepository.insert(
               {
                 candidacyId: candidacy.id,
                 stage: to,
                 stageFrom: from,
                 stageTo: to,
+                transitionedAt,
                 transitionedById: actorId ?? null,
                 actorKind: actorKind ?? null,
                 reason: reason ?? null,
@@ -105,6 +108,7 @@ export class CandidacyStateTransitionService {
               stage: to,
               stageFrom: from,
               stageTo: to,
+              transitionedAt,
               transitionedById: actorId ?? null,
               actorKind: actorKind ?? null,
               reason: reason ?? null,

@@ -195,6 +195,8 @@ boardCompositionProfile:
   aiPromptTemplate: computeAiPromptTemplateViews,
   analyticsMetric: computeAnalyticsMetricViews,
   analyticsDashboard: computeAnalyticsDashboardViews,
+  retentionActionLog: computeRetentionActionLogViews,
+  externalIdentityMatchQueue: computeExternalIdentityMatchQueueViews,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewBuilder<P>;
 };

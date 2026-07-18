@@ -46,6 +46,9 @@ import { STANDARD_BOARD_COMPOSITION_PROFILE_PAGE_LAYOUT_CONFIG } from 'src/engin
 import { STANDARD_BOARD_MATRIX_CRITERION_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-board-matrix-criterion-page-layout.config';
 import { STANDARD_CANDIDATE_BOARD_MATRIX_EVALUATION_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-candidate-board-matrix-evaluation-page-layout.config';
 import { STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-director-independence-review-page-layout.config';
+import { STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG }
+import { STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-retention-action-log-page-layout.config';
+import { STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-external-identity-match-queue-page-layout.config';
 import { STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-board-commitment-review-page-layout.config';
 import { STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-prompt-template-page-layout.config';
 export const STANDARD_PAGE_LAYOUTS = {
@@ -125,6 +128,10 @@ export const STANDARD_PAGE_LAYOUTS = {
     STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG,
   boardCommitmentReviewRecordPage:
     STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG,
+  retentionActionLogRecordPage:
+    STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG,
+  externalIdentityMatchQueueRecordPage:
+    STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG,
   aiPromptTemplateRecordPage:
     STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG,
 } as const;

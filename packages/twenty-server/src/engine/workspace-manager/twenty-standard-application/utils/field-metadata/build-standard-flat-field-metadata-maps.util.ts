@@ -104,7 +104,11 @@ import { buildDirectorIndependenceReviewStandardFlatFieldMetadatas } from 'src/e
 import { buildBoardCommitmentReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-commitment-review-standard-flat-field-metadata.util';
 import { buildAiPromptTemplateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-prompt-template-standard-flat-field-metadata.util';
 import { buildAnalyticsMetricStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-metric-standard-flat-field-metadata.util';
-import { buildAnalyticsDashboardStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-standard-flat-field-metadata.util';
+import { buildAnalyticsDashboardStandardFlatFieldMetadatas }
+import { buildRetentionActionLogStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-retention-action-log-standard-flat-field-metadata.util';
+import { buildExternalIdentityMatchQueueStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-identity-match-queue-standard-flat-field-metadata.util';
+import { buildRetentionActionLogStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-retention-action-log-standard-flat-field-metadata.util';
+import { buildExternalIdentityMatchQueueStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-identity-match-queue-standard-flat-field-metadata.util'; from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-standard-flat-field-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardFieldArgs<P, FieldMetadataType>, 'context'>,
@@ -232,6 +236,8 @@ boardCompositionProfile:
   aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,
   analyticsMetric: buildAnalyticsMetricStandardFlatFieldMetadatas,
   analyticsDashboard: buildAnalyticsDashboardStandardFlatFieldMetadatas,
+  retentionActionLog: buildRetentionActionLogStandardFlatFieldMetadatas,
+  externalIdentityMatchQueue: buildExternalIdentityMatchQueueStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };

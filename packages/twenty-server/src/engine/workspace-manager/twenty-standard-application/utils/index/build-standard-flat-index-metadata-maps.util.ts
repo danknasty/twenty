@@ -80,7 +80,11 @@ import { buildDirectorIndependenceReviewStandardFlatIndexMetadatas } from 'src/e
 import { buildBoardCommitmentReviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-commitment-review-standard-flat-index-metadata.util';
 import { buildAiPromptTemplateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-prompt-template-standard-flat-index-metadata.util';
 import { buildAnalyticsMetricStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-metric-standard-flat-index-metadata.util';
-import { buildAnalyticsDashboardStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-dashboard-standard-flat-index-metadata.util';
+import { buildAnalyticsDashboardStandardFlatIndexMetadatas }
+import { buildRetentionActionLogStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-retention-action-log-standard-flat-index-metadata.util';
+import { buildExternalIdentityMatchQueueStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-identity-match-queue-standard-flat-index-metadata.util';
+import { buildRetentionActionLogStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-retention-action-log-standard-flat-index-metadata.util';
+import { buildExternalIdentityMatchQueueStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-identity-match-queue-standard-flat-index-metadata.util'; from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-dashboard-standard-flat-index-metadata.util';
 
 type StandardIndexBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardIndexArgs<P>, 'context'>,
@@ -175,6 +179,8 @@ boardCompositionProfile:
   aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,
   analyticsMetric: buildAnalyticsMetricStandardFlatIndexMetadatas,
   analyticsDashboard: buildAnalyticsDashboardStandardFlatIndexMetadatas,
+  retentionActionLog: buildRetentionActionLogStandardFlatIndexMetadatas,
+  externalIdentityMatchQueue: buildExternalIdentityMatchQueueStandardFlatIndexMetadatas,
 } satisfies {
   [P in AllStandardObjectName]?: StandardIndexBuilder<P>;
 };

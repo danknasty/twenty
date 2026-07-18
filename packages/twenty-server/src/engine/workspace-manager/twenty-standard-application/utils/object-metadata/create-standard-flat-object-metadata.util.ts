@@ -2075,6 +2075,76 @@ CreateStandardObjectArgs<'targetCompany'>,
       twentyStandardApplicationId,
       now,
     }),
+  retentionActionLog: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'retentionActionLog'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'retentionActionLog',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.retentionActionLog.universalIdentifier,
+        nameSingular: 'retentionActionLog',
+        namePlural: 'retentionActionLogs',
+        labelSingular: i18nLabel(msg`Retention Action Log`),
+        labelPlural: i18nLabel(msg`Retention Action Logs`),
+        description: i18nLabel(
+          msg`Append-only cross-system retention and legal-hold action log`,
+        ),
+        icon: 'IconHistory',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'scope',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  externalIdentityMatchQueue: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'externalIdentityMatchQueue'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'externalIdentityMatchQueue',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.externalIdentityMatchQueue.universalIdentifier,
+        nameSingular: 'externalIdentityMatchQueue',
+        namePlural: 'externalIdentityMatchQueues',
+        labelSingular: i18nLabel(msg`External Identity Match Queue`),
+        labelPlural: i18nLabel(msg`External Identity Match Queues`),
+        description: i18nLabel(
+          msg`Queue of ambiguous external identity matches pending human resolution`,
+        ),
+        icon: 'IconListSearch',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'externalRecordId',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
 } satisfies {
   [P in AllStandardObjectName]: (
     args: Omit<CreateStandardObjectArgs<P>, 'context' | 'objectName'>,

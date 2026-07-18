@@ -2,6 +2,306 @@
 
 exports[`STANDARD_OBJECTS universal identifiers should never change without an explicit snapshot update 1`] = `
 {
+  "aiPromptTemplate": {
+    "fields": {
+      "category": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000106",
+      },
+      "createdAt": {
+        "universalIdentifier": "2476ca51-cc0c-5b91-a08e-892a699fd0f0",
+      },
+      "createdBy": {
+        "universalIdentifier": "c3bc1251-7675-53a0-8888-2b9cc9ee682b",
+      },
+      "deletedAt": {
+        "universalIdentifier": "e16786c1-ee15-5bc2-ba93-e8243f335141",
+      },
+      "description": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000102",
+      },
+      "id": {
+        "universalIdentifier": "c25ecb4b-4cf9-5860-8cac-df5725c7566f",
+      },
+      "isActive": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000108",
+      },
+      "isApproved": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000109",
+      },
+      "modelId": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000104",
+      },
+      "name": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000101",
+      },
+      "position": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000110",
+      },
+      "promptText": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000103",
+      },
+      "responseFormat": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000105",
+      },
+      "searchVector": {
+        "universalIdentifier": "f9c25a97-4322-576a-94e2-7bec591a0cb0",
+      },
+      "updatedAt": {
+        "universalIdentifier": "33cb30b6-4917-58d3-8d23-a1fc12fbf9f3",
+      },
+      "updatedBy": {
+        "universalIdentifier": "1b381ebf-47d8-53c2-84e8-0a6ae7b6d83c",
+      },
+      "version": {
+        "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000107",
+      },
+    },
+    "indexes": {
+      "categoryIndex": {
+        "universalIdentifier": "c2d3e4f5-0002-4000-8015-c2d3e4f5001001",
+      },
+      "isActiveIndex": {
+        "universalIdentifier": "c2d3e4f5-0002-4000-8015-c2d3e4f5001003",
+      },
+      "isApprovedIndex": {
+        "universalIdentifier": "c2d3e4f5-0002-4000-8015-c2d3e4f5001004",
+      },
+      "responseFormatIndex": {
+        "universalIdentifier": "c2d3e4f5-0002-4000-8015-c2d3e4f5001002",
+      },
+    },
+    "universalIdentifier": "c2d3e4f5-0001-4000-8015-c2d3e4f5000001",
+    "views": {
+      "aiPromptTemplateRecordPageFields": {
+        "universalIdentifier": "c2d3e4f5-0031-4000-8015-c2d3e4f5002002",
+        "viewFields": {},
+      },
+      "allAiPromptTemplates": {
+        "universalIdentifier": "c2d3e4f5-0030-4000-8015-c2d3e4f5002001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "c2d3e4f5-0040-4000-8015-c2d3e4f5003001",
+          },
+        },
+        "viewFields": {
+          "category": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004002",
+          },
+          "createdAt": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004008",
+          },
+          "createdBy": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004009",
+          },
+          "isActive": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004006",
+          },
+          "isApproved": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004007",
+          },
+          "modelId": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004004",
+          },
+          "name": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004001",
+          },
+          "responseFormat": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004003",
+          },
+          "version": {
+            "universalIdentifier": "c2d3e4f5-0050-4000-8015-c2d3e4f5004005",
+          },
+        },
+      },
+    },
+  },
+  "analyticsDashboard": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "70d6d98a-8910-5f9e-87cd-92fbc6b17681",
+      },
+      "createdBy": {
+        "universalIdentifier": "c5dbf40d-fe7f-56ee-9578-5ca8f368a942",
+      },
+      "deletedAt": {
+        "universalIdentifier": "e89ad0e2-3eb2-5e29-afc3-a8eb38544b72",
+      },
+      "description": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000102",
+      },
+      "id": {
+        "universalIdentifier": "d8af66df-6aec-5042-9273-d860eeb425ae",
+      },
+      "isDefault": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000104",
+      },
+      "layoutConfig": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000103",
+      },
+      "metrics": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000106",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000101",
+      },
+      "position": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000105",
+      },
+      "searchVector": {
+        "universalIdentifier": "5ad37fc5-9f15-5c32-b519-abd0d5f94b6f",
+      },
+      "updatedAt": {
+        "universalIdentifier": "679d318f-e932-5b38-b7bb-afb8f86bcf7f",
+      },
+      "updatedBy": {
+        "universalIdentifier": "543ee4e4-a2bb-5d0b-854a-939e0f138814",
+      },
+    },
+    "indexes": {
+      "isDefaultIndex": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0002001",
+      },
+    },
+    "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000001",
+    "views": {
+      "allAnalyticsDashboards": {
+        "universalIdentifier": "aeb1a014-0032-4000-8014-aeb1a0003001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a014-0042-4000-8014-aeb1a0004001",
+          },
+        },
+        "viewFields": {
+          "createdAt": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005004",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005005",
+          },
+          "isDefault": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005002",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005001",
+          },
+          "position": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005003",
+          },
+        },
+      },
+      "analyticsDashboardRecordPageFields": {
+        "universalIdentifier": "aeb1a014-0033-4000-8014-aeb1a0003002",
+        "viewFields": {},
+      },
+    },
+  },
+  "analyticsMetric": {
+    "fields": {
+      "aggregationField": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000105",
+      },
+      "createdAt": {
+        "universalIdentifier": "4d918157-dbda-5fe3-b4fc-675db1372f59",
+      },
+      "createdBy": {
+        "universalIdentifier": "14ec125b-0b8c-5ae5-bc4b-b53dc55cad18",
+      },
+      "dashboardId": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000110",
+      },
+      "deletedAt": {
+        "universalIdentifier": "e690f406-5f2e-5c15-9858-3a19fd59113d",
+      },
+      "description": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000102",
+      },
+      "filterDefinition": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000106",
+      },
+      "id": {
+        "universalIdentifier": "c9baed43-ad5d-541f-9851-7715e812332a",
+      },
+      "isActive": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000108",
+      },
+      "metricType": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000103",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000101",
+      },
+      "position": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000109",
+      },
+      "searchVector": {
+        "universalIdentifier": "d25931d1-7ee6-5d7a-85e5-445222395750",
+      },
+      "sourceObjectName": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000104",
+      },
+      "unit": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000107",
+      },
+      "updatedAt": {
+        "universalIdentifier": "923eadc9-1f4f-57c5-bd7b-a0401b7e4423",
+      },
+      "updatedBy": {
+        "universalIdentifier": "ede4f6c3-75a6-548d-bb00-d1e711814b64",
+      },
+    },
+    "indexes": {
+      "dashboardIdIndex": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0001001",
+      },
+      "isActiveIndex": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0001003",
+      },
+      "metricTypeIndex": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0001002",
+      },
+    },
+    "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000001",
+    "views": {
+      "allAnalyticsMetrics": {
+        "universalIdentifier": "aeb1a014-0030-4000-8014-aeb1a0002001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a014-0040-4000-8014-aeb1a0003001",
+          },
+        },
+        "viewFields": {
+          "createdAt": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004007",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004008",
+          },
+          "isActive": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004005",
+          },
+          "metricType": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004002",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004001",
+          },
+          "position": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004006",
+          },
+          "sourceObjectName": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004003",
+          },
+          "unit": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004004",
+          },
+        },
+      },
+      "analyticsMetricRecordPageFields": {
+        "universalIdentifier": "aeb1a014-0031-4000-8014-aeb1a0002002",
+        "viewFields": {},
+      },
+    },
+  },
   "assignmentTeamMember": {
     "fields": {
       "assignment": {

@@ -42,5 +42,10 @@ export { BoardCompositionTargetBoardType } from './board-composition-target-boar
 export { BoardMatrixCriterionCategory } from './board-matrix-criterion-category.enum';
 export { DirectorIndependenceReviewStatus } from './director-independence-review-status.enum';
 export { BoardCommitmentReviewStatus } from './board-commitment-review-status.enum';
+export { IdentityMatchConfidence } from './identity-match-confidence.enum';
+export { IdentityMatchResolution } from './identity-match-resolution.enum';
+export { RetentionActionType } from './retention-action-type.enum';
+export { FieldOwnershipAuthority } from './field-ownership-authority.enum';
+export { CutoverStage } from './cutover-stage.enum';
 export { AiPromptCategory } from './ai-prompt-category.enum';
 export { AiResponseFormat } from './ai-response-format.enum';

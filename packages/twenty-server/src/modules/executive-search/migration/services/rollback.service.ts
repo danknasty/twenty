@@ -55,7 +55,10 @@ export class RollbackService {
         dryRun,
       );
 
-      return { revertedFields: diff ?? [], dryRun };
+      return {
+        revertedFields: diff.changes.map((c) => c.collection),
+        dryRun,
+      };
     });
   }
 

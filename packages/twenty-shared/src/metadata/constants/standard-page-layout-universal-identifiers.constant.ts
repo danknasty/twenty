@@ -630,7 +630,7 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
       },
     },
   },
-clientAccountProfileRecordPage: {
+  clientAccountProfileRecordPage: {
     universalIdentifier: '20202020-f3a8-4632-8543-c49beb879d43',
     tabs: {
       home: {

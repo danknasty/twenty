@@ -1,8 +1,38 @@
-import { type AllStandardObjectName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-name.type';
-import { type FlatView } from 'src/engine/metadata-modules/flat-view/types/flat-view.type';
-import { type CreateStandardViewArgs, createStandardViewFlatMetadata, } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/create-standard-view-flat-metadata.util';
+import { ViewType, ViewKey } from 'twenty-shared/types';
 
-export const computeStandardDirectorIndependenceReviewViews = ({ context, }: Omit<CreateStandardViewArgs<'directorIndependenceReview'>, 'context'>): Record<string, FlatView> => ({
-  allDirectorIndependenceReviews: createStandardViewFlatMetadata({ args: { objectName: 'directorIndependenceReview' as AllStandardObjectName, context: { viewName: 'All Director Independence Reviews', viewType: 'TABLE', key: 'INDEX', }, }, context, }),
-  directorIndependenceReviewRecordPageFields: createStandardViewFlatMetadata({ args: { objectName: 'directorIndependenceReview' as AllStandardObjectName, context: { viewName: 'Director Independence Review Record Page Fields', viewType: 'FIELDS_WIDGET', key: 'INDEX', }, }, context, }),
-});
+import { type FlatView } from 'src/engine/metadata-modules/flat-view/types/flat-view.type';
+import {
+  createStandardViewFlatMetadata,
+  type CreateStandardViewArgs,
+} from 'src/engine/workspace-manager/twenty-standard-application/utils/view/create-standard-view-flat-metadata.util';
+
+export const computeStandardDirectorIndependenceReviewViews = (
+  args: Omit<CreateStandardViewArgs<'directorIndependenceReview'>, 'context'>,
+): Record<string, FlatView> => {
+  return {
+    allDirectorIndependenceReviews: createStandardViewFlatMetadata({
+      ...args,
+      objectName: 'directorIndependenceReview',
+      context: {
+        viewName: 'allDirectorIndependenceReviews',
+        name: 'All {objectLabelPlural}',
+        type: ViewType.TABLE,
+        key: ViewKey.INDEX,
+        position: 0,
+        icon: 'IconList',
+      },
+    }),
+    directorIndependenceReviewRecordPageFields: createStandardViewFlatMetadata({
+      ...args,
+      objectName: 'directorIndependenceReview',
+      context: {
+        viewName: 'directorIndependenceReviewRecordPageFields',
+        name: 'Director Independence Review Record Page Fields',
+        type: ViewType.FIELDS_WIDGET,
+        key: null,
+        position: 0,
+        icon: 'IconList',
+      },
+    }),
+  };
+};

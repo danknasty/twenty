@@ -1,0 +1,12 @@
+import { type AllStandardObjectName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-name.type';
+import { type FlatViewField } from 'src/engine/metadata-modules/flat-view-field/types/flat-view-field.type';
+import { type CreateStandardViewFieldArgs, createStandardViewFieldFlatMetadata, } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
+
+export const computeStandardAiProviderCallLogViewFields = ({ context, }: Omit<CreateStandardViewFieldArgs<'aiProviderCallLog'>, 'context'>): Record<string, FlatViewField> => ({
+  name: createStandardViewFieldFlatMetadata({ args: { objectName: 'aiProviderCallLog' as AllStandardObjectName, context: { viewName: 'aiProviderCallLogRecordPageFields', viewFieldName: 'name', fieldName: 'name', position: 0, isVisible: true, size: 200, viewFieldGroupName: 'general', }, }, context, }),
+  requestId: createStandardViewFieldFlatMetadata({ args: { objectName: 'aiProviderCallLog' as AllStandardObjectName, context: { viewName: 'aiProviderCallLogRecordPageFields', viewFieldName: 'requestId', fieldName: 'requestId', position: 1, isVisible: true, size: 200, viewFieldGroupName: 'general', }, }, context, }),
+  providerName: createStandardViewFieldFlatMetadata({ args: { objectName: 'aiProviderCallLog' as AllStandardObjectName, context: { viewName: 'aiProviderCallLogRecordPageFields', viewFieldName: 'providerName', fieldName: 'providerName', position: 2, isVisible: true, size: 150, viewFieldGroupName: 'general', }, }, context, }),
+  modelId: createStandardViewFieldFlatMetadata({ args: { objectName: 'aiProviderCallLog' as AllStandardObjectName, context: { viewName: 'aiProviderCallLogRecordPageFields', viewFieldName: 'modelId', fieldName: 'modelId', position: 3, isVisible: true, size: 200, viewFieldGroupName: 'general', }, }, context, }),
+  status: createStandardViewFieldFlatMetadata({ args: { objectName: 'aiProviderCallLog' as AllStandardObjectName, context: { viewName: 'aiProviderCallLogRecordPageFields', viewFieldName: 'status', fieldName: 'status', position: 4, isVisible: true, size: 150, viewFieldGroupName: 'general', }, }, context, }),
+  calledAt: createStandardViewFieldFlatMetadata({ args: { objectName: 'aiProviderCallLog' as AllStandardObjectName, context: { viewName: 'aiProviderCallLogRecordPageFields', viewFieldName: 'calledAt', fieldName: 'calledAt', position: 5, isVisible: true, size: 200, viewFieldGroupName: 'general', }, }, context, }),
+});

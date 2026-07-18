@@ -264,7 +264,7 @@ export const buildAiPromptTemplateStandardFlatFieldMetadatas = ({
       label: i18nLabel(msg`Response Format`),
       description: i18nLabel(msg`Expected response format from the model`),
       icon: 'IconBraces',
-      isNullable: true,
+      isNullable: false,
       isUIEditable: true,
       defaultValue: "'TEXT'",
       options: [
@@ -278,7 +278,7 @@ export const buildAiPromptTemplateStandardFlatFieldMetadatas = ({
         {
           id: 'c1a10030-0060-4000-8030-c1a100000502',
           value: 'JSON',
-          label: i18nLabel(msg`Json`),
+          label: i18nLabel(msg`JSON`),
           position: 1,
           color: 'purple',
         },

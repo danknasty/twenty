@@ -7,7 +7,7 @@ export class AiPromptTemplateWorkspaceEntity extends BaseWorkspaceEntity {
   description: string | null;
   promptText: string;
   modelId: string | null;
-  responseFormat: AiResponseFormat | null;
+  responseFormat: AiResponseFormat;
   category: AiPromptCategory | null;
   version: string | null;
   isActive: boolean;

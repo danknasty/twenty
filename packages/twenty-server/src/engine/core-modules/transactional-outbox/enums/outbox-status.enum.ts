@@ -1,0 +1,6 @@
+export enum OutboxStatus {
+  PENDING = 'PENDING',
+  IN_PROGRESS = 'IN_PROGRESS',
+  DELIVERED = 'DELIVERED',
+  DEAD_LETTERED = 'DEAD_LETTERED',
+}

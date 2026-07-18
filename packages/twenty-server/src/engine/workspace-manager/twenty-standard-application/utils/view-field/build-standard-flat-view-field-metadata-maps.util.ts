@@ -13,6 +13,8 @@ import { computeStandardClientAccountProfileViewFields } from 'src/engine/worksp
 import { computeStandardClientStakeholderRoleViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-client-stakeholder-role-view-fields.util';
 import { computeStandardCompanyViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-company-view-fields.util';
 import { computeStandardDashboardViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-dashboard-view-fields.util';
+import { computeStandardExecutiveProfileViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-executive-profile-view-fields.util';
+import { computeStandardExternalEntityLinkViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-external-entity-link-view-fields.util';
 import { computeStandardMessageCampaignViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-message-campaign-view-fields.util';
 import { computeStandardMessageChannelMessageAssociationMessageFolderViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-message-channel-message-association-message-folder-view-fields.util';
 import { computeStandardMessageChannelMessageAssociationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-message-channel-message-association-view-fields.util';
@@ -31,6 +33,7 @@ import { computeStandardWorkflowAutomatedTriggerViewFields } from 'src/engine/wo
 import { computeStandardWorkflowRunViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-workflow-run-view-fields.util';
 import { computeStandardWorkflowVersionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-workflow-version-view-fields.util';
 import { computeStandardWorkflowViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-workflow-view-fields.util';
+import { computeStandardWorkspaceEventOutboxViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-workspace-event-outbox-view-fields.util';
 import { computeStandardWorkspaceMemberViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-workspace-member-view-fields.util';
 import { computeStandardSearchEngagementTermsViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-engagement-terms-view-fields.util';
 import { computeStandardSearchAssignmentViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-assignment-view-fields.util';
@@ -56,6 +59,8 @@ const STANDARD_FLAT_VIEW_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   clientStakeholderRole: computeStandardClientStakeholderRoleViewFields,
   company: computeStandardCompanyViewFields,
   dashboard: computeStandardDashboardViewFields,
+  executiveProfile: computeStandardExecutiveProfileViewFields,
+  externalEntityLink: computeStandardExternalEntityLinkViewFields,
   message: computeStandardMessageViewFields,
   messageCampaign: computeStandardMessageCampaignViewFields,
   messageChannelMessageAssociation:
@@ -76,6 +81,7 @@ const STANDARD_FLAT_VIEW_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowAutomatedTrigger: computeStandardWorkflowAutomatedTriggerViewFields,
   workflowRun: computeStandardWorkflowRunViewFields,
   workflowVersion: computeStandardWorkflowVersionViewFields,
+  workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFields,
   workspaceMember: computeStandardWorkspaceMemberViewFields,
   searchEngagementTerms: computeStandardSearchEngagementTermsViewFields,
   searchAssignment: computeStandardSearchAssignmentViewFields,

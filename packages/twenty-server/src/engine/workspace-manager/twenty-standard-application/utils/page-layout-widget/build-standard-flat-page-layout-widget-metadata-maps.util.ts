@@ -74,6 +74,8 @@ const RECORD_PAGE_FIELDS_VIEW_NAME_BY_OBJECT: Partial<
   clientAccountProfile: 'clientAccountProfileRecordPageFields',
   clientStakeholderRole: 'clientStakeholderRoleRecordPageFields',
   company: 'companyRecordPageFields',
+  executiveProfile: 'executiveProfileRecordPageFields',
+  externalEntityLink: 'externalEntityLinkRecordPageFields',
   messageChannelMessageAssociation:
     'messageChannelMessageAssociationRecordPageFields',
   messageChannelMessageAssociationMessageFolder:

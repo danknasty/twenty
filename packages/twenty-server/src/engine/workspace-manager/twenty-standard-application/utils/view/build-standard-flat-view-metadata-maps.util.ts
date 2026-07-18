@@ -24,7 +24,9 @@ import {
   computeStandardExecutiveLanguageViews,
   computeStandardExecutiveProfileViews,
   computeStandardExecutiveSearchPreferenceViews,
-} from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-executive-views.util';
+} from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-executive-views.util';,
+import { computeStandardExecutiveProfileViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-executive-profile-views.util';
+import { computeStandardExternalEntityLinkViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-external-entity-link-views.util';
 import { computeStandardMessageCampaignViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-message-campaign-views.util';
 import { computeStandardMessageChannelMessageAssociationMessageFolderViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-message-channel-message-association-message-folder-views.util';
 import { computeStandardMessageChannelMessageAssociationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-message-channel-message-association-views.util';
@@ -43,6 +45,7 @@ import { computeStandardWorkflowAutomatedTriggerViews } from 'src/engine/workspa
 import { computeStandardWorkflowRunViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-workflow-run-views.util';
 import { computeStandardWorkflowVersionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-workflow-version-views.util';
 import { computeStandardWorkflowViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-workflow-views.util';
+import { computeStandardWorkspaceEventOutboxViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-workspace-event-outbox-views.util';
 import { computeStandardWorkspaceMemberViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-workspace-member-views.util';
 import { computeStandardSearchEngagementTermsViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-engagement-terms-views.util';
 import { computeStandardSearchAssignmentViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-assignment-views.util';
@@ -81,7 +84,7 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
     computeStandardConfidentialityRecordViews,
   conflictCheck: computeStandardConflictCheckViews,
   dashboard: computeStandardDashboardViews,
-  executiveArtifact: computeStandardExecutiveArtifactViews,
+executiveArtifact: computeStandardExecutiveArtifactViews,
   executiveAward: computeStandardExecutiveAwardViews,
   executiveBoardService: computeStandardExecutiveBoardServiceViews,
   executiveCapability: computeStandardExecutiveCapabilityViews,
@@ -91,7 +94,9 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   executiveLanguage: computeStandardExecutiveLanguageViews,
   executiveProfile: computeStandardExecutiveProfileViews,
   executiveSearchPreference: computeStandardExecutiveSearchPreferenceViews,
-  marketMap: computeStandardMarketMapViews,
+  marketMap: computeStandardMarketMapViews,,
+executiveProfile: computeStandardExecutiveProfileViews,
+  externalEntityLink: computeStandardExternalEntityLinkViews,
   message: computeStandardMessageViews,
   messageCampaign: computeStandardMessageCampaignViews,
   messageChannelMessageAssociation:
@@ -118,6 +123,7 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowAutomatedTrigger: computeStandardWorkflowAutomatedTriggerViews,
   workflowRun: computeStandardWorkflowRunViews,
   workflowVersion: computeStandardWorkflowVersionViews,
+  workspaceEventOutbox: computeStandardWorkspaceEventOutboxViews,
   workspaceMember: computeStandardWorkspaceMemberViews,
   searchEngagementTerms: computeStandardSearchEngagementTermsViews,
   searchAssignment: computeStandardSearchAssignmentViews,

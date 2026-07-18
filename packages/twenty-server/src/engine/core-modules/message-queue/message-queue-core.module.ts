@@ -20,6 +20,7 @@ import {
   ConfigurableModuleClass,
   type OPTIONS_TYPE,
 } from 'src/engine/core-modules/message-queue/message-queue.module-definition';
+import { DeadLetterRedriveService } from 'src/engine/core-modules/message-queue/services/dead-letter-redrive.service';
 import { MessageQueueService } from 'src/engine/core-modules/message-queue/services/message-queue.service';
 import { getQueueToken } from 'src/engine/core-modules/message-queue/utils/get-queue-token.util';
 import { MetricsModule } from 'src/engine/core-modules/metrics/metrics.module';
@@ -32,11 +33,16 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
   static register(options: typeof OPTIONS_TYPE): DynamicModule {
     const dynamicModule = super.register(options);
 
+    const driver = this.createDriver(options);
+
     const driverProvider: Provider = {
       provide: QUEUE_DRIVER,
-      useFactory: () => {
-        return this.createDriver(options);
-      },
+      useValue: driver,
+    };
+
+    const bullMqDriverProvider: Provider = {
+      provide: BullMQDriver,
+      useValue: driver instanceof BullMQDriver ? driver : null,
     };
 
     const queueProviders = this.createQueueProviders();
@@ -46,6 +52,8 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
       providers: [
         ...(dynamicModule.providers ?? []),
         driverProvider,
+        bullMqDriverProvider,
+        DeadLetterRedriveService,
         ...queueProviders,
       ],
       exports: [
@@ -74,6 +82,22 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
       inject: options.inject || [],
     };
 
+    const bullMqDriverProvider: Provider = {
+      provide: BullMQDriver,
+      // oxlint-disable-next-line typescript/no-explicit-any
+      useFactory: async (...args: any[]) => {
+        if (options.useFactory) {
+          const config = await options.useFactory(...args);
+          const driver = this.createDriver(config);
+
+          return driver instanceof BullMQDriver ? driver : null;
+        }
+
+        return null;
+      },
+      inject: options.inject || [],
+    };
+
     const queueProviders = MessageQueueCoreModule.createQueueProviders();
 
     return {
@@ -82,6 +106,8 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
       providers: [
         ...(dynamicModule.providers ?? []),
         driverProvider,
+        bullMqDriverProvider,
+        DeadLetterRedriveService,
         ...queueProviders,
       ],
       exports: [
@@ -93,7 +119,7 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
     };
   }
 
-  static async createDriver(config: typeof OPTIONS_TYPE) {
+  static createDriver(config: typeof OPTIONS_TYPE) {
     switch (config.type) {
       case MessageQueueDriverType.BullMQ: {
         return new BullMQDriver(

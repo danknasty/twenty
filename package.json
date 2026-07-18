@@ -110,5 +110,8 @@
     "singleQuote": true,
     "trailingComma": "all",
     "endOfLine": "lf"
+  },
+  "dependencies": {
+    "expr-eval-fork": "^3.0.3"
   }
 }

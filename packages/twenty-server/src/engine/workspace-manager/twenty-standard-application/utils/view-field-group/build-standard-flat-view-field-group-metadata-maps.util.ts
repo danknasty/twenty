@@ -11,6 +11,8 @@ import { computeStandardCallRecordingViewFieldGroups } from 'src/engine/workspac
 import { computeStandardClientAccountProfileViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-client-account-profile-view-field-groups.util';
 import { computeStandardClientStakeholderRoleViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-client-stakeholder-role-view-field-groups.util';
 import { computeStandardCompanyViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-company-view-field-groups.util';
+import { computeStandardExecutiveProfileViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-executive-profile-view-field-groups.util';
+import { computeStandardExternalEntityLinkViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-external-entity-link-view-field-groups.util';
 import { computeStandardMessageChannelMessageAssociationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-message-channel-message-association-view-field-groups.util';
 import { computeStandardMessageChannelMessageAssociationMessageFolderViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-message-channel-message-association-message-folder-view-field-groups.util';
 import { computeStandardMessageParticipantViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-message-participant-view-field-groups.util';
@@ -21,6 +23,7 @@ import { computeStandardTaskViewFieldGroups } from 'src/engine/workspace-manager
 import { computeStandardWorkflowAutomatedTriggerViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workflow-automated-trigger-view-field-groups.util';
 import { computeStandardWorkflowRunViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workflow-run-view-field-groups.util';
 import { computeStandardWorkflowVersionViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workflow-version-view-field-groups.util';
+import { computeStandardWorkspaceEventOutboxViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workspace-event-outbox-view-field-groups.util';
 import { type CreateStandardViewFieldGroupArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
 
 type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
@@ -38,6 +41,8 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
   clientAccountProfile: computeStandardClientAccountProfileViewFieldGroups,
   clientStakeholderRole: computeStandardClientStakeholderRoleViewFieldGroups,
   company: computeStandardCompanyViewFieldGroups,
+  executiveProfile: computeStandardExecutiveProfileViewFieldGroups,
+  externalEntityLink: computeStandardExternalEntityLinkViewFieldGroups,
   messageChannelMessageAssociation:
     computeStandardMessageChannelMessageAssociationViewFieldGroups,
   messageChannelMessageAssociationMessageFolder:
@@ -51,6 +56,7 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
     computeStandardWorkflowAutomatedTriggerViewFieldGroups,
   workflowRun: computeStandardWorkflowRunViewFieldGroups,
   workflowVersion: computeStandardWorkflowVersionViewFieldGroups,
+  workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFieldGroups,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldGroupBuilder<P>;
 };

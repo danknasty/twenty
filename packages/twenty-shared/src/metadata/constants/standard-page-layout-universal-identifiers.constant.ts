@@ -630,7 +630,7 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
       },
     },
   },
-  clientAccountProfileRecordPage: {
+clientAccountProfileRecordPage: {
     universalIdentifier: '20202020-f3a8-4632-8543-c49beb879d43',
     tabs: {
       home: {
@@ -643,21 +643,33 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
             universalIdentifier: '20202020-4b08-45c3-b8d5-b8c617e41c98',
           },
           clientBillingContact: {
-            universalIdentifier: '20202020-171b-4d2f-a171-5432bfa119d3',
+            universalIdentifier: '20202020-171b-4d2f-a171-5432bfa119d3',,
+executiveProfileRecordPage: {
+    universalIdentifier: 'c0b29e38-404f-4e58-a8e9-b37fc59b46df',
+    tabs: {
+      home: {
+        universalIdentifier: '9d16eb67-95ca-425d-adb5-65a318c5b6a2',
+        widgets: {
+          fields: {
+            universalIdentifier: 'bf979ebc-024a-4a4f-807f-54892bcc0e31',
           },
         },
       },
       timeline: {
-        universalIdentifier: '20202020-57a8-46b0-ae1a-5647d44e9a64',
+universalIdentifier: '20202020-57a8-46b0-ae1a-5647d44e9a64',
         widgets: {
           timeline: {
-            universalIdentifier: '20202020-6b5d-4bf5-9378-c1fd73bb615f',
+            universalIdentifier: '20202020-6b5d-4bf5-9378-c1fd73bb615f',,
+universalIdentifier: '145b6419-3a1f-43d0-9224-f42099b475ee',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'ff8dea87-f478-4b22-8e1c-682804dfe120',
           },
         },
       },
     },
   },
-  clientStakeholderRoleRecordPage: {
+clientStakeholderRoleRecordPage: {
     universalIdentifier: '20202020-01bb-4f16-bc9c-f8f8ed921b69',
     tabs: {
       home: {
@@ -673,15 +685,27 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
             universalIdentifier: '20202020-51ed-48fa-b6cd-29b0ae385775',
           },
           clientAccountProfile: {
-            universalIdentifier: '20202020-830b-4654-99ba-a2fa232b0f01',
+            universalIdentifier: '20202020-830b-4654-99ba-a2fa232b0f01',,
+externalEntityLinkRecordPage: {
+    universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0300',
+    tabs: {
+      home: {
+        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0301',
+        widgets: {
+          fields: {
+            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0311',
           },
         },
       },
       timeline: {
-        universalIdentifier: '20202020-2209-432d-bd55-8e189ed4c3dd',
+universalIdentifier: '20202020-2209-432d-bd55-8e189ed4c3dd',
         widgets: {
           timeline: {
-            universalIdentifier: '20202020-65a0-4abe-8739-17ab1783d1d8',
+            universalIdentifier: '20202020-65a0-4abe-8739-17ab1783d1d8',,
+universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0302',
+        widgets: {
+          timeline: {
+            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0321',
           },
         },
       },

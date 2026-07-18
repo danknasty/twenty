@@ -650,6 +650,7 @@ clientAccountProfileRecordPage: {
     },
   },
   executiveProfileRecordPage: {
+executiveProfileRecordPage: {
     universalIdentifier: 'c0b29e38-404f-4e58-a8e9-b37fc59b46df',
     tabs: {
       home: {
@@ -662,6 +663,11 @@ clientAccountProfileRecordPage: {
       },
       timeline: {
         universalIdentifier: '145b6419-3a1f-43d0-9224-f42099b475ee',
+universalIdentifier: '20202020-57a8-46b0-ae1a-5647d44e9a64',
+        widgets: {
+          timeline: {
+            universalIdentifier: '20202020-6b5d-4bf5-9378-c1fd73bb615f',
+universalIdentifier: '145b6419-3a1f-43d0-9224-f42099b475ee',
         widgets: {
           timeline: {
             universalIdentifier: 'ff8dea87-f478-4b22-8e1c-682804dfe120',
@@ -693,6 +699,7 @@ clientAccountProfileRecordPage: {
     },
   },
   externalEntityLinkRecordPage: {
+externalEntityLinkRecordPage: {
     universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0300',
     tabs: {
       home: {
@@ -705,6 +712,11 @@ clientAccountProfileRecordPage: {
       },
       timeline: {
         universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0302',
+universalIdentifier: '20202020-2209-432d-bd55-8e189ed4c3dd',
+        widgets: {
+          timeline: {
+            universalIdentifier: '20202020-65a0-4abe-8739-17ab1783d1d8',
+universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0302',
         widgets: {
           timeline: {
             universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0321',
@@ -721,6 +733,105 @@ clientAccountProfileRecordPage: {
         widgets: {
           fields: {
             universalIdentifier: 'aeb1c000-6003-4e18-b24d-cdb5d3178603',
+  searchInterviewRecordPage: {
+    standardObjectName: 'searchInterview',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1d000-b001-4000-a000-000000000001',
+        widgets: { fields: { universalIdentifier: 'aeb1d000-b101-4000-a000-000000000101' } },
+      },
+      timeline: {
+        universalIdentifier: 'aeb1d000-b002-4000-a000-000000000002',
+        widgets: { timeline: { universalIdentifier: 'aeb1d000-b102-4000-a000-000000000102' } },
+      },
+    },
+  },
+  referenceCheckRecordPage: {
+    standardObjectName: 'referenceCheck',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1e000-b001-4000-a000-000000000001',
+        widgets: { fields: { universalIdentifier: 'aeb1e000-b101-4000-a000-000000000101' } },
+      },
+      timeline: {
+        universalIdentifier: 'aeb1e000-b002-4000-a000-000000000002',
+        widgets: { timeline: { universalIdentifier: 'aeb1e000-b102-4000-a000-000000000102' } },
+      },
+    },
+  },
+  diligenceCheckRecordPage: {
+    standardObjectName: 'diligenceCheck',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1f000-b001-4000-a000-000000000001',
+        widgets: { fields: { universalIdentifier: 'aeb1f000-b101-4000-a000-000000000101' } },
+      },
+      timeline: {
+        universalIdentifier: 'aeb1f000-b002-4000-a000-000000000002',
+        widgets: { timeline: { universalIdentifier: 'aeb1f000-b102-4000-a000-000000000102' } },
+      },
+    },
+  },
+  compensationExpectationRecordPage: {
+    standardObjectName: 'compensationExpectation',
+    tabs: {
+      home: {
+        universalIdentifier: '20202020-a1e8-4001-8001-e0a0e0a00001',
+        widgets: { fields: { universalIdentifier: '20202020-a1e8-4001-8001-e0a0e0a00101' } },
+      },
+      timeline: {
+        universalIdentifier: '20202020-a1e8-4001-8001-e0a0e0a00002',
+        widgets: { timeline: { universalIdentifier: '20202020-a1e8-4001-8001-e0a0e0a00102' } },
+      },
+    },
+  },
+  offerNegotiationRecordPage: {
+    standardObjectName: 'offerNegotiation',
+    tabs: {
+      home: {
+        universalIdentifier: '20202020-a1e9-4002-8002-e0a0e0a00001',
+        widgets: { fields: { universalIdentifier: '20202020-a1e9-4002-8002-e0a0e0a00101' } },
+      },
+      timeline: {
+        universalIdentifier: '20202020-a1e9-4002-8002-e0a0e0a00002',
+        widgets: { timeline: { universalIdentifier: '20202020-a1e9-4002-8002-e0a0e0a00102' } },
+      },
+    },
+  },
+  placementRecordPage: {
+    standardObjectName: 'placement',
+    tabs: {
+      home: {
+        universalIdentifier: '20202020-a1ea-4003-8003-e0a0e0a00001',
+        widgets: { fields: { universalIdentifier: '20202020-a1ea-4003-8003-e0a0e0a00101' } },
+      },
+      timeline: {
+        universalIdentifier: '20202020-a1ea-4003-8003-e0a0e0a00002',
+        widgets: { timeline: { universalIdentifier: '20202020-a1ea-4003-8003-e0a0e0a00102' } },
+      },
+    },
+  },
+  guaranteeCaseRecordPage: {
+    standardObjectName: 'guaranteeCase',
+    tabs: {
+      home: {
+        universalIdentifier: '20202020-a1eb-4004-8004-e0a0e0a00001',
+        widgets: { fields: { universalIdentifier: '20202020-a1eb-4004-8004-e0a0e0a00101' } },
+      },
+      timeline: {
+        universalIdentifier: '20202020-a1eb-4004-8004-e0a0e0a00002',
+        widgets: { timeline: { universalIdentifier: '20202020-a1eb-4004-8004-e0a0e0a00102' } },
+      },
+    },
+  },
+  executiveAssessmentRecordPage: {
+    universalIdentifier: 'aeb1a001-a100-4000-8001-aeb1a0008001',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1a001-a110-4000-8001-aeb1a0008101',
+        widgets: {
+          fields: {
+            universalIdentifier: 'aeb1a001-a111-4000-8001-aeb1a0008111',
           },
         },
       },
@@ -729,6 +840,10 @@ clientAccountProfileRecordPage: {
         widgets: {
           timeline: {
             universalIdentifier: 'aeb1c000-6005-4e18-b24d-cdb5d3178605',
+        universalIdentifier: 'aeb1a001-a120-4000-8001-aeb1a0008201',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'aeb1a001-a121-4000-8001-aeb1a0008211',
           },
         },
       },
@@ -742,6 +857,14 @@ clientAccountProfileRecordPage: {
         widgets: {
           fields: {
             universalIdentifier: 'f0e1d2c3-b101-4c6d-8e7f-9a0b1c2d3101',
+  criterionEvaluationRecordPage: {
+    universalIdentifier: 'aeb1a002-a100-4000-8002-aeb1a0008001',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1a002-a110-4000-8002-aeb1a0008101',
+        widgets: {
+          fields: {
+            universalIdentifier: 'aeb1a002-a111-4000-8002-aeb1a0008111',
           },
         },
       },
@@ -750,6 +873,115 @@ clientAccountProfileRecordPage: {
         widgets: {
           timeline: {
             universalIdentifier: 'f0e1d2c3-b102-4c6d-8e7f-9a0b1c2d3102',
+        universalIdentifier: 'aeb1a002-a120-4000-8002-aeb1a0008201',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'aeb1a002-a121-4000-8002-aeb1a0008211',
+          },
+        },
+      },
+    },
+  },
+  searchSlateRecordPage: {
+    universalIdentifier: 'aeb1a003-a100-4000-8003-aeb1a0008001',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1a003-a110-4000-8003-aeb1a0008101',
+        widgets: {
+          fields: {
+            universalIdentifier: 'aeb1a003-a111-4000-8003-aeb1a0008111',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'aeb1a003-a120-4000-8003-aeb1a0008201',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'aeb1a003-a121-4000-8003-aeb1a0008211',
+          },
+        },
+      },
+    },
+  },
+  slateMembershipRecordPage: {
+    universalIdentifier: 'aeb1a004-a100-4000-8004-aeb1a0008001',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1a004-a110-4000-8004-aeb1a0008101',
+        widgets: {
+          fields: {
+            universalIdentifier: 'aeb1a004-a111-4000-8004-aeb1a0008111',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'aeb1a004-a120-4000-8004-aeb1a0008201',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'aeb1a004-a121-4000-8004-aeb1a0008211',
+          },
+        },
+      },
+    },
+  },
+  candidatePresentationRecordPage: {
+    universalIdentifier: 'aeb1a005-a100-4000-8005-aeb1a0008001',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1a005-a110-4000-8005-aeb1a0008101',
+        widgets: {
+          fields: {
+            universalIdentifier: 'aeb1a005-a111-4000-8005-aeb1a0008111',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'aeb1a005-a120-4000-8005-aeb1a0008201',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'aeb1a005-a121-4000-8005-aeb1a0008211',
+          },
+        },
+      },
+    },
+  },
+  clientFeedbackRecordPage: {
+    universalIdentifier: 'aeb1a006-a100-4000-8006-aeb1a0008001',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1a006-a110-4000-8006-aeb1a0008101',
+        widgets: {
+          fields: {
+            universalIdentifier: 'aeb1a006-a111-4000-8006-aeb1a0008111',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'aeb1a006-a120-4000-8006-aeb1a0008201',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'aeb1a006-a121-4000-8006-aeb1a0008211',
+          },
+        },
+      },
+    },
+  },
+  searchStatusReportRecordPage: {
+    universalIdentifier: 'aeb1a007-a100-4000-8007-aeb1a0008001',
+    tabs: {
+      home: {
+        universalIdentifier: 'aeb1a007-a110-4000-8007-aeb1a0008101',
+        widgets: {
+          fields: {
+            universalIdentifier: 'aeb1a007-a111-4000-8007-aeb1a0008111',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'aeb1a007-a120-4000-8007-aeb1a0008201',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'aeb1a007-a121-4000-8007-aeb1a0008211',
           },
         },
       },

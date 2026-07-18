@@ -28,6 +28,20 @@ import {
   STANDARD_WORKFLOW_VERSION_PAGE_LAYOUT_CONFIG,
   STANDARD_SEARCH_CANDIDACY_PAGE_LAYOUT_CONFIG,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config';
+import { STANDARD_SEARCH_INTERVIEW_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-search-interview-page-layout.config';
+import { STANDARD_REFERENCE_CHECK_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-reference-check-page-layout.config';
+import { STANDARD_DILIGENCE_CHECK_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-diligence-check-page-layout.config';
+import { STANDARD_EXECUTIVE_ASSESSMENT_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-executive-assessment-page-layout.config';
+import { STANDARD_CRITERION_EVALUATION_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-criterion-evaluation-page-layout.config';
+import { STANDARD_SEARCH_SLATE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-search-slate-page-layout.config';
+import { STANDARD_SLATE_MEMBERSHIP_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-slate-membership-page-layout.config';
+import { STANDARD_CANDIDATE_PRESENTATION_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-candidate-presentation-page-layout.config';
+import { STANDARD_CLIENT_FEEDBACK_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-client-feedback-page-layout.config';
+import { STANDARD_SEARCH_STATUS_REPORT_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-search-status-report-page-layout.config';
+import { STANDARD_COMPENSATION_EXPECTATION_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-compensation-expectation-page-layout.config';
+import { STANDARD_OFFER_NEGOTIATION_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-offer-negotiation-page-layout.config';
+import { STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-placement-page-layout.config';
+import { STANDARD_GUARANTEE_CASE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-guarantee-case-page-layout.config';
 import { type StandardRecordPageLayouts } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-page-layout-config.type';
 
 export const STANDARD_PAGE_LAYOUTS = {
@@ -69,6 +83,34 @@ export const STANDARD_PAGE_LAYOUTS = {
   workflowVersionRecordPage: STANDARD_WORKFLOW_VERSION_PAGE_LAYOUT_CONFIG,
   workflowRunRecordPage: STANDARD_WORKFLOW_RUN_PAGE_LAYOUT_CONFIG,
   searchCandidacyRecordPage: STANDARD_SEARCH_CANDIDACY_PAGE_LAYOUT_CONFIG,
+  searchInterviewRecordPage:
+    STANDARD_SEARCH_INTERVIEW_PAGE_LAYOUT_CONFIG,
+  referenceCheckRecordPage:
+    STANDARD_REFERENCE_CHECK_PAGE_LAYOUT_CONFIG,
+  diligenceCheckRecordPage:
+    STANDARD_DILIGENCE_CHECK_PAGE_LAYOUT_CONFIG,
+  executiveAssessmentRecordPage:
+    STANDARD_EXECUTIVE_ASSESSMENT_PAGE_LAYOUT_CONFIG,
+  criterionEvaluationRecordPage:
+    STANDARD_CRITERION_EVALUATION_PAGE_LAYOUT_CONFIG,
+  searchSlateRecordPage:
+    STANDARD_SEARCH_SLATE_PAGE_LAYOUT_CONFIG,
+  slateMembershipRecordPage:
+    STANDARD_SLATE_MEMBERSHIP_PAGE_LAYOUT_CONFIG,
+  candidatePresentationRecordPage:
+    STANDARD_CANDIDATE_PRESENTATION_PAGE_LAYOUT_CONFIG,
+  clientFeedbackRecordPage:
+    STANDARD_CLIENT_FEEDBACK_PAGE_LAYOUT_CONFIG,
+  searchStatusReportRecordPage:
+    STANDARD_SEARCH_STATUS_REPORT_PAGE_LAYOUT_CONFIG,
+  compensationExpectationRecordPage:
+    STANDARD_COMPENSATION_EXPECTATION_PAGE_LAYOUT_CONFIG,
+  offerNegotiationRecordPage:
+    STANDARD_OFFER_NEGOTIATION_PAGE_LAYOUT_CONFIG,
+  placementRecordPage:
+    STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG,
+  guaranteeCaseRecordPage:
+    STANDARD_GUARANTEE_CASE_PAGE_LAYOUT_CONFIG,
 } as const;
 
 const { myFirstDashboard: _myFirstDashboard, ...recordPageLayouts } =

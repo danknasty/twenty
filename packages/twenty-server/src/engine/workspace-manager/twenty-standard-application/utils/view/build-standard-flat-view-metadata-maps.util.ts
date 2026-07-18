@@ -55,6 +55,15 @@ import { computeStandardSearchMilestoneViews } from 'src/engine/workspace-manage
 import { computeStandardPositionSpecificationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-position-specification-views.util';
 import { computeStandardSearchCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';
 import { computeStandardSearchCandidacyViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-candidacy-views.util';
+import { computeStandardSearchCriterionViews }
+import { computeStandardSearchInterviewViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-interview-views.util';
+import { computeStandardReferenceCheckViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-reference-check-views.util';
+import { computeStandardDiligenceCheckViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-diligence-check-views.util';
+import { computeStandardCompensationExpectationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-compensation-expectation-views.util';
+import { computeStandardOfferNegotiationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-offer-negotiation-views.util';
+import { computeStandardPlacementViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-placement-views.util';
+import { computeStandardGuaranteeCaseViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-guarantee-case-views.util';
+ from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';,
 import {
   computeStandardConfidentialityRecordViews,
   computeStandardConflictCheckViews,
@@ -66,6 +75,14 @@ import {
   computeStandardTargetCompanyViews,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-research-offlimits-views.util';
 import { type CreateStandardViewArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/create-standard-view-flat-metadata.util';
+
+import { computeExecutiveAssessmentViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-executive-assessment-views.util';
+import { computeCriterionEvaluationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-criterion-evaluation-views.util';
+import { computeSearchSlateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-search-slate-views.util';
+import { computeSlateMembershipViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-slate-membership-views.util';
+import { computeCandidatePresentationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-candidate-presentation-views.util';
+import { computeClientFeedbackViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-client-feedback-views.util';
+import { computeSearchStatusReportViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-search-status-report-views.util';
 
 type StandardViewBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewArgs<P>, 'context'>,
@@ -96,7 +113,7 @@ executiveArtifact: computeStandardExecutiveArtifactViews,
   executiveLanguage: computeStandardExecutiveLanguageViews,
   executiveProfile: computeStandardExecutiveProfileViews,
   executiveSearchPreference: computeStandardExecutiveSearchPreferenceViews,
-  marketMap: computeStandardMarketMapViews,,
+  marketMap: computeStandardMarketMapViews,
 executiveProfile: computeStandardExecutiveProfileViews,
   externalEntityLink: computeStandardExternalEntityLinkViews,
   message: computeStandardMessageViews,
@@ -135,6 +152,22 @@ executiveProfile: computeStandardExecutiveProfileViews,
   positionSpecification: computeStandardPositionSpecificationViews,
   searchCriterion: computeStandardSearchCriterionViews,
   searchCandidacy: computeStandardSearchCandidacyViews,
+  searchInterview: computeStandardSearchInterviewViews,
+  referenceCheck: computeStandardReferenceCheckViews,
+  diligenceCheck: computeStandardDiligenceCheckViews,
+
+  executiveAssessment: computeExecutiveAssessmentViews,
+  criterionEvaluation: computeCriterionEvaluationViews,
+  searchSlate: computeSearchSlateViews,
+  slateMembership: computeSlateMembershipViews,
+  candidatePresentation: computeCandidatePresentationViews,
+  clientFeedback: computeClientFeedbackViews,
+  searchStatusReport: computeSearchStatusReportViews,
+  compensationExpectation: computeStandardCompensationExpectationViews,
+  offerNegotiation: computeStandardOfferNegotiationViews,
+  placement: computeStandardPlacementViews,
+  guaranteeCase: computeStandardGuaranteeCaseViews,
+
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewBuilder<P>;
 };

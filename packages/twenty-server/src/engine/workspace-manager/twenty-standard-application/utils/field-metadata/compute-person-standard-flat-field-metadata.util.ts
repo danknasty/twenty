@@ -592,4 +592,26 @@ description: i18nLabel(
     twentyStandardApplicationId,
     now,
   }),
+  candidacies: createStandardRelationFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      type: FieldMetadataType.RELATION,
+      morphId: null,
+      fieldName: 'candidacies',
+      label: i18nLabel(msg`Candidacies`),
+      description: i18nLabel(msg`Candidacies for this person`),
+      icon: 'IconUserSearch',
+      isNullable: true,
+      targetObjectName: 'searchCandidacy',
+      targetFieldName: 'person',
+      settings: {
+        relationType: RelationType.ONE_TO_MANY,
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
 });

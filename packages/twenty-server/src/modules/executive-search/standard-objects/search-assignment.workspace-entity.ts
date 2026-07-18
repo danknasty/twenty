@@ -15,6 +15,7 @@ import { type OpportunityWorkspaceEntity } from 'src/modules/opportunity/standar
 import { type PositionSpecificationWorkspaceEntity } from './position-specification.workspace-entity';
 import { type SearchEngagementTermsWorkspaceEntity } from './search-engagement-terms.workspace-entity';
 import { type SearchMilestoneWorkspaceEntity } from './search-milestone.workspace-entity';
+import { type SearchCandidacyWorkspaceEntity } from './search-candidacy.workspace-entity';
 
 export class SearchAssignmentWorkspaceEntity extends BaseWorkspaceEntity {
   name: string;
@@ -33,6 +34,7 @@ export class SearchAssignmentWorkspaceEntity extends BaseWorkspaceEntity {
   engagementTermsId: string | null;
   positionSpecification: EntityRelation<PositionSpecificationWorkspaceEntity> | null;
   positionSpecificationId: string | null;
+  candidacies: EntityRelation<SearchCandidacyWorkspaceEntity[]>;
   teamMembers: EntityRelation<AssignmentTeamMemberWorkspaceEntity[]>;
   milestones: EntityRelation<SearchMilestoneWorkspaceEntity[]>;
   taskTargets: EntityRelation<TaskTargetWorkspaceEntity[]>;

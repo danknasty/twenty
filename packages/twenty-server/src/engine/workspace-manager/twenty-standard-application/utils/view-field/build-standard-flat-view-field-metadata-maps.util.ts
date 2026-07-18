@@ -9,6 +9,7 @@ import { computeStandardCalendarChannelEventAssociationViewFields } from 'src/en
 import { computeStandardCalendarEventParticipantViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-calendar-event-participant-view-fields.util';
 import { computeStandardCalendarEventViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-calendar-event-view-fields.util';
 import { computeStandardCallRecordingViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-call-recording-view-fields.util';
+import { computeStandardCandidacyStageEventViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-candidacy-stage-event-view-fields.util';
 import { computeStandardClientAccountProfileViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-client-account-profile-view-fields.util';
 import { computeStandardClientStakeholderRoleViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-client-stakeholder-role-view-fields.util';
 import { computeStandardCompanyViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-company-view-fields.util';
@@ -41,6 +42,7 @@ import { computeStandardAssignmentTeamMemberViewFields } from 'src/engine/worksp
 import { computeStandardSearchMilestoneViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-milestone-view-fields.util';
 import { computeStandardPositionSpecificationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-position-specification-view-fields.util';
 import { computeStandardSearchCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-criterion-view-fields.util';
+import { computeStandardSearchCandidacyViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-candidacy-view-fields.util';
 import { type CreateStandardViewFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
 
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
@@ -89,8 +91,10 @@ workspaceEventOutbox:
   searchAssignment: computeStandardSearchAssignmentViewFields,
   assignmentTeamMember: computeStandardAssignmentTeamMemberViewFields,
   searchMilestone: computeStandardSearchMilestoneViewFields,
+  candidacyStageEvent: computeStandardCandidacyStageEventViewFields,
   positionSpecification: computeStandardPositionSpecificationViewFields,
   searchCriterion: computeStandardSearchCriterionViewFields,
+  searchCandidacy: computeStandardSearchCandidacyViewFields,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;
 };

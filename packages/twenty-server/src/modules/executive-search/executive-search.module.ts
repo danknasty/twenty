@@ -23,6 +23,7 @@ import { ExternalSyncReconciliationWorkspaceEntity } from 'src/modules/executive
 import { AssignmentStatusTransitionService } from 'src/modules/executive-search/services/assignment-status-transition.service';
 import { ConvertOpportunityToAssignmentService } from 'src/modules/executive-search/services/convert-opportunity-to-assignment.service';
 import { OffLimitsGuardService } from 'src/modules/executive-search/services/off-limits-guard.service';
+import { CandidacyStateTransitionService } from 'src/modules/executive-search/services/candidacy-state-transition.service';
 import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-search/resolvers/convert-opportunity-to-assignment.resolver';
 
 @Module({
@@ -53,6 +54,7 @@ import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-se
     ConvertOpportunityToAssignmentService,
     AssignmentStatusTransitionService,
     OffLimitsGuardService,
+    CandidacyStateTransitionService,
     ConvertOpportunityToAssignmentResolver,
   ],
   exports: [
@@ -67,7 +69,9 @@ import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-se
     OutboundEventMapperService,
     OutboundProjectionService,
     ConvertOpportunityToAssignmentService,
+    AssignmentStatusTransitionService,
+    OffLimitsGuardService,
+    CandidacyStateTransitionService,
   ],
-})
 })
 export class ExecutiveSearchModule {}

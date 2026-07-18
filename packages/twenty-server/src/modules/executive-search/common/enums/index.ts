@@ -30,3 +30,4 @@ export { CompanySizeBand } from './company-size-band.enum';
 export { TargetCompanyTier } from './target-company-tier.enum';
 export { ResearchCandidateStatus } from './research-candidate-status.enum';
 export { ResearchCandidateTier } from './research-candidate-tier.enum';
+export { CandidacyStatus } from './candidacy-status.enum';

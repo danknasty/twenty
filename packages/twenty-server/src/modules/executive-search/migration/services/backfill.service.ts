@@ -9,8 +9,6 @@ import { ExternalIdentityMatchQueueWorkspaceEntity } from 'src/modules/executive
 import { ExternalSyncCheckpointWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-checkpoint.workspace-entity';
 import { ExternalSyncReconciliationWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-reconciliation.workspace-entity';
 import { CandidacyStageEventWorkspaceEntity } from 'src/modules/executive-search/standard-objects/candidacy-stage-event.workspace-entity';
-import { SearchInterviewWorkspaceEntity } from 'src/modules/executive-search/standard-objects/search-interview.workspace-entity';
-import { ReferenceCheckWorkspaceEntity } from 'src/modules/executive-search/standard-objects/reference-check.workspace-entity';
 import { IdentityMatchResolution } from 'src/modules/executive-search/common/enums/identity-match-resolution.enum';
 import { DirectusClientService } from 'src/modules/executive-search/directus/services/directus-client.service';
 
@@ -600,9 +598,19 @@ export class BackfillService {
       { shouldBypassPermissionChecks: true },
     );
 
-    const record = await repo.save({
-      name: `[Migration] ${entityName}`,
-    });
+    // Minimal payload: the `name` field works for most entities.
+    // Entities without a `name` column will need pair-specific handling
+    // in future refinements; for now, let the save fail with a clear error.
+    let payload: Record<string, unknown> = { name: `[Migration] ${entityName}` };
+
+    // Person entity uses a JSON name column, not a flat TEXT.
+    if (entityName === 'person') {
+      payload = {
+        name: { firstName: '[Migration]', lastName: entityName },
+      };
+    }
+
+    const record = await repo.save(payload);
 
     return String(record.id);
   }

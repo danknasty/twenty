@@ -4,7 +4,7 @@
 
 ### Current state (Phases 0–15, 18 merged; Phase 16 in progress)
 
-All standard objects through Phase 14 (analytics) are registered in the Twenty metadata system. The D3 AI Authority Checkpoint is passed (ADR-0001 accepted: Twenty-canonical). AI governance registry (PR30) is the next active phase.
+All standard objects through the AI authority checkpoint (ADR-0001) and analytics semantic layer are registered in the Twenty metadata system. AI governance registry (PR30) is the active in-progress phase. Remaining AI capabilities (PR31–34) and data migration (PR35) are queued.
 
 ### Feature flags
 

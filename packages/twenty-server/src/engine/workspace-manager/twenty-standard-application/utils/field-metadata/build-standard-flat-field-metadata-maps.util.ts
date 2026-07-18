@@ -92,7 +92,7 @@ const STANDARD_FLAT_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   clientStakeholderRole:
     buildClientStakeholderRoleStandardFlatFieldMetadatas,
   company: buildCompanyStandardFlatFieldMetadatas,
-externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
+  externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
   inboundEventLedger: buildInboundEventLedgerStandardFlatFieldMetadatas,
   outboundEventLedger: buildOutboundEventLedgerStandardFlatFieldMetadatas,
   outboxEvent: buildOutboxEventStandardFlatFieldMetadatas,
@@ -100,13 +100,13 @@ externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
   reconciliationRun: buildReconciliationRunStandardFlatFieldMetadatas,
   reconciliationFinding: buildReconciliationFindingStandardFlatFieldMetadatas,
   dashboard: buildDashboardStandardFlatFieldMetadatas,
-externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatFieldMetadatas,
+  externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatFieldMetadatas,
   externalSyncDLQ: buildExternalSyncDLQStandardFlatFieldMetadatas,
   externalSyncInbox: buildExternalSyncInboxStandardFlatFieldMetadatas,
   externalSyncOutbox: buildExternalSyncOutboxStandardFlatFieldMetadatas,
   externalSyncReconciliation:
-    buildExternalSyncReconciliationStandardFlatFieldMetadatas,,
-confidentialityRecord:
+    buildExternalSyncReconciliationStandardFlatFieldMetadatas,
+  confidentialityRecord:
     buildConfidentialityRecordStandardFlatFieldMetadatas,
   conflictCheck: buildConflictCheckStandardFlatFieldMetadatas,
   dashboard: buildDashboardStandardFlatFieldMetadatas,
@@ -158,13 +158,12 @@ executiveProfile: buildExecutiveProfileStandardFlatFieldMetadatas,
   workflowVersion: buildWorkflowVersionStandardFlatFieldMetadatas,
   workspaceEventOutbox: buildWorkspaceEventOutboxStandardFlatFieldMetadatas,
   workspaceMember: buildWorkspaceMemberStandardFlatFieldMetadatas,
-clientStakeholderRole:
+  clientStakeholderRole:
     buildClientStakeholderRoleStandardFlatFieldMetadatas,
   searchEngagementTerms:
     buildSearchEngagementTermsStandardFlatFieldMetadatas,
   clientAccountProfile:
-    buildClientAccountProfileStandardFlatFieldMetadatas,,
-searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
+    buildClientAccountProfileStandardFlatFieldMetadatas,
   searchAssignment: buildSearchAssignmentStandardFlatFieldMetadatas,
   assignmentTeamMember: buildAssignmentTeamMemberStandardFlatFieldMetadatas,
   searchMilestone: buildSearchMilestoneStandardFlatFieldMetadatas,

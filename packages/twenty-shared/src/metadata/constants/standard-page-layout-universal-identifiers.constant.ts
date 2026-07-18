@@ -1043,16 +1043,27 @@ analyticsMetricRecordPage: {
       timeline: { universalIdentifier: 'd4e5f6a7-1004-4000-9001-d4e5f6a7000004', widgets: { timeline: { universalIdentifier: 'd4e5f6a7-1005-4000-9001-d4e5f6a7000005' }, }, },
       home: { universalIdentifier: 'e38f4a6b-0001-4b7c-9d0e-000000000001', widgets: { fields: { universalIdentifier: 'f49a5b7c-0001-4c8d-0e1f-000000000001' }, }, },
       home: { universalIdentifier: 'e38f4a6b-0002-4b7c-9d0e-000000000002', widgets: { fields: { universalIdentifier: 'f49a5b7c-0002-4c8d-0e1f-000000000002' }, }, },
-      home: { universalIdentifier: 'e38f4a6b-0003-4b7c-9d0e-000000000003', widgets: { fields: { universalIdentifier: 'f49a5b7c-0003-4c8d-0e1f-000000000003' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0001-4d9e-1f2a-000000000001', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0001-4e0f-2a3b-000000000001' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0002-4d9e-1f2a-000000000002', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0002-4e0f-2a3b-000000000002' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0003-4d9e-1f2a-000000000003', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0003-4e0f-2a3b-000000000003' }, }, },
-    universalIdentifier: 'd27e3f5a-0001-4a6b-8c9d-000000000001',
-    universalIdentifier: 'd27e3f5a-0002-4a6b-8c9d-000000000002',
-    universalIdentifier: 'd27e3f5a-0003-4a6b-8c9d-000000000003',
-  analyticsDashboardConfigRecordPage: {
+    },
+  },
+  analyticsDomainMetricRecordPage: {
+    universalIdentifier: '7e4843dd-27da-4f40-9f5c-80c4a6d5adc9',
+    tabs: {
+      home: { universalIdentifier: 'd29f627e-1139-4f86-a8aa-e51a50d6988e', widgets: { fields: { universalIdentifier: 'f9a6fc85-2c7b-412e-adbf-deac83524e14' }, }, },
+      timeline: { universalIdentifier: 'a24e1f08-fad5-40f0-964d-e743996ea66b', widgets: { timeline: { universalIdentifier: '363d7c2a-f74e-4a44-bd0a-9501fa4db90e' }, }, },
+    },
+  },
   analyticsMetricSnapshotRecordPage: {
-analyticsDomainMetricRecordPage: { 85e491f154 (feat(executive-search): Phase 14 — Analytics Semantic Layer (3 standard objects + live GraphQL resolver))
+    universalIdentifier: '43b2f433-f12e-485f-8251-936eb50580f0',
+    tabs: {
+      home: { universalIdentifier: '6aefe0dd-3760-45ec-b14d-aa010b2ce9af', widgets: { fields: { universalIdentifier: '30141df7-3e90-478d-85dc-958971e5c916' }, }, },
+      timeline: { universalIdentifier: '8abdab41-6734-476d-9f53-04bf1bd3f683', widgets: { timeline: { universalIdentifier: '005d3a18-cc0f-4ab5-97c8-9bf008ce6a7a' }, }, },
+    },
+  },
+  analyticsDashboardConfigRecordPage: {
+    universalIdentifier: '36f30c8d-3733-4127-9026-0feb80e39b66',
+    tabs: {
+      home: { universalIdentifier: '795d4cee-11ab-4281-b6aa-4020e38b7a66', widgets: { fields: { universalIdentifier: 'dcf2b587-44fe-47b5-a54e-2750bbd29ead' }, }, },
+      timeline: { universalIdentifier: 'a89ba221-6329-434e-8f32-14162f46880f', widgets: { timeline: { universalIdentifier: '54ac19cf-bd0d-484d-b218-55b359c772a2' }, }, },
     },
   },
   retentionActionLogRecordPage: {

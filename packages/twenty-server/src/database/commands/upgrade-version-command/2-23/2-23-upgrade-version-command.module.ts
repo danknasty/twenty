@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { WorkspaceIteratorModule } from 'src/database/commands/command-runners/workspace-iterator.module';
 import { AddCandidacyStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1802000000000-add-candidacy-standard-objects.command';
+import { AddAnalyticsStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1803000000000-add-analytics-standard-objects.command';
 import { SyncClientCrmStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1784193573815-sync-client-crm-standard-objects.command';
 import { ApplicationModule } from 'src/engine/core-modules/application/application.module';
 import { FieldMetadataEntity } from 'src/engine/metadata-modules/field-metadata/field-metadata.entity';
@@ -23,6 +24,7 @@ import { WorkspaceMigrationRunnerModule } from 'src/engine/workspace-manager/wor
   ],
   providers: [
     AddCandidacyStandardObjectsCommand,
+    AddAnalyticsStandardObjectsCommand,
     SyncClientCrmStandardObjectsCommand,
   ],
 })

@@ -102,9 +102,10 @@ import { buildBoardMatrixCriterionStandardFlatFieldMetadatas } from 'src/engine/
 import { buildCandidateBoardMatrixEvaluationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-candidate-board-matrix-evaluation-standard-flat-field-metadata.util';
 import { buildDirectorIndependenceReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-director-independence-review-standard-flat-field-metadata.util';
 import { buildBoardCommitmentReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-commitment-review-standard-flat-field-metadata.util';
+import { buildAnalyticsDomainMetricStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-domain-metric-standard-flat-field-metadata.util';
+import { buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-metric-snapshot-standard-flat-field-metadata.util';
+import { buildAnalyticsDashboardConfigStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-config-standard-flat-field-metadata.util';
 import { buildAiPromptTemplateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-prompt-template-standard-flat-field-metadata.util';
-import { buildAnalyticsMetricStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-metric-standard-flat-field-metadata.util';
-import { buildAnalyticsDashboardStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-standard-flat-field-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardFieldArgs<P, FieldMetadataType>, 'context'>,
@@ -229,9 +230,10 @@ boardCompositionProfile:
     buildDirectorIndependenceReviewStandardFlatFieldMetadatas,
   boardCommitmentReview:
     buildBoardCommitmentReviewStandardFlatFieldMetadatas,
-  aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,
-  analyticsMetric: buildAnalyticsMetricStandardFlatFieldMetadatas,
-  analyticsDashboard: buildAnalyticsDashboardStandardFlatFieldMetadatas,
+analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatFieldMetadatas,
+  analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas,
+  analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatFieldMetadatas,
+aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };

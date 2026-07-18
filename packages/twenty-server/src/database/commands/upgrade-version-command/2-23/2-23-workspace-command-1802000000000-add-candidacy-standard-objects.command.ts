@@ -64,6 +64,44 @@ const CANDIDACY_VIEW_FIELD_UNIVERSAL_IDENTIFIERS = CANDIDACY_OBJECTS.flatMap(
     ),
 );
 
+const CANDIDACY_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = [
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchCandidacyRecordPage
+    .universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.candidacyStageEventRecordPage
+    .universalIdentifier,
+];
+
+const CANDIDACY_PAGE_LAYOUT_TAB_UNIVERSAL_IDENTIFIERS = Object.values(
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchCandidacyRecordPage.tabs,
+)
+  .map((tab) => tab.universalIdentifier)
+  .concat(
+    Object.values(
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.candidacyStageEventRecordPage
+        .tabs,
+    ).map((tab) => tab.universalIdentifier),
+  );
+
+const CANDIDACY_PAGE_LAYOUT_WIDGET_UNIVERSAL_IDENTIFIERS = Object.values(
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchCandidacyRecordPage.tabs,
+)
+  .flatMap((tab) =>
+    Object.values(tab.widgets).map(
+      (widget) => widget.universalIdentifier,
+    ),
+  )
+  .concat(
+    Object.values(
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.candidacyStageEventRecordPage
+        .tabs,
+    ).flatMap((tab) =>
+      Object.values(tab.widgets).map(
+        (widget) => widget.universalIdentifier,
+      ),
+    ),
+  );
+
+
 @RegisteredWorkspaceCommand('2.23.0', 1802000000000)
 @Command({
   name: 'upgrade:2-23:add-candidacy-standard-objects',
@@ -210,7 +248,8 @@ export class AddCandidacyStandardObjectsCommand extends ActiveOrSuspendedWorkspa
             standardFlatEntityMaps:
               standardAllFlatEntityMaps.flatPageLayoutMaps,
             existingFlatEntityMaps: flatPageLayoutMaps,
-            universalIdentifiers: [],
+            universalIdentifiers:
+              CANDIDACY_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS,
           }),
         flatEntityToDelete: [],
         flatEntityToUpdate: [],
@@ -221,7 +260,8 @@ export class AddCandidacyStandardObjectsCommand extends ActiveOrSuspendedWorkspa
             standardFlatEntityMaps:
               standardAllFlatEntityMaps.flatPageLayoutTabMaps,
             existingFlatEntityMaps: flatPageLayoutTabMaps,
-            universalIdentifiers: [],
+            universalIdentifiers:
+              CANDIDACY_PAGE_LAYOUT_TAB_UNIVERSAL_IDENTIFIERS,
           }),
         flatEntityToDelete: [],
         flatEntityToUpdate: [],
@@ -232,7 +272,8 @@ export class AddCandidacyStandardObjectsCommand extends ActiveOrSuspendedWorkspa
             standardFlatEntityMaps:
               standardAllFlatEntityMaps.flatPageLayoutWidgetMaps,
             existingFlatEntityMaps: flatPageLayoutWidgetMaps,
-            universalIdentifiers: [],
+            universalIdentifiers:
+              CANDIDACY_PAGE_LAYOUT_WIDGET_UNIVERSAL_IDENTIFIERS,
           }),
         flatEntityToDelete: [],
         flatEntityToUpdate: [],

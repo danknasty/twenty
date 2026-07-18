@@ -40,6 +40,57 @@ export const seedFeatureFlags = async ({
         workspaceId: workspaceId,
         value: false,
       },
+      // Executive Search — all default-off for production go-live gates
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_SYNC_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_DIRECTUS_INBOUND_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_DIRECTUS_OUTBOUND_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_CLIENT_PORTAL_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_AUTO_CLIENT_SHARING_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_AUTO_STAGE_CHANGES_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_RECORDING_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_EXTERNAL_ENRICHMENT_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
     ])
     .execute();
 };

@@ -73,3 +73,38 @@ The following remain default-off until their specific approved plans and exit ga
 | AC11: Baseline results                 | 00-repository-audit.md                                   | Result table with exact outcomes |
 | AC12: Formatting/links/diff            | all files                                                | Final validation pipeline        |
 | AC13: Prior-plan classification        | 01-business-model-and-personas.md                        | Manual trace                     |
+
+## Phase 18 — Security, Performance, Accessibility, Docs, Rollout
+
+PR36 covers the final production-go-live wrap-up. No new standard objects are added. This phase is documented in:
+
+- **Rollout runbook**: [`12-rollout-runbook.md`](./12-rollout-runbook.md) — Feature-flag activation sequence, verification checkpoints, rollback procedures, monitoring setup.
+- **Security audit checklist**: [`14-security-audit-checklist.md`](./14-security-audit-checklist.md) — All 18 abuse-case mitigations verified against the threat model.
+- **Performance benchmarks**: [`13-performance-benchmarks.md`](./13-performance-benchmarks.md) — Query latency targets, sync throughput targets, benchmark methodology.
+- **Accessibility compliance**: [`15-accessibility-compliance.md`](./15-accessibility-compliance.md) — WCAG 2.1 AA checklist, automated + manual testing procedures.
+
+### Feature Flags Added
+
+All executive-search capabilities are gated behind feature flags that default to `false`:
+
+| Flag | Scope |
+|---|---|
+| `IS_EXECUTIVE_SEARCH_SYNC_ENABLED` | Directus sync bridge |
+| `IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED` | Twenty → Directus publish |
+| `IS_EXECUTIVE_SEARCH_DIRECTUS_INBOUND_ENABLED` | Directus inbound writes |
+| `IS_EXECUTIVE_SEARCH_DIRECTUS_OUTBOUND_ENABLED` | Twenty outbound writes |
+| `IS_EXECUTIVE_SEARCH_CLIENT_PORTAL_ENABLED` | Client portal access |
+| `IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED` | AI-powered features (review-only) |
+| `IS_EXECUTIVE_SEARCH_AUTO_CLIENT_SHARING_ENABLED` | Automatic client sharing |
+| `IS_EXECUTIVE_SEARCH_AUTO_STAGE_CHANGES_ENABLED` | Automatic stage transitions |
+| `IS_EXECUTIVE_SEARCH_RECORDING_ENABLED` | Interview recording |
+| `IS_EXECUTIVE_SEARCH_EXTERNAL_ENRICHMENT_ENABLED` | External data enrichment |
+
+### Exit Criteria
+
+- [ ] All 18 abuse-case mitigations confirmed via security audit
+- [ ] Performance benchmarks meet targets (p95 query < 500ms, sync latency < 30s)
+- [ ] WCAG 2.1 AA accessibility baseline met
+- [ ] Rollout runbook validated in staging
+- [ ] All feature flags default-off and verified
+- [ ] Documentation consistent across all 15 numbered docs

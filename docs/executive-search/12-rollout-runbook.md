@@ -11,9 +11,9 @@ Before first feature-flag activation:
 - [ ] All 18 phases merged to `main` and deployed to staging
 - [ ] Staging environment configured with Directus sandbox
 - [ ] HMAC signing keys provisioned for Directus webhook endpoint
-- [ ] Database migrations run (`yarn workspace twenty-server database:upgrade`)
-- [ ] Snapshot tests pass (`yarn test:snapshot`)
-- [ ] Integration test suite green (`yarn workspace twenty-server test:integration`)
+- [ ] Database migrations run (`yarn workspace twenty-server database:migrate:prod`)
+- [ ] Snapshot tests pass (Planned — not yet implemented)
+- [ ] Server integration suite green: `npx nx test twenty-server` (Planned — test infrastructure TBD)
 - [ ] Seed data verified (feature flags, standard objects, roles)
 
 ---
@@ -147,7 +147,7 @@ All gates must be verified before Phase 18 is considered complete:
 - [ ] Gate 5: Client portal verified (isolation confirmed)
 - [ ] Gate 6: AI capabilities verified (human-review gates confirmed)
 - [ ] Gate 7: Automatic features verified
-- [ ] Security audit: All 15 abuse-case mitigations confirmed
+- [ ] Security audit: All 18 abuse-case mitigations confirmed
 - [ ] Performance: Query p95 < 500ms, sync latency < 30s
 - [ ] Accessibility: WCAG 2.1 AA baseline met
 - [ ] Documentation: All phase docs consistent and up to date

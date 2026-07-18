@@ -82,14 +82,14 @@ From `08-ai-governance.md`:
 ## Automated Verification Script
 
 ```bash
-# Run the security audit test suite
-yarn workspace twenty-server test:security-audit
+# Run the security audit test suite (Planned — not yet implemented)
+# npx nx test:security-audit twenty-server
 
 # Check for secret patterns in logs
 grep -r "secret\|password\|token\|key" packages/twenty-server/src --include="*.ts" \
   | grep -v "test\|spec\|mock\|fixture" \
   | grep "console.log\|logger.log\|logger.info"
 
-# Verify feature flags all default-off
-yarn workspace twenty-server test:feature-flags --default-off
+# Verify feature flags all default-off (Planned — not yet implemented)
+# npx nx test:feature-flags twenty-server
 ```

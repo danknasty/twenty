@@ -4,9 +4,8 @@ export const DEFAULT_FEATURE_FLAGS = [
   FeatureFlagKey.IS_REST_METADATA_API_NEW_FORMAT_DIRECT,
 ] as const satisfies FeatureFlagKey[];
 
-export const EXECUTIVE_SEARCH_DEFAULT_FEATURE_FLAGS: Record<
-  FeatureFlagKey,
-  boolean
+export const EXECUTIVE_SEARCH_DEFAULT_FEATURE_FLAGS: Partial<
+  Record<FeatureFlagKey, boolean>
 > = {
   [FeatureFlagKey.IS_EXECUTIVE_SEARCH_SYNC_ENABLED]: false,
   [FeatureFlagKey.IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED]: false,

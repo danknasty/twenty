@@ -77,11 +77,11 @@ All executive-search UI surfaces in `packages/twenty-front/src/modules/` includi
 ## Automated Testing
 
 ```bash
-# Run axe-core automated accessibility audit
-yarn workspace twenty-front test:a11y
+# Run axe-core automated accessibility audit (Planned — not yet implemented)
+# npx nx test:a11y twenty-front
 
-# Run Lighthouse accessibility audit (target ≥ 90)
-yarn lighthouse http://localhost:3001 --only-categories=accessibility
+# Run Lighthouse accessibility audit (target ≥ 90) (Planned — not yet implemented)
+# npx lighthouse http://localhost:3001 --only-categories=accessibility
 ```
 
 ## Manual Testing

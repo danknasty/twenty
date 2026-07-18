@@ -6161,6 +6161,7 @@ analyticsDomainMetric: {
       tags: { universalIdentifier: 'aeb1a006-0113-4000-8001-000000000113' },
       ownerWorkspaceMemberId: { universalIdentifier: 'aeb1a006-0114-4000-8001-000000000114' },
       ownerWorkspaceMember: { universalIdentifier: 'aeb1a006-0115-4000-8001-000000000115' },
+      snapshots: { universalIdentifier: 'aeb1a006-0116-4000-8001-000000000116' },
     },
     indexes: {
       searchVectorGinIndex: { universalIdentifier: 'aeb1a006-0901-4000-8001-000000000901' },

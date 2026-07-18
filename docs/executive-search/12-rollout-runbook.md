@@ -2,7 +2,7 @@
 
 ## Executive Search OS — Production Go-Live
 
-### Current state (Phase 0–14 merged)
+### Current state (Phases 0–15, 18 merged; Phase 16 in progress)
 
 All standard objects through Phase 14 (analytics) are registered in the Twenty metadata system. The D3 AI Authority Checkpoint is passed (ADR-0001 accepted: Twenty-canonical). AI governance registry (PR30) is the next active phase.
 
@@ -51,9 +51,9 @@ The following remain **default-off** until their specific exit gates complete:
 
 ### Rollout stages
 
-1. **Staging deployment** — Deploy all merged Phase 0–16 PRs to staging
+1. **Staging deployment** — Deploy all merged phases to staging
 2. **Smoke test** — Verify standard object bootstrap, search, candidacy pipeline
-3. **Shadow sync validation** (Phase 17) — Process inbound Directus events read-only; compare projections
+3. **Shadow sync validation** — Process inbound Directus events read-only; compare projections
 4. **Data migration dry run** — Identity matching with human resolution queue
 5. **Cut-over stage 1** — Enable read-only Directus sync; external entity links created
 6. **Cut-over stage 2** — Enable field ownership cutover (staged, reversible)

@@ -105,7 +105,7 @@ externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatFieldMetadatas,
   externalSyncInbox: buildExternalSyncInboxStandardFlatFieldMetadatas,
   externalSyncOutbox: buildExternalSyncOutboxStandardFlatFieldMetadatas,
   externalSyncReconciliation:
-    buildExternalSyncReconciliationStandardFlatFieldMetadatas,,
+    buildExternalSyncReconciliationStandardFlatFieldMetadatas,
 confidentialityRecord:
     buildConfidentialityRecordStandardFlatFieldMetadatas,
   conflictCheck: buildConflictCheckStandardFlatFieldMetadatas,
@@ -123,7 +123,7 @@ confidentialityRecord:
   executiveProfile: buildExecutiveProfileStandardFlatFieldMetadatas,
   executiveSearchPreference:
     buildExecutiveSearchPreferenceStandardFlatFieldMetadatas,
-  marketMap: buildMarketMapStandardFlatFieldMetadatas,,
+  marketMap: buildMarketMapStandardFlatFieldMetadatas,
 executiveProfile: buildExecutiveProfileStandardFlatFieldMetadatas,
   externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
   messageCampaign: buildMessageCampaignStandardFlatFieldMetadatas,
@@ -163,7 +163,7 @@ clientStakeholderRole:
   searchEngagementTerms:
     buildSearchEngagementTermsStandardFlatFieldMetadatas,
   clientAccountProfile:
-    buildClientAccountProfileStandardFlatFieldMetadatas,,
+    buildClientAccountProfileStandardFlatFieldMetadatas,
 searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
   searchAssignment: buildSearchAssignmentStandardFlatFieldMetadatas,
   assignmentTeamMember: buildAssignmentTeamMemberStandardFlatFieldMetadatas,

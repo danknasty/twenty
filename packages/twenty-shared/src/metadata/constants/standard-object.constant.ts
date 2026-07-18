@@ -4102,8 +4102,6 @@ universalIdentifier: '20202020-9b60-56b8-e3f7-4f7688394d88',
       },
     },
   },
-clientStakeholderRole: {
-universalIdentifier: '20202020-6fbf-44b3-9797-60fe520e0927',
 marketMap: {
     universalIdentifier: 'e8b87567-1e12-4434-b390-1962c05388d4',
     fields: {
@@ -4482,142 +4480,9 @@ marketMap: {
       },
       searchVectorGinIndex: {
         universalIdentifier: '20202020-3216-4e8d-8221-c0a1bff7c30c',
-universalIdentifier: '20202020-a1b1-4c1d-8e1f-0a1b2c3d4e5f',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        '20202020-a1b1-4c1d-8e1f-0a1b2c3d4e5f',
-      ),
-      name: { universalIdentifier: '20202020-b1c2-4d3e-8f5a-6b7c8d9e0f1a' },
-      stakeholder: {
-        universalIdentifier: '20202020-c2d3-4e5f-8a1b-2c3d4e5f6a7b',
-      },
-      company: {
-        universalIdentifier: '20202020-d3e4-5f6a-8b1c-2d3e4f5a6b7c',
-      },
-      roleType: {
-        universalIdentifier: '20202020-e4f5-6a7b-8c1d-2e3f4a5b6c7d',
-      },
-      influenceLevel: {
-        universalIdentifier: '20202020-f5a6-7b8c-9d1e-2f3a4b5c6d7e',
-      },
-      relationshipStrength: {
-        universalIdentifier: '20202020-a6b7-8c9d-0e1f-2a3b4c5d6e7f',
-      },
-      contactPreference: {
-        universalIdentifier: '20202020-b7c8-9d0e-1f2a-3b4c5d6e7f8a',
-      },
-      isPrimary: {
-        universalIdentifier: '20202020-c8d9-0e1f-2a3b-4c5d6e7f8a9b',
-      },
-      contactNotes: {
-        universalIdentifier: '20202020-d9e0-1f2a-3b4c-5d6e7f8a9b0c',
-      },
-      owner: {
-        universalIdentifier: '20202020-c4d5-6e7f-8a9b-0c1d2e3f4a5b',
       },
     },
-    indexes: {
-      companyIdIndex: {
-        universalIdentifier: 'd1e2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a',
-      },
-      stakeholderIdIndex: {
-        universalIdentifier: 'b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e',
-      },
-      roleTypeIndex: {
-        universalIdentifier: 'c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f',
-      },
-    },
-    views: {
-      allClientStakeholderRoles: {
-universalIdentifier: '20202020-5ba2-49d0-a586-2a7777dddb21',
-        viewFields: {
-          name: {
-            universalIdentifier: '20202020-e5a4-4d0e-af34-3fea62f4ee93',
-          },
-          person: {
-            universalIdentifier: '20202020-924c-4563-94f8-806662c1df8e',
-          },
-          company: {
-            universalIdentifier: '20202020-35a8-4bae-b7c7-dd3d0e8e44f1',
-          },
-          role: {
-            universalIdentifier: '20202020-c7a7-4eb4-9e6b-8131cbd532f3',
-          },
-          isPrimary: {
-            universalIdentifier: '20202020-fbfd-4e1a-8efe-3c401c02cf86',
-          },
-          createdAt: {
-            universalIdentifier: '20202020-040c-45e6-a55b-9d4045b3b376',
-universalIdentifier: 'd4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a',
-        viewFields: {
-          name: {
-            universalIdentifier: 'b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e',
-          },
-          stakeholder: {
-            universalIdentifier: 'c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f',
-          },
-          company: {
-            universalIdentifier: 'd0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a',
-          },
-          roleType: {
-            universalIdentifier: 'e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b',
-          },
-          influenceLevel: {
-            universalIdentifier: 'f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c',
-          },
-        },
-      },
-      clientStakeholderRoleRecordPageFields: {
-universalIdentifier: '20202020-caea-4ffc-8579-f666f5cf3ce0',
-        viewFieldGroups: {
-          general: {
-            universalIdentifier: '20202020-e766-4273-83ae-f970a12f72c4',
-          },
-          relations: {
-            universalIdentifier: '20202020-eba4-4201-bcba-ce802da6c20f',
-          },
-          system: {
-            universalIdentifier: '20202020-c78d-471d-9885-e0e08600d5e4',
-universalIdentifier: 'e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b',
-        viewFieldGroups: {
-          general: {
-            universalIdentifier: 'f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c',
-          },
-          system: {
-            universalIdentifier: 'a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d',
-          },
-        },
-        viewFields: {
-          name: {
-universalIdentifier: '20202020-ec8e-4a8b-8ce3-b831bab9db6e',
-          },
-          person: {
-            universalIdentifier: '20202020-f377-43b5-af98-dc7e2861c15c',
-          },
-          company: {
-            universalIdentifier: '20202020-2e50-419d-85ff-2f8b57fd6faf',
-          },
-          role: {
-            universalIdentifier: '20202020-7036-4307-9e08-274616b9d9c0',
-          },
-          isPrimary: {
-            universalIdentifier: '20202020-9e5e-4b40-8755-974ca93e3aa0',
-          },
-          notes: {
-            universalIdentifier: '20202020-9845-4773-b802-96e73c1288a1',
-          },
-          clientAccountProfile: {
-            universalIdentifier: '20202020-944c-4dff-b19b-13a19c1c8d4e',
-          },
-          createdAt: {
-            universalIdentifier: '20202020-23fa-4e05-9df1-8500cc682117',
-          },
-          updatedAt: {
-            universalIdentifier: '20202020-8a00-43f4-8864-be66c70cd93f',
-          },
-        },
-      },
-    },
+  },
 outboxEvent: {
     universalIdentifier: '1ea65bc5-3b7c-49e7-8565-c7b2e005de3f',
     fields: {

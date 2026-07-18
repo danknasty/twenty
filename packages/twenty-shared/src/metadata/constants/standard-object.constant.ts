@@ -7405,7 +7405,7 @@ analyticsDomainMetric: {
       promptTemplates: { universalIdentifier: '1a51e249-8d1a-415f-b92e-b2339cda51ef' },
       appAgents: { universalIdentifier: 'b7f2879a-7023-4380-a835-b6aafd7e9382' },
     },
-    indexes: { modelIdIndex: { universalIdentifier: 'e9b67777-adba-4638-88d5-200ed268f354' }, statusIndex: { universalIdentifier: 'b84fd68a-3d3a-4a05-aa08-310a1456ea20' }, providerNameIndex: { universalIdentifier: '75cf4fae-c53a-4256-9690-c3a403de7bca' }, isCurrentIndex: { universalIdentifier: 'f9c4ec19-d608-44f4-8852-3ebacc51d798' }, },
+    indexes: { searchVectorGinIndex: { universalIdentifier: '0dbcaff2-f49b-4dea-b3e6-cdb820d89ad6' }, modelIdIndex: { universalIdentifier: 'e9b67777-adba-4638-88d5-200ed268f354' }, statusIndex: { universalIdentifier: 'b84fd68a-3d3a-4a05-aa08-310a1456ea20' }, providerNameIndex: { universalIdentifier: '75cf4fae-c53a-4256-9690-c3a403de7bca' }, isCurrentIndex: { universalIdentifier: 'f9c4ec19-d608-44f4-8852-3ebacc51d798' }, },
     views: {
       allAiModelRegistries: { universalIdentifier: 'c46cedf8-3cad-4028-b514-f5e1e932ce83', viewFields: { name: { universalIdentifier: '359b5d11-8608-4ff3-b1e1-d181c5c84c11' }, modelId: { universalIdentifier: '4490354f-0813-4252-8aa2-36cce2be6f35' }, providerName: { universalIdentifier: '0d10fe84-8245-4c8f-892f-26eb48a11e87' }, status: { universalIdentifier: '0a43a2ac-3501-4f2f-a78d-ef86ab37157d' }, isCurrent: { universalIdentifier: '1f3403f7-19f5-457d-bb32-a309248515b2' } }, viewFieldGroups: { general: { universalIdentifier: '66096b6c-2234-4c01-8e6d-297da336e612' } } },
       aiModelRegistryRecordPageFields: { universalIdentifier: '2f65f02a-b283-4eac-9914-9843af7cc700', viewFields: {} },
@@ -7437,7 +7437,7 @@ analyticsDomainMetric: {
       providerCallLogs: { universalIdentifier: '821676cd-03ab-4d45-8f81-4d2b8ea70588' },
       appAgents: { universalIdentifier: 'be4f258e-ea73-4cf7-a298-2e90bcfb1d29' },
     },
-    indexes: { promptKeyIndex: { universalIdentifier: 'a8b39479-beab-497a-946d-34761eada925' }, statusIndex: { universalIdentifier: '14ffb63b-ee16-442f-a719-d3071cb8af64' }, versionIndex: { universalIdentifier: 'a2049878-fae0-4a08-8a8e-cc0fbe95663a' }, targetModelIdIndex: { universalIdentifier: 'e829f841-1c18-4871-bfe6-e1dfc7200b4c' }, },
+    indexes: { searchVectorGinIndex: { universalIdentifier: '208594ac-bc4b-4822-bad4-81326b106afa' }, promptKeyIndex: { universalIdentifier: 'a8b39479-beab-497a-946d-34761eada925' }, statusIndex: { universalIdentifier: '14ffb63b-ee16-442f-a719-d3071cb8af64' }, versionIndex: { universalIdentifier: 'a2049878-fae0-4a08-8a8e-cc0fbe95663a' }, targetModelIdIndex: { universalIdentifier: 'e829f841-1c18-4871-bfe6-e1dfc7200b4c' }, },
     views: {
       allAiPromptTemplates: { universalIdentifier: '05ced637-e0bf-4352-b641-b132cd051293', viewFields: { name: { universalIdentifier: '2dc1647f-142a-4ff9-89b9-b0893babe413' }, promptKey: { universalIdentifier: '8d98c968-a8fd-4c43-8a72-ba4d7cf96f48' }, version: { universalIdentifier: '6e71e00e-456a-48fc-88eb-1037fe43435f' }, status: { universalIdentifier: '756d9f22-af39-428b-bb20-31aaf1fcafd4' } }, viewFieldGroups: { general: { universalIdentifier: '8076b2d3-b059-4e8e-a4b0-95ae94b1f775' } } },
       aiPromptTemplateRecordPageFields: { universalIdentifier: 'eac896b9-f93d-49e2-a346-fd18b7d5487d', viewFields: {} },

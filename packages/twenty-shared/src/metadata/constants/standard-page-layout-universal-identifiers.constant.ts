@@ -1050,6 +1050,13 @@ analyticsMetricRecordPage: {
     universalIdentifier: 'd27e3f5a-0001-4a6b-8c9d-000000000001',
     universalIdentifier: 'd27e3f5a-0002-4a6b-8c9d-000000000002',
     universalIdentifier: 'd27e3f5a-0003-4a6b-8c9d-000000000003',
+  externalIdentityMatchQueueRecordPage: {
+    universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7455',
+    tabs: {
+      home: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7456', widgets: { fields: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7457' }, }, },
+      timeline: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7458', widgets: { timeline: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7459' }, }, },
+    },
+  },
   analyticsDashboardConfigRecordPage: {
   analyticsMetricSnapshotRecordPage: {
 analyticsDomainMetricRecordPage: { 85e491f154 (feat(executive-search): Phase 14 — Analytics Semantic Layer (3 standard objects + live GraphQL resolver))

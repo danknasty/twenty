@@ -102,6 +102,8 @@ import { buildBoardMatrixCriterionStandardFlatFieldMetadatas } from 'src/engine/
 import { buildCandidateBoardMatrixEvaluationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-candidate-board-matrix-evaluation-standard-flat-field-metadata.util';
 import { buildDirectorIndependenceReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-director-independence-review-standard-flat-field-metadata.util';
 import { buildBoardCommitmentReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-commitment-review-standard-flat-field-metadata.util';
+import { buildRetentionActionLogStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-retention-action-log-standard-flat-field-metadata.util';
+import { buildExternalIdentityMatchQueueStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-identity-match-queue-standard-flat-field-metadata.util';
 import { buildAnalyticsDomainMetricStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-domain-metric-standard-flat-field-metadata.util';
 import { buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-metric-snapshot-standard-flat-field-metadata.util';
 import { buildAnalyticsDashboardConfigStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-config-standard-flat-field-metadata.util';
@@ -230,6 +232,9 @@ boardCompositionProfile:
     buildDirectorIndependenceReviewStandardFlatFieldMetadatas,
   boardCommitmentReview:
     buildBoardCommitmentReviewStandardFlatFieldMetadatas,
+retentionActionLog: buildRetentionActionLogStandardFlatFieldMetadatas,
+  externalIdentityMatchQueue:
+    buildExternalIdentityMatchQueueStandardFlatFieldMetadatas,
 analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatFieldMetadatas,
   analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas,
   analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatFieldMetadatas,

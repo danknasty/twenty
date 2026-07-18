@@ -2,6 +2,278 @@
 
 exports[`STANDARD_OBJECTS universal identifiers should never change without an explicit snapshot update 1`] = `
 {
+  "analyticsDashboard": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "70d6d98a-8910-5f9e-87cd-92fbc6b17681",
+      },
+      "createdBy": {
+        "universalIdentifier": "c5dbf40d-fe7f-56ee-9578-5ca8f368a942",
+      },
+      "deletedAt": {
+        "universalIdentifier": "e89ad0e2-3eb2-5e29-afc3-a8eb38544b72",
+      },
+      "description": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000102",
+      },
+      "id": {
+        "universalIdentifier": "d8af66df-6aec-5042-9273-d860eeb425ae",
+      },
+      "isDefault": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000104",
+      },
+      "layoutConfig": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000103",
+      },
+      "metrics": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000106",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000101",
+      },
+      "position": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000105",
+      },
+      "searchVector": {
+        "universalIdentifier": "5ad37fc5-9f15-5c32-b519-abd0d5f94b6f",
+      },
+      "updatedAt": {
+        "universalIdentifier": "679d318f-e932-5b38-b7bb-afb8f86bcf7f",
+      },
+      "updatedBy": {
+        "universalIdentifier": "543ee4e4-a2bb-5d0b-854a-939e0f138814",
+      },
+    },
+    "indexes": {
+      "isDefaultIndex": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0002001",
+      },
+    },
+    "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0000001",
+    "views": {
+      "allAnalyticsDashboards": {
+        "universalIdentifier": "aeb1a014-0032-4000-8014-aeb1a0003001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a014-0042-4000-8014-aeb1a0004001",
+          },
+        },
+        "viewFields": {
+          "createdAt": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005004",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005005",
+          },
+          "isDefault": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005002",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005001",
+          },
+          "position": {
+            "universalIdentifier": "aeb1a014-0052-4000-8014-aeb1a0005003",
+          },
+        },
+      },
+      "analyticsDashboardRecordPageFields": {
+        "universalIdentifier": "aeb1a014-0033-4000-8014-aeb1a0003002",
+        "viewFields": {},
+      },
+    },
+  },
+  "analyticsMetric": {
+    "fields": {
+      "aggregationField": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000105",
+      },
+      "createdAt": {
+        "universalIdentifier": "4d918157-dbda-5fe3-b4fc-675db1372f59",
+      },
+      "createdBy": {
+        "universalIdentifier": "14ec125b-0b8c-5ae5-bc4b-b53dc55cad18",
+      },
+      "dashboardId": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000110",
+      },
+      "deletedAt": {
+        "universalIdentifier": "e690f406-5f2e-5c15-9858-3a19fd59113d",
+      },
+      "description": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000102",
+      },
+      "filterDefinition": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000106",
+      },
+      "id": {
+        "universalIdentifier": "c9baed43-ad5d-541f-9851-7715e812332a",
+      },
+      "isActive": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000108",
+      },
+      "metricType": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000103",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000101",
+      },
+      "position": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000109",
+      },
+      "searchVector": {
+        "universalIdentifier": "d25931d1-7ee6-5d7a-85e5-445222395750",
+      },
+      "sourceObjectName": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000104",
+      },
+      "unit": {
+        "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000107",
+      },
+      "updatedAt": {
+        "universalIdentifier": "923eadc9-1f4f-57c5-bd7b-a0401b7e4423",
+      },
+      "updatedBy": {
+        "universalIdentifier": "ede4f6c3-75a6-548d-bb00-d1e711814b64",
+      },
+    },
+    "indexes": {
+      "dashboardIdIndex": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0001001",
+      },
+      "isActiveIndex": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0001003",
+      },
+      "metricTypeIndex": {
+        "universalIdentifier": "aeb1a014-0002-4000-8014-aeb1a0001002",
+      },
+    },
+    "universalIdentifier": "aeb1a014-0001-4000-8014-aeb1a0000001",
+    "views": {
+      "allAnalyticsMetrics": {
+        "universalIdentifier": "aeb1a014-0030-4000-8014-aeb1a0002001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a014-0040-4000-8014-aeb1a0003001",
+          },
+        },
+        "viewFields": {
+          "createdAt": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004007",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004008",
+          },
+          "isActive": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004005",
+          },
+          "metricType": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004002",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004001",
+          },
+          "position": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004006",
+          },
+          "sourceObjectName": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004003",
+          },
+          "unit": {
+            "universalIdentifier": "aeb1a014-0050-4000-8014-aeb1a0004004",
+          },
+        },
+      },
+      "analyticsMetricRecordPageFields": {
+        "universalIdentifier": "aeb1a014-0031-4000-8014-aeb1a0002002",
+        "viewFields": {},
+      },
+    },
+  },
+  "assignmentTeamMember": {
+    "fields": {
+      "assignment": {
+        "universalIdentifier": "32d010d2-d837-4ed7-8993-6a967c35ea06",
+      },
+      "assignmentId": {
+        "universalIdentifier": "7ddc2275-9883-4e03-af27-b649b0dee51d",
+      },
+      "createdAt": {
+        "universalIdentifier": "3c3e825b-5d12-5f53-bec5-a6fa196bb45c",
+      },
+      "createdBy": {
+        "universalIdentifier": "884bac1c-b7bc-5159-ba38-98d80728a9d4",
+      },
+      "deletedAt": {
+        "universalIdentifier": "c52afcdc-bff2-5f35-bebc-531250b7fd87",
+      },
+      "id": {
+        "universalIdentifier": "a2dfaf45-3f97-5e47-9ec0-78b55222473a",
+      },
+      "isLead": {
+        "universalIdentifier": "0aca99c5-1cd5-41cd-8ec5-148468dd0662",
+      },
+      "position": {
+        "universalIdentifier": "1011d560-8bb0-5012-b38e-f4c1f64c79d0",
+      },
+      "role": {
+        "universalIdentifier": "91ff5774-c53c-4833-b7ff-dc56818d6853",
+      },
+      "searchVector": {
+        "universalIdentifier": "67c2ddd4-c756-5917-8dc9-6d74ba400f70",
+      },
+      "updatedAt": {
+        "universalIdentifier": "b0fba696-ba09-5153-926a-7a0f1c16969d",
+      },
+      "updatedBy": {
+        "universalIdentifier": "6c954b7a-b85d-5c8d-8858-f661d03cd0f2",
+      },
+      "workspaceMember": {
+        "universalIdentifier": "55d97d23-df7f-49bc-a323-f1dd06b3fb77",
+      },
+      "workspaceMemberId": {
+        "universalIdentifier": "3a0b5ffe-9704-4f54-abda-b5e16daada4c",
+      },
+    },
+    "indexes": {
+      "assignmentIdIndex": {
+        "universalIdentifier": "63f9a3ef-c627-4a5f-9133-df18ae87e164",
+      },
+      "workspaceMemberIdIndex": {
+        "universalIdentifier": "9612e959-ba21-47fd-8307-9c26353edbb4",
+      },
+    },
+    "universalIdentifier": "34215453-0481-4f36-8421-19db129ca554",
+    "views": {
+      "assignmentTeamMemberRecordPageFields": {
+        "universalIdentifier": "a3ed9f80-6e00-46e0-aa37-218c6b983332",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "a3ed9f80-1001-46e0-aa37-218c6b983300",
+          },
+        },
+        "viewFields": {
+          "assignment": {
+            "universalIdentifier": "a3ed9f80-2003-46e0-aa37-218c6b983303",
+          },
+          "createdAt": {
+            "universalIdentifier": "a3ed9f80-2005-46e0-aa37-218c6b983305",
+          },
+          "createdBy": {
+            "universalIdentifier": "a3ed9f80-2006-46e0-aa37-218c6b983306",
+          },
+          "isLead": {
+            "universalIdentifier": "a3ed9f80-2002-46e0-aa37-218c6b983302",
+          },
+          "role": {
+            "universalIdentifier": "a3ed9f80-2001-46e0-aa37-218c6b983301",
+          },
+          "workspaceMember": {
+            "universalIdentifier": "a3ed9f80-2004-46e0-aa37-218c6b983304",
+          },
+        },
+      },
+    },
+  },
   "attachment": {
     "fields": {
       "createdAt": {
@@ -34,6 +306,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "searchVector": {
         "universalIdentifier": "e3222f8c-aad5-5873-9a10-648908f48f81",
       },
+      "targetClientAccountProfile": {
+        "universalIdentifier": "20202020-a1b2-4c3d-8e5f-6a7b8c9d0e01",
+      },
       "targetCompany": {
         "universalIdentifier": "20202020-ceab-4a28-b546-73b06b4c08d5",
       },
@@ -48,6 +323,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
       "targetPerson": {
         "universalIdentifier": "20202020-0158-4aa2-965c-5cdafe21ffa2",
+      },
+      "targetSearchEngagementTerms": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bc1",
       },
       "targetTask": {
         "universalIdentifier": "20202020-51e5-4621-9cf8-215487951c4b",
@@ -207,6 +485,264 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
             "universalIdentifier": "f2f5732f-7435-44be-986b-4c4d834fdfeb",
           },
         },
+      },
+    },
+  },
+  "boardCommitmentReview": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "65d48d36-89b9-5a58-9c92-c0e0548b0180",
+      },
+      "createdBy": {
+        "universalIdentifier": "f9e2a62a-fb7c-5682-bae1-9f2fc31a8135",
+      },
+      "currentBoardCount": {
+        "universalIdentifier": "f0a1b2c3-0504-4000-8005-f0a1b2c305010104",
+      },
+      "currentChairCount": {
+        "universalIdentifier": "f0a1b2c3-0505-4000-8005-f0a1b2c305010105",
+      },
+      "deletedAt": {
+        "universalIdentifier": "10fc0c6c-4976-5af5-9c5a-e40d2fa20d94",
+      },
+      "findings": {
+        "universalIdentifier": "f0a1b2c3-0507-4000-8005-f0a1b2c305010107",
+      },
+      "id": {
+        "universalIdentifier": "2b01fd75-0182-5c03-a326-5d744863b602",
+      },
+      "name": {
+        "universalIdentifier": "f0a1b2c3-0501-4000-8005-f0a1b2c305010101",
+      },
+      "position": {
+        "universalIdentifier": "bd72967a-22ce-56cd-8198-952910b7b9ec",
+      },
+      "reviewDate": {
+        "universalIdentifier": "f0a1b2c3-0503-4000-8005-f0a1b2c305010103",
+      },
+      "searchCandidacyId": {
+        "universalIdentifier": "f0a1b2c3-0508-4000-8005-f0a1b2c305010108",
+      },
+      "searchVector": {
+        "universalIdentifier": "b24fc86c-3b87-5179-af6f-550c8ef08573",
+      },
+      "status": {
+        "universalIdentifier": "f0a1b2c3-0502-4000-8005-f0a1b2c305010102",
+      },
+      "totalCommitmentHoursEstimate": {
+        "universalIdentifier": "f0a1b2c3-0506-4000-8005-f0a1b2c305010106",
+      },
+      "updatedAt": {
+        "universalIdentifier": "139a669d-34be-5583-9b76-55b7fae1a438",
+      },
+      "updatedBy": {
+        "universalIdentifier": "e3dc7edf-91cd-5133-b893-ccd3d20447de",
+      },
+    },
+    "indexes": {
+      "searchCandidacyIdIndex": {
+        "universalIdentifier": "f0a1b2c3-0911-4000-8005-f0a1b2c3090111",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "f0a1b2c3-0910-4000-8005-f0a1b2c3090110",
+      },
+    },
+    "universalIdentifier": "f0a1b2c3-0005-4000-8005-f0a1b2c3000005",
+    "views": {
+      "allBoardCommitmentReviews": {
+        "universalIdentifier": "f0a1b2c3-0813-4000-8005-f0a1b2c3080113",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "f0a1b2c3-0814-4000-8005-f0a1b2c3080114",
+          },
+        },
+        "viewFields": {
+          "name": {
+            "universalIdentifier": "f0a1b2c3-0712-4000-8005-f0a1b2c3070112",
+          },
+          "reviewDate": {
+            "universalIdentifier": "f0a1b2c3-0714-4000-8005-f0a1b2c3070114",
+          },
+          "status": {
+            "universalIdentifier": "f0a1b2c3-0713-4000-8005-f0a1b2c3070113",
+          },
+        },
+      },
+      "boardCommitmentReviewRecordPageFields": {
+        "universalIdentifier": "f0a1b2c3-0815-4000-8005-f0a1b2c3080115",
+        "viewFields": {},
+      },
+    },
+  },
+  "boardCompositionProfile": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "90e8263a-ecce-53bf-a53f-31155ab8d316",
+      },
+      "createdBy": {
+        "universalIdentifier": "bc2e46ed-0257-5845-af37-c02d311a638d",
+      },
+      "currentSize": {
+        "universalIdentifier": "f0a1b2c3-0105-4000-8001-f0a1b2c301010105",
+      },
+      "deletedAt": {
+        "universalIdentifier": "c6cc6626-6df9-5d48-885c-58c8c054770d",
+      },
+      "id": {
+        "universalIdentifier": "2da0e8ac-f292-510b-9993-8b334c7c07ed",
+      },
+      "industryPreference": {
+        "universalIdentifier": "f0a1b2c3-0104-4000-8001-f0a1b2c301010104",
+      },
+      "name": {
+        "universalIdentifier": "f0a1b2c3-0101-4000-8001-f0a1b2c301010101",
+      },
+      "notes": {
+        "universalIdentifier": "f0a1b2c3-0107-4000-8001-f0a1b2c301010107",
+      },
+      "position": {
+        "universalIdentifier": "b39830c3-a519-5301-842c-f8d33aa6b3c7",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "f0a1b2c3-0109-4000-8001-f0a1b2c301010109",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "f0a1b2c3-0108-4000-8001-f0a1b2c301010108",
+      },
+      "searchVector": {
+        "universalIdentifier": "05c6bba1-ab6a-515f-8c4c-6ab7418ba430",
+      },
+      "status": {
+        "universalIdentifier": "f0a1b2c3-0102-4000-8001-f0a1b2c301010102",
+      },
+      "targetBoardType": {
+        "universalIdentifier": "f0a1b2c3-0103-4000-8001-f0a1b2c301010103",
+      },
+      "targetSize": {
+        "universalIdentifier": "f0a1b2c3-0106-4000-8001-f0a1b2c301010106",
+      },
+      "updatedAt": {
+        "universalIdentifier": "42fb9ae8-18f2-54d4-bb7c-15aef5cda792",
+      },
+      "updatedBy": {
+        "universalIdentifier": "88efbce5-a5b9-5f66-bb73-d7ddb80cf913",
+      },
+    },
+    "indexes": {
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "f0a1b2c3-0902-4000-8001-f0a1b2c3090102",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "f0a1b2c3-0901-4000-8001-f0a1b2c3090101",
+      },
+    },
+    "universalIdentifier": "f0a1b2c3-0001-4000-8001-f0a1b2c3000001",
+    "views": {
+      "allBoardCompositionProfiles": {
+        "universalIdentifier": "f0a1b2c3-0801-4000-8001-f0a1b2c3080101",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "f0a1b2c3-0803-4000-8001-f0a1b2c3080103",
+          },
+        },
+        "viewFields": {
+          "name": {
+            "universalIdentifier": "f0a1b2c3-0701-4000-8001-f0a1b2c3070101",
+          },
+          "status": {
+            "universalIdentifier": "f0a1b2c3-0702-4000-8001-f0a1b2c3070102",
+          },
+          "targetBoardType": {
+            "universalIdentifier": "f0a1b2c3-0703-4000-8001-f0a1b2c3070103",
+          },
+        },
+      },
+      "boardCompositionProfileRecordPageFields": {
+        "universalIdentifier": "f0a1b2c3-0802-4000-8001-f0a1b2c3080102",
+        "viewFields": {},
+      },
+    },
+  },
+  "boardMatrixCriterion": {
+    "fields": {
+      "boardCompositionProfile": {
+        "universalIdentifier": "f0a1b2c3-0207-4000-8002-f0a1b2c302010107",
+      },
+      "boardCompositionProfileId": {
+        "universalIdentifier": "f0a1b2c3-0206-4000-8002-f0a1b2c302010106",
+      },
+      "category": {
+        "universalIdentifier": "f0a1b2c3-0202-4000-8002-f0a1b2c302010102",
+      },
+      "createdAt": {
+        "universalIdentifier": "76981e3c-d969-5e59-8348-1ac6467cd890",
+      },
+      "createdBy": {
+        "universalIdentifier": "5da7d1a0-7861-5d3e-9de2-7427e3953b48",
+      },
+      "deletedAt": {
+        "universalIdentifier": "2882a8b3-a72a-5b4a-95cd-363e5a1734d4",
+      },
+      "description": {
+        "universalIdentifier": "f0a1b2c3-0204-4000-8002-f0a1b2c302010104",
+      },
+      "id": {
+        "universalIdentifier": "13024afa-44d0-5bcc-94e1-f63f00b6d933",
+      },
+      "isRequired": {
+        "universalIdentifier": "f0a1b2c3-0205-4000-8002-f0a1b2c302010105",
+      },
+      "name": {
+        "universalIdentifier": "f0a1b2c3-0201-4000-8002-f0a1b2c302010101",
+      },
+      "position": {
+        "universalIdentifier": "855ba017-9012-5fc0-ab83-4fbd8aa201d2",
+      },
+      "searchVector": {
+        "universalIdentifier": "897bf39f-439c-5c7d-9c62-0700d5f4d1e9",
+      },
+      "updatedAt": {
+        "universalIdentifier": "d1a80a43-9875-58e9-841e-3661cfe82249",
+      },
+      "updatedBy": {
+        "universalIdentifier": "e5862217-e683-5d3e-8593-678c24581c0f",
+      },
+      "weight": {
+        "universalIdentifier": "f0a1b2c3-0203-4000-8002-f0a1b2c302010103",
+      },
+    },
+    "indexes": {
+      "boardCompositionProfileIdIndex": {
+        "universalIdentifier": "f0a1b2c3-0904-4000-8002-f0a1b2c3090104",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "f0a1b2c3-0903-4000-8002-f0a1b2c3090103",
+      },
+    },
+    "universalIdentifier": "f0a1b2c3-0002-4000-8002-f0a1b2c3000002",
+    "views": {
+      "allBoardMatrixCriteria": {
+        "universalIdentifier": "f0a1b2c3-0804-4000-8002-f0a1b2c3080104",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "f0a1b2c3-0805-4000-8002-f0a1b2c3080105",
+          },
+        },
+        "viewFields": {
+          "category": {
+            "universalIdentifier": "f0a1b2c3-0705-4000-8002-f0a1b2c3070105",
+          },
+          "name": {
+            "universalIdentifier": "f0a1b2c3-0704-4000-8002-f0a1b2c3070104",
+          },
+          "weight": {
+            "universalIdentifier": "f0a1b2c3-0706-4000-8002-f0a1b2c3070106",
+          },
+        },
+      },
+      "boardMatrixCriterionRecordPageFields": {
+        "universalIdentifier": "f0a1b2c3-0806-4000-8002-f0a1b2c3080106",
+        "viewFields": {},
       },
     },
   },
@@ -722,265 +1258,474 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
   },
-  "clientAccountProfile": {
+  "candidacyStageEvent": {
     "fields": {
-      "clientAccountType": {
-        "universalIdentifier": "20202020-9bf3-4c6c-9cd2-d45563d127c1",
+      "actorKind": {
+        "universalIdentifier": "aeb1c000-2006-4e18-b24d-cdb5d3178006",
       },
-      "clientBillingContact": {
-        "universalIdentifier": "20202020-c5b1-466a-8b6d-126e6ef9d306",
+      "candidacy": {
+        "universalIdentifier": "aeb1c000-2010-4e18-b24d-cdb5d3178010",
       },
-      "clientNotes": {
-        "universalIdentifier": "20202020-8c67-40a1-a429-55976fcdbbc5",
-      },
-      "clientOnboardingStatus": {
-        "universalIdentifier": "20202020-d94a-4c97-81b9-79b0af118962",
-      },
-      "clientPaymentTerms": {
-        "universalIdentifier": "20202020-ec7f-4f13-8454-47e27fa7512d",
-      },
-      "clientSince": {
-        "universalIdentifier": "20202020-1de0-4612-a28d-b49cd2bda741",
-      },
-      "clientStakeholderRoles": {
-        "universalIdentifier": "20202020-6995-4a44-905c-5c42f138afe4",
-      },
-      "company": {
-        "universalIdentifier": "20202020-ea4e-48ed-a8c0-ac44b61dcdbe",
+      "candidacyId": {
+        "universalIdentifier": "aeb1c000-2011-4e18-b24d-cdb5d3178011",
       },
       "createdAt": {
-        "universalIdentifier": "df3956ed-64e9-5a35-a3f7-98e8d8bf1ff5",
+        "universalIdentifier": "81e2b80d-fae7-5871-8eb4-d1ce67c2ab3d",
       },
       "createdBy": {
-        "universalIdentifier": "64d7c438-ab60-5360-9f55-da2d8f4f8edc",
+        "universalIdentifier": "4d8821e7-d05f-595b-8697-7a52cafc58e6",
       },
       "deletedAt": {
-        "universalIdentifier": "2f970655-8802-578f-8f46-196965d22504",
+        "universalIdentifier": "4dcf7d62-b37d-5841-8f00-e6163d9ee912",
       },
       "id": {
-        "universalIdentifier": "ce94b51a-e721-5c81-866d-39e2a33135ba",
+        "universalIdentifier": "25c91895-6052-50df-87de-0b9e4ec2f643",
       },
-      "name": {
-        "universalIdentifier": "20202020-dc66-4b2c-8be2-a82b0894d421",
+      "isCandidateVisible": {
+        "universalIdentifier": "aeb1c000-2009-4e18-b24d-cdb5d3178009",
+      },
+      "notes": {
+        "universalIdentifier": "aeb1c000-2008-4e18-b24d-cdb5d3178008",
       },
       "position": {
-        "universalIdentifier": "3fea69c6-bbc1-5bcb-963c-1d634669b82a",
+        "universalIdentifier": "4d8b03b2-b40b-5775-8eac-0ece1e66402c",
+      },
+      "reason": {
+        "universalIdentifier": "aeb1c000-2007-4e18-b24d-cdb5d3178007",
       },
       "searchVector": {
-        "universalIdentifier": "7c5ba050-868a-54c6-b225-0fc4b6e7aa42",
+        "universalIdentifier": "cf79970c-211c-5d05-9f3a-3c11849203fb",
+      },
+      "stage": {
+        "universalIdentifier": "aeb1c000-2001-4e18-b24d-cdb5d3178001",
+      },
+      "stageFrom": {
+        "universalIdentifier": "aeb1c000-2002-4e18-b24d-cdb5d3178002",
+      },
+      "stageTo": {
+        "universalIdentifier": "aeb1c000-2003-4e18-b24d-cdb5d3178003",
+      },
+      "transitionedAt": {
+        "universalIdentifier": "aeb1c000-2004-4e18-b24d-cdb5d3178004",
+      },
+      "transitionedById": {
+        "universalIdentifier": "aeb1c000-2005-4e18-b24d-cdb5d3178005",
       },
       "updatedAt": {
-        "universalIdentifier": "58cebb0d-d0e4-5ca8-a726-a1c6b2172238",
+        "universalIdentifier": "82301998-4fc2-52d1-aaba-20090e0a5763",
       },
       "updatedBy": {
-        "universalIdentifier": "7454ba25-31b1-56b7-b094-3729fb96983e",
+        "universalIdentifier": "68871d11-a50a-55fa-b06a-47eadfae8a7d",
       },
     },
     "indexes": {
-      "companyIdUniqueIndex": {
-        "universalIdentifier": "20202020-488a-49b5-97c7-d879c87f0bdd",
+      "candidacyIdIndex": {
+        "universalIdentifier": "aeb1c000-3001-4e18-b24d-cdb5d3178301",
       },
-      "searchVectorGinIndex": {
-        "universalIdentifier": "20202020-414e-41e0-b380-4a8e88a0d1c0",
+      "transitionedAtIndex": {
+        "universalIdentifier": "aeb1c000-3002-4e18-b24d-cdb5d3178302",
       },
     },
-    "universalIdentifier": "20202020-2f8c-46f5-acde-795c5851b425",
+    "universalIdentifier": "aeb1c000-1000-4e18-b24d-cdb5d3178000",
     "views": {
-      "allClientAccountProfiles": {
-        "universalIdentifier": "20202020-c84e-4bf5-826f-1737f3a3034d",
-        "viewFields": {
-          "clientAccountType": {
-            "universalIdentifier": "20202020-9a3c-475a-9b56-338312d0aa63",
-          },
-          "clientOnboardingStatus": {
-            "universalIdentifier": "20202020-47a3-4a49-aa63-3b3fdf6eb555",
-          },
-          "clientSince": {
-            "universalIdentifier": "20202020-5381-43b7-ba78-e333dd23dfc8",
-          },
-          "company": {
-            "universalIdentifier": "20202020-0d83-4c4d-8aa7-0d37c4189b2f",
-          },
-          "createdAt": {
-            "universalIdentifier": "20202020-e48d-481c-82df-7e5fecb776e8",
-          },
-          "name": {
-            "universalIdentifier": "20202020-3f41-446f-b93c-de136c1844c7",
-          },
-        },
-      },
-      "clientAccountProfileRecordPageFields": {
-        "universalIdentifier": "20202020-17fa-4ab3-9e6a-1d5ab59c3954",
+      "candidacyStageEventRecordPageFields": {
+        "universalIdentifier": "aeb1c000-4001-4e18-b24d-cdb5d3178401",
         "viewFieldGroups": {
           "general": {
-            "universalIdentifier": "20202020-bf6f-4357-9bee-e459c5f6c04d",
-          },
-          "relations": {
-            "universalIdentifier": "20202020-c708-4109-91e9-4324d3a36dd0",
-          },
-          "system": {
-            "universalIdentifier": "20202020-1bce-49f5-a0cd-2ec58e43d0a9",
+            "universalIdentifier": "aeb1c000-4002-4e18-b24d-cdb5d3178402",
           },
         },
         "viewFields": {
-          "clientAccountType": {
-            "universalIdentifier": "20202020-848f-4c80-a06d-307bfcaa297c",
+          "actorKind": {
+            "universalIdentifier": "aeb1c000-5006-4e18-b24d-cdb5d3178506",
           },
-          "clientBillingContact": {
-            "universalIdentifier": "20202020-dae6-4a22-93d4-f109ea6ad6b7",
-          },
-          "clientNotes": {
-            "universalIdentifier": "20202020-f848-47e2-a062-b35eee975ee5",
-          },
-          "clientOnboardingStatus": {
-            "universalIdentifier": "20202020-6c7d-415f-92c1-c35da8b1f504",
-          },
-          "clientPaymentTerms": {
-            "universalIdentifier": "20202020-b3a8-49fa-b489-130d918962c7",
-          },
-          "clientSince": {
-            "universalIdentifier": "20202020-c06c-4344-86e9-3c07d46d19e6",
-          },
-          "company": {
-            "universalIdentifier": "20202020-ada5-4078-ad54-0e2e46d3c319",
+          "candidacy": {
+            "universalIdentifier": "aeb1c000-5009-4e18-b24d-cdb5d3178509",
           },
           "createdAt": {
-            "universalIdentifier": "20202020-9e62-43ea-9be3-b0a6a3ecd0fe",
+            "universalIdentifier": "aeb1c000-5010-4e18-b24d-cdb5d3178510",
           },
-          "name": {
-            "universalIdentifier": "20202020-5054-4b57-b6e6-a80ed2dee5d6",
+          "createdBy": {
+            "universalIdentifier": "aeb1c000-5011-4e18-b24d-cdb5d3178511",
           },
-          "updatedAt": {
-            "universalIdentifier": "20202020-14e5-4368-a7dc-58e5c1c81d98",
+          "isCandidateVisible": {
+            "universalIdentifier": "aeb1c000-5008-4e18-b24d-cdb5d3178508",
+          },
+          "reason": {
+            "universalIdentifier": "aeb1c000-5007-4e18-b24d-cdb5d3178507",
+          },
+          "stage": {
+            "universalIdentifier": "aeb1c000-5001-4e18-b24d-cdb5d3178501",
+          },
+          "stageFrom": {
+            "universalIdentifier": "aeb1c000-5002-4e18-b24d-cdb5d3178502",
+          },
+          "stageTo": {
+            "universalIdentifier": "aeb1c000-5003-4e18-b24d-cdb5d3178503",
+          },
+          "transitionedAt": {
+            "universalIdentifier": "aeb1c000-5004-4e18-b24d-cdb5d3178504",
+          },
+          "transitionedById": {
+            "universalIdentifier": "aeb1c000-5005-4e18-b24d-cdb5d3178505",
           },
         },
       },
     },
   },
-  "clientStakeholderRole": {
+  "candidateBoardMatrixEvaluation": {
     "fields": {
-      "clientAccountProfile": {
-        "universalIdentifier": "20202020-9cd9-4c20-b0cf-50ba3ed5e65d",
+      "boardMatrixCriterion": {
+        "universalIdentifier": "f0a1b2c3-0305-4000-8003-f0a1b2c303010105",
       },
-      "company": {
-        "universalIdentifier": "20202020-ed0a-4d0a-b977-21e61a039eed",
+      "boardMatrixCriterionId": {
+        "universalIdentifier": "f0a1b2c3-0304-4000-8003-f0a1b2c303010104",
       },
       "createdAt": {
-        "universalIdentifier": "43748660-d32b-51ae-a1f4-dae7fe9bb626",
+        "universalIdentifier": "96a8aa22-8c24-51bc-8de6-5644b8d1adaa",
       },
       "createdBy": {
-        "universalIdentifier": "fb41e798-e603-562e-9635-3bd9a0294223",
+        "universalIdentifier": "dca57d9a-c01b-51bf-8246-91a1c8538334",
       },
       "deletedAt": {
-        "universalIdentifier": "aeefc83b-f75b-555b-9fbd-ce5d34bc8758",
+        "universalIdentifier": "2f5b5aac-6b2c-5a5f-904c-3130e22f4356",
       },
       "id": {
-        "universalIdentifier": "b8b5d56b-86a4-5441-a6fc-7f940442dfbe",
+        "universalIdentifier": "8d1bd5c6-182e-5256-a82c-0da7531f93d3",
       },
-      "isPrimary": {
-        "universalIdentifier": "20202020-73a6-4b72-9d36-8fa2240c4c12",
-      },
-      "name": {
-        "universalIdentifier": "20202020-a0b0-445a-a128-f1d72efbdb3c",
+      "maxScore": {
+        "universalIdentifier": "f0a1b2c3-0302-4000-8003-f0a1b2c303010102",
       },
       "notes": {
-        "universalIdentifier": "20202020-5e4c-494d-9473-afc0b884eb31",
-      },
-      "person": {
-        "universalIdentifier": "20202020-c7f7-49bb-941c-81dfde307370",
+        "universalIdentifier": "f0a1b2c3-0303-4000-8003-f0a1b2c303010103",
       },
       "position": {
-        "universalIdentifier": "3cd9338e-14a4-5c3a-9aca-6ec05fe41fde",
+        "universalIdentifier": "fc296dba-4e5b-534e-9a58-c625a47e0d96",
       },
-      "role": {
-        "universalIdentifier": "20202020-396a-415a-ab4c-d1e473c05af4",
+      "score": {
+        "universalIdentifier": "f0a1b2c3-0301-4000-8003-f0a1b2c303010101",
+      },
+      "searchCandidacyId": {
+        "universalIdentifier": "f0a1b2c3-0306-4000-8003-f0a1b2c303010106",
       },
       "searchVector": {
-        "universalIdentifier": "7d5e9752-9986-5787-8690-f03328a064e3",
+        "universalIdentifier": "87abf820-b5ce-56e1-8a03-b4a16218c602",
       },
       "updatedAt": {
-        "universalIdentifier": "026b4bb7-c4d7-5ff5-915c-380aa2c943c0",
+        "universalIdentifier": "009a58dd-b7e6-50a8-bc0b-67d5165eba48",
       },
       "updatedBy": {
-        "universalIdentifier": "b568c116-594e-5e3b-9083-f012a9ca803b",
+        "universalIdentifier": "753e763c-b8e6-5297-b935-3aafa8f859ba",
       },
     },
     "indexes": {
-      "companyIdIndex": {
-        "universalIdentifier": "20202020-0ece-43c5-a5d3-6cfa973756af",
+      "boardMatrixCriterionIdIndex": {
+        "universalIdentifier": "f0a1b2c3-0906-4000-8003-f0a1b2c3090106",
       },
-      "personCompanyUniqueIndex": {
-        "universalIdentifier": "20202020-3bf7-4920-a283-d1363c5dcc5f",
+      "searchCandidacyIdIndex": {
+        "universalIdentifier": "f0a1b2c3-0907-4000-8003-f0a1b2c3090107",
       },
       "searchVectorGinIndex": {
-        "universalIdentifier": "20202020-3216-4e8d-8221-c0a1bff7c30c",
+        "universalIdentifier": "f0a1b2c3-0905-4000-8003-f0a1b2c3090105",
       },
     },
-    "universalIdentifier": "20202020-6fbf-44b3-9797-60fe520e0927",
+    "universalIdentifier": "f0a1b2c3-0003-4000-8003-f0a1b2c3000003",
     "views": {
-      "allClientStakeholderRoles": {
-        "universalIdentifier": "20202020-5ba2-49d0-a586-2a7777dddb21",
+      "allCandidateBoardMatrixEvaluations": {
+        "universalIdentifier": "f0a1b2c3-0807-4000-8003-f0a1b2c3080107",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "f0a1b2c3-0808-4000-8003-f0a1b2c3080108",
+          },
+        },
         "viewFields": {
-          "company": {
-            "universalIdentifier": "20202020-35a8-4bae-b7c7-dd3d0e8e44f1",
+          "maxScore": {
+            "universalIdentifier": "f0a1b2c3-0708-4000-8003-f0a1b2c3070108",
           },
-          "createdAt": {
-            "universalIdentifier": "20202020-040c-45e6-a55b-9d4045b3b376",
-          },
-          "isPrimary": {
-            "universalIdentifier": "20202020-fbfd-4e1a-8efe-3c401c02cf86",
-          },
-          "name": {
-            "universalIdentifier": "20202020-e5a4-4d0e-af34-3fea62f4ee93",
-          },
-          "person": {
-            "universalIdentifier": "20202020-924c-4563-94f8-806662c1df8e",
-          },
-          "role": {
-            "universalIdentifier": "20202020-c7a7-4eb4-9e6b-8131cbd532f3",
+          "score": {
+            "universalIdentifier": "f0a1b2c3-0707-4000-8003-f0a1b2c3070107",
           },
         },
       },
-      "clientStakeholderRoleRecordPageFields": {
-        "universalIdentifier": "20202020-caea-4ffc-8579-f666f5cf3ce0",
+      "candidateBoardMatrixEvaluationRecordPageFields": {
+        "universalIdentifier": "f0a1b2c3-0809-4000-8003-f0a1b2c3080109",
+        "viewFields": {},
+      },
+    },
+  },
+  "candidatePresentation": {
+    "fields": {
+      "approvedAt": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000510",
+      },
+      "candidacy": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000514",
+      },
+      "candidacyId": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000515",
+      },
+      "createdAt": {
+        "universalIdentifier": "e8c4714c-14e5-5c74-b5bc-bc9dc9caf20c",
+      },
+      "createdBy": {
+        "universalIdentifier": "21d6212d-7696-5f88-a6dc-b562e4fa74a3",
+      },
+      "deletedAt": {
+        "universalIdentifier": "24b11972-1fff-5d13-8c13-cf915b1210b3",
+      },
+      "id": {
+        "universalIdentifier": "fccdd08e-91a9-53be-a862-e4260c2c4f61",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000501",
+      },
+      "position": {
+        "universalIdentifier": "3951ffd5-c2d3-5b9f-9f4a-73ce79b4acf3",
+      },
+      "publishedAt": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000511",
+      },
+      "restrictedFieldLeakageScanResult": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000505",
+      },
+      "reviewDecision": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000509",
+      },
+      "reviewedAt": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000508",
+      },
+      "reviewer": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000506",
+      },
+      "reviewerId": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000507",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000516",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000517",
+      },
+      "searchVector": {
+        "universalIdentifier": "b9108ad9-0c60-5d1d-8be7-69633c7912eb",
+      },
+      "slateMembership": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000512",
+      },
+      "slateMembershipId": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000513",
+      },
+      "sourceSnapshot": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000504",
+      },
+      "status": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000503",
+      },
+      "updatedAt": {
+        "universalIdentifier": "d05d64dc-255d-5753-80e2-10668a16150f",
+      },
+      "updatedBy": {
+        "universalIdentifier": "73181c61-778c-57c0-aa24-68d233f6d76a",
+      },
+      "version": {
+        "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000502",
+      },
+    },
+    "indexes": {
+      "candidacyIdIndex": {
+        "universalIdentifier": "aeb1a005-0002-4000-8005-aeb1a0005002",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "aeb1a005-0002-4000-8005-aeb1a0005003",
+      },
+      "slateMembershipIdIndex": {
+        "universalIdentifier": "aeb1a005-0002-4000-8005-aeb1a0005001",
+      },
+      "statusIndex": {
+        "universalIdentifier": "aeb1a005-0002-4000-8005-aeb1a0005004",
+      },
+    },
+    "universalIdentifier": "aeb1a005-0001-4000-8005-aeb1a0000005",
+    "views": {
+      "candidatePresentationRecordPageFields": {
+        "universalIdentifier": "aeb1a005-0030-4000-8005-aeb1a0007001",
         "viewFieldGroups": {
           "general": {
-            "universalIdentifier": "20202020-e766-4273-83ae-f970a12f72c4",
-          },
-          "relations": {
-            "universalIdentifier": "20202020-eba4-4201-bcba-ce802da6c20f",
-          },
-          "system": {
-            "universalIdentifier": "20202020-c78d-471d-9885-e0e08600d5e4",
+            "universalIdentifier": "aeb1a005-0040-4000-8005-aeb1a0008001",
           },
         },
         "viewFields": {
-          "clientAccountProfile": {
-            "universalIdentifier": "20202020-944c-4dff-b19b-13a19c1c8d4e",
-          },
-          "company": {
-            "universalIdentifier": "20202020-2e50-419d-85ff-2f8b57fd6faf",
+          "candidacy": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009008",
           },
           "createdAt": {
-            "universalIdentifier": "20202020-23fa-4e05-9df1-8500cc682117",
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009010",
           },
-          "isPrimary": {
-            "universalIdentifier": "20202020-9e5e-4b40-8755-974ca93e3aa0",
+          "createdBy": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009011",
           },
           "name": {
-            "universalIdentifier": "20202020-ec8e-4a8b-8ce3-b831bab9db6e",
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009001",
           },
-          "notes": {
-            "universalIdentifier": "20202020-9845-4773-b802-96e73c1288a1",
+          "reviewDecision": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009004",
           },
-          "person": {
-            "universalIdentifier": "20202020-f377-43b5-af98-dc7e2861c15c",
+          "reviewedAt": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009005",
           },
-          "role": {
-            "universalIdentifier": "20202020-7036-4307-9e08-274616b9d9c0",
+          "reviewer": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009006",
           },
-          "updatedAt": {
-            "universalIdentifier": "20202020-8a00-43f4-8864-be66c70cd93f",
+          "searchAssignment": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009009",
+          },
+          "slateMembership": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009007",
+          },
+          "status": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009003",
+          },
+          "version": {
+            "universalIdentifier": "aeb1a005-0050-4000-8005-aeb1a0009002",
+          },
+        },
+      },
+    },
+  },
+  "clientFeedback": {
+    "fields": {
+      "candidacy": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000609",
+      },
+      "candidacyId": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000610",
+      },
+      "comments": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000604",
+      },
+      "createdAt": {
+        "universalIdentifier": "8aef04d9-990b-5138-b7ed-42036ed2cd07",
+      },
+      "createdBy": {
+        "universalIdentifier": "52b80174-3241-5d40-8f9a-970da8910244",
+      },
+      "deletedAt": {
+        "universalIdentifier": "421c1cbc-5f67-5294-a797-1aeef776ac40",
+      },
+      "feedbackType": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000602",
+      },
+      "id": {
+        "universalIdentifier": "7e38f7a3-d778-5910-8162-f294277dd9aa",
+      },
+      "isSharedWithCandidate": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000607",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000601",
+      },
+      "position": {
+        "universalIdentifier": "046f0865-a692-58ce-99a6-63cd76af34ef",
+      },
+      "presentation": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000613",
+      },
+      "presentationId": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000614",
+      },
+      "rating": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000603",
+      },
+      "receivedAt": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000605",
+      },
+      "receivedFrom": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000606",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000615",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000616",
+      },
+      "searchVector": {
+        "universalIdentifier": "6420224e-9aa9-5add-af1d-d8e16f7e4357",
+      },
+      "sharedWithCandidateAt": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000608",
+      },
+      "slate": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000611",
+      },
+      "slateId": {
+        "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000612",
+      },
+      "updatedAt": {
+        "universalIdentifier": "7ea91db0-bb3f-5c73-b124-aa5fc73ff5d6",
+      },
+      "updatedBy": {
+        "universalIdentifier": "6ab31373-f12a-5b36-aeaf-68388b6c5380",
+      },
+    },
+    "indexes": {
+      "candidacyIdIndex": {
+        "universalIdentifier": "aeb1a006-0002-4000-8006-aeb1a0006001",
+      },
+      "presentationIdIndex": {
+        "universalIdentifier": "aeb1a006-0002-4000-8006-aeb1a0006003",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "aeb1a006-0002-4000-8006-aeb1a0006004",
+      },
+      "slateIdIndex": {
+        "universalIdentifier": "aeb1a006-0002-4000-8006-aeb1a0006002",
+      },
+    },
+    "universalIdentifier": "aeb1a006-0001-4000-8006-aeb1a0000006",
+    "views": {
+      "clientFeedbackRecordPageFields": {
+        "universalIdentifier": "aeb1a006-0030-4000-8006-aeb1a0008001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a006-0040-4000-8006-aeb1a0009001",
+          },
+        },
+        "viewFields": {
+          "candidacy": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010007",
+          },
+          "comments": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010004",
+          },
+          "createdAt": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010011",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010012",
+          },
+          "feedbackType": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010002",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010001",
+          },
+          "presentation": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010009",
+          },
+          "rating": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010003",
+          },
+          "receivedAt": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010005",
+          },
+          "receivedFrom": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010006",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010010",
+          },
+          "slate": {
+            "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010008",
           },
         },
       },
@@ -1000,13 +1745,14 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "attachments": {
         "universalIdentifier": "20202020-c1b5-4120-b0f0-987ca401ed53",
       },
-"clientAccountProfiles": {
-        "universalIdentifier": "20202020-d8ba-49a9-b6c1-8b9d5f11592d",
+      "clientAccountProfiles": {
+        "universalIdentifier": "20202020-a1b2-4c3d-8e5f-6a7b8c9d0f01",
+      },
+      "clientOffLimitsRestrictions": {
+        "universalIdentifier": "20202020-c3d4-4e5f-0a1b-8c9d0e1f2a3b",
       },
       "clientStakeholderRoles": {
-        "universalIdentifier": "20202020-28b6-41b5-9a7d-102db20ed51b",,
-"clientOffLimitsRestrictions": {
-        "universalIdentifier": "20202020-c3d4-4e5f-0a1b-8c9d0e1f2a3b",
+        "universalIdentifier": "20202020-28b6-41b5-9a7d-102db20ed51b",
       },
       "confidentialityRecords": {
         "universalIdentifier": "20202020-d4e5-4f60-1b2c-9d0e1f2a3b4c",
@@ -1050,14 +1796,14 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "position": {
         "universalIdentifier": "a6c6ffb5-1a46-5f3d-b0e3-14c071e3a972",
       },
+      "searchAssignments": {
+        "universalIdentifier": "3a87d9fc-4da9-4284-afd4-8f0719330b58",
+      },
       "searchVector": {
         "universalIdentifier": "d043190d-3335-5463-b98d-eecbf7b41c65",
       },
       "sourceOfRelationshipEdges": {
         "universalIdentifier": "20202020-f6a7-4182-3d4e-1f2a3b4c5d6e",
-      },
-      "targetCompanies": {
-        "universalIdentifier": "20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f",
       },
       "targetOfRelationshipEdges": {
         "universalIdentifier": "20202020-a7b8-4293-4e5f-2a3b4c5d6e7f",
@@ -1175,6 +1921,142 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
           },
           "updatedBy": {
             "universalIdentifier": "20202020-af01-4a01-8a01-c0aba11c1213",
+          },
+        },
+      },
+    },
+  },
+  "compensationExpectation": {
+    "fields": {
+      "candidacy": {
+        "universalIdentifier": "a1a1b2b2-e00b-4a01-8c01-ac11e000e00b",
+      },
+      "candidacyId": {
+        "universalIdentifier": "a1a1b2b2-e00c-4a01-8c01-ac11e000e00c",
+      },
+      "createdAt": {
+        "universalIdentifier": "f8bf216e-c000-55fe-95e4-a7c589569380",
+      },
+      "createdBy": {
+        "universalIdentifier": "816ee66d-8166-542e-9843-caf1715174b6",
+      },
+      "currencyCode": {
+        "universalIdentifier": "a1a1b2b2-e006-4a01-8c01-ac11e000e006",
+      },
+      "deletedAt": {
+        "universalIdentifier": "2fb6f851-dbf9-57c4-98cd-1d7990e59082",
+      },
+      "expectationSource": {
+        "universalIdentifier": "a1a1b2b2-e007-4a01-8c01-ac11e000e007",
+      },
+      "expectedBaseSalary": {
+        "universalIdentifier": "a1a1b2b2-e002-4a01-8c01-ac11e000e002",
+      },
+      "expectedBonus": {
+        "universalIdentifier": "a1a1b2b2-e005-4a01-8c01-ac11e000e005",
+      },
+      "expectedEquity": {
+        "universalIdentifier": "a1a1b2b2-e004-4a01-8c01-ac11e000e004",
+      },
+      "expectedTotalCompensation": {
+        "universalIdentifier": "a1a1b2b2-e003-4a01-8c01-ac11e000e003",
+      },
+      "id": {
+        "universalIdentifier": "5a139528-38ab-54ef-98e5-509b9ad8fcf9",
+      },
+      "isVerifiedWithCandidate": {
+        "universalIdentifier": "a1a1b2b2-e009-4a01-8c01-ac11e000e009",
+      },
+      "name": {
+        "universalIdentifier": "a1a1b2b2-e001-4a01-8c01-ac11e000e001",
+      },
+      "notes": {
+        "universalIdentifier": "a1a1b2b2-e008-4a01-8c01-ac11e000e008",
+      },
+      "position": {
+        "universalIdentifier": "d36f1f83-9362-5aac-8dc7-0d9cd00c79e5",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "a1a1b2b2-e00d-4a01-8c01-ac11e000e00d",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "a1a1b2b2-e00e-4a01-8c01-ac11e000e00e",
+      },
+      "searchVector": {
+        "universalIdentifier": "11ac54c5-2083-5310-8c0e-2b36d953b67f",
+      },
+      "updatedAt": {
+        "universalIdentifier": "1389d1d9-216d-50b9-9d4d-59ad1eea1df8",
+      },
+      "updatedBy": {
+        "universalIdentifier": "6b95b02f-dda0-52db-814d-a0dc8c4c949a",
+      },
+      "verifiedAt": {
+        "universalIdentifier": "a1a1b2b2-e00a-4a01-8c01-ac11e000e00a",
+      },
+    },
+    "indexes": {
+      "candidacyIdIndex": {
+        "universalIdentifier": "a1a1b2b2-f001-4a01-8c01-ac11e000f001",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "a1a1b2b2-f002-4a01-8c01-ac11e000f002",
+      },
+    },
+    "universalIdentifier": "a1a1b2b2-c0e1-4a01-8c01-ac11e0000001",
+    "views": {
+      "compensationExpectationRecordPageFields": {
+        "universalIdentifier": "a1a1b2b2-d001-4a01-8c01-ac11e000d001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "a1a1b2b2-d101-4a01-8c01-ac11e000d101",
+          },
+          "system": {
+            "universalIdentifier": "a1a1b2b2-d102-4a01-8c01-ac11e000d102",
+          },
+        },
+        "viewFields": {
+          "candidacy": {
+            "universalIdentifier": "a1a1b2b2-c00a-4a01-8c01-ac11e000c00a",
+          },
+          "createdAt": {
+            "universalIdentifier": "a1a1b2b2-c00d-4a01-8c01-ac11e000c00d",
+          },
+          "createdBy": {
+            "universalIdentifier": "a1a1b2b2-c00e-4a01-8c01-ac11e000c00e",
+          },
+          "currencyCode": {
+            "universalIdentifier": "a1a1b2b2-c006-4a01-8c01-ac11e000c006",
+          },
+          "expectationSource": {
+            "universalIdentifier": "a1a1b2b2-c007-4a01-8c01-ac11e000c007",
+          },
+          "expectedBaseSalary": {
+            "universalIdentifier": "a1a1b2b2-c002-4a01-8c01-ac11e000c002",
+          },
+          "expectedBonus": {
+            "universalIdentifier": "a1a1b2b2-c005-4a01-8c01-ac11e000c005",
+          },
+          "expectedEquity": {
+            "universalIdentifier": "a1a1b2b2-c004-4a01-8c01-ac11e000c004",
+          },
+          "expectedTotalCompensation": {
+            "universalIdentifier": "a1a1b2b2-c003-4a01-8c01-ac11e000c003",
+          },
+          "isVerifiedWithCandidate": {
+            "universalIdentifier": "a1a1b2b2-c008-4a01-8c01-ac11e000c008",
+          },
+          "name": {
+            "universalIdentifier": "a1a1b2b2-c001-4a01-8c01-ac11e000c001",
+          },
+          "notes": {
+            "universalIdentifier": "a1a1b2b2-c00c-4a01-8c01-ac11e000c00c",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "a1a1b2b2-c00b-4a01-8c01-ac11e000c00b",
+          },
+          "verifiedAt": {
+            "universalIdentifier": "a1a1b2b2-c009-4a01-8c01-ac11e000c009",
           },
         },
       },
@@ -1359,6 +2241,130 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
   },
+  "criterionEvaluation": {
+    "fields": {
+      "aiDraft": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000205",
+      },
+      "aiDraftGeneratedAt": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000206",
+      },
+      "aiModelVersion": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000207",
+      },
+      "assessment": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000210",
+      },
+      "assessmentId": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000211",
+      },
+      "assessorNotes": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000209",
+      },
+      "candidacy": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000214",
+      },
+      "candidacyId": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000215",
+      },
+      "createdAt": {
+        "universalIdentifier": "c63e6861-bce2-5b77-b8d1-6c00ee6f670f",
+      },
+      "createdBy": {
+        "universalIdentifier": "68fb6b54-dee3-523e-8666-dc411e4c4e85",
+      },
+      "criterion": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000212",
+      },
+      "criterionId": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000213",
+      },
+      "deletedAt": {
+        "universalIdentifier": "8f79ff57-ec21-5046-b68d-26f83815ef1e",
+      },
+      "evidenceReferences": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000204",
+      },
+      "evidenceSummary": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000203",
+      },
+      "id": {
+        "universalIdentifier": "c191a139-5d93-50d2-9b04-23e3a86164f8",
+      },
+      "isHumanReviewed": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000208",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000201",
+      },
+      "position": {
+        "universalIdentifier": "95bab0a1-d3e1-568c-a7d1-27ebe43307dc",
+      },
+      "rating": {
+        "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000202",
+      },
+      "searchVector": {
+        "universalIdentifier": "52429ed5-b304-59af-8ff0-119ff532487e",
+      },
+      "updatedAt": {
+        "universalIdentifier": "2b40c596-1125-53e1-be9e-49e82e654540",
+      },
+      "updatedBy": {
+        "universalIdentifier": "cf12db8f-32a3-52fa-bc08-ab1b57d3fc20",
+      },
+    },
+    "indexes": {
+      "assessmentIdIndex": {
+        "universalIdentifier": "aeb1a002-0002-4000-8002-aeb1a0002001",
+      },
+      "candidacyIdIndex": {
+        "universalIdentifier": "aeb1a002-0002-4000-8002-aeb1a0002003",
+      },
+      "criterionIdIndex": {
+        "universalIdentifier": "aeb1a002-0002-4000-8002-aeb1a0002002",
+      },
+    },
+    "universalIdentifier": "aeb1a002-0001-4000-8002-aeb1a0000002",
+    "views": {
+      "criterionEvaluationRecordPageFields": {
+        "universalIdentifier": "aeb1a002-0030-4000-8002-aeb1a0004001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a002-0040-4000-8002-aeb1a0005001",
+          },
+        },
+        "viewFields": {
+          "assessment": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006005",
+          },
+          "candidacy": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006007",
+          },
+          "createdAt": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006008",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006009",
+          },
+          "criterion": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006006",
+          },
+          "evidenceSummary": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006003",
+          },
+          "isHumanReviewed": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006004",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006001",
+          },
+          "rating": {
+            "universalIdentifier": "aeb1a002-0050-4000-8002-aeb1a0006002",
+          },
+        },
+      },
+    },
+  },
   "dashboard": {
     "fields": {
       "attachments": {
@@ -1481,31 +2487,214 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
     "indexes": {},
     "universalIdentifier": "f6ee0fc1-463a-449a-a03b-1ebaf43244b4",
   },
-  "externalEntityLink": {
+  "diligenceCheck": {
+    "fields": {
+      "conductedAt": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f006",
+      },
+      "conductedById": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f007",
+      },
+      "createdAt": {
+        "universalIdentifier": "fb92c1cd-6ec4-518e-9d14-4c7bc637564b",
+      },
+      "createdBy": {
+        "universalIdentifier": "2085b71e-c9cf-5516-934c-88763b743eab",
+      },
+      "deletedAt": {
+        "universalIdentifier": "746197eb-60d2-5c93-998e-74f776b8801e",
+      },
+      "diligenceType": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f002",
+      },
+      "findings": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f004",
+      },
+      "id": {
+        "universalIdentifier": "5a1b254b-de38-5e8c-be5a-769a6c6820a5",
+      },
+      "name": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f001",
+      },
+      "position": {
+        "universalIdentifier": "c105c73c-ffa2-52b6-8800-1d0757751810",
+      },
+      "recommendation": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f005",
+      },
+      "searchCandidacy": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f008",
+      },
+      "searchCandidacyId": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f009",
+      },
+      "searchVector": {
+        "universalIdentifier": "e50feb7d-0f04-51fb-8ece-29ad8a071b8e",
+      },
+      "status": {
+        "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f000f003",
+      },
+      "updatedAt": {
+        "universalIdentifier": "c273de38-050d-5c27-b216-c55b64abb470",
+      },
+      "updatedBy": {
+        "universalIdentifier": "a3e0a7fb-a8b5-577c-8340-5a90f8dfb796",
+      },
+    },
+    "indexes": {
+      "searchCandidacyIdIndex": {
+        "universalIdentifier": "aeb1f000-0002-4000-800f-aeb1f000i001",
+      },
+      "statusIndex": {
+        "universalIdentifier": "aeb1f000-0002-4000-800f-aeb1f000i002",
+      },
+    },
+    "universalIdentifier": "aeb1f000-0001-4000-800f-aeb1f0000001",
+    "views": {
+      "diligenceCheckRecordPageFields": {
+        "universalIdentifier": "aeb1f000-0030-4000-800f-aeb1f000v001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1f000-0040-4000-800f-aeb1f000g001",
+          },
+          "system": {
+            "universalIdentifier": "aeb1f000-0040-4000-800f-aeb1f000g002",
+          },
+        },
+        "viewFields": {
+          "createdAt": {
+            "universalIdentifier": "aeb1f000-0050-4000-800f-aeb1f000f006",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1f000-0050-4000-800f-aeb1f000f007",
+          },
+          "diligenceType": {
+            "universalIdentifier": "aeb1f000-0050-4000-800f-aeb1f000f002",
+          },
+          "findings": {
+            "universalIdentifier": "aeb1f000-0050-4000-800f-aeb1f000f004",
+          },
+          "name": {
+            "universalIdentifier": "aeb1f000-0050-4000-800f-aeb1f000f001",
+          },
+          "searchCandidacy": {
+            "universalIdentifier": "aeb1f000-0050-4000-800f-aeb1f000f005",
+          },
+          "status": {
+            "universalIdentifier": "aeb1f000-0050-4000-800f-aeb1f000f003",
+          },
+        },
+      },
+    },
+  },
+  "directorIndependenceReview": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "b9cc9cde-9f54-5f62-a3b4-a3f0d087867d",
+      },
+      "createdBy": {
+        "universalIdentifier": "f48a678f-12a3-51f1-9156-c93285eb748f",
+      },
+      "deletedAt": {
+        "universalIdentifier": "35e60660-98d0-53d3-9a73-14007046aa9f",
+      },
+      "findings": {
+        "universalIdentifier": "f0a1b2c3-0404-4000-8004-f0a1b2c304010104",
+      },
+      "id": {
+        "universalIdentifier": "00cc91a7-1417-534d-bf48-5f57fc49401c",
+      },
+      "name": {
+        "universalIdentifier": "f0a1b2c3-0401-4000-8004-f0a1b2c304010101",
+      },
+      "position": {
+        "universalIdentifier": "447a6be9-1f85-55a2-8d21-84d04ba95a79",
+      },
+      "reviewDate": {
+        "universalIdentifier": "f0a1b2c3-0403-4000-8004-f0a1b2c304010103",
+      },
+      "reviewerId": {
+        "universalIdentifier": "f0a1b2c3-0405-4000-8004-f0a1b2c304010105",
+      },
+      "searchCandidacyId": {
+        "universalIdentifier": "f0a1b2c3-0406-4000-8004-f0a1b2c304010106",
+      },
+      "searchVector": {
+        "universalIdentifier": "951b41e3-16a3-5ca3-814e-167079229cef",
+      },
+      "status": {
+        "universalIdentifier": "f0a1b2c3-0402-4000-8004-f0a1b2c304010102",
+      },
+      "updatedAt": {
+        "universalIdentifier": "6e1cd4df-47b9-52ad-8859-9f92dc42c048",
+      },
+      "updatedBy": {
+        "universalIdentifier": "1fd426db-d185-5fc4-a77a-4e45bb7bf20d",
+      },
+    },
+    "indexes": {
+      "searchCandidacyIdIndex": {
+        "universalIdentifier": "f0a1b2c3-0909-4000-8004-f0a1b2c3090109",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "f0a1b2c3-0908-4000-8004-f0a1b2c3090108",
+      },
+    },
+    "universalIdentifier": "f0a1b2c3-0004-4000-8004-f0a1b2c3000004",
+    "views": {
+      "allDirectorIndependenceReviews": {
+        "universalIdentifier": "f0a1b2c3-0810-4000-8004-f0a1b2c3080110",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "f0a1b2c3-0811-4000-8004-f0a1b2c3080111",
+          },
+        },
+        "viewFields": {
+          "name": {
+            "universalIdentifier": "f0a1b2c3-0709-4000-8004-f0a1b2c3070109",
+          },
+          "reviewDate": {
+            "universalIdentifier": "f0a1b2c3-0711-4000-8004-f0a1b2c3070111",
+          },
+          "status": {
+            "universalIdentifier": "f0a1b2c3-0710-4000-8004-f0a1b2c3070110",
+          },
+        },
+      },
+      "directorIndependenceReviewRecordPageFields": {
+        "universalIdentifier": "f0a1b2c3-0812-4000-8004-f0a1b2c3080112",
+        "viewFields": {},
+      },
+    },
+  },
+  "executiveArtifact": {
     "fields": {
       "conflictStatus": {
         "universalIdentifier": "a02c861a-0686-4d92-b3fb-de2000b0e377",
       },
       "createdAt": {
-        "universalIdentifier": "4f50f3c4-2d1c-5c50-b5de-0228ef3198c5",
+        "universalIdentifier": "d4da653b-fb42-576c-9b94-c61bce4ae27d",
       },
       "createdBy": {
-        "universalIdentifier": "c0cd0842-26a5-5100-aca0-d1dd1a157e74",
+        "universalIdentifier": "24c791e5-af8e-53d4-8ea2-fa7463c1f344",
       },
       "deletedAt": {
-        "universalIdentifier": "e9a3f4dd-3e03-504a-b18a-ac08665c0b5b",
+        "universalIdentifier": "d95017f8-cb86-5004-8a77-5e943969eb07",
       },
-      "externalCollection": {
-        "universalIdentifier": "f09b8319-4cfd-4e49-af76-e6b83b894e0b",
+      "description": {
+        "universalIdentifier": "f2114eb5-64c3-47e2-a9c2-5b205a765eea",
       },
-      "externalId": {
-        "universalIdentifier": "d4fd91bd-2ea6-4c10-ac78-9c2e0083a20c",
+      "executiveProfile": {
+        "universalIdentifier": "12302a27-5ddb-48c1-8297-759a3c6a48cf",
       },
-      "externalNaturalKey": {
-        "universalIdentifier": "47388e8a-1fd2-4e16-bdc9-723f3e1d04dc",
+      "externalUrl": {
+        "universalIdentifier": "850c74b8-c272-4229-86ba-cf0ac022a814",
+      },
+      "file": {
+        "universalIdentifier": "20bbf584-5eaa-457f-b4fc-790fec2fa868",
       },
       "id": {
-        "universalIdentifier": "4afb49db-a024-56bc-8977-65ca6c8d5cd4",
+        "universalIdentifier": "46829377-fcb3-5079-8c82-96acf3d00630",
       },
       "isAuthoritativeLink": {
         "universalIdentifier": "7a4efc36-4e82-4e3c-9cc1-83498f44d448",
@@ -1526,22 +2715,766 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
         "universalIdentifier": "ea4943c8-d856-4da3-92af-e66bf139504d",
       },
       "position": {
-        "universalIdentifier": "f5c0099a-586a-5e84-9a6a-e594adb737e9",
+        "universalIdentifier": "3bb3dae0-398d-5a33-9ea5-8f5ed07ce22f",
       },
       "searchVector": {
-        "universalIdentifier": "c4f85259-6b36-5310-9e91-79425d99368c",
+        "universalIdentifier": "fb77fa40-9926-5125-a658-57d253b87b2b",
       },
       "sourceHash": {
-        "universalIdentifier": "c6333c35-7045-44a5-96d2-162ccc5e2699",
+        "universalIdentifier": "bf5eb252-9b0f-4499-a1bc-ccc50dce677e",
       },
       "sourceUpdatedAt": {
         "universalIdentifier": "383f2a5b-267b-44c2-bf50-b52bd3d49a83",
       },
-      "sourceVersion": {
-        "universalIdentifier": "3a53950c-9516-4881-ac54-8d3ce89e5c7c",
-      },
       "syncStatus": {
         "universalIdentifier": "1a6b68dc-90c8-4bd5-b275-f005a99de7fa",
+      },
+      "title": {
+        "universalIdentifier": "e9992628-3d9b-46f5-bc55-17425800d010",
+      },
+      "type": {
+        "universalIdentifier": "3bf98426-7497-4b15-8bf2-dec2556e943a",
+      },
+      "updatedAt": {
+        "universalIdentifier": "47fe33f1-e3ef-507c-a73c-b43f5cff0bac",
+      },
+      "updatedBy": {
+        "universalIdentifier": "7217fd41-6196-544e-b76d-2d2a84dff4fa",
+      },
+      "version": {
+        "universalIdentifier": "e1dbd025-3cc5-4532-b2e6-8c3546827529",
+      },
+      "visibility": {
+        "universalIdentifier": "7da8bbd3-d1fb-4f76-9c0d-76d7264e6a60",
+      },
+    },
+    "indexes": {
+      "systemExternalCollectionExternalIdIndex": {
+        "universalIdentifier": "34097f88-2524-421d-85c8-dff16c0c63de",
+      },
+      "systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex": {
+        "universalIdentifier": "921b0777-f13f-468c-bebb-a35f6e41ab1a",
+      },
+    },
+    "universalIdentifier": "46f80f0a-d4b6-4bb8-92bc-4e5e30dbf999",
+  },
+  "executiveAssessment": {
+    "fields": {
+      "assessmentDate": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000107",
+      },
+      "assessor": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000108",
+      },
+      "assessorId": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000109",
+      },
+      "candidacy": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000110",
+      },
+      "candidacyId": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000111",
+      },
+      "consentToShare": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000114",
+      },
+      "createdAt": {
+        "universalIdentifier": "3fcb52e2-4ea6-5895-8403-f05e5b6101c3",
+      },
+      "createdBy": {
+        "universalIdentifier": "a36ec649-29a4-5a17-a847-fccddcdcb27c",
+      },
+      "deletedAt": {
+        "universalIdentifier": "f40cb57e-1e7d-5689-8895-da7e608ec92f",
+      },
+      "evaluations": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000116",
+      },
+      "id": {
+        "universalIdentifier": "75e0abd1-de33-5447-a626-7ae17d276cb9",
+      },
+      "isClientVisible": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000115",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000101",
+      },
+      "overallAssessment": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000103",
+      },
+      "position": {
+        "universalIdentifier": "1fc7782d-0949-57f4-b706-c8a784af974c",
+      },
+      "recommendation": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000106",
+      },
+      "riskFactorsSummary": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000105",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000112",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000113",
+      },
+      "searchVector": {
+        "universalIdentifier": "d2039da5-d1f4-5b6b-8cb1-f851d5099412",
+      },
+      "status": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000102",
+      },
+      "strengthsSummary": {
+        "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000104",
+      },
+      "updatedAt": {
+        "universalIdentifier": "a8c8e064-fa41-538d-b2fc-e8483c64f581",
+      },
+      "updatedBy": {
+        "universalIdentifier": "bf85fcc5-035b-571d-87cb-75de5903aeca",
+      },
+    },
+    "indexes": {
+      "assessorIdIndex": {
+        "universalIdentifier": "aeb1a001-0002-4000-8001-aeb1a0001004",
+      },
+      "candidacyIdIndex": {
+        "universalIdentifier": "aeb1a001-0002-4000-8001-aeb1a0001001",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "aeb1a001-0002-4000-8001-aeb1a0001002",
+      },
+      "statusIndex": {
+        "universalIdentifier": "aeb1a001-0002-4000-8001-aeb1a0001003",
+      },
+    },
+    "universalIdentifier": "aeb1a001-0001-4000-8001-aeb1a0000001",
+    "views": {
+      "executiveAssessmentRecordPageFields": {
+        "universalIdentifier": "aeb1a001-0030-4000-8001-aeb1a0002001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a001-0040-4000-8001-aeb1a0003001",
+          },
+        },
+        "viewFields": {
+          "assessmentDate": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004007",
+          },
+          "assessor": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004008",
+          },
+          "candidacy": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004009",
+          },
+          "createdAt": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004011",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004012",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004001",
+          },
+          "overallAssessment": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004003",
+          },
+          "recommendation": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004006",
+          },
+          "riskFactorsSummary": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004005",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004010",
+          },
+          "status": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004002",
+          },
+          "strengthsSummary": {
+            "universalIdentifier": "aeb1a001-0050-4000-8001-aeb1a0004004",
+          },
+        },
+      },
+    },
+  },
+  "executiveAward": {
+    "fields": {
+      "clientAccountProfile": {
+        "universalIdentifier": "20202020-9cd9-4c20-b0cf-50ba3ed5e65d",
+      },
+      "company": {
+        "universalIdentifier": "20202020-ed0a-4d0a-b977-21e61a039eed",
+      },
+      "createdAt": {
+        "universalIdentifier": "43748660-d32b-51ae-a1f4-dae7fe9bb626",
+      },
+      "createdBy": {
+        "universalIdentifier": "fb41e798-e603-562e-9635-3bd9a0294223",
+      },
+      "deletedAt": {
+        "universalIdentifier": "aeefc83b-f75b-555b-9fbd-ce5d34bc8758",
+      },
+      "id": {
+        "universalIdentifier": "b8b5d56b-86a4-5441-a6fc-7f940442dfbe",
+      },
+      "isPrimary": {
+        "universalIdentifier": "20202020-73a6-4b72-9d36-8fa2240c4c12",
+      },
+      "name": {
+        "universalIdentifier": "20202020-a0b0-445a-a128-f1d72efbdb3c",
+      },
+      "notes": {
+        "universalIdentifier": "20202020-5e4c-494d-9473-afc0b884eb31",
+      },
+      "person": {
+        "universalIdentifier": "20202020-c7f7-49bb-941c-81dfde307370",
+      },
+      "position": {
+        "universalIdentifier": "3cd9338e-14a4-5c3a-9aca-6ec05fe41fde",
+      },
+      "role": {
+        "universalIdentifier": "20202020-396a-415a-ab4c-d1e473c05af4",
+      },
+      "searchVector": {
+        "universalIdentifier": "7d5e9752-9986-5787-8690-f03328a064e3",
+      },
+      "updatedAt": {
+        "universalIdentifier": "026b4bb7-c4d7-5ff5-915c-380aa2c943c0",
+      },
+      "updatedBy": {
+        "universalIdentifier": "b568c116-594e-5e3b-9083-f012a9ca803b",
+      },
+    },
+    "indexes": {
+      "companyIdIndex": {
+        "universalIdentifier": "20202020-0ece-43c5-a5d3-6cfa973756af",
+      },
+      "personCompanyUniqueIndex": {
+        "universalIdentifier": "20202020-3bf7-4920-a283-d1363c5dcc5f",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "20202020-3216-4e8d-8221-c0a1bff7c30c",
+      },
+    },
+    "universalIdentifier": "cc229997-5392-47cb-b8c6-093092b10821",
+  },
+  "executiveBoardService": {
+    "fields": {
+      "boardType": {
+        "universalIdentifier": "166c1941-3794-43b4-9a1a-c45dc255eb72",
+      },
+      "committees": {
+        "universalIdentifier": "7cbd9927-e8f2-444d-9456-6a72834c45a1",
+      },
+      "companyName": {
+        "universalIdentifier": "29a5dda7-0715-46e3-bfac-a48eb94d827c",
+      },
+      "createdAt": {
+        "universalIdentifier": "419b5084-573f-5253-87b8-c668289839cb",
+      },
+      "createdBy": {
+        "universalIdentifier": "7784b420-d6d8-58c3-8bab-b56c4ebeb930",
+      },
+      "deletedAt": {
+        "universalIdentifier": "e448469b-a0e9-51d4-a344-88c8cd6ad585",
+      },
+      "endDate": {
+        "universalIdentifier": "971dc7ff-fcb8-48d2-88b9-06d2b53fe006",
+      },
+      "executiveProfile": {
+        "universalIdentifier": "5b9adcdc-f3f8-408f-87d1-e3a956f42753",
+      },
+      "id": {
+        "universalIdentifier": "9d02ecac-6be0-55c1-980b-e90017abb296",
+      },
+      "isCurrent": {
+        "universalIdentifier": "e2c0271c-4d40-4c6d-ab88-c0556b227c0a",
+      },
+      "isIndependent": {
+        "universalIdentifier": "5ef4af17-6173-48f1-9f3d-6013e8e4b922",
+      },
+      "position": {
+        "universalIdentifier": "af32d3fd-d095-51e7-8dfd-d94a63f6691b",
+      },
+      "role": {
+        "universalIdentifier": "bc3710d9-2ec9-49e5-b733-05074e950c59",
+      },
+      "searchVector": {
+        "universalIdentifier": "eae39d9f-b325-5a73-91cf-ecbaa49e3306",
+      },
+      "startDate": {
+        "universalIdentifier": "ae77d8e0-687d-460b-a550-4985ed909d03",
+      },
+      "ticker": {
+        "universalIdentifier": "68714b8e-8761-482d-9098-33b337a7db5c",
+      },
+      "updatedAt": {
+        "universalIdentifier": "b79ae154-e8c1-58b1-81ba-02b882f0f26d",
+      },
+      "updatedBy": {
+        "universalIdentifier": "804a8496-6a96-5cd7-a304-40b73cfffe7d",
+      },
+    },
+    "indexes": {
+      "executiveProfileIdIndex": {
+        "universalIdentifier": "ab023ed9-c408-4d1e-bf4a-9eb287755171",
+      },
+    },
+    "universalIdentifier": "30b0287e-6681-42c1-94f9-01ed0e06055b",
+    "views": {
+      "allExecutiveBoardServices": {
+        "universalIdentifier": "ec96a0b0-64bc-4689-adfe-b7ea488b938f",
+        "viewFields": {
+          "companyName": {
+            "universalIdentifier": "598d41ec-c6d5-40a1-a582-5b5f49d2c9d2",
+          },
+          "executiveProfile": {
+            "universalIdentifier": "7c991eea-6038-4718-8286-b9a1ce1f5bb9",
+          },
+          "role": {
+            "universalIdentifier": "983b0f7a-8ccc-45ea-a0f8-ac9869d7a5bb",
+          },
+        },
+      },
+    },
+  },
+  "executiveCapability": {
+    "fields": {
+      "category": {
+        "universalIdentifier": "fafe342c-45d7-4562-8978-6cbf40147a41",
+      },
+      "createdAt": {
+        "universalIdentifier": "d8007d6d-d0d5-54a8-85e1-321ca37156f8",
+      },
+      "createdBy": {
+        "universalIdentifier": "42d7eec2-0232-5893-a9e4-c54e17f8c3e0",
+      },
+      "deletedAt": {
+        "universalIdentifier": "ced340ee-7704-5526-a0e1-d56b09702bc3",
+      },
+      "executiveProfile": {
+        "universalIdentifier": "fbadff04-0f83-47d0-a9e7-9e8d334482e3",
+      },
+      "id": {
+        "universalIdentifier": "7700d09f-7d1e-5d48-85fa-b06ef52d92d1",
+      },
+      "name": {
+        "universalIdentifier": "f6d5419b-d9e9-4913-aac4-2d763a6c8eba",
+      },
+      "position": {
+        "universalIdentifier": "fed1c066-af42-51f5-8848-38c7b2e344eb",
+      },
+      "proficiencyLevel": {
+        "universalIdentifier": "039a7e32-b6c9-4a41-870a-6149ef814d90",
+      },
+      "searchVector": {
+        "universalIdentifier": "f05ce0fd-2d16-5013-bb1f-d9f6e770154d",
+      },
+      "source": {
+        "universalIdentifier": "be81885f-786d-44f9-a404-1342f8b915b0",
+      },
+      "updatedAt": {
+        "universalIdentifier": "6579cdf8-fc5f-59b4-8dac-8b15c1995924",
+      },
+      "updatedBy": {
+        "universalIdentifier": "630864d8-3d93-5795-8b92-4fd048f1a983",
+      },
+    },
+    "indexes": {
+      "executiveProfileIdIndex": {
+        "universalIdentifier": "946586fa-0d98-4870-9815-03a7e34182cf",
+      },
+    },
+    "universalIdentifier": "6dd2cb7c-9c30-47ed-bfb6-c8ccb33baaea",
+    "views": {
+      "allExecutiveCapabilities": {
+        "universalIdentifier": "f7b0e940-2471-43bc-9739-74ebb9f5d76b",
+        "viewFields": {
+          "category": {
+            "universalIdentifier": "9241cdd6-642d-4612-9c16-27aaa20606ff",
+          },
+          "executiveProfile": {
+            "universalIdentifier": "3789380b-47b9-4b07-89c8-5c45e7d4aacb",
+          },
+          "name": {
+            "universalIdentifier": "936cd406-0bde-4bc3-97be-f437a787ef52",
+          },
+        },
+      },
+    },
+  },
+  "executiveCareerExperience": {
+    "fields": {
+      "company": {
+        "universalIdentifier": "e24afe6c-4bfe-4cf4-9b1c-37cdc56b4a19",
+      },
+      "createdAt": {
+        "universalIdentifier": "dd2daf34-4f20-5617-8471-e278889b0447",
+      },
+      "createdBy": {
+        "universalIdentifier": "8c1165c5-c53b-57c7-a686-e6ea60ef4dc8",
+      },
+      "deletedAt": {
+        "universalIdentifier": "386c5b2f-f837-58a6-ad1f-6fd72e5c8083",
+      },
+      "description": {
+        "universalIdentifier": "ec5a8a01-fa23-4776-bff4-0d435f375a4c",
+      },
+      "employmentType": {
+        "universalIdentifier": "7bf85b9d-1aa0-4ad7-8bdd-aa8d8dc2a5ed",
+      },
+      "endDate": {
+        "universalIdentifier": "069d770c-107e-44a3-8872-9685a1ff5551",
+      },
+      "executiveProfile": {
+        "universalIdentifier": "9efacd73-d743-48a9-84da-e97276f20cb9",
+      },
+      "id": {
+        "universalIdentifier": "65254d36-e30f-5af8-8446-a8d00539d07b",
+      },
+      "industry": {
+        "universalIdentifier": "2dce0754-1284-4a03-96a6-e3afe847406b",
+      },
+      "isCurrent": {
+        "universalIdentifier": "d8c6bc27-51ef-48ea-b42a-4eaf00ffe33c",
+      },
+      "position": {
+        "universalIdentifier": "96eec590-a106-5f44-881e-939e6bdfe7a2",
+      },
+      "searchVector": {
+        "universalIdentifier": "45bc14e5-707e-5ea8-b16f-23a9b2d523a9",
+      },
+      "startDate": {
+        "universalIdentifier": "08e6a087-f6b5-4d4d-b90e-7ea1aacee6bd",
+      },
+      "title": {
+        "universalIdentifier": "306064f8-dfd4-4219-8f11-8892b799e071",
+      },
+      "updatedAt": {
+        "universalIdentifier": "30a8b80f-dfcc-5756-bbf6-0cb10c3f4425",
+      },
+      "updatedBy": {
+        "universalIdentifier": "90804269-8302-5681-9b73-ac7eba93e2ab",
+      },
+    },
+    "indexes": {
+      "executiveProfileIdIndex": {
+        "universalIdentifier": "ef6c772c-a320-4fa3-9ee0-1cbbd0a83a74",
+      },
+    },
+    "universalIdentifier": "190293c9-19bb-4bce-a532-90f82606cee0",
+    "views": {
+      "allExecutiveCareerExperiences": {
+        "universalIdentifier": "04f0c494-770a-41e2-8eec-2fa6f7d16758",
+        "viewFields": {
+          "company": {
+            "universalIdentifier": "f06502a3-970c-4be1-8dca-d18bf92cd6c9",
+          },
+          "executiveProfile": {
+            "universalIdentifier": "a4e32275-7e73-4d62-997e-fa9abc6a37e1",
+          },
+          "title": {
+            "universalIdentifier": "1eb36b0d-8436-4762-9a22-aee0d43ecbda",
+          },
+        },
+      },
+    },
+  },
+  "executiveEducation": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "09f22dfd-e43e-532b-8ddf-44cabcaa413d",
+      },
+      "createdBy": {
+        "universalIdentifier": "84f06e6f-490c-50eb-938c-fe1cab83e67a",
+      },
+      "degree": {
+        "universalIdentifier": "b2dfb62b-f70f-4495-9c77-e29358a2ba1f",
+      },
+      "deletedAt": {
+        "universalIdentifier": "179d4d31-7992-5952-a29e-92c667e7bdc4",
+      },
+      "endDate": {
+        "universalIdentifier": "5044787f-2fbb-4728-8d9f-2bcc4d1a2533",
+      },
+      "executiveProfile": {
+        "universalIdentifier": "46116daf-edea-4322-9345-cdee35f510ff",
+      },
+      "fieldOfStudy": {
+        "universalIdentifier": "e767fd53-15d3-4cf4-ab4e-41e97310ac59",
+      },
+      "id": {
+        "universalIdentifier": "6977d9fa-b752-5fea-a983-1f333629dd69",
+      },
+      "institution": {
+        "universalIdentifier": "f645863d-a183-4673-afca-3ba6144c8d54",
+      },
+      "isVerified": {
+        "universalIdentifier": "fd68a310-30c3-438f-93ec-2f67e4bd4ebf",
+      },
+      "position": {
+        "universalIdentifier": "0ac97356-f2c8-5186-9999-f7972a204611",
+      },
+      "searchVector": {
+        "universalIdentifier": "3981553a-d159-5453-ba7a-8fdc10765f2d",
+      },
+      "startDate": {
+        "universalIdentifier": "b6b86738-823f-453b-9ece-82eb8a5b883d",
+      },
+      "updatedAt": {
+        "universalIdentifier": "3f0e1578-909c-59b4-bbae-42932e2bb685",
+      },
+      "updatedBy": {
+        "universalIdentifier": "518919b5-f6d3-5e50-9fce-0a438d504137",
+      },
+    },
+    "indexes": {
+      "executiveProfileIdIndex": {
+        "universalIdentifier": "28619741-dc44-4f9a-a904-4218a42ce88b",
+      },
+    },
+    "universalIdentifier": "bf6030cd-7ce5-4c11-bf81-974ff65fd4b1",
+    "views": {
+      "allExecutiveEducations": {
+        "universalIdentifier": "8c87d34f-505a-49ce-b41b-384e867abbad",
+        "viewFields": {
+          "degree": {
+            "universalIdentifier": "358327d9-0dd2-4ad9-858d-679b1b04f494",
+          },
+          "executiveProfile": {
+            "universalIdentifier": "a692477d-11c9-4249-baab-8b6ae51427c5",
+          },
+          "institution": {
+            "universalIdentifier": "146ccaee-632f-4246-95f2-d15577308fe5",
+          },
+        },
+      },
+    },
+  },
+  "executiveLanguage": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "be9e05f4-7d67-52c1-a5dc-02ed2bf06a6e",
+      },
+      "createdBy": {
+        "universalIdentifier": "f6b0c7df-8ab1-5f60-a352-b802054bcd2a",
+      },
+      "deletedAt": {
+        "universalIdentifier": "9c27671a-ede3-56b3-a1e7-2387316468fe",
+      },
+      "executiveProfile": {
+        "universalIdentifier": "b174ae1d-19fc-40f3-968b-616851622994",
+      },
+      "id": {
+        "universalIdentifier": "612340fd-70e8-597f-9952-35150f1adabc",
+      },
+      "language": {
+        "universalIdentifier": "033dfeb3-39af-4d28-9fd4-0dd738a351e8",
+      },
+      "position": {
+        "universalIdentifier": "2b77345b-d78b-59d3-9be7-6eb7b079d2f3",
+      },
+      "proficiency": {
+        "universalIdentifier": "cf837ab1-3830-4272-b81b-8786a2c44d10",
+      },
+      "searchVector": {
+        "universalIdentifier": "186dffa2-47a2-5f84-b95c-aeadd1842627",
+      },
+      "updatedAt": {
+        "universalIdentifier": "3dbc69e3-efbd-52f0-8e3a-3e19351b84a6",
+      },
+      "updatedBy": {
+        "universalIdentifier": "b1590b7f-5a21-5c7d-8abc-979e7ef187c5",
+      },
+    },
+    "indexes": {
+      "executiveProfileIdIndex": {
+        "universalIdentifier": "45c6f684-2970-4bd5-8d47-7c552769d3f9",
+      },
+    },
+    "universalIdentifier": "2c749e10-ae76-4d9e-bed1-46630b4bf65e",
+    "views": {
+      "allExecutiveLanguages": {
+        "universalIdentifier": "604f6e84-cb7d-4832-9c1a-d4541ccc4a1a",
+        "viewFields": {
+          "executiveProfile": {
+            "universalIdentifier": "712eae75-b19a-4cfc-a90e-96c5c3065c44",
+          },
+          "language": {
+            "universalIdentifier": "e9b50eeb-df54-4594-bcbd-396d836dee9d",
+          },
+          "proficiency": {
+            "universalIdentifier": "2b6280c5-178d-48be-ad74-1706eb2e47d0",
+          },
+        },
+      },
+    },
+  },
+  "executiveProfile": {
+    "fields": {
+      "availabilityStatus": {
+        "universalIdentifier": "202a1c8d-8cd5-4eb2-9afc-981c7dc80bce",
+      },
+      "candidacies": {
+        "universalIdentifier": "c074d37e-9001-4a77-a1fa-dabbd088b001",
+      },
+      "createdAt": {
+        "universalIdentifier": "c0b09e80-51a6-5a8e-8bf1-3a0daefe3a84",
+      },
+      "createdBy": {
+        "universalIdentifier": "a9376228-3951-55e7-95f4-a9f96f3d70db",
+      },
+      "currentCompany": {
+        "universalIdentifier": "62f5a0e1-43b1-4e73-8c9a-c399c7f85890",
+      },
+      "deletedAt": {
+        "universalIdentifier": "a1ceec89-684d-546f-a7cb-d9fc72d43e8b",
+      },
+      "headline": {
+        "universalIdentifier": "5e195816-4d09-4e84-9c6c-1a0859e98ebc",
+      },
+      "id": {
+        "universalIdentifier": "dc426ed6-acae-52d6-922d-61b3c6937946",
+      },
+      "isBoardReady": {
+        "universalIdentifier": "b7cfe9d7-7aa7-4d5f-8bb7-54ea66599dd5",
+      },
+      "location": {
+        "universalIdentifier": "465bf4ab-f518-4ed0-91e5-467a6a283a8d",
+      },
+      "person": {
+        "universalIdentifier": "fcdb1e4d-df64-4f08-b474-64f305f195f9",
+      },
+      "position": {
+        "universalIdentifier": "9ecec825-b63b-5b91-adc8-070f55ebff7b",
+      },
+      "profileVisibility": {
+        "universalIdentifier": "00e79e74-285c-42dd-979b-202c05b64b11",
+      },
+      "searchVector": {
+        "universalIdentifier": "1cef5361-b275-588e-91fd-a56bfb0b364b",
+      },
+      "sourceHash": {
+        "universalIdentifier": "ae9e5834-10ec-45ea-a1f4-2f16429ecc7b",
+      },
+      "sourceRecordId": {
+        "universalIdentifier": "f899bdf6-dc96-4fa5-8b78-0e9a3559f484",
+      },
+      "sourceSystem": {
+        "universalIdentifier": "a913a578-9df0-4872-92f8-6ed46d94ee95",
+      },
+      "sourceUpdatedAt": {
+        "universalIdentifier": "58e5092c-af5d-4e61-89ea-de653b4df41f",
+      },
+      "summary": {
+        "universalIdentifier": "aa325eaa-8eb1-490b-9c32-c7158e67d1ec",
+      },
+      "updatedAt": {
+        "universalIdentifier": "c5e9810f-2d01-5460-9bfb-7b7d79572438",
+      },
+      "updatedBy": {
+        "universalIdentifier": "e532f245-aa52-56cc-a7d7-43c715020cbd",
+      },
+      "yearsOfExperience": {
+        "universalIdentifier": "de83e3c1-463b-4265-97bb-e5a092905b59",
+      },
+    },
+    "indexes": {
+      "personIdIndex": {
+        "universalIdentifier": "efe53369-4236-485c-8f03-5d99a9847a9b",
+      },
+    },
+    "universalIdentifier": "c074d37e-857d-4a77-a1fa-dabbd088bb2d",
+    "views": {
+      "allExecutiveProfiles": {
+        "universalIdentifier": "e09017b3-24e7-4357-b9fd-75c6a667e629",
+        "viewFields": {
+          "currentTitle": {
+            "universalIdentifier": "e03cdb9b-3dd9-4eb1-b1fe-b5a37e50ea91",
+          },
+          "headline": {
+            "universalIdentifier": "3c180e89-d829-4ca8-b2cc-b528288005e5",
+          },
+          "person": {
+            "universalIdentifier": "adfc5552-d5d1-4467-b776-e291a9d08e8c",
+          },
+          "profileStatus": {
+            "universalIdentifier": "832602cc-eb2b-4903-8122-e2b3ad347022",
+          },
+        },
+      },
+    },
+  },
+  "externalEntityLink": {
+    "fields": {
+      "artifacts": {
+        "universalIdentifier": "b23b6349-5b86-485a-b906-8da0dbda0eb4",
+      },
+      "awards": {
+        "universalIdentifier": "1f97517b-33e1-43cb-9b1c-8405558eae2d",
+      },
+      "boardServices": {
+        "universalIdentifier": "22cd6643-8201-4191-8c96-bc24a82f3ea0",
+      },
+      "capabilities": {
+        "universalIdentifier": "92bccc31-8902-4509-8e6f-6bbb8dc1c8d6",
+      },
+      "careerExperiences": {
+        "universalIdentifier": "76ee9fcc-6b69-4d01-9d44-4840a8216635",
+      },
+      "createdAt": {
+        "universalIdentifier": "4f50f3c4-2d1c-5c50-b5de-0228ef3198c5",
+      },
+      "createdBy": {
+        "universalIdentifier": "c0cd0842-26a5-5100-aca0-d1dd1a157e74",
+      },
+      "deletedAt": {
+        "universalIdentifier": "e9a3f4dd-3e03-504a-b18a-ac08665c0b5b",
+      },
+      "educations": {
+        "universalIdentifier": "2c17c5ac-2322-4b29-8233-0dd83dca9d15",
+      },
+      "externalCollection": {
+        "universalIdentifier": "f09b8319-4cfd-4e49-af76-e6b83b894e0b",
+      },
+      "externalId": {
+        "universalIdentifier": "d4fd91bd-2ea6-4c10-ac78-9c2e0083a20c",
+      },
+      "externalNaturalKey": {
+        "universalIdentifier": "47388e8a-1fd2-4e16-bdc9-723f3e1d04dc",
+      },
+      "externalProfiles": {
+        "universalIdentifier": "f933faa8-cfd7-43f9-ba41-85eb5e4d15fe",
+      },
+      "id": {
+        "universalIdentifier": "4afb49db-a024-56bc-8977-65ca6c8d5cd4",
+      },
+      "isBoardReady": {
+        "universalIdentifier": "673edebe-1dea-48d4-a642-f06fd3234a5b",
+      },
+      "languages": {
+        "universalIdentifier": "299da58e-831b-4dd1-bef3-22fa71df8c27",
+      },
+      "lastVerifiedAt": {
+        "universalIdentifier": "eaeb12f5-f428-4984-b3d4-4a5aeae0b5e2",
+      },
+      "location": {
+        "universalIdentifier": "07122700-58cc-457b-b636-a2dd9954e07e",
+      },
+      "position": {
+        "universalIdentifier": "f5c0099a-586a-5e84-9a6a-e594adb737e9",
+      },
+      "researchCandidates": {
+        "universalIdentifier": "d5d279c4-0001-4000-8000-000000000001",
+      },
+      "searchPreferences": {
+        "universalIdentifier": "e35d2471-a079-4318-b94e-b8485ff2896b",
+      },
+      "searchVector": {
+        "universalIdentifier": "c4f85259-6b36-5310-9e91-79425d99368c",
+      },
+      "sourceVersion": {
+        "universalIdentifier": "3a53950c-9516-4881-ac54-8d3ce89e5c7c",
       },
       "system": {
         "universalIdentifier": "b0d3e716-8c84-4262-82c1-facad5b2bfb8",
@@ -1560,14 +3493,170 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
     "indexes": {
-      "systemExternalCollectionExternalIdIndex": {
-        "universalIdentifier": "34097f88-2524-421d-85c8-dff16c0c63de",
-      },
-      "systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex": {
-        "universalIdentifier": "921b0777-f13f-468c-bebb-a35f6e41ab1a",
+      "personIdUniqueIndex": {
+        "universalIdentifier": "3c5cdcfb-e7da-4f5f-9541-aabea51d8e23",
       },
     },
     "universalIdentifier": "83a0c657-2e64-47c5-a363-bf7f23b5bb58",
+  },
+  "externalIdentityMatchQueue": {
+    "fields": {
+      "candidateMatches": {
+        "universalIdentifier": "33eaaaba-66fa-4a64-9e8c-1c1524e74980",
+      },
+      "createdAt": {
+        "universalIdentifier": "b9b4d68e-1688-59a1-b7b0-91e64a80e021",
+      },
+      "createdBy": {
+        "universalIdentifier": "a66ab7de-93ef-552f-94cc-3f2da504849c",
+      },
+      "deletedAt": {
+        "universalIdentifier": "64864ef2-7c30-5bda-9a0c-cfec190c063d",
+      },
+      "externalEntityName": {
+        "universalIdentifier": "c23bdea2-f8fe-4683-a653-0896deec516b",
+      },
+      "externalNaturalKey": {
+        "universalIdentifier": "55b340f1-55fc-4e30-8d81-302e834503c8",
+      },
+      "externalRecordId": {
+        "universalIdentifier": "e402bd16-aff2-4368-a436-aab2b436356c",
+      },
+      "externalSystemName": {
+        "universalIdentifier": "34877783-e031-445e-b819-4bc2a902e872",
+      },
+      "id": {
+        "universalIdentifier": "adc950a3-4ac0-50a2-83a8-812f95c397f7",
+      },
+      "matchConfidence": {
+        "universalIdentifier": "e7e1c02e-2acf-4647-ab78-68f527c10ec5",
+      },
+      "matchReasons": {
+        "universalIdentifier": "83fc48ff-b4e5-49aa-946b-2e2f39428d17",
+      },
+      "matchedTwentyEntityName": {
+        "universalIdentifier": "c709f2c3-8ed6-427b-af4a-3647aff0f943",
+      },
+      "position": {
+        "universalIdentifier": "67c2373d-6623-5b5f-bc57-aaf5594a180e",
+      },
+      "resolutionState": {
+        "universalIdentifier": "e1fc4b62-34e3-458a-ac6b-334e4a6469bc",
+      },
+      "resolvedAt": {
+        "universalIdentifier": "9b393d92-6dcd-4c1a-b6dc-4a85507d124f",
+      },
+      "resolvedById": {
+        "universalIdentifier": "7bba054b-11c2-460d-9683-4f022281870f",
+      },
+      "resolvedTwentyEntityName": {
+        "universalIdentifier": "aa4b4a87-ec26-44fb-9f2f-956865df3a58",
+      },
+      "resolvedTwentyRecordId": {
+        "universalIdentifier": "6dacd7aa-32f6-4ef7-a605-53f884db1a15",
+      },
+      "searchVector": {
+        "universalIdentifier": "93ec0e16-8184-5ad2-9b7d-d7a5c3c0891a",
+      },
+      "updatedAt": {
+        "universalIdentifier": "90e35d74-9184-576f-80c2-5b5c142dc3c6",
+      },
+      "updatedBy": {
+        "universalIdentifier": "d284cc8f-b082-5de5-9c0d-115dd7939a45",
+      },
+    },
+    "indexes": {
+      "externalLookupIndex": {
+        "universalIdentifier": "7d93e812-aa37-4a15-9338-254afc201e4a",
+      },
+      "resolutionStateIndex": {
+        "universalIdentifier": "2fe8eab9-fd9f-42ec-a302-396ced7f0cf5",
+      },
+    },
+    "universalIdentifier": "5a9650dc-ab1e-436c-a4ea-3faaebb9e076",
+    "views": {
+      "allExternalIdentityMatchQueues": {
+        "universalIdentifier": "6489495a-def8-4c14-a7dc-698179f977bf",
+        "viewFields": {
+          "createdAt": {
+            "universalIdentifier": "b3e45c92-c5d8-493c-ba55-c13668726bdd",
+          },
+          "externalEntityName": {
+            "universalIdentifier": "c2d9a175-2a27-4abf-8e2a-1a6ca53cf963",
+          },
+          "externalRecordId": {
+            "universalIdentifier": "68f4232b-efc1-4369-8859-fe347501db0e",
+          },
+          "externalSystemName": {
+            "universalIdentifier": "c499fbb0-01f3-49fd-9d13-fb115843ad5e",
+          },
+          "matchConfidence": {
+            "universalIdentifier": "8e175a12-2842-488b-8363-a2a589b8fad6",
+          },
+          "resolutionState": {
+            "universalIdentifier": "11a2c828-a91c-47d6-abce-d63885649d65",
+          },
+        },
+      },
+      "externalIdentityMatchQueueRecordPageFields": {
+        "universalIdentifier": "62d9a84b-669b-4441-9062-3ad7e7e43df9",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "c93d5d96-eedd-4deb-bfee-127caaca30e3",
+          },
+          "system": {
+            "universalIdentifier": "ffa938b5-c9bb-48e5-b1c7-7083a9873e75",
+          },
+        },
+        "viewFields": {
+          "candidateMatches": {
+            "universalIdentifier": "2a40ab35-32f4-4c23-a2d6-ed886e3053aa",
+          },
+          "createdAt": {
+            "universalIdentifier": "42237d09-1890-4e0e-9dea-db6ba9e23880",
+          },
+          "createdBy": {
+            "universalIdentifier": "ca04e96b-9745-49f2-b6a6-f16f9f9093fc",
+          },
+          "externalEntityName": {
+            "universalIdentifier": "932419b3-5f80-46e9-ac34-9f30c66e5089",
+          },
+          "externalNaturalKey": {
+            "universalIdentifier": "b193b280-dfd4-4745-bc63-f6ef3c3fbb39",
+          },
+          "externalRecordId": {
+            "universalIdentifier": "0a7f377d-956c-426d-83d7-62084c677ef1",
+          },
+          "externalSystemName": {
+            "universalIdentifier": "7a659343-ca9e-45fe-aa3e-156c1273f360",
+          },
+          "matchConfidence": {
+            "universalIdentifier": "e96b514f-bc8d-4b36-b037-8bf940791fa4",
+          },
+          "matchReasons": {
+            "universalIdentifier": "7952e1a6-3839-4111-84b4-0ba483ee3a0f",
+          },
+          "matchedTwentyEntityName": {
+            "universalIdentifier": "a7159fee-3f68-4f3c-8969-5396eca2972d",
+          },
+          "resolutionState": {
+            "universalIdentifier": "a84331ba-f315-49b5-94f5-cd17517ca489",
+          },
+          "resolvedAt": {
+            "universalIdentifier": "690800fe-e3cb-4090-9c30-96fcd0dc8cc7",
+          },
+          "resolvedById": {
+            "universalIdentifier": "eb48e693-fcfa-46e0-8505-1c26207bca8f",
+          },
+          "resolvedTwentyEntityName": {
+            "universalIdentifier": "51db5bf4-7224-4b71-8ff3-faa65883b6fe",
+          },
+          "resolvedTwentyRecordId": {
+            "universalIdentifier": "46e219ef-5f46-4ed7-9e0c-852efab90764",
+          },
+        },
+      },
+    },
   },
   "externalSyncCheckpoint": {
     "fields": {
@@ -1863,17 +3952,7 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
         "universalIdentifier": "173a940c-6202-5623-aa96-b98061cf8acd",
       },
       "position": {
-"universalIdentifier": "b5703a90-7af1-5e37-be3b-5fd07a0db901",,
-"universalIdentifier": "b13ae281-45ec-5e60-8928-936213806abf",
-      },
-      "profileStatus": {
-        "universalIdentifier": "c560a1fd-cfa6-4f1c-b5a0-25717e8c9a59",
-      },
-      "researchCandidates": {
-        "universalIdentifier": "d5d279c4-0001-4000-8000-000000000001",
-      },
-      "searchPreferences": {
-        "universalIdentifier": "e35d2471-a079-4318-b94e-b8485ff2896b",
+        "universalIdentifier": "b5703a90-7af1-5e37-be3b-5fd07a0db901",
       },
       "searchVector": {
         "universalIdentifier": "4291e4d4-34fc-5e03-a261-49245047c5b1",
@@ -1900,89 +3979,151 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
     "indexes": {},
     "universalIdentifier": "ab5eb338-796f-5ca3-b5ac-dd46cbfbd649",
   },
-  "inboundEventLedger": {
+  "guaranteeCase": {
     "fields": {
-"causationId": {
-        "universalIdentifier": "d21265b0-0ffc-45bb-b5a9-996e44e7817a",
+      "activeFrom": {
+        "universalIdentifier": "d4d4e5e5-e003-4a04-8c04-ac11e000e003",
       },
-      "correlationId": {
-        "universalIdentifier": "4642830e-4de0-483c-8a7f-3e9876ed98d9",
+      "activeUntil": {
+        "universalIdentifier": "d4d4e5e5-e004-4a04-8c04-ac11e000e004",
+      },
+      "claimAmount": {
+        "universalIdentifier": "d4d4e5e5-e008-4a04-8c04-ac11e000e008",
+      },
+      "claimCurrencyCode": {
+        "universalIdentifier": "d4d4e5e5-e009-4a04-8c04-ac11e000e009",
+      },
+      "claimFiledAt": {
+        "universalIdentifier": "d4d4e5e5-e006-4a04-8c04-ac11e000e006",
+      },
+      "claimOutcome": {
+        "universalIdentifier": "d4d4e5e5-e00a-4a04-8c04-ac11e000e00a",
+      },
+      "claimReason": {
+        "universalIdentifier": "d4d4e5e5-e007-4a04-8c04-ac11e000e007",
+      },
+      "claimResolvedAt": {
+        "universalIdentifier": "d4d4e5e5-e00b-4a04-8c04-ac11e000e00b",
       },
       "createdAt": {
-        "universalIdentifier": "3f4d7307-7e8e-5996-8d3e-29915c4dc89f",
+        "universalIdentifier": "6221136e-b369-5854-9f50-ba95242d6514",
       },
       "createdBy": {
-        "universalIdentifier": "941f570d-4cf7-5aea-810d-1fe4a873a8d9",
+        "universalIdentifier": "e9452a7b-ab99-5da2-9249-a6b24d0de931",
       },
       "deletedAt": {
-        "universalIdentifier": "f7db178a-a2cd-5539-8aaa-9a74470ce136",
+        "universalIdentifier": "eb68be09-6d28-5370-8225-94e14daf70c2",
       },
-      "eventId": {
-        "universalIdentifier": "1a6f7edf-dbb4-40a3-a194-085d3eaa8dfb",
-      },
-      "eventType": {
-        "universalIdentifier": "2706c8f5-8068-4dcf-ad71-a577688c8d12",
-      },
-      "eventVersion": {
-        "universalIdentifier": "592ca8f7-c7d3-49c3-b886-470270857864",
+      "guaranteeType": {
+        "universalIdentifier": "d4d4e5e5-e005-4a04-8c04-ac11e000e005",
       },
       "id": {
-        "universalIdentifier": "1ef9ca43-6adc-5d17-a8bb-507ef4810df1",
+        "universalIdentifier": "82d37140-1c20-5422-b235-04ec94ab1407",
       },
-      "idempotencyKey": {
-        "universalIdentifier": "ff848447-0b8e-47cd-8335-a02e5a4f1014",
+      "name": {
+        "universalIdentifier": "d4d4e5e5-e001-4a04-8c04-ac11e000e001",
       },
-      "lastAttemptAt": {
-        "universalIdentifier": "97bfc70e-9894-4e2a-8b8a-ce1fabd53224",
+      "placement": {
+        "universalIdentifier": "d4d4e5e5-e00c-4a04-8c04-ac11e000e00c",
       },
-      "occurredAt": {
-        "universalIdentifier": "68c1eadf-7ce9-480a-8b98-c17f696e938c",
-      },
-      "payload": {
-        "universalIdentifier": "2f3c512c-a8d4-4e09-a4cd-dc99d3e0fe92",
+      "placementId": {
+        "universalIdentifier": "d4d4e5e5-e00d-4a04-8c04-ac11e000e00d",
       },
       "position": {
-        "universalIdentifier": "5c6e3fc3-6bc7-5816-8687-cc13db4ef757",
+        "universalIdentifier": "3a770387-a3cc-5202-aeda-1bc1202fec98",
       },
-      "processedAt": {
-        "universalIdentifier": "e4eb6016-8a54-4ca2-9965-e46dd85e7312",
+      "replacementPlacement": {
+        "universalIdentifier": "d4d4e5e5-e00e-4a04-8c04-ac11e000e00e",
       },
-      "processingAttempts": {
-        "universalIdentifier": "950ec02e-4ec7-4e9d-80d0-e37157fdbdcb",
+      "replacementPlacementId": {
+        "universalIdentifier": "d4d4e5e5-e00f-4a04-8c04-ac11e000e00f",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "d4d4e5e5-e010-4a04-8c04-ac11e000e010",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "d4d4e5e5-e011-4a04-8c04-ac11e000e011",
       },
       "searchVector": {
-        "universalIdentifier": "620ba535-57c3-57d7-83f7-b52dee70b649",
-      },
-      "sourceCollection": {
-        "universalIdentifier": "ee983ff8-4065-4d9c-9283-220fab663e5f",
-      },
-      "sourceHash": {
-        "universalIdentifier": "fc985620-b66b-4cf5-8665-e11f82abc404",
-      },
-      "sourceRecordId": {
-        "universalIdentifier": "849a52c9-878d-4aed-9987-25519f9ac79b",
-      },
-      "sourceSystem": {
-        "universalIdentifier": "f7352590-933f-4fbf-89f4-b9146da691ab",
-      },
-      "sourceUpdatedAt": {
-        "universalIdentifier": "dc7fde85-6829-4aad-bcbb-ea6496c030c5",
+        "universalIdentifier": "9e56dffc-6a9b-5652-b719-2047206cee8b",
       },
       "status": {
-        "universalIdentifier": "4f141466-b6a6-4087-96b4-2d785dbf98d2",
-      },
-      "statusMessage": {
-        "universalIdentifier": "d1907f93-3179-4cc4-baa9-eaded53765e4",
+        "universalIdentifier": "d4d4e5e5-e002-4a04-8c04-ac11e000e002",
       },
       "updatedAt": {
-        "universalIdentifier": "ea7cc15c-e3ae-56a8-a867-5287fe46abd8",
+        "universalIdentifier": "5e6b3bf1-9a5d-59e7-aa47-c84c89b65121",
       },
       "updatedBy": {
-        "universalIdentifier": "dc5ec2dc-fdba-5ea0-9712-c5fe7e477e1e",
+        "universalIdentifier": "454a7ed6-a675-56e5-be1b-b7d5ad4106a6",
       },
-      "workspaceKey": {
-        "universalIdentifier": "a6c20710-74c4-480d-97c9-7e9f37a53a10",,
-"createdAt": {
+    },
+    "indexes": {
+      "placementIdIndex": {
+        "universalIdentifier": "d4d4e5e5-f001-4a04-8c04-ac11e000f001",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "d4d4e5e5-f002-4a04-8c04-ac11e000f002",
+      },
+    },
+    "universalIdentifier": "d4d4e5e5-c0e4-4a04-8c04-ac11e0000001",
+    "views": {
+      "guaranteeCaseRecordPageFields": {
+        "universalIdentifier": "d4d4e5e5-d001-4a04-8c04-ac11e000d001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "d4d4e5e5-d101-4a04-8c04-ac11e000d101",
+          },
+          "system": {
+            "universalIdentifier": "d4d4e5e5-d102-4a04-8c04-ac11e000d102",
+          },
+        },
+        "viewFields": {
+          "activeFrom": {
+            "universalIdentifier": "d4d4e5e5-c003-4a04-8c04-ac11e000c003",
+          },
+          "activeUntil": {
+            "universalIdentifier": "d4d4e5e5-c004-4a04-8c04-ac11e000c004",
+          },
+          "claimAmount": {
+            "universalIdentifier": "d4d4e5e5-c007-4a04-8c04-ac11e000c007",
+          },
+          "claimCurrencyCode": {
+            "universalIdentifier": "d4d4e5e5-c008-4a04-8c04-ac11e000c008",
+          },
+          "claimFiledAt": {
+            "universalIdentifier": "d4d4e5e5-c006-4a04-8c04-ac11e000c006",
+          },
+          "claimOutcome": {
+            "universalIdentifier": "d4d4e5e5-c009-4a04-8c04-ac11e000c009",
+          },
+          "createdAt": {
+            "universalIdentifier": "d4d4e5e5-c00c-4a04-8c04-ac11e000c00c",
+          },
+          "createdBy": {
+            "universalIdentifier": "d4d4e5e5-c00d-4a04-8c04-ac11e000c00d",
+          },
+          "guaranteeType": {
+            "universalIdentifier": "d4d4e5e5-c005-4a04-8c04-ac11e000c005",
+          },
+          "name": {
+            "universalIdentifier": "d4d4e5e5-c001-4a04-8c04-ac11e000c001",
+          },
+          "placement": {
+            "universalIdentifier": "d4d4e5e5-c00a-4a04-8c04-ac11e000c00a",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "d4d4e5e5-c00b-4a04-8c04-ac11e000c00b",
+          },
+          "status": {
+            "universalIdentifier": "d4d4e5e5-c002-4a04-8c04-ac11e000c002",
+          },
+        },
+      },
+    },
+  },
+  "inboundEventLedger": {
+    "fields": {
+      "createdAt": {
         "universalIdentifier": "4efa1a76-07e1-554b-9984-669942e04e41",
       },
       "createdBy": {
@@ -2042,105 +4183,13 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
     },
     "indexes": {
       "eventIdIndex": {
-"universalIdentifier": "4f0d22d7-7c85-419f-ba76-1c947ffe530f",
-      },
-      "idempotencyKeyIndex": {
-        "universalIdentifier": "0e59fbe1-f409-429a-862a-c14fd04fb242",
-      },
-      "sourceRecordIdIndex": {
-        "universalIdentifier": "66e0ce8f-1120-4b64-86cd-7140e3021a8f",
-      },
-      "statusIndex": {
-        "universalIdentifier": "f0713976-b374-4a92-9e78-315a4d9dce2e",
-      },
-    },
-    "universalIdentifier": "fde06047-5a3c-4004-bbb0-3ee331f198b7",,
-"universalIdentifier": "3c57b005-3963-4721-b085-886a75702515",
+        "universalIdentifier": "3c57b005-3963-4721-b085-886a75702515",
       },
       "idempotencyKeyIndex": {
         "universalIdentifier": "41d0cc81-f2db-4faa-8c55-76da8bafdb67",
       },
     },
     "universalIdentifier": "e5b9f029-6dfe-44e8-88b2-ae8ba5ec141a",
-  },
-  "marketMap": {
-    "fields": {
-      "createdAt": {
-        "universalIdentifier": "5614f06d-5230-5b13-b1c3-9ccbeb137111",
-      },
-      "createdBy": {
-        "universalIdentifier": "8f4a500a-2d3d-530f-9ae6-602801b12ab8",
-      },
-      "deletedAt": {
-        "universalIdentifier": "e194230b-cb57-5fb8-ab4a-7d2d22b83d3e",
-      },
-      "description": {
-        "universalIdentifier": "78ef6a5c-1323-4ce7-8680-652a4c76adab",
-      },
-      "geography": {
-        "universalIdentifier": "24a03cea-acd2-48ef-b676-06b05b18aa33",
-      },
-      "id": {
-        "universalIdentifier": "86d47c64-a3de-5d3b-af93-906194b0e3c7",
-      },
-      "mapType": {
-        "universalIdentifier": "c6222a17-c761-4fbe-9125-b1a38363a189",
-      },
-      "name": {
-        "universalIdentifier": "90a00844-c9ae-403a-a651-cf2e551079b0",
-      },
-      "position": {
-        "universalIdentifier": "0c38bd12-e65b-5eed-b410-ca0f5377be25",
-      },
-      "researchStrategy": {
-        "universalIdentifier": "b0de3f15-75ec-4076-a08e-38144046c8aa",
-      },
-      "searchVector": {
-        "universalIdentifier": "ab44d5ca-8139-5da1-b52b-01ee3a16b3b7",
-      },
-      "segment": {
-        "universalIdentifier": "ae2137af-ebe6-42f0-8427-e0c02104cadb",
-      },
-      "targetCompanies": {
-        "universalIdentifier": "22d881e0-ae4b-425a-a29d-fbd825f819b6",
-      },
-      "updatedAt": {
-        "universalIdentifier": "44ea9580-26c0-50be-8315-6a04adc8046b",
-      },
-      "updatedBy": {
-        "universalIdentifier": "6f9e9cfb-736c-5c8f-a962-2234d1adf1a6",
-      },
-    },
-    "indexes": {},
-    "universalIdentifier": "e8b87567-1e12-4434-b390-1962c05388d4",
-    "views": {
-      "allMarketMaps": {
-        "universalIdentifier": "3e764324-4c46-4b17-bce0-d8b462eb5b5b",
-        "viewFields": {
-          "description": {
-            "universalIdentifier": "84c0eb83-203f-4746-97fd-7c4abee3fde4",
-          },
-          "geography": {
-            "universalIdentifier": "bdde9806-462a-499e-b290-fab9c7ddf934",
-          },
-          "mapType": {
-            "universalIdentifier": "0534bce8-3fa1-4f92-9eb9-50d91eae8a1b",
-          },
-          "name": {
-            "universalIdentifier": "eb3639b0-98db-4f87-894e-14af7fccd7de",
-          },
-          "researchStrategy": {
-            "universalIdentifier": "1e890525-395c-4316-b10a-ff47fb18335e",
-          },
-          "segment": {
-            "universalIdentifier": "2db4e932-2d20-4202-b60d-56a148e51698",
-          },
-          "targetCompanies": {
-            "universalIdentifier": "151f4ec3-af47-4cc2-b1cc-ff289f4e7f14",
-          },
-        },
-      },
-    },
   },
   "message": {
     "fields": {
@@ -2983,6 +5032,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "searchVector": {
         "universalIdentifier": "d853a31b-f266-57a1-9a9f-ecc187864a01",
       },
+      "targetClientAccountProfile": {
+        "universalIdentifier": "20202020-a1b2-4c3d-8e5f-6a7b8c9d0e02",
+      },
       "targetCompany": {
         "universalIdentifier": "c500fbc0-d6f2-4982-a959-5a755431696c",
       },
@@ -2991,6 +5043,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
       "targetPerson": {
         "universalIdentifier": "20202020-38ca-4aab-92f5-8a605ca2e4c5",
+      },
+      "targetSearchEngagementTerms": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bc2",
       },
       "updatedAt": {
         "universalIdentifier": "18a0222a-d8d3-5a5a-89a7-55f0873b0d20",
@@ -3142,6 +5197,166 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
   },
+  "offerNegotiation": {
+    "fields": {
+      "acceptedAt": {
+        "universalIdentifier": "b2b2c3c3-e00b-4a02-8c02-ac11e000e00b",
+      },
+      "acceptedSalary": {
+        "universalIdentifier": "b2b2c3c3-e00c-4a02-8c02-ac11e000e00c",
+      },
+      "acceptedTotalCompensation": {
+        "universalIdentifier": "b2b2c3c3-e00d-4a02-8c02-ac11e000e00d",
+      },
+      "bonusTerms": {
+        "universalIdentifier": "b2b2c3c3-e006-4a02-8c02-ac11e000e006",
+      },
+      "candidacy": {
+        "universalIdentifier": "b2b2c3c3-e010-4a02-8c02-ac11e000e010",
+      },
+      "candidacyId": {
+        "universalIdentifier": "b2b2c3c3-e011-4a02-8c02-ac11e000e011",
+      },
+      "compensationExpectation": {
+        "universalIdentifier": "b2b2c3c3-e014-4a02-8c02-ac11e000e014",
+      },
+      "compensationExpectationId": {
+        "universalIdentifier": "b2b2c3c3-e015-4a02-8c02-ac11e000e015",
+      },
+      "createdAt": {
+        "universalIdentifier": "ed56179f-8813-5282-9746-0040260c13ab",
+      },
+      "createdBy": {
+        "universalIdentifier": "19f31872-9107-58fb-a1b2-b675cbaee1da",
+      },
+      "currencyCode": {
+        "universalIdentifier": "b2b2c3c3-e004-4a02-8c02-ac11e000e004",
+      },
+      "declinedReason": {
+        "universalIdentifier": "b2b2c3c3-e00e-4a02-8c02-ac11e000e00e",
+      },
+      "deletedAt": {
+        "universalIdentifier": "bcd6e0bd-f9ae-5089-a831-746970317518",
+      },
+      "equityTerms": {
+        "universalIdentifier": "b2b2c3c3-e005-4a02-8c02-ac11e000e005",
+      },
+      "id": {
+        "universalIdentifier": "1e22a2e8-d370-5e7e-8264-93c129f3afc8",
+      },
+      "name": {
+        "universalIdentifier": "b2b2c3c3-e001-4a02-8c02-ac11e000e001",
+      },
+      "notes": {
+        "universalIdentifier": "b2b2c3c3-e00f-4a02-8c02-ac11e000e00f",
+      },
+      "offerAmount": {
+        "universalIdentifier": "b2b2c3c3-e003-4a02-8c02-ac11e000e003",
+      },
+      "offerLetterSentAt": {
+        "universalIdentifier": "b2b2c3c3-e009-4a02-8c02-ac11e000e009",
+      },
+      "offerLetterUrl": {
+        "universalIdentifier": "b2b2c3c3-e00a-4a02-8c02-ac11e000e00a",
+      },
+      "otherBenefits": {
+        "universalIdentifier": "b2b2c3c3-e007-4a02-8c02-ac11e000e007",
+      },
+      "position": {
+        "universalIdentifier": "e9d1e726-6581-57d4-9c09-318ca7f11523",
+      },
+      "proposedStartDate": {
+        "universalIdentifier": "b2b2c3c3-e008-4a02-8c02-ac11e000e008",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "b2b2c3c3-e012-4a02-8c02-ac11e000e012",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "b2b2c3c3-e013-4a02-8c02-ac11e000e013",
+      },
+      "searchVector": {
+        "universalIdentifier": "d627641b-2717-54e8-af24-9575ad9c79c4",
+      },
+      "status": {
+        "universalIdentifier": "b2b2c3c3-e002-4a02-8c02-ac11e000e002",
+      },
+      "updatedAt": {
+        "universalIdentifier": "a78e1d00-4dfb-5a05-ad1e-45eb22f24023",
+      },
+      "updatedBy": {
+        "universalIdentifier": "f4745d96-e569-5d1e-8473-c8d9f6a7f656",
+      },
+    },
+    "indexes": {
+      "candidacyIdIndex": {
+        "universalIdentifier": "b2b2c3c3-f001-4a02-8c02-ac11e000f001",
+      },
+      "compensationExpectationIdIndex": {
+        "universalIdentifier": "b2b2c3c3-f003-4a02-8c02-ac11e000f003",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "b2b2c3c3-f002-4a02-8c02-ac11e000f002",
+      },
+    },
+    "universalIdentifier": "b2b2c3c3-c0e2-4a02-8c02-ac11e0000001",
+    "views": {
+      "offerNegotiationRecordPageFields": {
+        "universalIdentifier": "b2b2c3c3-d001-4a02-8c02-ac11e000d001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "b2b2c3c3-d101-4a02-8c02-ac11e000d101",
+          },
+          "system": {
+            "universalIdentifier": "b2b2c3c3-d102-4a02-8c02-ac11e000d102",
+          },
+        },
+        "viewFields": {
+          "acceptedSalary": {
+            "universalIdentifier": "b2b2c3c3-c008-4a02-8c02-ac11e000c008",
+          },
+          "acceptedTotalCompensation": {
+            "universalIdentifier": "b2b2c3c3-c009-4a02-8c02-ac11e000c009",
+          },
+          "bonusTerms": {
+            "universalIdentifier": "b2b2c3c3-c006-4a02-8c02-ac11e000c006",
+          },
+          "candidacy": {
+            "universalIdentifier": "b2b2c3c3-c00a-4a02-8c02-ac11e000c00a",
+          },
+          "compensationExpectation": {
+            "universalIdentifier": "b2b2c3c3-c00c-4a02-8c02-ac11e000c00c",
+          },
+          "createdAt": {
+            "universalIdentifier": "b2b2c3c3-c00d-4a02-8c02-ac11e000c00d",
+          },
+          "createdBy": {
+            "universalIdentifier": "b2b2c3c3-c00e-4a02-8c02-ac11e000c00e",
+          },
+          "currencyCode": {
+            "universalIdentifier": "b2b2c3c3-c004-4a02-8c02-ac11e000c004",
+          },
+          "equityTerms": {
+            "universalIdentifier": "b2b2c3c3-c005-4a02-8c02-ac11e000c005",
+          },
+          "name": {
+            "universalIdentifier": "b2b2c3c3-c001-4a02-8c02-ac11e000c001",
+          },
+          "offerAmount": {
+            "universalIdentifier": "b2b2c3c3-c003-4a02-8c02-ac11e000c003",
+          },
+          "proposedStartDate": {
+            "universalIdentifier": "b2b2c3c3-c007-4a02-8c02-ac11e000c007",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "b2b2c3c3-c00b-4a02-8c02-ac11e000c00b",
+          },
+          "status": {
+            "universalIdentifier": "b2b2c3c3-c002-4a02-8c02-ac11e000c002",
+          },
+        },
+      },
+    },
+  },
   "opportunity": {
     "fields": {
       "amount": {
@@ -3162,8 +5377,23 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "createdBy": {
         "universalIdentifier": "4a667a98-5fad-5342-aedf-7b2d3906e657",
       },
+      "decisionCriteria": {
+        "universalIdentifier": "20202020-0106-4106-8106-010101010006",
+      },
+      "decisionDate": {
+        "universalIdentifier": "20202020-0105-4105-8105-010101010005",
+      },
       "deletedAt": {
         "universalIdentifier": "d816de8d-aa5f-5388-8392-58f6d60e1343",
+      },
+      "expectedFeeCeiling": {
+        "universalIdentifier": "20202020-0103-4103-8103-010101010003",
+      },
+      "expectedFeeFloor": {
+        "universalIdentifier": "20202020-0102-4102-8102-010101010002",
+      },
+      "expectedTimeline": {
+        "universalIdentifier": "20202020-0104-4104-8104-010101010004",
       },
       "id": {
         "universalIdentifier": "2fa92d57-b39d-5ee8-ac9e-b39bc65b9ee9",
@@ -3182,6 +5412,15 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
       "position": {
         "universalIdentifier": "fd8241af-7055-5004-9cfb-edb96f1cfbb4",
+      },
+      "searchAssignments": {
+        "universalIdentifier": "41e656f3-0efe-45a1-a2ba-b704e209acce",
+      },
+      "searchEngagementTerms": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bb3",
+      },
+      "searchType": {
+        "universalIdentifier": "20202020-0101-4101-8101-010101010001",
       },
       "searchVector": {
         "universalIdentifier": "05bbfee3-ec29-5d44-a1b0-105955b320af",
@@ -3398,61 +5637,6 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
     "indexes": {},
     "universalIdentifier": "20a6174b-3ddf-4169-8f34-52fc117a0d2d",
   },
-  "outboxEvent": {
-    "fields": {
-      "aggregateId": {
-        "universalIdentifier": "631e1db7-68cd-48e4-bd9d-0119d476844a",
-      },
-      "aggregateType": {
-        "universalIdentifier": "d1cf6246-a4e3-4259-afe1-28307aa50139",
-      },
-      "attempts": {
-        "universalIdentifier": "bdb2242f-18e7-4882-9484-4958e5c9ea10",
-      },
-      "createdAt": {
-        "universalIdentifier": "14dec381-5d1e-552c-b2ff-8ebb275f5b8a",
-      },
-      "createdBy": {
-        "universalIdentifier": "4ac07608-6e1f-5826-8848-e68cc4f3aa25",
-      },
-      "deletedAt": {
-        "universalIdentifier": "7c9fa5bd-d51b-5fb7-ae70-0c820b17d541",
-      },
-      "eventType": {
-        "universalIdentifier": "c3c6daf6-2acf-4c63-9fe2-d1f271538cb7",
-      },
-      "id": {
-        "universalIdentifier": "9160c4fd-69aa-57c9-af09-9b6f213ef2dd",
-      },
-      "payload": {
-        "universalIdentifier": "f61ab938-f79e-4130-ab71-3971f6b4149d",
-      },
-      "position": {
-        "universalIdentifier": "3ddf760d-e5bb-5649-afae-5aff4ba3f500",
-      },
-      "publishedAt": {
-        "universalIdentifier": "6b2a09fc-179a-48f1-a414-df2c54dd1168",
-      },
-      "searchVector": {
-        "universalIdentifier": "f921db2e-ef3d-5ea6-ba33-7b4989e0c0e8",
-      },
-      "status": {
-        "universalIdentifier": "0b787f7b-ecc0-4f34-af03-61397b2cd64d",
-      },
-      "updatedAt": {
-        "universalIdentifier": "f54346b8-ccaf-5172-8f98-2c5e8713ac70",
-      },
-      "updatedBy": {
-        "universalIdentifier": "ce505719-a694-54d7-9608-68bcd70347f6",
-      },
-    },
-    "indexes": {
-      "statusCreatedAtIndex": {
-        "universalIdentifier": "ec580f26-242f-49b0-b1ae-3ef01c9f50da",
-      },
-    },
-    "universalIdentifier": "1ea65bc5-3b7c-49e7-8565-c7b2e005de3f",
-  },
   "person": {
     "fields": {
       "attachments": {
@@ -3470,8 +5654,8 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "calendarEventParticipants": {
         "universalIdentifier": "20202020-52ee-45e9-a702-b64b3753e3a9",
       },
-      "clientStakeholderRoles": {
-        "universalIdentifier": "20202020-b3cc-4d21-8f42-bb8c81c54432",
+      "candidacies": {
+        "universalIdentifier": "20202020-c001-4859-0415-8a9b0c1d2e40",
       },
       "company": {
         "universalIdentifier": "20202020-e2f3-448e-b34c-2d625f0025fd",
@@ -3514,9 +5698,6 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
       "noteTargets": {
         "universalIdentifier": "20202020-c8fc-4258-8250-15905d3fcfec",
-      },
-      "offLimitsRestrictions": {
-        "universalIdentifier": "20202020-b8c9-4304-5f60-3b4c5d6e7f8a",
       },
       "phones": {
         "universalIdentifier": "20202020-0638-448e-8825-439134618022",
@@ -3669,7 +5850,329 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
   },
-"reconciliationFinding": {
+  "placement": {
+    "fields": {
+      "billingContact": {
+        "universalIdentifier": "c3c3d4d4-e00e-4a03-8c03-ac11e000e00e",
+      },
+      "billingContactId": {
+        "universalIdentifier": "c3c3d4d4-e00f-4a03-8c03-ac11e000e00f",
+      },
+      "candidacy": {
+        "universalIdentifier": "c3c3d4d4-e012-4a03-8c03-ac11e000e012",
+      },
+      "candidacyId": {
+        "universalIdentifier": "c3c3d4d4-e013-4a03-8c03-ac11e000e013",
+      },
+      "commissionableAmount": {
+        "universalIdentifier": "c3c3d4d4-e00a-4a03-8c03-ac11e000e00a",
+      },
+      "createdAt": {
+        "universalIdentifier": "abf7f3ee-231b-54d4-bc03-64261876fc8f",
+      },
+      "createdBy": {
+        "universalIdentifier": "1e27d4f8-bb4c-5f1f-8f4b-d6418c3d4d1b",
+      },
+      "deletedAt": {
+        "universalIdentifier": "d4ca7534-a0d6-5bb0-8db6-011df8888e00",
+      },
+      "endDate": {
+        "universalIdentifier": "c3c3d4d4-e005-4a03-8c03-ac11e000e005",
+      },
+      "feeAmount": {
+        "universalIdentifier": "c3c3d4d4-e006-4a03-8c03-ac11e000e006",
+      },
+      "feeCalculation": {
+        "universalIdentifier": "c3c3d4d4-e009-4a03-8c03-ac11e000e009",
+      },
+      "feeCurrencyCode": {
+        "universalIdentifier": "c3c3d4d4-e007-4a03-8c03-ac11e000e007",
+      },
+      "feeType": {
+        "universalIdentifier": "c3c3d4d4-e008-4a03-8c03-ac11e000e008",
+      },
+      "guaranteeEndDate": {
+        "universalIdentifier": "c3c3d4d4-e00d-4a03-8c03-ac11e000e00d",
+      },
+      "guaranteePeriodMonths": {
+        "universalIdentifier": "c3c3d4d4-e00c-4a03-8c03-ac11e000e00c",
+      },
+      "id": {
+        "universalIdentifier": "a091b7a6-99a7-51ac-980c-54ccd61910ae",
+      },
+      "invoiceReference": {
+        "universalIdentifier": "c3c3d4d4-e00b-4a03-8c03-ac11e000e00b",
+      },
+      "name": {
+        "universalIdentifier": "c3c3d4d4-e001-4a03-8c03-ac11e000e001",
+      },
+      "offerNegotiation": {
+        "universalIdentifier": "c3c3d4d4-e014-4a03-8c03-ac11e000e014",
+      },
+      "offerNegotiationId": {
+        "universalIdentifier": "c3c3d4d4-e015-4a03-8c03-ac11e000e015",
+      },
+      "placementConfirmedBy": {
+        "universalIdentifier": "c3c3d4d4-e010-4a03-8c03-ac11e000e010",
+      },
+      "placementConfirmedById": {
+        "universalIdentifier": "c3c3d4d4-e011-4a03-8c03-ac11e000e011",
+      },
+      "placementDate": {
+        "universalIdentifier": "c3c3d4d4-e003-4a03-8c03-ac11e000e003",
+      },
+      "position": {
+        "universalIdentifier": "389a1b81-8e39-5c6f-a6c7-576d53d6b45f",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "c3c3d4d4-e016-4a03-8c03-ac11e000e016",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "c3c3d4d4-e017-4a03-8c03-ac11e000e017",
+      },
+      "searchVector": {
+        "universalIdentifier": "3c809a46-3be0-5384-b9cb-6113c27effd2",
+      },
+      "startDate": {
+        "universalIdentifier": "c3c3d4d4-e004-4a03-8c03-ac11e000e004",
+      },
+      "status": {
+        "universalIdentifier": "c3c3d4d4-e002-4a03-8c03-ac11e000e002",
+      },
+      "updatedAt": {
+        "universalIdentifier": "4856ef41-c8e0-51a2-b084-b603fed5ac71",
+      },
+      "updatedBy": {
+        "universalIdentifier": "f8ff8a6f-c01c-5940-ab26-dfdb2935fc4f",
+      },
+    },
+    "indexes": {
+      "candidacyIdIndex": {
+        "universalIdentifier": "c3c3d4d4-f001-4a03-8c03-ac11e000f001",
+      },
+      "offerNegotiationIdIndex": {
+        "universalIdentifier": "c3c3d4d4-f003-4a03-8c03-ac11e000f003",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "c3c3d4d4-f002-4a03-8c03-ac11e000f002",
+      },
+    },
+    "universalIdentifier": "c3c3d4d4-c0e3-4a03-8c03-ac11e0000001",
+    "views": {
+      "placementRecordPageFields": {
+        "universalIdentifier": "c3c3d4d4-d001-4a03-8c03-ac11e000d001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "c3c3d4d4-d101-4a03-8c03-ac11e000d101",
+          },
+          "system": {
+            "universalIdentifier": "c3c3d4d4-d102-4a03-8c03-ac11e000d102",
+          },
+        },
+        "viewFields": {
+          "billingContact": {
+            "universalIdentifier": "c3c3d4d4-c00a-4a03-8c03-ac11e000c00a",
+          },
+          "candidacy": {
+            "universalIdentifier": "c3c3d4d4-c00b-4a03-8c03-ac11e000c00b",
+          },
+          "createdAt": {
+            "universalIdentifier": "c3c3d4d4-c00e-4a03-8c03-ac11e000c00e",
+          },
+          "createdBy": {
+            "universalIdentifier": "c3c3d4d4-c00f-4a03-8c03-ac11e000c00f",
+          },
+          "feeAmount": {
+            "universalIdentifier": "c3c3d4d4-c005-4a03-8c03-ac11e000c005",
+          },
+          "feeCurrencyCode": {
+            "universalIdentifier": "c3c3d4d4-c006-4a03-8c03-ac11e000c006",
+          },
+          "guaranteeEndDate": {
+            "universalIdentifier": "c3c3d4d4-c009-4a03-8c03-ac11e000c009",
+          },
+          "guaranteePeriodMonths": {
+            "universalIdentifier": "c3c3d4d4-c008-4a03-8c03-ac11e000c008",
+          },
+          "invoiceReference": {
+            "universalIdentifier": "c3c3d4d4-c007-4a03-8c03-ac11e000c007",
+          },
+          "name": {
+            "universalIdentifier": "c3c3d4d4-c001-4a03-8c03-ac11e000c001",
+          },
+          "offerNegotiation": {
+            "universalIdentifier": "c3c3d4d4-c00c-4a03-8c03-ac11e000c00c",
+          },
+          "placementDate": {
+            "universalIdentifier": "c3c3d4d4-c003-4a03-8c03-ac11e000c003",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "c3c3d4d4-c00d-4a03-8c03-ac11e000c00d",
+          },
+          "startDate": {
+            "universalIdentifier": "c3c3d4d4-c004-4a03-8c03-ac11e000c004",
+          },
+          "status": {
+            "universalIdentifier": "c3c3d4d4-c002-4a03-8c03-ac11e000c002",
+          },
+        },
+      },
+    },
+  },
+  "positionSpecification": {
+    "fields": {
+      "approvedAt": {
+        "universalIdentifier": "1311e53b-cbf0-4b3d-8cb0-8c4d92c6da15",
+      },
+      "approvedBy": {
+        "universalIdentifier": "c27a404b-f794-493d-acf6-214d11bcd4c9",
+      },
+      "approvedById": {
+        "universalIdentifier": "8c77cebf-4ffe-4d56-8277-cb97e1a3e9b1",
+      },
+      "assignment": {
+        "universalIdentifier": "8f6cd096-eb4c-4ecc-a502-5adf6fb25e68",
+      },
+      "compensationMax": {
+        "universalIdentifier": "313b59a8-f266-4ecc-a144-559f84a145b9",
+      },
+      "compensationMin": {
+        "universalIdentifier": "aa4ff04e-d0a7-4613-86c9-ed4892001340",
+      },
+      "createdAt": {
+        "universalIdentifier": "b1ebe587-b0d7-5d55-8525-1db3390c9864",
+      },
+      "createdBy": {
+        "universalIdentifier": "024f72c7-540e-525b-b7f3-4631c07f03a4",
+      },
+      "criteria": {
+        "universalIdentifier": "021dcea4-e476-4a17-a161-5e52313dd525",
+      },
+      "deletedAt": {
+        "universalIdentifier": "3a82c943-b470-5a45-b8ae-a68c7df1691b",
+      },
+      "id": {
+        "universalIdentifier": "26ec5a7a-3b63-5161-bfa2-e2f9779d53d6",
+      },
+      "keyResponsibilities": {
+        "universalIdentifier": "4080cf34-b118-40db-a1b7-ddffcf1bcc66",
+      },
+      "name": {
+        "universalIdentifier": "27a2379c-c2fc-4575-92ba-e5876312c2cf",
+      },
+      "position": {
+        "universalIdentifier": "51e4e929-208b-5991-8a57-fc2172fee0a1",
+      },
+      "preferredQualifications": {
+        "universalIdentifier": "6e8bd1f0-24ff-4450-a7b4-1e4dbf96ebec",
+      },
+      "reportingLine": {
+        "universalIdentifier": "fc3c15dc-ee4b-4cb9-b95f-93dcba1e510d",
+      },
+      "requiredQualifications": {
+        "universalIdentifier": "7c478ba0-33c7-4528-9bdc-5db4764a6838",
+      },
+      "searchVector": {
+        "universalIdentifier": "0be98707-475d-594d-bb7f-bb9e25118d15",
+      },
+      "status": {
+        "universalIdentifier": "df750535-3e7c-4ad7-8d4e-96c83ea1b136",
+      },
+      "updatedAt": {
+        "universalIdentifier": "47d57ba6-79ac-5f30-ba8b-f9f055800c4d",
+      },
+      "updatedBy": {
+        "universalIdentifier": "15a38da8-8c20-58d8-a9d7-6f72aee90d6e",
+      },
+    },
+    "indexes": {
+      "approvedByIdIndex": {
+        "universalIdentifier": "b99c86cb-602f-463a-b870-c3d8d30f4764",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "021da232-9488-451c-961d-12f0ad8874ec",
+      },
+      "statusIndex": {
+        "universalIdentifier": "13292b48-1576-4ccf-b4df-d14ba4f879df",
+      },
+    },
+    "universalIdentifier": "4b48256c-78bd-4215-8099-ab68c42d06e2",
+    "views": {
+      "allPositionSpecifications": {
+        "universalIdentifier": "4c6fac13-44c6-4266-ac0a-8fbc7d83991b",
+        "viewFields": {
+          "approvedBy": {
+            "universalIdentifier": "4c6fac13-1005-4266-ac0a-8fbc7d839905",
+          },
+          "compensationMax": {
+            "universalIdentifier": "4c6fac13-1004-4266-ac0a-8fbc7d839904",
+          },
+          "compensationMin": {
+            "universalIdentifier": "4c6fac13-1003-4266-ac0a-8fbc7d839903",
+          },
+          "createdAt": {
+            "universalIdentifier": "4c6fac13-1006-4266-ac0a-8fbc7d839906",
+          },
+          "name": {
+            "universalIdentifier": "4c6fac13-1001-4266-ac0a-8fbc7d839901",
+          },
+          "status": {
+            "universalIdentifier": "4c6fac13-1002-4266-ac0a-8fbc7d839902",
+          },
+        },
+      },
+      "positionSpecificationRecordPageFields": {
+        "universalIdentifier": "a02a9066-2fe3-435a-b358-8ff348f8f0c2",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "a02a9066-1001-435a-b358-8ff348f8f000",
+          },
+        },
+        "viewFields": {
+          "approvedAt": {
+            "universalIdentifier": "a02a9066-2009-435a-b358-8ff348f8f009",
+          },
+          "approvedBy": {
+            "universalIdentifier": "a02a9066-2010-435a-b358-8ff348f8f010",
+          },
+          "compensationMax": {
+            "universalIdentifier": "a02a9066-2004-435a-b358-8ff348f8f004",
+          },
+          "compensationMin": {
+            "universalIdentifier": "a02a9066-2003-435a-b358-8ff348f8f003",
+          },
+          "createdAt": {
+            "universalIdentifier": "a02a9066-2012-435a-b358-8ff348f8f012",
+          },
+          "createdBy": {
+            "universalIdentifier": "a02a9066-2013-435a-b358-8ff348f8f013",
+          },
+          "criteria": {
+            "universalIdentifier": "a02a9066-2011-435a-b358-8ff348f8f011",
+          },
+          "keyResponsibilities": {
+            "universalIdentifier": "a02a9066-2005-435a-b358-8ff348f8f005",
+          },
+          "name": {
+            "universalIdentifier": "a02a9066-2001-435a-b358-8ff348f8f001",
+          },
+          "preferredQualifications": {
+            "universalIdentifier": "a02a9066-2007-435a-b358-8ff348f8f007",
+          },
+          "reportingLine": {
+            "universalIdentifier": "a02a9066-2002-435a-b358-8ff348f8f002",
+          },
+          "requiredQualifications": {
+            "universalIdentifier": "a02a9066-2006-435a-b358-8ff348f8f006",
+          },
+          "status": {
+            "universalIdentifier": "a02a9066-2008-435a-b358-8ff348f8f008",
+          },
+        },
+      },
+    },
+  },
+  "reconciliationFinding": {
     "fields": {
       "createdAt": {
         "universalIdentifier": "bb564e64-69b0-510f-b5a8-2f19f3472d27",
@@ -3766,8 +6269,130 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
     "indexes": {},
-    "universalIdentifier": "96ae8734-dd75-4d7b-9861-69e49129d540",,
-"relationshipEdge": {
+    "universalIdentifier": "96ae8734-dd75-4d7b-9861-69e49129d540",
+  },
+  "referenceCheck": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "3cdaef8e-a1f3-5561-a4e9-483522bbffe8",
+      },
+      "createdBy": {
+        "universalIdentifier": "36b6d7b9-5619-5584-83e2-846e12c1a5fe",
+      },
+      "deletedAt": {
+        "universalIdentifier": "7c56e41d-7834-5988-b086-2798870f3af4",
+      },
+      "findings": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e008",
+      },
+      "id": {
+        "universalIdentifier": "ca7e2f25-d87d-5864-ac08-7bdbdeca4f0b",
+      },
+      "name": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e001",
+      },
+      "position": {
+        "universalIdentifier": "6fa6416d-4436-5e3b-9577-81dbd5dcdaf0",
+      },
+      "referenceContact": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e006",
+      },
+      "referenceName": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e003",
+      },
+      "referenceOrganization": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e005",
+      },
+      "referenceTitle": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e004",
+      },
+      "relationshipType": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e007",
+      },
+      "searchCandidacy": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e011",
+      },
+      "searchCandidacyId": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e012",
+      },
+      "searchVector": {
+        "universalIdentifier": "5ebd4fa0-9b78-5921-ad4b-664dd10935dc",
+      },
+      "status": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e002",
+      },
+      "updatedAt": {
+        "universalIdentifier": "113b0ee6-9236-5c3f-ab76-b8e85c4eec91",
+      },
+      "updatedBy": {
+        "universalIdentifier": "d0e06d00-fb6b-5bfb-b9b7-4cd8e4e39087",
+      },
+      "verifiedAt": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e009",
+      },
+      "verifiedById": {
+        "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e000e010",
+      },
+    },
+    "indexes": {
+      "searchCandidacyIdIndex": {
+        "universalIdentifier": "aeb1e000-0002-4000-800e-aeb1e000i001",
+      },
+      "statusIndex": {
+        "universalIdentifier": "aeb1e000-0002-4000-800e-aeb1e000i002",
+      },
+    },
+    "universalIdentifier": "aeb1e000-0001-4000-800e-aeb1e0000001",
+    "views": {
+      "referenceCheckRecordPageFields": {
+        "universalIdentifier": "aeb1e000-0030-4000-800e-aeb1e000v001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1e000-0040-4000-800e-aeb1e000g001",
+          },
+          "system": {
+            "universalIdentifier": "aeb1e000-0040-4000-800e-aeb1e000g002",
+          },
+        },
+        "viewFields": {
+          "createdAt": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f009",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f010",
+          },
+          "findings": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f007",
+          },
+          "name": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f001",
+          },
+          "referenceName": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f003",
+          },
+          "referenceOrganization": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f005",
+          },
+          "referenceTitle": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f004",
+          },
+          "relationshipType": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f006",
+          },
+          "searchCandidacy": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f008",
+          },
+          "status": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f002",
+          },
+          "verifiedAt": {
+            "universalIdentifier": "aeb1e000-0050-4000-800e-aeb1e000f011",
+          },
+        },
+      },
+    },
+  },
+  "relationshipEdge": {
     "fields": {
       "confidenceLevel": {
         "universalIdentifier": "5bfb8220-6ee5-492c-b69c-d459b7b76579",
@@ -3875,6 +6500,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
   },
   "researchCandidate": {
     "fields": {
+      "candidacies": {
+        "universalIdentifier": "414f051b-9001-474f-b12f-d4ce8be49901",
+      },
       "createdAt": {
         "universalIdentifier": "e3d27b65-4800-52f2-97b2-df996f9d9c46",
       },
@@ -4116,6 +6744,1444 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
           },
           "targetSegments": {
             "universalIdentifier": "143e272f-e8eb-4217-88e6-e85e47ee8b12",
+          },
+        },
+      },
+    },
+  },
+  "retentionActionLog": {
+    "fields": {
+      "actionType": {
+        "universalIdentifier": "9f27e09f-fe5d-49f3-87e7-d48eef93bd4d",
+      },
+      "actorId": {
+        "universalIdentifier": "cc9432d5-ca35-48c1-8518-efa06db01ac6",
+      },
+      "createdAt": {
+        "universalIdentifier": "dbc1875c-06e1-5f06-98d7-33fa06e84631",
+      },
+      "createdBy": {
+        "universalIdentifier": "fb21c7dc-742d-548e-8f90-0935bf5ee2b9",
+      },
+      "deletedAt": {
+        "universalIdentifier": "1ac9af9d-aa4c-554b-ae01-2c34d13e413c",
+      },
+      "externalRecordId": {
+        "universalIdentifier": "75856ac1-0bfb-4964-9244-9465fa6f6f59",
+      },
+      "externalSystemName": {
+        "universalIdentifier": "82e1324e-a14a-4131-b741-78ea240f738b",
+      },
+      "id": {
+        "universalIdentifier": "53b764e2-9512-5102-b62d-260870d93cff",
+      },
+      "initiatorSystem": {
+        "universalIdentifier": "a359fb73-12f8-4039-8e87-a1f17623eddc",
+      },
+      "legalHoldReference": {
+        "universalIdentifier": "c3108bfe-604f-4f77-a8d6-d7e4922773c2",
+      },
+      "position": {
+        "universalIdentifier": "0ceb81d2-1c09-5331-aa87-f0cd44f725c3",
+      },
+      "propagatedAt": {
+        "universalIdentifier": "85fa9c90-dff4-4044-aa50-7b57fcbe3f6a",
+      },
+      "requestedAt": {
+        "universalIdentifier": "89546fd1-ce49-4f32-b475-38245b316af0",
+      },
+      "scope": {
+        "universalIdentifier": "cabe74ee-a9ba-43e3-9b63-6ab696e09221",
+      },
+      "searchVector": {
+        "universalIdentifier": "36b4d8a8-8f24-51e5-9658-847813166d12",
+      },
+      "sourceHash": {
+        "universalIdentifier": "bfec97df-a7f7-48a7-a61f-80fe187003ff",
+      },
+      "status": {
+        "universalIdentifier": "d7de42f9-67d4-44c0-b70f-713eaf4cbca6",
+      },
+      "targetTwentyEntityName": {
+        "universalIdentifier": "da701a25-c6b4-418d-86f1-87f59012f73a",
+      },
+      "targetTwentyRecordId": {
+        "universalIdentifier": "0d4e0add-2cda-411f-af62-7da7e28978c0",
+      },
+      "updatedAt": {
+        "universalIdentifier": "dc72ea6d-8e16-5774-afd5-aee2fface215",
+      },
+      "updatedBy": {
+        "universalIdentifier": "7948c432-29ab-51ec-8f8c-a54448973c77",
+      },
+    },
+    "indexes": {
+      "initiatorSystemIndex": {
+        "universalIdentifier": "b522b03f-c4fe-4a19-ba0f-0685bcbe5a1e",
+      },
+      "statusIndex": {
+        "universalIdentifier": "6cb825c8-cf0f-4973-b911-e9738b83e5a1",
+      },
+      "targetEntityRecordIndex": {
+        "universalIdentifier": "dc89729b-c32d-4a5b-b80f-ab91150d223e",
+      },
+    },
+    "universalIdentifier": "32a08662-7e27-412f-bf64-07ddeaba7454",
+    "views": {
+      "allRetentionActionLogs": {
+        "universalIdentifier": "0ea3831a-5012-4a9c-bbc3-62b91863eed4",
+        "viewFields": {
+          "actionType": {
+            "universalIdentifier": "48c5d4b5-6115-4e1f-a12d-4295a70f036a",
+          },
+          "createdAt": {
+            "universalIdentifier": "01b37e46-6a0d-4fa2-9d7c-79f79335f0d5",
+          },
+          "initiatorSystem": {
+            "universalIdentifier": "c2d7a271-a5ff-4045-a073-b26f2e5290f8",
+          },
+          "requestedAt": {
+            "universalIdentifier": "8e974ccf-df4e-45eb-a242-b2739bb4a0ab",
+          },
+          "status": {
+            "universalIdentifier": "6de070bd-f5b8-4456-82ee-b0f53d5afe4d",
+          },
+          "targetTwentyEntityName": {
+            "universalIdentifier": "3e94d47d-796a-4f75-856e-827ae89902fc",
+          },
+          "targetTwentyRecordId": {
+            "universalIdentifier": "2e8d3802-59b6-4794-81c2-ca791c073446",
+          },
+        },
+      },
+      "retentionActionLogRecordPageFields": {
+        "universalIdentifier": "4b2f1337-64dd-42a4-93db-82944aeb2b4d",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "d928ca13-341e-43d0-9aa8-1b73d4f777f8",
+          },
+          "system": {
+            "universalIdentifier": "e1944afe-5e34-46bf-823a-2a8b8d33ae41",
+          },
+        },
+        "viewFields": {
+          "actionType": {
+            "universalIdentifier": "9c490ea5-f724-47ce-80e1-3610d32b2cf1",
+          },
+          "actorId": {
+            "universalIdentifier": "9f0c7639-2dd7-4a9d-b4ed-d11daf2273c8",
+          },
+          "createdAt": {
+            "universalIdentifier": "3ae5015c-f25a-4efa-92f6-9b6cc074d69e",
+          },
+          "createdBy": {
+            "universalIdentifier": "86459605-b96e-4701-8f38-2faf63003b1b",
+          },
+          "externalRecordId": {
+            "universalIdentifier": "b5c97ed5-7a2e-4962-91cf-054e0ce5c3a1",
+          },
+          "externalSystemName": {
+            "universalIdentifier": "53d1fee7-8f09-43d5-860e-57c5f5e88c0e",
+          },
+          "initiatorSystem": {
+            "universalIdentifier": "175fa96a-4a1c-441e-a874-84cf33a125dc",
+          },
+          "legalHoldReference": {
+            "universalIdentifier": "32ee2833-5f4a-4608-9a59-0d9d5c6c2bd0",
+          },
+          "propagatedAt": {
+            "universalIdentifier": "6e275be1-12e4-4010-8e05-e4b6ad923211",
+          },
+          "requestedAt": {
+            "universalIdentifier": "4311e047-1563-4538-b177-e9215133e630",
+          },
+          "scope": {
+            "universalIdentifier": "67dd0acb-6c87-44e8-80f6-c4321a54b310",
+          },
+          "sourceHash": {
+            "universalIdentifier": "eb8b1905-0662-4f50-81f2-1c91b9645817",
+          },
+          "status": {
+            "universalIdentifier": "77973954-e5e2-4bf4-87bb-26cc49a26364",
+          },
+          "targetTwentyEntityName": {
+            "universalIdentifier": "100ae8a8-5983-469b-a9eb-bccc19666d76",
+          },
+          "targetTwentyRecordId": {
+            "universalIdentifier": "dc3b0c65-c3d7-46f3-93c8-95e4c219adb4",
+          },
+        },
+      },
+    },
+  },
+  "searchAssignment": {
+    "fields": {
+      "candidacies": {
+        "universalIdentifier": "117835c8-0550-4660-8bad-af1017a8bfa0",
+      },
+      "clientCompany": {
+        "universalIdentifier": "dda4adf9-2760-42e4-a674-4961a270a87f",
+      },
+      "clientCompanyId": {
+        "universalIdentifier": "8f3589bf-ffa0-4692-9e49-f6fa5ae1ded0",
+      },
+      "createdAt": {
+        "universalIdentifier": "5ef766ce-1c94-56c1-99be-43d786126ef7",
+      },
+      "createdBy": {
+        "universalIdentifier": "fadb7dc4-2686-5f98-b3d3-c567f5bb1023",
+      },
+      "deletedAt": {
+        "universalIdentifier": "3df2f5bf-77ba-52fd-aa20-5f38c545d5f8",
+      },
+      "engagementTerms": {
+        "universalIdentifier": "e47a8bbe-ee34-4b24-9b1b-deb9fa592dd9",
+      },
+      "engagementTermsId": {
+        "universalIdentifier": "553f6e72-be10-4da3-b035-cb943bcc5ee2",
+      },
+      "id": {
+        "universalIdentifier": "d928bbd2-73b0-5d18-9d7b-4da88d7686fb",
+      },
+      "milestones": {
+        "universalIdentifier": "c4bfb759-0544-4660-8bad-af1017a8bf9f",
+      },
+      "name": {
+        "universalIdentifier": "d1e5e264-b4df-4449-8275-1b4c8be917e0",
+      },
+      "opportunity": {
+        "universalIdentifier": "5c1e5361-b58b-4fdf-9bd8-cddfe2b7a4da",
+      },
+      "opportunityId": {
+        "universalIdentifier": "9893fd92-dffe-4119-af40-49fb26a8375b",
+      },
+      "position": {
+        "universalIdentifier": "98803794-856b-5276-9784-7e051ba242c2",
+      },
+      "positionSpecification": {
+        "universalIdentifier": "e07cf8a6-776f-4d19-b74e-687d8b75188d",
+      },
+      "positionSpecificationId": {
+        "universalIdentifier": "0fb1f494-3c24-479b-b8e6-350d2722ca2b",
+      },
+      "searchVector": {
+        "universalIdentifier": "ef7ca15e-03d9-5a5e-82ab-5daecacb3454",
+      },
+      "startDate": {
+        "universalIdentifier": "26898857-2db4-47ec-91d1-329d4a0eab33",
+      },
+      "status": {
+        "universalIdentifier": "8c36c4df-0506-4e4a-9712-4189813837a6",
+      },
+      "targetCloseDate": {
+        "universalIdentifier": "c6e360eb-be1f-4424-abfb-4bb05ae76a46",
+      },
+      "teamMembers": {
+        "universalIdentifier": "a9d4ef48-301e-4839-863c-3bb0d6589a54",
+      },
+      "updatedAt": {
+        "universalIdentifier": "80569712-c160-5bde-bc7f-4119a3018ffd",
+      },
+      "updatedBy": {
+        "universalIdentifier": "723e4c96-f909-5d0c-9cb9-d1756dc9e7c7",
+      },
+    },
+    "indexes": {
+      "clientCompanyIdIndex": {
+        "universalIdentifier": "8c469f0d-0244-415a-8e13-f21d7814cfab",
+      },
+      "engagementTermsIdIndex": {
+        "universalIdentifier": "ce047159-90ae-40ce-a643-ddfb7c30c58d",
+      },
+      "opportunityIdIndex": {
+        "universalIdentifier": "b344be4e-bfee-4898-b2a1-21046f2676ec",
+      },
+      "positionSpecificationIdIndex": {
+        "universalIdentifier": "1f4a0b10-aaaa-4aaa-8aaa-1f4a0b10aaaa",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "19b74e1a-f4b9-42e1-938a-6916e9ee86d3",
+      },
+      "statusIndex": {
+        "universalIdentifier": "68f0a0da-669f-47b9-becd-d304f2972def",
+      },
+    },
+    "universalIdentifier": "117835c8-f40a-49b1-9850-121e38a0aad8",
+    "views": {
+      "allSearchAssignments": {
+        "universalIdentifier": "161ba20f-9897-40c9-b966-4960e304b733",
+        "viewFields": {
+          "clientCompany": {
+            "universalIdentifier": "161ba20f-1005-40c9-b966-4960e304b705",
+          },
+          "createdAt": {
+            "universalIdentifier": "161ba20f-1007-40c9-b966-4960e304b707",
+          },
+          "name": {
+            "universalIdentifier": "161ba20f-1001-40c9-b966-4960e304b701",
+          },
+          "opportunity": {
+            "universalIdentifier": "161ba20f-1006-40c9-b966-4960e304b706",
+          },
+          "startDate": {
+            "universalIdentifier": "161ba20f-1003-40c9-b966-4960e304b703",
+          },
+          "status": {
+            "universalIdentifier": "161ba20f-1002-40c9-b966-4960e304b702",
+          },
+          "targetCloseDate": {
+            "universalIdentifier": "161ba20f-1004-40c9-b966-4960e304b704",
+          },
+        },
+      },
+      "byStatus": {
+        "universalIdentifier": "a7a2b97c-a426-4cca-aedf-7183cc22d21e",
+        "viewFields": {
+          "clientCompany": {
+            "universalIdentifier": "a7a2b97c-1005-4cca-aedf-7183cc22d205",
+          },
+          "createdAt": {
+            "universalIdentifier": "a7a2b97c-1007-4cca-aedf-7183cc22d207",
+          },
+          "name": {
+            "universalIdentifier": "a7a2b97c-1001-4cca-aedf-7183cc22d201",
+          },
+          "opportunity": {
+            "universalIdentifier": "a7a2b97c-1006-4cca-aedf-7183cc22d206",
+          },
+          "startDate": {
+            "universalIdentifier": "a7a2b97c-1003-4cca-aedf-7183cc22d203",
+          },
+          "status": {
+            "universalIdentifier": "a7a2b97c-1002-4cca-aedf-7183cc22d202",
+          },
+          "targetCloseDate": {
+            "universalIdentifier": "a7a2b97c-1004-4cca-aedf-7183cc22d204",
+          },
+        },
+        "viewGroups": {
+          "completed": {
+            "universalIdentifier": "a7a2b97c-2003-4cca-aedf-7183cc22d303",
+          },
+          "inProgress": {
+            "universalIdentifier": "a7a2b97c-2002-4cca-aedf-7183cc22d302",
+          },
+          "new": {
+            "universalIdentifier": "a7a2b97c-2001-4cca-aedf-7183cc22d301",
+          },
+        },
+      },
+      "searchAssignmentRecordPageFields": {
+        "universalIdentifier": "ec1969dc-46f1-45ad-901f-c2dc10a3530b",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "ec1969dc-1001-45ad-901f-c2dc10a35300",
+          },
+        },
+        "viewFields": {
+          "clientCompany": {
+            "universalIdentifier": "ec1969dc-2005-45ad-901f-c2dc10a35305",
+          },
+          "createdAt": {
+            "universalIdentifier": "ec1969dc-2009-45ad-901f-c2dc10a35309",
+          },
+          "createdBy": {
+            "universalIdentifier": "ec1969dc-2010-45ad-901f-c2dc10a35310",
+          },
+          "engagementTerms": {
+            "universalIdentifier": "ec1969dc-2007-45ad-901f-c2dc10a35307",
+          },
+          "name": {
+            "universalIdentifier": "ec1969dc-2001-45ad-901f-c2dc10a35301",
+          },
+          "opportunity": {
+            "universalIdentifier": "ec1969dc-2006-45ad-901f-c2dc10a35306",
+          },
+          "positionSpecification": {
+            "universalIdentifier": "ec1969dc-2008-45ad-901f-c2dc10a35308",
+          },
+          "startDate": {
+            "universalIdentifier": "ec1969dc-2003-45ad-901f-c2dc10a35303",
+          },
+          "status": {
+            "universalIdentifier": "ec1969dc-2002-45ad-901f-c2dc10a35302",
+          },
+          "targetCloseDate": {
+            "universalIdentifier": "ec1969dc-2004-45ad-901f-c2dc10a35304",
+          },
+        },
+      },
+    },
+  },
+  "searchCandidacy": {
+    "fields": {
+      "assignedAt": {
+        "universalIdentifier": "a1b2c3d4-e004-4a7b-8c9d-0e1f2a3b4004",
+      },
+      "candidateConsentDate": {
+        "universalIdentifier": "a1b2c3d4-e008-4a7b-8c9d-0e1f2a3b4008",
+      },
+      "closedAt": {
+        "universalIdentifier": "a1b2c3d4-e006-4a7b-8c9d-0e1f2a3b4006",
+      },
+      "createdAt": {
+        "universalIdentifier": "ca8bec07-c55c-5bee-8cc3-a49456937d5c",
+      },
+      "createdBy": {
+        "universalIdentifier": "4d158f07-80d3-5ff1-917a-07eba3b6e482",
+      },
+      "currentStage": {
+        "universalIdentifier": "a1b2c3d4-e003-4a7b-8c9d-0e1f2a3b4003",
+      },
+      "deletedAt": {
+        "universalIdentifier": "446efc2e-7258-5b53-bb69-ff9523a639a5",
+      },
+      "executiveProfile": {
+        "universalIdentifier": "a1b2c3d4-e00f-4a7b-8c9d-0e1f2a3b400f",
+      },
+      "executiveProfileId": {
+        "universalIdentifier": "a1b2c3d4-e010-4a7b-8c9d-0e1f2a3b4010",
+      },
+      "id": {
+        "universalIdentifier": "fd4b00cc-c9e8-5624-954b-272627d4bb52",
+      },
+      "lastStageChangedAt": {
+        "universalIdentifier": "a1b2c3d4-e005-4a7b-8c9d-0e1f2a3b4005",
+      },
+      "name": {
+        "universalIdentifier": "a1b2c3d4-e001-4a7b-8c9d-0e1f2a3b4001",
+      },
+      "notes": {
+        "universalIdentifier": "a1b2c3d4-e007-4a7b-8c9d-0e1f2a3b4007",
+      },
+      "person": {
+        "universalIdentifier": "a1b2c3d4-e00b-4a7b-8c9d-0e1f2a3b400b",
+      },
+      "personId": {
+        "universalIdentifier": "a1b2c3d4-e00c-4a7b-8c9d-0e1f2a3b400c",
+      },
+      "position": {
+        "universalIdentifier": "edea64a7-5917-5a38-ad4f-9ab0832a3c6b",
+      },
+      "researchCandidate": {
+        "universalIdentifier": "a1b2c3d4-e00d-4a7b-8c9d-0e1f2a3b400d",
+      },
+      "researchCandidateId": {
+        "universalIdentifier": "a1b2c3d4-e00e-4a7b-8c9d-0e1f2a3b400e",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "a1b2c3d4-e009-4a7b-8c9d-0e1f2a3b4009",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "a1b2c3d4-e00a-4a7b-8c9d-0e1f2a3b400a",
+      },
+      "searchVector": {
+        "universalIdentifier": "ba646b8e-f1cf-518a-b7aa-2031e78aa43a",
+      },
+      "stageEvents": {
+        "universalIdentifier": "a1b2c3d4-e011-4a7b-8c9d-0e1f2a3b4011",
+      },
+      "status": {
+        "universalIdentifier": "a1b2c3d4-e002-4a7b-8c9d-0e1f2a3b4002",
+      },
+      "updatedAt": {
+        "universalIdentifier": "86ef454d-5b92-599e-8d51-c3858b0982b4",
+      },
+      "updatedBy": {
+        "universalIdentifier": "efc2fb73-6896-5b14-b663-b2986b4d7043",
+      },
+    },
+    "indexes": {
+      "personIdIndex": {
+        "universalIdentifier": "b1c2d3e4-f5a7-4b7c-8d9e-0f1a2b3c4d5f",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "b1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e",
+      },
+      "statusIndex": {
+        "universalIdentifier": "b1c2d3e4-f5a8-4b7c-8d9e-0f1a2b3c4d60",
+      },
+    },
+    "universalIdentifier": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "views": {
+      "allSearchCandidacies": {
+        "universalIdentifier": "c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f",
+        "viewFields": {
+          "assignedAt": {
+            "universalIdentifier": "c1d2e3f4-a006-4c7d-8e9f-0a1b2c3d4006",
+          },
+          "createdAt": {
+            "universalIdentifier": "c1d2e3f4-a007-4c7d-8e9f-0a1b2c3d4007",
+          },
+          "currentStage": {
+            "universalIdentifier": "c1d2e3f4-a003-4c7d-8e9f-0a1b2c3d4003",
+          },
+          "name": {
+            "universalIdentifier": "c1d2e3f4-a001-4c7d-8e9f-0a1b2c3d4001",
+          },
+          "person": {
+            "universalIdentifier": "c1d2e3f4-a005-4c7d-8e9f-0a1b2c3d4005",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "c1d2e3f4-a004-4c7d-8e9f-0a1b2c3d4004",
+          },
+          "status": {
+            "universalIdentifier": "c1d2e3f4-a002-4c7d-8e9f-0a1b2c3d4002",
+          },
+        },
+      },
+      "searchCandidacyRecordPageFields": {
+        "universalIdentifier": "d1e2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "d1e2f3a4-b001-4d7e-8f9a-0b1c2d3e5000",
+          },
+        },
+        "viewFields": {
+          "assignedAt": {
+            "universalIdentifier": "d1e2f3a4-c008-4d7e-8f9a-0b1c2d3e5008",
+          },
+          "candidateConsentDate": {
+            "universalIdentifier": "d1e2f3a4-c00a-4d7e-8f9a-0b1c2d3e500a",
+          },
+          "clientNotes": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007007",
+          },
+          "closedAt": {
+            "universalIdentifier": "d1e2f3a4-c00b-4d7e-8f9a-0b1c2d3e500b",
+          },
+          "createdAt": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007009",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007010",
+          },
+          "currentStage": {
+            "universalIdentifier": "d1e2f3a4-c003-4d7e-8f9a-0b1c2d3e5003",
+          },
+          "executiveProfile": {
+            "universalIdentifier": "d1e2f3a4-c007-4d7e-8f9a-0b1c2d3e5007",
+          },
+          "lastStageChangedAt": {
+            "universalIdentifier": "d1e2f3a4-c009-4d7e-8f9a-0b1c2d3e5009",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007001",
+          },
+          "notes": {
+            "universalIdentifier": "d1e2f3a4-c00c-4d7e-8f9a-0b1c2d3e500c",
+          },
+          "person": {
+            "universalIdentifier": "d1e2f3a4-c005-4d7e-8f9a-0b1c2d3e5005",
+          },
+          "researchCandidate": {
+            "universalIdentifier": "d1e2f3a4-c006-4d7e-8f9a-0b1c2d3e5006",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007008",
+          },
+          "slateType": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007002",
+          },
+          "status": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007004",
+          },
+          "submittedAt": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007005",
+          },
+          "submittedBy": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007006",
+          },
+          "version": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007003",
+          },
+        },
+      },
+    },
+  },
+  "searchCriterion": {
+    "fields": {
+      "category": {
+        "universalIdentifier": "9376e73e-5d68-4859-9bc6-c64f4d4e2957",
+      },
+      "createdAt": {
+        "universalIdentifier": "b2b8f4d5-e4f7-57bb-8470-00eca95cb84e",
+      },
+      "createdBy": {
+        "universalIdentifier": "7fa1071e-a65c-5989-be37-8e14dbb4394f",
+      },
+      "deletedAt": {
+        "universalIdentifier": "0baf856c-b79b-5c23-8387-f78d83af2fec",
+      },
+      "description": {
+        "universalIdentifier": "88f48e03-25a2-4daa-954f-ef3c6776a4c3",
+      },
+      "id": {
+        "universalIdentifier": "35598a90-daa6-57b7-b30a-5fd4574d2ca4",
+      },
+      "isRequired": {
+        "universalIdentifier": "98eb9997-ed40-43a2-8086-2f528f44d724",
+      },
+      "name": {
+        "universalIdentifier": "53c122c6-bc6f-448f-8958-3c2e022f76f6",
+      },
+      "position": {
+        "universalIdentifier": "c003e920-a4ba-518f-ac11-9dac09d95247",
+      },
+      "searchVector": {
+        "universalIdentifier": "80fcbec8-2d69-5b9d-ae0e-891a9c19c4e5",
+      },
+      "specification": {
+        "universalIdentifier": "c772a84a-9bca-415a-96a5-8f6aca8eae10",
+      },
+      "specificationId": {
+        "universalIdentifier": "a75b41e9-a37a-4cef-9601-4ca0a18e9626",
+      },
+      "updatedAt": {
+        "universalIdentifier": "3661be3e-0c23-5bb0-a1f6-15fb07ae05b4",
+      },
+      "updatedBy": {
+        "universalIdentifier": "68d18ef2-a991-5868-83b7-4390727306ed",
+      },
+      "weight": {
+        "universalIdentifier": "5dbb5a07-c8f1-405e-a535-22992a0b912d",
+      },
+    },
+    "indexes": {
+      "categoryIndex": {
+        "universalIdentifier": "9ff620bb-de6d-4242-a3ec-757b350ef5d4",
+      },
+      "specificationIdIndex": {
+        "universalIdentifier": "5024347a-f5b8-44b5-9e82-33f6989ee697",
+      },
+    },
+    "universalIdentifier": "2b2b26cc-fe25-49d7-9a71-192e8923dd95",
+    "views": {
+      "searchCriterionRecordPageFields": {
+        "universalIdentifier": "52a16eed-30c2-449e-9ddf-0de75aa6b829",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "52a16eed-1001-449e-9ddf-0de75aa6b800",
+          },
+        },
+        "viewFields": {
+          "category": {
+            "universalIdentifier": "52a16eed-2003-449e-9ddf-0de75aa6b803",
+          },
+          "createdAt": {
+            "universalIdentifier": "52a16eed-2007-449e-9ddf-0de75aa6b807",
+          },
+          "createdBy": {
+            "universalIdentifier": "52a16eed-2008-449e-9ddf-0de75aa6b808",
+          },
+          "description": {
+            "universalIdentifier": "52a16eed-2005-449e-9ddf-0de75aa6b805",
+          },
+          "isRequired": {
+            "universalIdentifier": "52a16eed-2004-449e-9ddf-0de75aa6b804",
+          },
+          "name": {
+            "universalIdentifier": "52a16eed-2001-449e-9ddf-0de75aa6b801",
+          },
+          "specification": {
+            "universalIdentifier": "52a16eed-2006-449e-9ddf-0de75aa6b806",
+          },
+          "weight": {
+            "universalIdentifier": "52a16eed-2002-449e-9ddf-0de75aa6b802",
+          },
+        },
+      },
+    },
+  },
+  "searchEngagementTerms": {
+    "fields": {
+      "attachments": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bb0",
+      },
+      "createdAt": {
+        "universalIdentifier": "305323a0-0823-5671-a7f0-6bac47aba74e",
+      },
+      "createdBy": {
+        "universalIdentifier": "2edb2f07-2b6f-5d0c-b05b-a9682d35f506",
+      },
+      "deletedAt": {
+        "universalIdentifier": "58f6c332-51ba-5e0e-9165-ba05fbcd748d",
+      },
+      "durationMonths": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bab",
+      },
+      "engagementEndDate": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8baa",
+      },
+      "engagementStartDate": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba9",
+      },
+      "exclusivity": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba7",
+      },
+      "exclusivityDurationMonths": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba8",
+      },
+      "feePercentage": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba5",
+      },
+      "feeStructure": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba4",
+      },
+      "fixedFeeAmount": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba6",
+      },
+      "guaranteePeriodMonths": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bac",
+      },
+      "id": {
+        "universalIdentifier": "3fc879b8-6732-54d5-8e98-4b6690499fb9",
+      },
+      "name": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba1",
+      },
+      "noteTargets": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8baf",
+      },
+      "opportunity": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba2",
+      },
+      "owner": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bb2",
+      },
+      "paymentSchedule": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bad",
+      },
+      "position": {
+        "universalIdentifier": "f45cd3e5-9b57-5968-be7d-c9e08b3521fb",
+      },
+      "searchVector": {
+        "universalIdentifier": "f7fe8c53-42b6-511f-a427-80669e99ab85",
+      },
+      "taskTargets": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bae",
+      },
+      "termsType": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8ba3",
+      },
+      "timelineActivities": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bb1",
+      },
+      "updatedAt": {
+        "universalIdentifier": "c08e4d15-cb9c-5b4c-9b73-9957b3546543",
+      },
+      "updatedBy": {
+        "universalIdentifier": "309502bb-e17a-5f1f-bfb3-3fc972565906",
+      },
+    },
+    "indexes": {
+      "opportunityIdIndex": {
+        "universalIdentifier": "7a3eb2c8-9d1e-4f5a-8b3c-6d7e8f9a0b1c",
+      },
+      "termsTypeIndex": {
+        "universalIdentifier": "8b4fc3d9-0e2f-4a6b-9c4d-7e8f9a0b1c2d",
+      },
+    },
+    "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8b9c",
+    "views": {
+      "allSearchEngagementTerms": {
+        "universalIdentifier": "9c5a0d4e-1f3a-4b7c-0d5e-8f9a0b1c2d3e",
+        "viewFields": {
+          "createdAt": {
+            "universalIdentifier": "5c1a6d0e-7f9a-4b3c-6d1e-4f5a6b7c8d9e",
+          },
+          "feeStructure": {
+            "universalIdentifier": "3a9e4b8c-5d7e-4f1a-4b9c-2d3e4f5a6b7c",
+          },
+          "name": {
+            "universalIdentifier": "0d6b1e5f-2a4b-4c8d-1e6f-9a0b1c2d3e4f",
+          },
+          "opportunity": {
+            "universalIdentifier": "1e7c2f6a-3b5c-4d9e-2f7a-0b1c2d3e4f5a",
+          },
+          "paymentSchedule": {
+            "universalIdentifier": "4b0f5c9d-6e8f-4a2b-5c0d-3e4f5a6b7c8d",
+          },
+          "termsType": {
+            "universalIdentifier": "2f8d3a7b-4c6d-4e0f-3a8b-1c2d3e4f5a6b",
+          },
+        },
+      },
+      "searchEngagementTermsRecordPageFields": {
+        "universalIdentifier": "6d2b7e1f-8a0b-4c4d-7e2f-5a6b7c8d9e0f",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "7e3c8f2a-9b1c-4d5e-8f3a-6b7c8d9e0f1a",
+          },
+          "system": {
+            "universalIdentifier": "8f4d9a3b-0c2d-4e6f-9a4b-7c8d9e0f1a2b",
+          },
+        },
+        "viewFields": {
+          "attachments": {
+            "universalIdentifier": "8b4f9c3d-0e2f-4a6b-9c4d-7e8f9a0b1c2d",
+          },
+          "createdAt": {
+            "universalIdentifier": "2b8f3c7d-4e6f-4a0b-3c8d-1e2f3a4b5c6d",
+          },
+          "createdBy": {
+            "universalIdentifier": "3c9a4d8e-5f7a-4b1c-4d9e-2f3a4b5c6d7e",
+          },
+          "durationMonths": {
+            "universalIdentifier": "9e5c0f4a-1b3c-4d7e-0f5a-8b9c0d1e2f3a",
+          },
+          "engagementEndDate": {
+            "universalIdentifier": "8d4b9e3f-0a2b-4c6d-9e4f-7a8b9c0d1e2f",
+          },
+          "engagementStartDate": {
+            "universalIdentifier": "7c3a8d2e-9f1a-4b5c-8d3e-6f7a8b9c0d1e",
+          },
+          "exclusivity": {
+            "universalIdentifier": "5a1e6b0c-7d9e-4f3a-6b1c-4d5e6f7a8b9c",
+          },
+          "exclusivityDurationMonths": {
+            "universalIdentifier": "6b2f7c1d-8e0f-4a4b-7c2d-5e6f7a8b9c0d",
+          },
+          "feePercentage": {
+            "universalIdentifier": "3e9c4f8a-5b7c-4d1e-4f9a-2b3c4d5e6f7a",
+          },
+          "feeStructure": {
+            "universalIdentifier": "2d8b3e7f-4a6b-4c0d-3e8f-1a2b3c4d5e6f",
+          },
+          "fixedFeeAmount": {
+            "universalIdentifier": "4f0d5a9b-6c8d-4e2f-5a0b-3c4d5e6f7a8b",
+          },
+          "guaranteePeriodMonths": {
+            "universalIdentifier": "0f6d1a5b-2c4d-4e8f-1a6b-9c0d1e2f3a4b",
+          },
+          "name": {
+            "universalIdentifier": "9a5e0b4c-1d3e-4f7a-0b5c-8d9e0f1a2b3c",
+          },
+          "noteTargets": {
+            "universalIdentifier": "7a3e8b2c-9d1e-4f5a-8b3c-6d7e8f9a0b1c",
+          },
+          "opportunity": {
+            "universalIdentifier": "0b6f1c5d-2e4f-4a8b-1c6d-9e0f1a2b3c4d",
+          },
+          "paymentSchedule": {
+            "universalIdentifier": "1a7e2b6c-3d5e-4f9a-2b7c-0d1e2f3a4b5c",
+          },
+          "taskTargets": {
+            "universalIdentifier": "6f2d7a1b-8c0d-4e4f-7a2b-5c6d7e8f9a0b",
+          },
+          "termsType": {
+            "universalIdentifier": "1c7a2d6e-3f5a-4b9c-2d7e-0f1a2b3c4d5e",
+          },
+          "timelineActivities": {
+            "universalIdentifier": "9c5a0d4e-1f3a-4b7c-0d5e-8f9a0b1c2d3e",
+          },
+          "updatedAt": {
+            "universalIdentifier": "4d0b5e9f-6a8b-4c2d-5e0f-3a4b5c6d7e8f",
+          },
+          "updatedBy": {
+            "universalIdentifier": "5e1c6f0a-7b9c-4d3e-6f1a-4b5c6d7e8f9a",
+          },
+        },
+      },
+    },
+  },
+  "searchInterview": {
+    "fields": {
+      "clientFeedbacks": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d016",
+      },
+      "createdAt": {
+        "universalIdentifier": "6d860851-9301-5137-bbb5-e3ff6ffb468a",
+      },
+      "createdBy": {
+        "universalIdentifier": "d9f091a9-af95-514f-ad3a-d6d9ad2d3d7d",
+      },
+      "deletedAt": {
+        "universalIdentifier": "2c2e344d-ce07-547d-8144-d201564a173e",
+      },
+      "duration": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d006",
+      },
+      "id": {
+        "universalIdentifier": "89ea1bc7-52bf-53ee-b001-0e28fd191ef6",
+      },
+      "internalNotes": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d010",
+      },
+      "interviewType": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d002",
+      },
+      "interviewers": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d011",
+      },
+      "location": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d007",
+      },
+      "name": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d001",
+      },
+      "notes": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d008",
+      },
+      "outcome": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d009",
+      },
+      "position": {
+        "universalIdentifier": "8defea10-ad9b-5ae6-92fc-2dcd722a9665",
+      },
+      "scheduledDate": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d004",
+      },
+      "scheduledEndDate": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d005",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d012",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d013",
+      },
+      "searchCandidacy": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d014",
+      },
+      "searchCandidacyId": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d015",
+      },
+      "searchVector": {
+        "universalIdentifier": "02f46b2b-03e9-52d0-a950-650dfb40fe4a",
+      },
+      "status": {
+        "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d000d003",
+      },
+      "updatedAt": {
+        "universalIdentifier": "6eebc0b3-38f1-542c-9e37-a5630189f354",
+      },
+      "updatedBy": {
+        "universalIdentifier": "73cffef4-689e-5615-bb1d-d42ec6bab91c",
+      },
+    },
+    "indexes": {
+      "scheduledDateIndex": {
+        "universalIdentifier": "aeb1d000-0002-4000-800d-aeb1d000i004",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "aeb1d000-0002-4000-800d-aeb1d000i001",
+      },
+      "searchCandidacyIdIndex": {
+        "universalIdentifier": "aeb1d000-0002-4000-800d-aeb1d000i002",
+      },
+      "statusIndex": {
+        "universalIdentifier": "aeb1d000-0002-4000-800d-aeb1d000i003",
+      },
+    },
+    "universalIdentifier": "aeb1d000-0001-4000-800d-aeb1d0000001",
+    "views": {
+      "searchInterviewRecordPageFields": {
+        "universalIdentifier": "aeb1d000-0030-4000-800d-aeb1d000v001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1d000-0040-4000-800d-aeb1d000g001",
+          },
+          "system": {
+            "universalIdentifier": "aeb1d000-0040-4000-800d-aeb1d000g002",
+          },
+        },
+        "viewFields": {
+          "clientFeedbacks": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f014",
+          },
+          "createdAt": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f015",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f016",
+          },
+          "duration": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f006",
+          },
+          "internalNotes": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f010",
+          },
+          "interviewType": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f002",
+          },
+          "interviewers": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f011",
+          },
+          "location": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f007",
+          },
+          "name": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f001",
+          },
+          "notes": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f008",
+          },
+          "outcome": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f009",
+          },
+          "scheduledDate": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f004",
+          },
+          "scheduledEndDate": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f005",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f012",
+          },
+          "searchCandidacy": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f013",
+          },
+          "status": {
+            "universalIdentifier": "aeb1d000-0050-4000-800d-aeb1d000f003",
+          },
+        },
+      },
+    },
+  },
+  "searchMilestone": {
+    "fields": {
+      "assignment": {
+        "universalIdentifier": "3ec12b4c-d9c4-482c-9027-07ae65b0b12a",
+      },
+      "assignmentId": {
+        "universalIdentifier": "ea78e8a7-d5ff-4c4b-8c43-b3ebf80d1f42",
+      },
+      "completedAt": {
+        "universalIdentifier": "d49a266f-588f-424f-8152-a153c6338a26",
+      },
+      "createdAt": {
+        "universalIdentifier": "fcab7462-42ef-58a6-b646-5f5e25081a11",
+      },
+      "createdBy": {
+        "universalIdentifier": "43569249-3cf5-56ee-ac72-263fec94c048",
+      },
+      "deletedAt": {
+        "universalIdentifier": "4b828004-2f29-5f4a-b66e-41f55d056807",
+      },
+      "description": {
+        "universalIdentifier": "835851b3-e59c-4e62-8b7e-9caeeae70638",
+      },
+      "dueDate": {
+        "universalIdentifier": "e7832211-f34d-458c-8926-ef663000dd97",
+      },
+      "id": {
+        "universalIdentifier": "9ba35742-6d26-56a0-9424-3785e5437824",
+      },
+      "name": {
+        "universalIdentifier": "a3526562-0e22-4624-a921-311872df14cc",
+      },
+      "position": {
+        "universalIdentifier": "92fc6b6d-2e66-50c0-ba5e-47070deba282",
+      },
+      "searchVector": {
+        "universalIdentifier": "6c35d6d6-39b5-5928-bba3-74357068c316",
+      },
+      "status": {
+        "universalIdentifier": "3aa3fd66-cdb7-47c0-a50c-43a2f87ccac0",
+      },
+      "updatedAt": {
+        "universalIdentifier": "907a699e-f733-53f8-9901-c56d9698b1d1",
+      },
+      "updatedBy": {
+        "universalIdentifier": "cb546920-443d-5e7c-a6f1-7f526f6b3958",
+      },
+    },
+    "indexes": {
+      "assignmentIdIndex": {
+        "universalIdentifier": "0c1bba57-dcee-4c97-aa43-2e1108540ff1",
+      },
+      "statusIndex": {
+        "universalIdentifier": "4d3ca8db-db3f-49ce-9040-680fb38c9288",
+      },
+    },
+    "universalIdentifier": "df757f76-8050-4d18-b24d-cdb5d31789b6",
+    "views": {
+      "searchMilestoneRecordPageFields": {
+        "universalIdentifier": "f832e3d5-3cc3-4325-be47-19c6745b6371",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "f832e3d5-1001-4325-be47-19c6745b6300",
+          },
+        },
+        "viewFields": {
+          "assignment": {
+            "universalIdentifier": "f832e3d5-2006-4325-be47-19c6745b6306",
+          },
+          "completedAt": {
+            "universalIdentifier": "f832e3d5-2004-4325-be47-19c6745b6304",
+          },
+          "createdAt": {
+            "universalIdentifier": "f832e3d5-2007-4325-be47-19c6745b6307",
+          },
+          "createdBy": {
+            "universalIdentifier": "f832e3d5-2008-4325-be47-19c6745b6308",
+          },
+          "description": {
+            "universalIdentifier": "f832e3d5-2005-4325-be47-19c6745b6305",
+          },
+          "dueDate": {
+            "universalIdentifier": "f832e3d5-2003-4325-be47-19c6745b6303",
+          },
+          "name": {
+            "universalIdentifier": "f832e3d5-2001-4325-be47-19c6745b6301",
+          },
+          "status": {
+            "universalIdentifier": "f832e3d5-2002-4325-be47-19c6745b6302",
+          },
+        },
+      },
+    },
+  },
+  "searchSlate": {
+    "fields": {
+      "clientNotes": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000308",
+      },
+      "createdAt": {
+        "universalIdentifier": "01c5069e-4bee-5e66-96d6-d1038910b334",
+      },
+      "createdBy": {
+        "universalIdentifier": "7811b9ac-0bef-50d0-908e-f1bebfd1c50b",
+      },
+      "deletedAt": {
+        "universalIdentifier": "9486aad1-fed7-5669-b3a7-46aa6579fd3a",
+      },
+      "id": {
+        "universalIdentifier": "386737bd-4c6f-5fc0-87b1-a3f1f9189f5b",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000301",
+      },
+      "position": {
+        "universalIdentifier": "15e282f1-d029-551e-9041-098c8dbbdcde",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000309",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000310",
+      },
+      "searchVector": {
+        "universalIdentifier": "0a4785d9-3f6e-5ead-b26d-13dd558e762c",
+      },
+      "slateType": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000302",
+      },
+      "status": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000304",
+      },
+      "submittedAt": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000305",
+      },
+      "submittedBy": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000306",
+      },
+      "submittedById": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000307",
+      },
+      "updatedAt": {
+        "universalIdentifier": "d22c6bd2-1245-5e5e-ab47-2ff0c32887ed",
+      },
+      "updatedBy": {
+        "universalIdentifier": "5b582873-e6a5-5223-a862-5464bf30b62a",
+      },
+      "version": {
+        "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000303",
+      },
+    },
+    "indexes": {
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "aeb1a003-0002-4000-8003-aeb1a0003001",
+      },
+      "slateTypeIndex": {
+        "universalIdentifier": "aeb1a003-0002-4000-8003-aeb1a0003003",
+      },
+      "statusIndex": {
+        "universalIdentifier": "aeb1a003-0002-4000-8003-aeb1a0003002",
+      },
+    },
+    "universalIdentifier": "aeb1a003-0001-4000-8003-aeb1a0000003",
+    "views": {
+      "searchSlateRecordPageFields": {
+        "universalIdentifier": "aeb1a003-0030-4000-8003-aeb1a0005001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a003-0040-4000-8003-aeb1a0006001",
+          },
+        },
+        "viewFields": {
+          "clientNotes": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007007",
+          },
+          "createdAt": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007009",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007010",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007001",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007008",
+          },
+          "slateType": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007002",
+          },
+          "status": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007004",
+          },
+          "submittedAt": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007005",
+          },
+          "submittedBy": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007006",
+          },
+          "version": {
+            "universalIdentifier": "aeb1a003-0050-4000-8003-aeb1a0007003",
+          },
+        },
+      },
+    },
+  },
+  "searchStatusReport": {
+    "fields": {
+      "acknowledgedBy": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000713",
+      },
+      "acknowledgedById": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000714",
+      },
+      "activitiesSummary": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000707",
+      },
+      "candidatePipelineSummary": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000708",
+      },
+      "clientFeedbackRequested": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000710",
+      },
+      "createdAt": {
+        "universalIdentifier": "d8eabda2-601d-5831-b0ca-b40d40b668ee",
+      },
+      "createdBy": {
+        "universalIdentifier": "2cf2dc8e-27b9-5dbd-aa18-ab0114f45651",
+      },
+      "deletedAt": {
+        "universalIdentifier": "6122133b-d737-5fb2-a4d8-575b41d4faba",
+      },
+      "id": {
+        "universalIdentifier": "226ae478-3167-5096-8bbf-08528e0703e0",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000701",
+      },
+      "nextSteps": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000709",
+      },
+      "periodEnd": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000706",
+      },
+      "periodStart": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000705",
+      },
+      "position": {
+        "universalIdentifier": "3bd4d395-a22f-5962-80b9-78a986041022",
+      },
+      "reportDate": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000704",
+      },
+      "reportType": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000702",
+      },
+      "searchAssignment": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000715",
+      },
+      "searchAssignmentId": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000716",
+      },
+      "searchVector": {
+        "universalIdentifier": "e9ec1618-aa0f-5b7e-a30e-4f3912d9a5ec",
+      },
+      "status": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000703",
+      },
+      "submittedBy": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000711",
+      },
+      "submittedById": {
+        "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000712",
+      },
+      "updatedAt": {
+        "universalIdentifier": "135758ba-a53e-544a-ac9d-44f675882716",
+      },
+      "updatedBy": {
+        "universalIdentifier": "7ac3f03a-1850-5543-bc7f-dc6dc713d949",
+      },
+    },
+    "indexes": {
+      "reportDateIndex": {
+        "universalIdentifier": "aeb1a007-0002-4000-8007-aeb1a0007004",
+      },
+      "reportTypeIndex": {
+        "universalIdentifier": "aeb1a007-0002-4000-8007-aeb1a0007003",
+      },
+      "searchAssignmentIdIndex": {
+        "universalIdentifier": "aeb1a007-0002-4000-8007-aeb1a0007001",
+      },
+      "statusIndex": {
+        "universalIdentifier": "aeb1a007-0002-4000-8007-aeb1a0007002",
+      },
+    },
+    "universalIdentifier": "aeb1a007-0001-4000-8007-aeb1a0000007",
+    "views": {
+      "searchStatusReportRecordPageFields": {
+        "universalIdentifier": "aeb1a007-0030-4000-8007-aeb1a0009001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a007-0040-4000-8007-aeb1a0010001",
+          },
+        },
+        "viewFields": {
+          "activitiesSummary": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011007",
+          },
+          "createdAt": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011010",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011011",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011001",
+          },
+          "periodEnd": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011006",
+          },
+          "periodStart": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011005",
+          },
+          "reportDate": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011004",
+          },
+          "reportType": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011002",
+          },
+          "searchAssignment": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011009",
+          },
+          "status": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011003",
+          },
+          "submittedBy": {
+            "universalIdentifier": "aeb1a007-0050-4000-8007-aeb1a0011008",
+          },
+        },
+      },
+    },
+  },
+  "slateMembership": {
+    "fields": {
+      "candidacy": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000410",
+      },
+      "candidacyId": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000411",
+      },
+      "consentExpiresAt": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000406",
+      },
+      "consentMethod": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000407",
+      },
+      "consentObtainedAt": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000405",
+      },
+      "createdAt": {
+        "universalIdentifier": "7189ea77-0c05-568c-902c-75c2ce1f9ea1",
+      },
+      "createdBy": {
+        "universalIdentifier": "fd0773ae-1822-539d-a643-4a4bb49fc420",
+      },
+      "deletedAt": {
+        "universalIdentifier": "655a2b46-d510-598a-8ff0-c5cb2708c671",
+      },
+      "id": {
+        "universalIdentifier": "99adc807-1241-50cb-bca4-c00e6099941b",
+      },
+      "name": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000401",
+      },
+      "position": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000402",
+      },
+      "presentationConsentObtained": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000404",
+      },
+      "searchVector": {
+        "universalIdentifier": "c89f7493-28e1-5fd6-a7e5-90cbfdd3362f",
+      },
+      "slate": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000408",
+      },
+      "slateId": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000409",
+      },
+      "status": {
+        "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000403",
+      },
+      "updatedAt": {
+        "universalIdentifier": "90e9d989-539d-57ce-bed6-2f4e0309eded",
+      },
+      "updatedBy": {
+        "universalIdentifier": "0e61c19e-1b6d-55b7-b052-371096749fd3",
+      },
+    },
+    "indexes": {
+      "candidacyIdIndex": {
+        "universalIdentifier": "aeb1a004-0002-4000-8004-aeb1a0004002",
+      },
+      "slateIdIndex": {
+        "universalIdentifier": "aeb1a004-0002-4000-8004-aeb1a0004001",
+      },
+      "statusIndex": {
+        "universalIdentifier": "aeb1a004-0002-4000-8004-aeb1a0004003",
+      },
+    },
+    "universalIdentifier": "aeb1a004-0001-4000-8004-aeb1a0000004",
+    "views": {
+      "slateMembershipRecordPageFields": {
+        "universalIdentifier": "aeb1a004-0030-4000-8004-aeb1a0006001",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "aeb1a004-0040-4000-8004-aeb1a0007001",
+          },
+        },
+        "viewFields": {
+          "candidacy": {
+            "universalIdentifier": "aeb1a004-0050-4000-8004-aeb1a0008006",
+          },
+          "createdAt": {
+            "universalIdentifier": "aeb1a004-0050-4000-8004-aeb1a0008007",
+          },
+          "createdBy": {
+            "universalIdentifier": "aeb1a004-0050-4000-8004-aeb1a0008008",
+          },
+          "name": {
+            "universalIdentifier": "aeb1a004-0050-4000-8004-aeb1a0008001",
+          },
+          "position": {
+            "universalIdentifier": "aeb1a004-0050-4000-8004-aeb1a0008002",
+          },
+          "presentationConsentObtained": {
+            "universalIdentifier": "aeb1a004-0050-4000-8004-aeb1a0008004",
+          },
+          "slate": {
+            "universalIdentifier": "aeb1a004-0050-4000-8004-aeb1a0008005",
+          },
+          "status": {
+            "universalIdentifier": "aeb1a004-0050-4000-8004-aeb1a0008003",
           },
         },
       },
@@ -4458,6 +8524,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "searchVector": {
         "universalIdentifier": "821c713e-bf1c-569d-9f0c-8e10e80eee5e",
       },
+      "targetClientAccountProfile": {
+        "universalIdentifier": "20202020-a1b2-4c3d-8e5f-6a7b8c9d0e03",
+      },
       "targetCompany": {
         "universalIdentifier": "20202020-4703-4a4e-948c-487b0c60a92c",
       },
@@ -4466,6 +8535,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
       "targetPerson": {
         "universalIdentifier": "20202020-c8a0-4e85-a016-87e2349cfbec",
+      },
+      "targetSearchEngagementTerms": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bc3",
       },
       "task": {
         "universalIdentifier": "20202020-e881-457a-8758-74aaef4ae78a",
@@ -4558,6 +8630,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "searchVector": {
         "universalIdentifier": "23a0482b-f41b-5e13-9b3e-356c5aaa90a3",
       },
+      "targetClientAccountProfile": {
+        "universalIdentifier": "20202020-a1b2-4c3d-8e5f-6a7b8c9d0e04",
+      },
       "targetCompany": {
         "universalIdentifier": "20202020-04ad-4221-a744-7a8278a5ce21",
       },
@@ -4578,6 +8653,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
       "targetPerson": {
         "universalIdentifier": "20202020-c414-45b9-a60a-ac27aa96229f",
+      },
+      "targetSearchEngagementTerms": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bc4",
       },
       "targetTask": {
         "universalIdentifier": "20202020-b2f5-415c-9135-a31dfe49501b",
@@ -5123,13 +9201,99 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
   },
+  "workspaceEventOutbox": {
+    "fields": {
+      "attemptCount": {
+        "universalIdentifier": "d2e9b6b7-9d92-4dfa-92e4-d6e377d549dc",
+      },
+      "createdAt": {
+        "universalIdentifier": "e4eadded-081f-58ad-9945-aa8dd476c6e8",
+      },
+      "createdBy": {
+        "universalIdentifier": "fc9c5856-fc02-5fea-b568-bdc25a83e6a6",
+      },
+      "deletedAt": {
+        "universalIdentifier": "8e9fab5f-8437-5bf8-9625-9bbb27e3b338",
+      },
+      "deliveredAt": {
+        "universalIdentifier": "af1ecc2b-7fae-4a8d-894d-5087dc80cd01",
+      },
+      "eventName": {
+        "universalIdentifier": "25a2ebe6-79c5-437c-9c5a-2e1308ac8a4b",
+      },
+      "eventPayload": {
+        "universalIdentifier": "15701d5b-ee6c-44cd-80c2-25c056a82f99",
+      },
+      "id": {
+        "universalIdentifier": "bfdbdcf1-44ef-5dcb-8a09-7b45a6997931",
+      },
+      "idempotencyKey": {
+        "universalIdentifier": "6d71bc55-7745-4485-95f4-634174797499",
+      },
+      "lastAttemptAt": {
+        "universalIdentifier": "f81b6a87-f1fe-4b4e-b631-b11e4bfc61f3",
+      },
+      "lastErrorMessage": {
+        "universalIdentifier": "d61593c3-de6f-4ca6-9ecc-b610c4e4d325",
+      },
+      "nextAttemptAt": {
+        "universalIdentifier": "ee3d5c0f-aca3-41ab-aee4-587e6fd762e0",
+      },
+      "position": {
+        "universalIdentifier": "6267e79c-fbb6-5911-ad80-6ca16adb1af1",
+      },
+      "searchVector": {
+        "universalIdentifier": "a7808f76-c1ec-5d98-996c-1426fd0d05e4",
+      },
+      "status": {
+        "universalIdentifier": "ee5087da-cfb3-4787-895e-e191568925dc",
+      },
+      "updatedAt": {
+        "universalIdentifier": "9e277f0b-1f1c-5ba4-a3fb-6d91668364fa",
+      },
+      "updatedBy": {
+        "universalIdentifier": "6b6f2cb4-f249-5694-81c8-43465372174e",
+      },
+    },
+    "indexes": {
+      "statusIndex": {
+        "universalIdentifier": "1161129a-819c-442b-b0a3-b0a3fff694d6",
+      },
+    },
+    "universalIdentifier": "312e755f-c55a-447f-a664-6545b5b10db9",
+    "views": {
+      "allWorkspaceEventOutboxes": {
+        "universalIdentifier": "501a6d8b-87f8-463b-b2f3-f34f44620c73",
+        "viewFields": {
+          "eventName": {
+            "universalIdentifier": "d461ec80-04b2-4389-871f-ade5faca2eb1",
+          },
+          "eventPayload": {
+            "universalIdentifier": "a0b2d849-47b4-437c-8bc7-6d021707125c",
+          },
+          "status": {
+            "universalIdentifier": "69b8daed-7fcc-4271-80c8-611b82f13e4e",
+          },
+        },
+      },
+    },
+  },
   "workspaceMember": {
     "fields": {
       "accountOwnerForCompanies": {
         "universalIdentifier": "20202020-dc29-4bd4-a3c1-29eafa324bee",
       },
+      "approvedPositionSpecifications": {
+        "universalIdentifier": "b95fe474-8ff9-4081-be9c-082f82fd2fb4",
+      },
+      "approvedSearchEngagementTerms": {
+        "universalIdentifier": "83697254-61a0-498b-9417-0095ef02cb0f",
+      },
       "assignedTasks": {
         "universalIdentifier": "20202020-61dc-4a1c-99e8-38ebf8d2bbeb",
+      },
+      "assignmentTeamMemberships": {
+        "universalIdentifier": "16a57e97-d1c5-4c5f-8840-6949b1193d4b",
       },
       "avatarUrl": {
         "universalIdentifier": "20202020-0ced-4c4f-a376-c98a966af3f6",
@@ -5179,11 +9343,14 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "numberFormat": {
         "universalIdentifier": "20202020-7f40-4e7f-b126-11c0eda6b141",
       },
+      "ownedClientAccountProfiles": {
+        "universalIdentifier": "20202020-a1b2-4c3d-8e5f-6a7b8c9d0f02",
+      },
       "ownedOpportunities": {
         "universalIdentifier": "20202020-9e4d-4b3a-8c1f-6d7e8f9a0b1c",
       },
-      "ownedResearchStrategies": {
-        "universalIdentifier": "20202020-b4c5-4960-1526-9b0c1d2e3f4a",
+      "ownedSearchEngagementTerms": {
+        "universalIdentifier": "20202020-7a3e-4c9d-b2f8-1e5c6d7a8bc5",
       },
       "position": {
         "universalIdentifier": "f5f7f097-05c3-5e99-9b51-d57af26d3fd0",

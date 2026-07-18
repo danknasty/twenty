@@ -78,6 +78,8 @@ import { buildBoardMatrixCriterionStandardFlatIndexMetadatas } from 'src/engine/
 import { buildCandidateBoardMatrixEvaluationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-candidate-board-matrix-evaluation-standard-flat-index-metadata.util';
 import { buildDirectorIndependenceReviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-director-independence-review-standard-flat-index-metadata.util';
 import { buildBoardCommitmentReviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-commitment-review-standard-flat-index-metadata.util';
+import { buildRetentionActionLogStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-retention-action-log-standard-flat-index-metadata.util';
+import { buildExternalIdentityMatchQueueStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-identity-match-queue-standard-flat-index-metadata.util';
 import { buildAnalyticsDomainMetricStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-domain-metric-standard-flat-index-metadata.util';
 import { buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-metric-snapshot-standard-flat-index-metadata.util';
 import { buildAnalyticsDashboardConfigStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-dashboard-config-standard-flat-index-metadata.util';
@@ -173,6 +175,9 @@ boardCompositionProfile:
     buildDirectorIndependenceReviewStandardFlatIndexMetadatas,
   boardCommitmentReview:
     buildBoardCommitmentReviewStandardFlatIndexMetadatas,
+retentionActionLog: buildRetentionActionLogStandardFlatIndexMetadatas,
+  externalIdentityMatchQueue:
+    buildExternalIdentityMatchQueueStandardFlatIndexMetadatas,
 analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatIndexMetadatas,
   analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas,
   analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatIndexMetadatas,

@@ -1,0 +1,6 @@
+export enum IdentityMatchResolution {
+  PENDING = 'PENDING',
+  RESOLVED_LINKED = 'RESOLVED_LINKED',
+  RESOLVED_NEW = 'RESOLVED_NEW',
+  RESOLVED_SKIP = 'RESOLVED_SKIP',
+}

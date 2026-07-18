@@ -2044,31 +2044,76 @@ CreateStandardObjectArgs<'targetCompany'>,
       twentyStandardApplicationId,
       now,
     }),
-  aiPromptTemplate: ({
+retentionActionLog: ({
+aiPromptTemplate: ({
     now,
     workspaceId,
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
   }: Omit<
-    CreateStandardObjectArgs<'aiPromptTemplate'>,
+CreateStandardObjectArgs<'retentionActionLog'>,
     'context' | 'objectName'
   >) =>
     createStandardObjectFlatMetadata({
-      objectName: 'aiPromptTemplate',
+      objectName: 'retentionActionLog',
       dependencyFlatEntityMaps,
       context: {
         universalIdentifier:
-          STANDARD_OBJECTS.aiPromptTemplate.universalIdentifier,
-        nameSingular: 'aiPromptTemplate',
-        namePlural: 'aiPromptTemplates',
-        labelSingular: i18nLabel(msg`AI Prompt Template`),
-        labelPlural: i18nLabel(msg`AI Prompt Templates`),
-        description: i18nLabel(msg`An AI prompt template for governed model interactions`),
-        icon: 'IconMessage',
+          STANDARD_OBJECTS.retentionActionLog.universalIdentifier,
+        nameSingular: 'retentionActionLog',
+        namePlural: 'retentionActionLogs',
+        labelSingular: i18nLabel(msg`Retention Action Log`),
+        labelPlural: i18nLabel(msg`Retention Action Logs`),
+        description: i18nLabel(
+          msg`Append-only cross-system retention and legal-hold action log`,
+        ),
+        icon: 'IconHistory',
         isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
         isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'name',
+        labelIdentifierFieldMetadataName: 'scope',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  externalIdentityMatchQueue: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'externalIdentityMatchQueue'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'externalIdentityMatchQueue',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.externalIdentityMatchQueue.universalIdentifier,
+        nameSingular: 'externalIdentityMatchQueue',
+        namePlural: 'externalIdentityMatchQueues',
+        labelSingular: i18nLabel(msg`External Identity Match Queue`),
+        labelPlural: i18nLabel(msg`External Identity Match Queues`),
+        description: i18nLabel(
+          msg`Queue of ambiguous external identity matches pending human resolution`,
+        ),
+        icon: 'IconListSearch',
+        isSystem: true,
+        isSearchable: false,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'externalRecordId',
+CreateStandardObjectArgs<'aiPromptTemplate'>,
+STANDARD_OBJECTS.aiPromptTemplate.universalIdentifier,
+namePlural: 'aiPromptTemplates',
+nameSingular: 'aiPromptTemplate',
+objectName: 'aiPromptTemplate',
       },
       workspaceId,
       standardObjectMetadataRelatedEntityIds,

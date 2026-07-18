@@ -94,6 +94,8 @@ import { computeStandardBoardMatrixCriterionViews } from 'src/engine/workspace-m
 import { computeStandardCandidateBoardMatrixEvaluationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-candidate-board-matrix-evaluation-views.util';
 import { computeStandardDirectorIndependenceReviewViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-director-independence-review-views.util';
 import { computeStandardBoardCommitmentReviewViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-commitment-review-views.util';
+import { computeStandardRetentionActionLogViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-retention-action-log-views.util';
+import { computeStandardExternalIdentityMatchQueueViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-external-identity-match-queue-views.util';
 import { computeStandardAnalyticsDomainMetricViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-domain-metric-views.util';
 import { computeStandardAnalyticsMetricSnapshotViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-metric-snapshot-views.util';
 import { computeStandardAnalyticsDashboardConfigViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-dashboard-config-views.util';
@@ -193,6 +195,9 @@ boardCompositionProfile:
     computeStandardDirectorIndependenceReviewViews,
   boardCommitmentReview:
     computeStandardBoardCommitmentReviewViews,
+retentionActionLog: computeStandardRetentionActionLogViews,
+  externalIdentityMatchQueue:
+    computeStandardExternalIdentityMatchQueueViews,
 analyticsDomainMetric: computeStandardAnalyticsDomainMetricViews,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViews,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViews,

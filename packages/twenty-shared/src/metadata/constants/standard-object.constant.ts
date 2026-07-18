@@ -6275,6 +6275,144 @@ analyticsDomainMetric: {
       },
     },
   },
+  externalIdentityMatchQueue: {
+    universalIdentifier: '5a9650dc-ab1e-436c-a4ea-3faaebb9e076',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '5a9650dc-ab1e-436c-a4ea-3faaebb9e076',
+      ),
+      externalSystemName: {
+        universalIdentifier: '34877783-e031-445e-b819-4bc2a902e872',
+      },
+      externalEntityName: {
+        universalIdentifier: 'c23bdea2-f8fe-4683-a653-0896deec516b',
+      },
+      externalRecordId: {
+        universalIdentifier: 'e402bd16-aff2-4368-a436-aab2b436356c',
+      },
+      externalNaturalKey: {
+        universalIdentifier: '55b340f1-55fc-4e30-8d81-302e834503c8',
+      },
+      matchedTwentyEntityName: {
+        universalIdentifier: 'c709f2c3-8ed6-427b-af4a-3647aff0f943',
+      },
+      matchConfidence: {
+        universalIdentifier: 'e7e1c02e-2acf-4647-ab78-68f527c10ec5',
+      },
+      candidateMatches: {
+        universalIdentifier: '33eaaaba-66fa-4a64-9e8c-1c1524e74980',
+      },
+      resolutionState: {
+        universalIdentifier: 'e1fc4b62-34e3-458a-ac6b-334e4a6469bc',
+      },
+      resolvedTwentyEntityName: {
+        universalIdentifier: 'aa4b4a87-ec26-44fb-9f2f-956865df3a58',
+      },
+      resolvedTwentyRecordId: {
+        universalIdentifier: '6dacd7aa-32f6-4ef7-a605-53f884db1a15',
+      },
+      resolvedAt: {
+        universalIdentifier: '9b393d92-6dcd-4c1a-b6dc-4a85507d124f',
+      },
+      resolvedById: {
+        universalIdentifier: '7bba054b-11c2-460d-9683-4f022281870f',
+      },
+      matchReasons: {
+        universalIdentifier: '83fc48ff-b4e5-49aa-946b-2e2f39428d17',
+      },
+    },
+    indexes: {
+      externalLookupIndex: {
+        universalIdentifier: '7d93e812-aa37-4a15-9338-254afc201e4a',
+      },
+      resolutionStateIndex: {
+        universalIdentifier: '2fe8eab9-fd9f-42ec-a302-396ced7f0cf5',
+      },
+    },
+    views: {
+      allExternalIdentityMatchQueues: {
+        universalIdentifier: '6489495a-def8-4c14-a7dc-698179f977bf',
+        viewFields: {
+          externalSystemName: {
+            universalIdentifier: 'c499fbb0-01f3-49fd-9d13-fb115843ad5e',
+          },
+          externalEntityName: {
+            universalIdentifier: 'c2d9a175-2a27-4abf-8e2a-1a6ca53cf963',
+          },
+          externalRecordId: {
+            universalIdentifier: '68f4232b-efc1-4369-8859-fe347501db0e',
+          },
+          matchConfidence: {
+            universalIdentifier: '8e175a12-2842-488b-8363-a2a589b8fad6',
+          },
+          resolutionState: {
+            universalIdentifier: '11a2c828-a91c-47d6-abce-d63885649d65',
+          },
+          createdAt: {
+            universalIdentifier: 'b3e45c92-c5d8-493c-ba55-c13668726bdd',
+          },
+        },
+      },
+      externalIdentityMatchQueueRecordPageFields: {
+        universalIdentifier: '62d9a84b-669b-4441-9062-3ad7e7e43df9',
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: 'c93d5d96-eedd-4deb-bfee-127caaca30e3',
+          },
+          system: {
+            universalIdentifier: 'ffa938b5-c9bb-48e5-b1c7-7083a9873e75',
+          },
+        },
+        viewFields: {
+          externalSystemName: {
+            universalIdentifier: '7a659343-ca9e-45fe-aa3e-156c1273f360',
+          },
+          externalEntityName: {
+            universalIdentifier: '932419b3-5f80-46e9-ac34-9f30c66e5089',
+          },
+          externalRecordId: {
+            universalIdentifier: '0a7f377d-956c-426d-83d7-62084c677ef1',
+          },
+          externalNaturalKey: {
+            universalIdentifier: 'b193b280-dfd4-4745-bc63-f6ef3c3fbb39',
+          },
+          matchedTwentyEntityName: {
+            universalIdentifier: 'a7159fee-3f68-4f3c-8969-5396eca2972d',
+          },
+          matchConfidence: {
+            universalIdentifier: 'e96b514f-bc8d-4b36-b037-8bf940791fa4',
+          },
+          candidateMatches: {
+            universalIdentifier: '2a40ab35-32f4-4c23-a2d6-ed886e3053aa',
+          },
+          resolutionState: {
+            universalIdentifier: 'a84331ba-f315-49b5-94f5-cd17517ca489',
+          },
+          resolvedTwentyEntityName: {
+            universalIdentifier: '51db5bf4-7224-4b71-8ff3-faa65883b6fe',
+          },
+          resolvedTwentyRecordId: {
+            universalIdentifier: '46e219ef-5f46-4ed7-9e0c-852efab90764',
+          },
+          resolvedAt: {
+            universalIdentifier: '690800fe-e3cb-4090-9c30-96fcd0dc8cc7',
+          },
+          resolvedById: {
+            universalIdentifier: 'eb48e693-fcfa-46e0-8505-1c26207bca8f',
+          },
+          matchReasons: {
+            universalIdentifier: '7952e1a6-3839-4111-84b4-0ba483ee3a0f',
+          },
+          createdAt: {
+            universalIdentifier: '42237d09-1890-4e0e-9dea-db6ba9e23880',
+          },
+          createdBy: {
+            universalIdentifier: 'ca04e96b-9745-49f2-b6a6-f16f9f9093fc',
+          },
+        },
+      },
+    },
+  },
 } as const satisfies Record<
   string,
   {

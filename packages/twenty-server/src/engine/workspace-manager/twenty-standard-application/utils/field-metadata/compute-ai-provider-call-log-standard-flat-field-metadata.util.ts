@@ -166,7 +166,7 @@ export const buildAiProviderCallLogStandardFlatFieldMetadatas = ({
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Model Id`),
       description: i18nLabel(msg`Provider model identifier`),
-      icon: 'Tag',
+      icon: 'IconTag',
       isNullable: false,
       isUIEditable: true,
     },

@@ -46,6 +46,7 @@ const EXPECTED_FIELDS: Record<
     { name: 'systemPrompt', type: FieldMetadataType.RICH_TEXT },
     { name: 'inputContract', type: FieldMetadataType.RAW_JSON },
     { name: 'outputSchema', type: FieldMetadataType.RAW_JSON },
+    { name: 'bannedInputs', type: FieldMetadataType.RAW_JSON },
     { name: 'responseFormat', type: FieldMetadataType.RAW_JSON },
     { name: 'modelConfiguration', type: FieldMetadataType.RAW_JSON },
     { name: 'guardrailPolicyVersion', type: FieldMetadataType.TEXT },

@@ -5186,7 +5186,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   criterionEvaluation: {
   universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000002',
   fields: {
@@ -5234,7 +5233,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   searchSlate: {
   universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000003',
   fields: {
@@ -5278,7 +5276,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   slateMembership: {
   universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
   fields: {
@@ -5321,7 +5318,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   candidatePresentation: {
   universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000005',
   fields: {
@@ -5374,7 +5370,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   clientFeedback: {
   universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000006',
   fields: {
@@ -5427,7 +5422,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   searchStatusReport: {
   universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000007',
   fields: {
@@ -5479,7 +5473,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
 slateMembership: {
     universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
     fields: {

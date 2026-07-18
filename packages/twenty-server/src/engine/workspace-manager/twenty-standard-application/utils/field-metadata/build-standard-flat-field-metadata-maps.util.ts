@@ -92,6 +92,11 @@ import { buildCandidatePresentationStandardFlatFieldMetadatas } from 'src/engine
 import { buildClientFeedbackStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-feedback-standard-flat-field-metadata.util';
 import { buildSearchStatusReportStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-status-report-standard-flat-field-metadata.util';
 
+import { buildCompensationExpectationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-compensation-expectation-standard-flat-field-metadata.util';
+import { buildOfferNegotiationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-offer-negotiation-standard-flat-field-metadata.util';
+import { buildPlacementStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-placement-standard-flat-field-metadata.util';
+import { buildGuaranteeCaseStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-guarantee-case-standard-flat-field-metadata.util';
+
 import { buildBoardCompositionProfileStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-composition-profile-standard-flat-field-metadata.util';
 import { buildBoardMatrixCriterionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-matrix-criterion-standard-flat-field-metadata.util';
 import { buildCandidateBoardMatrixEvaluationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-candidate-board-matrix-evaluation-standard-flat-field-metadata.util';

@@ -84,6 +84,11 @@ import { computeCandidatePresentationViews } from 'src/engine/workspace-manager/
 import { computeClientFeedbackViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-client-feedback-views.util';
 import { computeSearchStatusReportViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-search-status-report-views.util';
 
+import { computeStandardCompensationExpectationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-compensation-expectation-views.util';
+import { computeStandardOfferNegotiationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-offer-negotiation-views.util';
+import { computeStandardPlacementViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-placement-views.util';
+import { computeStandardGuaranteeCaseViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-guarantee-case-views.util';
+
 import { computeStandardBoardCompositionProfileViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-composition-profile-views.util';
 import { computeStandardBoardMatrixCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-matrix-criterion-views.util';
 import { computeStandardCandidateBoardMatrixEvaluationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-candidate-board-matrix-evaluation-views.util';

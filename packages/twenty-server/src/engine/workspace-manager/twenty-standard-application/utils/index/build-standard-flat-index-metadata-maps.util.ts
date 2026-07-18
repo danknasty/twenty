@@ -68,6 +68,11 @@ import { buildCandidatePresentationStandardFlatIndexMetadatas } from 'src/engine
 import { buildClientFeedbackStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-feedback-standard-flat-index-metadata.util';
 import { buildSearchStatusReportStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-status-report-standard-flat-index-metadata.util';
 
+import { buildCompensationExpectationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-compensation-expectation-standard-flat-index-metadata.util';
+import { buildOfferNegotiationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-offer-negotiation-standard-flat-index-metadata.util';
+import { buildPlacementStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-placement-standard-flat-index-metadata.util';
+import { buildGuaranteeCaseStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-guarantee-case-standard-flat-index-metadata.util';
+
 import { buildBoardCompositionProfileStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-composition-profile-standard-flat-index-metadata.util';
 import { buildBoardMatrixCriterionStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-matrix-criterion-standard-flat-index-metadata.util';
 import { buildCandidateBoardMatrixEvaluationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-candidate-board-matrix-evaluation-standard-flat-index-metadata.util';

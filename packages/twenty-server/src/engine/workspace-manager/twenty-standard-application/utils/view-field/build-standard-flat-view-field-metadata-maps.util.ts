@@ -62,6 +62,11 @@ import { computeCandidatePresentationViewFields } from 'src/engine/workspace-man
 import { computeClientFeedbackViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-client-feedback-view-fields.util';
 import { computeSearchStatusReportViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-search-status-report-view-fields.util';
 
+import { computeStandardCompensationExpectationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-compensation-expectation-view-fields.util';
+import { computeStandardOfferNegotiationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-offer-negotiation-view-fields.util';
+import { computeStandardPlacementViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-placement-view-fields.util';
+import { computeStandardGuaranteeCaseViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-guarantee-case-view-fields.util';
+
 import { computeStandardBoardCompositionProfileViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-composition-profile-view-fields.util';
 import { computeStandardBoardMatrixCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-matrix-criterion-view-fields.util';
 import { computeStandardCandidateBoardMatrixEvaluationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-candidate-board-matrix-evaluation-view-fields.util';

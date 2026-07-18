@@ -634,23 +634,14 @@ export const STANDARD_OBJECTS = {
       timelineActivities: {
         universalIdentifier: '20202020-0414-4daf-9c0d-64fe7b27f89f',
       },
-clientAccountProfiles: {
-        universalIdentifier: '20202020-d8ba-49a9-b6c1-8b9d5f11592d',
-      },
       clientStakeholderRoles: {
         universalIdentifier: '20202020-28b6-41b5-9a7d-102db20ed51b',
-clientStakeholderRoles: {
-        universalIdentifier: '0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d',
       },
       clientAccountProfiles: {
         universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0f01',
-searchEngagementTerms: {
-        universalIdentifier: '20e1c9dc-8348-4627-a414-430dc690beb3',
       },
       searchAssignments: {
         universalIdentifier: '3a87d9fc-4da9-4284-afd4-8f0719330b58',
-targetCompanies: {
-        universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f',
       },
       offLimitsRestrictions: {
         universalIdentifier: '20202020-b2c3-4d5e-9f0a-7b8c9d0e1f2a',
@@ -669,8 +660,6 @@ targetCompanies: {
       },
       targetOfRelationshipEdges: {
         universalIdentifier: '20202020-a7b8-4293-4e5f-2a3b4c5d6e7f',
-executiveProfiles: {
-        universalIdentifier: '9a928d73-a9fb-4f24-aff0-4b51a6dd69b3',
       },
     },
     indexes: {
@@ -1519,7 +1508,7 @@ executiveProfiles: {
         universalIdentifier: '20202020-30e2-421f-96c7-19c69d1cf631',
       },
       searchEngagementTerms: {
-universalIdentifier: '20202020-7a3e-4c9d-b2f8-1e5c6d7a8bb3',
+        universalIdentifier: '20202020-7a3e-4c9d-b2f8-1e5c6d7a8bb3',
       },
       // BD-specific fields
       searchType: {
@@ -1539,7 +1528,6 @@ universalIdentifier: '20202020-7a3e-4c9d-b2f8-1e5c6d7a8bb3',
       },
       decisionCriteria: {
         universalIdentifier: '20202020-0106-4106-8106-010101010006',
-universalIdentifier: '9a210eaa-18a7-4cf5-9e22-be2aabd832c0',
       },
       searchAssignments: {
         universalIdentifier: '41e656f3-0efe-45a1-a2ba-b704e209acce',
@@ -1727,14 +1715,8 @@ universalIdentifier: '9a210eaa-18a7-4cf5-9e22-be2aabd832c0',
       listMemberships: {
         universalIdentifier: '8b8d1be0-4c94-4413-a2c9-c7ede205a81d',
       },
-clientStakeholderRoles: {
-universalIdentifier: '20202020-b3cc-4d21-8f42-bb8c81c54432',
-      },
       billingContactForClientAccountProfiles: {
         universalIdentifier: '20202020-3d7e-4ea4-9d8d-a87e5e325040',
-universalIdentifier: '9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d',
-offLimitsRestrictions: {
-        universalIdentifier: '20202020-b8c9-4304-5f60-3b4c5d6e7f8a',
       },
       confidentialityRecords: {
         universalIdentifier: '20202020-c9d0-4415-6071-4c5d6e7f8a9b',
@@ -1750,8 +1732,6 @@ offLimitsRestrictions: {
       },
       researchCandidates: {
         universalIdentifier: '20202020-a3b4-4859-0415-8a9b0c1d2e3f',
-executiveProfile: {
-        universalIdentifier: '0a15ce88-115e-481e-97fe-35acd58ff542',
       },
       candidacies: {
         universalIdentifier: '20202020-c001-4859-0415-8a9b0c1d2e40',
@@ -2752,16 +2732,11 @@ executiveProfile: {
       numberFormat: {
         universalIdentifier: '20202020-7f40-4e7f-b126-11c0eda6b141',
       },
-ownedClientStakeholderRoles: {
-        universalIdentifier: 'd1e2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a',
-      },
       ownedSearchEngagementTerms: {
         universalIdentifier: '20202020-7a3e-4c9d-b2f8-1e5c6d7a8bc5',
       },
       ownedClientAccountProfiles: {
         universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0f02',
-ownedResearchStrategies: {
-        universalIdentifier: '20202020-b4c5-4960-1526-9b0c1d2e3f4a',
       },
       confidentialityRecords: {
         universalIdentifier: '20202020-c5d6-4071-2637-0c1d2e3f4a5b',
@@ -3439,9 +3414,6 @@ universalIdentifier: 'e09017b3-24e7-4357-b9fd-75c6a667e629',
       sourceUpdatedAt: {
         universalIdentifier: '383f2a5b-267b-44c2-bf50-b52bd3d49a83',
       },
-      sourceHash: {
-        universalIdentifier: 'c6333c35-7045-44a5-96d2-162ccc5e2699',
-      },
       lastInboundSyncAt: {
         universalIdentifier: '881db3ab-9dae-46e6-b1c8-3dc60f25c29e',
       },
@@ -3691,316 +3663,6 @@ universalIdentifier: 'e09017b3-24e7-4357-b9fd-75c6a667e629',
       },
     },
     indexes: {},
-  },
-clientAccountProfile: {
-    universalIdentifier: '20202020-2f8c-46f5-acde-795c5851b425',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        '20202020-2f8c-46f5-acde-795c5851b425',
-      ),
-      name: { universalIdentifier: '20202020-dc66-4b2c-8be2-a82b0894d421' },
-      clientAccountType: {
-        universalIdentifier: '20202020-9bf3-4c6c-9cd2-d45563d127c1',
-      },
-      clientOnboardingStatus: {
-        universalIdentifier: '20202020-d94a-4c97-81b9-79b0af118962',
-      },
-      clientSince: {
-        universalIdentifier: '20202020-1de0-4612-a28d-b49cd2bda741',
-      },
-      clientPaymentTerms: {
-        universalIdentifier: '20202020-ec7f-4f13-8454-47e27fa7512d',
-      },
-      clientNotes: {
-        universalIdentifier: '20202020-8c67-40a1-a429-55976fcdbbc5',
-      },
-      clientBillingContact: {
-        universalIdentifier: '20202020-c5b1-466a-8b6d-126e6ef9d306',
-      },
-      company: {
-        universalIdentifier: '20202020-ea4e-48ed-a8c0-ac44b61dcdbe',
-      },
-      clientStakeholderRoles: {
-        universalIdentifier: '20202020-6995-4a44-905c-5c42f138afe4',
-      },
-    },
-    indexes: {
-      companyIdUniqueIndex: {
-        universalIdentifier: '20202020-488a-49b5-97c7-d879c87f0bdd',
-      },
-      searchVectorGinIndex: {
-        universalIdentifier: '20202020-414e-41e0-b380-4a8e88a0d1c0',
-clientAccountProfile: {
-    universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        '20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f',
-      ),
-      name: { universalIdentifier: '20202020-0dfb-65f0-6c3f-47f3a8f2ef47' },
-      accountTier: {
-        universalIdentifier: '20202020-7ef3-b8f3-a4a1-4988a9571931',
-      },
-      accountStatus: {
-        universalIdentifier: '20202020-cae3-4163-09ab-4552b9fa6153',
-      },
-      relationshipOwner: {
-        universalIdentifier: '20202020-46e7-0dd5-54c0-4169929c8bde',
-      },
-      company: {
-        universalIdentifier: '20202020-48c9-1bd7-1928-4ed5be0b4452',
-      },
-      lifetimeRevenue: {
-        universalIdentifier: '20202020-352d-2675-5946-418ba8330dae',
-      },
-      annualRevenue: {
-        universalIdentifier: '20202020-0c5b-56a6-7d09-4aebb69d92cb',
-      },
-      totalEngagements: {
-        universalIdentifier: '20202020-a6e5-56bf-174e-480292dc1335',
-      },
-      lastEngagementDate: {
-        universalIdentifier: '20202020-1601-e2b7-61e1-480e8a91e7cb',
-      },
-      contractStatus: {
-        universalIdentifier: '20202020-2699-a9b8-4079-43738c7c674e',
-      },
-      satisfactionScore: {
-        universalIdentifier: '20202020-9f3e-83d0-15d1-4019ad04c0e8',
-      },
-      accountNotes: {
-        universalIdentifier: '20202020-66d6-8fd2-ee79-46d3b4add9f6',
-      },
-      taskTargets: {
-        universalIdentifier: '20202020-8081-28e1-d8ae-4e6a8268dc6f',
-      },
-      noteTargets: {
-        universalIdentifier: '20202020-a0ae-7592-3f81-4abbab3cceb0',
-      },
-      attachments: {
-        universalIdentifier: '20202020-b0f4-57bf-0172-410bb9f8cff8',
-      },
-      timelineActivities: {
-        universalIdentifier: '20202020-e6ee-7877-4b1e-4447a8f926ee',
-      },
-      owner: {
-        universalIdentifier: '20202020-6fad-88b9-1fc8-494fb96cf06d',
-      },
-    },
-    indexes: {
-      companyIdIndex: {
-        universalIdentifier: 'a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d',
-      },
-    },
-    views: {
-      allClientAccountProfiles: {
-universalIdentifier: '20202020-c84e-4bf5-826f-1737f3a3034d',
-        viewFields: {
-          name: {
-            universalIdentifier: '20202020-3f41-446f-b93c-de136c1844c7',
-          },
-          company: {
-            universalIdentifier: '20202020-0d83-4c4d-8aa7-0d37c4189b2f',
-          },
-          clientAccountType: {
-            universalIdentifier: '20202020-9a3c-475a-9b56-338312d0aa63',
-          },
-          clientOnboardingStatus: {
-            universalIdentifier: '20202020-47a3-4a49-aa63-3b3fdf6eb555',
-          },
-          clientSince: {
-            universalIdentifier: '20202020-5381-43b7-ba78-e333dd23dfc8',
-          },
-          createdAt: {
-            universalIdentifier: '20202020-e48d-481c-82df-7e5fecb776e8',
-universalIdentifier: 'b1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e',
-        viewFields: {
-          name: {
-            universalIdentifier: '20202020-78ed-7d51-8ba7-4127abddc8d7',
-          },
-          accountTier: {
-            universalIdentifier: '20202020-9bf9-116d-acd6-40a183ae5213',
-          },
-          accountStatus: {
-            universalIdentifier: '20202020-c949-652b-8f8a-467b954a8588',
-          },
-          company: {
-            universalIdentifier: '20202020-d754-7c7f-387e-430fbe57424f',
-          },
-        },
-      },
-      clientAccountProfileRecordPageFields: {
-universalIdentifier: '20202020-17fa-4ab3-9e6a-1d5ab59c3954',
-        viewFieldGroups: {
-          general: {
-            universalIdentifier: '20202020-bf6f-4357-9bee-e459c5f6c04d',
-          },
-          relations: {
-            universalIdentifier: '20202020-c708-4109-91e9-4324d3a36dd0',
-          },
-          system: {
-            universalIdentifier: '20202020-1bce-49f5-a0cd-2ec58e43d0a9',
-universalIdentifier: 'a2b3c4d5-e6f7-4a8b-9c0d-1e2f3a4b5c6d',
-        viewFieldGroups: {
-          general: {
-            universalIdentifier: '20202020-a4b7-805e-fc58-409c80821cd9',
-          },
-          system: {
-            universalIdentifier: '20202020-0129-06c0-3eff-4ace84d736c9',
-          },
-        },
-        viewFields: {
-          name: {
-universalIdentifier: '20202020-5054-4b57-b6e6-a80ed2dee5d6',
-          },
-          company: {
-            universalIdentifier: '20202020-ada5-4078-ad54-0e2e46d3c319',
-          },
-          clientAccountType: {
-            universalIdentifier: '20202020-848f-4c80-a06d-307bfcaa297c',
-          },
-          clientOnboardingStatus: {
-            universalIdentifier: '20202020-6c7d-415f-92c1-c35da8b1f504',
-          },
-          clientSince: {
-            universalIdentifier: '20202020-c06c-4344-86e9-3c07d46d19e6',
-          },
-          clientPaymentTerms: {
-            universalIdentifier: '20202020-b3a8-49fa-b489-130d918962c7',
-          },
-          clientBillingContact: {
-            universalIdentifier: '20202020-dae6-4a22-93d4-f109ea6ad6b7',
-          },
-          clientNotes: {
-            universalIdentifier: '20202020-f848-47e2-a062-b35eee975ee5',
-          },
-          createdAt: {
-            universalIdentifier: '20202020-9e62-43ea-9be3-b0a6a3ecd0fe',
-          },
-          updatedAt: {
-            universalIdentifier: '20202020-14e5-4368-a7dc-58e5c1c81d98',
-universalIdentifier: '20202020-9b60-56b8-e3f7-4f7688394d88',
-          },
-          accountTier: {
-            universalIdentifier: '20202020-6863-faa1-ca48-4a08b17e0128',
-          },
-          accountStatus: {
-            universalIdentifier: '20202020-d2a7-c344-67fb-4a9aa387a1aa',
-          },
-          relationshipOwner: {
-            universalIdentifier: '20202020-fe13-8eb3-08b4-4974aa860de0',
-          },
-          company: {
-            universalIdentifier: '20202020-99fc-da4a-01e0-4db6bc449ecb',
-          },
-          lifetimeRevenue: {
-            universalIdentifier: '20202020-4c28-df07-e702-4e51aab80ced',
-          },
-          annualRevenue: {
-            universalIdentifier: '20202020-817c-1ed6-24db-4b39bc50d0ac',
-          },
-          totalEngagements: {
-            universalIdentifier: '20202020-5729-0222-28aa-4d87a5159cd4',
-          },
-          lastEngagementDate: {
-            universalIdentifier: '20202020-26cd-6b4a-e884-4d4fa8e66e27',
-          },
-          contractStatus: {
-            universalIdentifier: '20202020-a974-fa74-37b2-4a84be27c3c4',
-          },
-          satisfactionScore: {
-            universalIdentifier: '20202020-9230-51c6-cbf6-4427bdfa4152',
-          },
-          accountNotes: {
-            universalIdentifier: '20202020-d314-e165-e505-4cf683ba93b6',
-          },
-          taskTargets: {
-            universalIdentifier: '20202020-7f1e-fff0-c0bc-4877b83de4a4',
-          },
-          noteTargets: {
-            universalIdentifier: '20202020-9268-9173-66ea-43778760828f',
-          },
-          attachments: {
-            universalIdentifier: '20202020-4ab8-d574-6bef-496687549641',
-          },
-          timelineActivities: {
-            universalIdentifier: '20202020-b64c-cfce-001e-4dcebaccb103',
-          },
-          owner: {
-            universalIdentifier: '20202020-1d42-f89a-09af-471faabf697a',
-          },
-          createdAt: {
-            universalIdentifier: '20202020-81e5-06a9-d8d9-406e9a7085e3',
-          },
-          createdBy: {
-            universalIdentifier: '20202020-9ff1-72d4-7250-49cc828be53f',
-          },
-          updatedAt: {
-            universalIdentifier: '20202020-feea-ddd8-021e-492aaea89d09',
-          },
-          updatedBy: {
-            universalIdentifier: '20202020-a9dc-fd22-0370-456f8a738470',
-          },
-        },
-      },
-    },
-  },
-marketMap: {
-    universalIdentifier: 'e8b87567-1e12-4434-b390-1962c05388d4',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        'e8b87567-1e12-4434-b390-1962c05388d4',
-      ),
-      researchStrategy: {
-        universalIdentifier: 'b0de3f15-75ec-4076-a08e-38144046c8aa',
-      },
-      name: {
-        universalIdentifier: '90a00844-c9ae-403a-a651-cf2e551079b0',
-      },
-      mapType: {
-        universalIdentifier: 'c6222a17-c761-4fbe-9125-b1a38363a189',
-      },
-      segment: {
-        universalIdentifier: 'ae2137af-ebe6-42f0-8427-e0c02104cadb',
-      },
-      geography: {
-        universalIdentifier: '24a03cea-acd2-48ef-b676-06b05b18aa33',
-      },
-      description: {
-        universalIdentifier: '78ef6a5c-1323-4ce7-8680-652a4c76adab',
-      },
-      targetCompanies: {
-        universalIdentifier: '22d881e0-ae4b-425a-a29d-fbd825f819b6',
-      },
-    },
-    indexes: {},
-    views: {
-      allMarketMaps: {
-        universalIdentifier: '3e764324-4c46-4b17-bce0-d8b462eb5b5b',
-        viewFields: {
-          researchStrategy: {
-            universalIdentifier: '1e890525-395c-4316-b10a-ff47fb18335e',
-          },
-          name: {
-            universalIdentifier: 'eb3639b0-98db-4f87-894e-14af7fccd7de',
-          },
-          mapType: {
-            universalIdentifier: '0534bce8-3fa1-4f92-9eb9-50d91eae8a1b',
-          },
-          segment: {
-            universalIdentifier: '2db4e932-2d20-4202-b60d-56a148e51698',
-          },
-          geography: {
-            universalIdentifier: 'bdde9806-462a-499e-b290-fab9c7ddf934',
-          },
-          description: {
-            universalIdentifier: '84c0eb83-203f-4746-97fd-7c4abee3fde4',
-          },
-          targetCompanies: {
-            universalIdentifier: '151f4ec3-af47-4cc2-b1cc-ff289f4e7f14',
-          },
-        },
-      },
-    },
   },
   researchCandidate: {
     universalIdentifier: '414f051b-9f66-474f-b12f-d4ce8be498d3',
@@ -4325,40 +3987,6 @@ marketMap: {
       },
     },
   },
-outboxEvent: {
-    universalIdentifier: '1ea65bc5-3b7c-49e7-8565-c7b2e005de3f',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        '1ea65bc5-3b7c-49e7-8565-c7b2e005de3f',
-      ),
-      aggregateType: {
-        universalIdentifier: 'd1cf6246-a4e3-4259-afe1-28307aa50139',
-      },
-      aggregateId: {
-        universalIdentifier: '631e1db7-68cd-48e4-bd9d-0119d476844a',
-      },
-      eventType: {
-        universalIdentifier: 'c3c6daf6-2acf-4c63-9fe2-d1f271538cb7',
-      },
-      payload: {
-        universalIdentifier: 'f61ab938-f79e-4130-ab71-3971f6b4149d',
-      },
-      status: {
-        universalIdentifier: '0b787f7b-ecc0-4f34-af03-61397b2cd64d',
-      },
-      publishedAt: {
-        universalIdentifier: '6b2a09fc-179a-48f1-a414-df2c54dd1168',
-      },
-      attempts: {
-        universalIdentifier: 'bdb2242f-18e7-4882-9484-4958e5c9ea10',
-      },
-    },
-    indexes: {
-      statusCreatedAtIndex: {
-        universalIdentifier: 'ec580f26-242f-49b0-b1ae-3ef01c9f50da',
-      },
-    },
-  },
   deadLetterRecord: {
     universalIdentifier: 'f6ee0fc1-463a-449a-a03b-1ebaf43244b4',
     fields: {
@@ -4451,51 +4079,6 @@ outboxEvent: {
       },
     },
     indexes: {},
-  },
-universalIdentifier: 'a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d',
-          },
-          roleType: {
-            universalIdentifier: 'b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e',
-          },
-          influenceLevel: {
-            universalIdentifier: 'c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f',
-          },
-          relationshipStrength: {
-            universalIdentifier: 'd6e7f8a9-b0c1-4d2e-3f4a-5b6c7d8e9f0a',
-          },
-          contactPreference: {
-            universalIdentifier: 'e7f8a9b0-c1d2-4e3f-4a5b-6c7d8e9f0a1b',
-          },
-          isPrimary: {
-            universalIdentifier: 'f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c',
-          },
-          contactNotes: {
-            universalIdentifier: 'a9b0c1d2-e3f4-4a5b-6c7d-8e9f0a1b2c3d',
-          },
-          stakeholder: {
-            universalIdentifier: 'b0c1d2e3-f4a5-4b6c-7d8e-9f0a1b2c3d4e',
-          },
-          company: {
-            universalIdentifier: 'c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f',
-          },
-          createdAt: {
-            universalIdentifier: 'd2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a',
-          },
-          createdBy: {
-            universalIdentifier: 'e3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b',
-          },
-          updatedAt: {
-            universalIdentifier: 'f4a5b6c7-d8e9-4f0a-1b2c-3d4e5f6a7b8c',
-          },
-          updatedBy: {
-            universalIdentifier: 'a5b6c7d8-e9f0-4a1b-2c3d-4e5f6a7b8c9d',
-          },
-          owner: {
-            universalIdentifier: 'b6c7d8e9-f0a1-4b2c-3d4e-5f6a7b8c9d0e',
-          },
-        },
-      },
-    },
   },
   searchEngagementTerms: {
     universalIdentifier: '20202020-7a3e-4c9d-b2f8-1e5c6d7a8b9c',
@@ -4662,73 +4245,6 @@ universalIdentifier: 'a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d',
           timelineActivities: {
             universalIdentifier: '9c5a0d4e-1f3a-4b7c-0d5e-8f9a0b1c2d3e',
           },
-        },
-      },
-    },
-  },
-  searchEngagementTerms: {
-    universalIdentifier: 'fecd6794-4baa-42ae-a4aa-8c30bce1f5de',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        'fecd6794-4baa-42ae-a4aa-8c30bce1f5de',
-      ),
-      name: { universalIdentifier: 'b7d730e3-b829-4651-bf31-e534dd2a3629' },
-      description: { universalIdentifier: '4ababa8b-774e-4d30-b628-cdaec5ce2e99' },
-      retainerFee: { universalIdentifier: 'd40f4c05-8a60-4865-89e3-c9c95db674c2' },
-      successFee: { universalIdentifier: 'd60366f8-c7ee-472a-b025-ba40ee35c2bc' },
-      totalFee: { universalIdentifier: 'e71ecd76-9f12-4e10-a7cc-79d72ec52d3d' },
-      exclusivityPeriod: { universalIdentifier: '01665e44-d79e-443e-9cbb-d75f49bb7006' },
-      paymentMilestones: { universalIdentifier: '70b731bc-85fe-451b-85e7-78f4790c53d8' },
-      status: { universalIdentifier: 'e7237ea3-606d-4f88-b218-4924bb28573c' },
-      approvedAt: { universalIdentifier: '27ecd4cb-9091-415c-afc9-11dedab1c492' },
-      clientCompany: { universalIdentifier: '1cf5ca13-963b-4792-ad90-85874d6cd705' },
-      clientCompanyId: { universalIdentifier: 'debc4f40-77c9-4045-88f5-d04ea4941ada' },
-      opportunity: { universalIdentifier: '8a54fa5b-9fd0-47ea-a58a-56993bc95471' },
-      opportunityId: { universalIdentifier: 'b464e456-f2a6-41b7-aa23-299439276bd9' },
-      approvedBy: { universalIdentifier: 'd9f06b91-c389-45c0-8b0c-800bd1928e17' },
-      approvedById: { universalIdentifier: '4aea1388-bf61-4b84-b630-7c9a4bd00366' },
-      searchAssignments: { universalIdentifier: 'fecd6794-1001-4baa-82ae-8c30bce10001' },
-    },
-    indexes: {
-      statusIndex: { universalIdentifier: '211dce05-b289-470f-ab96-6ccdf57de8e3' },
-      clientCompanyIdIndex: { universalIdentifier: '4c31b6d5-9067-4a1d-9489-efd21495ad9f' },
-      opportunityIdIndex: { universalIdentifier: '4c06422e-e177-4b46-a076-1b5685ac9036' },
-      approvedByIdIndex: { universalIdentifier: '1b856ba5-f5c6-4d80-9613-4ec26c083f07' },
-      searchVectorGinIndex: { universalIdentifier: 'c4f703d2-e7c6-4fa2-af3a-3142fcc89841' },
-    },
-    views: {
-      allSearchEngagementTerms: {
-        universalIdentifier: '29adee25-1839-4dd7-bcba-8c182fce5e92',
-        viewFields: {
-          name: { universalIdentifier: '29adee25-1001-4dd7-bcba-8c182fce5e01' },
-          status: { universalIdentifier: '29adee25-1002-4dd7-bcba-8c182fce5e02' },
-          retainerFee: { universalIdentifier: '29adee25-1003-4dd7-bcba-8c182fce5e03' },
-          clientCompany: { universalIdentifier: '29adee25-1004-4dd7-bcba-8c182fce5e04' },
-          opportunity: { universalIdentifier: '29adee25-1005-4dd7-bcba-8c182fce5e05' },
-          totalFee: { universalIdentifier: '29adee25-1006-4dd7-bcba-8c182fce5e06' },
-          createdAt: { universalIdentifier: '29adee25-1007-4dd7-bcba-8c182fce5e07' },
-        },
-      },
-      searchEngagementTermsRecordPageFields: {
-        universalIdentifier: 'df5bc01f-e666-4eb9-bf5d-0659bcb967d9',
-        viewFieldGroups: {
-          general: { universalIdentifier: 'df5bc01f-1001-4eb9-bf5d-0659bcb96700' },
-        },
-        viewFields: {
-          name: { universalIdentifier: 'df5bc01f-2001-4eb9-bf5d-0659bcb96701' },
-          status: { universalIdentifier: 'df5bc01f-2002-4eb9-bf5d-0659bcb96702' },
-          retainerFee: { universalIdentifier: 'df5bc01f-2003-4eb9-bf5d-0659bcb96703' },
-          successFee: { universalIdentifier: 'df5bc01f-2004-4eb9-bf5d-0659bcb96704' },
-          totalFee: { universalIdentifier: 'df5bc01f-2005-4eb9-bf5d-0659bcb96705' },
-          exclusivityPeriod: { universalIdentifier: 'df5bc01f-2006-4eb9-bf5d-0659bcb96706' },
-          paymentMilestones: { universalIdentifier: 'df5bc01f-2007-4eb9-bf5d-0659bcb96707' },
-          description: { universalIdentifier: 'df5bc01f-2008-4eb9-bf5d-0659bcb96708' },
-          approvedAt: { universalIdentifier: 'df5bc01f-2009-4eb9-bf5d-0659bcb96709' },
-          approvedBy: { universalIdentifier: 'df5bc01f-2010-4eb9-bf5d-0659bcb96710' },
-          clientCompany: { universalIdentifier: 'df5bc01f-2011-4eb9-bf5d-0659bcb96711' },
-          opportunity: { universalIdentifier: 'df5bc01f-2012-4eb9-bf5d-0659bcb96712' },
-          createdAt: { universalIdentifier: 'df5bc01f-2013-4eb9-bf5d-0659bcb96713' },
-          createdBy: { universalIdentifier: 'df5bc01f-2014-4eb9-bf5d-0659bcb96714' },
         },
       },
     },
@@ -5140,62 +4656,6 @@ universalIdentifier: 'a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d',
           },
           targetCompany: {
             universalIdentifier: 'cb8f3ed0-5791-4934-9059-12897315d656',
-          },
-        },
-      },
-    },
-  },
-  workspaceEventOutbox: {
-    universalIdentifier: 'c8e4b50a-fa4b-4c67-b0e2-8e6d9f1a3b2c',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        'c8e4b50a-fa4b-4c67-b0e2-8e6d9f1a3b2c',
-      ),
-      eventName: {
-        universalIdentifier: 'd7f5c61b-0b5c-4d78-a1f3-9f7e0a2b4c3d',
-      },
-      eventPayload: {
-        universalIdentifier: 'e8a6d72c-1c6d-4e89-b2f4-a0a8f1b3c5d4',
-      },
-      idempotencyKey: {
-        universalIdentifier: 'f9b7e83d-2d7e-4f9a-c3a5-b1b9a2c4d6e5',
-      },
-      status: {
-        universalIdentifier: 'a0c8f94e-3e8f-4a0b-d4b6-c2c0b3d5e7f6',
-      },
-      attemptCount: {
-        universalIdentifier: 'b1d9a05f-4f90-4b1c-e5c7-d3d1c4e6f8a7',
-      },
-      lastAttemptAt: {
-        universalIdentifier: 'c2e0b16a-50a1-4c2d-f6d8-e4e2d5f7a9b8',
-      },
-      nextAttemptAt: {
-        universalIdentifier: 'd3f1c27b-61b2-4d3e-a7e9-f5f3e6a8b0c9',
-      },
-      lastErrorMessage: {
-        universalIdentifier: 'e4a2d38c-72c3-4e4f-b8f0-a6a4f7b9c1d0',
-      },
-      deliveredAt: {
-        universalIdentifier: 'f5b3e49d-83d4-4f50-c9a1-b7b5a8c0d2e1',
-      },
-    },
-    indexes: {
-      statusIndex: {
-        universalIdentifier: 'b42e46cd-ea22-4b3d-b6ad-cd8e924f1a7c',
-      },
-    },
-    views: {
-      allWorkspaceEventOutboxes: {
-        universalIdentifier: 'c6d8f0a2-b3e4-4f5a-8c7d-9e1f2a3b4c5d',
-        viewFields: {
-          eventName: {
-            universalIdentifier: 'd7e9a1b3-c4f5-4a6b-9d8e-0f1a2b3c4d5e',
-          },
-          status: {
-            universalIdentifier: 'e8f0b2c4-d5a6-4b7c-0e9f-1a2b3c4d5e6f',
-          },
-          createdAt: {
-            universalIdentifier: 'f9a1c3d5-e6b7-4c8d-1f0a-2b3c4d5e6f7a',
           },
         },
       },

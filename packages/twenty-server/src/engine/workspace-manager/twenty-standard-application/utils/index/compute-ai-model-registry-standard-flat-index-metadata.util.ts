@@ -5,7 +5,7 @@ import {
   createStandardIndexFlatMetadata,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/create-standard-index-flat-metadata.util';
 
-export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
+export const buildAiModelRegistryStandardFlatIndexMetadatas = ({
   now,
   objectName,
   workspaceId,
@@ -13,10 +13,10 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
 }: Omit<
-  CreateStandardIndexArgs<'aiPromptTemplate'>,
+  CreateStandardIndexArgs<'aiModelRegistry'>,
   'context'
 >): Record<
-  AllStandardObjectIndexName<'aiPromptTemplate'>,
+  AllStandardObjectIndexName<'aiModelRegistry'>,
   FlatIndexMetadata
 > => ({
   searchVectorGinIndex: createStandardIndexFlatMetadata({
@@ -32,12 +32,12 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  promptKeyIndex: createStandardIndexFlatMetadata({
+  modelIdIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'promptKeyIndex',
-      relatedFieldNames: ['promptKey'],
+      indexName: 'modelIdIndex',
+      relatedFieldNames: ['modelId'],
       indexType: 'BTREE',
     },
     standardObjectMetadataRelatedEntityIds,
@@ -58,12 +58,12 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  versionIndex: createStandardIndexFlatMetadata({
+  providerNameIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'versionIndex',
-      relatedFieldNames: ['version'],
+      indexName: 'providerNameIndex',
+      relatedFieldNames: ['providerName'],
       indexType: 'BTREE',
     },
     standardObjectMetadataRelatedEntityIds,
@@ -71,12 +71,12 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  targetModelIdIndex: createStandardIndexFlatMetadata({
+  isCurrentIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'targetModelIdIndex',
-      relatedFieldNames: ['targetModelId'],
+      indexName: 'isCurrentIndex',
+      relatedFieldNames: ['isCurrent'],
       indexType: 'BTREE',
     },
     standardObjectMetadataRelatedEntityIds,

@@ -27,7 +27,7 @@ import { buildExternalSyncReconciliationStandardFlatFieldMetadatas } from 'src/e
 import { buildOutboxEventStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-outbox-event-standard-flat-field-metadata.util';
 import { buildDeadLetterRecordStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-dead-letter-record-standard-flat-field-metadata.util';
 import { buildReconciliationRunStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-reconciliation-run-standard-flat-field-metadata.util';
-import { buildReconciliationFindingStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-reconciliation-finding-standard-flat-field-metadata.util';,
+import { buildReconciliationFindingStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-reconciliation-finding-standard-flat-field-metadata.util';
 import { buildExecutiveArtifactStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-artifact-standard-flat-field-metadata.util';
 import { buildExecutiveAwardStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-award-standard-flat-field-metadata.util';
 import { buildExecutiveBoardServiceStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-board-service-standard-flat-field-metadata.util';
@@ -45,9 +45,7 @@ import { buildMarketMapStandardFlatFieldMetadatas } from 'src/engine/workspace-m
 import { buildRelationshipEdgeStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-relationship-edge-standard-flat-field-metadata.util';
 import { buildResearchCandidateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-research-candidate-standard-flat-field-metadata.util';
 import { buildResearchStrategyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-research-strategy-standard-flat-field-metadata.util';
-import { buildTargetCompanyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-target-company-standard-flat-field-metadata.util';,
-import { buildExecutiveProfileStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-profile-standard-flat-field-metadata.util';
-import { buildExternalEntityLinkStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-entity-link-standard-flat-field-metadata.util';
+import { buildTargetCompanyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-target-company-standard-flat-field-metadata.util';
 import { buildMessageCampaignStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-campaign-standard-flat-field-metadata.util';
 import { buildMessageListStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-list-standard-flat-field-metadata.util';
 import { buildMessageListMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-list-member-standard-flat-field-metadata.util';
@@ -67,12 +65,8 @@ import { buildWorkflowAutomatedTriggerStandardFlatFieldMetadatas } from 'src/eng
 import { buildWorkflowRunStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-run-standard-flat-field-metadata.util';
 import { buildWorkflowStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-standard-flat-field-metadata.util';
 import { buildWorkflowVersionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-version-standard-flat-field-metadata.util';
-import { buildClientAccountProfileStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-account-profile-standard-flat-field-metadata.util';
-import { buildClientStakeholderRoleStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-stakeholder-role-standard-flat-field-metadata.util';
-import { buildSearchEngagementTermsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-engagement-terms-standard-flat-field-metadata.util';,
-import { buildWorkspaceEventOutboxStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workspace-event-outbox-standard-flat-field-metadata.util';
-import { buildWorkspaceMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workspace-member-standard-flat-field-metadata.util';
 import { buildSearchEngagementTermsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-engagement-terms-standard-flat-field-metadata.util';
+import { buildWorkspaceEventOutboxStandardFlatFieldMetadatas }
 import { buildSearchAssignmentStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-assignment-standard-flat-field-metadata.util';
 import { buildAssignmentTeamMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-assignment-team-member-standard-flat-field-metadata.util';
 import { buildSearchMilestoneStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-milestone-standard-flat-field-metadata.util';

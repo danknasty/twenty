@@ -1,7 +1,5 @@
-import Ajv from 'ajv/dist/2020';
+import Ajv, { type ValidateFunction } from 'ajv/dist/2020';
 import addFormats from 'ajv-formats';
-
-import type { ValidateFunction } from 'ajv/dist/2020';
 
 import schema from 'src/engine/core-modules/executive-search/contracts/external-sync-event.schema.json';
 

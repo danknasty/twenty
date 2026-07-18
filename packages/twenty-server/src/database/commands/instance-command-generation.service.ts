@@ -115,7 +115,6 @@ export class InstanceCommandGenerationService {
   }): string {
     return `import { QueryRunner } from 'typeorm';
 
-import { RegisteredInstanceCommand } from 'src/engine/core-modules/upgrade/decorators/registered-instance-command.decorator';
 import { FastInstanceCommand } from 'src/engine/core-modules/upgrade/interfaces/fast-instance-command.interface';
 
 @RegisteredInstanceCommand('${version}', ${timestamp})
@@ -146,7 +145,6 @@ ${downStatements.join('\n')}
   }): string {
     return `import { DataSource, QueryRunner } from 'typeorm';
 
-import { RegisteredInstanceCommand } from 'src/engine/core-modules/upgrade/decorators/registered-instance-command.decorator';
 import { SlowInstanceCommand } from 'src/engine/core-modules/upgrade/interfaces/slow-instance-command.interface';
 
 @RegisteredInstanceCommand('${version}', ${timestamp}, { type: 'slow' })

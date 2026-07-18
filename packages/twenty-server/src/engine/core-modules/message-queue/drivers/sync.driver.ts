@@ -15,8 +15,7 @@ export class SyncDriver implements MessageQueueDriver {
   private workersMap: {
     [queueName: string]: (job: MessageQueueJob) => Promise<void> | void;
   } = {};
-private seenIdempotencyKeys: Set<string> = new Set();,
-private seenIdempotencyKeys = new Set<string>();
+  private seenIdempotencyKeys: Set<string> = new Set();
 
   constructor() {}
 
@@ -32,15 +31,7 @@ private seenIdempotencyKeys = new Set<string>();
         return;
       }
 
-      this.seenIdempotencyKeys.add(options.idempotencyKey);,
-const idempotencyKey = options?.idempotencyKey;
-
-    if (idempotencyKey) {
-      if (this.seenIdempotencyKeys.has(idempotencyKey)) {
-        return;
-      }
-
-      this.seenIdempotencyKeys.add(idempotencyKey);
+      this.seenIdempotencyKeys.add(options.idempotencyKey);
     }
 
     await this.processJob(queueName, { id: '', name: jobName, data });

@@ -25,7 +25,7 @@ import {
   computeStandardExecutiveLanguageViews,
   computeStandardExecutiveProfileViews,
   computeStandardExecutiveSearchPreferenceViews,
-} from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-executive-views.util';,
+} from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-executive-views.util';
 import { computeStandardExecutiveProfileViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-executive-profile-views.util';
 import { computeStandardExternalEntityLinkViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-external-entity-link-views.util';
 import { computeStandardMessageCampaignViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-message-campaign-views.util';

@@ -62,6 +62,12 @@ import { computeCandidatePresentationViewFields } from 'src/engine/workspace-man
 import { computeClientFeedbackViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-client-feedback-view-fields.util';
 import { computeSearchStatusReportViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-search-status-report-view-fields.util';
 
+import { computeStandardBoardCompositionProfileViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-composition-profile-view-fields.util';
+import { computeStandardBoardMatrixCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-matrix-criterion-view-fields.util';
+import { computeStandardCandidateBoardMatrixEvaluationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-candidate-board-matrix-evaluation-view-fields.util';
+import { computeStandardDirectorIndependenceReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-director-independence-review-view-fields.util';
+import { computeStandardBoardCommitmentReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-commitment-review-view-fields.util';
+
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldArgs<P>, 'context'>,
 ) => Record<string, FlatViewField>;
@@ -129,6 +135,16 @@ workspaceEventOutbox:
   clientFeedback: computeClientFeedbackViewFields,
   searchStatusReport: computeSearchStatusReportViewFields,
 
+boardCompositionProfile:
+    computeStandardBoardCompositionProfileViewFields,
+  boardMatrixCriterion:
+    computeStandardBoardMatrixCriterionViewFields,
+  candidateBoardMatrixEvaluation:
+    computeStandardCandidateBoardMatrixEvaluationViewFields,
+  directorIndependenceReview:
+    computeStandardDirectorIndependenceReviewViewFields,
+  boardCommitmentReview:
+    computeStandardBoardCommitmentReviewViewFields,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;
 };

@@ -987,4 +987,39 @@ universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0302',
       },
     },
   },
+  boardCompositionProfileRecordPage: {
+    universalIdentifier: 'f0a1b2c3-p001-4000-8001-f0a1b2c3p00001',
+    tabs: {
+      home: { universalIdentifier: 'f0a1b2c3-p011-4000-8001-f0a1b2c3p01001', widgets: { fields: { universalIdentifier: 'f0a1b2c3-p021-4000-8001-f0a1b2c3p02001' }, }, },
+      timeline: { universalIdentifier: 'f0a1b2c3-p012-4000-8001-f0a1b2c3p01002', widgets: { timeline: { universalIdentifier: 'f0a1b2c3-p022-4000-8001-f0a1b2c3p02002' }, }, },
+    },
+  },
+  boardMatrixCriterionRecordPage: {
+    universalIdentifier: 'f0a1b2c3-p002-4000-8002-f0a1b2c3p00002',
+    tabs: {
+      home: { universalIdentifier: 'f0a1b2c3-p013-4000-8002-f0a1b2c3p01003', widgets: { fields: { universalIdentifier: 'f0a1b2c3-p023-4000-8002-f0a1b2c3p02003' }, }, },
+      timeline: { universalIdentifier: 'f0a1b2c3-p014-4000-8002-f0a1b2c3p01004', widgets: { timeline: { universalIdentifier: 'f0a1b2c3-p024-4000-8002-f0a1b2c3p02004' }, }, },
+    },
+  },
+  candidateBoardMatrixEvaluationRecordPage: {
+    universalIdentifier: 'f0a1b2c3-p003-4000-8003-f0a1b2c3p00003',
+    tabs: {
+      home: { universalIdentifier: 'f0a1b2c3-p015-4000-8003-f0a1b2c3p01005', widgets: { fields: { universalIdentifier: 'f0a1b2c3-p025-4000-8003-f0a1b2c3p02005' }, }, },
+      timeline: { universalIdentifier: 'f0a1b2c3-p016-4000-8003-f0a1b2c3p01006', widgets: { timeline: { universalIdentifier: 'f0a1b2c3-p026-4000-8003-f0a1b2c3p02006' }, }, },
+    },
+  },
+  directorIndependenceReviewRecordPage: {
+    universalIdentifier: 'f0a1b2c3-p004-4000-8004-f0a1b2c3p00004',
+    tabs: {
+      home: { universalIdentifier: 'f0a1b2c3-p017-4000-8004-f0a1b2c3p01007', widgets: { fields: { universalIdentifier: 'f0a1b2c3-p027-4000-8004-f0a1b2c3p02007' }, }, },
+      timeline: { universalIdentifier: 'f0a1b2c3-p018-4000-8004-f0a1b2c3p01008', widgets: { timeline: { universalIdentifier: 'f0a1b2c3-p028-4000-8004-f0a1b2c3p02008' }, }, },
+    },
+  },
+  boardCommitmentReviewRecordPage: {
+    universalIdentifier: 'f0a1b2c3-p005-4000-8005-f0a1b2c3p00005',
+    tabs: {
+      home: { universalIdentifier: 'f0a1b2c3-p019-4000-8005-f0a1b2c3p01009', widgets: { fields: { universalIdentifier: 'f0a1b2c3-p029-4000-8005-f0a1b2c3p02009' }, }, },
+      timeline: { universalIdentifier: 'f0a1b2c3-p020-4000-8005-f0a1b2c3p01010', widgets: { timeline: { universalIdentifier: 'f0a1b2c3-p030-4000-8005-f0a1b2c3p02010' }, }, },
+    },
+  },
 };

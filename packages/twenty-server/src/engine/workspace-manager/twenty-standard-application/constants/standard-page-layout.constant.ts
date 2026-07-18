@@ -42,6 +42,12 @@ import { STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-mana
 import { STANDARD_GUARANTEE_CASE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-guarantee-case-page-layout.config';
 import { type StandardRecordPageLayouts } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-page-layout-config.type';
 
+import { STANDARD_BOARD_COMPOSITION_PROFILE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-board-composition-profile-page-layout.config';
+import { STANDARD_BOARD_MATRIX_CRITERION_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-board-matrix-criterion-page-layout.config';
+import { STANDARD_CANDIDATE_BOARD_MATRIX_EVALUATION_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-candidate-board-matrix-evaluation-page-layout.config';
+import { STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-director-independence-review-page-layout.config';
+import { STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-board-commitment-review-page-layout.config';
+
 export const STANDARD_PAGE_LAYOUTS = {
   myFirstDashboard: STANDARD_DASHBOARD_PAGE_LAYOUT_CONFIG,
   blocklistRecordPage: STANDARD_BLOCKLIST_PAGE_LAYOUT_CONFIG,
@@ -109,6 +115,16 @@ export const STANDARD_PAGE_LAYOUTS = {
     STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG,
   guaranteeCaseRecordPage:
     STANDARD_GUARANTEE_CASE_PAGE_LAYOUT_CONFIG,
+  boardCompositionProfileRecordPage:
+    STANDARD_BOARD_COMPOSITION_PROFILE_PAGE_LAYOUT_CONFIG,
+  boardMatrixCriterionRecordPage:
+    STANDARD_BOARD_MATRIX_CRITERION_PAGE_LAYOUT_CONFIG,
+  candidateBoardMatrixEvaluationRecordPage:
+    STANDARD_CANDIDATE_BOARD_MATRIX_EVALUATION_PAGE_LAYOUT_CONFIG,
+  directorIndependenceReviewRecordPage:
+    STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG,
+  boardCommitmentReviewRecordPage:
+    STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG,
 } as const;
 
 const { myFirstDashboard: _myFirstDashboard, ...recordPageLayouts } =

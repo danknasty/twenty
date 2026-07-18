@@ -92,6 +92,12 @@ import { buildCandidatePresentationStandardFlatFieldMetadatas } from 'src/engine
 import { buildClientFeedbackStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-feedback-standard-flat-field-metadata.util';
 import { buildSearchStatusReportStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-status-report-standard-flat-field-metadata.util';
 
+import { buildBoardCompositionProfileStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-composition-profile-standard-flat-field-metadata.util';
+import { buildBoardMatrixCriterionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-matrix-criterion-standard-flat-field-metadata.util';
+import { buildCandidateBoardMatrixEvaluationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-candidate-board-matrix-evaluation-standard-flat-field-metadata.util';
+import { buildDirectorIndependenceReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-director-independence-review-standard-flat-field-metadata.util';
+import { buildBoardCommitmentReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-commitment-review-standard-flat-field-metadata.util';
+
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardFieldArgs<P, FieldMetadataType>, 'context'>,
 ) => Record<string, FlatFieldMetadata>;
@@ -205,6 +211,16 @@ searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
   placement: buildPlacementStandardFlatFieldMetadatas,
   guaranteeCase: buildGuaranteeCaseStandardFlatFieldMetadatas,
 
+boardCompositionProfile:
+    buildBoardCompositionProfileStandardFlatFieldMetadatas,
+  boardMatrixCriterion:
+    buildBoardMatrixCriterionStandardFlatFieldMetadatas,
+  candidateBoardMatrixEvaluation:
+    buildCandidateBoardMatrixEvaluationStandardFlatFieldMetadatas,
+  directorIndependenceReview:
+    buildDirectorIndependenceReviewStandardFlatFieldMetadatas,
+  boardCommitmentReview:
+    buildBoardCommitmentReviewStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };

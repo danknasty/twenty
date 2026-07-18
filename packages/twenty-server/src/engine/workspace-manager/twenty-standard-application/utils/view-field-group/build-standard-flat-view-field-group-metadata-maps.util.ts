@@ -43,6 +43,12 @@ import { computeStandardCandidatePresentationViewFieldGroups } from 'src/engine/
 import { computeStandardClientFeedbackViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-client-feedback-view-field-groups.util';
 import { computeStandardSearchStatusReportViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-search-status-report-view-field-groups.util';
 
+import { computeStandardBoardCompositionProfileViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-board-composition-profile-view-field-groups.util';
+import { computeStandardBoardMatrixCriterionViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-board-matrix-criterion-view-field-groups.util';
+import { computeStandardCandidateBoardMatrixEvaluationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-candidate-board-matrix-evaluation-view-field-groups.util';
+import { computeStandardDirectorIndependenceReviewViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-director-independence-review-view-field-groups.util';
+import { computeStandardBoardCommitmentReviewViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-board-commitment-review-view-field-groups.util';
+
 
 type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldGroupArgs<P>, 'context'>,
@@ -90,6 +96,16 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
   offerNegotiation: computeStandardOfferNegotiationViewFieldGroups,
   placement: computeStandardPlacementViewFieldGroups,
   guaranteeCase: computeStandardGuaranteeCaseViewFieldGroups,
+boardCompositionProfile:
+    computeStandardBoardCompositionProfileViewFieldGroups,
+  boardMatrixCriterion:
+    computeStandardBoardMatrixCriterionViewFieldGroups,
+  candidateBoardMatrixEvaluation:
+    computeStandardCandidateBoardMatrixEvaluationViewFieldGroups,
+  directorIndependenceReview:
+    computeStandardDirectorIndependenceReviewViewFieldGroups,
+  boardCommitmentReview:
+    computeStandardBoardCommitmentReviewViewFieldGroups,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldGroupBuilder<P>;
 };

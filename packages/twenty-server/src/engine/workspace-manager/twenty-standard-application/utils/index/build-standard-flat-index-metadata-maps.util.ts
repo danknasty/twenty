@@ -68,6 +68,12 @@ import { buildCandidatePresentationStandardFlatIndexMetadatas } from 'src/engine
 import { buildClientFeedbackStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-feedback-standard-flat-index-metadata.util';
 import { buildSearchStatusReportStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-status-report-standard-flat-index-metadata.util';
 
+import { buildBoardCompositionProfileStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-composition-profile-standard-flat-index-metadata.util';
+import { buildBoardMatrixCriterionStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-matrix-criterion-standard-flat-index-metadata.util';
+import { buildCandidateBoardMatrixEvaluationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-candidate-board-matrix-evaluation-standard-flat-index-metadata.util';
+import { buildDirectorIndependenceReviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-director-independence-review-standard-flat-index-metadata.util';
+import { buildBoardCommitmentReviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-commitment-review-standard-flat-index-metadata.util';
+
 type StandardIndexBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardIndexArgs<P>, 'context'>,
 ) => Record<string, FlatIndexMetadata>;
@@ -148,6 +154,16 @@ workspaceEventOutbox:
   offerNegotiation: buildOfferNegotiationStandardFlatIndexMetadatas,
   placement: buildPlacementStandardFlatIndexMetadatas,
   guaranteeCase: buildGuaranteeCaseStandardFlatIndexMetadatas,
+boardCompositionProfile:
+    buildBoardCompositionProfileStandardFlatIndexMetadatas,
+  boardMatrixCriterion:
+    buildBoardMatrixCriterionStandardFlatIndexMetadatas,
+  candidateBoardMatrixEvaluation:
+    buildCandidateBoardMatrixEvaluationStandardFlatIndexMetadatas,
+  directorIndependenceReview:
+    buildDirectorIndependenceReviewStandardFlatIndexMetadatas,
+  boardCommitmentReview:
+    buildBoardCommitmentReviewStandardFlatIndexMetadatas,
 } satisfies {
   [P in AllStandardObjectName]?: StandardIndexBuilder<P>;
 };

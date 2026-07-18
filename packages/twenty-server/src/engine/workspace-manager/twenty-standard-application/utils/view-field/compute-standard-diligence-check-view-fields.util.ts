@@ -1,0 +1,12 @@
+import { type FlatViewField } from 'src/engine/metadata-modules/flat-view-field/types/flat-view-field.type';
+import { createStandardViewFieldFlatMetadata, type CreateStandardViewFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
+
+export const computeStandardDiligenceCheckViewFields = (args: Omit<CreateStandardViewFieldArgs<'diligenceCheck'>, 'context'>): Record<string, FlatViewField> => ({
+diligenceCheckRecordPageFieldsName: createStandardViewFieldFlatMetadata({...args,objectName:'diligenceCheck',context:{viewName:'diligenceCheckRecordPageFields',viewFieldName:'name',fieldName:'name',position:0,isVisible:true,size:200,viewFieldGroupName:'general'}}),
+diligenceCheckRecordPageFieldsDiligenceType: createStandardViewFieldFlatMetadata({...args,objectName:'diligenceCheck',context:{viewName:'diligenceCheckRecordPageFields',viewFieldName:'diligenceType',fieldName:'diligenceType',position:1,isVisible:true,size:150,viewFieldGroupName:'general'}}),
+diligenceCheckRecordPageFieldsStatus: createStandardViewFieldFlatMetadata({...args,objectName:'diligenceCheck',context:{viewName:'diligenceCheckRecordPageFields',viewFieldName:'status',fieldName:'status',position:2,isVisible:true,size:150,viewFieldGroupName:'general'}}),
+diligenceCheckRecordPageFieldsFindings: createStandardViewFieldFlatMetadata({...args,objectName:'diligenceCheck',context:{viewName:'diligenceCheckRecordPageFields',viewFieldName:'findings',fieldName:'findings',position:3,isVisible:true,size:200,viewFieldGroupName:'general'}}),
+diligenceCheckRecordPageFieldsSearchCandidacy: createStandardViewFieldFlatMetadata({...args,objectName:'diligenceCheck',context:{viewName:'diligenceCheckRecordPageFields',viewFieldName:'searchCandidacy',fieldName:'searchCandidacy',position:4,isVisible:true,size:150,viewFieldGroupName:'general'}}),
+diligenceCheckRecordPageFieldsCreatedAt: createStandardViewFieldFlatMetadata({...args,objectName:'diligenceCheck',context:{viewName:'diligenceCheckRecordPageFields',viewFieldName:'createdAt',fieldName:'createdAt',position:5,isVisible:true,size:150,viewFieldGroupName:'system'}}),
+diligenceCheckRecordPageFieldsCreatedBy: createStandardViewFieldFlatMetadata({...args,objectName:'diligenceCheck',context:{viewName:'diligenceCheckRecordPageFields',viewFieldName:'createdBy',fieldName:'createdBy',position:6,isVisible:true,size:150,viewFieldGroupName:'system'}}),
+});

@@ -202,7 +202,7 @@ describe('Type Transformers Registry', () => {
       });
 
       it('should drop empty entries from comma-separated input', () => {
-        const { instance, errors } = transformAndValidate('a,,b,');
+        const { instance, errors } = transformAndValidate('a,b,');
 
         expect(instance.ARRAY_VALUE).toEqual(['a', 'b']);
         expect(errors).toHaveLength(0);

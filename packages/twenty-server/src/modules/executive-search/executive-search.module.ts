@@ -36,7 +36,11 @@ import { RetentionActionService } from 'src/modules/executive-search/migration/s
 import { RetentionActionReconciliationEngine } from 'src/modules/executive-search/reconciliation/engines/retention-action-reconciliation.engine';
 import { RetentionActionLogWorkspaceEntity } from 'src/modules/executive-search/standard-objects/retention-action-log.workspace-entity';
 import { ExternalIdentityMatchQueueWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-identity-match-queue.workspace-entity';
+import { AmbiguousMatchQueueService } from 'src/modules/executive-search/migration/services/ambiguous-match-queue.service';
+import { BackfillService } from 'src/modules/executive-search/migration/services/backfill.service';
 import { CutoverService } from 'src/modules/executive-search/migration/services/cutover.service';
+import { RollbackService } from 'src/modules/executive-search/migration/services/rollback.service';
+import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migration/resolvers/ambiguous-match-queue.resolver';
 
 @Module({
   imports: [
@@ -77,13 +81,17 @@ import { CutoverService } from 'src/modules/executive-search/migration/services/
     ShadowSyncDriftReconciliationEngine,
     ExecutiveShadowSyncDriftCronCommand,
     IdentityMatchingService,
+    AmbiguousMatchQueueService,
+    BackfillService,
+    BackfillService,
     RetentionActionService,
     RetentionActionReconciliationEngine,
     CutoverService,
+    RollbackService,
+    AmbiguousMatchQueueResolver,
   ],
   exports: [
     ExecutiveSearchOutboxService,
-    ExecutiveSearchInboxService,
     ExecutiveSearchDLQService,
     ExecutiveSearchReplayService,
     ExecutiveSearchReconciliationService,
@@ -99,8 +107,11 @@ import { CutoverService } from 'src/modules/executive-search/migration/services/
     ReconciliationEngineRegistry,
     ShadowSyncDriftReconciliationEngine,
     IdentityMatchingService,
+    AmbiguousMatchQueueService,
+    BackfillService,
     RetentionActionService,
     CutoverService,
+    RollbackService,
   ],
 })
 export class ExecutiveSearchModule {}

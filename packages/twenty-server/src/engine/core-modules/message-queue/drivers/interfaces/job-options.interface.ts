@@ -1,5 +1,6 @@
 export interface QueueJobOptions {
   id?: string;
+  idempotencyKey?: string;
   priority?: number;
   retryLimit?: number;
   delay?: number;

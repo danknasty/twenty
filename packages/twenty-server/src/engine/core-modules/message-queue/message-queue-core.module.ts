@@ -55,6 +55,7 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
         bullMqDriverProvider,
         DeadLetterRedriveService,
         ...queueProviders,
+        DeadLetterRedriveService,
       ],
       exports: [
         ...(dynamicModule.exports ?? []),
@@ -109,6 +110,7 @@ export class MessageQueueCoreModule extends ConfigurableModuleClass {
         bullMqDriverProvider,
         DeadLetterRedriveService,
         ...queueProviders,
+        DeadLetterRedriveService,
       ],
       exports: [
         ...(dynamicModule.exports ?? []),

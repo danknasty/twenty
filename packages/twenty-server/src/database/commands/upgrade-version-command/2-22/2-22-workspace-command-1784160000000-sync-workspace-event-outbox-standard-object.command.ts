@@ -1,5 +1,7 @@
 import { Command } from 'nest-commander';
-import { STANDARD_OBJECTS } from 'twenty-shared/metadata';
+import {
+  STANDARD_OBJECTS,
+} from 'twenty-shared/metadata';
 
 import { ActiveOrSuspendedWorkspaceCommandRunner } from 'src/database/commands/command-runners/active-or-suspended-workspace.command-runner';
 import { WorkspaceIteratorService } from 'src/database/commands/command-runners/workspace-iterator.service';
@@ -16,49 +18,43 @@ import { WorkspaceCacheService } from 'src/engine/workspace-cache/services/works
 import { computeTwentyStandardApplicationAllFlatEntityMaps } from 'src/engine/workspace-manager/twenty-standard-application/utils/twenty-standard-application-all-flat-entity-maps.constant';
 import { WorkspaceMigrationValidateBuildAndRunService } from 'src/engine/workspace-manager/workspace-migration/services/workspace-migration-validate-build-and-run-service';
 
-const EXECUTIVE_OBJECT_NAMES = [
-  // Child executive objects (careerExperience, education, etc.) will be added
-  // in a follow-up phase once their standard-object definitions land.
-] as const satisfies (keyof typeof STANDARD_OBJECTS)[];
+const getUniversalIdentifiers = (
+  entitiesByName: Record<string, { universalIdentifier: string }>,
+): string[] =>
+  Object.values(entitiesByName).map((entity) => entity.universalIdentifier);
 
-const EXECUTIVE_OBJECTS = EXECUTIVE_OBJECT_NAMES.map(
-  (name) => STANDARD_OBJECTS[name],
-);
+const WORKSPACE_EVENT_OUTBOX_OBJECT_METADATA_UNIVERSAL_IDENTIFIERS = [
+  STANDARD_OBJECTS.workspaceEventOutbox.universalIdentifier,
+];
 
-const EXECUTIVE_OBJECT_UNIVERSAL_IDENTIFIERS = EXECUTIVE_OBJECTS.map(
-  (obj) => obj.universalIdentifier,
-);
+const WORKSPACE_EVENT_OUTBOX_FIELD_METADATA_UNIVERSAL_IDENTIFIERS =
+  getUniversalIdentifiers(STANDARD_OBJECTS.workspaceEventOutbox.fields);
 
-const EXECUTIVE_FIELD_UNIVERSAL_IDENTIFIERS = EXECUTIVE_OBJECTS.flatMap((obj) =>
-  Object.values(obj.fields).map((f) => f.universalIdentifier),
-);
+const WORKSPACE_EVENT_OUTBOX_INDEX_UNIVERSAL_IDENTIFIERS =
+  getUniversalIdentifiers(STANDARD_OBJECTS.workspaceEventOutbox.indexes);
 
-const EXECUTIVE_INDEX_UNIVERSAL_IDENTIFIERS = EXECUTIVE_OBJECTS.flatMap((obj) =>
-  Object.values(obj.indexes).map((i) => i.universalIdentifier),
-);
+const WORKSPACE_EVENT_OUTBOX_VIEW_UNIVERSAL_IDENTIFIERS = [
+  STANDARD_OBJECTS.workspaceEventOutbox.views.allWorkspaceEventOutboxes
+    .universalIdentifier,
+];
 
-const EXECUTIVE_VIEW_UNIVERSAL_IDENTIFIERS = EXECUTIVE_OBJECTS.flatMap((obj) =>
-  Object.values(obj.views).map((v) => v.universalIdentifier),
-);
+const WORKSPACE_EVENT_OUTBOX_VIEW_FIELD_UNIVERSAL_IDENTIFIERS =
+  getUniversalIdentifiers(
+    STANDARD_OBJECTS.workspaceEventOutbox.views.allWorkspaceEventOutboxes
+      .viewFields,
+  );
 
-const EXECUTIVE_VIEW_FIELD_UNIVERSAL_IDENTIFIERS = EXECUTIVE_OBJECTS.flatMap(
-  (obj) =>
-    Object.values(obj.views).flatMap((v) =>
-      Object.values(v.viewFields).map((vf) => vf.universalIdentifier),
-    ),
-);
-
-@RegisteredWorkspaceCommand('2.21.0', 1784144256272)
+@RegisteredWorkspaceCommand('2.22.0', 1784160000000)
 @Command({
-  name: 'upgrade:2-21:add-executive-profile-standard-objects',
+  name: 'upgrade:2-22:sync-workspace-event-outbox-standard-object',
   description:
-    'Add the 10 executive-profile standard objects (executiveProfile, executiveCareerExperience, executiveEducation, executiveBoardService, executiveCapability, executiveLanguage, executiveArtifact, executiveAward, executiveExternalProfile, executiveSearchPreference) to existing workspaces',
+    'Create the workspaceEventOutbox standard metadata in existing workspaces',
 })
-export class AddExecutiveProfileStandardObjectsCommand extends ActiveOrSuspendedWorkspaceCommandRunner {
+export class SyncWorkspaceEventOutboxStandardObjectCommand extends ActiveOrSuspendedWorkspaceCommandRunner {
   constructor(
     protected readonly workspaceIteratorService: WorkspaceIteratorService,
-    private readonly applicationService: ApplicationService,
     private readonly workspaceCacheService: WorkspaceCacheService,
+    private readonly applicationService: ApplicationService,
     private readonly workspaceMigrationValidateBuildAndRunService: WorkspaceMigrationValidateBuildAndRunService,
   ) {
     super(workspaceIteratorService);
@@ -69,10 +65,6 @@ export class AddExecutiveProfileStandardObjectsCommand extends ActiveOrSuspended
     options,
   }: RunOnWorkspaceArgs): Promise<void> {
     const isDryRun = options.dryRun ?? false;
-
-    this.logger.log(
-      `Checking executive-profile standard objects for workspace ${workspaceId}`,
-    );
 
     const {
       flatObjectMetadataMaps,
@@ -102,25 +94,16 @@ export class AddExecutiveProfileStandardObjectsCommand extends ActiveOrSuspended
         twentyStandardApplicationId: twentyStandardFlatApplication.id,
       });
 
-    const objectMetadataToCreate =
-      getStandardFlatEntitiesToCreateOrThrow<FlatObjectMetadata>({
-        standardFlatEntityMaps:
-          standardAllFlatEntityMaps.flatObjectMetadataMaps,
-        existingFlatEntityMaps: flatObjectMetadataMaps,
-        universalIdentifiers: EXECUTIVE_OBJECT_UNIVERSAL_IDENTIFIERS,
-      });
-
-    if (objectMetadataToCreate.length === 0) {
-      this.logger.log(
-        `Executive-profile standard objects already exist for workspace ${workspaceId}, skipping`,
-      );
-
-      return;
-    }
-
     const allFlatEntityOperationByMetadataName = {
       objectMetadata: {
-        flatEntityToCreate: objectMetadataToCreate,
+        flatEntityToCreate:
+          getStandardFlatEntitiesToCreateOrThrow<FlatObjectMetadata>({
+            standardFlatEntityMaps:
+              standardAllFlatEntityMaps.flatObjectMetadataMaps,
+            existingFlatEntityMaps: flatObjectMetadataMaps,
+            universalIdentifiers:
+              WORKSPACE_EVENT_OUTBOX_OBJECT_METADATA_UNIVERSAL_IDENTIFIERS,
+          }),
         flatEntityToDelete: [],
         flatEntityToUpdate: [],
       },
@@ -130,7 +113,8 @@ export class AddExecutiveProfileStandardObjectsCommand extends ActiveOrSuspended
             standardFlatEntityMaps:
               standardAllFlatEntityMaps.flatFieldMetadataMaps,
             existingFlatEntityMaps: flatFieldMetadataMaps,
-            universalIdentifiers: EXECUTIVE_FIELD_UNIVERSAL_IDENTIFIERS,
+            universalIdentifiers:
+              WORKSPACE_EVENT_OUTBOX_FIELD_METADATA_UNIVERSAL_IDENTIFIERS,
           }),
         flatEntityToDelete: [],
         flatEntityToUpdate: [],
@@ -140,18 +124,19 @@ export class AddExecutiveProfileStandardObjectsCommand extends ActiveOrSuspended
           getStandardFlatEntitiesToCreateOrThrow<FlatIndexMetadata>({
             standardFlatEntityMaps: standardAllFlatEntityMaps.flatIndexMaps,
             existingFlatEntityMaps: flatIndexMaps,
-            universalIdentifiers: EXECUTIVE_INDEX_UNIVERSAL_IDENTIFIERS,
+            universalIdentifiers:
+              WORKSPACE_EVENT_OUTBOX_INDEX_UNIVERSAL_IDENTIFIERS,
           }),
         flatEntityToDelete: [],
         flatEntityToUpdate: [],
       },
       view: {
-        flatEntityToCreate:
-          getStandardFlatEntitiesToCreateOrThrow<FlatView>({
-            standardFlatEntityMaps: standardAllFlatEntityMaps.flatViewMaps,
-            existingFlatEntityMaps: flatViewMaps,
-            universalIdentifiers: EXECUTIVE_VIEW_UNIVERSAL_IDENTIFIERS,
-          }),
+        flatEntityToCreate: getStandardFlatEntitiesToCreateOrThrow<FlatView>({
+          standardFlatEntityMaps: standardAllFlatEntityMaps.flatViewMaps,
+          existingFlatEntityMaps: flatViewMaps,
+          universalIdentifiers:
+            WORKSPACE_EVENT_OUTBOX_VIEW_UNIVERSAL_IDENTIFIERS,
+        }),
         flatEntityToDelete: [],
         flatEntityToUpdate: [],
       },
@@ -161,23 +146,24 @@ export class AddExecutiveProfileStandardObjectsCommand extends ActiveOrSuspended
             standardFlatEntityMaps:
               standardAllFlatEntityMaps.flatViewFieldMaps,
             existingFlatEntityMaps: flatViewFieldMaps,
-            universalIdentifiers: EXECUTIVE_VIEW_FIELD_UNIVERSAL_IDENTIFIERS,
+            universalIdentifiers:
+              WORKSPACE_EVENT_OUTBOX_VIEW_FIELD_UNIVERSAL_IDENTIFIERS,
           }),
         flatEntityToDelete: [],
         flatEntityToUpdate: [],
       },
     };
 
-    const totalCreateCount = Object.values(
+    const totalOperationCount = Object.values(
       allFlatEntityOperationByMetadataName,
     ).reduce(
       (total, operations) => total + operations.flatEntityToCreate.length,
       0,
     );
 
-    if (totalCreateCount === 0) {
+    if (totalOperationCount === 0) {
       this.logger.log(
-        `Executive-profile standard objects already fully exist for workspace ${workspaceId}, skipping`,
+        `workspaceEventOutbox standard metadata already exists for workspace ${workspaceId}, skipping`,
       );
 
       return;
@@ -185,7 +171,7 @@ export class AddExecutiveProfileStandardObjectsCommand extends ActiveOrSuspended
 
     if (isDryRun) {
       this.logger.log(
-        `[DRY RUN] Would create ${totalCreateCount} executive-profile standard metadata entities (${objectMetadataToCreate.length} objects, ${allFlatEntityOperationByMetadataName.fieldMetadata.flatEntityToCreate.length} fields, ${allFlatEntityOperationByMetadataName.index.flatEntityToCreate.length} indexes, ${allFlatEntityOperationByMetadataName.view.flatEntityToCreate.length} views, ${allFlatEntityOperationByMetadataName.viewField.flatEntityToCreate.length} view fields) for workspace ${workspaceId}`,
+        `[DRY RUN] Would apply ${totalOperationCount} workspaceEventOutbox standard metadata operations for workspace ${workspaceId}`,
       );
 
       return;
@@ -203,17 +189,17 @@ export class AddExecutiveProfileStandardObjectsCommand extends ActiveOrSuspended
       );
 
     if (validateAndBuildResult.status === 'fail') {
-      this.logger.error(
-        `Failed to create executive-profile standard objects:\n${JSON.stringify(validateAndBuildResult, null, 2)}`,
-      );
-
       throw new Error(
-        `Failed to create executive-profile standard objects for workspace ${workspaceId}`,
+        `Failed to create workspaceEventOutbox standard objects for workspace ${workspaceId}: ${JSON.stringify(
+          validateAndBuildResult,
+          null,
+          2,
+        )}`,
       );
     }
 
     this.logger.log(
-      `Successfully created ${totalCreateCount} executive-profile standard metadata entities for workspace ${workspaceId}`,
+      `Applied ${totalOperationCount} workspaceEventOutbox standard metadata operations for workspace ${workspaceId}`,
     );
   }
 }

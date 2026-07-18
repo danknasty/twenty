@@ -5504,6 +5504,62 @@ universalIdentifier: '5448ee99-d539-47f8-a6cd-4ccb56c910ca',
       },
     },
   },
+  workspaceEventOutbox: {
+    universalIdentifier: 'c8e4b50a-fa4b-4c67-b0e2-8e6d9f1a3b2c',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'c8e4b50a-fa4b-4c67-b0e2-8e6d9f1a3b2c',
+      ),
+      eventName: {
+        universalIdentifier: 'd7f5c61b-0b5c-4d78-a1f3-9f7e0a2b4c3d',
+      },
+      eventPayload: {
+        universalIdentifier: 'e8a6d72c-1c6d-4e89-b2f4-a0a8f1b3c5d4',
+      },
+      idempotencyKey: {
+        universalIdentifier: 'f9b7e83d-2d7e-4f9a-c3a5-b1b9a2c4d6e5',
+      },
+      status: {
+        universalIdentifier: 'a0c8f94e-3e8f-4a0b-d4b6-c2c0b3d5e7f6',
+      },
+      attemptCount: {
+        universalIdentifier: 'b1d9a05f-4f90-4b1c-e5c7-d3d1c4e6f8a7',
+      },
+      lastAttemptAt: {
+        universalIdentifier: 'c2e0b16a-50a1-4c2d-f6d8-e4e2d5f7a9b8',
+      },
+      nextAttemptAt: {
+        universalIdentifier: 'd3f1c27b-61b2-4d3e-a7e9-f5f3e6a8b0c9',
+      },
+      lastErrorMessage: {
+        universalIdentifier: 'e4a2d38c-72c3-4e4f-b8f0-a6a4f7b9c1d0',
+      },
+      deliveredAt: {
+        universalIdentifier: 'f5b3e49d-83d4-4f50-c9a1-b7b5a8c0d2e1',
+      },
+    },
+    indexes: {
+      statusIndex: {
+        universalIdentifier: 'b42e46cd-ea22-4b3d-b6ad-cd8e924f1a7c',
+      },
+    },
+    views: {
+      allWorkspaceEventOutboxes: {
+        universalIdentifier: 'c6d8f0a2-b3e4-4f5a-8c7d-9e1f2a3b4c5d',
+        viewFields: {
+          eventName: {
+            universalIdentifier: 'd7e9a1b3-c4f5-4a6b-9d8e-0f1a2b3c4d5e',
+          },
+          status: {
+            universalIdentifier: 'e8f0b2c4-d5a6-4b7c-0e9f-1a2b3c4d5e6f',
+          },
+          createdAt: {
+            universalIdentifier: 'f9a1c3d5-e6b7-4c8d-1f0a-2b3c4d5e6f7a',
+          },
+        },
+      },
+    },
+  },
 } as const satisfies Record<
   string,
   {

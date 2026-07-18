@@ -550,6 +550,40 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
+  workspaceEventOutbox: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'workspaceEventOutbox'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'workspaceEventOutbox',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.workspaceEventOutbox.universalIdentifier,
+        nameSingular: 'workspaceEventOutbox',
+        namePlural: 'workspaceEventOutboxes',
+        labelSingular: i18nLabel(msg`Workspace Event Outbox`),
+        labelPlural: i18nLabel(msg`Workspace Event Outboxes`),
+        description: i18nLabel(
+          msg`Transactional outbox for workspace-scoped events`,
+        ),
+        icon: 'IconMailForward',
+        isSystem: true,
+        isAuditLogged: false,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'eventName',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
   externalSyncReconciliation: ({
     now,
     workspaceId,

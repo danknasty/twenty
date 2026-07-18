@@ -15,7 +15,8 @@ export class SyncDriver implements MessageQueueDriver {
   private workersMap: {
     [queueName: string]: (job: MessageQueueJob) => Promise<void> | void;
   } = {};
-  private seenIdempotencyKeys: Set<string> = new Set();
+private seenIdempotencyKeys: Set<string> = new Set();,
+private seenIdempotencyKeys = new Set<string>();
 
   constructor() {}
 
@@ -25,13 +26,21 @@ export class SyncDriver implements MessageQueueDriver {
     data: T,
     options?: QueueJobOptions,
   ): Promise<void> {
-    // Idempotency-key dedup: skip duplicate adds for the same key
+// Idempotency-key dedup: skip duplicate adds for the same key
     if (options?.idempotencyKey) {
       if (this.seenIdempotencyKeys.has(options.idempotencyKey)) {
         return;
       }
 
-      this.seenIdempotencyKeys.add(options.idempotencyKey);
+      this.seenIdempotencyKeys.add(options.idempotencyKey);,
+const idempotencyKey = options?.idempotencyKey;
+
+    if (idempotencyKey) {
+      if (this.seenIdempotencyKeys.has(idempotencyKey)) {
+        return;
+      }
+
+      this.seenIdempotencyKeys.add(idempotencyKey);
     }
 
     await this.processJob(queueName, { id: '', name: jobName, data });

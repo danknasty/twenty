@@ -11,6 +11,7 @@ import { buildCalendarChannelEventAssociationStandardFlatFieldMetadatas } from '
 import { buildCalendarEventParticipantStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-event-participant-standard-flat-field-metadata.util';
 import { buildCalendarEventStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-calendar-event-standard-flat-field-metadata.util';
 import { buildCallRecordingStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-call-recording-standard-flat-field-metadata.util';
+import { buildCandidacyStageEventStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-candidacy-stage-event-standard-flat-field-metadata.util';
 import { buildClientAccountProfileStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-account-profile-standard-flat-field-metadata.util';
 import { buildClientStakeholderRoleStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-stakeholder-role-standard-flat-field-metadata.util';
 import { buildCompanyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-standard-flat-field-metadata.util';
@@ -77,6 +78,7 @@ import { buildAssignmentTeamMemberStandardFlatFieldMetadatas } from 'src/engine/
 import { buildSearchMilestoneStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-milestone-standard-flat-field-metadata.util';
 import { buildPositionSpecificationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-position-specification-standard-flat-field-metadata.util';
 import { buildSearchCriterionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-criterion-standard-flat-field-metadata.util';
+import { buildSearchCandidacyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-candidacy-standard-flat-field-metadata.util';
 import { type CreateStandardFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
@@ -172,8 +174,10 @@ searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
   searchAssignment: buildSearchAssignmentStandardFlatFieldMetadatas,
   assignmentTeamMember: buildAssignmentTeamMemberStandardFlatFieldMetadatas,
   searchMilestone: buildSearchMilestoneStandardFlatFieldMetadatas,
+  candidacyStageEvent: buildCandidacyStageEventStandardFlatFieldMetadatas,
   positionSpecification: buildPositionSpecificationStandardFlatFieldMetadatas,
   searchCriterion: buildSearchCriterionStandardFlatFieldMetadatas,
+  searchCandidacy: buildSearchCandidacyStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };

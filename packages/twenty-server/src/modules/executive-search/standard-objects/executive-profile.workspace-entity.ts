@@ -13,6 +13,7 @@ import { type ExecutiveArtifactWorkspaceEntity } from 'src/modules/executive-sea
 import { type ExecutiveAwardWorkspaceEntity } from 'src/modules/executive-search/standard-objects/executive-award.workspace-entity';
 import { type ExecutiveExternalProfileWorkspaceEntity } from 'src/modules/executive-search/standard-objects/executive-external-profile.workspace-entity';
 import { type ExecutiveSearchPreferenceWorkspaceEntity } from 'src/modules/executive-search/standard-objects/executive-search-preference.workspace-entity';
+import { type SearchCandidacyWorkspaceEntity } from 'src/modules/executive-search/standard-objects/search-candidacy.workspace-entity';
 
 export class ExecutiveProfileWorkspaceEntity extends BaseWorkspaceEntity {
   headline: string | null;
@@ -34,4 +35,5 @@ export class ExecutiveProfileWorkspaceEntity extends BaseWorkspaceEntity {
   awards: EntityRelation<ExecutiveAwardWorkspaceEntity[]>;
   externalProfiles: EntityRelation<ExecutiveExternalProfileWorkspaceEntity[]>;
   searchPreferences: EntityRelation<ExecutiveSearchPreferenceWorkspaceEntity[]>;
+  candidacies: EntityRelation<SearchCandidacyWorkspaceEntity[]>;
 }

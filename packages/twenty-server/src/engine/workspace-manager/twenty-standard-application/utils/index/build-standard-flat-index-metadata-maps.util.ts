@@ -8,6 +8,7 @@ import { buildBlocklistStandardFlatIndexMetadatas } from 'src/engine/workspace-m
 import { buildCalendarChannelEventAssociationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-calendar-channel-event-association-standard-flat-index-metadata.util';
 import { buildCalendarEventParticipantStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-calendar-event-participant-standard-flat-index-metadata.util';
 import { buildCallRecordingStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-call-recording-standard-flat-index-metadata.util';
+import { buildCandidacyStageEventStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-candidacy-stage-event-standard-flat-index-metadata.util';
 import { buildClientAccountProfileStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-account-profile-standard-flat-index-metadata.util';
 import { buildClientStakeholderRoleStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-stakeholder-role-standard-flat-index-metadata.util';
 import { buildCompanyStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-company-standard-flat-index-metadata.util';
@@ -50,6 +51,7 @@ import { buildAssignmentTeamMemberStandardFlatIndexMetadatas } from 'src/engine/
 import { buildSearchMilestoneStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-milestone-standard-flat-index-metadata.util';
 import { buildPositionSpecificationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-position-specification-standard-flat-index-metadata.util';
 import { buildSearchCriterionStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-criterion-standard-flat-index-metadata.util';
+import { buildSearchCandidacyStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-candidacy-standard-flat-index-metadata.util';
 import { type CreateStandardIndexArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/create-standard-index-flat-metadata.util';
 
 type StandardIndexBuilder<P extends AllStandardObjectName> = (
@@ -113,8 +115,10 @@ workspaceEventOutbox:
   searchAssignment: buildSearchAssignmentStandardFlatIndexMetadatas,
   assignmentTeamMember: buildAssignmentTeamMemberStandardFlatIndexMetadatas,
   searchMilestone: buildSearchMilestoneStandardFlatIndexMetadatas,
+  candidacyStageEvent: buildCandidacyStageEventStandardFlatIndexMetadatas,
   positionSpecification: buildPositionSpecificationStandardFlatIndexMetadatas,
   searchCriterion: buildSearchCriterionStandardFlatIndexMetadatas,
+  searchCandidacy: buildSearchCandidacyStandardFlatIndexMetadatas,
 } satisfies {
   [P in AllStandardObjectName]?: StandardIndexBuilder<P>;
 };

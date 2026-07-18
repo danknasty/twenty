@@ -8,6 +8,7 @@ import { computeStandardCalendarChannelEventAssociationViewFieldGroups } from 's
 import { computeStandardCalendarEventViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-calendar-event-view-field-groups.util';
 import { computeStandardCalendarEventParticipantViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-calendar-event-participant-view-field-groups.util';
 import { computeStandardCallRecordingViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-call-recording-view-field-groups.util';
+import { computeStandardCandidacyStageEventViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-candidacy-stage-event-view-field-groups.util';
 import { computeStandardClientAccountProfileViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-client-account-profile-view-field-groups.util';
 import { computeStandardClientStakeholderRoleViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-client-stakeholder-role-view-field-groups.util';
 import { computeStandardCompanyViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-company-view-field-groups.util';
@@ -25,6 +26,7 @@ import { computeStandardWorkflowRunViewFieldGroups } from 'src/engine/workspace-
 import { computeStandardWorkspaceEventOutboxViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workspace-event-outbox-view-field-groups.util';
 import { computeStandardWorkflowVersionViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workflow-version-view-field-groups.util';
 import { computeStandardWorkspaceEventOutboxViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-workspace-event-outbox-view-field-groups.util';
+import { computeStandardSearchCandidacyViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-search-candidacy-view-field-groups.util';
 import { type CreateStandardViewFieldGroupArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
 
 type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
@@ -39,6 +41,7 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
   calendarEventParticipant:
     computeStandardCalendarEventParticipantViewFieldGroups,
   callRecording: computeStandardCallRecordingViewFieldGroups,
+  candidacyStageEvent: computeStandardCandidacyStageEventViewFieldGroups,
   clientAccountProfile: computeStandardClientAccountProfileViewFieldGroups,
   clientStakeholderRole: computeStandardClientStakeholderRoleViewFieldGroups,
   company: computeStandardCompanyViewFieldGroups,
@@ -60,6 +63,7 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
     computeStandardWorkspaceEventOutboxViewFieldGroups,
   workflowVersion: computeStandardWorkflowVersionViewFieldGroups,
   workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFieldGroups,
+  searchCandidacy: computeStandardSearchCandidacyViewFieldGroups,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldGroupBuilder<P>;
 };

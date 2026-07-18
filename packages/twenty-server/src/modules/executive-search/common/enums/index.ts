@@ -44,3 +44,12 @@ export { DirectorIndependenceReviewStatus } from './director-independence-review
 export { BoardCommitmentReviewStatus } from './board-commitment-review-status.enum';
 export { AiPromptCategory } from './ai-prompt-category.enum';
 export { AiResponseFormat } from './ai-response-format.enum';
+export { AnalyticsAggregationType } from './analytics-aggregation-type.enum';
+export { AnalyticsComputationStatus } from './analytics-computation-status.enum';
+export { AnalyticsDashboardAudience } from './analytics-dashboard-audience.enum';
+export { AnalyticsDashboardScope } from './analytics-dashboard-scope.enum';
+export { AnalyticsMetricCategory } from './analytics-metric-category.enum';
+export { AnalyticsMetricStatus } from './analytics-metric-status.enum';
+export { AnalyticsMetricValueType } from './analytics-metric-value-type.enum';
+export { AnalyticsRefreshFrequency } from './analytics-refresh-frequency.enum';
+export { AnalyticsTimeWindow } from './analytics-time-window.enum';

@@ -1022,7 +1022,7 @@ universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0302',
       timeline: { universalIdentifier: '03eac2cf-0623-450d-9d54-073bf4c49e94', widgets: { timeline: { universalIdentifier: 'fb1d2320-961d-4540-b991-a014d8b74c16' }, }, },
     },
   },
-  analyticsMetricRecordPage: {
+analyticsMetricRecordPage: {
     universalIdentifier: '21a31623-62c1-4c93-b987-95a057926824',
     tabs: {
       home: { universalIdentifier: '7ca58390-cac3-46cb-a77f-9ede750826c8', widgets: { fields: { universalIdentifier: 'a1501b70-2ad8-425f-94cd-4507041424df' }, }, },
@@ -1041,6 +1041,18 @@ universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0302',
     tabs: {
       home: { universalIdentifier: 'd4e5f6a7-1002-4000-9001-d4e5f6a7000002', widgets: { fields: { universalIdentifier: 'd4e5f6a7-1003-4000-9001-d4e5f6a7000003' }, }, },
       timeline: { universalIdentifier: 'd4e5f6a7-1004-4000-9001-d4e5f6a7000004', widgets: { timeline: { universalIdentifier: 'd4e5f6a7-1005-4000-9001-d4e5f6a7000005' }, }, },
+      home: { universalIdentifier: 'e38f4a6b-0001-4b7c-9d0e-000000000001', widgets: { fields: { universalIdentifier: 'f49a5b7c-0001-4c8d-0e1f-000000000001' }, }, },
+      home: { universalIdentifier: 'e38f4a6b-0002-4b7c-9d0e-000000000002', widgets: { fields: { universalIdentifier: 'f49a5b7c-0002-4c8d-0e1f-000000000002' }, }, },
+      home: { universalIdentifier: 'e38f4a6b-0003-4b7c-9d0e-000000000003', widgets: { fields: { universalIdentifier: 'f49a5b7c-0003-4c8d-0e1f-000000000003' }, }, },
+      timeline: { universalIdentifier: 'a50b6c8d-0001-4d9e-1f2a-000000000001', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0001-4e0f-2a3b-000000000001' }, }, },
+      timeline: { universalIdentifier: 'a50b6c8d-0002-4d9e-1f2a-000000000002', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0002-4e0f-2a3b-000000000002' }, }, },
+      timeline: { universalIdentifier: 'a50b6c8d-0003-4d9e-1f2a-000000000003', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0003-4e0f-2a3b-000000000003' }, }, },
+    universalIdentifier: 'd27e3f5a-0001-4a6b-8c9d-000000000001',
+    universalIdentifier: 'd27e3f5a-0002-4a6b-8c9d-000000000002',
+    universalIdentifier: 'd27e3f5a-0003-4a6b-8c9d-000000000003',
+  analyticsDashboardConfigRecordPage: {
+  analyticsMetricSnapshotRecordPage: {
+analyticsDomainMetricRecordPage: { 85e491f154 (feat(executive-search): Phase 14 — Analytics Semantic Layer (3 standard objects + live GraphQL resolver))
     },
   },
 };

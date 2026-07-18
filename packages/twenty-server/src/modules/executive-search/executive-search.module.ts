@@ -25,6 +25,8 @@ import { ConvertOpportunityToAssignmentService } from 'src/modules/executive-sea
 import { OffLimitsGuardService } from 'src/modules/executive-search/services/off-limits-guard.service';
 import { CandidacyStateTransitionService } from 'src/modules/executive-search/services/candidacy-state-transition.service';
 import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-search/resolvers/convert-opportunity-to-assignment.resolver';
+import { ComputeAnalyticsMetricResolver } from 'src/modules/executive-search/resolvers/compute-analytics-metric.resolver';
+import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/services/compute-analytics-metric.service';
 
 @Module({
   imports: [
@@ -56,6 +58,8 @@ import { ConvertOpportunityToAssignmentResolver } from 'src/modules/executive-se
     OffLimitsGuardService,
     CandidacyStateTransitionService,
     ConvertOpportunityToAssignmentResolver,
+    ComputeAnalyticsMetricResolver,
+    ComputeAnalyticsMetricService,
   ],
   exports: [
     ExecutiveSearchOutboxService,

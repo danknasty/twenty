@@ -1,0 +1,8 @@
+export enum AnalyticsMetricValueType {
+  NUMBER = 'NUMBER',
+  CURRENCY = 'CURRENCY',
+  PERCENTAGE = 'PERCENTAGE',
+  DURATION_DAYS = 'DURATION_DAYS',
+  COUNT = 'COUNT',
+  RATIO = 'RATIO',
+}

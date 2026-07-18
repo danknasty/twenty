@@ -1,0 +1,8 @@
+export enum AnalyticsDashboardScope {
+  FIRM_WIDE = 'FIRM_WIDE',
+  PRACTICE_GROUP = 'PRACTICE_GROUP',
+  TEAM = 'TEAM',
+  CLIENT = 'CLIENT',
+  ASSIGNMENT = 'ASSIGNMENT',
+  PERSONAL = 'PERSONAL',
+}

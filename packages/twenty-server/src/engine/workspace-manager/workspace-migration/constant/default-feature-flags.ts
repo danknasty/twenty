@@ -3,3 +3,18 @@ import { FeatureFlagKey } from 'twenty-shared/types';
 export const DEFAULT_FEATURE_FLAGS = [
   FeatureFlagKey.IS_REST_METADATA_API_NEW_FORMAT_DIRECT,
 ] as const satisfies FeatureFlagKey[];
+
+export const EXECUTIVE_SEARCH_DEFAULT_FEATURE_FLAGS: Partial<
+  Record<FeatureFlagKey, boolean>
+> = {
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_SYNC_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_DIRECTUS_INBOUND_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_DIRECTUS_OUTBOUND_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_CLIENT_PORTAL_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_AUTO_CLIENT_SHARING_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_AUTO_STAGE_CHANGES_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_RECORDING_ENABLED]: false,
+  [FeatureFlagKey.IS_EXECUTIVE_SEARCH_EXTERNAL_ENRICHMENT_ENABLED]: false,
+};

@@ -58,3 +58,10 @@ export { AnalyticsMetricStatus } from './analytics-metric-status.enum';
 export { AnalyticsMetricValueType } from './analytics-metric-value-type.enum';
 export { AnalyticsRefreshFrequency } from './analytics-refresh-frequency.enum';
 export { AnalyticsTimeWindow } from './analytics-time-window.enum';
+
+export { ModelRegistryStatus } from './model-registry-status.enum';
+export { PromptTemplateStatus } from './prompt-template-status.enum';
+export { ProviderCallStatus } from './provider-call-status.enum';
+export { AppAgentStatus } from './app-agent-status.enum';
+export { AppAgentCapability } from './app-agent-capability.enum';
+

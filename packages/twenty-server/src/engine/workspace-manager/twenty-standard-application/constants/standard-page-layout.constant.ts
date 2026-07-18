@@ -52,7 +52,11 @@ import { STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG } from 'src/engine/wor
 import { STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-external-identity-match-queue-page-layout.config';
 import { STANDARD_ANALYTICS_DOMAIN_METRIC_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-domain-metric-page-layout.config';
 import { STANDARD_ANALYTICS_METRIC_SNAPSHOT_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-metric-snapshot-page-layout.config';
-import { STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-dashboard-config-page-layout.config';
+import { STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-dashboard-config-page-layout.config';import { STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-model-registry-page-layout.config';
+import { STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-prompt-template-page-layout.config';
+import { STANDARD_AI_PROVIDER_CALL_LOG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-provider-call-log-page-layout.config';
+import { STANDARD_APP_AGENTS_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-app-agents-page-layout.config';
+
 export const STANDARD_PAGE_LAYOUTS = {
   myFirstDashboard: STANDARD_DASHBOARD_PAGE_LAYOUT_CONFIG,
   blocklistRecordPage: STANDARD_BLOCKLIST_PAGE_LAYOUT_CONFIG,
@@ -138,7 +142,14 @@ export const STANDARD_PAGE_LAYOUTS = {
     STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG,
   analyticsDomainMetricRecordPage: STANDARD_ANALYTICS_DOMAIN_METRIC_PAGE_LAYOUT_CONFIG,
   analyticsMetricSnapshotRecordPage: STANDARD_ANALYTICS_METRIC_SNAPSHOT_PAGE_LAYOUT_CONFIG,
-  analyticsDashboardConfigRecordPage: STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG,
+  analyticsDashboardConfigRecordPage: STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG,  aiModelRegistryRecordPage:
+    STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG,
+  aiPromptTemplateRecordPage:
+    STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG,
+  aiProviderCallLogRecordPage:
+    STANDARD_AI_PROVIDER_CALL_LOG_PAGE_LAYOUT_CONFIG,
+  appAgentsRecordPage:
+    STANDARD_APP_AGENTS_PAGE_LAYOUT_CONFIG,
 } as const;
 
 const { myFirstDashboard: _myFirstDashboard, ...recordPageLayouts } =

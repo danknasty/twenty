@@ -77,7 +77,10 @@ import { computeStandardExternalIdentityMatchQueueViewFields } from 'src/engine/
 import { computeStandardAnalyticsDomainMetricViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-domain-metric-view-fields.util';
 import { computeStandardAnalyticsMetricSnapshotViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-metric-snapshot-view-fields.util';
 import { computeStandardAnalyticsDashboardConfigViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-dashboard-config-view-fields.util';
-import { computeAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-ai-prompt-template-view-fields.util';
+import { computeAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-ai-prompt-template-view-fields.util';import { computeStandardAiModelRegistryViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-model-registry-view-fields.util';
+import { computeStandardAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-prompt-template-view-fields.util';
+import { computeStandardAiProviderCallLogViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-provider-call-log-view-fields.util';
+import { computeStandardAppAgentsViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-app-agents-view-fields.util';
 
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldArgs<P>, 'context'>,
@@ -162,7 +165,10 @@ retentionActionLog: computeStandardRetentionActionLogViewFields,
 analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFields,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViewFields,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFields,
-aiPromptTemplate: computeAiPromptTemplateViewFields,
+aiPromptTemplate: computeAiPromptTemplateViewFields,  aiModelRegistry: computeStandardAiModelRegistryViewFields,
+  aiPromptTemplate: computeStandardAiPromptTemplateViewFields,
+  aiProviderCallLog: computeStandardAiProviderCallLogViewFields,
+  appAgents: computeStandardAppAgentsViewFields,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;
 };

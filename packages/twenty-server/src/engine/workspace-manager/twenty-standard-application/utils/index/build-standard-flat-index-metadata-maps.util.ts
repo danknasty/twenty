@@ -83,7 +83,10 @@ import { buildExternalIdentityMatchQueueStandardFlatIndexMetadatas } from 'src/e
 import { buildAnalyticsDomainMetricStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-domain-metric-standard-flat-index-metadata.util';
 import { buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-metric-snapshot-standard-flat-index-metadata.util';
 import { buildAnalyticsDashboardConfigStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-dashboard-config-standard-flat-index-metadata.util';
+import { buildAiPromptTemplateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-prompt-template-standard-flat-index-metadata.util';import { buildAiModelRegistryStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-model-registry-standard-flat-index-metadata.util';
 import { buildAiPromptTemplateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-prompt-template-standard-flat-index-metadata.util';
+import { buildAiProviderCallLogStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-provider-call-log-standard-flat-index-metadata.util';
+import { buildAppAgentsStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-app-agents-standard-flat-index-metadata.util';
 
 type StandardIndexBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardIndexArgs<P>, 'context'>,
@@ -181,7 +184,10 @@ retentionActionLog: buildRetentionActionLogStandardFlatIndexMetadatas,
 analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatIndexMetadatas,
   analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas,
   analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatIndexMetadatas,
-aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,
+aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,  aiModelRegistry: buildAiModelRegistryStandardFlatIndexMetadatas,
+  aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,
+  aiProviderCallLog: buildAiProviderCallLogStandardFlatIndexMetadatas,
+  appAgents: buildAppAgentsStandardFlatIndexMetadatas,
 } satisfies {
   [P in AllStandardObjectName]?: StandardIndexBuilder<P>;
 };

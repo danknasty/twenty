@@ -55,4 +55,6 @@ export { STANDARD_CANDIDATE_BOARD_MATRIX_EVALUATION_PAGE_LAYOUT_CONFIG } from '.
 export { STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG } from './standard-director-independence-review-page-layout.config';
 export { STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG } from './standard-board-commitment-review-page-layout.config';
 export { STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG } from './standard-ai-prompt-template-page-layout.config';
+export { STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG } from './standard-external-identity-match-queue-page-layout.config';
+export { STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG } from './standard-retention-action-log-page-layout.config';
 

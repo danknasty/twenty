@@ -48,6 +48,8 @@ import { STANDARD_CANDIDATE_BOARD_MATRIX_EVALUATION_PAGE_LAYOUT_CONFIG } from 's
 import { STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-director-independence-review-page-layout.config';
 import { STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-board-commitment-review-page-layout.config';
 import { STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-prompt-template-page-layout.config';
+import { STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-retention-action-log-page-layout.config';
+import { STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-external-identity-match-queue-page-layout.config';
 export const STANDARD_PAGE_LAYOUTS = {
   myFirstDashboard: STANDARD_DASHBOARD_PAGE_LAYOUT_CONFIG,
   blocklistRecordPage: STANDARD_BLOCKLIST_PAGE_LAYOUT_CONFIG,
@@ -127,6 +129,10 @@ export const STANDARD_PAGE_LAYOUTS = {
     STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG,
   aiPromptTemplateRecordPage:
     STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG,
+  retentionActionLogRecordPage:
+    STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG,
+  externalIdentityMatchQueueRecordPage:
+    STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG,
 } as const;
 
 const { myFirstDashboard: _myFirstDashboard, ...recordPageLayouts } =

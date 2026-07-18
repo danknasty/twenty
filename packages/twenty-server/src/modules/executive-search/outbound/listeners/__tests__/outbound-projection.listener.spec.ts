@@ -6,6 +6,7 @@ import { FeatureFlagKey } from 'twenty-shared/types';
 import { WorkspaceEventBatch } from 'src/engine/workspace-event-emitter/types/workspace-event-batch.type';
 import { OutboundEventMapperService } from 'src/modules/executive-search/outbound/services/outbound-event-mapper.service';
 import { OutboundProjectionListener } from 'src/modules/executive-search/outbound/listeners/outbound-projection.listener';
+import { RetentionActionService } from 'src/modules/executive-search/migration/services/retention-action.service';
 import {
   ExecutiveSearchOutboxService,
   OutboxEventInput,
@@ -17,6 +18,7 @@ describe('OutboundProjectionListener', () => {
   let mockOutboxService: jest.Mocked<ExecutiveSearchOutboxService>;
   let mockMapper: jest.Mocked<OutboundEventMapperService>;
   let mockFeatureFlagService: jest.Mocked<FeatureFlagService>;
+  let mockRetentionActionService: jest.Mocked<RetentionActionService>;
   let mockLogger: jest.Mocked<Logger>;
 
   const workspaceId = 'workspace-1';
@@ -90,6 +92,12 @@ describe('OutboundProjectionListener', () => {
       upsertWorkspaceFeatureFlag: jest.fn(),
     } as unknown as jest.Mocked<FeatureFlagService>;
 
+    mockRetentionActionService = {
+      isUnderLegalHold: jest.fn().mockResolvedValue(false),
+      recordAndPropagate: jest.fn(),
+      reconcileAll: jest.fn(),
+    } as unknown as jest.Mocked<RetentionActionService>;
+
     mockLogger = {
       log: jest.fn(),
       error: jest.fn(),
@@ -102,6 +110,7 @@ describe('OutboundProjectionListener', () => {
       mockOutboxService,
       mockMapper,
       mockFeatureFlagService,
+      mockRetentionActionService,
     );
     (listener as any).logger = mockLogger;
   });
@@ -269,6 +278,56 @@ describe('OutboundProjectionListener', () => {
       expect(mockFeatureFlagService.isFeatureEnabled).toHaveBeenCalled();
       expect(mockMapper.mapCompanyEvent).not.toHaveBeenCalled();
       expect(mockOutboxService.enqueue).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('legal hold hold-check', () => {
+    it('should block outbound DELETE when the record is under legal hold', async () => {
+      mockRetentionActionService.isUnderLegalHold.mockResolvedValue(true);
+      const payload = buildPayload(DatabaseEventAction.DELETED);
+
+      await listener.handleCompanyDeleted(payload);
+
+      expect(mockRetentionActionService.isUnderLegalHold).toHaveBeenCalledWith(
+        workspaceId,
+        'company',
+        'rec-1',
+      );
+      expect(mockMapper.mapCompanyEvent).not.toHaveBeenCalled();
+      expect(mockOutboxService.enqueue).not.toHaveBeenCalled();
+    });
+
+    it('should block outbound DESTROY when the record is under legal hold', async () => {
+      mockRetentionActionService.isUnderLegalHold.mockResolvedValue(true);
+      const payload = buildPayload(DatabaseEventAction.DESTROYED);
+
+      await listener.handleCompanyDestroyed(payload);
+
+      expect(mockRetentionActionService.isUnderLegalHold).toHaveBeenCalledWith(
+        workspaceId,
+        'company',
+        'rec-1',
+      );
+      expect(mockOutboxService.enqueue).not.toHaveBeenCalled();
+    });
+
+    it('should NOT run the hold-check for CREATED events', async () => {
+      const payload = buildPayload(DatabaseEventAction.CREATED);
+
+      await listener.handleCompanyCreated(payload);
+
+      expect(mockRetentionActionService.isUnderLegalHold).not.toHaveBeenCalled();
+      expect(mockOutboxService.enqueue).toHaveBeenCalledTimes(1);
+    });
+
+    it('should proceed with DELETE when the record is NOT under legal hold', async () => {
+      mockRetentionActionService.isUnderLegalHold.mockResolvedValue(false);
+      const payload = buildPayload(DatabaseEventAction.DELETED);
+
+      await listener.handleCompanyDeleted(payload);
+
+      expect(mockRetentionActionService.isUnderLegalHold).toHaveBeenCalled();
+      expect(mockOutboxService.enqueue).toHaveBeenCalledTimes(1);
     });
   });
 });

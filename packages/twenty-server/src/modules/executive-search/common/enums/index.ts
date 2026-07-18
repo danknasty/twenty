@@ -44,3 +44,8 @@ export { DirectorIndependenceReviewStatus } from './director-independence-review
 export { BoardCommitmentReviewStatus } from './board-commitment-review-status.enum';
 export { AiPromptCategory } from './ai-prompt-category.enum';
 export { AiResponseFormat } from './ai-response-format.enum';
+export { CutoverStage } from './cutover-stage.enum';
+export { FieldOwnershipAuthority } from './field-ownership-authority.enum';
+export { IdentityMatchConfidence } from './identity-match-confidence.enum';
+export { IdentityMatchResolution } from './identity-match-resolution.enum';
+export { RetentionActionType } from './retention-action-type.enum';

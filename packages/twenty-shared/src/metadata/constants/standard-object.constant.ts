@@ -5186,7 +5186,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   criterionEvaluation: {
   universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000002',
   fields: {
@@ -5234,7 +5233,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   searchSlate: {
   universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000003',
   fields: {
@@ -5278,7 +5276,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   slateMembership: {
   universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
   fields: {
@@ -5321,7 +5318,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   candidatePresentation: {
   universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000005',
   fields: {
@@ -5374,7 +5370,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   clientFeedback: {
   universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000006',
   fields: {
@@ -5427,7 +5422,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   searchStatusReport: {
   universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000007',
   fields: {
@@ -5479,7 +5473,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
 slateMembership: {
     universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
     fields: {
@@ -6142,123 +6135,286 @@ slateMembership: {
       boardCommitmentReviewRecordPageFields: { universalIdentifier: 'f0a1b2c3-0815-4000-8005-f0a1b2c3080115', viewFields: {}, },
     },
   },
-  analyticsMetric: {
-    universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000001',
+retentionActionLog: {
+    universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7454',
     fields: {
       ...buildStandardObjectSystemFields(
-        'aeb1a014-0001-4000-8014-aeb1a0000001',
+        '32a08662-7e27-412f-bf64-07ddeaba7454',
       ),
-      name: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000101' },
-      description: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000102' },
-      metricType: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000103' },
-      sourceObjectName: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000104' },
-      aggregationField: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000105' },
-      filterDefinition: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000106' },
-      unit: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000107' },
-      isActive: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000108' },
-      position: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000109' },
-      dashboardId: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000110' },
+      actionType: {
+        universalIdentifier: '9f27e09f-fe5d-49f3-87e7-d48eef93bd4d',
+      },
+      initiatorSystem: {
+        universalIdentifier: 'a359fb73-12f8-4039-8e87-a1f17623eddc',
+      },
+      targetTwentyEntityName: {
+        universalIdentifier: 'da701a25-c6b4-418d-86f1-87f59012f73a',
+      },
+      targetTwentyRecordId: {
+        universalIdentifier: '0d4e0add-2cda-411f-af62-7da7e28978c0',
+      },
+      externalSystemName: {
+        universalIdentifier: '82e1324e-a14a-4131-b741-78ea240f738b',
+      },
+      externalRecordId: {
+        universalIdentifier: '75856ac1-0bfb-4964-9244-9465fa6f6f59',
+      },
+      scope: {
+        universalIdentifier: 'cabe74ee-a9ba-43e3-9b63-6ab696e09221',
+      },
+      legalHoldReference: {
+        universalIdentifier: 'c3108bfe-604f-4f77-a8d6-d7e4922773c2',
+      },
+      status: {
+        universalIdentifier: 'd7de42f9-67d4-44c0-b70f-713eaf4cbca6',
+      },
+      requestedAt: {
+        universalIdentifier: '89546fd1-ce49-4f32-b475-38245b316af0',
+      },
+      propagatedAt: {
+        universalIdentifier: '85fa9c90-dff4-4044-aa50-7b57fcbe3f6a',
+      },
+      actorId: {
+        universalIdentifier: 'cc9432d5-ca35-48c1-8518-efa06db01ac6',
+      },
+      sourceHash: {
+        universalIdentifier: 'bfec97df-a7f7-48a7-a61f-80fe187003ff',
+      },
     },
     indexes: {
-      dashboardIdIndex: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0001001' },
-      metricTypeIndex: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0001002' },
-      isActiveIndex: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0001003' },
+      targetEntityRecordIndex: {
+        universalIdentifier: 'dc89729b-c32d-4a5b-b80f-ab91150d223e',
+      },
+      statusIndex: {
+        universalIdentifier: '6cb825c8-cf0f-4973-b911-e9738b83e5a1',
+      },
+      initiatorSystemIndex: {
+        universalIdentifier: 'b522b03f-c4fe-4a19-ba0f-0685bcbe5a1e',
+      },
     },
     views: {
-      allAnalyticsMetrics: {
-        universalIdentifier: 'aeb1a014-0030-4000-8014-aeb1a0002001',
-        viewFieldGroups: {
-          general: { universalIdentifier: 'aeb1a014-0040-4000-8014-aeb1a0003001' },
-        },
+      allRetentionActionLogs: {
+        universalIdentifier: '0ea3831a-5012-4a9c-bbc3-62b91863eed4',
         viewFields: {
-          name: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004001' },
-          metricType: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004002' },
-          sourceObjectName: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004003' },
-          unit: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004004' },
-          isActive: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004005' },
-          position: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004006' },
-          createdAt: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004007' },
-          createdBy: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004008' },
+          actionType: {
+            universalIdentifier: '48c5d4b5-6115-4e1f-a12d-4295a70f036a',
+          },
+          initiatorSystem: {
+            universalIdentifier: 'c2d7a271-a5ff-4045-a073-b26f2e5290f8',
+          },
+          targetTwentyEntityName: {
+            universalIdentifier: '3e94d47d-796a-4f75-856e-827ae89902fc',
+          },
+          targetTwentyRecordId: {
+            universalIdentifier: '2e8d3802-59b6-4794-81c2-ca791c073446',
+          },
+          status: {
+            universalIdentifier: '6de070bd-f5b8-4456-82ee-b0f53d5afe4d',
+          },
+          requestedAt: {
+            universalIdentifier: '8e974ccf-df4e-45eb-a242-b2739bb4a0ab',
+          },
+          createdAt: {
+            universalIdentifier: '01b37e46-6a0d-4fa2-9d7c-79f79335f0d5',
+          },
         },
       },
-      analyticsMetricRecordPageFields: { universalIdentifier: 'aeb1a014-0031-4000-8014-aeb1a0002002', viewFields: {}, },
+      retentionActionLogRecordPageFields: {
+        universalIdentifier: '4b2f1337-64dd-42a4-93db-82944aeb2b4d',
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: 'd928ca13-341e-43d0-9aa8-1b73d4f777f8',
+          },
+          system: {
+            universalIdentifier: 'e1944afe-5e34-46bf-823a-2a8b8d33ae41',
+          },
+        },
+        viewFields: {
+          actionType: {
+            universalIdentifier: '9c490ea5-f724-47ce-80e1-3610d32b2cf1',
+          },
+          initiatorSystem: {
+            universalIdentifier: '175fa96a-4a1c-441e-a874-84cf33a125dc',
+          },
+          targetTwentyEntityName: {
+            universalIdentifier: '100ae8a8-5983-469b-a9eb-bccc19666d76',
+          },
+          targetTwentyRecordId: {
+            universalIdentifier: 'dc3b0c65-c3d7-46f3-93c8-95e4c219adb4',
+          },
+          externalSystemName: {
+            universalIdentifier: '53d1fee7-8f09-43d5-860e-57c5f5e88c0e',
+          },
+          externalRecordId: {
+            universalIdentifier: 'b5c97ed5-7a2e-4962-91cf-054e0ce5c3a1',
+          },
+          scope: {
+            universalIdentifier: '67dd0acb-6c87-44e8-80f6-c4321a54b310',
+          },
+          legalHoldReference: {
+            universalIdentifier: '32ee2833-5f4a-4608-9a59-0d9d5c6c2bd0',
+          },
+          status: {
+            universalIdentifier: '77973954-e5e2-4bf4-87bb-26cc49a26364',
+          },
+          requestedAt: {
+            universalIdentifier: '4311e047-1563-4538-b177-e9215133e630',
+          },
+          propagatedAt: {
+            universalIdentifier: '6e275be1-12e4-4010-8e05-e4b6ad923211',
+          },
+          actorId: {
+            universalIdentifier: '9f0c7639-2dd7-4a9d-b4ed-d11daf2273c8',
+          },
+          sourceHash: {
+            universalIdentifier: 'eb8b1905-0662-4f50-81f2-1c91b9645817',
+          },
+          createdAt: {
+            universalIdentifier: '3ae5015c-f25a-4efa-92f6-9b6cc074d69e',
+          },
+          createdBy: {
+            universalIdentifier: '86459605-b96e-4701-8f38-2faf63003b1b',
+          },
+        },
+      },
     },
   },
-  analyticsDashboard: {
-    universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000001',
+  externalIdentityMatchQueue: {
+    universalIdentifier: '5a9650dc-ab1e-436c-a4ea-3faaebb9e076',
     fields: {
       ...buildStandardObjectSystemFields(
-        'aeb1a014-0002-4000-8014-aeb1a0000001',
+        '5a9650dc-ab1e-436c-a4ea-3faaebb9e076',
       ),
-      name: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000101' },
-      description: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000102' },
-      layoutConfig: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000103' },
-      isDefault: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000104' },
-      position: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000105' },
-      metrics: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000106' },
+      externalSystemName: {
+        universalIdentifier: '34877783-e031-445e-b819-4bc2a902e872',
+      },
+      externalEntityName: {
+        universalIdentifier: 'c23bdea2-f8fe-4683-a653-0896deec516b',
+      },
+      externalRecordId: {
+        universalIdentifier: 'e402bd16-aff2-4368-a436-aab2b436356c',
+      },
+      externalNaturalKey: {
+        universalIdentifier: '55b340f1-55fc-4e30-8d81-302e834503c8',
+      },
+      matchedTwentyEntityName: {
+        universalIdentifier: 'c709f2c3-8ed6-427b-af4a-3647aff0f943',
+      },
+      matchConfidence: {
+        universalIdentifier: 'e7e1c02e-2acf-4647-ab78-68f527c10ec5',
+      },
+      candidateMatches: {
+        universalIdentifier: '33eaaaba-66fa-4a64-9e8c-1c1524e74980',
+      },
+      resolutionState: {
+        universalIdentifier: 'e1fc4b62-34e3-458a-ac6b-334e4a6469bc',
+      },
+      resolvedTwentyEntityName: {
+        universalIdentifier: 'aa4b4a87-ec26-44fb-9f2f-956865df3a58',
+      },
+      resolvedTwentyRecordId: {
+        universalIdentifier: '6dacd7aa-32f6-4ef7-a605-53f884db1a15',
+      },
+      resolvedAt: {
+        universalIdentifier: '9b393d92-6dcd-4c1a-b6dc-4a85507d124f',
+      },
+      resolvedById: {
+        universalIdentifier: '7bba054b-11c2-460d-9683-4f022281870f',
+      },
+      matchReasons: {
+        universalIdentifier: '83fc48ff-b4e5-49aa-946b-2e2f39428d17',
+      },
     },
     indexes: {
-      isDefaultIndex: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0002001' },
+      externalLookupIndex: {
+        universalIdentifier: '7d93e812-aa37-4a15-9338-254afc201e4a',
+      },
+      resolutionStateIndex: {
+        universalIdentifier: '2fe8eab9-fd9f-42ec-a302-396ced7f0cf5',
+      },
     },
     views: {
-      allAnalyticsDashboards: {
-        universalIdentifier: 'aeb1a014-0032-4000-8014-aeb1a0003001',
-        viewFieldGroups: {
-          general: { universalIdentifier: 'aeb1a014-0042-4000-8014-aeb1a0004001' },
-        },
+      allExternalIdentityMatchQueues: {
+        universalIdentifier: '6489495a-def8-4c14-a7dc-698179f977bf',
         viewFields: {
-          name: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005001' },
-          isDefault: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005002' },
-          position: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005003' },
-          createdAt: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005004' },
-          createdBy: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005005' },
+          externalSystemName: {
+            universalIdentifier: 'c499fbb0-01f3-49fd-9d13-fb115843ad5e',
+          },
+          externalEntityName: {
+            universalIdentifier: 'c2d9a175-2a27-4abf-8e2a-1a6ca53cf963',
+          },
+          externalRecordId: {
+            universalIdentifier: '68f4232b-efc1-4369-8859-fe347501db0e',
+          },
+          matchConfidence: {
+            universalIdentifier: '8e175a12-2842-488b-8363-a2a589b8fad6',
+          },
+          resolutionState: {
+            universalIdentifier: '11a2c828-a91c-47d6-abce-d63885649d65',
+          },
+          createdAt: {
+            universalIdentifier: 'b3e45c92-c5d8-493c-ba55-c13668726bdd',
+          },
         },
       },
-      analyticsDashboardRecordPageFields: { universalIdentifier: 'aeb1a014-0033-4000-8014-aeb1a0003002', viewFields: {}, },
-    },
-  },
-  aiPromptTemplate: {
-    universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000001',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        'c2d3e4f5-0001-4000-8015-c2d3e4f5000001',
-      ),
-      name: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000101' },
-      description: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000102' },
-      promptText: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000103' },
-      modelId: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000104' },
-      responseFormat: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000105' },
-      category: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000106' },
-      version: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000107' },
-      isActive: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000108' },
-      isApproved: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000109' },
-      position: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000110' },
-    },
-    indexes: {
-      categoryIndex: { universalIdentifier: 'c2d3e4f5-0002-4000-8015-c2d3e4f5001001' },
-      responseFormatIndex: { universalIdentifier: 'c2d3e4f5-0002-4000-8015-c2d3e4f5001002' },
-      isActiveIndex: { universalIdentifier: 'c2d3e4f5-0002-4000-8015-c2d3e4f5001003' },
-      isApprovedIndex: { universalIdentifier: 'c2d3e4f5-0002-4000-8015-c2d3e4f5001004' },
-    },
-    views: {
-      allAiPromptTemplates: {
-        universalIdentifier: 'c2d3e4f5-0030-4000-8015-c2d3e4f5002001',
+      externalIdentityMatchQueueRecordPageFields: {
+        universalIdentifier: '62d9a84b-669b-4441-9062-3ad7e7e43df9',
         viewFieldGroups: {
-          general: { universalIdentifier: 'c2d3e4f5-0040-4000-8015-c2d3e4f5003001' },
+          general: {
+            universalIdentifier: 'c93d5d96-eedd-4deb-bfee-127caaca30e3',
+          },
+          system: {
+            universalIdentifier: 'ffa938b5-c9bb-48e5-b1c7-7083a9873e75',
+          },
         },
         viewFields: {
-          name: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004001' },
-          category: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004002' },
-          responseFormat: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004003' },
-          modelId: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004004' },
-          version: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004005' },
-          isActive: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004006' },
-          isApproved: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004007' },
-          createdAt: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004008' },
-          createdBy: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004009' },
+          externalSystemName: {
+            universalIdentifier: '7a659343-ca9e-45fe-aa3e-156c1273f360',
+          },
+          externalEntityName: {
+            universalIdentifier: '932419b3-5f80-46e9-ac34-9f30c66e5089',
+          },
+          externalRecordId: {
+            universalIdentifier: '0a7f377d-956c-426d-83d7-62084c677ef1',
+          },
+          externalNaturalKey: {
+            universalIdentifier: 'b193b280-dfd4-4745-bc63-f6ef3c3fbb39',
+          },
+          matchedTwentyEntityName: {
+            universalIdentifier: 'a7159fee-3f68-4f3c-8969-5396eca2972d',
+          },
+          matchConfidence: {
+            universalIdentifier: 'e96b514f-bc8d-4b36-b037-8bf940791fa4',
+          },
+          candidateMatches: {
+            universalIdentifier: '2a40ab35-32f4-4c23-a2d6-ed886e3053aa',
+          },
+          resolutionState: {
+            universalIdentifier: 'a84331ba-f315-49b5-94f5-cd17517ca489',
+          },
+          resolvedTwentyEntityName: {
+            universalIdentifier: '51db5bf4-7224-4b71-8ff3-faa65883b6fe',
+          },
+          resolvedTwentyRecordId: {
+            universalIdentifier: '46e219ef-5f46-4ed7-9e0c-852efab90764',
+          },
+          resolvedAt: {
+            universalIdentifier: '690800fe-e3cb-4090-9c30-96fcd0dc8cc7',
+          },
+          resolvedById: {
+            universalIdentifier: 'eb48e693-fcfa-46e0-8505-1c26207bca8f',
+          },
+          matchReasons: {
+            universalIdentifier: '7952e1a6-3839-4111-84b4-0ba483ee3a0f',
+          },
+          createdAt: {
+            universalIdentifier: '42237d09-1890-4e0e-9dea-db6ba9e23880',
+          },
+          createdBy: {
+            universalIdentifier: 'ca04e96b-9745-49f2-b6a6-f16f9f9093fc',
+          },
         },
       },
-      aiPromptTemplateRecordPageFields: { universalIdentifier: 'c2d3e4f5-0031-4000-8015-c2d3e4f5002002', viewFields: {}, },
     },
   },
 } as const satisfies Record<

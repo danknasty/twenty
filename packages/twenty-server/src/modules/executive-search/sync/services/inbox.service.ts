@@ -24,6 +24,28 @@ export const INBOX_STATUS = {
   ECHO: 'ECHO',
 } as const;
 
+/** Inbox event suffix/type used by the shadow-sync (comparison-only) pipeline. */
+export const SHADOW_SYNC_EVENT_SUFFIX = '.shadow_sync';
+export const SHADOW_SYNC_EVENT_TYPE = 'shadow_sync';
+
+/** Result of attempting to apply a single inbox event. */
+export type InboxApplyResult = {
+  applied: boolean;
+  reason?: string;
+};
+
+/**
+ * Returns true when an inbox event is a `.shadow_sync` event.  These events are
+ * comparison-only — they feed the shadow-sync drift engine and are NEVER
+ * applied to domain data.
+ */
+export function isShadowSyncEvent(eventType: string): boolean {
+  return (
+    eventType === SHADOW_SYNC_EVENT_TYPE ||
+    eventType.endsWith(SHADOW_SYNC_EVENT_SUFFIX)
+  );
+}
+
 /**
  * Inbound event inbox with echo-loop prevention.
  *
@@ -165,5 +187,40 @@ export class ExecutiveSearchInboxService {
       },
       authContext,
     );
+  }
+
+  /**
+   * Apply a single inbox event to the domain.
+   *
+   * Shadow-sync (`.shadow_sync`) events are NEVER applied — they are
+   * comparison-only and are consumed by the shadow-sync drift reconciliation
+   * engine.  This guard short-circuits them unconditionally regardless of the
+   * `IS_EXECUTIVE_SEARCH_SHADOW_SYNC_ENABLED` flag state, because the flag
+   * controls whether the comparison *runs*, not whether these events are
+   * applied.  All other event types fall through to the normal apply path.
+   */
+  async apply(
+    workspaceId: string,
+    inbox: Pick<
+      ExternalSyncInboxWorkspaceEntity,
+      'id' | 'eventType' | 'entityName' | 'entityId'
+    >,
+  ): Promise<InboxApplyResult> {
+    if (isShadowSyncEvent(inbox.eventType)) {
+      this.logger.debug(
+        `Skipping shadow_sync event ${inbox.id} (${inbox.entityName}/${inbox.entityId}) — comparison-only, never applied`,
+      );
+
+      return {
+        applied: false,
+        reason:
+          'shadow_sync events are comparison-only and are never applied to domain data',
+      };
+    }
+
+    // Normal apply path.  No domain-mutating apply logic exists yet for the
+    // remaining event types; consumers may extend this method when inbound
+    // apply is introduced.
+    return { applied: true };
   }
 }

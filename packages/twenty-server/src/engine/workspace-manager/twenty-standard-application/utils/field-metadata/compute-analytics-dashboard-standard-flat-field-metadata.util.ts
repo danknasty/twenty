@@ -229,7 +229,7 @@ export const buildAnalyticsDashboardStandardFlatFieldMetadatas = ({
     workspaceId,
     context: {
       fieldName: 'layoutConfig',
-      type: FieldMetadataType.TEXT,
+      type: FieldMetadataType.RAW_JSON,
       label: i18nLabel(msg`Layout Config`),
       description: i18nLabel(msg`JSON configuration for the dashboard layout`),
       icon: 'IconLayout',
@@ -250,7 +250,7 @@ export const buildAnalyticsDashboardStandardFlatFieldMetadatas = ({
       label: i18nLabel(msg`Default`),
       description: i18nLabel(msg`Whether this is the default dashboard`),
       icon: 'IconStar',
-      isNullable: true,
+      isNullable: false,
       isUIEditable: true,
       defaultValue: false,
     },

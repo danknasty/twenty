@@ -315,7 +315,7 @@ export const buildAnalyticsMetricStandardFlatFieldMetadatas = ({
     workspaceId,
     context: {
       fieldName: 'filterDefinition',
-      type: FieldMetadataType.TEXT,
+      type: FieldMetadataType.RAW_JSON,
       label: i18nLabel(msg`Filter Definition`),
       description: i18nLabel(msg`Filter applied when computing the metric`),
       icon: 'IconFilter',
@@ -353,7 +353,7 @@ export const buildAnalyticsMetricStandardFlatFieldMetadatas = ({
       label: i18nLabel(msg`Active`),
       description: i18nLabel(msg`Whether this metric is active`),
       icon: 'IconCircleCheck',
-      isNullable: true,
+      isNullable: false,
       isUIEditable: true,
       defaultValue: true,
     },

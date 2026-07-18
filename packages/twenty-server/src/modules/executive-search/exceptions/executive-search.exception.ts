@@ -9,6 +9,7 @@ export enum ExecutiveSearchExceptionCode {
   CUTOVER_STAGE_REGRESSION = 'CUTOVER_STAGE_REGRESSION',
   /** Reverting to a stage that is not behind the current stage. */
   CUTOVER_INVALID_REVERT = 'CUTOVER_INVALID_REVERT',
+  METRIC_NOT_FOUND = 'METRIC_NOT_FOUND',
 }
 
 export class ExecutiveSearchException extends Error {

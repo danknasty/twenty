@@ -48,13 +48,16 @@ import { computeStandardBoardMatrixCriterionViewFieldGroups } from 'src/engine/w
 import { computeStandardCandidateBoardMatrixEvaluationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-candidate-board-matrix-evaluation-view-field-groups.util';
 import { computeStandardDirectorIndependenceReviewViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-director-independence-review-view-field-groups.util';
 import { computeStandardBoardCommitmentReviewViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-board-commitment-review-view-field-groups.util';
+import { computeStandardAnalyticsDomainMetricViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-domain-metric-view-field-groups.util';
+import { computeStandardAnalyticsMetricSnapshotViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-metric-snapshot-view-field-groups.util';
+import { computeStandardAnalyticsDashboardConfigViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-dashboard-config-view-field-groups.util';
 import { computeStandardAiPromptTemplateViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-ai-prompt-template-view-field-groups.util';
 import { computeStandardAnalyticsMetricViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-metric-view-field-groups.util';
 import { computeStandardAnalyticsDashboardViewFieldGroups }
 import { computeStandardRetentionActionLogViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-retention-action-log-view-field-groups.util';
 import { computeStandardExternalIdentityMatchQueueViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-external-identity-match-queue-view-field-groups.util';
 import { computeStandardRetentionActionLogViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-retention-action-log-view-field-groups.util';
-import { computeStandardExternalIdentityMatchQueueViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-external-identity-match-queue-view-field-groups.util'; from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-dashboard-view-field-groups.util';
+import { computeStandardExternalIdentityMatchQueueViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-external-identity-match-queue-view-field-groups.util'; from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-dashboard-view-field-groups.util';,
 
 
 type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
@@ -118,6 +121,10 @@ boardCompositionProfile:
   analyticsDashboard: computeStandardAnalyticsDashboardViewFieldGroups,
   retentionActionLog: computeStandardRetentionActionLogViewFieldGroups,
   externalIdentityMatchQueue: computeStandardExternalIdentityMatchQueueViewFieldGroups,
+analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFieldGroups,
+  analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViewFieldGroups,
+  analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFieldGroups,
+aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldGroupBuilder<P>;
 };

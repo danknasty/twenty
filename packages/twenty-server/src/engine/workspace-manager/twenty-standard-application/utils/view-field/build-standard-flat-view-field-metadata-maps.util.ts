@@ -72,9 +72,10 @@ import { computeStandardBoardMatrixCriterionViewFields } from 'src/engine/worksp
 import { computeStandardCandidateBoardMatrixEvaluationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-candidate-board-matrix-evaluation-view-fields.util';
 import { computeStandardDirectorIndependenceReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-director-independence-review-view-fields.util';
 import { computeStandardBoardCommitmentReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-commitment-review-view-fields.util';
+import { computeStandardAnalyticsDomainMetricViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-domain-metric-view-fields.util';
+import { computeStandardAnalyticsMetricSnapshotViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-metric-snapshot-view-fields.util';
+import { computeStandardAnalyticsDashboardConfigViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-dashboard-config-view-fields.util';
 import { computeAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-ai-prompt-template-view-fields.util';
-import { computeAnalyticsMetricViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-analytics-metric-view-fields.util';
-import { computeAnalyticsDashboardViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-analytics-dashboard-view-fields.util';
 
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldArgs<P>, 'context'>,
@@ -157,7 +158,11 @@ boardCompositionProfile:
   analyticsMetric: computeAnalyticsMetricViewFields,
   analyticsDashboard: computeAnalyticsDashboardViewFields,
   retentionActionLog: computeRetentionActionLogViewFields,
-  externalIdentityMatchQueue: computeExternalIdentityMatchQueueViewFields,
+  externalIdentityMatchQueue: computeExternalIdentityMatchQueueViewFields,,
+analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFields,
+  analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViewFields,
+  analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFields,
+aiPromptTemplate: computeAiPromptTemplateViewFields,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;
 };

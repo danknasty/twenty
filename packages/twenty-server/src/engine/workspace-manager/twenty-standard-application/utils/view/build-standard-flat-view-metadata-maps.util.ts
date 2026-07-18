@@ -94,6 +94,8 @@ import { computeStandardBoardMatrixCriterionViews } from 'src/engine/workspace-m
 import { computeStandardCandidateBoardMatrixEvaluationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-candidate-board-matrix-evaluation-views.util';
 import { computeStandardDirectorIndependenceReviewViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-director-independence-review-views.util';
 import { computeStandardBoardCommitmentReviewViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-commitment-review-views.util';
+import { computeAnalyticsMetricViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-analytics-metric-views.util';
+import { computeAnalyticsDashboardViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-analytics-dashboard-views.util';
 
 type StandardViewBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewArgs<P>, 'context'>,
@@ -189,6 +191,8 @@ boardCompositionProfile:
     computeStandardDirectorIndependenceReviewViews,
   boardCommitmentReview:
     computeStandardBoardCommitmentReviewViews,
+  analyticsMetric: computeAnalyticsMetricViews,
+  analyticsDashboard: computeAnalyticsDashboardViews,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewBuilder<P>;
 };

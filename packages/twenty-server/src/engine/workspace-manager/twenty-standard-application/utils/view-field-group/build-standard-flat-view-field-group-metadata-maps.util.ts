@@ -48,6 +48,8 @@ import { computeStandardBoardMatrixCriterionViewFieldGroups } from 'src/engine/w
 import { computeStandardCandidateBoardMatrixEvaluationViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-candidate-board-matrix-evaluation-view-field-groups.util';
 import { computeStandardDirectorIndependenceReviewViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-director-independence-review-view-field-groups.util';
 import { computeStandardBoardCommitmentReviewViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-board-commitment-review-view-field-groups.util';
+import { computeStandardAnalyticsMetricViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-metric-view-field-groups.util';
+import { computeStandardAnalyticsDashboardViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-dashboard-view-field-groups.util';
 
 
 type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
@@ -106,6 +108,8 @@ boardCompositionProfile:
     computeStandardDirectorIndependenceReviewViewFieldGroups,
   boardCommitmentReview:
     computeStandardBoardCommitmentReviewViewFieldGroups,
+  analyticsMetric: computeStandardAnalyticsMetricViewFieldGroups,
+  analyticsDashboard: computeStandardAnalyticsDashboardViewFieldGroups,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldGroupBuilder<P>;
 };

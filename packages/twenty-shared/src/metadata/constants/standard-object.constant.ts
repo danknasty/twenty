@@ -6142,6 +6142,81 @@ slateMembership: {
       boardCommitmentReviewRecordPageFields: { universalIdentifier: 'f0a1b2c3-0815-4000-8005-f0a1b2c3080115', viewFields: {}, },
     },
   },
+  analyticsMetric: {
+    universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a014-0001-4000-8014-aeb1a0000001',
+      ),
+      name: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000101' },
+      description: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000102' },
+      metricType: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000103' },
+      sourceObjectName: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000104' },
+      aggregationField: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000105' },
+      filterDefinition: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000106' },
+      unit: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000107' },
+      isActive: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000108' },
+      position: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000109' },
+      dashboardId: { universalIdentifier: 'aeb1a014-0001-4000-8014-aeb1a0000110' },
+    },
+    indexes: {
+      dashboardIdIndex: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0001001' },
+      metricTypeIndex: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0001002' },
+      isActiveIndex: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0001003' },
+    },
+    views: {
+      allAnalyticsMetrics: {
+        universalIdentifier: 'aeb1a014-0030-4000-8014-aeb1a0002001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a014-0040-4000-8014-aeb1a0003001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004001' },
+          metricType: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004002' },
+          sourceObjectName: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004003' },
+          unit: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004004' },
+          isActive: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004005' },
+          position: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004006' },
+          createdAt: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004007' },
+          createdBy: { universalIdentifier: 'aeb1a014-0050-4000-8014-aeb1a0004008' },
+        },
+      },
+      analyticsMetricRecordPageFields: { universalIdentifier: 'aeb1a014-0031-4000-8014-aeb1a0002002', viewFields: {}, },
+    },
+  },
+  analyticsDashboard: {
+    universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'aeb1a014-0002-4000-8014-aeb1a0000001',
+      ),
+      name: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000101' },
+      description: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000102' },
+      layoutConfig: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000103' },
+      isDefault: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000104' },
+      position: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000105' },
+      metrics: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0000106' },
+    },
+    indexes: {
+      isDefaultIndex: { universalIdentifier: 'aeb1a014-0002-4000-8014-aeb1a0002001' },
+    },
+    views: {
+      allAnalyticsDashboards: {
+        universalIdentifier: 'aeb1a014-0032-4000-8014-aeb1a0003001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'aeb1a014-0042-4000-8014-aeb1a0004001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005001' },
+          isDefault: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005002' },
+          position: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005003' },
+          createdAt: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005004' },
+          createdBy: { universalIdentifier: 'aeb1a014-0052-4000-8014-aeb1a0005005' },
+        },
+      },
+      analyticsDashboardRecordPageFields: { universalIdentifier: 'aeb1a014-0033-4000-8014-aeb1a0003002', viewFields: {}, },
+    },
+  },
 } as const satisfies Record<
   string,
   {

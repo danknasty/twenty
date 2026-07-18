@@ -62,4 +62,6 @@ marketMap: 'IconMap',
 externalEntityLink: 'IconLink',
   executiveProfile: 'IconUserCircle',
 workspaceEventOutbox: 'IconMailForward',
+  analyticsMetric: 'IconChartBar',
+  analyticsDashboard: 'IconLayoutDashboard',
 } as const;

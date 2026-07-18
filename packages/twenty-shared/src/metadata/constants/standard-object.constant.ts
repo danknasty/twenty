@@ -6217,6 +6217,50 @@ slateMembership: {
       analyticsDashboardRecordPageFields: { universalIdentifier: 'aeb1a014-0033-4000-8014-aeb1a0003002', viewFields: {}, },
     },
   },
+  aiPromptTemplate: {
+    universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        'c2d3e4f5-0001-4000-8015-c2d3e4f5000001',
+      ),
+      name: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000101' },
+      description: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000102' },
+      promptText: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000103' },
+      modelId: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000104' },
+      responseFormat: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000105' },
+      category: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000106' },
+      version: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000107' },
+      isActive: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000108' },
+      isApproved: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000109' },
+      position: { universalIdentifier: 'c2d3e4f5-0001-4000-8015-c2d3e4f5000110' },
+    },
+    indexes: {
+      categoryIndex: { universalIdentifier: 'c2d3e4f5-0002-4000-8015-c2d3e4f5001001' },
+      responseFormatIndex: { universalIdentifier: 'c2d3e4f5-0002-4000-8015-c2d3e4f5001002' },
+      isActiveIndex: { universalIdentifier: 'c2d3e4f5-0002-4000-8015-c2d3e4f5001003' },
+      isApprovedIndex: { universalIdentifier: 'c2d3e4f5-0002-4000-8015-c2d3e4f5001004' },
+    },
+    views: {
+      allAiPromptTemplates: {
+        universalIdentifier: 'c2d3e4f5-0030-4000-8015-c2d3e4f5002001',
+        viewFieldGroups: {
+          general: { universalIdentifier: 'c2d3e4f5-0040-4000-8015-c2d3e4f5003001' },
+        },
+        viewFields: {
+          name: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004001' },
+          category: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004002' },
+          responseFormat: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004003' },
+          modelId: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004004' },
+          version: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004005' },
+          isActive: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004006' },
+          isApproved: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004007' },
+          createdAt: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004008' },
+          createdBy: { universalIdentifier: 'c2d3e4f5-0050-4000-8015-c2d3e4f5004009' },
+        },
+      },
+      aiPromptTemplateRecordPageFields: { universalIdentifier: 'c2d3e4f5-0031-4000-8015-c2d3e4f5002002', viewFields: {}, },
+    },
+  },
 } as const satisfies Record<
   string,
   {

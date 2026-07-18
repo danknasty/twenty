@@ -2044,6 +2044,37 @@ CreateStandardObjectArgs<'targetCompany'>,
       twentyStandardApplicationId,
       now,
     }),
+  aiPromptTemplate: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'aiPromptTemplate'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'aiPromptTemplate',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.aiPromptTemplate.universalIdentifier,
+        nameSingular: 'aiPromptTemplate',
+        namePlural: 'aiPromptTemplates',
+        labelSingular: i18nLabel(msg`AI Prompt Template`),
+        labelPlural: i18nLabel(msg`AI Prompt Templates`),
+        description: i18nLabel(msg`An AI prompt template for governed model interactions`),
+        icon: 'IconMessage',
+        isSystem: true,
+        isUICreatable: false,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
 } satisfies {
   [P in AllStandardObjectName]: (
     args: Omit<CreateStandardObjectArgs<P>, 'context' | 'objectName'>,

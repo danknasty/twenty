@@ -41,6 +41,8 @@ import { BackfillService } from 'src/modules/executive-search/migration/services
 import { CutoverService } from 'src/modules/executive-search/migration/services/cutover.service';
 import { RollbackService } from 'src/modules/executive-search/migration/services/rollback.service';
 import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migration/resolvers/ambiguous-match-queue.resolver';
+import { ComputeAnalyticsMetricResolver } from 'src/modules/executive-search/resolvers/compute-analytics-metric.resolver';
+import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/services/compute-analytics-metric.service';
 
 @Module({
   imports: [
@@ -88,6 +90,8 @@ import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migrat
     CutoverService,
     RollbackService,
     AmbiguousMatchQueueResolver,
+    ComputeAnalyticsMetricResolver,
+    ComputeAnalyticsMetricService,
   ],
   exports: [
     ExecutiveSearchOutboxService,

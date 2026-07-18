@@ -80,6 +80,9 @@ import { buildDirectorIndependenceReviewStandardFlatIndexMetadatas } from 'src/e
 import { buildBoardCommitmentReviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-commitment-review-standard-flat-index-metadata.util';
 import { buildRetentionActionLogStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-retention-action-log-standard-flat-index-metadata.util';
 import { buildExternalIdentityMatchQueueStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-external-identity-match-queue-standard-flat-index-metadata.util';
+import { buildAnalyticsDomainMetricStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-domain-metric-standard-flat-index-metadata.util';
+import { buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-metric-snapshot-standard-flat-index-metadata.util';
+import { buildAnalyticsDashboardConfigStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-dashboard-config-standard-flat-index-metadata.util';
 import { buildAiPromptTemplateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-prompt-template-standard-flat-index-metadata.util';
 
 type StandardIndexBuilder<P extends AllStandardObjectName> = (
@@ -175,6 +178,9 @@ boardCompositionProfile:
 retentionActionLog: buildRetentionActionLogStandardFlatIndexMetadatas,
   externalIdentityMatchQueue:
     buildExternalIdentityMatchQueueStandardFlatIndexMetadatas,
+analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatIndexMetadatas,
+  analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas,
+  analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatIndexMetadatas,
 aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,
 } satisfies {
   [P in AllStandardObjectName]?: StandardIndexBuilder<P>;

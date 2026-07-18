@@ -57,4 +57,7 @@ export { STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG } from './standard-
 export { STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG } from './standard-ai-prompt-template-page-layout.config';
 export { STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG } from './standard-external-identity-match-queue-page-layout.config';
 export { STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG } from './standard-retention-action-log-page-layout.config';
+export { STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG } from './standard-analytics-dashboard-config-page-layout.config';
+export { STANDARD_ANALYTICS_DOMAIN_METRIC_PAGE_LAYOUT_CONFIG } from './standard-analytics-domain-metric-page-layout.config';
+export { STANDARD_ANALYTICS_METRIC_SNAPSHOT_PAGE_LAYOUT_CONFIG } from './standard-analytics-metric-snapshot-page-layout.config';
 

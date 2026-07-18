@@ -96,6 +96,9 @@ import { computeStandardDirectorIndependenceReviewViews } from 'src/engine/works
 import { computeStandardBoardCommitmentReviewViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-commitment-review-views.util';
 import { computeStandardRetentionActionLogViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-retention-action-log-views.util';
 import { computeStandardExternalIdentityMatchQueueViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-external-identity-match-queue-views.util';
+import { computeStandardAnalyticsDomainMetricViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-domain-metric-views.util';
+import { computeStandardAnalyticsMetricSnapshotViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-metric-snapshot-views.util';
+import { computeStandardAnalyticsDashboardConfigViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-dashboard-config-views.util';
 import { computeAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-ai-prompt-template-views.util';
 
 type StandardViewBuilder<P extends AllStandardObjectName> = (
@@ -195,6 +198,9 @@ boardCompositionProfile:
 retentionActionLog: computeStandardRetentionActionLogViews,
   externalIdentityMatchQueue:
     computeStandardExternalIdentityMatchQueueViews,
+analyticsDomainMetric: computeStandardAnalyticsDomainMetricViews,
+  analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViews,
+  analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViews,
 aiPromptTemplate: computeAiPromptTemplateViews,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewBuilder<P>;

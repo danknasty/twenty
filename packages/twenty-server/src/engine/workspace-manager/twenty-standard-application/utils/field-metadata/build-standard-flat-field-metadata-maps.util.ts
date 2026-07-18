@@ -104,6 +104,9 @@ import { buildDirectorIndependenceReviewStandardFlatFieldMetadatas } from 'src/e
 import { buildBoardCommitmentReviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-commitment-review-standard-flat-field-metadata.util';
 import { buildRetentionActionLogStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-retention-action-log-standard-flat-field-metadata.util';
 import { buildExternalIdentityMatchQueueStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-external-identity-match-queue-standard-flat-field-metadata.util';
+import { buildAnalyticsDomainMetricStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-domain-metric-standard-flat-field-metadata.util';
+import { buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-metric-snapshot-standard-flat-field-metadata.util';
+import { buildAnalyticsDashboardConfigStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-config-standard-flat-field-metadata.util';
 import { buildAiPromptTemplateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-prompt-template-standard-flat-field-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
@@ -232,6 +235,9 @@ boardCompositionProfile:
 retentionActionLog: buildRetentionActionLogStandardFlatFieldMetadatas,
   externalIdentityMatchQueue:
     buildExternalIdentityMatchQueueStandardFlatFieldMetadatas,
+analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatFieldMetadatas,
+  analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas,
+  analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatFieldMetadatas,
 aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;

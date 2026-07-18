@@ -5186,6 +5186,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
+  ,
   criterionEvaluation: {
   universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000002',
   fields: {
@@ -5233,6 +5234,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
+  ,
   searchSlate: {
   universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000003',
   fields: {
@@ -5276,6 +5278,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
+  ,
   slateMembership: {
   universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
   fields: {
@@ -5318,6 +5321,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
+  ,
   candidatePresentation: {
   universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000005',
   fields: {
@@ -5370,6 +5374,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
+  ,
   clientFeedback: {
   universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000006',
   fields: {
@@ -5422,6 +5427,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
+  ,
   searchStatusReport: {
   universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000007',
   fields: {
@@ -5473,6 +5479,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
+  ,
 slateMembership: {
     universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
     fields: {
@@ -6135,147 +6142,136 @@ slateMembership: {
       boardCommitmentReviewRecordPageFields: { universalIdentifier: 'f0a1b2c3-0815-4000-8005-f0a1b2c3080115', viewFields: {}, },
     },
   },
-retentionActionLog: {
-    universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7454',
+analyticsDomainMetric: {
+    universalIdentifier: 'aeb1a006-0001-4000-8001-000000000001',
     fields: {
-      ...buildStandardObjectSystemFields(
-        '32a08662-7e27-412f-bf64-07ddeaba7454',
-      ),
-      actionType: {
-        universalIdentifier: '9f27e09f-fe5d-49f3-87e7-d48eef93bd4d',
-      },
-      initiatorSystem: {
-        universalIdentifier: 'a359fb73-12f8-4039-8e87-a1f17623eddc',
-      },
-      targetTwentyEntityName: {
-        universalIdentifier: 'da701a25-c6b4-418d-86f1-87f59012f73a',
-      },
-      targetTwentyRecordId: {
-        universalIdentifier: '0d4e0add-2cda-411f-af62-7da7e28978c0',
-      },
-      externalSystemName: {
-        universalIdentifier: '82e1324e-a14a-4131-b741-78ea240f738b',
-      },
-      externalRecordId: {
-        universalIdentifier: '75856ac1-0bfb-4964-9244-9465fa6f6f59',
-      },
-      scope: {
-        universalIdentifier: 'cabe74ee-a9ba-43e3-9b63-6ab696e09221',
-      },
-      legalHoldReference: {
-        universalIdentifier: 'c3108bfe-604f-4f77-a8d6-d7e4922773c2',
-      },
-      status: {
-        universalIdentifier: 'd7de42f9-67d4-44c0-b70f-713eaf4cbca6',
-      },
-      requestedAt: {
-        universalIdentifier: '89546fd1-ce49-4f32-b475-38245b316af0',
-      },
-      propagatedAt: {
-        universalIdentifier: '85fa9c90-dff4-4044-aa50-7b57fcbe3f6a',
-      },
-      actorId: {
-        universalIdentifier: 'cc9432d5-ca35-48c1-8518-efa06db01ac6',
-      },
-      sourceHash: {
-        universalIdentifier: 'bfec97df-a7f7-48a7-a61f-80fe187003ff',
-      },
+      ...buildStandardObjectSystemFields('aeb1a006-0001-4000-8001-000000000001'),
+      name: { universalIdentifier: 'aeb1a006-0101-4000-8001-000000000101' },
+      code: { universalIdentifier: 'aeb1a006-0102-4000-8001-000000000102' },
+      description: { universalIdentifier: 'aeb1a006-0103-4000-8001-000000000103' },
+      category: { universalIdentifier: 'aeb1a006-0104-4000-8001-000000000104' },
+      aggregationType: { universalIdentifier: 'aeb1a006-0105-4000-8001-000000000105' },
+      valueType: { universalIdentifier: 'aeb1a006-0106-4000-8001-000000000106' },
+      timeWindow: { universalIdentifier: 'aeb1a006-0107-4000-8001-000000000107' },
+      sourceObject: { universalIdentifier: 'aeb1a006-0108-4000-8001-000000000108' },
+      computationDescription: { universalIdentifier: 'aeb1a006-0109-4000-8001-000000000109' },
+      unit: { universalIdentifier: 'aeb1a006-0110-4000-8001-000000000110' },
+      status: { universalIdentifier: 'aeb1a006-0111-4000-8001-000000000111' },
+      isConfidential: { universalIdentifier: 'aeb1a006-0112-4000-8001-000000000112' },
+      tags: { universalIdentifier: 'aeb1a006-0113-4000-8001-000000000113' },
+      ownerWorkspaceMemberId: { universalIdentifier: 'aeb1a006-0114-4000-8001-000000000114' },
+      ownerWorkspaceMember: { universalIdentifier: 'aeb1a006-0115-4000-8001-000000000115' },
+      snapshots: { universalIdentifier: 'aeb1a006-0116-4000-8001-000000000116' },
     },
     indexes: {
-      targetEntityRecordIndex: {
-        universalIdentifier: 'dc89729b-c32d-4a5b-b80f-ab91150d223e',
-      },
-      statusIndex: {
-        universalIdentifier: '6cb825c8-cf0f-4973-b911-e9738b83e5a1',
-      },
-      initiatorSystemIndex: {
-        universalIdentifier: 'b522b03f-c4fe-4a19-ba0f-0685bcbe5a1e',
-      },
+      searchVectorGinIndex: { universalIdentifier: 'aeb1a006-0901-4000-8001-000000000901' },
+      codeIndex: { universalIdentifier: 'aeb1a006-0902-4000-8001-000000000902' },
+      categoryIndex: { universalIdentifier: 'aeb1a006-0903-4000-8001-000000000903' },
+      statusIndex: { universalIdentifier: 'aeb1a006-0904-4000-8001-000000000904' },
     },
     views: {
-      allRetentionActionLogs: {
-        universalIdentifier: '0ea3831a-5012-4a9c-bbc3-62b91863eed4',
+      allAnalyticsDomainMetrics: {
+        universalIdentifier: 'aeb1a006-0801-4000-8001-000000000801',
         viewFields: {
-          actionType: {
-            universalIdentifier: '48c5d4b5-6115-4e1f-a12d-4295a70f036a',
-          },
-          initiatorSystem: {
-            universalIdentifier: 'c2d7a271-a5ff-4045-a073-b26f2e5290f8',
-          },
-          targetTwentyEntityName: {
-            universalIdentifier: '3e94d47d-796a-4f75-856e-827ae89902fc',
-          },
-          targetTwentyRecordId: {
-            universalIdentifier: '2e8d3802-59b6-4794-81c2-ca791c073446',
-          },
-          status: {
-            universalIdentifier: '6de070bd-f5b8-4456-82ee-b0f53d5afe4d',
-          },
-          requestedAt: {
-            universalIdentifier: '8e974ccf-df4e-45eb-a242-b2739bb4a0ab',
-          },
-          createdAt: {
-            universalIdentifier: '01b37e46-6a0d-4fa2-9d7c-79f79335f0d5',
-          },
+          name: { universalIdentifier: 'aeb1a006-0701-4000-8001-000000000701' },
+          code: { universalIdentifier: 'aeb1a006-0702-4000-8001-000000000702' },
+          category: { universalIdentifier: 'aeb1a006-0703-4000-8001-000000000703' },
         },
+        viewFieldGroups: { general: { universalIdentifier: 'aeb1a006-0803-4000-8001-000000000803' }, },
       },
-      retentionActionLogRecordPageFields: {
-        universalIdentifier: '4b2f1337-64dd-42a4-93db-82944aeb2b4d',
-        viewFieldGroups: {
-          general: {
-            universalIdentifier: 'd928ca13-341e-43d0-9aa8-1b73d4f777f8',
-          },
-          system: {
-            universalIdentifier: 'e1944afe-5e34-46bf-823a-2a8b8d33ae41',
-          },
-        },
+      analyticsDomainMetricRecordPageFields: {
+        universalIdentifier: 'aeb1a006-0802-4000-8001-000000000802',
+        viewFields: {},
+      },
+    },
+  },
+  analyticsMetricSnapshot: {
+    universalIdentifier: 'aeb1a006-0002-4000-8001-000000000002',
+    fields: {
+      ...buildStandardObjectSystemFields('aeb1a006-0002-4000-8001-000000000002'),
+      name: { universalIdentifier: 'aeb1a006-0201-4000-8001-000000000201' },
+      metricId: { universalIdentifier: 'aeb1a006-0202-4000-8001-000000000202' },
+      metric: { universalIdentifier: 'aeb1a006-0203-4000-8001-000000000203' },
+      periodStart: { universalIdentifier: 'aeb1a006-0204-4000-8001-000000000204' },
+      periodEnd: { universalIdentifier: 'aeb1a006-0205-4000-8001-000000000205' },
+      periodLabel: { universalIdentifier: 'aeb1a006-0206-4000-8001-000000000206' },
+      granularity: { universalIdentifier: 'aeb1a006-0207-4000-8001-000000000207' },
+      value: { universalIdentifier: 'aeb1a006-0208-4000-8001-000000000208' },
+      valueText: { universalIdentifier: 'aeb1a006-0209-4000-8001-000000000209' },
+      previousValue: { universalIdentifier: 'aeb1a006-0210-4000-8001-000000000210' },
+      delta: { universalIdentifier: 'aeb1a006-0211-4000-8001-000000000211' },
+      deltaPercent: { universalIdentifier: 'aeb1a006-0212-4000-8001-000000000212' },
+      targetValue: { universalIdentifier: 'aeb1a006-0213-4000-8001-000000000213' },
+      dimensions: { universalIdentifier: 'aeb1a006-0214-4000-8001-000000000214' },
+      sourceCount: { universalIdentifier: 'aeb1a006-0215-4000-8001-000000000215' },
+      computedAt: { universalIdentifier: 'aeb1a006-0216-4000-8001-000000000216' },
+      computationStatus: { universalIdentifier: 'aeb1a006-0217-4000-8001-000000000217' },
+      computationNotes: { universalIdentifier: 'aeb1a006-0218-4000-8001-000000000218' },
+      computedById: { universalIdentifier: 'aeb1a006-0219-4000-8001-000000000219' },
+      computedBy: { universalIdentifier: 'aeb1a006-0220-4000-8001-000000000220' },
+    },
+    indexes: {
+      searchVectorGinIndex: { universalIdentifier: 'aeb1a006-0905-4000-8001-000000000905' },
+      metricIdIndex: { universalIdentifier: 'aeb1a006-0906-4000-8001-000000000906' },
+      periodStartIndex: { universalIdentifier: 'aeb1a006-0907-4000-8001-000000000907' },
+      periodEndIndex: { universalIdentifier: 'aeb1a006-0908-4000-8001-000000000908' },
+      granularityIndex: { universalIdentifier: 'aeb1a006-0909-4000-8001-000000000909' },
+      computationStatusIndex: { universalIdentifier: 'aeb1a006-0910-4000-8001-000000000910' },
+    },
+    views: {
+      allAnalyticsMetricSnapshots: {
+        universalIdentifier: 'aeb1a006-0804-4000-8001-000000000804',
         viewFields: {
-          actionType: {
-            universalIdentifier: '9c490ea5-f724-47ce-80e1-3610d32b2cf1',
-          },
-          initiatorSystem: {
-            universalIdentifier: '175fa96a-4a1c-441e-a874-84cf33a125dc',
-          },
-          targetTwentyEntityName: {
-            universalIdentifier: '100ae8a8-5983-469b-a9eb-bccc19666d76',
-          },
-          targetTwentyRecordId: {
-            universalIdentifier: 'dc3b0c65-c3d7-46f3-93c8-95e4c219adb4',
-          },
-          externalSystemName: {
-            universalIdentifier: '53d1fee7-8f09-43d5-860e-57c5f5e88c0e',
-          },
-          externalRecordId: {
-            universalIdentifier: 'b5c97ed5-7a2e-4962-91cf-054e0ce5c3a1',
-          },
-          scope: {
-            universalIdentifier: '67dd0acb-6c87-44e8-80f6-c4321a54b310',
-          },
-          legalHoldReference: {
-            universalIdentifier: '32ee2833-5f4a-4608-9a59-0d9d5c6c2bd0',
-          },
-          status: {
-            universalIdentifier: '77973954-e5e2-4bf4-87bb-26cc49a26364',
-          },
-          requestedAt: {
-            universalIdentifier: '4311e047-1563-4538-b177-e9215133e630',
-          },
-          propagatedAt: {
-            universalIdentifier: '6e275be1-12e4-4010-8e05-e4b6ad923211',
-          },
-          actorId: {
-            universalIdentifier: '9f0c7639-2dd7-4a9d-b4ed-d11daf2273c8',
-          },
-          sourceHash: {
-            universalIdentifier: 'eb8b1905-0662-4f50-81f2-1c91b9645817',
-          },
-          createdAt: {
-            universalIdentifier: '3ae5015c-f25a-4efa-92f6-9b6cc074d69e',
-          },
-          createdBy: {
-            universalIdentifier: '86459605-b96e-4701-8f38-2faf63003b1b',
-          },
+          name: { universalIdentifier: 'aeb1a006-0704-4000-8001-000000000704' },
+          value: { universalIdentifier: 'aeb1a006-0705-4000-8001-000000000705' },
+          computationStatus: { universalIdentifier: 'aeb1a006-0706-4000-8001-000000000706' },
         },
+        viewFieldGroups: { general: { universalIdentifier: 'aeb1a006-0806-4000-8001-000000000806' }, },
+      },
+      analyticsMetricSnapshotRecordPageFields: {
+        universalIdentifier: 'aeb1a006-0805-4000-8001-000000000805',
+        viewFields: {},
+      },
+    },
+  },
+  analyticsDashboardConfig: {
+    universalIdentifier: 'aeb1a006-0003-4000-8001-000000000003',
+    fields: {
+      ...buildStandardObjectSystemFields('aeb1a006-0003-4000-8001-000000000003'),
+      name: { universalIdentifier: 'aeb1a006-0301-4000-8001-000000000301' },
+      description: { universalIdentifier: 'aeb1a006-0302-4000-8001-000000000302' },
+      scope: { universalIdentifier: 'aeb1a006-0303-4000-8001-000000000303' },
+      audience: { universalIdentifier: 'aeb1a006-0304-4000-8001-000000000304' },
+      metricCodes: { universalIdentifier: 'aeb1a006-0305-4000-8001-000000000305' },
+      layout: { universalIdentifier: 'aeb1a006-0306-4000-8001-000000000306' },
+      filters: { universalIdentifier: 'aeb1a006-0307-4000-8001-000000000307' },
+      defaultTimeRange: { universalIdentifier: 'aeb1a006-0308-4000-8001-000000000308' },
+      refreshFrequency: { universalIdentifier: 'aeb1a006-0309-4000-8001-000000000309' },
+      isShared: { universalIdentifier: 'aeb1a006-0310-4000-8001-000000000310' },
+      status: { universalIdentifier: 'aeb1a006-0311-4000-8001-000000000311' },
+      ownerWorkspaceMemberId: { universalIdentifier: 'aeb1a006-0312-4000-8001-000000000312' },
+      ownerWorkspaceMember: { universalIdentifier: 'aeb1a006-0313-4000-8001-000000000313' },
+    },
+    indexes: {
+      searchVectorGinIndex: { universalIdentifier: 'aeb1a006-0911-4000-8001-000000000911' },
+      scopeIndex: { universalIdentifier: 'aeb1a006-0912-4000-8001-000000000912' },
+      audienceIndex: { universalIdentifier: 'aeb1a006-0913-4000-8001-000000000913' },
+      statusIndex: { universalIdentifier: 'aeb1a006-0914-4000-8001-000000000914' },
+      ownerWorkspaceMemberIdIndex: { universalIdentifier: 'aeb1a006-0915-4000-8001-000000000915' },
+    },
+    views: {
+      allAnalyticsDashboardConfigs: {
+        universalIdentifier: 'aeb1a006-0807-4000-8001-000000000807',
+        viewFields: {
+          name: { universalIdentifier: 'aeb1a006-0707-4000-8001-000000000707' },
+          scope: { universalIdentifier: 'aeb1a006-0708-4000-8001-000000000708' },
+          audience: { universalIdentifier: 'aeb1a006-0709-4000-8001-000000000709' },
+        },
+        viewFieldGroups: { general: { universalIdentifier: 'aeb1a006-0809-4000-8001-000000000809' }, },
+      },
+      analyticsDashboardConfigRecordPageFields: {
+        universalIdentifier: 'aeb1a006-0808-4000-8001-000000000808',
+        viewFields: {},
       },
     },
   },

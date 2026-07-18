@@ -1,0 +1,9 @@
+export enum AnalyticsMetricCategory {
+  PIPELINE = 'PIPELINE',
+  FINANCIAL = 'FINANCIAL',
+  CLIENT = 'CLIENT',
+  CANDIDACY = 'CANDIDACY',
+  PLACEMENT = 'PLACEMENT',
+  BOARD = 'BOARD',
+  RESEARCH = 'RESEARCH',
+}

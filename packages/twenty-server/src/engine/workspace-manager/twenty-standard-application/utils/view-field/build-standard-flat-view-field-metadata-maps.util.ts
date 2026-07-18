@@ -74,6 +74,9 @@ import { computeStandardDirectorIndependenceReviewViewFields } from 'src/engine/
 import { computeStandardBoardCommitmentReviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-commitment-review-view-fields.util';
 import { computeStandardRetentionActionLogViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-retention-action-log-view-fields.util';
 import { computeStandardExternalIdentityMatchQueueViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-external-identity-match-queue-view-fields.util';
+import { computeStandardAnalyticsDomainMetricViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-domain-metric-view-fields.util';
+import { computeStandardAnalyticsMetricSnapshotViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-metric-snapshot-view-fields.util';
+import { computeStandardAnalyticsDashboardConfigViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-dashboard-config-view-fields.util';
 import { computeAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-ai-prompt-template-view-fields.util';
 
 type StandardViewFieldBuilder<P extends AllStandardObjectName> = (
@@ -156,6 +159,9 @@ boardCompositionProfile:
 retentionActionLog: computeStandardRetentionActionLogViewFields,
   externalIdentityMatchQueue:
     computeStandardExternalIdentityMatchQueueViewFields,
+analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFields,
+  analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViewFields,
+  analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFields,
 aiPromptTemplate: computeAiPromptTemplateViewFields,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldBuilder<P>;

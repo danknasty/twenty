@@ -444,7 +444,6 @@ export class BackfillService {
         workspaceId,
         'scheduled_interviews',
         'searchInterview',
-        pair.directusCollection,
       );
     }
 
@@ -454,7 +453,6 @@ export class BackfillService {
         workspaceId,
         'application_reference_checks',
         'referenceCheck',
-        pair.directusCollection,
       );
     }
 
@@ -477,7 +475,6 @@ export class BackfillService {
     workspaceId: string,
     directusCollection: string,
     targetEntity: string,
-    parentCollection: string,
   ): Promise<number> {
     let count = 0;
 
@@ -610,7 +607,14 @@ export class BackfillService {
       };
     }
 
-    const record = await repo.save(payload);
+    const saved = await repo.save(payload);
+    const record = Array.isArray(saved) ? saved[0] : saved;
+
+    if (!record?.id) {
+      throw new Error(
+        `Failed to create ${entityName} record: no id returned from save`,
+      );
+    }
 
     return String(record.id);
   }

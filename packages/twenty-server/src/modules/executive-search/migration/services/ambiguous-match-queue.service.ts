@@ -6,13 +6,16 @@ import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/
 import { IdentityMatchConfidence } from 'src/modules/executive-search/common/enums/identity-match-confidence.enum';
 import { IdentityMatchResolution } from 'src/modules/executive-search/common/enums/identity-match-resolution.enum';
 import type { MatchResult } from 'src/modules/executive-search/migration/services/identity-matching.service';
+import { pickBestCandidate } from 'src/modules/executive-search/migration/matchers/build-match-result.util';
 
-/**
- * Enqueue thresholds: which confidence levels require human review.
- * EXACT matches are auto-resolved by the backfill; everything else goes to
- * the queue.
- */
-const ENQUEUE_THRESHOLD: IdentityMatchConfidence = IdentityMatchConfidence.HIGH;
+/** Numeric rank for confidence comparison (higher = stronger). */
+const CONFIDENCE_RANK: Record<IdentityMatchConfidence, number> = {
+  [IdentityMatchConfidence.EXACT]: 4,
+  [IdentityMatchConfidence.HIGH]: 3,
+  [IdentityMatchConfidence.MEDIUM]: 2,
+  [IdentityMatchConfidence.LOW]: 1,
+  [IdentityMatchConfidence.NONE]: 0,
+};
 
 /**
  * Persists ambiguous identity matches (MEDIUM / LOW / NONE confidence or
@@ -291,11 +294,12 @@ export class AmbiguousMatchQueueService {
 
   /**
    * Should this MatchResult be enqueued for human review?  Enqueue when:
-   * - Confidence is below the EXACT threshold, OR
+   * - Confidence is below HIGH (MEDIUM, LOW, NONE), OR
    * - Multiple candidates exist (ambiguous match).
    */
   private shouldEnqueue(result: MatchResult): boolean {
-    if (result.confidence < ENQUEUE_THRESHOLD) {
+    // Use numeric rank — string comparison is lexicographic, not by confidence ordering.
+    if (CONFIDENCE_RANK[result.confidence] < CONFIDENCE_RANK[IdentityMatchConfidence.HIGH]) {
       return true;
     }
 

@@ -73,7 +73,24 @@ import { buildSearchMilestoneStandardFlatFieldMetadatas } from 'src/engine/works
 import { buildPositionSpecificationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-position-specification-standard-flat-field-metadata.util';
 import { buildSearchCriterionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-criterion-standard-flat-field-metadata.util';
 import { buildSearchCandidacyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-candidacy-standard-flat-field-metadata.util';
+import { buildSearchCriterionStandardFlatFieldMetadatas }
+import { buildSearchInterviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-interview-standard-flat-field-metadata.util';
+import { buildReferenceCheckStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-reference-check-standard-flat-field-metadata.util';
+import { buildDiligenceCheckStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-diligence-check-standard-flat-field-metadata.util';
+import { buildCompensationExpectationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-compensation-expectation-standard-flat-field-metadata.util';
+import { buildOfferNegotiationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-offer-negotiation-standard-flat-field-metadata.util';
+import { buildPlacementStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-placement-standard-flat-field-metadata.util';
+import { buildGuaranteeCaseStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-guarantee-case-standard-flat-field-metadata.util';
+ from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-criterion-standard-flat-field-metadata.util';
 import { type CreateStandardFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
+
+import { buildExecutiveAssessmentStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-assessment-standard-flat-field-metadata.util';
+import { buildCriterionEvaluationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-criterion-evaluation-standard-flat-field-metadata.util';
+import { buildSearchSlateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-slate-standard-flat-field-metadata.util';
+import { buildSlateMembershipStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-slate-membership-standard-flat-field-metadata.util';
+import { buildCandidatePresentationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-candidate-presentation-standard-flat-field-metadata.util';
+import { buildClientFeedbackStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-feedback-standard-flat-field-metadata.util';
+import { buildSearchStatusReportStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-status-report-standard-flat-field-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardFieldArgs<P, FieldMetadataType>, 'context'>,
@@ -172,6 +189,22 @@ searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
   positionSpecification: buildPositionSpecificationStandardFlatFieldMetadatas,
   searchCriterion: buildSearchCriterionStandardFlatFieldMetadatas,
   searchCandidacy: buildSearchCandidacyStandardFlatFieldMetadatas,
+  searchInterview: buildSearchInterviewStandardFlatFieldMetadatas,
+
+  executiveAssessment: buildExecutiveAssessmentStandardFlatFieldMetadatas,
+  criterionEvaluation: buildCriterionEvaluationStandardFlatFieldMetadatas,
+  searchSlate: buildSearchSlateStandardFlatFieldMetadatas,
+  slateMembership: buildSlateMembershipStandardFlatFieldMetadatas,
+  candidatePresentation: buildCandidatePresentationStandardFlatFieldMetadatas,
+  clientFeedback: buildClientFeedbackStandardFlatFieldMetadatas,
+  searchStatusReport: buildSearchStatusReportStandardFlatFieldMetadatas,
+  referenceCheck: buildReferenceCheckStandardFlatFieldMetadatas,
+  diligenceCheck: buildDiligenceCheckStandardFlatFieldMetadatas,
+  compensationExpectation: buildCompensationExpectationStandardFlatFieldMetadatas,
+  offerNegotiation: buildOfferNegotiationStandardFlatFieldMetadatas,
+  placement: buildPlacementStandardFlatFieldMetadatas,
+  guaranteeCase: buildGuaranteeCaseStandardFlatFieldMetadatas,
+
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };

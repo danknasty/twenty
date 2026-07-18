@@ -51,7 +51,22 @@ import { buildSearchMilestoneStandardFlatIndexMetadatas } from 'src/engine/works
 import { buildPositionSpecificationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-position-specification-standard-flat-index-metadata.util';
 import { buildSearchCriterionStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-criterion-standard-flat-index-metadata.util';
 import { buildSearchCandidacyStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-candidacy-standard-flat-index-metadata.util';
+import { buildSearchInterviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-interview-standard-flat-index-metadata.util';
+import { buildReferenceCheckStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-reference-check-standard-flat-index-metadata.util';
+import { buildDiligenceCheckStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-diligence-check-standard-flat-index-metadata.util';
+import { buildCompensationExpectationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-compensation-expectation-standard-flat-index-metadata.util';
+import { buildOfferNegotiationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-offer-negotiation-standard-flat-index-metadata.util';
+import { buildPlacementStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-placement-standard-flat-index-metadata.util';
+import { buildGuaranteeCaseStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-guarantee-case-standard-flat-index-metadata.util';
 import { type CreateStandardIndexArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/create-standard-index-flat-metadata.util';
+
+import { buildExecutiveAssessmentStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-executive-assessment-standard-flat-index-metadata.util';
+import { buildCriterionEvaluationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-criterion-evaluation-standard-flat-index-metadata.util';
+import { buildSearchSlateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-slate-standard-flat-index-metadata.util';
+import { buildSlateMembershipStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-slate-membership-standard-flat-index-metadata.util';
+import { buildCandidatePresentationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-candidate-presentation-standard-flat-index-metadata.util';
+import { buildClientFeedbackStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-feedback-standard-flat-index-metadata.util';
+import { buildSearchStatusReportStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-status-report-standard-flat-index-metadata.util';
 
 type StandardIndexBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardIndexArgs<P>, 'context'>,
@@ -118,6 +133,21 @@ workspaceEventOutbox:
   positionSpecification: buildPositionSpecificationStandardFlatIndexMetadatas,
   searchCriterion: buildSearchCriterionStandardFlatIndexMetadatas,
   searchCandidacy: buildSearchCandidacyStandardFlatIndexMetadatas,
+  searchInterview: buildSearchInterviewStandardFlatIndexMetadatas,
+  referenceCheck: buildReferenceCheckStandardFlatIndexMetadatas,
+  diligenceCheck: buildDiligenceCheckStandardFlatIndexMetadatas,
+
+  executiveAssessment: buildExecutiveAssessmentStandardFlatIndexMetadatas,
+  criterionEvaluation: buildCriterionEvaluationStandardFlatIndexMetadatas,
+  searchSlate: buildSearchSlateStandardFlatIndexMetadatas,
+  slateMembership: buildSlateMembershipStandardFlatIndexMetadatas,
+  candidatePresentation: buildCandidatePresentationStandardFlatIndexMetadatas,
+  clientFeedback: buildClientFeedbackStandardFlatIndexMetadatas,
+  searchStatusReport: buildSearchStatusReportStandardFlatIndexMetadatas,
+  compensationExpectation: buildCompensationExpectationStandardFlatIndexMetadatas,
+  offerNegotiation: buildOfferNegotiationStandardFlatIndexMetadatas,
+  placement: buildPlacementStandardFlatIndexMetadatas,
+  guaranteeCase: buildGuaranteeCaseStandardFlatIndexMetadatas,
 } satisfies {
   [P in AllStandardObjectName]?: StandardIndexBuilder<P>;
 };

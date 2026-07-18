@@ -34,3 +34,18 @@ export { STANDARD_WORKFLOW_AUTOMATED_TRIGGER_PAGE_LAYOUT_CONFIG } from './standa
 export { STANDARD_WORKFLOW_PAGE_LAYOUT_CONFIG } from './standard-workflow-page-layout.config';
 export { STANDARD_WORKFLOW_RUN_PAGE_LAYOUT_CONFIG } from './standard-workflow-run-page-layout.config';
 export { STANDARD_WORKFLOW_VERSION_PAGE_LAYOUT_CONFIG } from './standard-workflow-version-page-layout.config';
+
+export { STANDARD_SEARCH_INTERVIEW_PAGE_LAYOUT_CONFIG } from './standard-search-interview-page-layout.config';
+export { STANDARD_REFERENCE_CHECK_PAGE_LAYOUT_CONFIG } from './standard-reference-check-page-layout.config';
+export { STANDARD_DILIGENCE_CHECK_PAGE_LAYOUT_CONFIG } from './standard-diligence-check-page-layout.config';
+export { STANDARD_EXECUTIVE_ASSESSMENT_PAGE_LAYOUT_CONFIG } from './standard-executive-assessment-page-layout.config';
+export { STANDARD_CRITERION_EVALUATION_PAGE_LAYOUT_CONFIG } from './standard-criterion-evaluation-page-layout.config';
+export { STANDARD_SEARCH_SLATE_PAGE_LAYOUT_CONFIG } from './standard-search-slate-page-layout.config';
+export { STANDARD_SLATE_MEMBERSHIP_PAGE_LAYOUT_CONFIG } from './standard-slate-membership-page-layout.config';
+export { STANDARD_CANDIDATE_PRESENTATION_PAGE_LAYOUT_CONFIG } from './standard-candidate-presentation-page-layout.config';
+export { STANDARD_CLIENT_FEEDBACK_PAGE_LAYOUT_CONFIG } from './standard-client-feedback-page-layout.config';
+export { STANDARD_SEARCH_STATUS_REPORT_PAGE_LAYOUT_CONFIG } from './standard-search-status-report-page-layout.config';
+export { STANDARD_COMPENSATION_EXPECTATION_PAGE_LAYOUT_CONFIG } from './standard-compensation-expectation-page-layout.config';
+export { STANDARD_OFFER_NEGOTIATION_PAGE_LAYOUT_CONFIG } from './standard-offer-negotiation-page-layout.config';
+export { STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG } from './standard-placement-page-layout.config';
+export { STANDARD_GUARANTEE_CASE_PAGE_LAYOUT_CONFIG } from './standard-guarantee-case-page-layout.config';

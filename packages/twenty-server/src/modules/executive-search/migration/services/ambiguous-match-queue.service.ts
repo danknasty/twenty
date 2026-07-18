@@ -67,7 +67,7 @@ export class AmbiguousMatchQueueService {
             },
           });
 
-          if (existing?.resolutionState !== IdentityMatchResolution.PENDING) {
+          if (existing && existing.resolutionState !== IdentityMatchResolution.PENDING) {
             continue;
           }
 
@@ -184,7 +184,19 @@ export class AmbiguousMatchQueueService {
         },
       });
 
-      if (!existingLink) {
+      if (existingLink) {
+        // If an authoritative link already exists for a different target, refuse.
+        if (
+          existingLink.isAuthoritativeLink &&
+          (existingLink.twentyEntityName !== twentyEntityName ||
+            existingLink.twentyRecordId !== twentyRecordId)
+        ) {
+          throw new Error(
+            `Cannot resolve queue entry ${queueId}: ` +
+              `externalEntityLink already points to ${existingLink.twentyEntityName}:${existingLink.twentyRecordId}`,
+          );
+        }
+      } else {
         await linkRepo.save({
           externalSystemName: entry.externalSystemName,
           externalEntityName: entry.externalEntityName,

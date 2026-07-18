@@ -58,8 +58,8 @@ export class ComputeAnalyticsMetricService {
       }
     }
 
-    const result = await this.computeMetricValue(metric, workspaceDataSource, options);
     const now = new Date();
+    const result = await this.computeMetricValue(metric, workspaceDataSource, options, now);
     const snapshot = await snapshotRepo.save({
       name: `${metric.name} — ${periodStart} to ${periodEnd}`,
       metricId: metric.id,
@@ -92,11 +92,12 @@ export class ComputeAnalyticsMetricService {
   private async computeMetricValue(
     metric: any,
     dataSource: any,
-    options?: any,
+    options: any,
+    now: Date,
   ): Promise<{ value: number | null; valueText: string | null; sourceCount: number | null; error?: string }> {
     return {
       value: null,
-      valueText: `${metric.code} computed at ${new Date().toISOString()}`,
+      valueText: `${metric.code} computed at ${now.toISOString()}`,
       sourceCount: 0,
     };
   }

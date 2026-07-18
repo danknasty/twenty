@@ -42,3 +42,5 @@ export { BoardCompositionTargetBoardType } from './board-composition-target-boar
 export { BoardMatrixCriterionCategory } from './board-matrix-criterion-category.enum';
 export { DirectorIndependenceReviewStatus } from './director-independence-review-status.enum';
 export { BoardCommitmentReviewStatus } from './board-commitment-review-status.enum';
+export { AiPromptCategory } from './ai-prompt-category.enum';
+export { AiResponseFormat } from './ai-response-format.enum';

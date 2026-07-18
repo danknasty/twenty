@@ -78,6 +78,7 @@ import { buildBoardMatrixCriterionStandardFlatIndexMetadatas } from 'src/engine/
 import { buildCandidateBoardMatrixEvaluationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-candidate-board-matrix-evaluation-standard-flat-index-metadata.util';
 import { buildDirectorIndependenceReviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-director-independence-review-standard-flat-index-metadata.util';
 import { buildBoardCommitmentReviewStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-commitment-review-standard-flat-index-metadata.util';
+import { buildAiPromptTemplateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-prompt-template-standard-flat-index-metadata.util';
 import { buildAnalyticsMetricStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-metric-standard-flat-index-metadata.util';
 import { buildAnalyticsDashboardStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-dashboard-standard-flat-index-metadata.util';
 
@@ -171,6 +172,7 @@ boardCompositionProfile:
     buildDirectorIndependenceReviewStandardFlatIndexMetadatas,
   boardCommitmentReview:
     buildBoardCommitmentReviewStandardFlatIndexMetadatas,
+  aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,
   analyticsMetric: buildAnalyticsMetricStandardFlatIndexMetadatas,
   analyticsDashboard: buildAnalyticsDashboardStandardFlatIndexMetadatas,
 } satisfies {

@@ -50,7 +50,7 @@ Twenty becomes canonical after explicit migration, with backward-compatible Dire
 
 ## Recommendation
 
-Defer until PR30. Until then, both systems may reference each other's records by ID/hash but must not create contradictory "current" designations.
+Option C accepted (2026-07-18). See Decision section below.
 
 ## Decision (2026-07-18)
 

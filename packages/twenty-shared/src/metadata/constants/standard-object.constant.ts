@@ -2816,7 +2816,7 @@ ownedResearchStrategies: {
       },
     },
   },
-externalEntityLink: {
+  externalEntityLink: {
     universalIdentifier: '83a0c657-2e64-47c5-a363-bf7f23b5bb58',
     fields: {
       ...buildStandardObjectSystemFields(
@@ -2840,9 +2840,10 @@ externalEntityLink: {
       externalNaturalKey: {
         universalIdentifier: '47388e8a-1fd2-4e16-bdc9-723f3e1d04dc',
       },
-sourceVersion: {
+      sourceVersion: {
         universalIdentifier: '3a53950c-9516-4881-ac54-8d3ce89e5c7c',
-location: {
+      },
+      location: {
         universalIdentifier: '07122700-58cc-457b-b636-a2dd9954e07e',
       },
       isBoardReady: {
@@ -2885,165 +2886,6 @@ location: {
     indexes: {
       personIdUniqueIndex: {
         universalIdentifier: '3c5cdcfb-e7da-4f5f-9541-aabea51d8e23',
-externalEntityLink: {
-    universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0001',
-    fields: {
-      ...buildStandardObjectSystemFields(
-        '5e5e5e5e-0101-4e01-8e01-c0aba11e0001',
-      ),
-      system: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0010',
-      },
-      externalCollection: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0011',
-      },
-      externalId: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0012',
-      },
-      twentyObjectUniversalIdentifier: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0013',
-      },
-      twentyRecordId: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0014',
-      },
-      externalNaturalKey: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0015',
-      },
-      sourceVersion: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0016',
-      },
-      sourceUpdatedAt: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0017',
-      },
-      sourceHash: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0018',
-      },
-      lastInboundSyncAt: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0019',
-      },
-      lastOutboundSyncAt: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e001a',
-      },
-      syncStatus: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e001b',
-      },
-      conflictStatus: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e001c',
-      },
-      lastErrorCode: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e001d',
-      },
-      lastErrorAt: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e001e',
-      },
-      isAuthoritativeLink: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e001f',
-      },
-      metadata: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0020',
-      },
-    },
-    indexes: {
-      externalLinkUk: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0090',
-      },
-      authoritativeLinkUk: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0091',
-      },
-    },
-    views: {
-      allExternalEntityLinks: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0100',
-        viewFields: {
-          system: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0101',
-          },
-          externalCollection: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0102',
-          },
-          externalId: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0103',
-          },
-          twentyRecordId: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0104',
-          },
-          syncStatus: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0105',
-          },
-          createdAt: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0106',
-          },
-        },
-      },
-      externalEntityLinkRecordPageFields: {
-        universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0200',
-        viewFieldGroups: {
-          general: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0201',
-          },
-          system: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0202',
-          },
-        },
-        viewFields: {
-          system: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0210',
-          },
-          externalCollection: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0211',
-          },
-          externalId: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0212',
-          },
-          twentyObjectUniversalIdentifier: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0213',
-          },
-          twentyRecordId: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0214',
-          },
-          externalNaturalKey: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0215',
-          },
-          sourceVersion: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0216',
-          },
-          sourceUpdatedAt: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0217',
-          },
-          sourceHash: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0218',
-          },
-          lastInboundSyncAt: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0219',
-          },
-          lastOutboundSyncAt: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e021a',
-          },
-          syncStatus: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e021b',
-          },
-          conflictStatus: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e021c',
-          },
-          lastErrorCode: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e021d',
-          },
-          lastErrorAt: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e021e',
-          },
-          isAuthoritativeLink: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e021f',
-          },
-          metadata: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0220',
-          },
-          createdAt: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0221',
-          },
-          createdBy: {
-            universalIdentifier: '5e5e5e5e-0101-4e01-8e01-c0aba11e0222',
-          },
-        },
       },
     },
   },

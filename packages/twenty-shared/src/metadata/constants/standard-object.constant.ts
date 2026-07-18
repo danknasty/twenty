@@ -5105,33 +5105,6 @@ export const STANDARD_OBJECTS = {
           createdBy: {
             universalIdentifier: 'd1e2f3a4-c00e-4d7e-8f9a-0b1c2d3e500e',
           },
-status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
-          currentStage: { universalIdentifier: 'd1e2f3a4-c003-4d7e-8f9a-0b1c2d3e5003' },
-          searchAssignment: { universalIdentifier: 'd1e2f3a4-c004-4d7e-8f9a-0b1c2d3e5004' },
-          person: { universalIdentifier: 'd1e2f3a4-c005-4d7e-8f9a-0b1c2d3e5005' },
-          researchCandidate: { universalIdentifier: 'd1e2f3a4-c006-4d7e-8f9a-0b1c2d3e5006' },
-          executiveProfile: { universalIdentifier: 'd1e2f3a4-c007-4d7e-8f9a-0b1c2d3e5007' },
-          assignedAt: { universalIdentifier: 'd1e2f3a4-c008-4d7e-8f9a-0b1c2d3e5008' },
-          lastStageChangedAt: { universalIdentifier: 'd1e2f3a4-c009-4d7e-8f9a-0b1c2d3e5009' },
-          candidateConsentDate: { universalIdentifier: 'd1e2f3a4-c00a-4d7e-8f9a-0b1c2d3e500a' },
-          closedAt: { universalIdentifier: 'd1e2f3a4-c00b-4d7e-8f9a-0b1c2d3e500b' },
-          notes: { universalIdentifier: 'd1e2f3a4-c00c-4d7e-8f9a-0b1c2d3e500c' },
-          createdAt: { universalIdentifier: 'd1e2f3a4-c00d-4d7e-8f9a-0b1c2d3e500d' },
-          createdBy: { universalIdentifier: 'd1e2f3a4-c00e-4d7e-8f9a-0b1c2d3e500e' },
-          name: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007001' },
-          slateType: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007002' },
-          version: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007003' },
-          status: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007004' },
-          submittedAt: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007005' },
-          submittedBy: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007006' },
-          clientNotes: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007007' },
-          searchAssignment: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007008' },
-          createdAt: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007009' },
-          createdBy: { universalIdentifier: 'aeb1a003-0050-4000-8003-aeb1a0007010' },
-        },
-      },
-    },
-  },
 
   // Phase 9 — Assessment, Slates, Presentations
   executiveAssessment: {
@@ -5186,7 +5159,6 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
   criterionEvaluation: {
   universalIdentifier: 'aeb1a002-0001-4000-8002-aeb1a0000002',
   fields: {
@@ -5234,7 +5206,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
+
   searchSlate: {
   universalIdentifier: 'aeb1a003-0001-4000-8003-aeb1a0000003',
   fields: {
@@ -5278,7 +5250,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
+
   slateMembership: {
   universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
   fields: {
@@ -5321,7 +5293,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
+
   candidatePresentation: {
   universalIdentifier: 'aeb1a005-0001-4000-8005-aeb1a0000005',
   fields: {
@@ -5374,7 +5346,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
+
   clientFeedback: {
   universalIdentifier: 'aeb1a006-0001-4000-8006-aeb1a0000006',
   fields: {
@@ -5427,7 +5399,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
+
   searchStatusReport: {
   universalIdentifier: 'aeb1a007-0001-4000-8007-aeb1a0000007',
   fields: {
@@ -5479,7 +5451,7 @@ status: { universalIdentifier: 'd1e2f3a4-c002-4d7e-8f9a-0b1c2d3e5002' },
   },
   },
   },
-  ,
+
 slateMembership: {
     universalIdentifier: 'aeb1a004-0001-4000-8004-aeb1a0000004',
     fields: {

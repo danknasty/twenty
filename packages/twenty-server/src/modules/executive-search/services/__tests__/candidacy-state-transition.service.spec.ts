@@ -525,9 +525,9 @@ describe('CandidacyStateTransitionService', () => {
         expect.objectContaining({
           id: 'event-1',
           candidacyId: 'candidacy-1',
-          fromStatus: CandidacyStatus.IDENTIFIED,
-          toStatus: CandidacyStatus.RESEARCHING,
-          actorId: 'actor-1',
+          stageFrom: CandidacyStatus.IDENTIFIED,
+          stageTo: CandidacyStatus.RESEARCHING,
+          transitionedById: 'actor-1',
           actorKind: 'user',
           reason: 'Starting research phase',
         }),
@@ -542,9 +542,9 @@ describe('CandidacyStateTransitionService', () => {
       expect(mockStageEventRepository.insert).toHaveBeenCalledWith(
         expect.objectContaining({
           candidacyId: 'candidacy-1',
-          fromStatus: CandidacyStatus.IDENTIFIED,
-          toStatus: CandidacyStatus.RESEARCHING,
-          actorId: 'actor-1',
+          stageFrom: CandidacyStatus.IDENTIFIED,
+          stageTo: CandidacyStatus.RESEARCHING,
+          transitionedById: 'actor-1',
           actorKind: 'user',
           reason: 'Starting research phase',
         }),
@@ -563,7 +563,7 @@ describe('CandidacyStateTransitionService', () => {
         CandidacyStatus.RESEARCHING,
       );
 
-      expect(result.actorId).toBeNull();
+      expect(result.transitionedById).toBeNull();
       expect(result.actorKind).toBeNull();
       expect(result.reason).toBeNull();
     });
@@ -686,8 +686,8 @@ describe('CandidacyStateTransitionService', () => {
           'actor-seq',
         );
 
-        expect(result.fromStatus).toBe(from);
-        expect(result.toStatus).toBe(to);
+        expect(result.stageFrom).toBe(from);
+        expect(result.stageTo).toBe(to);
       }
     });
   });

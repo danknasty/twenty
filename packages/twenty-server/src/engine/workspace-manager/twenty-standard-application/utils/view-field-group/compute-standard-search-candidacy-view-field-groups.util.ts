@@ -18,11 +18,9 @@ export const computeStandardSearchCandidacyViewFieldGroups = (
         context: {
           viewName: 'searchCandidacyRecordPageFields',
           viewFieldGroupName: 'general',
-          fieldName: null,
-          isExpanded: true,
-          isVisible: true,
-          label: 'General',
+          name: 'General',
           position: 0,
+          isVisible: true,
         },
       }),
   };

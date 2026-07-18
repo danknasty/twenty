@@ -85,9 +85,10 @@ export class CandidacyStateTransitionService {
             const eventInsert = await stageEventRepository.insert(
               {
                 candidacyId: candidacy.id,
-                fromStatus: from,
-                toStatus: to,
-                actorId: actorId ?? null,
+                stage: to,
+                stageFrom: from,
+                stageTo: to,
+                transitionedById: actorId ?? null,
                 actorKind: actorKind ?? null,
                 reason: reason ?? null,
               } as any,
@@ -101,9 +102,10 @@ export class CandidacyStateTransitionService {
             return {
               id: eventId,
               candidacyId: candidacy.id,
-              fromStatus: from,
-              toStatus: to,
-              actorId: actorId ?? null,
+              stage: to,
+              stageFrom: from,
+              stageTo: to,
+              transitionedById: actorId ?? null,
               actorKind: actorKind ?? null,
               reason: reason ?? null,
               candidacy: null,

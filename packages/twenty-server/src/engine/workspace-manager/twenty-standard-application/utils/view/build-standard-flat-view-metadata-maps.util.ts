@@ -197,7 +197,8 @@ boardCompositionProfile:
   analyticsDomainMetric: computeStandardAnalyticsDomainMetricViews,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViews,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViews,
-  aiPromptTemplate: computeAiPromptTemplateViews,  aiModelRegistry: computeStandardAiModelRegistryViews,
+  aiPromptTemplate: computeAiPromptTemplateViews,
+  aiModelRegistry: computeStandardAiModelRegistryViews,
   aiProviderCallLog: computeStandardAiProviderCallLogViews,
   appAgents: computeStandardAppAgentsViews,
 } as const satisfies {

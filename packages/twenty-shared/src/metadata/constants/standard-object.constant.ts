@@ -119,6 +119,15 @@ export const STANDARD_OBJECTS = {
       },
     },
   },
+  appAgents: {
+    universalIdentifier: '9a6a505d-f418-45a0-a5e7-a2d7461558ca',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '9a6a505d-f418-45a0-a5e7-a2d7461558ca',
+      ),
+    },
+    indexes: {},
+  },
   blocklist: {
     universalIdentifier: '20202020-0408-4f38-b8a8-4d5e3e26e24d',
     fields: {
@@ -7049,6 +7058,33 @@ export const STANDARD_OBJECTS = {
         viewFields: {},
       },
     },
+  },
+  aiModelRegistry: {
+    universalIdentifier: '2fefc942-c89f-4cc4-a6d7-2bc844eeef86',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '2fefc942-c89f-4cc4-a6d7-2bc844eeef86',
+      ),
+    },
+    indexes: {},
+  },
+  aiPromptTemplate: {
+    universalIdentifier: '89f0983e-d86e-4a3b-83a7-11020aa561d6',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '89f0983e-d86e-4a3b-83a7-11020aa561d6',
+      ),
+    },
+    indexes: {},
+  },
+  aiProviderCallLog: {
+    universalIdentifier: '2fc665b9-f31b-483b-9c4b-54db7fa3a523',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '2fc665b9-f31b-483b-9c4b-54db7fa3a523',
+      ),
+    },
+    indexes: {},
   },
   analyticsDomainMetric: {
     universalIdentifier: 'aeb1a006-0001-4000-8001-000000000001',

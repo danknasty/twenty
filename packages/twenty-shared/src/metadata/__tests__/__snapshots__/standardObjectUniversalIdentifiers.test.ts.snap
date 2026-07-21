@@ -1,7 +1,97 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`STANDARD_OBJECTS universal identifiers should never change without an explicit snapshot update 1`] = `
 {
+  "aiModelRegistry": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "bfab967c-d568-5818-80ed-4e0ac2d0ae63",
+      },
+      "createdBy": {
+        "universalIdentifier": "ea979dc8-fd6d-54f2-bda3-80b7a7c2000c",
+      },
+      "deletedAt": {
+        "universalIdentifier": "e68c14ad-288c-555a-94e1-f1d87c56da0f",
+      },
+      "id": {
+        "universalIdentifier": "67fd0d86-e2b3-522d-8c39-85bffaf3ee31",
+      },
+      "position": {
+        "universalIdentifier": "a9ee0ba2-713e-5348-93e9-907128520f34",
+      },
+      "searchVector": {
+        "universalIdentifier": "ba51177c-0620-5ef6-867c-4a82d80d98cd",
+      },
+      "updatedAt": {
+        "universalIdentifier": "56264bd9-2df3-5d1c-adc7-206b85859cc0",
+      },
+      "updatedBy": {
+        "universalIdentifier": "115d7924-45c9-5777-8cad-f2e0bdc9048b",
+      },
+    },
+    "indexes": {},
+    "universalIdentifier": "2fefc942-c89f-4cc4-a6d7-2bc844eeef86",
+  },
+  "aiPromptTemplate": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "43c8e6b8-1b24-5f80-8ccd-7c627a469b64",
+      },
+      "createdBy": {
+        "universalIdentifier": "1bcede82-b044-5651-8e72-fdcb8f4a4ba4",
+      },
+      "deletedAt": {
+        "universalIdentifier": "be258200-6ea9-588e-9a6c-4c74694adac5",
+      },
+      "id": {
+        "universalIdentifier": "8863b4eb-f351-598f-87f5-f05898a353fc",
+      },
+      "position": {
+        "universalIdentifier": "389e64d9-e617-53b8-b463-78d92f4ef553",
+      },
+      "searchVector": {
+        "universalIdentifier": "04ab270d-8a91-5161-a5ac-1deaaa744f72",
+      },
+      "updatedAt": {
+        "universalIdentifier": "e447ebed-0cfc-5dbf-a178-3f0714d87b55",
+      },
+      "updatedBy": {
+        "universalIdentifier": "00d91d1a-a06c-520c-9877-2574f663648c",
+      },
+    },
+    "indexes": {},
+    "universalIdentifier": "89f0983e-d86e-4a3b-83a7-11020aa561d6",
+  },
+  "aiProviderCallLog": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "4629c810-64d9-5808-abad-dd0914dd45a9",
+      },
+      "createdBy": {
+        "universalIdentifier": "048940d8-6339-531f-acab-280e1b34db19",
+      },
+      "deletedAt": {
+        "universalIdentifier": "3d0f7294-3c3d-55b2-a9a3-1e4ac29011e1",
+      },
+      "id": {
+        "universalIdentifier": "5905d36b-25af-592f-95dd-e2cccef6ad00",
+      },
+      "position": {
+        "universalIdentifier": "176229e0-2e04-5019-a763-a6b12cc7ddc1",
+      },
+      "searchVector": {
+        "universalIdentifier": "910941be-bfda-5cd1-82c2-35bc3ca5c3c8",
+      },
+      "updatedAt": {
+        "universalIdentifier": "d2f9e0c7-c857-5f89-b215-0737dc6c7913",
+      },
+      "updatedBy": {
+        "universalIdentifier": "0369d3e3-86b1-56ba-9ae6-bc0d2e2a05fc",
+      },
+    },
+    "indexes": {},
+    "universalIdentifier": "2fc665b9-f31b-483b-9c4b-54db7fa3a523",
+  },
   "analyticsDashboardConfig": {
     "fields": {
       "audience": {
@@ -361,6 +451,36 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
         "viewFields": {},
       },
     },
+  },
+  "appAgents": {
+    "fields": {
+      "createdAt": {
+        "universalIdentifier": "ff347bc5-4e39-59b6-a710-e184d0cfda79",
+      },
+      "createdBy": {
+        "universalIdentifier": "29e7910e-33e7-5e15-bc02-72e27a107ca8",
+      },
+      "deletedAt": {
+        "universalIdentifier": "3060f968-4303-5318-a352-a28be2defcf2",
+      },
+      "id": {
+        "universalIdentifier": "8cc8b002-4831-5067-ae3f-08ffdef8c20d",
+      },
+      "position": {
+        "universalIdentifier": "4753dc77-80de-54cc-96fa-6c095d804e60",
+      },
+      "searchVector": {
+        "universalIdentifier": "78e3482c-adc8-55be-9a90-326c7cdac135",
+      },
+      "updatedAt": {
+        "universalIdentifier": "30728161-e333-54b8-ab11-ace168ec514e",
+      },
+      "updatedBy": {
+        "universalIdentifier": "9eecd3f4-e099-573d-a48f-82e30987578b",
+      },
+    },
+    "indexes": {},
+    "universalIdentifier": "9a6a505d-f418-45a0-a5e7-a2d7461558ca",
   },
   "assignmentTeamMember": {
     "fields": {

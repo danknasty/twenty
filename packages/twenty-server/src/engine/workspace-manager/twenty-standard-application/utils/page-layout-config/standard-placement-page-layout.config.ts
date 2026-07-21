@@ -13,45 +13,44 @@ import {
   type StandardPageLayoutTabConfig,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-page-layout-config.type';
 
-const SEARCH_INTERVIEW_PAGE_TABS = {
+const TABS = {
   home: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchInterviewRecordPage.tabs
-        .home.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.placementRecordPage.tabs.home
+        .universalIdentifier,
     ...TAB_PROPS.home,
     widgets: {
       fields: {
         universalIdentifier:
-          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchInterviewRecordPage
-            .tabs.home.widgets.fields.universalIdentifier,
+          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.placementRecordPage.tabs
+            .home.widgets.fields.universalIdentifier,
         ...WIDGET_PROPS.fields,
       },
     },
   },
   timeline: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchInterviewRecordPage.tabs
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.placementRecordPage.tabs
         .timeline.universalIdentifier,
     ...TAB_PROPS.timeline,
     widgets: {
       timeline: {
         universalIdentifier:
-          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchInterviewRecordPage
-            .tabs.timeline.widgets.timeline.universalIdentifier,
+          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.placementRecordPage.tabs
+            .timeline.widgets.timeline.universalIdentifier,
         ...WIDGET_PROPS.timeline,
       },
     },
   },
 } as const satisfies Record<string, StandardPageLayoutTabConfig>;
 
-export const STANDARD_SEARCH_INTERVIEW_PAGE_LAYOUT_CONFIG = {
-  name: 'Default Search Interview Layout',
+export const STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG = {
+  name: 'Default Placement Layout',
   type: PageLayoutType.RECORD_PAGE,
-  objectUniversalIdentifier:
-    STANDARD_OBJECTS.searchInterview.universalIdentifier,
+  objectUniversalIdentifier: STANDARD_OBJECTS.placement.universalIdentifier,
   universalIdentifier:
-    STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchInterviewRecordPage
+    STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.placementRecordPage
       .universalIdentifier,
   defaultTabUniversalIdentifier: null,
-  tabs: SEARCH_INTERVIEW_PAGE_TABS,
+  tabs: TABS,
 } as const satisfies StandardPageLayoutConfig;

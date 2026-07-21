@@ -104,7 +104,6 @@ export const SEARCH_FIELDS_BY_STANDARD_OBJECT_NAME = {
   candidatePresentation: [{ name: 'name', type: FieldMetadataType.TEXT }],
   clientFeedback: [{ name: 'name', type: FieldMetadataType.TEXT }],
   searchStatusReport: [{ name: 'name', type: FieldMetadataType.TEXT }],
-  executiveSearchPreference: [],
   researchStrategy: [{ name: 'name', type: FieldMetadataType.TEXT }],
   marketMap: [{ name: 'name', type: FieldMetadataType.TEXT }],
   targetCompany: [{ name: 'companyName', type: FieldMetadataType.TEXT }],

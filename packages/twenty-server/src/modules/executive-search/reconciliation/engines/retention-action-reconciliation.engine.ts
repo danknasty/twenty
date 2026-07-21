@@ -3,8 +3,10 @@ import { Injectable, Logger } from '@nestjs/common';
 import { buildSystemAuthContext } from 'src/engine/twenty-orm/utils/build-system-auth-context.util';
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { RetentionActionLogWorkspaceEntity } from 'src/modules/executive-search/standard-objects/retention-action-log.workspace-entity';
-import { type ReconcileArgs } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
-import { type ReconciliationEngine } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
+import type {
+  ReconcileArgs,
+  ReconciliationEngine,
+} from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
 import { type ReconciliationFinding } from 'src/modules/executive-search/reconciliation/reconciliation-finding.type';
 import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
 import {

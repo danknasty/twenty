@@ -122,7 +122,6 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
     computeStandardAnalyticsDashboardConfigViewFieldGroups,
   aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
   aiModelRegistry: computeStandardAiModelRegistryViewFieldGroups,
-  aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
   aiProviderCallLog: computeStandardAiProviderCallLogViewFieldGroups,
   appAgents: computeStandardAppAgentsViewFieldGroups,
 } as const satisfies {

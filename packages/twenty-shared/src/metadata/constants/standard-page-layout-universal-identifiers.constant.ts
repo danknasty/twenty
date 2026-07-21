@@ -1146,10 +1146,10 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
     },
   },
   analyticsMetricSnapshotRecordPage: {
-    universalIdentifier: 'aeb1a006-0805-4000-8001-000000000805',
+    universalIdentifier: '4b792d08-1dc3-43d8-9ebd-b05be6e5d296',
     tabs: {
-      home: { universalIdentifier: 'aeb1a006-0806-4000-8001-000000000806', widgets: { fields: { universalIdentifier: 'aeb1a006-0807-4000-8001-000000000807' }, }, },
-      timeline: { universalIdentifier: 'aeb1a006-0808-4000-8001-000000000808', widgets: { timeline: { universalIdentifier: 'aeb1a006-0809-4000-8001-000000000809' }, }, },
+      home: { universalIdentifier: '0d1e21d4-236e-443a-aba5-2d850dbe56b5', widgets: { fields: { universalIdentifier: '3d34e99e-f309-452d-b6bb-130a8ef596ef' }, }, },
+      timeline: { universalIdentifier: '30661ee1-8b62-470e-9575-e4dc10faddec', widgets: { timeline: { universalIdentifier: '5923c7bd-707c-4bd6-9021-60cd10cda9f4' }, }, },
     },
   },
   analyticsDashboardConfigRecordPage: {

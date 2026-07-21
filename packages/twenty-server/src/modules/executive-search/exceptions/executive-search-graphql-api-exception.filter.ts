@@ -42,6 +42,24 @@ export class ExecutiveSearchGraphqlApiExceptionFilter implements GqlExceptionFil
         throw new InternalServerError(exception.message);
       case ExecutiveSearchExceptionCode.CUTOVER_INVALID_REVERT:
         throw new InternalServerError(exception.message);
+      case ExecutiveSearchExceptionCode.AI_CONTEXT_VIOLATION:
+        throw new ForbiddenError(exception.message);
+      case ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED:
+        throw new ForbiddenError(exception.message);
+      case ExecutiveSearchExceptionCode.BOARD_MATRIX_AI_DISABLED:
+        throw new ForbiddenError(exception.message);
+      case ExecutiveSearchExceptionCode.SEARCH_HEALTH_AI_DISABLED:
+        throw new ForbiddenError(exception.message);
+      case ExecutiveSearchExceptionCode.EXECUTIVE_SEARCH_AI_DISABLED:
+        throw new ForbiddenError(exception.message);
+      case ExecutiveSearchExceptionCode.BOARD_COMPOSITION_PROFILE_NOT_FOUND:
+        throw new NotFoundError(exception.message);
+      case ExecutiveSearchExceptionCode.BOARD_MATRIX_CRITERIA_NOT_FOUND:
+        throw new NotFoundError(exception.message);
+      case ExecutiveSearchExceptionCode.CANDIDATE_NOT_FOUND:
+        throw new NotFoundError(exception.message);
+      case ExecutiveSearchExceptionCode.SEARCH_ASSIGNMENT_NOT_FOUND:
+        throw new NotFoundError(exception.message);
       default:
         throw new InternalServerError(exception.message);
     }

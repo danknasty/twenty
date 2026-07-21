@@ -47,6 +47,8 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
 import { BoardMatrixAiModule } from 'src/modules/executive-search/services/ai/board-matrix-ai.module';
 import { CriterionAssessmentShadowModule } from 'src/modules/executive-search/services/ai/criterion-assessment-shadow.module';
 import { CriterionAssessmentShadowService } from 'src/modules/executive-search/services/ai/criterion-assessment-shadow.service';
+import { CriterionAssessmentResolver } from 'src/modules/executive-search/resolvers/criterion-assessment.resolver';
+import { CriterionAssessmentService } from 'src/modules/executive-search/services/criterion-assessment.service';
 
 @Module({
   imports: [
@@ -100,6 +102,8 @@ import { CriterionAssessmentShadowService } from 'src/modules/executive-search/s
     ComputeAnalyticsMetricResolver,
     ComputeAnalyticsMetricService,
     CriterionAssessmentShadowService,
+    CriterionAssessmentResolver,
+    CriterionAssessmentService,
   ],
   exports: [
     ExecutiveSearchOutboxService,

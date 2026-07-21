@@ -6885,29 +6885,59 @@ export const STANDARD_OBJECTS = {
   analyticsDomainMetric: {
     universalIdentifier: 'aeb1a006-0001-4000-8001-000000000001',
     fields: {
-      ...buildStandardObjectSystemFields('aeb1a006-0001-4000-8001-000000000001'),
+      ...buildStandardObjectSystemFields(
+        'aeb1a006-0001-4000-8001-000000000001',
+      ),
       name: { universalIdentifier: 'aeb1a006-0101-4000-8001-000000000101' },
       code: { universalIdentifier: 'aeb1a006-0102-4000-8001-000000000102' },
-      description: { universalIdentifier: 'aeb1a006-0103-4000-8001-000000000103' },
+      description: {
+        universalIdentifier: 'aeb1a006-0103-4000-8001-000000000103',
+      },
       category: { universalIdentifier: 'aeb1a006-0104-4000-8001-000000000104' },
-      aggregationType: { universalIdentifier: 'aeb1a006-0105-4000-8001-000000000105' },
-      valueType: { universalIdentifier: 'aeb1a006-0106-4000-8001-000000000106' },
-      timeWindow: { universalIdentifier: 'aeb1a006-0107-4000-8001-000000000107' },
-      sourceObject: { universalIdentifier: 'aeb1a006-0108-4000-8001-000000000108' },
-      computationDescription: { universalIdentifier: 'aeb1a006-0109-4000-8001-000000000109' },
+      aggregationType: {
+        universalIdentifier: 'aeb1a006-0105-4000-8001-000000000105',
+      },
+      valueType: {
+        universalIdentifier: 'aeb1a006-0106-4000-8001-000000000106',
+      },
+      timeWindow: {
+        universalIdentifier: 'aeb1a006-0107-4000-8001-000000000107',
+      },
+      sourceObject: {
+        universalIdentifier: 'aeb1a006-0108-4000-8001-000000000108',
+      },
+      computationDescription: {
+        universalIdentifier: 'aeb1a006-0109-4000-8001-000000000109',
+      },
       unit: { universalIdentifier: 'aeb1a006-0110-4000-8001-000000000110' },
       status: { universalIdentifier: 'aeb1a006-0111-4000-8001-000000000111' },
-      isConfidential: { universalIdentifier: 'aeb1a006-0112-4000-8001-000000000112' },
+      isConfidential: {
+        universalIdentifier: 'aeb1a006-0112-4000-8001-000000000112',
+      },
       tags: { universalIdentifier: 'aeb1a006-0113-4000-8001-000000000113' },
-      ownerWorkspaceMemberId: { universalIdentifier: 'aeb1a006-0114-4000-8001-000000000114' },
-      ownerWorkspaceMember: { universalIdentifier: 'aeb1a006-0115-4000-8001-000000000115' },
-      snapshots: { universalIdentifier: 'aeb1a006-0116-4000-8001-000000000116' },
+      ownerWorkspaceMemberId: {
+        universalIdentifier: 'aeb1a006-0114-4000-8001-000000000114',
+      },
+      ownerWorkspaceMember: {
+        universalIdentifier: 'aeb1a006-0115-4000-8001-000000000115',
+      },
+      snapshots: {
+        universalIdentifier: 'aeb1a006-0116-4000-8001-000000000116',
+      },
     },
     indexes: {
-      searchVectorGinIndex: { universalIdentifier: 'aeb1a006-0901-4000-8001-000000000901' },
-      codeIndex: { universalIdentifier: 'aeb1a006-0902-4000-8001-000000000902' },
-      categoryIndex: { universalIdentifier: 'aeb1a006-0903-4000-8001-000000000903' },
-      statusIndex: { universalIdentifier: 'aeb1a006-0904-4000-8001-000000000904' },
+      searchVectorGinIndex: {
+        universalIdentifier: 'aeb1a006-0901-4000-8001-000000000901',
+      },
+      codeIndex: {
+        universalIdentifier: 'aeb1a006-0902-4000-8001-000000000902',
+      },
+      categoryIndex: {
+        universalIdentifier: 'aeb1a006-0903-4000-8001-000000000903',
+      },
+      statusIndex: {
+        universalIdentifier: 'aeb1a006-0904-4000-8001-000000000904',
+      },
     },
     views: {
       allAnalyticsDomainMetrics: {
@@ -6915,9 +6945,15 @@ export const STANDARD_OBJECTS = {
         viewFields: {
           name: { universalIdentifier: 'aeb1a006-0701-4000-8001-000000000701' },
           code: { universalIdentifier: 'aeb1a006-0702-4000-8001-000000000702' },
-          category: { universalIdentifier: 'aeb1a006-0703-4000-8001-000000000703' },
+          category: {
+            universalIdentifier: 'aeb1a006-0703-4000-8001-000000000703',
+          },
         },
-        viewFieldGroups: { general: { universalIdentifier: 'aeb1a006-0803-4000-8001-000000000803' }, },
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: 'aeb1a006-0803-4000-8001-000000000803',
+          },
+        },
       },
       analyticsDomainMetricRecordPageFields: {
         universalIdentifier: 'aeb1a006-0802-4000-8001-000000000802',
@@ -6928,45 +6964,97 @@ export const STANDARD_OBJECTS = {
   analyticsMetricSnapshot: {
     universalIdentifier: 'aeb1a006-0002-4000-8001-000000000002',
     fields: {
-      ...buildStandardObjectSystemFields('aeb1a006-0002-4000-8001-000000000002'),
+      ...buildStandardObjectSystemFields(
+        'aeb1a006-0002-4000-8001-000000000002',
+      ),
       name: { universalIdentifier: 'aeb1a006-0201-4000-8001-000000000201' },
       metricId: { universalIdentifier: 'aeb1a006-0202-4000-8001-000000000202' },
       metric: { universalIdentifier: 'aeb1a006-0203-4000-8001-000000000203' },
-      periodStart: { universalIdentifier: 'aeb1a006-0204-4000-8001-000000000204' },
-      periodEnd: { universalIdentifier: 'aeb1a006-0205-4000-8001-000000000205' },
-      periodLabel: { universalIdentifier: 'aeb1a006-0206-4000-8001-000000000206' },
-      granularity: { universalIdentifier: 'aeb1a006-0207-4000-8001-000000000207' },
+      periodStart: {
+        universalIdentifier: 'aeb1a006-0204-4000-8001-000000000204',
+      },
+      periodEnd: {
+        universalIdentifier: 'aeb1a006-0205-4000-8001-000000000205',
+      },
+      periodLabel: {
+        universalIdentifier: 'aeb1a006-0206-4000-8001-000000000206',
+      },
+      granularity: {
+        universalIdentifier: 'aeb1a006-0207-4000-8001-000000000207',
+      },
       value: { universalIdentifier: 'aeb1a006-0208-4000-8001-000000000208' },
-      valueText: { universalIdentifier: 'aeb1a006-0209-4000-8001-000000000209' },
-      previousValue: { universalIdentifier: 'aeb1a006-0210-4000-8001-000000000210' },
+      valueText: {
+        universalIdentifier: 'aeb1a006-0209-4000-8001-000000000209',
+      },
+      previousValue: {
+        universalIdentifier: 'aeb1a006-0210-4000-8001-000000000210',
+      },
       delta: { universalIdentifier: 'aeb1a006-0211-4000-8001-000000000211' },
-      deltaPercent: { universalIdentifier: 'aeb1a006-0212-4000-8001-000000000212' },
-      targetValue: { universalIdentifier: 'aeb1a006-0213-4000-8001-000000000213' },
-      dimensions: { universalIdentifier: 'aeb1a006-0214-4000-8001-000000000214' },
-      sourceCount: { universalIdentifier: 'aeb1a006-0215-4000-8001-000000000215' },
-      computedAt: { universalIdentifier: 'aeb1a006-0216-4000-8001-000000000216' },
-      computationStatus: { universalIdentifier: 'aeb1a006-0217-4000-8001-000000000217' },
-      computationNotes: { universalIdentifier: 'aeb1a006-0218-4000-8001-000000000218' },
-      computedById: { universalIdentifier: 'aeb1a006-0219-4000-8001-000000000219' },
-      computedBy: { universalIdentifier: 'aeb1a006-0220-4000-8001-000000000220' },
+      deltaPercent: {
+        universalIdentifier: 'aeb1a006-0212-4000-8001-000000000212',
+      },
+      targetValue: {
+        universalIdentifier: 'aeb1a006-0213-4000-8001-000000000213',
+      },
+      dimensions: {
+        universalIdentifier: 'aeb1a006-0214-4000-8001-000000000214',
+      },
+      sourceCount: {
+        universalIdentifier: 'aeb1a006-0215-4000-8001-000000000215',
+      },
+      computedAt: {
+        universalIdentifier: 'aeb1a006-0216-4000-8001-000000000216',
+      },
+      computationStatus: {
+        universalIdentifier: 'aeb1a006-0217-4000-8001-000000000217',
+      },
+      computationNotes: {
+        universalIdentifier: 'aeb1a006-0218-4000-8001-000000000218',
+      },
+      computedById: {
+        universalIdentifier: 'aeb1a006-0219-4000-8001-000000000219',
+      },
+      computedBy: {
+        universalIdentifier: 'aeb1a006-0220-4000-8001-000000000220',
+      },
     },
     indexes: {
-      searchVectorGinIndex: { universalIdentifier: 'aeb1a006-0905-4000-8001-000000000905' },
-      metricIdIndex: { universalIdentifier: 'aeb1a006-0906-4000-8001-000000000906' },
-      periodStartIndex: { universalIdentifier: 'aeb1a006-0907-4000-8001-000000000907' },
-      periodEndIndex: { universalIdentifier: 'aeb1a006-0908-4000-8001-000000000908' },
-      granularityIndex: { universalIdentifier: 'aeb1a006-0909-4000-8001-000000000909' },
-      computationStatusIndex: { universalIdentifier: 'aeb1a006-0910-4000-8001-000000000910' },
+      searchVectorGinIndex: {
+        universalIdentifier: 'aeb1a006-0905-4000-8001-000000000905',
+      },
+      metricIdIndex: {
+        universalIdentifier: 'aeb1a006-0906-4000-8001-000000000906',
+      },
+      periodStartIndex: {
+        universalIdentifier: 'aeb1a006-0907-4000-8001-000000000907',
+      },
+      periodEndIndex: {
+        universalIdentifier: 'aeb1a006-0908-4000-8001-000000000908',
+      },
+      granularityIndex: {
+        universalIdentifier: 'aeb1a006-0909-4000-8001-000000000909',
+      },
+      computationStatusIndex: {
+        universalIdentifier: 'aeb1a006-0910-4000-8001-000000000910',
+      },
     },
     views: {
       allAnalyticsMetricSnapshots: {
         universalIdentifier: 'aeb1a006-0804-4000-8001-000000000804',
         viewFields: {
           name: { universalIdentifier: 'aeb1a006-0704-4000-8001-000000000704' },
-          value: { universalIdentifier: 'aeb1a006-0705-4000-8001-000000000705' },
-          computationStatus: { universalIdentifier: 'aeb1a006-0706-4000-8001-000000000706' },
+          value: {
+            universalIdentifier: 'aeb1a006-0705-4000-8001-000000000705',
+          },
+          computationStatus: {
+            universalIdentifier: 'aeb1a006-0706-4000-8001-000000000706',
+          },
         },
-        viewFieldGroups: { general: { universalIdentifier: 'aeb1a006-0806-4000-8001-000000000806' }, },
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: 'aeb1a006-0806-4000-8001-000000000806',
+          },
+        },
       },
       analyticsMetricSnapshotRecordPageFields: {
         universalIdentifier: 'aeb1a006-0805-4000-8001-000000000805',
@@ -6977,37 +7065,69 @@ export const STANDARD_OBJECTS = {
   analyticsDashboardConfig: {
     universalIdentifier: 'aeb1a006-0003-4000-8001-000000000003',
     fields: {
-      ...buildStandardObjectSystemFields('aeb1a006-0003-4000-8001-000000000003'),
+      ...buildStandardObjectSystemFields(
+        'aeb1a006-0003-4000-8001-000000000003',
+      ),
       name: { universalIdentifier: 'aeb1a006-0301-4000-8001-000000000301' },
-      description: { universalIdentifier: 'aeb1a006-0302-4000-8001-000000000302' },
+      description: {
+        universalIdentifier: 'aeb1a006-0302-4000-8001-000000000302',
+      },
       scope: { universalIdentifier: 'aeb1a006-0303-4000-8001-000000000303' },
       audience: { universalIdentifier: 'aeb1a006-0304-4000-8001-000000000304' },
-      metricCodes: { universalIdentifier: 'aeb1a006-0305-4000-8001-000000000305' },
+      metricCodes: {
+        universalIdentifier: 'aeb1a006-0305-4000-8001-000000000305',
+      },
       layout: { universalIdentifier: 'aeb1a006-0306-4000-8001-000000000306' },
       filters: { universalIdentifier: 'aeb1a006-0307-4000-8001-000000000307' },
-      defaultTimeRange: { universalIdentifier: 'aeb1a006-0308-4000-8001-000000000308' },
-      refreshFrequency: { universalIdentifier: 'aeb1a006-0309-4000-8001-000000000309' },
+      defaultTimeRange: {
+        universalIdentifier: 'aeb1a006-0308-4000-8001-000000000308',
+      },
+      refreshFrequency: {
+        universalIdentifier: 'aeb1a006-0309-4000-8001-000000000309',
+      },
       isShared: { universalIdentifier: 'aeb1a006-0310-4000-8001-000000000310' },
       status: { universalIdentifier: 'aeb1a006-0311-4000-8001-000000000311' },
-      ownerWorkspaceMemberId: { universalIdentifier: 'aeb1a006-0312-4000-8001-000000000312' },
-      ownerWorkspaceMember: { universalIdentifier: 'aeb1a006-0313-4000-8001-000000000313' },
+      ownerWorkspaceMemberId: {
+        universalIdentifier: 'aeb1a006-0312-4000-8001-000000000312',
+      },
+      ownerWorkspaceMember: {
+        universalIdentifier: 'aeb1a006-0313-4000-8001-000000000313',
+      },
     },
     indexes: {
-      searchVectorGinIndex: { universalIdentifier: 'aeb1a006-0911-4000-8001-000000000911' },
-      scopeIndex: { universalIdentifier: 'aeb1a006-0912-4000-8001-000000000912' },
-      audienceIndex: { universalIdentifier: 'aeb1a006-0913-4000-8001-000000000913' },
-      statusIndex: { universalIdentifier: 'aeb1a006-0914-4000-8001-000000000914' },
-      ownerWorkspaceMemberIdIndex: { universalIdentifier: 'aeb1a006-0915-4000-8001-000000000915' },
+      searchVectorGinIndex: {
+        universalIdentifier: 'aeb1a006-0911-4000-8001-000000000911',
+      },
+      scopeIndex: {
+        universalIdentifier: 'aeb1a006-0912-4000-8001-000000000912',
+      },
+      audienceIndex: {
+        universalIdentifier: 'aeb1a006-0913-4000-8001-000000000913',
+      },
+      statusIndex: {
+        universalIdentifier: 'aeb1a006-0914-4000-8001-000000000914',
+      },
+      ownerWorkspaceMemberIdIndex: {
+        universalIdentifier: 'aeb1a006-0915-4000-8001-000000000915',
+      },
     },
     views: {
       allAnalyticsDashboardConfigs: {
         universalIdentifier: 'aeb1a006-0807-4000-8001-000000000807',
         viewFields: {
           name: { universalIdentifier: 'aeb1a006-0707-4000-8001-000000000707' },
-          scope: { universalIdentifier: 'aeb1a006-0708-4000-8001-000000000708' },
-          audience: { universalIdentifier: 'aeb1a006-0709-4000-8001-000000000709' },
+          scope: {
+            universalIdentifier: 'aeb1a006-0708-4000-8001-000000000708',
+          },
+          audience: {
+            universalIdentifier: 'aeb1a006-0709-4000-8001-000000000709',
+          },
         },
-        viewFieldGroups: { general: { universalIdentifier: 'aeb1a006-0809-4000-8001-000000000809' }, },
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: 'aeb1a006-0809-4000-8001-000000000809',
+          },
+        },
       },
       analyticsDashboardConfigRecordPageFields: {
         universalIdentifier: 'aeb1a006-0808-4000-8001-000000000808',

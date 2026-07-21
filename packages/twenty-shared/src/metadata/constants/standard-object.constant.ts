@@ -1715,6 +1715,9 @@ export const STANDARD_OBJECTS = {
       listMemberships: {
         universalIdentifier: '8b8d1be0-4c94-4413-a2c9-c7ede205a81d',
       },
+      clientStakeholderRoles: {
+        universalIdentifier: '20202020-b3cc-4d21-8f42-bb8c81c54432',
+      },
       billingContactForClientAccountProfiles: {
         universalIdentifier: '20202020-3d7e-4ea4-9d8d-a87e5e325040',
       },
@@ -5594,6 +5597,106 @@ export const STANDARD_OBJECTS = {
       },
       clientBillingContact: {
         universalIdentifier: '20202020-d8c8-4d45-90eb-5bc21f3c25bc',
+      },
+    },
+  },
+  clientStakeholderRole: {
+    universalIdentifier: '20202020-6fbf-44b3-9797-60fe520e0927',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '20202020-6fbf-44b3-9797-60fe520e0927',
+      ),
+      name: { universalIdentifier: '20202020-a0b0-445a-a128-f1d72efbdb3c' },
+      role: { universalIdentifier: '20202020-396a-415a-ab4c-d1e473c05af4' },
+      isPrimary: {
+        universalIdentifier: '20202020-73a6-4b72-9d36-8fa2240c4c12',
+      },
+      notes: { universalIdentifier: '20202020-5e4c-494d-9473-afc0b884eb31' },
+      person: { universalIdentifier: '20202020-c7f7-49bb-941c-81dfde307370' },
+      company: {
+        universalIdentifier: '20202020-ed0a-4d0a-b977-21e61a039eed',
+      },
+      clientAccountProfile: {
+        universalIdentifier: '20202020-9cd9-4c20-b0cf-50ba3ed5e65d',
+      },
+    },
+    indexes: {
+      personCompanyUniqueIndex: {
+        universalIdentifier: '20202020-3bf7-4920-a283-d1363c5dcc5f',
+      },
+      companyIdIndex: {
+        universalIdentifier: '20202020-0ece-43c5-a5d3-6cfa973756af',
+      },
+      searchVectorGinIndex: {
+        universalIdentifier: '20202020-3216-4e8d-8221-c0a1bff7c30c',
+      },
+    },
+    views: {
+      allClientStakeholderRoles: {
+        universalIdentifier: '20202020-5ba2-49d0-a586-2a7777dddb21',
+        viewFields: {
+          name: {
+            universalIdentifier: '20202020-e5a4-4d0e-af34-3fea62f4ee93',
+          },
+          person: {
+            universalIdentifier: '20202020-924c-4563-94f8-806662c1df8e',
+          },
+          company: {
+            universalIdentifier: '20202020-35a8-4bae-b7c7-dd3d0e8e44f1',
+          },
+          role: {
+            universalIdentifier: '20202020-c7a7-4eb4-9e6b-8131cbd532f3',
+          },
+          isPrimary: {
+            universalIdentifier: '20202020-fbfd-4e1a-8efe-3c401c02cf86',
+          },
+          createdAt: {
+            universalIdentifier: '20202020-040c-45e6-a55b-9d4045b3b376',
+          },
+        },
+      },
+      clientStakeholderRoleRecordPageFields: {
+        universalIdentifier: '20202020-caea-4ffc-8579-f666f5cf3ce0',
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: '20202020-e766-4273-83ae-f970a12f72c4',
+          },
+          relations: {
+            universalIdentifier: '20202020-eba4-4201-bcba-ce802da6c20f',
+          },
+          system: {
+            universalIdentifier: '20202020-c78d-471d-9885-e0e08600d5e4',
+          },
+        },
+        viewFields: {
+          name: {
+            universalIdentifier: '20202020-ec8e-4a8b-8ce3-b831bab9db6e',
+          },
+          person: {
+            universalIdentifier: '20202020-f377-43b5-af98-dc7e2861c15c',
+          },
+          company: {
+            universalIdentifier: '20202020-2e50-419d-85ff-2f8b57fd6faf',
+          },
+          role: {
+            universalIdentifier: '20202020-7036-4307-9e08-274616b9d9c0',
+          },
+          isPrimary: {
+            universalIdentifier: '20202020-9e5e-4b40-8755-974ca93e3aa0',
+          },
+          notes: {
+            universalIdentifier: '20202020-9845-4773-b802-96e73c1288a1',
+          },
+          clientAccountProfile: {
+            universalIdentifier: '20202020-944c-4dff-b19b-13a19c1c8d4e',
+          },
+          createdAt: {
+            universalIdentifier: '20202020-23fa-4e05-9df1-8500cc682117',
+          },
+          updatedAt: {
+            universalIdentifier: '20202020-8a00-43f4-8864-be66c70cd93f',
+          },
+        },
       },
     },
   },

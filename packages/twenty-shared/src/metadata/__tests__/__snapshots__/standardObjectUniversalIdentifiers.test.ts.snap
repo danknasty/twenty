@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`STANDARD_OBJECTS universal identifiers should never change without an explicit snapshot update 1`] = `
 {
@@ -1934,6 +1934,135 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
           },
           "slate": {
             "universalIdentifier": "aeb1a006-0050-4000-8006-aeb1a0010008",
+          },
+        },
+      },
+    },
+  },
+  "clientStakeholderRole": {
+    "fields": {
+      "clientAccountProfile": {
+        "universalIdentifier": "20202020-9cd9-4c20-b0cf-50ba3ed5e65d",
+      },
+      "company": {
+        "universalIdentifier": "20202020-ed0a-4d0a-b977-21e61a039eed",
+      },
+      "createdAt": {
+        "universalIdentifier": "43748660-d32b-51ae-a1f4-dae7fe9bb626",
+      },
+      "createdBy": {
+        "universalIdentifier": "fb41e798-e603-562e-9635-3bd9a0294223",
+      },
+      "deletedAt": {
+        "universalIdentifier": "aeefc83b-f75b-555b-9fbd-ce5d34bc8758",
+      },
+      "id": {
+        "universalIdentifier": "b8b5d56b-86a4-5441-a6fc-7f940442dfbe",
+      },
+      "isPrimary": {
+        "universalIdentifier": "20202020-73a6-4b72-9d36-8fa2240c4c12",
+      },
+      "name": {
+        "universalIdentifier": "20202020-a0b0-445a-a128-f1d72efbdb3c",
+      },
+      "notes": {
+        "universalIdentifier": "20202020-5e4c-494d-9473-afc0b884eb31",
+      },
+      "person": {
+        "universalIdentifier": "20202020-c7f7-49bb-941c-81dfde307370",
+      },
+      "position": {
+        "universalIdentifier": "3cd9338e-14a4-5c3a-9aca-6ec05fe41fde",
+      },
+      "role": {
+        "universalIdentifier": "20202020-396a-415a-ab4c-d1e473c05af4",
+      },
+      "searchVector": {
+        "universalIdentifier": "7d5e9752-9986-5787-8690-f03328a064e3",
+      },
+      "updatedAt": {
+        "universalIdentifier": "026b4bb7-c4d7-5ff5-915c-380aa2c943c0",
+      },
+      "updatedBy": {
+        "universalIdentifier": "b568c116-594e-5e3b-9083-f012a9ca803b",
+      },
+    },
+    "indexes": {
+      "companyIdIndex": {
+        "universalIdentifier": "20202020-0ece-43c5-a5d3-6cfa973756af",
+      },
+      "personCompanyUniqueIndex": {
+        "universalIdentifier": "20202020-3bf7-4920-a283-d1363c5dcc5f",
+      },
+      "searchVectorGinIndex": {
+        "universalIdentifier": "20202020-3216-4e8d-8221-c0a1bff7c30c",
+      },
+    },
+    "universalIdentifier": "20202020-6fbf-44b3-9797-60fe520e0927",
+    "views": {
+      "allClientStakeholderRoles": {
+        "universalIdentifier": "20202020-5ba2-49d0-a586-2a7777dddb21",
+        "viewFields": {
+          "company": {
+            "universalIdentifier": "20202020-35a8-4bae-b7c7-dd3d0e8e44f1",
+          },
+          "createdAt": {
+            "universalIdentifier": "20202020-040c-45e6-a55b-9d4045b3b376",
+          },
+          "isPrimary": {
+            "universalIdentifier": "20202020-fbfd-4e1a-8efe-3c401c02cf86",
+          },
+          "name": {
+            "universalIdentifier": "20202020-e5a4-4d0e-af34-3fea62f4ee93",
+          },
+          "person": {
+            "universalIdentifier": "20202020-924c-4563-94f8-806662c1df8e",
+          },
+          "role": {
+            "universalIdentifier": "20202020-c7a7-4eb4-9e6b-8131cbd532f3",
+          },
+        },
+      },
+      "clientStakeholderRoleRecordPageFields": {
+        "universalIdentifier": "20202020-caea-4ffc-8579-f666f5cf3ce0",
+        "viewFieldGroups": {
+          "general": {
+            "universalIdentifier": "20202020-e766-4273-83ae-f970a12f72c4",
+          },
+          "relations": {
+            "universalIdentifier": "20202020-eba4-4201-bcba-ce802da6c20f",
+          },
+          "system": {
+            "universalIdentifier": "20202020-c78d-471d-9885-e0e08600d5e4",
+          },
+        },
+        "viewFields": {
+          "clientAccountProfile": {
+            "universalIdentifier": "20202020-944c-4dff-b19b-13a19c1c8d4e",
+          },
+          "company": {
+            "universalIdentifier": "20202020-2e50-419d-85ff-2f8b57fd6faf",
+          },
+          "createdAt": {
+            "universalIdentifier": "20202020-23fa-4e05-9df1-8500cc682117",
+          },
+          "isPrimary": {
+            "universalIdentifier": "20202020-9e5e-4b40-8755-974ca93e3aa0",
+          },
+          "name": {
+            "universalIdentifier": "20202020-ec8e-4a8b-8ce3-b831bab9db6e",
+          },
+          "notes": {
+            "universalIdentifier": "20202020-9845-4773-b802-96e73c1288a1",
+          },
+          "person": {
+            "universalIdentifier": "20202020-f377-43b5-af98-dc7e2861c15c",
+          },
+          "role": {
+            "universalIdentifier": "20202020-7036-4307-9e08-274616b9d9c0",
+          },
+          "updatedAt": {
+            "universalIdentifier": "20202020-8a00-43f4-8864-be66c70cd93f",
           },
         },
       },
@@ -5864,6 +5993,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
       "candidacies": {
         "universalIdentifier": "20202020-c001-4859-0415-8a9b0c1d2e40",
+      },
+      "clientStakeholderRoles": {
+        "universalIdentifier": "20202020-b3cc-4d21-8f42-bb8c81c54432",
       },
       "company": {
         "universalIdentifier": "20202020-e2f3-448e-b34c-2d625f0025fd",

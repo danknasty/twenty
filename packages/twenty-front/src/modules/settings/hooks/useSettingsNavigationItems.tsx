@@ -1,4 +1,5 @@
-import { FeatureFlagKey, SettingsPath } from 'twenty-shared/types';
+import { FeatureFlagKey } from '~/generated-metadata/graphql';
+import { SettingsPath } from 'twenty-shared/types';
 
 import { useAuth } from '@/auth/hooks/useAuth';
 import { currentUserState } from '@/auth/states/currentUserState';

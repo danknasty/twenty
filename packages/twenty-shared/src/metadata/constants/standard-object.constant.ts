@@ -3973,6 +3973,14 @@ export const STANDARD_OBJECTS = {
       },
       clientAccountProfile: {
         universalIdentifier: '20202020-9cd9-4c20-b0cf-50ba3ed5e65d',
+        fields: {
+          company: {
+            universalIdentifier: '20202020-72f1-4a2a-a39e-6f27eefc7451',
+          },
+          clientBillingContact: {
+            universalIdentifier: '20202020-d8c8-4d45-90eb-5bc21f3c25bc',
+          },
+        },
       },
     },
     indexes: {

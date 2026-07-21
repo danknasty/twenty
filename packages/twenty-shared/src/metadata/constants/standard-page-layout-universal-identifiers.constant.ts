@@ -647,6 +647,14 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
           },
         },
       },
+      timeline: {
+        universalIdentifier: '20202020-b229-4d6e-aad5-d669a48d470c',
+        widgets: {
+          timeline: {
+            universalIdentifier: '20202020-9bd0-4922-8a0d-ad0d29287ad7',
+          },
+        },
+      },
     },
   },
   executiveProfileRecordPage: {
@@ -902,6 +910,14 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
         widgets: {
           fields: {
             universalIdentifier: 'f0e1d2c3-b101-4c6d-8e7f-9a0b1c2d3101',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'f0e1d2c3-b002-4c6d-8e7f-9a0b1c2d3002',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'f0e1d2c3-b102-4c6d-8e7f-9a0b1c2d3102',
           },
         },
       },

@@ -145,10 +145,7 @@ export function parseFieldOwnershipCsv(
     }
 
     // Skip the header row.
-    if (
-      index === 0 &&
-      /collection\s*,\s*field_group/i.test(line)
-    ) {
+    if (index === 0 && /collection\s*,\s*field_group/i.test(line)) {
       continue;
     }
 

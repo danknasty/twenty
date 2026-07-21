@@ -16,7 +16,8 @@ import { EXECUTIVE_SYNC_OUTBOX_REDRIVE_CRON_PATTERN } from 'src/modules/executiv
 import { ExecutiveSyncProcessOutboxJob } from 'src/modules/executive-search/sync/jobs/executive-sync-process-outbox.job';
 import { ExecutiveSearchOutboxService } from 'src/modules/executive-search/sync/services/outbox.service';
 
-export const EXECUTIVE_SYNC_OUTBOX_REDRIVE_JOB_NAME = 'ExecutiveSearchOutboxRedriveJob';
+export const EXECUTIVE_SYNC_OUTBOX_REDRIVE_JOB_NAME =
+  'ExecutiveSearchOutboxRedriveJob';
 
 @Processor(MessageQueue.cronQueue)
 export class ExecutiveSearchOutboxRedriveJob {
@@ -73,10 +74,7 @@ export class ExecutiveSearchOutboxRedriveJob {
 
         for (const entry of staleEntries) {
           // Reset to PENDING so deliver()'s atomic claim can pick it up
-          await this.outboxService.resetStaleToPending(
-            workspace.id,
-            entry.id,
-          );
+          await this.outboxService.resetStaleToPending(workspace.id, entry.id);
           await this.executiveSyncQueue.add(
             ExecutiveSyncProcessOutboxJob.name,
             { workspaceId: workspace.id, outboxId: entry.id },
@@ -89,8 +87,7 @@ export class ExecutiveSearchOutboxRedriveJob {
           );
         }
       } catch (err) {
-        const message =
-          err instanceof Error ? err.message : 'Unknown error';
+        const message = err instanceof Error ? err.message : 'Unknown error';
         this.logger.error(
           `Failed to redrive outbox for workspace ${workspace.id}: ${message}`,
         );

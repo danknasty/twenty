@@ -1,7 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 
-import type { ReconciliationEngine } from
-  'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
+import type { ReconciliationEngine } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
 
 @Injectable()
 export class ReconciliationEngineRegistry {
@@ -15,9 +14,7 @@ export class ReconciliationEngineRegistry {
     const engine = this.engines.get(name);
 
     if (!engine) {
-      throw new NotFoundException(
-        `Reconciliation engine "${name}" not found`,
-      );
+      throw new NotFoundException(`Reconciliation engine "${name}" not found`);
     }
 
     return engine;

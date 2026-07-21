@@ -8,20 +8,19 @@ export const computeSlateMembershipViewFields = (
   args: Omit<CreateStandardViewFieldArgs<'slateMembership'>, 'context'>,
 ): Record<string, FlatViewField> => {
   return {
-    slateMembershipRecordPageFieldsName:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'slateMembership',
-        context: {
-          viewName: 'slateMembershipRecordPageFields',
-          viewFieldName: 'name',
-          fieldName: 'name',
-          position: 0,
-          isVisible: true,
-          size: 200,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    slateMembershipRecordPageFieldsName: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'slateMembership',
+      context: {
+        viewName: 'slateMembershipRecordPageFields',
+        viewFieldName: 'name',
+        fieldName: 'name',
+        position: 0,
+        isVisible: true,
+        size: 200,
+        viewFieldGroupName: 'general',
+      },
+    }),
     slateMembershipRecordPageFieldsPosition:
       createStandardViewFieldFlatMetadata({
         ...args,
@@ -36,20 +35,19 @@ export const computeSlateMembershipViewFields = (
           viewFieldGroupName: 'general',
         },
       }),
-    slateMembershipRecordPageFieldsStatus:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'slateMembership',
-        context: {
-          viewName: 'slateMembershipRecordPageFields',
-          viewFieldName: 'status',
-          fieldName: 'status',
-          position: 2,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    slateMembershipRecordPageFieldsStatus: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'slateMembership',
+      context: {
+        viewName: 'slateMembershipRecordPageFields',
+        viewFieldName: 'status',
+        fieldName: 'status',
+        position: 2,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
     slateMembershipRecordPageFieldsPresentationConsentObtained:
       createStandardViewFieldFlatMetadata({
         ...args,
@@ -64,20 +62,19 @@ export const computeSlateMembershipViewFields = (
           viewFieldGroupName: 'general',
         },
       }),
-    slateMembershipRecordPageFieldsSlate:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'slateMembership',
-        context: {
-          viewName: 'slateMembershipRecordPageFields',
-          viewFieldName: 'slate',
-          fieldName: 'slate',
-          position: 4,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    slateMembershipRecordPageFieldsSlate: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'slateMembership',
+      context: {
+        viewName: 'slateMembershipRecordPageFields',
+        viewFieldName: 'slate',
+        fieldName: 'slate',
+        position: 4,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
     slateMembershipRecordPageFieldsCandidacy:
       createStandardViewFieldFlatMetadata({
         ...args,

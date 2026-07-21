@@ -5,6 +5,7 @@ import {
   STANDARD_CALENDAR_EVENT_PARTICIPANT_PAGE_LAYOUT_CONFIG,
   STANDARD_CALL_RECORDING_PAGE_LAYOUT_CONFIG,
   STANDARD_CANDIDACY_STAGE_EVENT_PAGE_LAYOUT_CONFIG,
+  STANDARD_SEARCH_CANDIDACY_PAGE_LAYOUT_CONFIG,
   STANDARD_CLIENT_ACCOUNT_PROFILE_PAGE_LAYOUT_CONFIG,
   STANDARD_CLIENT_STAKEHOLDER_ROLE_PAGE_LAYOUT_CONFIG,
   STANDARD_COMPANY_PAGE_LAYOUT_CONFIG,
@@ -52,8 +53,8 @@ import { STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG } from 'src/engine/wor
 import { STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-external-identity-match-queue-page-layout.config';
 import { STANDARD_ANALYTICS_DOMAIN_METRIC_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-domain-metric-page-layout.config';
 import { STANDARD_ANALYTICS_METRIC_SNAPSHOT_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-metric-snapshot-page-layout.config';
-import { STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-dashboard-config-page-layout.config';import { STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-model-registry-page-layout.config';
-import { STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-prompt-template-page-layout.config';
+import { STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-dashboard-config-page-layout.config';
+import { STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-model-registry-page-layout.config';
 import { STANDARD_AI_PROVIDER_CALL_LOG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-provider-call-log-page-layout.config';
 import { STANDARD_APP_AGENTS_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-app-agents-page-layout.config';
 
@@ -68,8 +69,8 @@ export const STANDARD_PAGE_LAYOUTS = {
   callRecordingRecordPage: STANDARD_CALL_RECORDING_PAGE_LAYOUT_CONFIG,
   candidacyStageEventRecordPage:
     STANDARD_CANDIDACY_STAGE_EVENT_PAGE_LAYOUT_CONFIG,
-  searchCandidacyRecordPage:
-    STANDARD_SEARCH_CANDIDACY_PAGE_LAYOUT_CONFIG,
+  STANDARD_SEARCH_CANDIDACY_PAGE_LAYOUT_CONFIG,
+  searchCandidacyRecordPage: STANDARD_SEARCH_CANDIDACY_PAGE_LAYOUT_CONFIG,
   clientAccountProfileRecordPage:
     STANDARD_CLIENT_ACCOUNT_PROFILE_PAGE_LAYOUT_CONFIG,
   clientStakeholderRoleRecordPage:
@@ -95,35 +96,25 @@ export const STANDARD_PAGE_LAYOUTS = {
     STANDARD_WORKFLOW_AUTOMATED_TRIGGER_PAGE_LAYOUT_CONFIG,
   workflowVersionRecordPage: STANDARD_WORKFLOW_VERSION_PAGE_LAYOUT_CONFIG,
   workflowRunRecordPage: STANDARD_WORKFLOW_RUN_PAGE_LAYOUT_CONFIG,
-  searchCandidacyRecordPage: STANDARD_SEARCH_CANDIDACY_PAGE_LAYOUT_CONFIG,
-  searchInterviewRecordPage:
-    STANDARD_SEARCH_INTERVIEW_PAGE_LAYOUT_CONFIG,
-  referenceCheckRecordPage:
-    STANDARD_REFERENCE_CHECK_PAGE_LAYOUT_CONFIG,
-  diligenceCheckRecordPage:
-    STANDARD_DILIGENCE_CHECK_PAGE_LAYOUT_CONFIG,
+  searchInterviewRecordPage: STANDARD_SEARCH_INTERVIEW_PAGE_LAYOUT_CONFIG,
+  referenceCheckRecordPage: STANDARD_REFERENCE_CHECK_PAGE_LAYOUT_CONFIG,
+  diligenceCheckRecordPage: STANDARD_DILIGENCE_CHECK_PAGE_LAYOUT_CONFIG,
   executiveAssessmentRecordPage:
     STANDARD_EXECUTIVE_ASSESSMENT_PAGE_LAYOUT_CONFIG,
   criterionEvaluationRecordPage:
     STANDARD_CRITERION_EVALUATION_PAGE_LAYOUT_CONFIG,
-  searchSlateRecordPage:
-    STANDARD_SEARCH_SLATE_PAGE_LAYOUT_CONFIG,
-  slateMembershipRecordPage:
-    STANDARD_SLATE_MEMBERSHIP_PAGE_LAYOUT_CONFIG,
+  searchSlateRecordPage: STANDARD_SEARCH_SLATE_PAGE_LAYOUT_CONFIG,
+  slateMembershipRecordPage: STANDARD_SLATE_MEMBERSHIP_PAGE_LAYOUT_CONFIG,
   candidatePresentationRecordPage:
     STANDARD_CANDIDATE_PRESENTATION_PAGE_LAYOUT_CONFIG,
-  clientFeedbackRecordPage:
-    STANDARD_CLIENT_FEEDBACK_PAGE_LAYOUT_CONFIG,
+  clientFeedbackRecordPage: STANDARD_CLIENT_FEEDBACK_PAGE_LAYOUT_CONFIG,
   searchStatusReportRecordPage:
     STANDARD_SEARCH_STATUS_REPORT_PAGE_LAYOUT_CONFIG,
   compensationExpectationRecordPage:
     STANDARD_COMPENSATION_EXPECTATION_PAGE_LAYOUT_CONFIG,
-  offerNegotiationRecordPage:
-    STANDARD_OFFER_NEGOTIATION_PAGE_LAYOUT_CONFIG,
-  placementRecordPage:
-    STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG,
-  guaranteeCaseRecordPage:
-    STANDARD_GUARANTEE_CASE_PAGE_LAYOUT_CONFIG,
+  offerNegotiationRecordPage: STANDARD_OFFER_NEGOTIATION_PAGE_LAYOUT_CONFIG,
+  placementRecordPage: STANDARD_PLACEMENT_PAGE_LAYOUT_CONFIG,
+  guaranteeCaseRecordPage: STANDARD_GUARANTEE_CASE_PAGE_LAYOUT_CONFIG,
   boardCompositionProfileRecordPage:
     STANDARD_BOARD_COMPOSITION_PROFILE_PAGE_LAYOUT_CONFIG,
   boardMatrixCriterionRecordPage:
@@ -134,22 +125,20 @@ export const STANDARD_PAGE_LAYOUTS = {
     STANDARD_DIRECTOR_INDEPENDENCE_REVIEW_PAGE_LAYOUT_CONFIG,
   boardCommitmentReviewRecordPage:
     STANDARD_BOARD_COMMITMENT_REVIEW_PAGE_LAYOUT_CONFIG,
-  aiPromptTemplateRecordPage:
-    STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG,
+  aiPromptTemplateRecordPage: STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG,
   retentionActionLogRecordPage:
     STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG,
   externalIdentityMatchQueueRecordPage:
     STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG,
-  analyticsDomainMetricRecordPage: STANDARD_ANALYTICS_DOMAIN_METRIC_PAGE_LAYOUT_CONFIG,
-  analyticsMetricSnapshotRecordPage: STANDARD_ANALYTICS_METRIC_SNAPSHOT_PAGE_LAYOUT_CONFIG,
-  analyticsDashboardConfigRecordPage: STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG,  aiModelRegistryRecordPage:
-    STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG,
-  aiPromptTemplateRecordPage:
-    STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG,
-  aiProviderCallLogRecordPage:
-    STANDARD_AI_PROVIDER_CALL_LOG_PAGE_LAYOUT_CONFIG,
-  appAgentsRecordPage:
-    STANDARD_APP_AGENTS_PAGE_LAYOUT_CONFIG,
+  analyticsDomainMetricRecordPage:
+    STANDARD_ANALYTICS_DOMAIN_METRIC_PAGE_LAYOUT_CONFIG,
+  analyticsMetricSnapshotRecordPage:
+    STANDARD_ANALYTICS_METRIC_SNAPSHOT_PAGE_LAYOUT_CONFIG,
+  analyticsDashboardConfigRecordPage:
+    STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG,
+  aiModelRegistryRecordPage: STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG,
+  aiProviderCallLogRecordPage: STANDARD_AI_PROVIDER_CALL_LOG_PAGE_LAYOUT_CONFIG,
+  appAgentsRecordPage: STANDARD_APP_AGENTS_PAGE_LAYOUT_CONFIG,
 } as const;
 
 const { myFirstDashboard: _myFirstDashboard, ...recordPageLayouts } =

@@ -16,8 +16,8 @@ import {
 const CANDIDACY_STAGE_EVENT_PAGE_TABS = {
   home: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-        .candidacyStageEventRecordPage.tabs.home.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.candidacyStageEventRecordPage
+        .tabs.home.universalIdentifier,
     ...TAB_PROPS.home,
     widgets: {
       fields: {
@@ -31,8 +31,8 @@ const CANDIDACY_STAGE_EVENT_PAGE_TABS = {
   },
   timeline: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-        .candidacyStageEventRecordPage.tabs.timeline.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.candidacyStageEventRecordPage
+        .tabs.timeline.universalIdentifier,
     ...TAB_PROPS.timeline,
     widgets: {
       timeline: {

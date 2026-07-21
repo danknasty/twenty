@@ -13,10 +13,7 @@ export const buildClientAccountProfileStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'clientAccountProfile'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'clientAccountProfile'>, 'context'>): Record<
   AllStandardObjectIndexName<'clientAccountProfile'>,
   FlatIndexMetadata
 > => ({

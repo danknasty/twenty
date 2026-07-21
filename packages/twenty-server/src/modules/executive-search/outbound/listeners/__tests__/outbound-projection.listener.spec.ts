@@ -46,7 +46,11 @@ describe('OutboundProjectionListener', () => {
           before:
             action === DatabaseEventAction.DELETED ||
             action === DatabaseEventAction.DESTROYED
-              ? { id: 'rec-1', name: 'Test Co', updatedAt: '2024-01-01T00:00:00Z' }
+              ? {
+                  id: 'rec-1',
+                  name: 'Test Co',
+                  updatedAt: '2024-01-01T00:00:00Z',
+                }
               : undefined,
         },
       },
@@ -56,7 +60,9 @@ describe('OutboundProjectionListener', () => {
 
   beforeEach(() => {
     mockOutboxService = {
-      enqueue: jest.fn().mockResolvedValue({ id: 'outbox-1' } as ExternalSyncOutboxWorkspaceEntity),
+      enqueue: jest.fn().mockResolvedValue({
+        id: 'outbox-1',
+      } as ExternalSyncOutboxWorkspaceEntity),
       markSent: jest.fn(),
       markFailed: jest.fn(),
       findReadyForRetry: jest.fn(),
@@ -64,23 +70,29 @@ describe('OutboundProjectionListener', () => {
     } as unknown as jest.Mocked<ExecutiveSearchOutboxService>;
 
     mockMapper = {
-      mapCompanyEvent: jest.fn().mockImplementation(
-        (action: DatabaseEventAction, record: Record<string, unknown>) => {
-          if (
-            action === DatabaseEventAction.DELETED ||
-            action === DatabaseEventAction.DESTROYED
-          ) {
+      mapCompanyEvent: jest
+        .fn()
+        .mockImplementation(
+          (action: DatabaseEventAction, record: Record<string, unknown>) => {
+            if (
+              action === DatabaseEventAction.DELETED ||
+              action === DatabaseEventAction.DESTROYED
+            ) {
+              return {
+                eventType: 'company.projection_deleted',
+                payload: { id: record.id },
+              };
+            }
             return {
-              eventType: 'company.projection_deleted',
-              payload: { id: record.id },
+              eventType: 'company.projection_updated',
+              payload: {
+                id: record.id,
+                name: record.name,
+                updatedAt: record.updatedAt,
+              },
             };
-          }
-          return {
-            eventType: 'company.projection_updated',
-            payload: { id: record.id, name: record.name, updatedAt: record.updatedAt },
-          };
-        },
-      ),
+          },
+        ),
       mapOpportunitySourceEvent: jest.fn(),
     } as unknown as jest.Mocked<OutboundEventMapperService>;
 
@@ -137,7 +149,9 @@ describe('OutboundProjectionListener', () => {
         name: 'Test Co',
       });
       expect(enqueueCall.domainIdempotencyKey).toContain(workspaceId);
-      expect(enqueueCall.domainIdempotencyKey).toContain('company.projection_updated');
+      expect(enqueueCall.domainIdempotencyKey).toContain(
+        'company.projection_updated',
+      );
       expect(enqueueCall.domainIdempotencyKey).toContain('rec-1');
     });
   });
@@ -316,7 +330,9 @@ describe('OutboundProjectionListener', () => {
 
       await listener.handleCompanyCreated(payload);
 
-      expect(mockRetentionActionService.isUnderLegalHold).not.toHaveBeenCalled();
+      expect(
+        mockRetentionActionService.isUnderLegalHold,
+      ).not.toHaveBeenCalled();
       expect(mockOutboxService.enqueue).toHaveBeenCalledTimes(1);
     });
 

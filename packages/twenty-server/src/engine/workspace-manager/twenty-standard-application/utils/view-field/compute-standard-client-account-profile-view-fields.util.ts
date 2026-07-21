@@ -59,32 +59,30 @@ export const computeStandardClientAccountProfileViewFields = (
           size: 150,
         },
       }),
-    allClientAccountProfilesClientSince:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'clientAccountProfile',
-        context: {
-          viewName: 'allClientAccountProfiles',
-          viewFieldName: 'clientSince',
-          fieldName: 'clientSince',
-          position: 4,
-          isVisible: true,
-          size: 150,
-        },
-      }),
-    allClientAccountProfilesCreatedAt:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'clientAccountProfile',
-        context: {
-          viewName: 'allClientAccountProfiles',
-          viewFieldName: 'createdAt',
-          fieldName: 'createdAt',
-          position: 5,
-          isVisible: true,
-          size: 150,
-        },
-      }),
+    allClientAccountProfilesClientSince: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'clientAccountProfile',
+      context: {
+        viewName: 'allClientAccountProfiles',
+        viewFieldName: 'clientSince',
+        fieldName: 'clientSince',
+        position: 4,
+        isVisible: true,
+        size: 150,
+      },
+    }),
+    allClientAccountProfilesCreatedAt: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'clientAccountProfile',
+      context: {
+        viewName: 'allClientAccountProfiles',
+        viewFieldName: 'createdAt',
+        fieldName: 'createdAt',
+        position: 5,
+        isVisible: true,
+        size: 150,
+      },
+    }),
 
     // clientAccountProfileRecordPageFields view fields
     // General group

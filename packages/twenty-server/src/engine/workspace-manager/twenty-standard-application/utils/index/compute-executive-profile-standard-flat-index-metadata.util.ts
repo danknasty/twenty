@@ -12,10 +12,7 @@ export const buildExecutiveProfileStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'executiveProfile'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'executiveProfile'>, 'context'>): Record<
   AllStandardObjectIndexName<'executiveProfile'>,
   FlatIndexMetadata
 > => ({

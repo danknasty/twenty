@@ -8,20 +8,19 @@ export const computeClientFeedbackViewFields = (
   args: Omit<CreateStandardViewFieldArgs<'clientFeedback'>, 'context'>,
 ): Record<string, FlatViewField> => {
   return {
-    clientFeedbackRecordPageFieldsName:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'clientFeedback',
-        context: {
-          viewName: 'clientFeedbackRecordPageFields',
-          viewFieldName: 'name',
-          fieldName: 'name',
-          position: 0,
-          isVisible: true,
-          size: 200,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    clientFeedbackRecordPageFieldsName: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'clientFeedback',
+      context: {
+        viewName: 'clientFeedbackRecordPageFields',
+        viewFieldName: 'name',
+        fieldName: 'name',
+        position: 0,
+        isVisible: true,
+        size: 200,
+        viewFieldGroupName: 'general',
+      },
+    }),
     clientFeedbackRecordPageFieldsFeedbackType:
       createStandardViewFieldFlatMetadata({
         ...args,
@@ -36,22 +35,21 @@ export const computeClientFeedbackViewFields = (
           viewFieldGroupName: 'general',
         },
       }),
-    clientFeedbackRecordPageFieldsRating:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'clientFeedback',
-        context: {
-          viewName: 'clientFeedbackRecordPageFields',
-          viewFieldName: 'rating',
-          fieldName: 'rating',
-          position: 2,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
-    clientFeedbackRecordPageFieldsComments:
-      createStandardViewFieldFlatMetadata({
+    clientFeedbackRecordPageFieldsRating: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'clientFeedback',
+      context: {
+        viewName: 'clientFeedbackRecordPageFields',
+        viewFieldName: 'rating',
+        fieldName: 'rating',
+        position: 2,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
+    clientFeedbackRecordPageFieldsComments: createStandardViewFieldFlatMetadata(
+      {
         ...args,
         objectName: 'clientFeedback',
         context: {
@@ -63,7 +61,8 @@ export const computeClientFeedbackViewFields = (
           size: 150,
           viewFieldGroupName: 'general',
         },
-      }),
+      },
+    ),
     clientFeedbackRecordPageFieldsReceivedAt:
       createStandardViewFieldFlatMetadata({
         ...args,
@@ -106,20 +105,19 @@ export const computeClientFeedbackViewFields = (
           viewFieldGroupName: 'general',
         },
       }),
-    clientFeedbackRecordPageFieldsSlate:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'clientFeedback',
-        context: {
-          viewName: 'clientFeedbackRecordPageFields',
-          viewFieldName: 'slate',
-          fieldName: 'slate',
-          position: 7,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    clientFeedbackRecordPageFieldsSlate: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'clientFeedback',
+      context: {
+        viewName: 'clientFeedbackRecordPageFields',
+        viewFieldName: 'slate',
+        fieldName: 'slate',
+        position: 7,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
     clientFeedbackRecordPageFieldsPresentation:
       createStandardViewFieldFlatMetadata({
         ...args,

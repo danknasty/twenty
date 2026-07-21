@@ -21,10 +21,7 @@ describe('AiContextFirewallService', () => {
     });
 
     it('returns [] for safe allowlist [name, experience]', () => {
-      const result = service.validateAiContextAllowlist([
-        'name',
-        'experience',
-      ]);
+      const result = service.validateAiContextAllowlist(['name', 'experience']);
 
       expect(result).toEqual([]);
     });

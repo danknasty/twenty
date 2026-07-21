@@ -8,9 +8,7 @@ import { RECONCILIATION_RUNNER_JOB_NAME } from 'src/engine/core-modules/executiv
 
 @Processor(MessageQueue.syncQueue)
 export class ReconciliationRunnerJob {
-  constructor(
-    private readonly reconciliationService: ReconciliationService,
-  ) {}
+  constructor(private readonly reconciliationService: ReconciliationService) {}
 
   @Process(RECONCILIATION_RUNNER_JOB_NAME)
   async handle(data: { workspaceId: string }): Promise<void> {

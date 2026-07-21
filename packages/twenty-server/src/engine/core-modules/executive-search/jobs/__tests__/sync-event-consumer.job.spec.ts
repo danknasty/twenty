@@ -117,15 +117,9 @@ describe('SyncEventConsumerJob', () => {
 
       await job.handle({ workspaceId, event: twentyEvent });
 
-      expect(
-        idempotencyService.checkAndRecord,
-      ).not.toHaveBeenCalled();
-      expect(
-        inboundEventLedgerService.markProcessing,
-      ).not.toHaveBeenCalled();
-      expect(
-        inboundEventLedgerService.markProcessed,
-      ).not.toHaveBeenCalled();
+      expect(idempotencyService.checkAndRecord).not.toHaveBeenCalled();
+      expect(inboundEventLedgerService.markProcessing).not.toHaveBeenCalled();
+      expect(inboundEventLedgerService.markProcessed).not.toHaveBeenCalled();
     });
   });
 
@@ -156,9 +150,10 @@ describe('SyncEventConsumerJob', () => {
           lastErrorCode: 'PROCESSING_ERROR',
         }),
       );
-      expect(
-        inboundEventLedgerService.markDeadLettered,
-      ).toHaveBeenCalledWith(workspaceId, baseEvent.eventId);
+      expect(inboundEventLedgerService.markDeadLettered).toHaveBeenCalledWith(
+        workspaceId,
+        baseEvent.eventId,
+      );
     });
   });
 

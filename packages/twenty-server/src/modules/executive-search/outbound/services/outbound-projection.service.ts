@@ -47,12 +47,11 @@ export class OutboundProjectionService {
       // 2. Atomic claim (PENDING → PROCESSING)
       await this.globalWorkspaceOrmManager.executeInWorkspaceContext(
         async () => {
-          const repository =
-            await this.globalWorkspaceOrmManager.getRepository(
-              workspaceId,
-              ExternalSyncOutboxWorkspaceEntity,
-              { shouldBypassPermissionChecks: true },
-            );
+          const repository = await this.globalWorkspaceOrmManager.getRepository(
+            workspaceId,
+            ExternalSyncOutboxWorkspaceEntity,
+            { shouldBypassPermissionChecks: true },
+          );
 
           const updateResult = await repository.update(
             { id: outboxId, status: OUTBOX_STATUS.PENDING },
@@ -192,13 +191,12 @@ export class OutboundProjectionService {
   /**
    * Map eventType to a Directus collection and determine the HTTP verb.
    */
-  private resolveEvent(
-    eventType: string,
-  ): { collection: string; verb: 'CREATE' | 'UPDATE' | 'DELETE' } {
+  private resolveEvent(eventType: string): {
+    collection: string;
+    verb: 'CREATE' | 'UPDATE' | 'DELETE';
+  } {
     // Company events
-    if (
-      eventType === 'company.projection_updated'
-    ) {
+    if (eventType === 'company.projection_updated') {
       return { collection: 'companies', verb: 'CREATE' };
     }
     if (eventType === 'company.projection_deleted') {

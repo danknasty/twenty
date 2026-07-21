@@ -16,8 +16,8 @@ import {
 const ANALYTICS_DOMAIN_METRIC_PAGE_TABS = {
   home: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-        .analyticsDomainMetricRecordPage.tabs.home.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.analyticsDomainMetricRecordPage
+        .tabs.home.universalIdentifier,
     ...TAB_PROPS.home,
     widgets: {
       fields: {
@@ -31,8 +31,8 @@ const ANALYTICS_DOMAIN_METRIC_PAGE_TABS = {
   },
   timeline: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-        .analyticsDomainMetricRecordPage.tabs.timeline.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.analyticsDomainMetricRecordPage
+        .tabs.timeline.universalIdentifier,
     ...TAB_PROPS.timeline,
     widgets: {
       timeline: {

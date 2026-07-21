@@ -8,64 +8,60 @@ export const computeSearchSlateViewFields = (
   args: Omit<CreateStandardViewFieldArgs<'searchSlate'>, 'context'>,
 ): Record<string, FlatViewField> => {
   return {
-    searchSlateRecordPageFieldsName:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchSlate',
-        context: {
-          viewName: 'searchSlateRecordPageFields',
-          viewFieldName: 'name',
-          fieldName: 'name',
-          position: 0,
-          isVisible: true,
-          size: 200,
-          viewFieldGroupName: 'general',
-        },
-      }),
-    searchSlateRecordPageFieldsSlateType:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchSlate',
-        context: {
-          viewName: 'searchSlateRecordPageFields',
-          viewFieldName: 'slateType',
-          fieldName: 'slateType',
-          position: 1,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
-    searchSlateRecordPageFieldsVersion:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchSlate',
-        context: {
-          viewName: 'searchSlateRecordPageFields',
-          viewFieldName: 'version',
-          fieldName: 'version',
-          position: 2,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
-    searchSlateRecordPageFieldsStatus:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchSlate',
-        context: {
-          viewName: 'searchSlateRecordPageFields',
-          viewFieldName: 'status',
-          fieldName: 'status',
-          position: 3,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
-    searchSlateRecordPageFieldsSubmittedAt:
-      createStandardViewFieldFlatMetadata({
+    searchSlateRecordPageFieldsName: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchSlate',
+      context: {
+        viewName: 'searchSlateRecordPageFields',
+        viewFieldName: 'name',
+        fieldName: 'name',
+        position: 0,
+        isVisible: true,
+        size: 200,
+        viewFieldGroupName: 'general',
+      },
+    }),
+    searchSlateRecordPageFieldsSlateType: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchSlate',
+      context: {
+        viewName: 'searchSlateRecordPageFields',
+        viewFieldName: 'slateType',
+        fieldName: 'slateType',
+        position: 1,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
+    searchSlateRecordPageFieldsVersion: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchSlate',
+      context: {
+        viewName: 'searchSlateRecordPageFields',
+        viewFieldName: 'version',
+        fieldName: 'version',
+        position: 2,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
+    searchSlateRecordPageFieldsStatus: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchSlate',
+      context: {
+        viewName: 'searchSlateRecordPageFields',
+        viewFieldName: 'status',
+        fieldName: 'status',
+        position: 3,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
+    searchSlateRecordPageFieldsSubmittedAt: createStandardViewFieldFlatMetadata(
+      {
         ...args,
         objectName: 'searchSlate',
         context: {
@@ -77,9 +73,10 @@ export const computeSearchSlateViewFields = (
           size: 150,
           viewFieldGroupName: 'general',
         },
-      }),
-    searchSlateRecordPageFieldsSubmittedBy:
-      createStandardViewFieldFlatMetadata({
+      },
+    ),
+    searchSlateRecordPageFieldsSubmittedBy: createStandardViewFieldFlatMetadata(
+      {
         ...args,
         objectName: 'searchSlate',
         context: {
@@ -91,9 +88,10 @@ export const computeSearchSlateViewFields = (
           size: 150,
           viewFieldGroupName: 'general',
         },
-      }),
-    searchSlateRecordPageFieldsClientNotes:
-      createStandardViewFieldFlatMetadata({
+      },
+    ),
+    searchSlateRecordPageFieldsClientNotes: createStandardViewFieldFlatMetadata(
+      {
         ...args,
         objectName: 'searchSlate',
         context: {
@@ -105,7 +103,8 @@ export const computeSearchSlateViewFields = (
           size: 150,
           viewFieldGroupName: 'general',
         },
-      }),
+      },
+    ),
     searchSlateRecordPageFieldsSearchAssignment:
       createStandardViewFieldFlatMetadata({
         ...args,
@@ -120,33 +119,31 @@ export const computeSearchSlateViewFields = (
           viewFieldGroupName: 'general',
         },
       }),
-    searchSlateRecordPageFieldsCreatedAt:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchSlate',
-        context: {
-          viewName: 'searchSlateRecordPageFields',
-          viewFieldName: 'createdAt',
-          fieldName: 'createdAt',
-          position: 8,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
-    searchSlateRecordPageFieldsCreatedBy:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchSlate',
-        context: {
-          viewName: 'searchSlateRecordPageFields',
-          viewFieldName: 'createdBy',
-          fieldName: 'createdBy',
-          position: 9,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    searchSlateRecordPageFieldsCreatedAt: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchSlate',
+      context: {
+        viewName: 'searchSlateRecordPageFields',
+        viewFieldName: 'createdAt',
+        fieldName: 'createdAt',
+        position: 8,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
+    searchSlateRecordPageFieldsCreatedBy: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchSlate',
+      context: {
+        viewName: 'searchSlateRecordPageFields',
+        viewFieldName: 'createdBy',
+        fieldName: 'createdBy',
+        position: 9,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
   };
 };

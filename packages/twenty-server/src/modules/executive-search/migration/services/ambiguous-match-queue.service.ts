@@ -45,67 +45,72 @@ export class AmbiguousMatchQueueService {
   ): Promise<number> {
     let enqueued = 0;
 
-    await this.globalWorkspaceOrmManager.executeInWorkspaceContext(
-      async () => {
-        const repo = await this.globalWorkspaceOrmManager.getRepository(
-          workspaceId,
-          ExternalIdentityMatchQueueWorkspaceEntity,
-          { shouldBypassPermissionChecks: true },
+    await this.globalWorkspaceOrmManager.executeInWorkspaceContext(async () => {
+      const repo = await this.globalWorkspaceOrmManager.getRepository(
+        workspaceId,
+        ExternalIdentityMatchQueueWorkspaceEntity,
+        { shouldBypassPermissionChecks: true },
+      );
+
+      for (const result of results) {
+        if (!this.shouldEnqueue(result)) {
+          continue;
+        }
+
+        // Look for an existing entry on the unique external lookup index.
+        const existing = await repo.findOne({
+          where: {
+            externalSystemName: 'directus',
+            externalEntityName,
+            externalRecordId: result.externalRecordId,
+          },
+        });
+
+        if (
+          existing &&
+          existing.resolutionState !== IdentityMatchResolution.PENDING
+        ) {
+          continue;
+        }
+
+        const candidateMatches =
+          result.candidates ??
+          (result.matchedTwentyRecordId
+            ? [
+                {
+                  twentyEntityName: result.matchedTwentyEntityName,
+                  twentyRecordId: result.matchedTwentyRecordId,
+                  confidence: result.confidence,
+                  reasons: result.reasons,
+                },
+              ]
+            : []);
+
+        await repo.upsert(
+          {
+            id: existing?.id,
+            externalSystemName: 'directus',
+            externalEntityName,
+            externalRecordId: result.externalRecordId,
+            externalNaturalKey: result.externalRecordId,
+            matchedTwentyEntityName: result.matchedTwentyEntityName ?? null,
+            matchConfidence: result.confidence,
+            candidateMatches,
+            resolutionState: IdentityMatchResolution.PENDING,
+            matchReasons: { reasons: result.reasons },
+          },
+          {
+            conflictPaths: [
+              'externalSystemName',
+              'externalEntityName',
+              'externalRecordId',
+            ],
+          },
         );
 
-        for (const result of results) {
-          if (!this.shouldEnqueue(result)) {
-            continue;
-          }
-
-          // Look for an existing entry on the unique external lookup index.
-          const existing = await repo.findOne({
-            where: {
-              externalSystemName: 'directus',
-              externalEntityName,
-              externalRecordId: result.externalRecordId,
-            },
-          });
-
-          if (existing && existing.resolutionState !== IdentityMatchResolution.PENDING) {
-            continue;
-          }
-
-          const candidateMatches =
-            result.candidates ??
-            (result.matchedTwentyRecordId
-              ? [
-                  {
-                    twentyEntityName: result.matchedTwentyEntityName,
-                    twentyRecordId: result.matchedTwentyRecordId,
-                    confidence: result.confidence,
-                    reasons: result.reasons,
-                  },
-                ]
-              : []);
-
-          await repo.upsert(
-            {
-              id: existing?.id,
-              externalSystemName: 'directus',
-              externalEntityName,
-              externalRecordId: result.externalRecordId,
-              externalNaturalKey: result.externalRecordId,
-              matchedTwentyEntityName: result.matchedTwentyEntityName ?? null,
-              matchConfidence: result.confidence,
-              candidateMatches,
-              resolutionState: IdentityMatchResolution.PENDING,
-              matchReasons: { reasons: result.reasons },
-            },
-            {
-              conflictPaths: ['externalSystemName', 'externalEntityName', 'externalRecordId'],
-            },
-          );
-
-          enqueued++;
-        }
-      },
-    );
+        enqueued++;
+      }
+    });
 
     this.logger.log(
       `Enqueued ${enqueued} ambiguous matches for "${externalEntityName}" in workspace ${workspaceId}`,
@@ -122,23 +127,25 @@ export class AmbiguousMatchQueueService {
     pair?: string,
     limit = 100,
   ): Promise<ExternalIdentityMatchQueueWorkspaceEntity[]> {
-    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(async () => {
-      const repo = await this.globalWorkspaceOrmManager.getRepository(
-        workspaceId,
-        ExternalIdentityMatchQueueWorkspaceEntity,
-        { shouldBypassPermissionChecks: true },
-      );
+    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
+      async () => {
+        const repo = await this.globalWorkspaceOrmManager.getRepository(
+          workspaceId,
+          ExternalIdentityMatchQueueWorkspaceEntity,
+          { shouldBypassPermissionChecks: true },
+        );
 
-      const where: Record<string, unknown> = {
-        resolutionState: IdentityMatchResolution.PENDING,
-      };
+        const where: Record<string, unknown> = {
+          resolutionState: IdentityMatchResolution.PENDING,
+        };
 
-      if (pair) {
-        where.externalEntityName = pair;
-      }
+        if (pair) {
+          where.externalEntityName = pair;
+        }
 
-      return repo.find({ where, take: limit, order: { createdAt: 'ASC' } });
-    });
+        return repo.find({ where, take: limit, order: { createdAt: 'ASC' } });
+      },
+    );
   }
 
   /**
@@ -295,9 +302,7 @@ export class AmbiguousMatchQueueService {
       });
     });
 
-    this.logger.log(
-      `Skipped queue entry ${queueId}: ${reason}`,
-    );
+    this.logger.log(`Skipped queue entry ${queueId}: ${reason}`);
   }
 
   // ---------------------------------------------------------------------------
@@ -311,7 +316,10 @@ export class AmbiguousMatchQueueService {
    */
   private shouldEnqueue(result: MatchResult): boolean {
     // Use numeric rank — string comparison is lexicographic, not by confidence ordering.
-    if (CONFIDENCE_RANK[result.confidence] < CONFIDENCE_RANK[IdentityMatchConfidence.HIGH]) {
+    if (
+      CONFIDENCE_RANK[result.confidence] <
+      CONFIDENCE_RANK[IdentityMatchConfidence.HIGH]
+    ) {
       return true;
     }
 

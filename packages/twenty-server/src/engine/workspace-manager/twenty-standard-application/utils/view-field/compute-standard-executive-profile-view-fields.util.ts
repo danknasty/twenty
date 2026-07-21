@@ -5,10 +5,7 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
 
 export const computeStandardExecutiveProfileViewFields = (
-  args: Omit<
-    CreateStandardViewFieldArgs<'executiveProfile'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldArgs<'executiveProfile'>, 'context'>,
 ): Record<string, FlatViewField> => {
   return {
     // person is the label identifier; it must hold the lowest position in non-widget views.
@@ -48,21 +45,20 @@ export const computeStandardExecutiveProfileViewFields = (
         size: 150,
       },
     }),
-    allExecutiveProfilesYearsOfExperience:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'executiveProfile',
-        context: {
-          viewName: 'allExecutiveProfiles',
-          viewFieldName: 'yearsOfExperience',
-          fieldName: 'yearsOfExperience',
-          position: 3,
-          isVisible: true,
-          size: 150,
-        },
-      }),
-    allExecutiveProfilesAvailabilityStatus:
-      createStandardViewFieldFlatMetadata({
+    allExecutiveProfilesYearsOfExperience: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'executiveProfile',
+      context: {
+        viewName: 'allExecutiveProfiles',
+        viewFieldName: 'yearsOfExperience',
+        fieldName: 'yearsOfExperience',
+        position: 3,
+        isVisible: true,
+        size: 150,
+      },
+    }),
+    allExecutiveProfilesAvailabilityStatus: createStandardViewFieldFlatMetadata(
+      {
         ...args,
         objectName: 'executiveProfile',
         context: {
@@ -73,9 +69,10 @@ export const computeStandardExecutiveProfileViewFields = (
           isVisible: true,
           size: 150,
         },
-      }),
-    executiveProfileRecordPageFieldsPerson:
-      createStandardViewFieldFlatMetadata({
+      },
+    ),
+    executiveProfileRecordPageFieldsPerson: createStandardViewFieldFlatMetadata(
+      {
         ...args,
         objectName: 'executiveProfile',
         context: {
@@ -87,7 +84,8 @@ export const computeStandardExecutiveProfileViewFields = (
           size: 200,
           viewFieldGroupName: 'general',
         },
-      }),
+      },
+    ),
     executiveProfileRecordPageFieldsHeadline:
       createStandardViewFieldFlatMetadata({
         ...args,

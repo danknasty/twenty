@@ -19,9 +19,7 @@ import { AmbiguousMatchQueueService } from 'src/modules/executive-search/migrati
 @UseGuards(WorkspaceAuthGuard)
 @UsePipes(ResolverValidationPipe)
 export class AmbiguousMatchQueueResolver {
-  constructor(
-    private readonly queueService: AmbiguousMatchQueueService,
-  ) {}
+  constructor(private readonly queueService: AmbiguousMatchQueueService) {}
 
   @Query(() => [AmbiguousMatchQueueEntryDTO])
   @UseGuards(NoPermissionGuard)

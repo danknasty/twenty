@@ -228,12 +228,17 @@ export const companyMatcher: EntityMatcher = {
       return scored;
     };
 
-    const result = runPrecedence(externalId, DIRECTUS_COLLECTION, PRIMARY_TWENTY_ENTITY, [
-      atsUuidKey,
-      domainAndNameKey,
-      freshsalesOrSourceIdKey,
-      nameSimilarityKey,
-    ]);
+    const result = runPrecedence(
+      externalId,
+      DIRECTUS_COLLECTION,
+      PRIMARY_TWENTY_ENTITY,
+      [
+        atsUuidKey,
+        domainAndNameKey,
+        freshsalesOrSourceIdKey,
+        nameSimilarityKey,
+      ],
+    );
 
     if (result.matchedTwentyRecordId) {
       result.reasons.push(

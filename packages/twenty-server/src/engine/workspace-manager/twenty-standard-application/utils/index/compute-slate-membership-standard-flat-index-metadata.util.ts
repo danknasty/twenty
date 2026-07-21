@@ -12,10 +12,7 @@ export const buildSlateMembershipStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'slateMembership'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'slateMembership'>, 'context'>): Record<
   AllStandardObjectIndexName<'slateMembership'>,
   FlatIndexMetadata
 > => ({

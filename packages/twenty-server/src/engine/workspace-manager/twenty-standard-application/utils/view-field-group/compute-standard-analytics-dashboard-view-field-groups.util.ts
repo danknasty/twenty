@@ -5,23 +5,19 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
 
 export const computeStandardAnalyticsDashboardViewFieldGroups = (
-  args: Omit<
-    CreateStandardViewFieldGroupArgs<'analyticsDashboard'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldGroupArgs<'analyticsDashboard'>, 'context'>,
 ): Record<string, FlatViewFieldGroup> => {
   return {
-    allAnalyticsDashboardsGeneral:
-      createStandardViewFieldGroupFlatMetadata({
-        ...args,
-        objectName: 'analyticsDashboard',
-        context: {
-          viewName: 'allAnalyticsDashboards',
-          viewFieldGroupName: 'general',
-          name: 'General',
-          position: 0,
-          isVisible: true,
-        },
-      }),
+    allAnalyticsDashboardsGeneral: createStandardViewFieldGroupFlatMetadata({
+      ...args,
+      objectName: 'analyticsDashboard',
+      context: {
+        viewName: 'allAnalyticsDashboards',
+        viewFieldGroupName: 'general',
+        name: 'General',
+        position: 0,
+        isVisible: true,
+      },
+    }),
   };
 };

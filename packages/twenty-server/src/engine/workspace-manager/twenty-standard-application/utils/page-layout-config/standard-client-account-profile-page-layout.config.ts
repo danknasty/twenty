@@ -60,8 +60,8 @@ const CLIENT_ACCOUNT_PROFILE_PAGE_TABS = {
   },
   timeline: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-        .clientAccountProfileRecordPage.tabs.timeline.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientAccountProfileRecordPage
+        .tabs.timeline.universalIdentifier,
     ...TAB_PROPS.timeline,
     widgets: {
       timeline: {

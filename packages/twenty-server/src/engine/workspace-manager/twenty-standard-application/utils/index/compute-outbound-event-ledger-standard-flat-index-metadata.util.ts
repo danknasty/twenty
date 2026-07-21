@@ -15,7 +15,8 @@ export const buildOutboundEventLedgerStandardFlatIndexMetadatas = ({
 }: Omit<CreateStandardIndexArgs<'outboundEventLedger'>, 'context'>): Record<
   AllStandardObjectIndexName<'outboundEventLedger'>,
   FlatIndexMetadata
-> => ({} as Record<
-  AllStandardObjectIndexName<'outboundEventLedger'>,
-  FlatIndexMetadata
->);
+> =>
+  ({}) as Record<
+    AllStandardObjectIndexName<'outboundEventLedger'>,
+    FlatIndexMetadata
+  >;

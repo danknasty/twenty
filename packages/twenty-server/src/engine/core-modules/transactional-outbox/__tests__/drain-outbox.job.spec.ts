@@ -35,9 +35,7 @@ describe('DrainOutboxJob', () => {
 
     mockGlobalWorkspaceOrmManager = {
       executeInWorkspaceContext: jest.fn((fn) => fn()),
-      getGlobalWorkspaceDataSource: jest
-        .fn()
-        .mockResolvedValue(mockDataSource),
+      getGlobalWorkspaceDataSource: jest.fn().mockResolvedValue(mockDataSource),
     } as unknown as jest.Mocked<GlobalWorkspaceOrmManager>;
 
     mockWorkspaceEventEmitter = {

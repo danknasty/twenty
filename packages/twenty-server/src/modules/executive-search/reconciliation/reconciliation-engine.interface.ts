@@ -1,5 +1,4 @@
-import type { ReconciliationFinding } from
-  'src/modules/executive-search/reconciliation/reconciliation-finding.type';
+import type { ReconciliationFinding } from 'src/modules/executive-search/reconciliation/reconciliation-finding.type';
 
 export type ReconcileArgs = {
   workspaceId: string;

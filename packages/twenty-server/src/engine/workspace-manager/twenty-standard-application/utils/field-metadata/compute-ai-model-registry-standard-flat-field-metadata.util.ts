@@ -246,7 +246,9 @@ export const buildAiModelRegistryStandardFlatFieldMetadatas = ({
       fieldName: 'isCurrent',
       type: FieldMetadataType.BOOLEAN,
       label: i18nLabel(msg`Is Current`),
-      description: i18nLabel(msg`Whether this is the current model for the provider`),
+      description: i18nLabel(
+        msg`Whether this is the current model for the provider`,
+      ),
       icon: 'IconCircleCheck',
       isNullable: false,
       isUIEditable: true,
@@ -394,7 +396,9 @@ export const buildAiModelRegistryStandardFlatFieldMetadatas = ({
       fieldName: 'guardrailPolicyVersion',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Guardrail Policy Version`),
-      description: i18nLabel(msg`Guardrail policy version this model is governed by`),
+      description: i18nLabel(
+        msg`Guardrail policy version this model is governed by`,
+      ),
       icon: 'IconShield',
       isNullable: true,
       isUIEditable: true,
@@ -565,7 +569,9 @@ export const buildAiModelRegistryStandardFlatFieldMetadatas = ({
       fieldName: 'updatedBy',
       type: FieldMetadataType.ACTOR,
       label: i18nLabel(msg`Updated by`),
-      description: i18nLabel(msg`The workspace member who last updated the record`),
+      description: i18nLabel(
+        msg`The workspace member who last updated the record`,
+      ),
       icon: 'IconUserCircle',
       isSystem: true,
       isUIEditable: false,

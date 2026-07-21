@@ -27,7 +27,8 @@ export const validate = (
       valid: false,
       errors:
         validateFn.errors?.map(
-          (err) => `${err.instancePath ? `${err.instancePath}: ` : ''}${err.message ?? 'Unknown validation error'}`,
+          (err) =>
+            `${err.instancePath ? `${err.instancePath}: ` : ''}${err.message ?? 'Unknown validation error'}`,
         ) ?? [],
     };
   }

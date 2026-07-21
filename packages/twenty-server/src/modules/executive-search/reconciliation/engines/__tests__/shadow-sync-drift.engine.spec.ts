@@ -47,12 +47,11 @@ describe('ShadowSyncDriftReconciliationEngine', () => {
       save: jest.fn().mockResolvedValue(undefined),
     };
 
-    mockGetRepository = jest.fn().mockImplementation(
-      async (
-        _workspaceId: string,
-        entity: unknown,
-      ) => {
-        const name = typeof entity === 'function' ? entity.name : String(entity);
+    mockGetRepository = jest
+      .fn()
+      .mockImplementation(async (_workspaceId: string, entity: unknown) => {
+        const name =
+          typeof entity === 'function' ? entity.name : String(entity);
 
         if (name === ExternalSyncInboxWorkspaceEntity.name) {
           return inboxRepo;
@@ -64,8 +63,7 @@ describe('ShadowSyncDriftReconciliationEngine', () => {
 
         // Any dynamic twentyEntityName lands on the domain record repo.
         return recordRepo;
-      },
-    );
+      });
 
     const module: TestingModule = await Test.createTestingModule({
       providers: [
@@ -74,9 +72,7 @@ describe('ShadowSyncDriftReconciliationEngine', () => {
         {
           provide: GlobalWorkspaceOrmManager,
           useValue: {
-            executeInWorkspaceContext: jest.fn(
-              (fn: () => unknown) => fn(),
-            ),
+            executeInWorkspaceContext: jest.fn((fn: () => unknown) => fn()),
             getRepository: mockGetRepository,
           },
         },

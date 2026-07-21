@@ -5,10 +5,7 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
 
 export const computeStandardExecutiveProfileViewFieldGroups = (
-  args: Omit<
-    CreateStandardViewFieldGroupArgs<'executiveProfile'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldGroupArgs<'executiveProfile'>, 'context'>,
 ): Record<string, FlatViewFieldGroup> => {
   return {
     executiveProfileRecordPageFieldsGeneral:

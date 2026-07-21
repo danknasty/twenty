@@ -47,9 +47,7 @@ function readEnrichedString(
 }
 
 /** Read enriched domain list (`_companyDomains`) from a searchAssignment. */
-function readEnrichedDomains(
-  candidate: Record<string, unknown>,
-): string[] {
+function readEnrichedDomains(candidate: Record<string, unknown>): string[] {
   const value = candidate['_companyDomains'];
 
   return Array.isArray(value)
@@ -238,11 +236,12 @@ export const opportunityMatcher: EntityMatcher = {
       return scored;
     };
 
-    const result = runPrecedence(externalId, DIRECTUS_COLLECTION, PRIMARY_TWENTY_ENTITY, [
-      atsUuidKey,
-      externalIdKey,
-      titleAndCompanyKey,
-    ]);
+    const result = runPrecedence(
+      externalId,
+      DIRECTUS_COLLECTION,
+      PRIMARY_TWENTY_ENTITY,
+      [atsUuidKey, externalIdKey, titleAndCompanyKey],
+    );
 
     if (result.matchedTwentyRecordId) {
       result.reasons.push(

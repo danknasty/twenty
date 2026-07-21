@@ -16,8 +16,8 @@ import {
 const AI_PROVIDER_CALL_LOG_PAGE_TABS = {
   home: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiProviderCallLogRecordPage.tabs
-        .home.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiProviderCallLogRecordPage
+        .tabs.home.universalIdentifier,
     ...TAB_PROPS.home,
     widgets: {
       fields: {
@@ -30,8 +30,8 @@ const AI_PROVIDER_CALL_LOG_PAGE_TABS = {
   },
   timeline: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiProviderCallLogRecordPage.tabs
-        .timeline.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiProviderCallLogRecordPage
+        .tabs.timeline.universalIdentifier,
     ...TAB_PROPS.timeline,
     widgets: {
       timeline: {

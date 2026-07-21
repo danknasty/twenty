@@ -7,7 +7,10 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/create-standard-view-flat-metadata.util';
 
 export const computeStandardCandidateBoardMatrixEvaluationViews = (
-  args: Omit<CreateStandardViewArgs<'candidateBoardMatrixEvaluation'>, 'context'>,
+  args: Omit<
+    CreateStandardViewArgs<'candidateBoardMatrixEvaluation'>,
+    'context'
+  >,
 ): Record<string, FlatView> => {
   return {
     allCandidateBoardMatrixEvaluations: createStandardViewFlatMetadata({
@@ -22,17 +25,18 @@ export const computeStandardCandidateBoardMatrixEvaluationViews = (
         icon: 'IconList',
       },
     }),
-    candidateBoardMatrixEvaluationRecordPageFields: createStandardViewFlatMetadata({
-      ...args,
-      objectName: 'candidateBoardMatrixEvaluation',
-      context: {
-        viewName: 'candidateBoardMatrixEvaluationRecordPageFields',
-        name: 'Candidate Board Matrix Evaluation Record Page Fields',
-        type: ViewType.FIELDS_WIDGET,
-        key: null,
-        position: 0,
-        icon: 'IconList',
-      },
-    }),
+    candidateBoardMatrixEvaluationRecordPageFields:
+      createStandardViewFlatMetadata({
+        ...args,
+        objectName: 'candidateBoardMatrixEvaluation',
+        context: {
+          viewName: 'candidateBoardMatrixEvaluationRecordPageFields',
+          name: 'Candidate Board Matrix Evaluation Record Page Fields',
+          type: ViewType.FIELDS_WIDGET,
+          key: null,
+          position: 0,
+          icon: 'IconList',
+        },
+      }),
   };
 };

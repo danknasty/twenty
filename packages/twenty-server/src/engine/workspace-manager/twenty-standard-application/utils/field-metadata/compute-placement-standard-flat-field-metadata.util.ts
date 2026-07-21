@@ -25,10 +25,7 @@ export const buildPlacementStandardFlatFieldMetadatas = ({
 }: Omit<
   CreateStandardFieldArgs<'placement', FieldMetadataType>,
   'context'
->): Record<
-  AllStandardObjectFieldName<'placement'>,
-  FlatFieldMetadata
-> => ({
+>): Record<AllStandardObjectFieldName<'placement'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,

@@ -165,9 +165,9 @@ describe('ExecutiveSearchSyncWebhookController', () => {
         },
       } as unknown as RawBodyRequest<Request>;
 
-      await expect(
-        controller.handleSyncWebhook(req, response),
-      ).rejects.toThrow(ExecutiveSearchException);
+      await expect(controller.handleSyncWebhook(req, response)).rejects.toThrow(
+        ExecutiveSearchException,
+      );
 
       expect(inboundEventLedgerService.recordReceipt).not.toHaveBeenCalled();
       expect(syncQueue.add).not.toHaveBeenCalled();
@@ -180,9 +180,9 @@ describe('ExecutiveSearchSyncWebhookController', () => {
         headers: {},
       } as unknown as RawBodyRequest<Request>;
 
-      await expect(
-        controller.handleSyncWebhook(req, response),
-      ).rejects.toThrow(ExecutiveSearchException);
+      await expect(controller.handleSyncWebhook(req, response)).rejects.toThrow(
+        ExecutiveSearchException,
+      );
 
       expect(inboundEventLedgerService.recordReceipt).not.toHaveBeenCalled();
       expect(syncQueue.add).not.toHaveBeenCalled();
@@ -199,9 +199,9 @@ describe('ExecutiveSearchSyncWebhookController', () => {
         },
       } as unknown as RawBodyRequest<Request>;
 
-      await expect(
-        controller.handleSyncWebhook(req, response),
-      ).rejects.toThrow(ExecutiveSearchException);
+      await expect(controller.handleSyncWebhook(req, response)).rejects.toThrow(
+        ExecutiveSearchException,
+      );
 
       expect(inboundEventLedgerService.recordReceipt).not.toHaveBeenCalled();
       expect(syncQueue.add).not.toHaveBeenCalled();
@@ -221,9 +221,9 @@ describe('ExecutiveSearchSyncWebhookController', () => {
       } as unknown as RawBodyRequest<Request>;
 
       // getWebhookSecret throws because workspaceKey is missing
-      await expect(
-        controller.handleSyncWebhook(req, response),
-      ).rejects.toThrow(ExecutiveSearchException);
+      await expect(controller.handleSyncWebhook(req, response)).rejects.toThrow(
+        ExecutiveSearchException,
+      );
 
       expect(syncQueue.add).not.toHaveBeenCalled();
     });
@@ -239,9 +239,9 @@ describe('ExecutiveSearchSyncWebhookController', () => {
         },
       } as unknown as RawBodyRequest<Request>;
 
-      await expect(
-        controller.handleSyncWebhook(req, response),
-      ).rejects.toThrow(ExecutiveSearchException);
+      await expect(controller.handleSyncWebhook(req, response)).rejects.toThrow(
+        ExecutiveSearchException,
+      );
 
       expect(syncQueue.add).not.toHaveBeenCalled();
     });
@@ -293,9 +293,9 @@ describe('ExecutiveSearchSyncWebhookController', () => {
         },
       } as unknown as RawBodyRequest<Request>;
 
-      await expect(
-        controller.handleSyncWebhook(req, response),
-      ).rejects.toThrow(ExecutiveSearchException);
+      await expect(controller.handleSyncWebhook(req, response)).rejects.toThrow(
+        ExecutiveSearchException,
+      );
 
       expect(inboundEventLedgerService.recordReceipt).not.toHaveBeenCalled();
       expect(syncQueue.add).not.toHaveBeenCalled();
@@ -317,13 +317,11 @@ describe('ExecutiveSearchSyncWebhookController', () => {
         },
       } as unknown as RawBodyRequest<Request>;
 
-      await expect(
-        controller.handleSyncWebhook(req, response),
-      ).rejects.toThrow(ExecutiveSearchException);
+      await expect(controller.handleSyncWebhook(req, response)).rejects.toThrow(
+        ExecutiveSearchException,
+      );
 
-      expect(
-        serverVariableService.getWebhookSecret,
-      ).not.toHaveBeenCalled();
+      expect(serverVariableService.getWebhookSecret).not.toHaveBeenCalled();
       expect(inboundEventLedgerService.recordReceipt).not.toHaveBeenCalled();
       expect(syncQueue.add).not.toHaveBeenCalled();
     });

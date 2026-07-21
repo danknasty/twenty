@@ -60,11 +60,6 @@ import { computeCandidatePresentationViewFields } from 'src/engine/workspace-man
 import { computeClientFeedbackViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-client-feedback-view-fields.util';
 import { computeSearchStatusReportViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-search-status-report-view-fields.util';
 
-import { computeStandardCompensationExpectationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-compensation-expectation-view-fields.util';
-import { computeStandardOfferNegotiationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-offer-negotiation-view-fields.util';
-import { computeStandardPlacementViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-placement-view-fields.util';
-import { computeStandardGuaranteeCaseViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-guarantee-case-view-fields.util';
-
 import { computeStandardBoardCompositionProfileViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-composition-profile-view-fields.util';
 import { computeStandardBoardMatrixCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-board-matrix-criterion-view-fields.util';
 import { computeStandardCandidateBoardMatrixEvaluationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-candidate-board-matrix-evaluation-view-fields.util';
@@ -75,7 +70,8 @@ import { computeStandardExternalIdentityMatchQueueViewFields } from 'src/engine/
 import { computeStandardAnalyticsDomainMetricViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-domain-metric-view-fields.util';
 import { computeStandardAnalyticsMetricSnapshotViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-metric-snapshot-view-fields.util';
 import { computeStandardAnalyticsDashboardConfigViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-analytics-dashboard-config-view-fields.util';
-import { computeAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-ai-prompt-template-view-fields.util';import { computeStandardAiModelRegistryViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-model-registry-view-fields.util';
+import { computeAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-ai-prompt-template-view-fields.util';
+import { computeStandardAiModelRegistryViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-model-registry-view-fields.util';
 import { computeStandardAiPromptTemplateViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-prompt-template-view-fields.util';
 import { computeStandardAiProviderCallLogViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-ai-provider-call-log-view-fields.util';
 import { computeStandardAppAgentsViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-app-agents-view-fields.util';
@@ -119,9 +115,6 @@ const STANDARD_FLAT_VIEW_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowRun: computeStandardWorkflowRunViewFields,
   workflowVersion: computeStandardWorkflowVersionViewFields,
   workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFields,
-workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFields,
-workspaceEventOutbox:
-    computeStandardWorkspaceEventOutboxViewFields,
   workspaceMember: computeStandardWorkspaceMemberViewFields,
   searchEngagementTerms: computeStandardSearchEngagementTermsViewFields,
   searchAssignment: computeStandardSearchAssignmentViewFields,
@@ -147,24 +140,21 @@ workspaceEventOutbox:
   clientFeedback: computeClientFeedbackViewFields,
   searchStatusReport: computeSearchStatusReportViewFields,
 
-boardCompositionProfile:
-    computeStandardBoardCompositionProfileViewFields,
-  boardMatrixCriterion:
-    computeStandardBoardMatrixCriterionViewFields,
+  boardCompositionProfile: computeStandardBoardCompositionProfileViewFields,
+  boardMatrixCriterion: computeStandardBoardMatrixCriterionViewFields,
   candidateBoardMatrixEvaluation:
     computeStandardCandidateBoardMatrixEvaluationViewFields,
   directorIndependenceReview:
     computeStandardDirectorIndependenceReviewViewFields,
-  boardCommitmentReview:
-    computeStandardBoardCommitmentReviewViewFields,
-retentionActionLog: computeStandardRetentionActionLogViewFields,
+  boardCommitmentReview: computeStandardBoardCommitmentReviewViewFields,
+  retentionActionLog: computeStandardRetentionActionLogViewFields,
   externalIdentityMatchQueue:
     computeStandardExternalIdentityMatchQueueViewFields,
-analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFields,
+  analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFields,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViewFields,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFields,
-aiPromptTemplate: computeAiPromptTemplateViewFields,  aiModelRegistry: computeStandardAiModelRegistryViewFields,
-  aiPromptTemplate: computeStandardAiPromptTemplateViewFields,
+  aiPromptTemplate: computeAiPromptTemplateViewFields,
+  aiModelRegistry: computeStandardAiModelRegistryViewFields,
   aiProviderCallLog: computeStandardAiProviderCallLogViewFields,
   appAgents: computeStandardAppAgentsViewFields,
 } as const satisfies {

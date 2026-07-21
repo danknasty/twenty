@@ -126,8 +126,7 @@ describe('ClientAccountProfile standard metadata build', () => {
   it('company relation has correct target object name', () => {
     const companyField =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[
-        STANDARD_OBJECTS.clientAccountProfile.fields.company
-          .universalIdentifier
+        STANDARD_OBJECTS.clientAccountProfile.fields.company.universalIdentifier
       ];
 
     expect(companyField).toBeDefined();
@@ -165,16 +164,15 @@ describe('ClientAccountProfile standard metadata build', () => {
       .filter(
         (viewField) =>
           viewField.viewUniversalIdentifier ===
-          STANDARD_OBJECTS.clientAccountProfile.views
-            .allClientAccountProfiles.universalIdentifier,
+          STANDARD_OBJECTS.clientAccountProfile.views.allClientAccountProfiles
+            .universalIdentifier,
       )
       .map((viewField) => viewField.fieldMetadataUniversalIdentifier);
 
     expect(viewFieldFieldUniversalIdentifiers).toHaveLength(4);
     expect(viewFieldFieldUniversalIdentifiers).toEqual(
       expect.arrayContaining([
-        STANDARD_OBJECTS.clientAccountProfile.fields.name
-          .universalIdentifier,
+        STANDARD_OBJECTS.clientAccountProfile.fields.name.universalIdentifier,
         STANDARD_OBJECTS.clientAccountProfile.fields.accountTier
           .universalIdentifier,
         STANDARD_OBJECTS.clientAccountProfile.fields.accountStatus
@@ -201,8 +199,7 @@ describe('ClientAccountProfile standard metadata build', () => {
     expect(viewFieldFieldUniversalIdentifiers.length).toBeGreaterThan(10);
     expect(viewFieldFieldUniversalIdentifiers).toEqual(
       expect.arrayContaining([
-        STANDARD_OBJECTS.clientAccountProfile.fields.name
-          .universalIdentifier,
+        STANDARD_OBJECTS.clientAccountProfile.fields.name.universalIdentifier,
         STANDARD_OBJECTS.clientAccountProfile.fields.accountTier
           .universalIdentifier,
         STANDARD_OBJECTS.clientAccountProfile.fields.accountStatus

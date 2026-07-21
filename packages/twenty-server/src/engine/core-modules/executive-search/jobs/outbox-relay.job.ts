@@ -49,9 +49,7 @@ export class OutboxRelayJob {
     //   return;
     // }
 
-    this.logger.log(
-      `Starting outbox relay for workspace ${workspaceId}`,
-    );
+    this.logger.log(`Starting outbox relay for workspace ${workspaceId}`);
 
     // 1. Get all PENDING events for this workspace
     const pendingEvents = await this.outboxService.getPending(workspaceId);
@@ -102,8 +100,6 @@ export class OutboxRelayJob {
       }
     }
 
-    this.logger.log(
-      `Completed outbox relay for workspace ${workspaceId}`,
-    );
+    this.logger.log(`Completed outbox relay for workspace ${workspaceId}`);
   }
 }

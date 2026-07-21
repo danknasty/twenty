@@ -137,12 +137,7 @@ describe('ClientStakeholderRole standard metadata build', () => {
       (opt) => (opt as { value: string }).value,
     );
 
-    expect(optionValues).toEqual([
-      'EMAIL',
-      'PHONE',
-      'IN_PERSON',
-      'NO_CONTACT',
-    ]);
+    expect(optionValues).toEqual(['EMAIL', 'PHONE', 'IN_PERSON', 'NO_CONTACT']);
   });
 
   it('has isPrimary as BOOLEAN with default false', () => {
@@ -180,9 +175,7 @@ describe('ClientStakeholderRole standard metadata build', () => {
     expect(stakeholderField?.type).toBe(FieldMetadataType.RELATION);
     expect(
       stakeholderField?.relationTargetObjectMetadataUniversalIdentifier,
-    ).toBe(
-      STANDARD_OBJECTS.person.universalIdentifier,
-    );
+    ).toBe(STANDARD_OBJECTS.person.universalIdentifier);
   });
 
   it('has company relation to company', () => {
@@ -194,9 +187,7 @@ describe('ClientStakeholderRole standard metadata build', () => {
 
     expect(companyField).toBeDefined();
     expect(companyField?.type).toBe(FieldMetadataType.RELATION);
-    expect(
-      companyField?.relationTargetObjectMetadataUniversalIdentifier,
-    ).toBe(
+    expect(companyField?.relationTargetObjectMetadataUniversalIdentifier).toBe(
       STANDARD_OBJECTS.company.universalIdentifier,
     );
   });
@@ -208,9 +199,7 @@ describe('ClientStakeholderRole standard metadata build', () => {
 
     for (const uid of indexUniversalIdentifiers) {
       expect(
-        isDefined(
-          allFlatEntityMaps.flatIndexMaps.byUniversalIdentifier[uid],
-        ),
+        isDefined(allFlatEntityMaps.flatIndexMaps.byUniversalIdentifier[uid]),
       ).toBe(true);
     }
   });
@@ -223,16 +212,15 @@ describe('ClientStakeholderRole standard metadata build', () => {
       .filter(
         (viewField) =>
           viewField.viewUniversalIdentifier ===
-          STANDARD_OBJECTS.clientStakeholderRole.views
-            .allClientStakeholderRoles.universalIdentifier,
+          STANDARD_OBJECTS.clientStakeholderRole.views.allClientStakeholderRoles
+            .universalIdentifier,
       )
       .map((viewField) => viewField.fieldMetadataUniversalIdentifier);
 
     expect(viewFieldFieldUniversalIdentifiers).toHaveLength(5);
     expect(viewFieldFieldUniversalIdentifiers).toEqual(
       expect.arrayContaining([
-        STANDARD_OBJECTS.clientStakeholderRole.fields.name
-          .universalIdentifier,
+        STANDARD_OBJECTS.clientStakeholderRole.fields.name.universalIdentifier,
         STANDARD_OBJECTS.clientStakeholderRole.fields.stakeholder
           .universalIdentifier,
         STANDARD_OBJECTS.clientStakeholderRole.fields.company
@@ -277,8 +265,7 @@ describe('ClientStakeholderRole standard metadata build', () => {
     expect(viewFieldFieldUniversalIdentifiers.length).toBeGreaterThan(5);
     expect(viewFieldFieldUniversalIdentifiers).toEqual(
       expect.arrayContaining([
-        STANDARD_OBJECTS.clientStakeholderRole.fields.name
-          .universalIdentifier,
+        STANDARD_OBJECTS.clientStakeholderRole.fields.name.universalIdentifier,
         STANDARD_OBJECTS.clientStakeholderRole.fields.roleType
           .universalIdentifier,
         STANDARD_OBJECTS.clientStakeholderRole.fields.stakeholder

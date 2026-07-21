@@ -132,9 +132,7 @@ describe('OutboundProjectionService', () => {
 
       await service.deliver(workspaceId, outboxId);
 
-      expect(
-        mockFeatureFlagService.isFeatureEnabled,
-      ).toHaveBeenCalledWith(
+      expect(mockFeatureFlagService.isFeatureEnabled).toHaveBeenCalledWith(
         FeatureFlagKey.IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED,
         workspaceId,
       );
@@ -147,7 +145,11 @@ describe('OutboundProjectionService', () => {
 
   describe('atomic claim', () => {
     it('should return early when another worker already claimed the entry', async () => {
-      outboxRepository.update.mockResolvedValue({ affected: 0, raw: [], generatedMaps: [] });
+      outboxRepository.update.mockResolvedValue({
+        affected: 0,
+        raw: [],
+        generatedMaps: [],
+      });
 
       await service.deliver(workspaceId, outboxId);
 
@@ -176,16 +178,25 @@ describe('OutboundProjectionService', () => {
     };
 
     beforeEach(() => {
-      outboxRepository.update.mockResolvedValue({ affected: 1, raw: [], generatedMaps: [] });
+      outboxRepository.update.mockResolvedValue({
+        affected: 1,
+        raw: [],
+        generatedMaps: [],
+      });
       outboxRepository.findOneBy.mockResolvedValue(outboxRow);
       linkRepository.findOneBy.mockResolvedValue(null);
-      mockDirectusClient.createItem.mockResolvedValue({ id: 'directus-123', name: 'Test' });
+      mockDirectusClient.createItem.mockResolvedValue({
+        id: 'directus-123',
+        name: 'Test',
+      });
     });
 
     it('should call createItem and upsert link, then markSent', async () => {
       await service.deliver(workspaceId, outboxId);
 
-      expect(mockDirectusClient.configure).toHaveBeenCalledWith(configResult.baseUrl);
+      expect(mockDirectusClient.configure).toHaveBeenCalledWith(
+        configResult.baseUrl,
+      );
       expect(mockDirectusClient.authenticate).toHaveBeenCalledWith(
         configResult.email,
         configResult.password,
@@ -211,7 +222,10 @@ describe('OutboundProjectionService', () => {
         }),
         ['twentyEntityName', 'twentyRecordId', 'externalSystemName'],
       );
-      expect(mockOutboxService.markSent).toHaveBeenCalledWith(workspaceId, outboxId);
+      expect(mockOutboxService.markSent).toHaveBeenCalledWith(
+        workspaceId,
+        outboxId,
+      );
       expect(mockOutboxService.markFailed).not.toHaveBeenCalled();
     });
   });
@@ -241,7 +255,11 @@ describe('OutboundProjectionService', () => {
     };
 
     beforeEach(() => {
-      outboxRepository.update.mockResolvedValue({ affected: 1, raw: [], generatedMaps: [] });
+      outboxRepository.update.mockResolvedValue({
+        affected: 1,
+        raw: [],
+        generatedMaps: [],
+      });
       outboxRepository.findOneBy.mockResolvedValue(outboxRow);
       linkRepository.findOneBy.mockResolvedValue(existingLink);
     });
@@ -257,7 +275,10 @@ describe('OutboundProjectionService', () => {
         signedHeaders,
       );
       expect(linkRepository.upsert).not.toHaveBeenCalled();
-      expect(mockOutboxService.markSent).toHaveBeenCalledWith(workspaceId, outboxId);
+      expect(mockOutboxService.markSent).toHaveBeenCalledWith(
+        workspaceId,
+        outboxId,
+      );
     });
   });
 
@@ -286,7 +307,11 @@ describe('OutboundProjectionService', () => {
     };
 
     beforeEach(() => {
-      outboxRepository.update.mockResolvedValue({ affected: 1, raw: [], generatedMaps: [] });
+      outboxRepository.update.mockResolvedValue({
+        affected: 1,
+        raw: [],
+        generatedMaps: [],
+      });
       outboxRepository.findOneBy.mockResolvedValue(outboxRow);
       linkRepository.findOneBy.mockResolvedValue(existingLink);
     });
@@ -301,7 +326,10 @@ describe('OutboundProjectionService', () => {
       );
       expect(mockDirectusClient.createItem).not.toHaveBeenCalled();
       expect(mockDirectusClient.updateItem).not.toHaveBeenCalled();
-      expect(mockOutboxService.markSent).toHaveBeenCalledWith(workspaceId, outboxId);
+      expect(mockOutboxService.markSent).toHaveBeenCalledWith(
+        workspaceId,
+        outboxId,
+      );
     });
   });
 
@@ -319,7 +347,11 @@ describe('OutboundProjectionService', () => {
     };
 
     beforeEach(() => {
-      outboxRepository.update.mockResolvedValue({ affected: 1, raw: [], generatedMaps: [] });
+      outboxRepository.update.mockResolvedValue({
+        affected: 1,
+        raw: [],
+        generatedMaps: [],
+      });
       outboxRepository.findOneBy.mockResolvedValue(outboxRow);
       linkRepository.findOneBy.mockResolvedValue(null);
     });
@@ -330,7 +362,10 @@ describe('OutboundProjectionService', () => {
       expect(mockDirectusClient.deleteItem).not.toHaveBeenCalled();
       expect(mockDirectusClient.createItem).not.toHaveBeenCalled();
       expect(mockDirectusClient.updateItem).not.toHaveBeenCalled();
-      expect(mockOutboxService.markSent).toHaveBeenCalledWith(workspaceId, outboxId);
+      expect(mockOutboxService.markSent).toHaveBeenCalledWith(
+        workspaceId,
+        outboxId,
+      );
     });
   });
 
@@ -348,12 +383,18 @@ describe('OutboundProjectionService', () => {
     };
 
     beforeEach(() => {
-      outboxRepository.update.mockResolvedValue({ affected: 1, raw: [], generatedMaps: [] });
+      outboxRepository.update.mockResolvedValue({
+        affected: 1,
+        raw: [],
+        generatedMaps: [],
+      });
       outboxRepository.findOneBy.mockResolvedValue(outboxRow);
     });
 
     it('should call markFailed when client throws and NOT rethrow', async () => {
-      const apiError = new Error('Directus API error 500: Internal Server Error');
+      const apiError = new Error(
+        'Directus API error 500: Internal Server Error',
+      );
       linkRepository.findOneBy.mockRejectedValue(apiError);
 
       await service.deliver(workspaceId, outboxId);

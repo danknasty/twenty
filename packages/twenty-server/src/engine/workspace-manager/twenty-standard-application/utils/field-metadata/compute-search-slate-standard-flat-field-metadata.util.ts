@@ -25,10 +25,7 @@ export const buildSearchSlateStandardFlatFieldMetadatas = ({
 }: Omit<
   CreateStandardFieldArgs<'searchSlate', FieldMetadataType>,
   'context'
->): Record<
-  AllStandardObjectFieldName<'searchSlate'>,
-  FlatFieldMetadata
-> => ({
+>): Record<AllStandardObjectFieldName<'searchSlate'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,

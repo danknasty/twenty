@@ -78,9 +78,9 @@ describe('opportunityMatcher', () => {
     const result = opportunityMatcher.match(item, candidates);
 
     expect(result.confidence).toBe(IdentityMatchConfidence.MEDIUM);
-    expect(
-      result.reasons.some((r) => r.includes('domain corroborates')),
-    ).toBe(true);
+    expect(result.reasons.some((r) => r.includes('domain corroborates'))).toBe(
+      true,
+    );
   });
 
   it('returns NONE when nothing matches', () => {

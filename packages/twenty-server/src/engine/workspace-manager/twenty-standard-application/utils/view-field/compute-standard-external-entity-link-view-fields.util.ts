@@ -5,10 +5,7 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
 
 export const computeStandardExternalEntityLinkViewFields = (
-  args: Omit<
-    CreateStandardViewFieldArgs<'externalEntityLink'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldArgs<'externalEntityLink'>, 'context'>,
 ): Record<string, FlatViewField> => {
   return {
     // system is the label identifier; it must hold the lowest position in non-widget views.

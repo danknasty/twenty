@@ -12,10 +12,7 @@ export const buildCandidacyStageEventStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'candidacyStageEvent'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'candidacyStageEvent'>, 'context'>): Record<
   AllStandardObjectIndexName<'candidacyStageEvent'>,
   FlatIndexMetadata
 > => ({

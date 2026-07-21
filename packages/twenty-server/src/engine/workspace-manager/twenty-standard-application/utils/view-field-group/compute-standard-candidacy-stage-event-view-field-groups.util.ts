@@ -5,7 +5,10 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
 
 export const computeStandardCandidacyStageEventViewFieldGroups = (
-  args: Omit<CreateStandardViewFieldGroupArgs<'candidacyStageEvent'>, 'context'>,
+  args: Omit<
+    CreateStandardViewFieldGroupArgs<'candidacyStageEvent'>,
+    'context'
+  >,
 ): Record<string, FlatViewFieldGroup> => {
   return {
     candidacyStageEventRecordPageFieldsGeneral:

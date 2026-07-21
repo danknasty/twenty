@@ -189,19 +189,21 @@ export const computeStandardSearchAssignmentViewFields = (
         viewFieldGroupName: 'general',
       },
     }),
-    searchAssignmentRecordPageFieldsStatus: createStandardViewFieldFlatMetadata({
-      ...args,
-      objectName: 'searchAssignment',
-      context: {
-        viewName: 'searchAssignmentRecordPageFields',
-        viewFieldName: 'status',
-        fieldName: 'status',
-        position: 1,
-        isVisible: true,
-        size: 150,
-        viewFieldGroupName: 'general',
+    searchAssignmentRecordPageFieldsStatus: createStandardViewFieldFlatMetadata(
+      {
+        ...args,
+        objectName: 'searchAssignment',
+        context: {
+          viewName: 'searchAssignmentRecordPageFields',
+          viewFieldName: 'status',
+          fieldName: 'status',
+          position: 1,
+          isVisible: true,
+          size: 150,
+          viewFieldGroupName: 'general',
+        },
       },
-    }),
+    ),
     searchAssignmentRecordPageFieldsStartDate:
       createStandardViewFieldFlatMetadata({
         ...args,

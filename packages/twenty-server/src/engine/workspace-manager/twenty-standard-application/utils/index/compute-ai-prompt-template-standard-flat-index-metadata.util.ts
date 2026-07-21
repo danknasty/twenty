@@ -12,10 +12,7 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'aiPromptTemplate'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'aiPromptTemplate'>, 'context'>): Record<
   AllStandardObjectIndexName<'aiPromptTemplate'>,
   FlatIndexMetadata
 > => ({

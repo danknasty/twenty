@@ -12,10 +12,7 @@ export const buildAiModelRegistryStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'aiModelRegistry'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'aiModelRegistry'>, 'context'>): Record<
   AllStandardObjectIndexName<'aiModelRegistry'>,
   FlatIndexMetadata
 > => ({

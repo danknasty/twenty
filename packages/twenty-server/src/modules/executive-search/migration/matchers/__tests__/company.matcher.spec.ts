@@ -28,9 +28,9 @@ describe('companyMatcher', () => {
     expect(result.confidence).toBe(IdentityMatchConfidence.EXACT);
     expect(result.matchedTwentyEntityName).toBe('company');
     expect(result.externalEntityName).toBe('companies');
-    expect(
-      result.reasons.some((r) => r.includes('clientAccountProfile')),
-    ).toBe(true);
+    expect(result.reasons.some((r) => r.includes('clientAccountProfile'))).toBe(
+      true,
+    );
   });
 
   it('returns HIGH on domain match (corroborated by name)', () => {
@@ -60,9 +60,7 @@ describe('companyMatcher', () => {
     const result = companyMatcher.match(item, candidates);
 
     expect(result.confidence).toBe(IdentityMatchConfidence.MEDIUM);
-    expect(
-      result.reasons.some((r) => r.includes('REFERENCE_ONLY')),
-    ).toBe(true);
+    expect(result.reasons.some((r) => r.includes('REFERENCE_ONLY'))).toBe(true);
   });
 
   it('returns MEDIUM/LOW on name similarity alone', () => {

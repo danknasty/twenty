@@ -25,10 +25,7 @@ export class AiContextFirewallService {
       this.firewallRegistryService.getProhibitedSelectors(
         FirewallContext.SELECTION_CONTEXT,
       );
-    const allProhibited = new Set([
-      ...prohibitedAi,
-      ...prohibitedSelection,
-    ]);
+    const allProhibited = new Set([...prohibitedAi, ...prohibitedSelection]);
 
     return allowlistedFields.filter((field) => {
       const normalized = this.firewallRegistryService.normalizeSelector(field);
@@ -74,10 +71,7 @@ export class AiContextFirewallService {
       this.firewallRegistryService.getProhibitedSelectors(
         FirewallContext.SELECTION_CONTEXT,
       );
-    const allProhibited = new Set([
-      ...prohibitedAi,
-      ...prohibitedSelection,
-    ]);
+    const allProhibited = new Set([...prohibitedAi, ...prohibitedSelection]);
 
     return fields.filter((field) => {
       const normalized = this.firewallRegistryService.normalizeSelector(field);

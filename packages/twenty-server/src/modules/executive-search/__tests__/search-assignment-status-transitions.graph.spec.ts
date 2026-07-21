@@ -29,7 +29,9 @@ describe('SEARCH_ASSIGNMENT_STATUS_TRANSITIONS', () => {
 
   it('ACTIVE can transition to ON_HOLD, PLACEMENT_PENDING, CANCELLED, LOST', () => {
     expect(
-      SEARCH_ASSIGNMENT_STATUS_TRANSITIONS[SearchAssignmentStatus.ACTIVE].sort(),
+      SEARCH_ASSIGNMENT_STATUS_TRANSITIONS[
+        SearchAssignmentStatus.ACTIVE
+      ].sort(),
     ).toEqual(
       [
         SearchAssignmentStatus.ON_HOLD,
@@ -90,9 +92,7 @@ describe('SEARCH_ASSIGNMENT_STATUS_TRANSITIONS', () => {
     for (const fromStatus of Object.keys(
       SEARCH_ASSIGNMENT_STATUS_TRANSITIONS,
     ) as SearchAssignmentStatus[]) {
-      for (const toStatus of SEARCH_ASSIGNMENT_STATUS_TRANSITIONS[
-        fromStatus
-      ]) {
+      for (const toStatus of SEARCH_ASSIGNMENT_STATUS_TRANSITIONS[fromStatus]) {
         expect(statusValues).toContain(toStatus);
       }
     }

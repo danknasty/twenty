@@ -80,7 +80,9 @@ describe('RetentionActionReconciliationEngine', () => {
       );
 
       // Read-only: only a find() is ever issued, no mutation
-      expect((mockRepo as unknown as { update?: unknown }).update).toBeUndefined();
+      expect(
+        (mockRepo as unknown as { update?: unknown }).update,
+      ).toBeUndefined();
       expect((mockRepo as unknown as { save?: unknown }).save).toBeUndefined();
     });
 

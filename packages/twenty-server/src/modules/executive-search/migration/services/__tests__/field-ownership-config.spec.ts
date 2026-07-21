@@ -116,9 +116,7 @@ describe('field-ownership-config — stage assignment', () => {
   });
 
   it('assigns the documented row counts per stage', () => {
-    const counts = FIELD_OWNERSHIP_CONFIG.map(
-      (def) => def.rows.length,
-    );
+    const counts = FIELD_OWNERSHIP_CONFIG.map((def) => def.rows.length);
 
     // STAGE_0=7 guardrails, STAGE_1=4 identity, STAGE_2=5 inbound,
     // STAGE_3=2 outbound narrow, STAGE_4=3 full.
@@ -177,16 +175,14 @@ describe('field-ownership-config — authoritiesAtStage', () => {
 
   it('evolves a collection authority as stages advance', () => {
     const at1 = new Map(
-      authoritiesAtStage(
-        FIELD_OWNERSHIP_ROWS,
-        CutoverStage.STAGE_1_LINKS,
-      ).map((s) => [s.collection, s.authority]),
+      authoritiesAtStage(FIELD_OWNERSHIP_ROWS, CutoverStage.STAGE_1_LINKS).map(
+        (s) => [s.collection, s.authority],
+      ),
     );
     const at4 = new Map(
-      authoritiesAtStage(
-        FIELD_OWNERSHIP_ROWS,
-        CutoverStage.STAGE_4_FULL,
-      ).map((s) => [s.collection, s.authority]),
+      authoritiesAtStage(FIELD_OWNERSHIP_ROWS, CutoverStage.STAGE_4_FULL).map(
+        (s) => [s.collection, s.authority],
+      ),
     );
 
     // applications: at STAGE_1 only its internal TWENTY guardrail is in

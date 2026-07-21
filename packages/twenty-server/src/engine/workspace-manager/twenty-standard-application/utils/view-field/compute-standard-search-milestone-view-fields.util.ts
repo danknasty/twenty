@@ -34,8 +34,8 @@ export const computeStandardSearchMilestoneViewFields = (
         viewFieldGroupName: 'general',
       },
     }),
-    searchMilestoneRecordPageFieldsDueDate:
-      createStandardViewFieldFlatMetadata({
+    searchMilestoneRecordPageFieldsDueDate: createStandardViewFieldFlatMetadata(
+      {
         ...args,
         objectName: 'searchMilestone',
         context: {
@@ -47,7 +47,8 @@ export const computeStandardSearchMilestoneViewFields = (
           size: 150,
           viewFieldGroupName: 'general',
         },
-      }),
+      },
+    ),
     searchMilestoneRecordPageFieldsCompletedAt:
       createStandardViewFieldFlatMetadata({
         ...args,

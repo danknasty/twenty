@@ -16,30 +16,28 @@ import {
 const AI_PROMPT_TEMPLATE_PAGE_TABS = {
   home: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiPromptTemplateRecordPage
-        .tabs.home.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiPromptTemplateRecordPage.tabs
+        .home.universalIdentifier,
     ...TAB_PROPS.home,
     widgets: {
       fields: {
         universalIdentifier:
-          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-            .aiPromptTemplateRecordPage.tabs.home.widgets.fields
-            .universalIdentifier,
+          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiPromptTemplateRecordPage
+            .tabs.home.widgets.fields.universalIdentifier,
         ...WIDGET_PROPS.fields,
       },
     },
   },
   timeline: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiPromptTemplateRecordPage
-        .tabs.timeline.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiPromptTemplateRecordPage.tabs
+        .timeline.universalIdentifier,
     ...TAB_PROPS.timeline,
     widgets: {
       timeline: {
         universalIdentifier:
-          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-            .aiPromptTemplateRecordPage.tabs.timeline.widgets.timeline
-            .universalIdentifier,
+          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.aiPromptTemplateRecordPage
+            .tabs.timeline.widgets.timeline.universalIdentifier,
         ...WIDGET_PROPS.timeline,
       },
     },

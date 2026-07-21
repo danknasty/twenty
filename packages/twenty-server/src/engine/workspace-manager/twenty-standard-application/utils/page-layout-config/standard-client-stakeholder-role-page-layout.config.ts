@@ -19,8 +19,8 @@ import {
 const CLIENT_STAKEHOLDER_ROLE_PAGE_TABS = {
   home: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-        .clientStakeholderRoleRecordPage.tabs.home.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
+        .tabs.home.universalIdentifier,
     ...TAB_PROPS.home,
     widgets: {
       fields: {
@@ -73,8 +73,8 @@ const CLIENT_STAKEHOLDER_ROLE_PAGE_TABS = {
   },
   timeline: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
-        .clientStakeholderRoleRecordPage.tabs.timeline.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
+        .tabs.timeline.universalIdentifier,
     ...TAB_PROPS.timeline,
     widgets: {
       timeline: {

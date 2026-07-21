@@ -1,13 +1,9 @@
 import { Test, type TestingModule } from '@nestjs/testing';
 
-import { GlobalWorkspaceOrmManager } from
-  'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
-import { DirectusClientService } from
-  'src/modules/executive-search/directus/services/directus-client.service';
-import { CountReconciliationEngine } from
-  'src/modules/executive-search/reconciliation/engines/count-reconciliation.engine';
-import { ReconciliationEngineRegistry } from
-  'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
+import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
+import { DirectusClientService } from 'src/modules/executive-search/directus/services/directus-client.service';
+import { CountReconciliationEngine } from 'src/modules/executive-search/reconciliation/engines/count-reconciliation.engine';
+import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
 
 // The real GlobalWorkspaceOrmManager pulls in the twenty-config graph, which
 // fails to load under jest. Mock the manager so it (and its transitive imports)
@@ -87,23 +83,25 @@ describe('CountReconciliationEngine', () => {
       return Promise.resolve(directus[collection] ?? []);
     });
 
-    const linkFind = jest.fn((options?: { where?: Record<string, unknown> }) => {
-      const where = options?.where;
+    const linkFind = jest.fn(
+      (options?: { where?: Record<string, unknown> }) => {
+        const where = options?.where;
 
-      if (!where) {
-        return Promise.resolve(links);
-      }
+        if (!where) {
+          return Promise.resolve(links);
+        }
 
-      return Promise.resolve(
-        links.filter(
-          (link) =>
-            (where.externalEntityName === undefined ||
-              link.externalEntityName === where.externalEntityName) &&
-            (where.twentyEntityName === undefined ||
-              link.twentyEntityName === where.twentyEntityName),
-        ),
-      );
-    });
+        return Promise.resolve(
+          links.filter(
+            (link) =>
+              (where.externalEntityName === undefined ||
+                link.externalEntityName === where.externalEntityName) &&
+              (where.twentyEntityName === undefined ||
+                link.twentyEntityName === where.twentyEntityName),
+          ),
+        );
+      },
+    );
 
     mockManager.getRepository.mockImplementation(
       (_workspaceId: string, entityOrName: unknown) => {

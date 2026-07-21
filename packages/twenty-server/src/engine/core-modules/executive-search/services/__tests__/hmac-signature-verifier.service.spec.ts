@@ -48,9 +48,7 @@ describe('HmacSignatureVerifierService', () => {
 
     it('should throw INVALID_SIGNATURE when body has been tampered', () => {
       const signatureHeader = generateSignature();
-      const tamperedBody = Buffer.from(
-        JSON.stringify({ eventId: 'evt-002' }),
-      );
+      const tamperedBody = Buffer.from(JSON.stringify({ eventId: 'evt-002' }));
 
       expect(() =>
         service.verify(tamperedBody, signatureHeader, secret),
@@ -65,9 +63,7 @@ describe('HmacSignatureVerifierService', () => {
       const oldTimestamp = Math.floor(Date.now() / 1000) - 600; // 600s > 300s tolerance
       const signatureHeader = generateSignature(oldTimestamp);
 
-      expect(() =>
-        service.verify(rawBody, signatureHeader, secret),
-      ).toThrow(
+      expect(() => service.verify(rawBody, signatureHeader, secret)).toThrow(
         expect.objectContaining({
           code: ExecutiveSearchExceptionCode.STALE_TIMESTAMP,
         }),
@@ -78,9 +74,7 @@ describe('HmacSignatureVerifierService', () => {
       const futureTimestamp = Math.floor(Date.now() / 1000) + 600; // 600s > 300s tolerance
       const signatureHeader = generateSignature(futureTimestamp);
 
-      expect(() =>
-        service.verify(rawBody, signatureHeader, secret),
-      ).toThrow(
+      expect(() => service.verify(rawBody, signatureHeader, secret)).toThrow(
         expect.objectContaining({
           code: ExecutiveSearchExceptionCode.STALE_TIMESTAMP,
         }),
@@ -107,9 +101,7 @@ describe('HmacSignatureVerifierService', () => {
 
     it('should throw INVALID_SIGNATURE when header is missing parts', () => {
       // Missing v1 part
-      expect(() =>
-        service.verify(rawBody, 't=1234567890', secret),
-      ).toThrow(
+      expect(() => service.verify(rawBody, 't=1234567890', secret)).toThrow(
         expect.objectContaining({
           code: ExecutiveSearchExceptionCode.INVALID_SIGNATURE,
         }),

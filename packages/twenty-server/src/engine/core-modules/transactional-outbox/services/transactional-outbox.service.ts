@@ -18,24 +18,18 @@ export class TransactionalOutboxService {
   ): Promise<void> {
     const { eventName, eventPayload, idempotencyKey } = args;
 
-    await queryRunner.manager.insert(
-      'workspaceEventOutbox',
-      {
-        idempotencyKey: idempotencyKey ?? null,
-        eventName,
-        eventPayload: JSON.stringify(eventPayload),
-        status: OutboxStatus.PENDING,
-        attemptCount: 0,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-    );
+    await queryRunner.manager.insert('workspaceEventOutbox', {
+      idempotencyKey: idempotencyKey ?? null,
+      eventName,
+      eventPayload: JSON.stringify(eventPayload),
+      status: OutboxStatus.PENDING,
+      attemptCount: 0,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
   }
 
-  async markInProgress(
-    id: string,
-    queryRunner: QueryRunner,
-  ): Promise<void> {
+  async markInProgress(id: string, queryRunner: QueryRunner): Promise<void> {
     await queryRunner.manager.update(
       'workspaceEventOutbox',
       { id },
@@ -47,10 +41,7 @@ export class TransactionalOutboxService {
     );
   }
 
-  async markDelivered(
-    id: string,
-    queryRunner: QueryRunner,
-  ): Promise<void> {
+  async markDelivered(id: string, queryRunner: QueryRunner): Promise<void> {
     await queryRunner.manager.update(
       'workspaceEventOutbox',
       { id },

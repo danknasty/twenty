@@ -67,6 +67,7 @@ import { buildWorkflowStandardFlatFieldMetadatas } from 'src/engine/workspace-ma
 import { buildWorkflowVersionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-version-standard-flat-field-metadata.util';
 import { buildSearchEngagementTermsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-engagement-terms-standard-flat-field-metadata.util';
 import { buildWorkspaceEventOutboxStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workspace-event-outbox-standard-flat-field-metadata.util';
+import { buildWorkspaceMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workspace-member-standard-flat-field-metadata.util';
 import { buildSearchAssignmentStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-assignment-standard-flat-field-metadata.util';
 import { buildAssignmentTeamMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-assignment-team-member-standard-flat-field-metadata.util';
 import { buildSearchMilestoneStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-milestone-standard-flat-field-metadata.util';
@@ -90,11 +91,6 @@ import { buildCandidatePresentationStandardFlatFieldMetadatas } from 'src/engine
 import { buildClientFeedbackStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-client-feedback-standard-flat-field-metadata.util';
 import { buildSearchStatusReportStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-status-report-standard-flat-field-metadata.util';
 
-import { buildCompensationExpectationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-compensation-expectation-standard-flat-field-metadata.util';
-import { buildOfferNegotiationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-offer-negotiation-standard-flat-field-metadata.util';
-import { buildPlacementStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-placement-standard-flat-field-metadata.util';
-import { buildGuaranteeCaseStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-guarantee-case-standard-flat-field-metadata.util';
-
 import { buildBoardCompositionProfileStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-composition-profile-standard-flat-field-metadata.util';
 import { buildBoardMatrixCriterionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-board-matrix-criterion-standard-flat-field-metadata.util';
 import { buildCandidateBoardMatrixEvaluationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-candidate-board-matrix-evaluation-standard-flat-field-metadata.util';
@@ -105,8 +101,8 @@ import { buildExternalIdentityMatchQueueStandardFlatFieldMetadatas } from 'src/e
 import { buildAnalyticsDomainMetricStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-domain-metric-standard-flat-field-metadata.util';
 import { buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-metric-snapshot-standard-flat-field-metadata.util';
 import { buildAnalyticsDashboardConfigStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-config-standard-flat-field-metadata.util';
-import { buildAiPromptTemplateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-prompt-template-standard-flat-field-metadata.util';import { buildAiModelRegistryStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-model-registry-standard-flat-field-metadata.util';
 import { buildAiPromptTemplateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-prompt-template-standard-flat-field-metadata.util';
+import { buildAiModelRegistryStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-model-registry-standard-flat-field-metadata.util';
 import { buildAiProviderCallLogStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-provider-call-log-standard-flat-field-metadata.util';
 import { buildAppAgentsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-app-agents-standard-flat-field-metadata.util';
 
@@ -124,10 +120,9 @@ const STANDARD_FLAT_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   calendarEvent: buildCalendarEventStandardFlatFieldMetadatas,
   callRecording: buildCallRecordingStandardFlatFieldMetadatas,
   clientAccountProfile: buildClientAccountProfileStandardFlatFieldMetadatas,
-  clientStakeholderRole:
-    buildClientStakeholderRoleStandardFlatFieldMetadatas,
+  clientStakeholderRole: buildClientStakeholderRoleStandardFlatFieldMetadatas,
   company: buildCompanyStandardFlatFieldMetadatas,
-externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
+  externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
   inboundEventLedger: buildInboundEventLedgerStandardFlatFieldMetadatas,
   outboundEventLedger: buildOutboundEventLedgerStandardFlatFieldMetadatas,
   outboxEvent: buildOutboxEventStandardFlatFieldMetadatas,
@@ -135,16 +130,14 @@ externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
   reconciliationRun: buildReconciliationRunStandardFlatFieldMetadatas,
   reconciliationFinding: buildReconciliationFindingStandardFlatFieldMetadatas,
   dashboard: buildDashboardStandardFlatFieldMetadatas,
-externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatFieldMetadatas,
+  externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatFieldMetadatas,
   externalSyncDLQ: buildExternalSyncDLQStandardFlatFieldMetadatas,
   externalSyncInbox: buildExternalSyncInboxStandardFlatFieldMetadatas,
   externalSyncOutbox: buildExternalSyncOutboxStandardFlatFieldMetadatas,
   externalSyncReconciliation:
     buildExternalSyncReconciliationStandardFlatFieldMetadatas,
-confidentialityRecord:
-    buildConfidentialityRecordStandardFlatFieldMetadatas,
+  confidentialityRecord: buildConfidentialityRecordStandardFlatFieldMetadatas,
   conflictCheck: buildConflictCheckStandardFlatFieldMetadatas,
-  dashboard: buildDashboardStandardFlatFieldMetadatas,
   executiveArtifact: buildExecutiveArtifactStandardFlatFieldMetadatas,
   executiveAward: buildExecutiveAwardStandardFlatFieldMetadatas,
   executiveBoardService: buildExecutiveBoardServiceStandardFlatFieldMetadatas,
@@ -159,8 +152,6 @@ confidentialityRecord:
   executiveSearchPreference:
     buildExecutiveSearchPreferenceStandardFlatFieldMetadatas,
   marketMap: buildMarketMapStandardFlatFieldMetadatas,
-executiveProfile: buildExecutiveProfileStandardFlatFieldMetadatas,
-  externalEntityLink: buildExternalEntityLinkStandardFlatFieldMetadatas,
   messageCampaign: buildMessageCampaignStandardFlatFieldMetadatas,
   messageList: buildMessageListStandardFlatFieldMetadatas,
   messageListMember: buildMessageListMemberStandardFlatFieldMetadatas,
@@ -173,15 +164,12 @@ executiveProfile: buildExecutiveProfileStandardFlatFieldMetadatas,
   messageThread: buildMessageThreadStandardFlatFieldMetadatas,
   note: buildNoteStandardFlatFieldMetadatas,
   noteTarget: buildNoteTargetStandardFlatFieldMetadatas,
-  offLimitsRestriction:
-    buildOffLimitsRestrictionStandardFlatFieldMetadatas,
+  offLimitsRestriction: buildOffLimitsRestrictionStandardFlatFieldMetadatas,
   opportunity: buildOpportunityStandardFlatFieldMetadatas,
   person: buildPersonStandardFlatFieldMetadatas,
   relationshipEdge: buildRelationshipEdgeStandardFlatFieldMetadatas,
-  researchCandidate:
-    buildResearchCandidateStandardFlatFieldMetadatas,
-  researchStrategy:
-    buildResearchStrategyStandardFlatFieldMetadatas,
+  researchCandidate: buildResearchCandidateStandardFlatFieldMetadatas,
+  researchStrategy: buildResearchStrategyStandardFlatFieldMetadatas,
   targetCompany: buildTargetCompanyStandardFlatFieldMetadatas,
   task: buildTaskStandardFlatFieldMetadatas,
   taskTarget: buildTaskTargetStandardFlatFieldMetadatas,
@@ -193,13 +181,7 @@ executiveProfile: buildExecutiveProfileStandardFlatFieldMetadatas,
   workflowVersion: buildWorkflowVersionStandardFlatFieldMetadatas,
   workspaceEventOutbox: buildWorkspaceEventOutboxStandardFlatFieldMetadatas,
   workspaceMember: buildWorkspaceMemberStandardFlatFieldMetadatas,
-clientStakeholderRole:
-    buildClientStakeholderRoleStandardFlatFieldMetadatas,
-  searchEngagementTerms:
-    buildSearchEngagementTermsStandardFlatFieldMetadatas,
-  clientAccountProfile:
-    buildClientAccountProfileStandardFlatFieldMetadatas,
-searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
+  searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
   searchAssignment: buildSearchAssignmentStandardFlatFieldMetadatas,
   assignmentTeamMember: buildAssignmentTeamMemberStandardFlatFieldMetadatas,
   searchMilestone: buildSearchMilestoneStandardFlatFieldMetadatas,
@@ -218,29 +200,30 @@ searchEngagementTerms: buildSearchEngagementTermsStandardFlatFieldMetadatas,
   searchStatusReport: buildSearchStatusReportStandardFlatFieldMetadatas,
   referenceCheck: buildReferenceCheckStandardFlatFieldMetadatas,
   diligenceCheck: buildDiligenceCheckStandardFlatFieldMetadatas,
-  compensationExpectation: buildCompensationExpectationStandardFlatFieldMetadatas,
+  compensationExpectation:
+    buildCompensationExpectationStandardFlatFieldMetadatas,
   offerNegotiation: buildOfferNegotiationStandardFlatFieldMetadatas,
   placement: buildPlacementStandardFlatFieldMetadatas,
   guaranteeCase: buildGuaranteeCaseStandardFlatFieldMetadatas,
 
-boardCompositionProfile:
+  boardCompositionProfile:
     buildBoardCompositionProfileStandardFlatFieldMetadatas,
-  boardMatrixCriterion:
-    buildBoardMatrixCriterionStandardFlatFieldMetadatas,
+  boardMatrixCriterion: buildBoardMatrixCriterionStandardFlatFieldMetadatas,
   candidateBoardMatrixEvaluation:
     buildCandidateBoardMatrixEvaluationStandardFlatFieldMetadatas,
   directorIndependenceReview:
     buildDirectorIndependenceReviewStandardFlatFieldMetadatas,
-  boardCommitmentReview:
-    buildBoardCommitmentReviewStandardFlatFieldMetadatas,
-retentionActionLog: buildRetentionActionLogStandardFlatFieldMetadatas,
+  boardCommitmentReview: buildBoardCommitmentReviewStandardFlatFieldMetadatas,
+  retentionActionLog: buildRetentionActionLogStandardFlatFieldMetadatas,
   externalIdentityMatchQueue:
     buildExternalIdentityMatchQueueStandardFlatFieldMetadatas,
-analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatFieldMetadatas,
-  analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas,
-  analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatFieldMetadatas,
-aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,  aiModelRegistry: buildAiModelRegistryStandardFlatFieldMetadatas,
+  analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatFieldMetadatas,
+  analyticsMetricSnapshot:
+    buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas,
+  analyticsDashboardConfig:
+    buildAnalyticsDashboardConfigStandardFlatFieldMetadatas,
   aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,
+  aiModelRegistry: buildAiModelRegistryStandardFlatFieldMetadatas,
   aiProviderCallLog: buildAiProviderCallLogStandardFlatFieldMetadatas,
   appAgents: buildAppAgentsStandardFlatFieldMetadatas,
 } satisfies {

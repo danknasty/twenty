@@ -114,7 +114,9 @@ export const buildCandidacyStageEventStandardFlatFieldMetadatas = ({
       fieldName: 'stage',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Stage`),
-      description: i18nLabel(msg`The stage name (e.g. IDENTIFIED, PRESENTED, PLACED)`),
+      description: i18nLabel(
+        msg`The stage name (e.g. IDENTIFIED, PRESENTED, PLACED)`,
+      ),
       icon: 'IconProgress',
       isNullable: false,
       isUIEditable: true,
@@ -251,7 +253,9 @@ export const buildCandidacyStageEventStandardFlatFieldMetadatas = ({
       fieldName: 'isCandidateVisible',
       type: FieldMetadataType.BOOLEAN,
       label: i18nLabel(msg`Candidate Visible`),
-      description: i18nLabel(msg`Whether this event is visible to the candidate`),
+      description: i18nLabel(
+        msg`Whether this event is visible to the candidate`,
+      ),
       icon: 'IconEye',
       isNullable: false,
       isUIEditable: true,

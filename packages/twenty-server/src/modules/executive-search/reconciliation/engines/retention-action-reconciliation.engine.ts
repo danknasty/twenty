@@ -3,8 +3,10 @@ import { Injectable, Logger } from '@nestjs/common';
 import { buildSystemAuthContext } from 'src/engine/twenty-orm/utils/build-system-auth-context.util';
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { RetentionActionLogWorkspaceEntity } from 'src/modules/executive-search/standard-objects/retention-action-log.workspace-entity';
-import { type ReconcileArgs } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
-import { type ReconciliationEngine } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
+import {
+  type ReconcileArgs,
+  type ReconciliationEngine,
+} from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
 import { type ReconciliationFinding } from 'src/modules/executive-search/reconciliation/reconciliation-finding.type';
 import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
 import {
@@ -32,7 +34,9 @@ import {
 export class RetentionActionReconciliationEngine implements ReconciliationEngine {
   readonly name = 'retention-action-reconciliation';
 
-  private readonly logger = new Logger(RetentionActionReconciliationEngine.name);
+  private readonly logger = new Logger(
+    RetentionActionReconciliationEngine.name,
+  );
 
   /**
    * Rows still REQUESTED past this age are flagged STALE (1 hour).
@@ -52,12 +56,11 @@ export class RetentionActionReconciliationEngine implements ReconciliationEngine
 
     return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
       async () => {
-        const repository =
-          await this.globalWorkspaceOrmManager.getRepository(
-            args.workspaceId,
-            RetentionActionLogWorkspaceEntity,
-            { shouldBypassPermissionChecks: true },
-          );
+        const repository = await this.globalWorkspaceOrmManager.getRepository(
+          args.workspaceId,
+          RetentionActionLogWorkspaceEntity,
+          { shouldBypassPermissionChecks: true },
+        );
 
         const pending = await repository.find({
           where: { status: RETENTION_ACTION_STATUS.REQUESTED },
@@ -69,7 +72,8 @@ export class RetentionActionReconciliationEngine implements ReconciliationEngine
 
         for (const row of pending) {
           const recordId = row.targetTwentyRecordId ?? row.id;
-          const isLegalHold = row.actionType === RETENTION_ACTION_TYPE.LEGAL_HOLD;
+          const isLegalHold =
+            row.actionType === RETENTION_ACTION_TYPE.LEGAL_HOLD;
 
           // EXISTENCE finding: action recorded in Twenty, never propagated.
           findings.push({

@@ -26,16 +26,12 @@ jest.mock(
   () => {
     const mockExecuteInWorkspaceContext = jest
       .fn()
-      .mockImplementation(
-        (fn: () => any, _authContext?: any) => fn(),
-      );
+      .mockImplementation((fn: () => any, _authContext?: any) => fn());
 
     const mockGetRepository = jest.fn();
     const mockTransaction = jest
       .fn()
-      .mockImplementation(
-        async (cb: (manager: any) => Promise<any>) => cb({}),
-      );
+      .mockImplementation(async (cb: (manager: any) => Promise<any>) => cb({}));
 
     return {
       GlobalWorkspaceOrmManager: jest.fn().mockImplementation(() => ({
@@ -81,9 +77,7 @@ describe('CandidacyStateTransitionService', () => {
     mockGlobalWorkspaceOrmManager.getRepository.mockImplementation(
       (_workspaceId: string, entityOrName: any, _options?: any) => {
         const key =
-          typeof entityOrName === 'string'
-            ? entityOrName
-            : entityOrName.name;
+          typeof entityOrName === 'string' ? entityOrName : entityOrName.name;
 
         return Promise.resolve(repositoryMap[key]);
       },
@@ -93,17 +87,13 @@ describe('CandidacyStateTransitionService', () => {
   beforeEach(async () => {
     mockTransactionImpl = jest
       .fn()
-      .mockImplementation(
-        async (cb: (manager: any) => Promise<any>) => cb({}),
-      );
+      .mockImplementation(async (cb: (manager: any) => Promise<any>) => cb({}));
 
     // Create mock orm manager with fresh callbacks
     mockGlobalWorkspaceOrmManager = {
       executeInWorkspaceContext: jest
         .fn()
-        .mockImplementation(
-          (fn: () => any, _authContext?: any) => fn(),
-        ),
+        .mockImplementation((fn: () => any, _authContext?: any) => fn()),
       getRepository: jest.fn(),
       getGlobalWorkspaceDataSource: jest.fn().mockResolvedValue({
         transaction: mockTransactionImpl,
@@ -586,7 +576,10 @@ describe('CandidacyStateTransitionService', () => {
     });
 
     it('should throw for terminal state transitions', async () => {
-      const placedCandidacy = { ...baseCandidacy, status: CandidacyStatus.PLACED };
+      const placedCandidacy = {
+        ...baseCandidacy,
+        status: CandidacyStatus.PLACED,
+      };
 
       await expect(
         service.transition(placedCandidacy, CandidacyStatus.PLACED),

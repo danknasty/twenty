@@ -12,10 +12,7 @@ export const buildClientFeedbackStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'clientFeedback'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'clientFeedback'>, 'context'>): Record<
   AllStandardObjectIndexName<'clientFeedback'>,
   FlatIndexMetadata
 > => ({

@@ -1,6 +1,4 @@
-import {
-  STANDARD_OBJECTS,
-} from 'twenty-shared/metadata';
+import { STANDARD_OBJECTS } from 'twenty-shared/metadata';
 import { FieldMetadataType } from 'twenty-shared/types';
 import { isDefined } from 'twenty-shared/utils';
 
@@ -51,8 +49,7 @@ describe('Opportunity standard metadata build - BD fields', () => {
   it('has expectedFeeFloor as CURRENCY and nullable', () => {
     const expectedFeeFloorField =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[
-        STANDARD_OBJECTS.opportunity.fields.expectedFeeFloor
-          .universalIdentifier
+        STANDARD_OBJECTS.opportunity.fields.expectedFeeFloor.universalIdentifier
       ];
 
     expect(expectedFeeFloorField).toBeDefined();
@@ -75,8 +72,7 @@ describe('Opportunity standard metadata build - BD fields', () => {
   it('has expectedTimeline as SELECT with 5 options', () => {
     const expectedTimelineField =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[
-        STANDARD_OBJECTS.opportunity.fields.expectedTimeline
-          .universalIdentifier
+        STANDARD_OBJECTS.opportunity.fields.expectedTimeline.universalIdentifier
       ];
 
     expect(expectedTimelineField).toBeDefined();
@@ -110,8 +106,7 @@ describe('Opportunity standard metadata build - BD fields', () => {
   it('has decisionCriteria as TEXT with long text settings and nullable', () => {
     const decisionCriteriaField =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[
-        STANDARD_OBJECTS.opportunity.fields.decisionCriteria
-          .universalIdentifier
+        STANDARD_OBJECTS.opportunity.fields.decisionCriteria.universalIdentifier
       ];
 
     expect(decisionCriteriaField).toBeDefined();
@@ -130,8 +125,7 @@ describe('Opportunity standard metadata build - BD fields', () => {
         .universalIdentifier,
       STANDARD_OBJECTS.opportunity.fields.expectedTimeline.universalIdentifier,
       STANDARD_OBJECTS.opportunity.fields.decisionDate.universalIdentifier,
-      STANDARD_OBJECTS.opportunity.fields.decisionCriteria
-        .universalIdentifier,
+      STANDARD_OBJECTS.opportunity.fields.decisionCriteria.universalIdentifier,
     ];
 
     for (const uid of bdFieldUniversalIdentifiers) {

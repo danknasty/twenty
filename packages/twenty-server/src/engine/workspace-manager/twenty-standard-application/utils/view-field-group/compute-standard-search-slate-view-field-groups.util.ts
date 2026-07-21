@@ -5,10 +5,7 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
 
 export const computeStandardSearchSlateViewFieldGroups = (
-  args: Omit<
-    CreateStandardViewFieldGroupArgs<'searchSlate'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldGroupArgs<'searchSlate'>, 'context'>,
 ): Record<string, FlatViewFieldGroup> => {
   return {
     searchSlateRecordPageFieldsGeneral:

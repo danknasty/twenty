@@ -1,4 +1,5 @@
-export const EXECUTIVE_SEARCH_SYNC_WEBHOOK_PATH = 'webhooks/executive-search/sync';
+export const EXECUTIVE_SEARCH_SYNC_WEBHOOK_PATH =
+  'webhooks/executive-search/sync';
 export const HMAC_SIGNATURE_HEADER = 'x-directus-signature';
 export const HMAC_TIMESTAMP_TOLERANCE_SECONDS = 300;
 export const RECONCILIATION_CRON_PATTERN = '0 */6 * * *';

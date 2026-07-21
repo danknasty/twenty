@@ -12,10 +12,7 @@ export const buildAppAgentsStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'appAgents'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'appAgents'>, 'context'>): Record<
   AllStandardObjectIndexName<'appAgents'>,
   FlatIndexMetadata
 > => ({

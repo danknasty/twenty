@@ -3,7 +3,7 @@ import { Test, type TestingModule } from '@nestjs/testing';
 import { WorkspaceEventOutboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/workspace-event-outbox.workspace-entity';
 import {
   TransactionalOutboxService,
-  type OutboxAppendArgs,
+  type AppendOutboxArgs,
 } from 'src/engine/core-modules/transactional-outbox/services/transactional-outbox.service';
 import { OutboxStatus } from 'src/engine/core-modules/transactional-outbox/enums/outbox-status.enum';
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
@@ -20,9 +20,7 @@ describe('TransactionalOutboxService', () => {
   const mockGlobalWorkspaceOrmManager = {
     executeInWorkspaceContext: jest
       .fn()
-      .mockImplementation(
-        (fn: () => Promise<void>, _authContext: any) => fn(),
-      ),
+      .mockImplementation((fn: () => Promise<void>, _authContext: any) => fn()),
     getRepository: jest.fn(),
   };
 
@@ -57,7 +55,7 @@ describe('TransactionalOutboxService', () => {
 
   describe('append', () => {
     it('should create and save an outbox entry with PENDING status', async () => {
-      const args: OutboxAppendArgs = {
+      const args: AppendOutboxArgs = {
         eventName: 'person.created',
         eventPayload: { id: '123', name: 'John' },
       };
@@ -75,9 +73,7 @@ describe('TransactionalOutboxService', () => {
 
       await service.append(args, 'workspace-1');
 
-      expect(
-        mockGlobalWorkspaceOrmManager.getRepository,
-      ).toHaveBeenCalledWith(
+      expect(mockGlobalWorkspaceOrmManager.getRepository).toHaveBeenCalledWith(
         'workspace-1',
         WorkspaceEventOutboxWorkspaceEntity,
         { shouldBypassPermissionChecks: true },
@@ -93,7 +89,7 @@ describe('TransactionalOutboxService', () => {
     });
 
     it('should accept an optional idempotencyKey', async () => {
-      const args: OutboxAppendArgs = {
+      const args: AppendOutboxArgs = {
         eventName: 'company.updated',
         eventPayload: { id: '456' },
         idempotencyKey: 'key-001',

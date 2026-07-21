@@ -5,10 +5,7 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
 
 export const computeStandardClientFeedbackViewFieldGroups = (
-  args: Omit<
-    CreateStandardViewFieldGroupArgs<'clientFeedback'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldGroupArgs<'clientFeedback'>, 'context'>,
 ): Record<string, FlatViewFieldGroup> => {
   return {
     clientFeedbackRecordPageFieldsGeneral:

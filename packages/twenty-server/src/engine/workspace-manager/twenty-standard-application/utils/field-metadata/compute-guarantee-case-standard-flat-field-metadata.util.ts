@@ -25,10 +25,7 @@ export const buildGuaranteeCaseStandardFlatFieldMetadatas = ({
 }: Omit<
   CreateStandardFieldArgs<'guaranteeCase', FieldMetadataType>,
   'context'
->): Record<
-  AllStandardObjectFieldName<'guaranteeCase'>,
-  FlatFieldMetadata
-> => ({
+>): Record<AllStandardObjectFieldName<'guaranteeCase'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,

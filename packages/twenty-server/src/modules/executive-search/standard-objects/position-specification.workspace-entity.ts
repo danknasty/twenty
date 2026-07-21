@@ -1,4 +1,8 @@
-import { type ActorMetadata, type CurrencyMetadata, type RichTextMetadata } from 'twenty-shared/types';
+import {
+  type ActorMetadata,
+  type CurrencyMetadata,
+  type RichTextMetadata,
+} from 'twenty-shared/types';
 
 import { BaseWorkspaceEntity } from 'src/engine/twenty-orm/base.workspace-entity';
 import { type EntityRelation } from 'src/engine/workspace-manager/workspace-migration/types/entity-relation.interface';

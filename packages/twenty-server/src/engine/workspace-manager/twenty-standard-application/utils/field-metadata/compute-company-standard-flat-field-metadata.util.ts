@@ -501,23 +501,13 @@ export const buildCompanyStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-clientStakeholderRoles: createStandardRelationFieldFlatMetadata({
-searchEngagementTerms: createStandardRelationFieldFlatMetadata({
+  searchEngagementTerms: createStandardRelationFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
       type: FieldMetadataType.RELATION,
       morphId: null,
-fieldName: 'clientStakeholderRoles',
-      label: i18nLabel(msg`Client Stakeholder Roles`),
-      description: i18nLabel(
-        msg`Client stakeholder roles linked to this company`,
-      ),
-      icon: 'IconUser',
-      isNullable: true,
-      targetObjectName: 'clientStakeholderRole',
-      targetFieldName: 'company',
-fieldName: 'searchEngagementTerms',
+      fieldName: 'searchEngagementTerms',
       label: i18nLabel(msg`Search Engagement Terms`),
       description: i18nLabel(msg`Engagement terms for the company`),
       icon: 'IconFileContract',
@@ -533,23 +523,13 @@ fieldName: 'searchEngagementTerms',
     twentyStandardApplicationId,
     now,
   }),
-clientAccountProfiles: createStandardRelationFieldFlatMetadata({
-searchAssignments: createStandardRelationFieldFlatMetadata({
+  searchAssignments: createStandardRelationFieldFlatMetadata({
     objectName,
     workspaceId,
     context: {
       type: FieldMetadataType.RELATION,
       morphId: null,
-fieldName: 'clientAccountProfiles',
-      label: i18nLabel(msg`Client Account Profiles`),
-      description: i18nLabel(
-        msg`Client account profiles linked to this company`,
-      ),
-      icon: 'IconBuilding',
-      isNullable: true,
-      targetObjectName: 'clientAccountProfile',
-      targetFieldName: 'company',
-fieldName: 'searchAssignments',
+      fieldName: 'searchAssignments',
       label: i18nLabel(msg`Search Assignments`),
       description: i18nLabel(msg`Search assignments for the company`),
       icon: 'IconTargetArrow',

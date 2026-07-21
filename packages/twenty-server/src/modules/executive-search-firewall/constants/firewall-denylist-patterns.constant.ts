@@ -80,8 +80,7 @@ export const FIREWALL_DENYLIST_PATTERNS: DenylistPattern[] = [
     fieldOrPattern: 'executive_settings.password/security_fields',
     dataClassification: 'Authentication/security secret',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Never copy password, token, TFA secret, or auth payload',
+    reason: 'Never copy password, token, TFA secret, or auth payload',
   },
   {
     fieldOrPattern: 'executive_psychographic.*',
@@ -93,8 +92,7 @@ export const FIREWALL_DENYLIST_PATTERNS: DenylistPattern[] = [
     fieldOrPattern: 'magic_auth_challenges.otp_ciphertext_hash',
     dataClassification: 'Authentication/security secret',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Never copy OTP/token ciphertext/hash/attempts into ATS records',
+    reason: 'Never copy OTP/token ciphertext/hash/attempts into ATS records',
   },
   {
     fieldOrPattern: 'magic_auth_events.*',
@@ -106,57 +104,49 @@ export const FIREWALL_DENYLIST_PATTERNS: DenylistPattern[] = [
     fieldOrPattern: 'directus_users.password_hash',
     dataClassification: 'Authentication/security secret',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Never replicate password hash, token, TFA secret, auth data',
+    reason: 'Never replicate password hash, token, TFA secret, auth data',
   },
   {
     fieldOrPattern: 'executive_settings.product_engagement_metrics',
     dataClassification: 'Commercial engagement data',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Candidate-service telemetry excluded from search delivery',
+    reason: 'Candidate-service telemetry excluded from search delivery',
   },
   {
     fieldOrPattern: 'ai_application_analysis.culture_fit_score',
     dataClassification: 'Risky legacy AI output',
     rule: DenylistRule.QUARANTINE,
-    reason:
-      'Excluded from automatic progression and default client reports',
+    reason: 'Excluded from automatic progression and default client reports',
   },
   {
     fieldOrPattern: 'ai_application_analysis.success_probability',
     dataClassification: 'Risky legacy AI output',
     rule: DenylistRule.QUARANTINE,
-    reason:
-      'Excluded from automatic progression and default client reports',
+    reason: 'Excluded from automatic progression and default client reports',
   },
   {
     fieldOrPattern: 'ai_application_analysis.matching_score',
     dataClassification: 'Risky legacy AI output',
     rule: DenylistRule.QUARANTINE,
-    reason:
-      'Excluded from automatic progression and default client reports',
+    reason: 'Excluded from automatic progression and default client reports',
   },
   {
     fieldOrPattern: 'ai_application_analysis.competitive_analysis',
     dataClassification: 'Risky legacy AI output',
     rule: DenylistRule.QUARANTINE,
-    reason:
-      'Excluded from automatic progression and default client reports',
+    reason: 'Excluded from automatic progression and default client reports',
   },
   {
     fieldOrPattern: 'executive_opportunity_single_page_analysis.raw_score',
     dataClassification: 'Legacy AI output',
     rule: DenylistRule.QUARANTINE,
-    reason:
-      'Do not promote raw score into internal selection',
+    reason: 'Do not promote raw score into internal selection',
   },
   {
     fieldOrPattern: 'profile_analyses.photo_analysis_scores',
     dataClassification: 'Restricted AI signal',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Exclude photo analysis and scores from selection',
+    reason: 'Exclude photo analysis and scores from selection',
   },
   {
     fieldOrPattern: 'linkedin_*.profile_engagement_content_activity',
@@ -169,28 +159,24 @@ export const FIREWALL_DENYLIST_PATTERNS: DenylistPattern[] = [
     fieldOrPattern: 'learning_path_*.course_completion_quiz_activity',
     dataClassification: 'Candidate-services reference',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Exclude learning activity unless explicit job-related credential',
+    reason: 'Exclude learning activity unless explicit job-related credential',
   },
   {
     fieldOrPattern: 'pitch_practice_*.rehearsal_data',
     dataClassification: 'Candidate-services reference',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Private rehearsal data stays in Directus',
+    reason: 'Private rehearsal data stays in Directus',
   },
   {
     fieldOrPattern: 'social_login_events.*',
     dataClassification: 'Authentication telemetry',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Do not use login behavior in selection',
+    reason: 'Do not use login behavior in selection',
   },
   {
     fieldOrPattern: 'meilisearch_settings.*',
     dataClassification: 'Infrastructure secret',
     rule: DenylistRule.NO_SYNC,
-    reason:
-      'Contains search infrastructure/API-key configuration',
+    reason: 'Contains search infrastructure/API-key configuration',
   },
 ];

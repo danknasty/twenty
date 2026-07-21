@@ -192,9 +192,7 @@ describe('ExecutiveSearchInboxService', () => {
       });
 
       expect(result.applied).toBe(false);
-      expect(result.reason).toEqual(
-        expect.stringContaining('comparison-only'),
-      );
+      expect(result.reason).toEqual(expect.stringContaining('comparison-only'));
       // No persistence is invoked when skipping.
       expect(inboxRepo.update).not.toHaveBeenCalled();
       expect(inboxRepo.save).not.toHaveBeenCalled();

@@ -25,10 +25,7 @@ export const buildAppAgentsStandardFlatFieldMetadatas = ({
 }: Omit<
   CreateStandardFieldArgs<'appAgents', FieldMetadataType>,
   'context'
->): Record<
-  AllStandardObjectFieldName<'appAgents'>,
-  FlatFieldMetadata
-> => ({
+>): Record<AllStandardObjectFieldName<'appAgents'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
@@ -359,9 +356,7 @@ export const buildAppAgentsStandardFlatFieldMetadatas = ({
       fieldName: 'humanReviewRequired',
       type: FieldMetadataType.BOOLEAN,
       label: i18nLabel(msg`Human Review Required`),
-      description: i18nLabel(
-        msg`Whether human review of outputs is required`,
-      ),
+      description: i18nLabel(msg`Whether human review of outputs is required`),
       icon: 'IconEye',
       isNullable: false,
       isUIEditable: true,

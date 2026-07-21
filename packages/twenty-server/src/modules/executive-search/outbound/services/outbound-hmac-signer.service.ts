@@ -4,7 +4,10 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class OutboundHmacSignerService {
-  sign(payload: Record<string, unknown>, secret: string): {
+  sign(
+    payload: Record<string, unknown>,
+    secret: string,
+  ): {
     signature: string;
     timestamp: string;
     nonce: string;
@@ -22,9 +25,7 @@ export class OutboundHmacSignerService {
     return { signature, timestamp, nonce, body };
   }
 
-  toHeaders(
-    result: ReturnType<typeof this.sign>,
-  ): Record<string, string> {
+  toHeaders(result: ReturnType<typeof this.sign>): Record<string, string> {
     return {
       'X-Twenty-Directus-Signature': result.signature,
       'X-Twenty-Directus-Timestamp': result.timestamp,

@@ -402,9 +402,7 @@ export const buildAiProviderCallLogStandardFlatFieldMetadatas = ({
       fieldName: 'guardrailPolicyVersion',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Guardrail Policy Version`),
-      description: i18nLabel(
-        msg`Guardrail policy version applied to the call`,
-      ),
+      description: i18nLabel(msg`Guardrail policy version applied to the call`),
       icon: 'IconShield',
       isNullable: true,
       isUIEditable: true,
@@ -525,9 +523,7 @@ export const buildAiProviderCallLogStandardFlatFieldMetadatas = ({
       fieldName: 'legalHold',
       type: FieldMetadataType.BOOLEAN,
       label: i18nLabel(msg`Legal Hold`),
-      description: i18nLabel(
-        msg`Whether the call log is under legal hold`,
-      ),
+      description: i18nLabel(msg`Whether the call log is under legal hold`),
       icon: 'IconGavel',
       isNullable: false,
       isUIEditable: true,

@@ -216,12 +216,12 @@ export const executiveMatcher: EntityMatcher = {
       return scored;
     };
 
-    const result = runPrecedence(externalId, DIRECTUS_COLLECTION, PRIMARY_TWENTY_ENTITY, [
-      atsUuidKey,
-      emailKey,
-      phoneOrExternalIdKey,
-      nameKey,
-    ]);
+    const result = runPrecedence(
+      externalId,
+      DIRECTUS_COLLECTION,
+      PRIMARY_TWENTY_ENTITY,
+      [atsUuidKey, emailKey, phoneOrExternalIdKey, nameKey],
+    );
 
     if (result.matchedTwentyRecordId) {
       result.reasons.push(

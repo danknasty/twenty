@@ -12,10 +12,7 @@ export const buildWorkspaceEventOutboxStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'workspaceEventOutbox'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'workspaceEventOutbox'>, 'context'>): Record<
   AllStandardObjectIndexName<'workspaceEventOutbox'>,
   FlatIndexMetadata
 > => ({

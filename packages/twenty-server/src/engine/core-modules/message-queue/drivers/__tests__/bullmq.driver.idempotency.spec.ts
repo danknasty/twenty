@@ -3,9 +3,7 @@ import { v4 } from 'uuid';
 
 import { BullMQDriver } from 'src/engine/core-modules/message-queue/drivers/bullmq.driver';
 import { MessageQueue } from 'src/engine/core-modules/message-queue/message-queue.constants';
-import {
-  MESSAGE_QUEUE_PRIORITY,
-} from 'src/engine/core-modules/message-queue/message-queue-priority.constant';
+import { MESSAGE_QUEUE_PRIORITY } from 'src/engine/core-modules/message-queue/message-queue-priority.constant';
 
 jest.mock('bullmq', () => {
   const mockAdd = jest.fn().mockResolvedValue(undefined);
@@ -34,11 +32,7 @@ describe('BullMQDriver - idempotency keys', () => {
   beforeEach(async () => {
     jest.clearAllMocks();
 
-    driver = new BullMQDriver(
-      {} as any,
-      {} as any,
-      {} as any,
-    );
+    driver = new BullMQDriver({} as any, {} as any, {} as any);
 
     driver.register(queueName);
 
@@ -48,9 +42,14 @@ describe('BullMQDriver - idempotency keys', () => {
 
   describe('with idempotencyKey', () => {
     it('should pass idempotencyKey verbatim as jobId', async () => {
-      await driver.add(queueName, 'test-job', { foo: 'bar' }, {
-        idempotencyKey: 'my-idempotency-key',
-      });
+      await driver.add(
+        queueName,
+        'test-job',
+        { foo: 'bar' },
+        {
+          idempotencyKey: 'my-idempotency-key',
+        },
+      );
 
       expect(mockQueue.add).toHaveBeenCalledTimes(1);
       expect(mockQueue.add).toHaveBeenCalledWith(
@@ -63,22 +62,37 @@ describe('BullMQDriver - idempotency keys', () => {
     });
 
     it('should skip the waiting-job guard (should not call getJobs)', async () => {
-      await driver.add(queueName, 'test-job', { foo: 'bar' }, {
-        idempotencyKey: 'my-key',
-        id: 'some-id', // this would trigger the guard if idempotencyKey was not set
-      });
+      await driver.add(
+        queueName,
+        'test-job',
+        { foo: 'bar' },
+        {
+          idempotencyKey: 'my-key',
+          id: 'some-id', // this would trigger the guard if idempotencyKey was not set
+        },
+      );
 
       expect(mockQueue.getJobs).not.toHaveBeenCalled();
     });
 
     it('should be idempotent: two add() calls with same idempotencyKey produce same jobId', async () => {
-      await driver.add(queueName, 'test-job', { foo: 'bar' }, {
-        idempotencyKey: 'dedup-key',
-      });
+      await driver.add(
+        queueName,
+        'test-job',
+        { foo: 'bar' },
+        {
+          idempotencyKey: 'dedup-key',
+        },
+      );
 
-      await driver.add(queueName, 'test-job', { foo: 'bar' }, {
-        idempotencyKey: 'dedup-key',
-      });
+      await driver.add(
+        queueName,
+        'test-job',
+        { foo: 'bar' },
+        {
+          idempotencyKey: 'dedup-key',
+        },
+      );
 
       // Both calls use the same jobId; BullMQ natively dedupes
       expect(mockQueue.add).toHaveBeenCalledTimes(2);
@@ -97,12 +111,17 @@ describe('BullMQDriver - idempotency keys', () => {
     });
 
     it('should set correct priority, attempts, and retention options', async () => {
-      await driver.add(queueName, 'test-job', {}, {
-        idempotencyKey: 'key-1',
-        priority: 5,
-        retryLimit: 2,
-        delay: 1000,
-      });
+      await driver.add(
+        queueName,
+        'test-job',
+        {},
+        {
+          idempotencyKey: 'key-1',
+          priority: 5,
+          retryLimit: 2,
+          delay: 1000,
+        },
+      );
 
       expect(mockQueue.add).toHaveBeenCalledWith(
         'test-job',
@@ -119,9 +138,14 @@ describe('BullMQDriver - idempotency keys', () => {
 
   describe('without idempotencyKey (legacy path)', () => {
     it('should still append v4() suffix when options.id is set', async () => {
-      await driver.add(queueName, 'test-job', { foo: 'bar' }, {
-        id: 'my-id',
-      });
+      await driver.add(
+        queueName,
+        'test-job',
+        { foo: 'bar' },
+        {
+          id: 'my-id',
+        },
+      );
 
       expect(mockQueue.add).toHaveBeenCalledWith(
         'test-job',
@@ -133,9 +157,14 @@ describe('BullMQDriver - idempotency keys', () => {
     });
 
     it('should call the waiting-job guard when options.id is set', async () => {
-      await driver.add(queueName, 'test-job', { foo: 'bar' }, {
-        id: 'my-id',
-      });
+      await driver.add(
+        queueName,
+        'test-job',
+        { foo: 'bar' },
+        {
+          id: 'my-id',
+        },
+      );
 
       expect(mockQueue.getJobs).toHaveBeenCalledWith(['waiting']);
     });

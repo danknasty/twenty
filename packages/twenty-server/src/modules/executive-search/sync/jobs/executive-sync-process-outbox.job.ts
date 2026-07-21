@@ -22,9 +22,7 @@ export type ExecutiveSyncProcessOutboxJobData = {
 export class ExecutiveSyncProcessOutboxJob {
   private readonly logger = new Logger(ExecutiveSyncProcessOutboxJob.name);
 
-  constructor(
-    private readonly projectionService: OutboundProjectionService,
-  ) {}
+  constructor(private readonly projectionService: OutboundProjectionService) {}
 
   @Process(ExecutiveSyncProcessOutboxJob.name)
   async handle(data: ExecutiveSyncProcessOutboxJobData): Promise<void> {

@@ -47,8 +47,7 @@ const SEARCH_SLATE_PAGE_TABS = {
 export const STANDARD_SEARCH_SLATE_PAGE_LAYOUT_CONFIG = {
   name: 'Default Search Slate Layout',
   type: PageLayoutType.RECORD_PAGE,
-  objectUniversalIdentifier:
-    STANDARD_OBJECTS.searchSlate.universalIdentifier,
+  objectUniversalIdentifier: STANDARD_OBJECTS.searchSlate.universalIdentifier,
   universalIdentifier:
     STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchSlateRecordPage
       .universalIdentifier,

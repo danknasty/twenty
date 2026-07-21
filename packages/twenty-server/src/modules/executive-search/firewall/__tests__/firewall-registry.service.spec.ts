@@ -33,7 +33,10 @@ describe('FirewallRegistryService', () => {
   describe('isProhibited', () => {
     it('subscription_tier is prohibited in SEARCH_FILTER context', () => {
       expect(
-        service.isProhibited('subscription_tier', FirewallContext.SEARCH_FILTER),
+        service.isProhibited(
+          'subscription_tier',
+          FirewallContext.SEARCH_FILTER,
+        ),
       ).toBe(true);
     });
 
@@ -44,9 +47,9 @@ describe('FirewallRegistryService', () => {
     });
 
     it('name is NOT prohibited in SEARCH_FILTER context', () => {
-      expect(
-        service.isProhibited('name', FirewallContext.SEARCH_FILTER),
-      ).toBe(false);
+      expect(service.isProhibited('name', FirewallContext.SEARCH_FILTER)).toBe(
+        false,
+      );
     });
   });
 
@@ -124,7 +127,10 @@ describe('FirewallRegistryService', () => {
           prohibitedSelector: prohibitedSelector.trim(),
           context: context.trim() as FirewallContext,
           status: status.trim(),
-          rule: ruleParts.join(',').replace(/^"(.*)"$/, '$1').trim(),
+          rule: ruleParts
+            .join(',')
+            .replace(/^"(.*)"$/, '$1')
+            .trim(),
         };
       });
 

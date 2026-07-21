@@ -128,7 +128,9 @@ export const buildExternalIdentityMatchQueueStandardFlatFieldMetadatas = ({
       fieldName: 'externalEntityName',
       type: FieldMetadataType.SELECT,
       label: i18nLabel(msg`External Entity Name`),
-      description: i18nLabel(msg`The external entity collection this record belongs to`),
+      description: i18nLabel(
+        msg`The external entity collection this record belongs to`,
+      ),
       icon: 'IconBox',
       isNullable: false,
       isUIEditable: true,
@@ -348,7 +350,9 @@ export const buildExternalIdentityMatchQueueStandardFlatFieldMetadatas = ({
       fieldName: 'resolvedTwentyEntityName',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Resolved Twenty Entity Name`),
-      description: i18nLabel(msg`The Twenty object chosen when resolving the match`),
+      description: i18nLabel(
+        msg`The Twenty object chosen when resolving the match`,
+      ),
       icon: 'IconTarget',
       isNullable: true,
       isUIEditable: true,
@@ -365,7 +369,9 @@ export const buildExternalIdentityMatchQueueStandardFlatFieldMetadatas = ({
       fieldName: 'resolvedTwentyRecordId',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Resolved Twenty Record Id`),
-      description: i18nLabel(msg`The Twenty record chosen when resolving the match`),
+      description: i18nLabel(
+        msg`The Twenty record chosen when resolving the match`,
+      ),
       icon: 'IconTarget',
       isNullable: true,
       isUIEditable: true,

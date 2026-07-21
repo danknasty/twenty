@@ -1,9 +1,6 @@
 import { msg } from '@lingui/core/macro';
 import { i18nLabel } from 'src/engine/workspace-manager/twenty-standard-application/utils/i18n-label.util';
-import {
-  DateDisplayFormat,
-  FieldMetadataType,
-} from 'twenty-shared/types';
+import { DateDisplayFormat, FieldMetadataType } from 'twenty-shared/types';
 
 import { type FlatFieldMetadata } from 'src/engine/metadata-modules/flat-field-metadata/types/flat-field-metadata.type';
 import { type AllStandardObjectFieldName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
@@ -283,7 +280,9 @@ export const buildAnalyticsMetricStandardFlatFieldMetadatas = ({
       fieldName: 'sourceObjectName',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Source Object`),
-      description: i18nLabel(msg`Name of the source object this metric is computed from`),
+      description: i18nLabel(
+        msg`Name of the source object this metric is computed from`,
+      ),
       icon: 'IconDatabase',
       isNullable: true,
       isUIEditable: true,

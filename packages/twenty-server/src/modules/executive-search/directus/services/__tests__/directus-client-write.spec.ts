@@ -47,7 +47,10 @@ describe('DirectusClientService - write operations', () => {
       freshService.configure(baseUrl);
 
       await expect(
-        freshService.createItem('test_collection', JSON.stringify({ name: 'x' })),
+        freshService.createItem(
+          'test_collection',
+          JSON.stringify({ name: 'x' }),
+        ),
       ).rejects.toThrow(
         'Cannot perform write operations before authenticating with Directus',
       );
@@ -111,7 +114,11 @@ describe('DirectusClientService - write operations', () => {
       await authenticate();
 
       await expect(
-        service.updateItem('test_collection', 'nonexistent', JSON.stringify({})),
+        service.updateItem(
+          'test_collection',
+          'nonexistent',
+          JSON.stringify({}),
+        ),
       ).rejects.toThrow('Directus API error 404');
 
       mockServer.setFixtures({});
@@ -170,9 +177,9 @@ describe('DirectusClientService - write operations', () => {
 
       const writes = mockServer.getReceivedWrites();
       expect(writes).toHaveLength(1);
-      expect(
-        writes[0].headers['x-twenty-directus-signature'],
-      ).toBe('test-signature-value');
+      expect(writes[0].headers['x-twenty-directus-signature']).toBe(
+        'test-signature-value',
+      );
     });
   });
 });

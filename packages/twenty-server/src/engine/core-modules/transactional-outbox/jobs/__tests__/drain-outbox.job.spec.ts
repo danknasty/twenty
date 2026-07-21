@@ -1,8 +1,6 @@
 import { Test, type TestingModule } from '@nestjs/testing';
 
-import {
-  DrainOutboxJob,
-} from 'src/engine/core-modules/transactional-outbox/jobs/drain-outbox.job';
+import { DrainOutboxJob } from 'src/engine/core-modules/transactional-outbox/jobs/drain-outbox.job';
 import { OutboxStatus } from 'src/engine/core-modules/transactional-outbox/enums/outbox-status.enum';
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { WorkspaceEventEmitter } from 'src/engine/workspace-event-emitter/workspace-event-emitter';
@@ -30,8 +28,8 @@ describe('DrainOutboxJob', () => {
     const mockGlobalWorkspaceOrmManager = {
       executeInWorkspaceContext: jest
         .fn()
-        .mockImplementation(
-          (fn: () => Promise<void>, _authContext: any) => fn(),
+        .mockImplementation((fn: () => Promise<void>, _authContext: any) =>
+          fn(),
         ),
       getRepository: jest.fn().mockResolvedValue(mockRepository),
     };
@@ -101,17 +99,11 @@ describe('DrainOutboxJob', () => {
         attemptCount: 1,
       },
     );
-    expect(
-      mockWorkspaceEventEmitter.emitDatabaseBatchEvent,
-    ).toHaveBeenCalled();
-    expect(mockRepository.update).toHaveBeenNthCalledWith(
-      2,
-      'entry-1',
-      {
-        status: OutboxStatus.DELIVERED,
-        deliveredAt: expect.any(String),
-      },
-    );
+    expect(mockWorkspaceEventEmitter.emitDatabaseBatchEvent).toHaveBeenCalled();
+    expect(mockRepository.update).toHaveBeenNthCalledWith(2, 'entry-1', {
+      status: OutboxStatus.DELIVERED,
+      deliveredAt: expect.any(String),
+    });
   });
 
   it('should mark entry as DEAD_LETTERED after max attempts', async () => {
@@ -129,11 +121,9 @@ describe('DrainOutboxJob', () => {
     mockRepository.find.mockResolvedValueOnce([pendingEntry]);
     // Atomic claim succeeds
     mockRepository.update.mockResolvedValue({ affected: 1 });
-    mockWorkspaceEventEmitter.emitDatabaseBatchEvent.mockImplementation(
-      () => {
-        throw new Error('Delivery failed');
-      },
-    );
+    mockWorkspaceEventEmitter.emitDatabaseBatchEvent.mockImplementation(() => {
+      throw new Error('Delivery failed');
+    });
 
     await job.handle({ workspaceId: 'workspace-1' });
 
@@ -160,11 +150,9 @@ describe('DrainOutboxJob', () => {
     mockRepository.find.mockResolvedValueOnce([pendingEntry]);
     // Atomic claim succeeds
     mockRepository.update.mockResolvedValue({ affected: 1 });
-    mockWorkspaceEventEmitter.emitDatabaseBatchEvent.mockImplementation(
-      () => {
-        throw new Error('Temporary error');
-      },
-    );
+    mockWorkspaceEventEmitter.emitDatabaseBatchEvent.mockImplementation(() => {
+      throw new Error('Temporary error');
+    });
 
     await job.handle({ workspaceId: 'workspace-1' });
 

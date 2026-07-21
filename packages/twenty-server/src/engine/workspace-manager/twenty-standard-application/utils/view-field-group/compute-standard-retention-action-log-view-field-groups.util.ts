@@ -5,10 +5,7 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/create-standard-view-field-group-flat-metadata.util';
 
 export const computeStandardRetentionActionLogViewFieldGroups = (
-  args: Omit<
-    CreateStandardViewFieldGroupArgs<'retentionActionLog'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldGroupArgs<'retentionActionLog'>, 'context'>,
 ): Record<string, FlatViewFieldGroup> => {
   return {
     retentionActionLogRecordPageFieldsGeneral:

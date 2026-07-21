@@ -12,10 +12,7 @@ export const buildBoardMatrixCriterionStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'boardMatrixCriterion'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'boardMatrixCriterion'>, 'context'>): Record<
   AllStandardObjectIndexName<'boardMatrixCriterion'>,
   FlatIndexMetadata
 > => ({

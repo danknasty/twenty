@@ -41,25 +41,28 @@ export class RollbackService {
     actorId: string,
     dryRun = false,
   ): Promise<{ revertedFields: string[]; dryRun: boolean }> {
-    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(async () => {
-      const currentStage = await this.cutoverService.getCurrentStage(workspaceId);
+    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
+      async () => {
+        const currentStage =
+          await this.cutoverService.getCurrentStage(workspaceId);
 
-      this.logger.log(
-        `Reverting field ownership from "${currentStage}" to "${toStage}" for workspace ${workspaceId}${dryRun ? ' [DRY RUN]' : ''}`,
-      );
+        this.logger.log(
+          `Reverting field ownership from "${currentStage}" to "${toStage}" for workspace ${workspaceId}${dryRun ? ' [DRY RUN]' : ''}`,
+        );
 
-      const diff = await this.cutoverService.revertToStage(
-        workspaceId,
-        toStage,
-        actorId,
-        dryRun,
-      );
+        const diff = await this.cutoverService.revertToStage(
+          workspaceId,
+          toStage,
+          actorId,
+          dryRun,
+        );
 
-      return {
-        revertedFields: diff.changes.map((c) => c.collection),
-        dryRun,
-      };
-    });
+        return {
+          revertedFields: diff.changes.map((c) => c.collection),
+          dryRun,
+        };
+      },
+    );
   }
 
   /**
@@ -67,41 +70,47 @@ export class RollbackService {
    * Events keep queuing in the outbox but delivery is short-circuited.
    * Returns the count of currently queued events.
    */
-  async pauseOutbound(workspaceId: string): Promise<{ outboundPaused: boolean; queuedEvents: number }> {
-    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(async () => {
-      // Set the feature flag to false at workspace level.
-      // The OutboundProjectionService already checks IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED
-      // and short-circuits when it's off.
-      const flagRepo = await this.globalWorkspaceOrmManager.getRepository(
-        workspaceId,
-        'featureFlag',
-        { shouldBypassPermissionChecks: true },
-      );
-
-      await flagRepo.upsert(
-        {
+  async pauseOutbound(
+    workspaceId: string,
+  ): Promise<{ outboundPaused: boolean; queuedEvents: number }> {
+    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
+      async () => {
+        // Set the feature flag to false at workspace level.
+        // The OutboundProjectionService already checks IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED
+        // and short-circuits when it's off.
+        const flagRepo = await this.globalWorkspaceOrmManager.getRepository(
           workspaceId,
-          key: 'IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED',
-          value: false,
-        },
-        { conflictPaths: ['workspaceId', 'key'] },
-      );
+          'featureFlag',
+          { shouldBypassPermissionChecks: true },
+        );
 
-      // Count queued events in the outbox.
-      const outboxRepo = await this.globalWorkspaceOrmManager.getRepository(
-        workspaceId,
-        ExternalSyncOutboxWorkspaceEntity,
-        { shouldBypassPermissionChecks: true },
-      );
+        await flagRepo.upsert(
+          {
+            workspaceId,
+            key: 'IS_EXECUTIVE_SEARCH_OUTBOUND_PUBLISH_ENABLED',
+            value: false,
+          },
+          { conflictPaths: ['workspaceId', 'key'] },
+        );
 
-      const pendingCount = await outboxRepo.count({ where: { status: 'PENDING' } });
+        // Count queued events in the outbox.
+        const outboxRepo = await this.globalWorkspaceOrmManager.getRepository(
+          workspaceId,
+          ExternalSyncOutboxWorkspaceEntity,
+          { shouldBypassPermissionChecks: true },
+        );
 
-      this.logger.log(
-        `Paused outbound for workspace ${workspaceId} — ${pendingCount} events queued`,
-      );
+        const pendingCount = await outboxRepo.count({
+          where: { status: 'PENDING' },
+        });
 
-      return { outboundPaused: true, queuedEvents: pendingCount };
-    });
+        this.logger.log(
+          `Paused outbound for workspace ${workspaceId} — ${pendingCount} events queued`,
+        );
+
+        return { outboundPaused: true, queuedEvents: pendingCount };
+      },
+    );
   }
 
   /**
@@ -115,49 +124,51 @@ export class RollbackService {
     filter?: { twentyEntityName?: string; externalEntityName?: string },
     dryRun = false,
   ): Promise<number> {
-    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(async () => {
-      const repo = await this.globalWorkspaceOrmManager.getRepository(
-        workspaceId,
-        ExternalEntityLinkWorkspaceEntity,
-        { shouldBypassPermissionChecks: true },
-      );
-
-      const where: Record<string, unknown> = {
-        isAuthoritativeLink: true,
-        syncStatus: 'LINKED',
-      };
-
-      if (filter?.twentyEntityName) {
-        where.twentyEntityName = filter.twentyEntityName;
-      }
-
-      if (filter?.externalEntityName) {
-        where.externalEntityName = filter.externalEntityName;
-      }
-
-      if (dryRun) {
-        const count = await repo.count({ where });
-        this.logger.log(
-          `[DRY RUN] Would deactivate ${count} identity links in workspace ${workspaceId}`,
+    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
+      async () => {
+        const repo = await this.globalWorkspaceOrmManager.getRepository(
+          workspaceId,
+          ExternalEntityLinkWorkspaceEntity,
+          { shouldBypassPermissionChecks: true },
         );
-        return count;
-      }
 
-      const links = await repo.find({ where });
+        const where: Record<string, unknown> = {
+          isAuthoritativeLink: true,
+          syncStatus: 'LINKED',
+        };
 
-      for (const link of links) {
-        await repo.update(link.id, {
-          isAuthoritativeLink: false,
-          syncStatus: 'DEACTIVATED',
-        });
-      }
+        if (filter?.twentyEntityName) {
+          where.twentyEntityName = filter.twentyEntityName;
+        }
 
-      this.logger.log(
-        `Deactivated ${links.length} identity links in workspace ${workspaceId}`,
-      );
+        if (filter?.externalEntityName) {
+          where.externalEntityName = filter.externalEntityName;
+        }
 
-      return links.length;
-    });
+        if (dryRun) {
+          const count = await repo.count({ where });
+          this.logger.log(
+            `[DRY RUN] Would deactivate ${count} identity links in workspace ${workspaceId}`,
+          );
+          return count;
+        }
+
+        const links = await repo.find({ where });
+
+        for (const link of links) {
+          await repo.update(link.id, {
+            isAuthoritativeLink: false,
+            syncStatus: 'DEACTIVATED',
+          });
+        }
+
+        this.logger.log(
+          `Deactivated ${links.length} identity links in workspace ${workspaceId}`,
+        );
+
+        return links.length;
+      },
+    );
   }
 
   /**

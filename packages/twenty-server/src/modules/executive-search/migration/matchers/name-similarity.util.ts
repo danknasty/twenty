@@ -40,9 +40,7 @@ export interface NameSimilarityResult {
  *
  * Returns the empty string for null/undefined/whitespace-only input.
  */
-export function normalizeString(
-  input: string | null | undefined,
-): string {
+export function normalizeString(input: string | null | undefined): string {
   if (input == null) {
     return '';
   }
@@ -138,11 +136,7 @@ export function jaroSimilarity(a: string, b: string): number {
 
   const m = matches;
 
-  return (
-    m / a.length / 3 +
-    m / b.length / 3 +
-    (m - transpositions / 2) / m / 3
-  );
+  return m / a.length / 3 + m / b.length / 3 + (m - transpositions / 2) / m / 3;
 }
 
 /**
@@ -169,11 +163,7 @@ export function jaroWinklerSimilarity(
 
   let prefixLength = 0;
 
-  for (
-    let i = 0;
-    i < Math.min(maxPrefixLength, a.length, b.length);
-    i++
-  ) {
+  for (let i = 0; i < Math.min(maxPrefixLength, a.length, b.length); i++) {
     if (a[i] === b[i]) {
       prefixLength++;
     } else {

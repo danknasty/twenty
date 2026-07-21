@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 
-import { ObjectMetadataRepositoryModule } from 'src/engine/object-metadata-repository/object-metadata-repository.module';
 import { TwentyORMModule } from 'src/engine/twenty-orm/twenty-orm.module';
 import { WorkspaceEventEmitterModule } from 'src/engine/workspace-event-emitter/workspace-event-emitter.module';
 import { DirectusModule } from 'src/modules/executive-search/directus/directus.module';
@@ -18,12 +17,6 @@ import { OutboundHmacSignerService } from 'src/modules/executive-search/outbound
 import { DirectusConnectionConfigService } from 'src/modules/executive-search/outbound/services/directus-connection-config.service';
 import { OutboundProjectionService } from 'src/modules/executive-search/outbound/services/outbound-projection.service';
 import { OutboundProjectionListener } from 'src/modules/executive-search/outbound/listeners/outbound-projection.listener';
-import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
-import { ExternalSyncOutboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-outbox.workspace-entity';
-import { ExternalSyncInboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-inbox.workspace-entity';
-import { ExternalSyncDLQWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-dlq.workspace-entity';
-import { ExternalSyncCheckpointWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-checkpoint.workspace-entity';
-import { ExternalSyncReconciliationWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-reconciliation.workspace-entity';
 import { AssignmentStatusTransitionService } from 'src/modules/executive-search/services/assignment-status-transition.service';
 import { ConvertOpportunityToAssignmentService } from 'src/modules/executive-search/services/convert-opportunity-to-assignment.service';
 import { OffLimitsGuardService } from 'src/modules/executive-search/services/off-limits-guard.service';
@@ -34,8 +27,6 @@ import { ExecutiveShadowSyncDriftCronCommand } from 'src/modules/executive-searc
 import { IdentityMatchingService } from 'src/modules/executive-search/migration/services/identity-matching.service';
 import { RetentionActionService } from 'src/modules/executive-search/migration/services/retention-action.service';
 import { RetentionActionReconciliationEngine } from 'src/modules/executive-search/reconciliation/engines/retention-action-reconciliation.engine';
-import { RetentionActionLogWorkspaceEntity } from 'src/modules/executive-search/standard-objects/retention-action-log.workspace-entity';
-import { ExternalIdentityMatchQueueWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-identity-match-queue.workspace-entity';
 import { AmbiguousMatchQueueService } from 'src/modules/executive-search/migration/services/ambiguous-match-queue.service';
 import { BackfillService } from 'src/modules/executive-search/migration/services/backfill.service';
 import { CutoverService } from 'src/modules/executive-search/migration/services/cutover.service';
@@ -43,22 +34,24 @@ import { RollbackService } from 'src/modules/executive-search/migration/services
 import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migration/resolvers/ambiguous-match-queue.resolver';
 import { ComputeAnalyticsMetricResolver } from 'src/modules/executive-search/resolvers/compute-analytics-metric.resolver';
 import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/services/compute-analytics-metric.service';
+import { FirewallModule } from 'src/modules/executive-search/firewall/firewall.module';
+import { FeatureFlagModule } from 'src/engine/core-modules/feature-flag/feature-flag.module';
+import { DraftingSynthesisAiModule } from 'src/modules/executive-search/services/ai/drafting-synthesis-ai.module';
+import { ResearchAiModule } from 'src/modules/executive-search/services/ai/research-ai.module';
+import { CriterionAssessmentShadowModule } from 'src/modules/executive-search/services/ai/criterion-assessment-shadow.module';
+import { BoardMatrixAiModule } from 'src/modules/executive-search/services/ai/board-matrix-ai.module';
 
 @Module({
   imports: [
-    ObjectMetadataRepositoryModule.forFeature([
-      ExternalEntityLinkWorkspaceEntity,
-      ExternalSyncOutboxWorkspaceEntity,
-      ExternalSyncInboxWorkspaceEntity,
-      ExternalSyncDLQWorkspaceEntity,
-      ExternalSyncCheckpointWorkspaceEntity,
-      ExternalSyncReconciliationWorkspaceEntity,
-      RetentionActionLogWorkspaceEntity,
-      ExternalIdentityMatchQueueWorkspaceEntity,
-    ]),
     TwentyORMModule,
     DirectusModule,
     WorkspaceEventEmitterModule,
+    FirewallModule,
+    FeatureFlagModule,
+    DraftingSynthesisAiModule,
+    ResearchAiModule,
+    CriterionAssessmentShadowModule,
+    BoardMatrixAiModule,
   ],
   providers: [
     ReconciliationEngineRegistry,
@@ -115,6 +108,7 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
     RetentionActionService,
     CutoverService,
     RollbackService,
+    ExecutiveShadowSyncDriftCronCommand,
   ],
 })
 export class ExecutiveSearchModule {}

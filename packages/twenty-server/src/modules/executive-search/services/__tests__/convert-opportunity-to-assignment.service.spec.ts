@@ -10,31 +10,32 @@ import {
 } from 'src/modules/executive-search/exceptions/executive-search.exception';
 
 // Mock the problematic module dependencies before any imports are evaluated
-jest.mock('src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager', () => {
-  const mockExecuteInWorkspaceContext = jest
-    .fn()
-    .mockImplementation((fn: () => any, _authContext?: any) => fn());
+jest.mock(
+  'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager',
+  () => {
+    const mockExecuteInWorkspaceContext = jest
+      .fn()
+      .mockImplementation((fn: () => any, _authContext?: any) => fn());
 
-  const mockGetRepository = jest.fn();
+    const mockGetRepository = jest.fn();
 
-  const mockTransaction = jest
-    .fn()
-    .mockImplementation(
-      async (cb: (manager: any) => Promise<any>) => {
+    const mockTransaction = jest
+      .fn()
+      .mockImplementation(async (cb: (manager: any) => Promise<any>) => {
         return cb({});
-      },
-    );
+      });
 
-  return {
-    GlobalWorkspaceOrmManager: jest.fn().mockImplementation(() => ({
-      executeInWorkspaceContext: mockExecuteInWorkspaceContext,
-      getRepository: mockGetRepository,
-      getGlobalWorkspaceDataSource: jest.fn().mockResolvedValue({
-        transaction: mockTransaction,
-      }),
-    })),
-  };
-});
+    return {
+      GlobalWorkspaceOrmManager: jest.fn().mockImplementation(() => ({
+        executeInWorkspaceContext: mockExecuteInWorkspaceContext,
+        getRepository: mockGetRepository,
+        getGlobalWorkspaceDataSource: jest.fn().mockResolvedValue({
+          transaction: mockTransaction,
+        }),
+      })),
+    };
+  },
+);
 
 describe('ConvertOpportunityToAssignmentService', () => {
   let service: ConvertOpportunityToAssignmentService;
@@ -70,7 +71,10 @@ describe('ConvertOpportunityToAssignmentService', () => {
     workspaceMemberId: 'member-1',
     user: userFields,
     userWorkspaceId: 'user-workspace-1',
-    workspaceMember: { id: 'member-1', name: { firstName: 'Test', lastName: 'User' } },
+    workspaceMember: {
+      id: 'member-1',
+      name: { firstName: 'Test', lastName: 'User' },
+    },
   };
 
   const opportunityId = 'opportunity-1';
@@ -138,9 +142,7 @@ describe('ConvertOpportunityToAssignmentService', () => {
     mockGlobalWorkspaceOrmManager.getRepository.mockImplementation(
       (_workspaceId: string, entityOrName: any, _options?: any) => {
         const key =
-          typeof entityOrName === 'string'
-            ? entityOrName
-            : entityOrName.name;
+          typeof entityOrName === 'string' ? entityOrName : entityOrName.name;
 
         return Promise.resolve(repositoryMap[key]);
       },
@@ -150,19 +152,15 @@ describe('ConvertOpportunityToAssignmentService', () => {
   beforeEach(async () => {
     mockTransactionImpl = jest
       .fn()
-      .mockImplementation(
-        async (cb: (manager: any) => Promise<any>) => {
-          return cb({});
-        },
-      );
+      .mockImplementation(async (cb: (manager: any) => Promise<any>) => {
+        return cb({});
+      });
 
     // Create mock orm manager with fresh callbacks
     mockGlobalWorkspaceOrmManager = {
       executeInWorkspaceContext: jest
         .fn()
-        .mockImplementation(
-          (fn: () => any, _authContext?: any) => fn(),
-        ),
+        .mockImplementation((fn: () => any, _authContext?: any) => fn()),
       getRepository: jest.fn(),
       getGlobalWorkspaceDataSource: jest.fn().mockResolvedValue({
         transaction: mockTransactionImpl,

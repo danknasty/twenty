@@ -21,11 +21,7 @@ export class ServerVariableService {
   /**
    * Register a variable value for a workspace (used in tests and seeding).
    */
-  setVariable(
-    workspaceId: string,
-    key: string,
-    value: string,
-  ): void {
+  setVariable(workspaceId: string, key: string, value: string): void {
     if (!this.secrets.has(workspaceId)) {
       this.secrets.set(workspaceId, new Map());
     }

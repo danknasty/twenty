@@ -3,7 +3,10 @@ import { Command, CommandRunner } from 'nest-commander';
 import { InjectMessageQueue } from 'src/engine/core-modules/message-queue/decorators/message-queue.decorator';
 import { MessageQueue } from 'src/engine/core-modules/message-queue/message-queue.constants';
 import { MessageQueueService } from 'src/engine/core-modules/message-queue/services/message-queue.service';
-import { DrainOutboxCronJob, OUTBOX_DRAIN_CRON_PATTERN } from 'src/engine/core-modules/transactional-outbox/crons/jobs/drain-outbox.cron.job';
+import {
+  DrainOutboxCronJob,
+  OUTBOX_DRAIN_CRON_PATTERN,
+} from 'src/engine/core-modules/transactional-outbox/crons/jobs/drain-outbox.cron.job';
 
 @Command({
   name: 'cron:outbox:drain',

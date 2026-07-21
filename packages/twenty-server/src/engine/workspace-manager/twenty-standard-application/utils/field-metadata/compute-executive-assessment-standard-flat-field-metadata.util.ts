@@ -428,7 +428,9 @@ export const buildExecutiveAssessmentStandardFlatFieldMetadatas = ({
       fieldName: 'consentToShare',
       type: FieldMetadataType.BOOLEAN,
       label: i18nLabel(msg`Consent to Share`),
-      description: i18nLabel(msg`Whether consent was given to share with client`),
+      description: i18nLabel(
+        msg`Whether consent was given to share with client`,
+      ),
       icon: 'IconShare',
       isNullable: true,
       isUIEditable: true,

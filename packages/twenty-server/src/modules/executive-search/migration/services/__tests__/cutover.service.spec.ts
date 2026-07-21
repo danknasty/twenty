@@ -3,9 +3,7 @@ import { Test, type TestingModule } from '@nestjs/testing';
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { CutoverStage } from 'src/modules/executive-search/common/enums/cutover-stage.enum';
 import { FieldOwnershipAuthority } from 'src/modules/executive-search/common/enums/field-ownership-authority.enum';
-import {
-  ExecutiveSearchExceptionCode,
-} from 'src/modules/executive-search/exceptions/executive-search.exception';
+import { ExecutiveSearchExceptionCode } from 'src/modules/executive-search/exceptions/executive-search.exception';
 import { CutoverService } from 'src/modules/executive-search/migration/services/cutover.service';
 import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
 import { ExternalSyncCheckpointWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-checkpoint.workspace-entity';
@@ -163,9 +161,7 @@ describe('CutoverService', () => {
       expect(result.dryRun).toBe(false);
 
       // executives, companies, opportunities transfer at STAGE_1.
-      const changedCollections = result.changes
-        .map((c) => c.collection)
-        .sort();
+      const changedCollections = result.changes.map((c) => c.collection).sort();
 
       expect(changedCollections).toEqual([
         'companies',
@@ -303,7 +299,10 @@ describe('CutoverService', () => {
         lastExternalEventId: stageLedger(CutoverStage.STAGE_1_LINKS),
       });
       linkRepository.find.mockResolvedValue([
-        { id: 'link-x', metadata: { cutoverStage: CutoverStage.STAGE_1_LINKS } },
+        {
+          id: 'link-x',
+          metadata: { cutoverStage: CutoverStage.STAGE_1_LINKS },
+        },
       ]);
     });
 
@@ -407,7 +406,11 @@ describe('CutoverService', () => {
       // STAGE_0 baseline.
       checkpointRepository.findOne.mockResolvedValue(null);
 
-      await service.applyStage(WORKSPACE_ID, CutoverStage.STAGE_1_LINKS, ACTOR_ID);
+      await service.applyStage(
+        WORKSPACE_ID,
+        CutoverStage.STAGE_1_LINKS,
+        ACTOR_ID,
+      );
 
       // Now simulate the persisted STAGE_1 checkpoint for the revert.
       checkpointRepository.findOne.mockResolvedValue({

@@ -298,7 +298,9 @@ export const buildCompensationExpectationStandardFlatFieldMetadatas = ({
       fieldName: 'isVerifiedWithCandidate',
       type: FieldMetadataType.BOOLEAN,
       label: i18nLabel(msg`Verified with Candidate`),
-      description: i18nLabel(msg`Whether the expectation was verified with the candidate`),
+      description: i18nLabel(
+        msg`Whether the expectation was verified with the candidate`,
+      ),
       icon: 'IconCheck',
       isNullable: true,
       isUIEditable: true,
@@ -316,7 +318,9 @@ export const buildCompensationExpectationStandardFlatFieldMetadatas = ({
       fieldName: 'verifiedAt',
       type: FieldMetadataType.DATE_TIME,
       label: i18nLabel(msg`Verified At`),
-      description: i18nLabel(msg`When the expectation was verified with the candidate`),
+      description: i18nLabel(
+        msg`When the expectation was verified with the candidate`,
+      ),
       icon: 'IconCalendarCheck',
       isNullable: true,
       isUIEditable: true,

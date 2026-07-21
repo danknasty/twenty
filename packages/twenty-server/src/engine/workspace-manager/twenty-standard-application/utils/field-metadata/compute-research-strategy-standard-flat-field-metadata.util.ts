@@ -310,7 +310,9 @@ export const buildResearchStrategyStandardFlatFieldMetadatas = ({
       fieldName: 'targetSegments',
       type: FieldMetadataType.TEXT,
       label: i18nLabel(msg`Target Segments`),
-      description: i18nLabel(msg`Target industries, functions, and geographies`),
+      description: i18nLabel(
+        msg`Target industries, functions, and geographies`,
+      ),
       icon: 'IconHierarchy',
       isNullable: true,
       isUIEditable: true,

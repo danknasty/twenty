@@ -76,19 +76,14 @@ function buildMockOrmManager(repos: {
       .fn()
       .mockImplementation(<T>(fn: () => T | Promise<T>) => fn()),
     getRepository: jest.fn(
-      async (
-        _workspaceId: string,
-        entity: string | { name: string },
-      ) => {
+      async (_workspaceId: string, entity: string | { name: string }) => {
         const name = typeof entity === 'string' ? entity : entity.name;
 
         if (name === LINK_ENTITY_NAME) {
           return linkRepository;
         }
 
-        return (
-          byName[name] ?? { find: jest.fn(async () => []) }
-        );
+        return byName[name] ?? { find: jest.fn(async () => []) };
       },
     ),
   };
@@ -97,7 +92,9 @@ function buildMockOrmManager(repos: {
 describe('IdentityMatchingService', () => {
   const workspaceId = 'workspace-1';
 
-  const buildService = async (ormRepos: Parameters<typeof buildMockOrmManager>[0]) => {
+  const buildService = async (
+    ormRepos: Parameters<typeof buildMockOrmManager>[0],
+  ) => {
     const mockOrm = buildMockOrmManager(ormRepos);
     const mockDirectusClient = {
       getItems: jest.fn(),
@@ -134,7 +131,10 @@ describe('IdentityMatchingService', () => {
           {
             id: 'person-other',
             name: { firstName: 'Jane', lastName: 'Doe' },
-            emails: { primaryEmail: 'jane.doe@example.com', additionalEmails: null },
+            emails: {
+              primaryEmail: 'jane.doe@example.com',
+              additionalEmails: null,
+            },
           },
         ],
         company: [],
@@ -159,7 +159,9 @@ describe('IdentityMatchingService', () => {
       // The result must reference the linked record, NOT the email-matched one.
       expect(results[0].matchedTwentyRecordId).toBe('person-linked');
       expect(results[0].matchedTwentyEntityName).toBe('person');
-      expect(results[0].reasons.some((r) => r.includes('HARD RULE'))).toBe(true);
+      expect(results[0].reasons.some((r) => r.includes('HARD RULE'))).toBe(
+        true,
+      );
     });
 
     it('does not treat non-authoritative links as the HARD RULE trigger', async () => {
@@ -177,7 +179,10 @@ describe('IdentityMatchingService', () => {
           {
             id: 'person-1',
             name: { firstName: 'Jane', lastName: 'Doe' },
-            emails: { primaryEmail: 'jane.doe@example.com', additionalEmails: null },
+            emails: {
+              primaryEmail: 'jane.doe@example.com',
+              additionalEmails: null,
+            },
             externalLinks: [
               {
                 twentyEntityName: 'person',
@@ -195,7 +200,12 @@ describe('IdentityMatchingService', () => {
       });
 
       mockDirectusClient.getItems.mockResolvedValue([
-        { id: 'exec-1', ats_uuid: 'ATS-2', first_name: 'Jane', last_name: 'Doe' },
+        {
+          id: 'exec-1',
+          ats_uuid: 'ATS-2',
+          first_name: 'Jane',
+          last_name: 'Doe',
+        },
       ]);
 
       const pair: DirectusToTwentyPair = {
@@ -211,7 +221,9 @@ describe('IdentityMatchingService', () => {
       expect(results).toHaveLength(1);
       expect(results[0].confidence).toBe(IdentityMatchConfidence.EXACT);
       expect(results[0].matchedTwentyRecordId).toBe('person-1');
-      expect(results[0].reasons.some((r) => r.includes('HARD RULE'))).toBe(false);
+      expect(results[0].reasons.some((r) => r.includes('HARD RULE'))).toBe(
+        false,
+      );
     });
   });
 
@@ -223,7 +235,10 @@ describe('IdentityMatchingService', () => {
           {
             id: 'person-1',
             name: { firstName: 'Jane', lastName: 'Doe' },
-            emails: { primaryEmail: 'jane.doe@example.com', additionalEmails: null },
+            emails: {
+              primaryEmail: 'jane.doe@example.com',
+              additionalEmails: null,
+            },
           },
         ],
         company: [],
@@ -232,7 +247,12 @@ describe('IdentityMatchingService', () => {
       });
 
       mockDirectusClient.getItems.mockResolvedValue([
-        { id: 'exec-1', email: 'jane.doe@example.com', first_name: 'Jane', last_name: 'Doe' },
+        {
+          id: 'exec-1',
+          email: 'jane.doe@example.com',
+          first_name: 'Jane',
+          last_name: 'Doe',
+        },
       ]);
 
       const results = await service.matchWorkspace(workspaceId, {
@@ -275,12 +295,18 @@ describe('IdentityMatchingService', () => {
           {
             id: 'person-1',
             name: { firstName: 'Jane', lastName: 'Doe' },
-            emails: { primaryEmail: 'jane.doe@example.com', additionalEmails: null },
+            emails: {
+              primaryEmail: 'jane.doe@example.com',
+              additionalEmails: null,
+            },
           },
           {
             id: 'person-2',
             name: { firstName: 'Jane', lastName: 'Doe' },
-            emails: { primaryEmail: 'jane.doe@example.com', additionalEmails: null },
+            emails: {
+              primaryEmail: 'jane.doe@example.com',
+              additionalEmails: null,
+            },
           },
         ],
         company: [],
@@ -289,7 +315,12 @@ describe('IdentityMatchingService', () => {
       });
 
       mockDirectusClient.getItems.mockResolvedValue([
-        { id: 'exec-1', email: 'jane.doe@example.com', first_name: 'Jane', last_name: 'Doe' },
+        {
+          id: 'exec-1',
+          email: 'jane.doe@example.com',
+          first_name: 'Jane',
+          last_name: 'Doe',
+        },
       ]);
 
       const results = await service.matchWorkspace(workspaceId, {
@@ -300,7 +331,9 @@ describe('IdentityMatchingService', () => {
 
       expect(results[0].confidence).toBe(IdentityMatchConfidence.HIGH);
       expect(results[0].candidates?.length).toBe(2);
-      expect(results[0].reasons.some((r) => r.includes('Ambiguous'))).toBe(true);
+      expect(results[0].reasons.some((r) => r.includes('Ambiguous'))).toBe(
+        true,
+      );
     });
 
     it('returns an empty array when Directus has no items', async () => {
@@ -331,7 +364,10 @@ describe('IdentityMatchingService', () => {
           {
             id: 'company-1',
             name: 'Acme Corp',
-            domainName: { primaryLinkUrl: 'https://acme.com', secondaryLinks: null },
+            domainName: {
+              primaryLinkUrl: 'https://acme.com',
+              secondaryLinks: null,
+            },
           },
         ],
         searchAssignment: [],
@@ -360,7 +396,10 @@ describe('IdentityMatchingService', () => {
           {
             id: 'company-1',
             name: 'Acme Corp',
-            domainName: { primaryLinkUrl: 'https://acme.com', secondaryLinks: null },
+            domainName: {
+              primaryLinkUrl: 'https://acme.com',
+              secondaryLinks: null,
+            },
           },
         ],
         searchAssignment: [
@@ -414,7 +453,11 @@ describe('IdentityMatchingService', () => {
         company: [],
         searchAssignment: [{ id: 'assignment-1' }],
         searchCandidacy: [
-          { id: 'candidacy-1', personId: 'person-1', searchAssignmentId: 'assignment-1' },
+          {
+            id: 'candidacy-1',
+            personId: 'person-1',
+            searchAssignmentId: 'assignment-1',
+          },
         ],
       });
 

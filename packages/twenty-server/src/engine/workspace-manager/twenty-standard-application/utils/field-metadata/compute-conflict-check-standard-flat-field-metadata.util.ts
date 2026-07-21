@@ -25,10 +25,7 @@ export const buildConflictCheckStandardFlatFieldMetadatas = ({
 }: Omit<
   CreateStandardFieldArgs<'conflictCheck', FieldMetadataType>,
   'context'
->): Record<
-  AllStandardObjectFieldName<'conflictCheck'>,
-  FlatFieldMetadata
-> => ({
+>): Record<AllStandardObjectFieldName<'conflictCheck'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
@@ -114,9 +111,7 @@ export const buildConflictCheckStandardFlatFieldMetadatas = ({
       fieldName: 'searchAssignmentId',
       type: FieldMetadataType.UUID,
       label: i18nLabel(msg`Search Assignment`),
-      description: i18nLabel(
-        msg`Associated search assignment`,
-      ),
+      description: i18nLabel(msg`Associated search assignment`),
       icon: 'IconSearch',
       isNullable: true,
       isUIEditable: true,
@@ -225,7 +220,9 @@ export const buildConflictCheckStandardFlatFieldMetadatas = ({
       fieldName: 'subjectType',
       type: FieldMetadataType.SELECT,
       label: i18nLabel(msg`Subject Type`),
-      description: i18nLabel(msg`Whether the check targets a person or company`),
+      description: i18nLabel(
+        msg`Whether the check targets a person or company`,
+      ),
       icon: 'IconCategory',
       isNullable: false,
       isUIEditable: true,

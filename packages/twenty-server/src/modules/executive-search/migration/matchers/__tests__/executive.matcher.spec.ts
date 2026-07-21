@@ -155,9 +155,7 @@ describe('executiveMatcher', () => {
     expect(result.confidence).toBe(IdentityMatchConfidence.HIGH);
     expect(result.candidates).toBeDefined();
     expect(result.candidates?.length).toBe(2);
-    expect(
-      result.reasons.some((r) => r.includes('Ambiguous')),
-    ).toBe(true);
+    expect(result.reasons.some((r) => r.includes('Ambiguous'))).toBe(true);
   });
 
   it('respects precedence: ats_uuid beats email', () => {

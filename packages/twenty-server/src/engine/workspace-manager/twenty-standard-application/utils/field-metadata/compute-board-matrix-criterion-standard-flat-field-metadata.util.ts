@@ -1,27 +1,11 @@
 import { msg } from '@lingui/core/macro';
 import { i18nLabel } from 'src/engine/workspace-manager/twenty-standard-application/utils/i18n-label.util';
-import { DateDisplayFormat, FieldMetadataType } from 'twenty-shared/types';
+import { DateDisplayFormat, FieldMetadataType, } from 'twenty-shared/types';
 import { type FlatFieldMetadata } from 'src/engine/metadata-modules/flat-field-metadata/types/flat-field-metadata.type';
 import { type AllStandardObjectFieldName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
-import {
-  type CreateStandardFieldArgs,
-  createStandardFieldFlatMetadata,
-} from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
+import { type CreateStandardFieldArgs, createStandardFieldFlatMetadata, } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 
-export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
-  now,
-  objectName,
-  workspaceId,
-  standardObjectMetadataRelatedEntityIds,
-  dependencyFlatEntityMaps,
-  twentyStandardApplicationId,
-}: Omit<
-  CreateStandardFieldArgs<'boardMatrixCriterion', FieldMetadataType>,
-  'context'
->): Record<
-  AllStandardObjectFieldName<'boardMatrixCriterion'>,
-  FlatFieldMetadata
-> => ({
+export const buildBoardCompositionProfileStandardFlatFieldMetadatas = ({ now, objectName, workspaceId, standardObjectMetadataRelatedEntityIds, dependencyFlatEntityMaps, twentyStandardApplicationId, }: Omit<CreateStandardFieldArgs<'boardMatrixCriterion', FieldMetadataType>, 'context'>): Record<AllStandardObjectFieldName<'boardMatrixCriterion'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
@@ -54,7 +38,7 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isNullable: false,
       isUIEditable: false,
       defaultValue: 'now',
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {displayFormat:DateDisplayFormat.RELATIVE,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -74,7 +58,7 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isNullable: false,
       isUIEditable: false,
       defaultValue: 'now',
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {displayFormat:DateDisplayFormat.RELATIVE,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -93,7 +77,7 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isSystem: true,
       isNullable: true,
       isUIEditable: false,
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {displayFormat:DateDisplayFormat.RELATIVE,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -130,27 +114,9 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isUIEditable: true,
       defaultValue: "'OTHER'",
       options: [
-        {
-          id: 'f0a1b2c3-s201-4000-8001-f0a1b2c3s001',
-          value: 'OTHER',
-          label: i18nLabel(msg`Draft`),
-          position: 0,
-          color: 'blue',
-        },
-        {
-          id: 'f0a1b2c3-s202-4000-8001-f0a1b2c3s002',
-          value: 'ACTIVE',
-          label: i18nLabel(msg`Active`),
-          position: 1,
-          color: 'green',
-        },
-        {
-          id: 'f0a1b2c3-s203-4000-8001-f0a1b2c3s003',
-          value: 'ARCHIVED',
-          label: i18nLabel(msg`Archived`),
-          position: 2,
-          color: 'grey',
-        },
+        {id:'f0a1b2c3-s201-4000-8001-f0a1b2c3s001',value:'OTHER',label:i18nLabel(msg`Draft`),position:0,color:'blue',},
+        {id:'f0a1b2c3-s202-4000-8001-f0a1b2c3s002',value:'ACTIVE',label:i18nLabel(msg`Active`),position:1,color:'green',},
+        {id:'f0a1b2c3-s203-4000-8001-f0a1b2c3s003',value:'ARCHIVED',label:i18nLabel(msg`Archived`),position:2,color:'grey',},
       ],
     },
     standardObjectMetadataRelatedEntityIds,
@@ -170,41 +136,11 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isNullable: true,
       isUIEditable: true,
       options: [
-        {
-          id: 'f0a1b2c3-s101-4000-8001-f0a1b2c3s101',
-          value: 'PUBLIC_FOR_PROFIT',
-          label: i18nLabel(msg`Public For-Profit`),
-          position: 0,
-          color: 'blue',
-        },
-        {
-          id: 'f0a1b2c3-s102-4000-8001-f0a1b2c3s102',
-          value: 'PRIVATE_FOR_PROFIT',
-          label: i18nLabel(msg`Private For-Profit`),
-          position: 1,
-          color: 'green',
-        },
-        {
-          id: 'f0a1b2c3-s103-4000-8001-f0a1b2c3s103',
-          value: 'NON_PROFIT',
-          label: i18nLabel(msg`Non-Profit`),
-          position: 2,
-          color: 'orange',
-        },
-        {
-          id: 'f0a1b2c3-s104-4000-8001-f0a1b2c3s104',
-          value: 'ADVISORY',
-          label: i18nLabel(msg`Advisory`),
-          position: 3,
-          color: 'purple',
-        },
-        {
-          id: 'f0a1b2c3-s105-4000-8001-f0a1b2c3s105',
-          value: 'PRIVATE_EQUITY_PORTFOLIO',
-          label: i18nLabel(msg`Private Equity Portfolio`),
-          position: 4,
-          color: 'red',
-        },
+        {id:'f0a1b2c3-s101-4000-8001-f0a1b2c3s101',value:'PUBLIC_FOR_PROFIT',label:i18nLabel(msg`Public For-Profit`),position:0,color:'blue',},
+        {id:'f0a1b2c3-s102-4000-8001-f0a1b2c3s102',value:'PRIVATE_FOR_PROFIT',label:i18nLabel(msg`Private For-Profit`),position:1,color:'green',},
+        {id:'f0a1b2c3-s103-4000-8001-f0a1b2c3s103',value:'NON_PROFIT',label:i18nLabel(msg`Non-Profit`),position:2,color:'orange',},
+        {id:'f0a1b2c3-s104-4000-8001-f0a1b2c3s104',value:'ADVISORY',label:i18nLabel(msg`Advisory`),position:3,color:'purple',},
+        {id:'f0a1b2c3-s105-4000-8001-f0a1b2c3s105',value:'PRIVATE_EQUITY_PORTFOLIO',label:i18nLabel(msg`Private Equity Portfolio`),position:4,color:'red',},
       ],
     },
     standardObjectMetadataRelatedEntityIds,
@@ -309,7 +245,7 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isSystem: true,
       isNullable: true,
       isUIEditable: false,
-      settings: { foreignKeyName: 'searchAssignmentId' },
+      settings: {foreignKeyName:'searchAssignmentId',},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -328,11 +264,7 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isSystem: true,
       isUIEditable: false,
       isNullable: false,
-      defaultValue: {
-        source: "'MANUAL'",
-        name: "'System'",
-        workspaceMemberId: null,
-      },
+      defaultValue: {source:"'MANUAL'",name:"'System'",workspaceMemberId:null,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -351,11 +283,7 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isSystem: true,
       isUIEditable: false,
       isNullable: false,
-      defaultValue: {
-        source: "'MANUAL'",
-        name: "'System'",
-        workspaceMemberId: null,
-      },
+      defaultValue: {source:"'MANUAL'",name:"'System'",workspaceMemberId:null,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -374,7 +302,7 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
       isSystem: true,
       isNullable: false,
       isUIEditable: false,
-      defaultValue: { position: 'first' },
+      defaultValue: {position:'first'},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -400,3 +328,4 @@ export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({
     now,
   }),
 });
+

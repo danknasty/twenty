@@ -1,27 +1,11 @@
 import { msg } from '@lingui/core/macro';
 import { i18nLabel } from 'src/engine/workspace-manager/twenty-standard-application/utils/i18n-label.util';
-import { DateDisplayFormat, FieldMetadataType } from 'twenty-shared/types';
+import { DateDisplayFormat, FieldMetadataType, } from 'twenty-shared/types';
 import { type FlatFieldMetadata } from 'src/engine/metadata-modules/flat-field-metadata/types/flat-field-metadata.type';
 import { type AllStandardObjectFieldName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
-import {
-  type CreateStandardFieldArgs,
-  createStandardFieldFlatMetadata,
-} from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
+import { type CreateStandardFieldArgs, createStandardFieldFlatMetadata, } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 
-export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
-  now,
-  objectName,
-  workspaceId,
-  standardObjectMetadataRelatedEntityIds,
-  dependencyFlatEntityMaps,
-  twentyStandardApplicationId,
-}: Omit<
-  CreateStandardFieldArgs<'boardCommitmentReview', FieldMetadataType>,
-  'context'
->): Record<
-  AllStandardObjectFieldName<'boardCommitmentReview'>,
-  FlatFieldMetadata
-> => ({
+export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({ now, objectName, workspaceId, standardObjectMetadataRelatedEntityIds, dependencyFlatEntityMaps, twentyStandardApplicationId, }: Omit<CreateStandardFieldArgs<'boardCommitmentReview', FieldMetadataType>, 'context'>): Record<AllStandardObjectFieldName<'boardCommitmentReview'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
@@ -54,7 +38,7 @@ export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
       isNullable: false,
       isUIEditable: false,
       defaultValue: 'now',
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {displayFormat:DateDisplayFormat.RELATIVE,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -74,7 +58,7 @@ export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
       isNullable: false,
       isUIEditable: false,
       defaultValue: 'now',
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {displayFormat:DateDisplayFormat.RELATIVE,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -93,7 +77,7 @@ export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
       isSystem: true,
       isNullable: true,
       isUIEditable: false,
-      settings: { displayFormat: DateDisplayFormat.RELATIVE },
+      settings: {displayFormat:DateDisplayFormat.RELATIVE,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -130,34 +114,10 @@ export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
       isUIEditable: true,
       defaultValue: "'PENDING'",
       options: [
-        {
-          id: 'f0a1b2c3-s401-4000-8005-f0a1b2c3s001',
-          value: 'PENDING',
-          label: i18nLabel(msg`Pending`),
-          position: 0,
-          color: 'blue',
-        },
-        {
-          id: 'f0a1b2c3-s402-4000-8005-f0a1b2c3s002',
-          value: 'IN_REVIEW',
-          label: i18nLabel(msg`In Review`),
-          position: 1,
-          color: 'yellow',
-        },
-        {
-          id: 'f0a1b2c3-s403-4000-8005-f0a1b2c3s003',
-          value: 'COMPLETED',
-          label: i18nLabel(msg`Completed`),
-          position: 2,
-          color: 'green',
-        },
-        {
-          id: 'f0a1b2c3-s404-4000-8005-f0a1b2c3s004',
-          value: 'FLAGGED',
-          label: i18nLabel(msg`Flagged`),
-          position: 3,
-          color: 'red',
-        },
+        {id:'f0a1b2c3-s401-4000-8005-f0a1b2c3s001',value:'PENDING',label:i18nLabel(msg`Pending`),position:0,color:'blue',},
+        {id:'f0a1b2c3-s402-4000-8005-f0a1b2c3s002',value:'IN_REVIEW',label:i18nLabel(msg`In Review`),position:1,color:'yellow',},
+        {id:'f0a1b2c3-s403-4000-8005-f0a1b2c3s003',value:'COMPLETED',label:i18nLabel(msg`Completed`),position:2,color:'green',},
+        {id:'f0a1b2c3-s404-4000-8005-f0a1b2c3s004',value:'FLAGGED',label:i18nLabel(msg`Flagged`),position:3,color:'red',},
       ],
     },
     standardObjectMetadataRelatedEntityIds,
@@ -279,11 +239,7 @@ export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
       isSystem: true,
       isUIEditable: false,
       isNullable: false,
-      defaultValue: {
-        source: "'MANUAL'",
-        name: "'System'",
-        workspaceMemberId: null,
-      },
+      defaultValue: {source:"'MANUAL'",name:"'System'",workspaceMemberId:null,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -302,11 +258,7 @@ export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
       isSystem: true,
       isUIEditable: false,
       isNullable: false,
-      defaultValue: {
-        source: "'MANUAL'",
-        name: "'System'",
-        workspaceMemberId: null,
-      },
+      defaultValue: {source:"'MANUAL'",name:"'System'",workspaceMemberId:null,},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -325,7 +277,7 @@ export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
       isSystem: true,
       isNullable: false,
       isUIEditable: false,
-      defaultValue: { position: 'first' },
+      defaultValue: {position:'first'},
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -351,3 +303,4 @@ export const buildBoardCommitmentReviewStandardFlatFieldMetadatas = ({
     now,
   }),
 });
+

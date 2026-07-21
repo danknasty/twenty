@@ -5,7 +5,7 @@ import {
   createStandardIndexFlatMetadata,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/create-standard-index-flat-metadata.util';
 
-export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
+export const buildAiProviderCallLogStandardFlatIndexMetadatas = ({
   now,
   objectName,
   workspaceId,
@@ -13,10 +13,10 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
 }: Omit<
-  CreateStandardIndexArgs<'aiPromptTemplate'>,
+  CreateStandardIndexArgs<'aiProviderCallLog'>,
   'context'
 >): Record<
-  AllStandardObjectIndexName<'aiPromptTemplate'>,
+  AllStandardObjectIndexName<'aiProviderCallLog'>,
   FlatIndexMetadata
 > => ({
   searchVectorGinIndex: createStandardIndexFlatMetadata({
@@ -32,12 +32,12 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  promptKeyIndex: createStandardIndexFlatMetadata({
+  modelIdIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'promptKeyIndex',
-      relatedFieldNames: ['promptKey'],
+      indexName: 'modelIdIndex',
+      relatedFieldNames: ['modelId'],
       indexType: 'BTREE',
     },
     standardObjectMetadataRelatedEntityIds,
@@ -58,12 +58,12 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  versionIndex: createStandardIndexFlatMetadata({
+  calledAtIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'versionIndex',
-      relatedFieldNames: ['version'],
+      indexName: 'calledAtIndex',
+      relatedFieldNames: ['calledAt'],
       indexType: 'BTREE',
     },
     standardObjectMetadataRelatedEntityIds,
@@ -71,12 +71,38 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  targetModelIdIndex: createStandardIndexFlatMetadata({
+  promptTemplateIdIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'targetModelIdIndex',
-      relatedFieldNames: ['targetModelId'],
+      indexName: 'promptTemplateIdIndex',
+      relatedFieldNames: ['promptTemplateId'],
+      indexType: 'BTREE',
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  inputHashIndex: createStandardIndexFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      indexName: 'inputHashIndex',
+      relatedFieldNames: ['inputHash'],
+      indexType: 'BTREE',
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  subjectIdIndex: createStandardIndexFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      indexName: 'subjectIdIndex',
+      relatedFieldNames: ['subjectId'],
       indexType: 'BTREE',
     },
     standardObjectMetadataRelatedEntityIds,

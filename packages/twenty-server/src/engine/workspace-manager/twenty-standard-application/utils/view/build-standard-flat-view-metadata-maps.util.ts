@@ -99,7 +99,10 @@ import { computeStandardExternalIdentityMatchQueueViews } from 'src/engine/works
 import { computeStandardAnalyticsDomainMetricViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-domain-metric-views.util';
 import { computeStandardAnalyticsMetricSnapshotViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-metric-snapshot-views.util';
 import { computeStandardAnalyticsDashboardConfigViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-dashboard-config-views.util';
-import { computeAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-ai-prompt-template-views.util';
+import { computeAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-ai-prompt-template-views.util';import { computeStandardAiModelRegistryViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-model-registry-views.util';
+import { computeStandardAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-prompt-template-views.util';
+import { computeStandardAiProviderCallLogViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-provider-call-log-views.util';
+import { computeStandardAppAgentsViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-app-agents-views.util';
 
 type StandardViewBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewArgs<P>, 'context'>,
@@ -201,7 +204,10 @@ retentionActionLog: computeStandardRetentionActionLogViews,
 analyticsDomainMetric: computeStandardAnalyticsDomainMetricViews,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViews,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViews,
-aiPromptTemplate: computeAiPromptTemplateViews,
+aiPromptTemplate: computeAiPromptTemplateViews,  aiModelRegistry: computeStandardAiModelRegistryViews,
+  aiPromptTemplate: computeStandardAiPromptTemplateViews,
+  aiProviderCallLog: computeStandardAiProviderCallLogViews,
+  appAgents: computeStandardAppAgentsViews,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewBuilder<P>;
 };

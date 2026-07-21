@@ -107,7 +107,10 @@ import { buildExternalIdentityMatchQueueStandardFlatFieldMetadatas } from 'src/e
 import { buildAnalyticsDomainMetricStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-domain-metric-standard-flat-field-metadata.util';
 import { buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-metric-snapshot-standard-flat-field-metadata.util';
 import { buildAnalyticsDashboardConfigStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-analytics-dashboard-config-standard-flat-field-metadata.util';
+import { buildAiPromptTemplateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-prompt-template-standard-flat-field-metadata.util';import { buildAiModelRegistryStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-model-registry-standard-flat-field-metadata.util';
 import { buildAiPromptTemplateStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-prompt-template-standard-flat-field-metadata.util';
+import { buildAiProviderCallLogStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-ai-provider-call-log-standard-flat-field-metadata.util';
+import { buildAppAgentsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-app-agents-standard-flat-field-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardFieldArgs<P, FieldMetadataType>, 'context'>,
@@ -238,7 +241,10 @@ retentionActionLog: buildRetentionActionLogStandardFlatFieldMetadatas,
 analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatFieldMetadatas,
   analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatFieldMetadatas,
   analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatFieldMetadatas,
-aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,
+aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,  aiModelRegistry: buildAiModelRegistryStandardFlatFieldMetadatas,
+  aiPromptTemplate: buildAiPromptTemplateStandardFlatFieldMetadatas,
+  aiProviderCallLog: buildAiProviderCallLogStandardFlatFieldMetadatas,
+  appAgents: buildAppAgentsStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };

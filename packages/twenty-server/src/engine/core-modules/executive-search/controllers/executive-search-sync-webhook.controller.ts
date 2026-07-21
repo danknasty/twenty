@@ -96,9 +96,8 @@ export class ExecutiveSearchSyncWebhookController {
       );
     }
 
-    const secret = await this.serverVariableService.getWebhookSecret(
-      workspaceId,
-    );
+    const secret =
+      await this.serverVariableService.getWebhookSecret(workspaceId);
 
     if (!secret) {
       throw new ExecutiveSearchException(

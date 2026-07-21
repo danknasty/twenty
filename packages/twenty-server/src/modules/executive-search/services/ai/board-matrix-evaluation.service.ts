@@ -189,8 +189,9 @@ export class BoardMatrixEvaluationService {
           });
 
         // --- Compute weighted score ---
-        const { weightedScore, maxWeightedScore } =
-          this.computeWeightedScore(perCriterionEvaluations);
+        const { weightedScore, maxWeightedScore } = this.computeWeightedScore(
+          perCriterionEvaluations,
+        );
 
         // --- Generate qualitative assessments ---
         const now = new Date();
@@ -223,8 +224,7 @@ export class BoardMatrixEvaluationService {
           independenceAssessment: this.generateIndependenceAssessment(criteria),
           commitmentCapacityReview:
             this.generateCommitmentCapacityReview(criteria),
-          diversityComplement:
-            this.generateDiversityComplement(criteria),
+          diversityComplement: this.generateDiversityComplement(criteria),
           summary: this.generateSummary(
             weightedScore,
             maxWeightedScore,
@@ -293,9 +293,11 @@ export class BoardMatrixEvaluationService {
   private generateEvidence(
     criterion: BoardMatrixCriterionWorkspaceEntity,
   ): string {
-    return `Criterion "${criterion.name}" (${criterion.category}) — weighted at ${criterion.weight}. ` +
+    return (
+      `Criterion "${criterion.name}" (${criterion.category}) — weighted at ${criterion.weight}. ` +
       `Description: ${criterion.description ?? 'N/A'}. ` +
-      `AI assessment based on available profile data.`;
+      `AI assessment based on available profile data.`
+    );
   }
 
   /**
@@ -304,24 +306,24 @@ export class BoardMatrixEvaluationService {
   private generateAssessment(
     criterion: BoardMatrixCriterionWorkspaceEntity,
   ): string {
-    return `Assessment for "${criterion.name}": candidate demonstrates relevant qualifications. ` +
-      `Score: 7/10. Full review pending.`;
+    return (
+      `Assessment for "${criterion.name}": candidate demonstrates relevant qualifications. ` +
+      `Score: 7/10. Full review pending.`
+    );
   }
 
   /**
    * Computes weighted overall score from per-criterion evaluations.
    */
-  private computeWeightedScore(
-    evaluations: BoardMatrixCriterionEvaluation[],
-  ): { weightedScore: number | null; maxWeightedScore: number | null } {
+  private computeWeightedScore(evaluations: BoardMatrixCriterionEvaluation[]): {
+    weightedScore: number | null;
+    maxWeightedScore: number | null;
+  } {
     if (evaluations.length === 0) {
       return { weightedScore: null, maxWeightedScore: null };
     }
 
-    const totalWeight = evaluations.reduce(
-      (sum, e) => sum + e.weight,
-      0,
-    );
+    const totalWeight = evaluations.reduce((sum, e) => sum + e.weight, 0);
 
     if (totalWeight === 0) {
       return { weightedScore: null, maxWeightedScore: null };

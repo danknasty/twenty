@@ -73,10 +73,7 @@ export class DeadLetterService {
   /**
    * Replay a dead-lettered event — marks isReplayed=true and re-enqueues to syncQueue.
    */
-  async replay(
-    _workspaceId: string,
-    deadLetterId: string,
-  ): Promise<void> {
+  async replay(_workspaceId: string, deadLetterId: string): Promise<void> {
     const record = this.store.get(deadLetterId);
 
     if (!record) {

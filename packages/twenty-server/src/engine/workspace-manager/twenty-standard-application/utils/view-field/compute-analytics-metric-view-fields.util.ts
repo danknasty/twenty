@@ -20,32 +20,30 @@ export const computeAnalyticsMetricViewFields = (
         size: 180,
       },
     }),
-    allAnalyticsMetricsMetricType:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'analyticsMetric',
-        context: {
-          viewName: 'allAnalyticsMetrics',
-          viewFieldName: 'metricType',
-          fieldName: 'metricType',
-          position: 1,
-          isVisible: true,
-          size: 150,
-        },
-      }),
-    allAnalyticsMetricsSourceObjectName:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'analyticsMetric',
-        context: {
-          viewName: 'allAnalyticsMetrics',
-          viewFieldName: 'sourceObjectName',
-          fieldName: 'sourceObjectName',
-          position: 2,
-          isVisible: true,
-          size: 150,
-        },
-      }),
+    allAnalyticsMetricsMetricType: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'analyticsMetric',
+      context: {
+        viewName: 'allAnalyticsMetrics',
+        viewFieldName: 'metricType',
+        fieldName: 'metricType',
+        position: 1,
+        isVisible: true,
+        size: 150,
+      },
+    }),
+    allAnalyticsMetricsSourceObjectName: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'analyticsMetric',
+      context: {
+        viewName: 'allAnalyticsMetrics',
+        viewFieldName: 'sourceObjectName',
+        fieldName: 'sourceObjectName',
+        position: 2,
+        isVisible: true,
+        size: 150,
+      },
+    }),
     allAnalyticsMetricsUnit: createStandardViewFieldFlatMetadata({
       ...args,
       objectName: 'analyticsMetric',

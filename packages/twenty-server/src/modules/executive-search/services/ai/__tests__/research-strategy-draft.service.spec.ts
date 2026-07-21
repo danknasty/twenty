@@ -2,13 +2,16 @@ import { Test, type TestingModule } from '@nestjs/testing';
 
 import { FeatureFlagKey } from 'twenty-shared/types';
 
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => {
-  return {
-    FeatureFlagService: jest.fn().mockImplementation(() => ({
-      isFeatureEnabled: jest.fn(),
-    })),
-  };
-});
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => {
+    return {
+      FeatureFlagService: jest.fn().mockImplementation(() => ({
+        isFeatureEnabled: jest.fn(),
+      })),
+    };
+  },
+);
 
 import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
 import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
@@ -60,11 +63,7 @@ describe('ResearchStrategyDraftService', () => {
         'Platform architecture',
         'Agile methodology',
       ],
-      targetCompanies: [
-        'Snowflake',
-        'Databricks',
-        'Confluent',
-      ],
+      targetCompanies: ['Snowflake', 'Databricks', 'Confluent'],
       companySizeBand: '$500M-$2B revenue',
     };
 

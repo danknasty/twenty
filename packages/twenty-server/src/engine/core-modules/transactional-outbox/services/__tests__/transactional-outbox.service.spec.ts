@@ -20,9 +20,7 @@ describe('TransactionalOutboxService', () => {
   const mockGlobalWorkspaceOrmManager = {
     executeInWorkspaceContext: jest
       .fn()
-      .mockImplementation(
-        (fn: () => Promise<void>, _authContext: any) => fn(),
-      ),
+      .mockImplementation((fn: () => Promise<void>, _authContext: any) => fn()),
     getRepository: jest.fn(),
   };
 
@@ -75,9 +73,7 @@ describe('TransactionalOutboxService', () => {
 
       await service.append(args, 'workspace-1');
 
-      expect(
-        mockGlobalWorkspaceOrmManager.getRepository,
-      ).toHaveBeenCalledWith(
+      expect(mockGlobalWorkspaceOrmManager.getRepository).toHaveBeenCalledWith(
         'workspace-1',
         WorkspaceEventOutboxWorkspaceEntity,
         { shouldBypassPermissionChecks: true },

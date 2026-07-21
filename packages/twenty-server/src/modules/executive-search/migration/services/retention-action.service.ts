@@ -126,50 +126,50 @@ export class RetentionActionService {
     const sourceHash = this.computeSourceHash(input);
 
     // Phase 1 — append-only idempotent record (REQUESTED).
-    const recorded = await this.globalWorkspaceOrmManager.executeInWorkspaceContext(
-      async () => {
-        const repository =
-          await this.globalWorkspaceOrmManager.getRepository(
+    const recorded =
+      await this.globalWorkspaceOrmManager.executeInWorkspaceContext(
+        async () => {
+          const repository = await this.globalWorkspaceOrmManager.getRepository(
             workspaceId,
             RetentionActionLogWorkspaceEntity,
             { shouldBypassPermissionChecks: true },
           );
 
-        // Idempotency: a second append with the same natural key is a no-op.
-        const existing = await repository.findOneBy({ sourceHash });
+          // Idempotency: a second append with the same natural key is a no-op.
+          const existing = await repository.findOneBy({ sourceHash });
 
-        if (existing) {
-          this.logger.debug(
-            `Retention action already recorded (sourceHash=${sourceHash}) — append-only no-op`,
-          );
-          return { row: existing, isNew: false };
-        }
+          if (existing) {
+            this.logger.debug(
+              `Retention action already recorded (sourceHash=${sourceHash}) — append-only no-op`,
+            );
+            return { row: existing, isNew: false };
+          }
 
-        const requestedAt = new Date().toISOString();
+          const requestedAt = new Date().toISOString();
 
-        const created = repository.create({
-          workspaceId,
-          actionType: input.actionType,
-          initiatorSystem: input.initiatorSystem,
-          targetTwentyEntityName: input.targetTwentyEntityName,
-          targetTwentyRecordId: input.targetTwentyRecordId ?? null,
-          externalSystemName: input.externalSystemName ?? null,
-          externalRecordId: input.externalRecordId ?? null,
-          scope: input.scope,
-          legalHoldReference: input.legalHoldReference ?? null,
-          status: RETENTION_ACTION_STATUS.REQUESTED,
-          requestedAt,
-          propagatedAt: null,
-          actorId: input.actorId ?? null,
-          sourceHash,
-        });
+          const created = repository.create({
+            workspaceId,
+            actionType: input.actionType,
+            initiatorSystem: input.initiatorSystem,
+            targetTwentyEntityName: input.targetTwentyEntityName,
+            targetTwentyRecordId: input.targetTwentyRecordId ?? null,
+            externalSystemName: input.externalSystemName ?? null,
+            externalRecordId: input.externalRecordId ?? null,
+            scope: input.scope,
+            legalHoldReference: input.legalHoldReference ?? null,
+            status: RETENTION_ACTION_STATUS.REQUESTED,
+            requestedAt,
+            propagatedAt: null,
+            actorId: input.actorId ?? null,
+            sourceHash,
+          });
 
-        const saved = await repository.save(created);
+          const saved = await repository.save(created);
 
-        return { row: saved, isNew: true };
-      },
-      authContext,
-    );
+          return { row: saved, isNew: true };
+        },
+        authContext,
+      );
 
     // Append-only invariant: a duplicate natural key never propagates again.
     if (!recorded.isNew) {
@@ -206,19 +206,16 @@ export class RetentionActionService {
    * Cross-check both systems' retention actions and flag missing propagations.
    * Delegates to the read-only reconciliation engine logic.
    */
-  async reconcileAll(
-    workspaceId: string,
-  ): Promise<ReconciliationFinding[]> {
+  async reconcileAll(workspaceId: string): Promise<ReconciliationFinding[]> {
     const authContext = buildSystemAuthContext(workspaceId);
 
     return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
       async () => {
-        const repository =
-          await this.globalWorkspaceOrmManager.getRepository(
-            workspaceId,
-            RetentionActionLogWorkspaceEntity,
-            { shouldBypassPermissionChecks: true },
-          );
+        const repository = await this.globalWorkspaceOrmManager.getRepository(
+          workspaceId,
+          RetentionActionLogWorkspaceEntity,
+          { shouldBypassPermissionChecks: true },
+        );
 
         // Missing propagations: rows that are still REQUESTED (never reached
         // PROPAGATED / RECONCILED). These exist in the Twenty log but have not
@@ -261,12 +258,11 @@ export class RetentionActionService {
 
     return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
       async () => {
-        const repository =
-          await this.globalWorkspaceOrmManager.getRepository(
-            workspaceId,
-            RetentionActionLogWorkspaceEntity,
-            { shouldBypassPermissionChecks: true },
-          );
+        const repository = await this.globalWorkspaceOrmManager.getRepository(
+          workspaceId,
+          RetentionActionLogWorkspaceEntity,
+          { shouldBypassPermissionChecks: true },
+        );
 
         const holds = await repository.find({
           where: {
@@ -393,45 +389,41 @@ export class RetentionActionService {
   ): Promise<PropagationOutcome> {
     const authContext = buildSystemAuthContext(workspaceId);
 
-    await this.globalWorkspaceOrmManager.executeInWorkspaceContext(
-      async () => {
-        if (!input.targetTwentyRecordId) {
-          this.logger.debug(
-            'Directus-initiated retention action has no target Twenty record id — scope-level reconciliation only',
-          );
-          return;
-        }
+    await this.globalWorkspaceOrmManager.executeInWorkspaceContext(async () => {
+      if (!input.targetTwentyRecordId) {
+        this.logger.debug(
+          'Directus-initiated retention action has no target Twenty record id — scope-level reconciliation only',
+        );
+        return;
+      }
 
-        // Resolve the projection repository dynamically by entity name.
-        const repository =
-          await this.globalWorkspaceOrmManager.getRepository(
-            workspaceId,
-            input.targetTwentyEntityName,
-            { shouldBypassPermissionChecks: true },
-          );
+      // Resolve the projection repository dynamically by entity name.
+      const repository = await this.globalWorkspaceOrmManager.getRepository(
+        workspaceId,
+        input.targetTwentyEntityName,
+        { shouldBypassPermissionChecks: true },
+      );
 
-        switch (input.scope) {
-          case RETENTION_ACTION_SCOPE.SOFT_DELETE:
-            await repository.softDelete(input.targetTwentyRecordId);
-            break;
-          case RETENTION_ACTION_SCOPE.HIDE:
-            await repository.update(input.targetTwentyRecordId, {
-              visibility: 'HIDDEN',
-            } as never);
-            break;
-          case RETENTION_ACTION_SCOPE.QUARANTINE:
-            await repository.update(input.targetTwentyRecordId, {
-              retentionQuarantined: true,
-            } as never);
-            break;
-          default:
-            this.logger.warn(
-              `Unknown retention scope "${input.scope}" — no projection mutation applied`,
-            );
-        }
-      },
-      authContext,
-    );
+      switch (input.scope) {
+        case RETENTION_ACTION_SCOPE.SOFT_DELETE:
+          await repository.softDelete(input.targetTwentyRecordId);
+          break;
+        case RETENTION_ACTION_SCOPE.HIDE:
+          await repository.update(input.targetTwentyRecordId, {
+            visibility: 'HIDDEN',
+          } as never);
+          break;
+        case RETENTION_ACTION_SCOPE.QUARANTINE:
+          await repository.update(input.targetTwentyRecordId, {
+            retentionQuarantined: true,
+          } as never);
+          break;
+        default:
+          this.logger.warn(
+            `Unknown retention scope "${input.scope}" — no projection mutation applied`,
+          );
+      }
+    }, authContext);
 
     return {
       propagated: true,
@@ -451,22 +443,18 @@ export class RetentionActionService {
   ): Promise<void> {
     const authContext = buildSystemAuthContext(workspaceId);
 
-    await this.globalWorkspaceOrmManager.executeInWorkspaceContext(
-      async () => {
-        const repository =
-          await this.globalWorkspaceOrmManager.getRepository(
-            workspaceId,
-            RetentionActionLogWorkspaceEntity,
-            { shouldBypassPermissionChecks: true },
-          );
+    await this.globalWorkspaceOrmManager.executeInWorkspaceContext(async () => {
+      const repository = await this.globalWorkspaceOrmManager.getRepository(
+        workspaceId,
+        RetentionActionLogWorkspaceEntity,
+        { shouldBypassPermissionChecks: true },
+      );
 
-        await repository.update(rowId, {
-          status,
-          propagatedAt,
-        } as never);
-      },
-      authContext,
-    );
+      await repository.update(rowId, {
+        status,
+        propagatedAt,
+      } as never);
+    }, authContext);
   }
 
   /**
@@ -488,9 +476,7 @@ export class RetentionActionService {
     return crypto.createHash('sha256').update(naturalKey).digest('hex');
   }
 
-  private isLegalHoldAction(
-    row: RetentionActionLogWorkspaceEntity,
-  ): boolean {
+  private isLegalHoldAction(row: RetentionActionLogWorkspaceEntity): boolean {
     return row.actionType === RETENTION_ACTION_TYPE.LEGAL_HOLD;
   }
 }

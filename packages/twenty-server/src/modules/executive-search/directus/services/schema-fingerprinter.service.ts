@@ -16,9 +16,7 @@ import {
  */
 @Injectable()
 export class DirectusSchemaFingerprinterService {
-  private readonly logger = new Logger(
-    DirectusSchemaFingerprinterService.name,
-  );
+  private readonly logger = new Logger(DirectusSchemaFingerprinterService.name);
 
   /**
    * Serialize collections deterministically (sorted by name, subset of

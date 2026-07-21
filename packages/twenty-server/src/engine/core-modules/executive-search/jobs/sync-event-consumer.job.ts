@@ -58,9 +58,7 @@ export class SyncEventConsumerJob {
     );
 
     if (outcome.outcome === 'alreadyProcessed') {
-      this.logger.debug(
-        `Event ${event.eventId} already processed — skipping`,
-      );
+      this.logger.debug(`Event ${event.eventId} already processed — skipping`);
       return; // Already done, ack the job
     }
     // 'retry' or 'new' → continue processing

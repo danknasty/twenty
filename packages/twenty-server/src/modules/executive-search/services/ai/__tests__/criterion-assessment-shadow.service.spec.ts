@@ -25,9 +25,7 @@ jest.mock(
   () => {
     const mockExecuteInWorkspaceContext = jest
       .fn()
-      .mockImplementation(
-        (fn: () => any, _authContext?: any) => fn(),
-      );
+      .mockImplementation((fn: () => any, _authContext?: any) => fn());
 
     const mockGetRepository = jest.fn();
 
@@ -48,7 +46,9 @@ jest.mock(
     AiContextFirewallService: jest.fn().mockImplementation(() => ({
       validateAiContextAllowlist: jest.fn().mockReturnValue([]),
       assertAiContextAllowlistSafe: jest.fn(),
-      filterProhibited: jest.fn().mockImplementation((fields: string[]) => fields),
+      filterProhibited: jest
+        .fn()
+        .mockImplementation((fields: string[]) => fields),
     })),
   }),
 );
@@ -101,19 +101,17 @@ describe('CriterionAssessmentShadowService', () => {
       criterionEvaluation: mockEvaluationRepository,
     };
 
-    const mockInstance = new GlobalWorkspaceOrmManager(
-      null as any,
-    );
-    mockInstance.getRepository = jest.fn().mockImplementation(
-      (_workspaceId: string, entityOrName: any, _options?: any) => {
-        const key =
-          typeof entityOrName === 'string'
-            ? entityOrName
-            : entityOrName.name;
+    const mockInstance = new GlobalWorkspaceOrmManager(null as any);
+    mockInstance.getRepository = jest
+      .fn()
+      .mockImplementation(
+        (_workspaceId: string, entityOrName: any, _options?: any) => {
+          const key =
+            typeof entityOrName === 'string' ? entityOrName : entityOrName.name;
 
-        return Promise.resolve(repositoryMap[key]);
-      },
-    );
+          return Promise.resolve(repositoryMap[key]);
+        },
+      );
 
     return mockInstance;
   };
@@ -125,9 +123,7 @@ describe('CriterionAssessmentShadowService', () => {
     ) as jest.Mocked<FeatureFlagService>;
     mockFeatureFlagService.isFeatureEnabled = jest.fn().mockResolvedValue(true);
 
-    mockAiContextFirewallService = new AiContextFirewallService(
-      null as any,
-    );
+    mockAiContextFirewallService = new AiContextFirewallService(null as any);
 
     const mockOrmManager = setupRepositories();
 
@@ -308,8 +304,12 @@ describe('CriterionAssessmentShadowService', () => {
       expect(result.evaluations).toHaveLength(1);
       expect(result.evaluations[0].candidacyId).toBe('candidacy-1');
       expect(result.evaluations[0].criteriaEvaluations).toHaveLength(2);
-      expect(result.evaluations[0].criteriaEvaluations[0].criterionId).toBe('criterion-1');
-      expect(result.evaluations[0].criteriaEvaluations[1].criterionId).toBe('criterion-2');
+      expect(result.evaluations[0].criteriaEvaluations[0].criterionId).toBe(
+        'criterion-1',
+      );
+      expect(result.evaluations[0].criteriaEvaluations[1].criterionId).toBe(
+        'criterion-2',
+      );
     });
 
     it('stores one shadow assessment record per criterion per candidacy', async () => {

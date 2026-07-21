@@ -44,19 +44,18 @@ export const computeStandardSearchCandidacyViewFields = (
         size: 150,
       },
     }),
-    allSearchCandidaciesSearchAssignment:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchCandidacy',
-        context: {
-          viewName: 'allSearchCandidacies',
-          viewFieldName: 'searchAssignment',
-          fieldName: 'searchAssignment',
-          position: 3,
-          isVisible: true,
-          size: 150,
-        },
-      }),
+    allSearchCandidaciesSearchAssignment: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchCandidacy',
+      context: {
+        viewName: 'allSearchCandidacies',
+        viewFieldName: 'searchAssignment',
+        fieldName: 'searchAssignment',
+        position: 3,
+        isVisible: true,
+        size: 150,
+      },
+    }),
     allSearchCandidaciesPerson: createStandardViewFieldFlatMetadata({
       ...args,
       objectName: 'searchCandidacy',
@@ -93,34 +92,32 @@ export const computeStandardSearchCandidacyViewFields = (
         size: 150,
       },
     }),
-    searchCandidacyRecordPageFieldsName:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchCandidacy',
-        context: {
-          viewName: 'searchCandidacyRecordPageFields',
-          viewFieldName: 'name',
-          fieldName: 'name',
-          position: 0,
-          isVisible: true,
-          size: 200,
-          viewFieldGroupName: 'general',
-        },
-      }),
-    searchCandidacyRecordPageFieldsStatus:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchCandidacy',
-        context: {
-          viewName: 'searchCandidacyRecordPageFields',
-          viewFieldName: 'status',
-          fieldName: 'status',
-          position: 1,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    searchCandidacyRecordPageFieldsName: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchCandidacy',
+      context: {
+        viewName: 'searchCandidacyRecordPageFields',
+        viewFieldName: 'name',
+        fieldName: 'name',
+        position: 0,
+        isVisible: true,
+        size: 200,
+        viewFieldGroupName: 'general',
+      },
+    }),
+    searchCandidacyRecordPageFieldsStatus: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchCandidacy',
+      context: {
+        viewName: 'searchCandidacyRecordPageFields',
+        viewFieldName: 'status',
+        fieldName: 'status',
+        position: 1,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
     searchCandidacyRecordPageFieldsCurrentStage:
       createStandardViewFieldFlatMetadata({
         ...args,
@@ -149,20 +146,19 @@ export const computeStandardSearchCandidacyViewFields = (
           viewFieldGroupName: 'general',
         },
       }),
-    searchCandidacyRecordPageFieldsPerson:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchCandidacy',
-        context: {
-          viewName: 'searchCandidacyRecordPageFields',
-          viewFieldName: 'person',
-          fieldName: 'person',
-          position: 4,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    searchCandidacyRecordPageFieldsPerson: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchCandidacy',
+      context: {
+        viewName: 'searchCandidacyRecordPageFields',
+        viewFieldName: 'person',
+        fieldName: 'person',
+        position: 4,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
     searchCandidacyRecordPageFieldsResearchCandidate:
       createStandardViewFieldFlatMetadata({
         ...args,
@@ -247,20 +243,19 @@ export const computeStandardSearchCandidacyViewFields = (
           viewFieldGroupName: 'general',
         },
       }),
-    searchCandidacyRecordPageFieldsNotes:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchCandidacy',
-        context: {
-          viewName: 'searchCandidacyRecordPageFields',
-          viewFieldName: 'notes',
-          fieldName: 'notes',
-          position: 11,
-          isVisible: true,
-          size: 150,
-          viewFieldGroupName: 'general',
-        },
-      }),
+    searchCandidacyRecordPageFieldsNotes: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchCandidacy',
+      context: {
+        viewName: 'searchCandidacyRecordPageFields',
+        viewFieldName: 'notes',
+        fieldName: 'notes',
+        position: 11,
+        isVisible: true,
+        size: 150,
+        viewFieldGroupName: 'general',
+      },
+    }),
     searchCandidacyRecordPageFieldsCreatedAt:
       createStandardViewFieldFlatMetadata({
         ...args,

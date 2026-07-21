@@ -217,25 +217,20 @@ export class DirectusMockServer {
           }
 
           const parsed = JSON.parse(body);
-          const id =
-            parsed.id || 'mock-generated-' + this.generateId();
+          const id = parsed.id || 'mock-generated-' + this.generateId();
           const responseData = { id, ...parsed };
           res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ data: responseData }));
         })
         .catch(() => {
           res.writeHead(400, { 'Content-Type': 'application/json' });
-          res.end(
-            JSON.stringify({ errors: [{ message: 'Bad Request' }] }),
-          );
+          res.end(JSON.stringify({ errors: [{ message: 'Bad Request' }] }));
         });
       return;
     }
 
     // Items write — PATCH or DELETE /items/:collection/:id
-    const idItemsMatch = url.split('?')[0].match(
-      /^\/items\/([^/]+)\/([^/]+)$/,
-    );
+    const idItemsMatch = url.split('?')[0].match(/^\/items\/([^/]+)\/([^/]+)$/);
     if (idItemsMatch && (method === 'PATCH' || method === 'DELETE')) {
       const collection = decodeURIComponent(idItemsMatch[1]);
       const itemId = decodeURIComponent(idItemsMatch[2]);
@@ -286,9 +281,7 @@ export class DirectusMockServer {
         })
         .catch(() => {
           res.writeHead(400, { 'Content-Type': 'application/json' });
-          res.end(
-            JSON.stringify({ errors: [{ message: 'Bad Request' }] }),
-          );
+          res.end(JSON.stringify({ errors: [{ message: 'Bad Request' }] }));
         });
       return;
     }

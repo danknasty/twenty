@@ -7,18 +7,8 @@ import { BoardMatrixEvaluationService } from 'src/modules/executive-search/servi
 import { SearchHealthAdvisoryService } from 'src/modules/executive-search/services/ai/search-health-advisory.service';
 
 @Module({
-  imports: [
-    TwentyORMModule,
-    FeatureFlagModule,
-    FirewallModule,
-  ],
-  providers: [
-    BoardMatrixEvaluationService,
-    SearchHealthAdvisoryService,
-  ],
-  exports: [
-    BoardMatrixEvaluationService,
-    SearchHealthAdvisoryService,
-  ],
+  imports: [TwentyORMModule, FeatureFlagModule, FirewallModule],
+  providers: [BoardMatrixEvaluationService, SearchHealthAdvisoryService],
+  exports: [BoardMatrixEvaluationService, SearchHealthAdvisoryService],
 })
 export class BoardMatrixAiModule {}

@@ -12,10 +12,7 @@ export const buildAnalyticsDomainMetricStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'analyticsDomainMetric'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'analyticsDomainMetric'>, 'context'>): Record<
   AllStandardObjectIndexName<'analyticsDomainMetric'>,
   FlatIndexMetadata
 > => ({

@@ -139,8 +139,7 @@ export class ConvertOpportunityToAssignmentService {
               transactionManager as any,
             );
 
-            const assignmentId =
-              assignmentInsert.identifiers[0]?.id as string;
+            const assignmentId = assignmentInsert.identifiers[0]?.id as string;
 
             // b. Create assignmentTeamMember for opportunity owner (if set)
             if (opportunity.ownerId) {

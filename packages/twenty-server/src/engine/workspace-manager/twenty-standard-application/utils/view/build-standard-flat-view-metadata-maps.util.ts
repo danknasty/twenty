@@ -81,7 +81,6 @@ import { computeCandidatePresentationViews } from 'src/engine/workspace-manager/
 import { computeClientFeedbackViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-client-feedback-views.util';
 import { computeSearchStatusReportViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-search-status-report-views.util';
 
-
 import { computeStandardBoardCompositionProfileViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-composition-profile-views.util';
 import { computeStandardBoardMatrixCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-matrix-criterion-views.util';
 import { computeStandardCandidateBoardMatrixEvaluationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-candidate-board-matrix-evaluation-views.util';
@@ -113,8 +112,7 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   clientAccountProfile: computeStandardClientAccountProfileViews,
   clientStakeholderRole: computeStandardClientStakeholderRoleViews,
   company: computeStandardCompanyViews,
-  confidentialityRecord:
-    computeStandardConfidentialityRecordViews,
+  confidentialityRecord: computeStandardConfidentialityRecordViews,
   conflictCheck: computeStandardConflictCheckViews,
   dashboard: computeStandardDashboardViews,
   executiveArtifact: computeStandardExecutiveArtifactViews,
@@ -140,8 +138,7 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   messageThread: computeStandardMessageThreadViews,
   note: computeStandardNoteViews,
   noteTarget: computeStandardNoteTargetViews,
-  offLimitsRestriction:
-    computeStandardOffLimitsRestrictionViews,
+  offLimitsRestriction: computeStandardOffLimitsRestrictionViews,
   opportunity: computeStandardOpportunityViews,
   person: computeStandardPersonViews,
   relationshipEdge: computeStandardRelationshipEdgeViews,
@@ -181,19 +178,14 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
   placement: computeStandardPlacementViews,
   guaranteeCase: computeStandardGuaranteeCaseViews,
 
-boardCompositionProfile:
-    computeStandardBoardCompositionProfileViews,
-  boardMatrixCriterion:
-    computeStandardBoardMatrixCriterionViews,
+  boardCompositionProfile: computeStandardBoardCompositionProfileViews,
+  boardMatrixCriterion: computeStandardBoardMatrixCriterionViews,
   candidateBoardMatrixEvaluation:
     computeStandardCandidateBoardMatrixEvaluationViews,
-  directorIndependenceReview:
-    computeStandardDirectorIndependenceReviewViews,
-  boardCommitmentReview:
-    computeStandardBoardCommitmentReviewViews,
+  directorIndependenceReview: computeStandardDirectorIndependenceReviewViews,
+  boardCommitmentReview: computeStandardBoardCommitmentReviewViews,
   retentionActionLog: computeStandardRetentionActionLogViews,
-  externalIdentityMatchQueue:
-    computeStandardExternalIdentityMatchQueueViews,
+  externalIdentityMatchQueue: computeStandardExternalIdentityMatchQueueViews,
   analyticsDomainMetric: computeStandardAnalyticsDomainMetricViews,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViews,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViews,

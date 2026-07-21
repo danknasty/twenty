@@ -83,9 +83,9 @@ export class DirectusClientService {
    * Fetch all collections and their metadata.
    */
   async getCollections(): Promise<DirectusCollection[]> {
-    const { data } = await this.request<DirectusItemsResponse<DirectusCollection>>(
-      `${this.baseUrl}/collections`,
-    );
+    const { data } = await this.request<
+      DirectusItemsResponse<DirectusCollection>
+    >(`${this.baseUrl}/collections`);
     return data;
   }
 

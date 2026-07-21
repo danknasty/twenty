@@ -60,7 +60,11 @@ export interface EntityMatcher {
 }
 
 /** Which matcher to dispatch to for a collection pair. */
-export type MatcherType = 'executive' | 'company' | 'opportunity' | 'application';
+export type MatcherType =
+  | 'executive'
+  | 'company'
+  | 'opportunity'
+  | 'application';
 
 /**
  * A Directus→Twenty collection pair to match.
@@ -103,51 +107,54 @@ export class IdentityMatchingService {
     pair: DirectusToTwentyPair,
   ): Promise<MatchResult[]> {
     // Dominant DI pattern: executeInWorkspaceContext with NO authContext.
-    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(async () => {
-      const items = await this.directusClient.getItems(pair.directusCollection);
+    return this.globalWorkspaceOrmManager.executeInWorkspaceContext(
+      async () => {
+        const items = await this.directusClient.getItems(
+          pair.directusCollection,
+        );
 
-      this.logger.log(
-        `Matching ${items.length} Directus "${pair.directusCollection}" items against Twenty "${pair.twentyEntityName}" candidates in workspace ${workspaceId}`,
-      );
+        this.logger.log(
+          `Matching ${items.length} Directus "${pair.directusCollection}" items against Twenty "${pair.twentyEntityName}" candidates in workspace ${workspaceId}`,
+        );
 
-      if (items.length === 0) {
-        return [];
-      }
-
-      const candidates = await this.loadCandidates(workspaceId, pair);
-
-      const authoritativeLinksByExternalId =
-        await this.loadAuthoritativeLinksByExternalId(workspaceId);
-
-      const matcher = this.resolveMatcher(pair.matcherType);
-
-      const results: MatchResult[] = [];
-
-      for (const item of items) {
-        const externalId = readDirectusExternalId(item) ?? '';
-
-        // HARD RULE: an authoritative link already exists → EXACT, never overwrite.
-        if (externalId !== '') {
-          const existingLink =
-            authoritativeLinksByExternalId.get(externalId);
-
-          if (existingLink) {
-            results.push(
-              this.buildExactLinkOnlyResult(
-                externalId,
-                pair.directusCollection,
-                existingLink,
-              ),
-            );
-            continue;
-          }
+        if (items.length === 0) {
+          return [];
         }
 
-        results.push(matcher.match(item, candidates));
-      }
+        const candidates = await this.loadCandidates(workspaceId, pair);
 
-      return results;
-    });
+        const authoritativeLinksByExternalId =
+          await this.loadAuthoritativeLinksByExternalId(workspaceId);
+
+        const matcher = this.resolveMatcher(pair.matcherType);
+
+        const results: MatchResult[] = [];
+
+        for (const item of items) {
+          const externalId = readDirectusExternalId(item) ?? '';
+
+          // HARD RULE: an authoritative link already exists → EXACT, never overwrite.
+          if (externalId !== '') {
+            const existingLink = authoritativeLinksByExternalId.get(externalId);
+
+            if (existingLink) {
+              results.push(
+                this.buildExactLinkOnlyResult(
+                  externalId,
+                  pair.directusCollection,
+                  existingLink,
+                ),
+              );
+              continue;
+            }
+          }
+
+          results.push(matcher.match(item, candidates));
+        }
+
+        return results;
+      },
+    );
   }
 
   private resolveMatcher(matcherType: MatcherType): EntityMatcher {
@@ -210,8 +217,10 @@ export class IdentityMatchingService {
       { shouldBypassPermissionChecks: true },
     );
 
-    const records = ((await repository.find({})) ??
-      []) as unknown as Record<string, unknown>[];
+    const records = ((await repository.find({})) ?? []) as unknown as Record<
+      string,
+      unknown
+    >[];
 
     const linksByRecordId = await this.loadLinksByTwentyRecordId(
       workspaceId,
@@ -327,10 +336,7 @@ export class IdentityMatchingService {
       const id = readCandidateId(person);
 
       if (id) {
-        personExternalIdsByPersonId.set(
-          id,
-          readCandidateExternalIds(person),
-        );
+        personExternalIdsByPersonId.set(id, readCandidateExternalIds(person));
       }
     }
 

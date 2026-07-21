@@ -68,7 +68,6 @@ import { buildCandidatePresentationStandardFlatIndexMetadatas } from 'src/engine
 import { buildClientFeedbackStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-feedback-standard-flat-index-metadata.util';
 import { buildSearchStatusReportStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-status-report-standard-flat-index-metadata.util';
 
-
 import { buildBoardCompositionProfileStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-composition-profile-standard-flat-index-metadata.util';
 import { buildBoardMatrixCriterionStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-matrix-criterion-standard-flat-index-metadata.util';
 import { buildCandidateBoardMatrixEvaluationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-candidate-board-matrix-evaluation-standard-flat-index-metadata.util';
@@ -96,10 +95,8 @@ const STANDARD_FLAT_INDEX_METADATA_BUILDERS_BY_OBJECT_NAME = {
   calendarEventParticipant:
     buildCalendarEventParticipantStandardFlatIndexMetadatas,
   callRecording: buildCallRecordingStandardFlatIndexMetadatas,
-clientAccountProfile:
-    buildClientAccountProfileStandardFlatIndexMetadatas,
-  clientStakeholderRole:
-    buildClientStakeholderRoleStandardFlatIndexMetadatas,
+  clientAccountProfile: buildClientAccountProfileStandardFlatIndexMetadatas,
+  clientStakeholderRole: buildClientStakeholderRoleStandardFlatIndexMetadatas,
   clientAccountProfile: buildClientAccountProfileStandardFlatIndexMetadatas,
   clientStakeholderRole: buildClientStakeholderRoleStandardFlatIndexMetadatas,
   company: buildCompanyStandardFlatIndexMetadatas,
@@ -137,8 +134,7 @@ clientAccountProfile:
   workflowRun: buildWorkflowRunStandardFlatIndexMetadatas,
   workflowVersion: buildWorkflowVersionStandardFlatIndexMetadatas,
   workspaceEventOutbox: buildWorkspaceEventOutboxStandardFlatIndexMetadatas,
-workspaceEventOutbox:
-    buildWorkspaceEventOutboxStandardFlatIndexMetadatas,
+  workspaceEventOutbox: buildWorkspaceEventOutboxStandardFlatIndexMetadatas,
   workspaceMember: buildWorkspaceMemberStandardFlatIndexMetadatas,
   searchEngagementTerms: buildSearchEngagementTermsStandardFlatIndexMetadatas,
   searchAssignment: buildSearchAssignmentStandardFlatIndexMetadatas,
@@ -159,26 +155,27 @@ workspaceEventOutbox:
   candidatePresentation: buildCandidatePresentationStandardFlatIndexMetadatas,
   clientFeedback: buildClientFeedbackStandardFlatIndexMetadatas,
   searchStatusReport: buildSearchStatusReportStandardFlatIndexMetadatas,
-  compensationExpectation: buildCompensationExpectationStandardFlatIndexMetadatas,
+  compensationExpectation:
+    buildCompensationExpectationStandardFlatIndexMetadatas,
   offerNegotiation: buildOfferNegotiationStandardFlatIndexMetadatas,
   placement: buildPlacementStandardFlatIndexMetadatas,
   guaranteeCase: buildGuaranteeCaseStandardFlatIndexMetadatas,
-boardCompositionProfile:
+  boardCompositionProfile:
     buildBoardCompositionProfileStandardFlatIndexMetadatas,
-  boardMatrixCriterion:
-    buildBoardMatrixCriterionStandardFlatIndexMetadatas,
+  boardMatrixCriterion: buildBoardMatrixCriterionStandardFlatIndexMetadatas,
   candidateBoardMatrixEvaluation:
     buildCandidateBoardMatrixEvaluationStandardFlatIndexMetadatas,
   directorIndependenceReview:
     buildDirectorIndependenceReviewStandardFlatIndexMetadatas,
-  boardCommitmentReview:
-    buildBoardCommitmentReviewStandardFlatIndexMetadatas,
+  boardCommitmentReview: buildBoardCommitmentReviewStandardFlatIndexMetadatas,
   retentionActionLog: buildRetentionActionLogStandardFlatIndexMetadatas,
   externalIdentityMatchQueue:
     buildExternalIdentityMatchQueueStandardFlatIndexMetadatas,
   analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatIndexMetadatas,
-  analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas,
-  analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatIndexMetadatas,
+  analyticsMetricSnapshot:
+    buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas,
+  analyticsDashboardConfig:
+    buildAnalyticsDashboardConfigStandardFlatIndexMetadatas,
   aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,
   aiModelRegistry: buildAiModelRegistryStandardFlatIndexMetadatas,
   aiProviderCallLog: buildAiProviderCallLogStandardFlatIndexMetadatas,

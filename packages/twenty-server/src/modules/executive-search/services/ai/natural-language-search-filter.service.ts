@@ -133,15 +133,28 @@ export class NaturalLanguageSearchFilterService {
         pattern: /\bcmos?\b|\bchief\s+marketing\b|\bchief\s+revenue\b/i,
         title: 'CMO',
       },
-      { pattern: /\bchros?\b|\bchief\s+hr\b|\bchief\s+people\b/i, title: 'CHRO' },
+      {
+        pattern: /\bchros?\b|\bchief\s+hr\b|\bchief\s+people\b/i,
+        title: 'CHRO',
+      },
       { pattern: /\bcios?\b|\bchief\s+information\b/i, title: 'CIO' },
       {
         pattern: /\bgeneral\s+counsels?\b|\bchief\s+legal\b/i,
         title: 'General Counsel',
       },
-      { pattern: /\bvps?\b|\bvice\s+president\b|\bsenior\s+vps?\b|\bevps?\b/i, title: 'VP' },
-      { pattern: /\bboard\s+members?\b|\bboard\s+directors?\b|\bnon.executive\b/i, title: 'Board Director' },
-      { pattern: /\bchairman\b|\bchairperson\b|\bchairs?\b/i, title: 'Chairperson' },
+      {
+        pattern: /\bvps?\b|\bvice\s+president\b|\bsenior\s+vps?\b|\bevps?\b/i,
+        title: 'VP',
+      },
+      {
+        pattern:
+          /\bboard\s+members?\b|\bboard\s+directors?\b|\bnon.executive\b/i,
+        title: 'Board Director',
+      },
+      {
+        pattern: /\bchairman\b|\bchairperson\b|\bchairs?\b/i,
+        title: 'Chairperson',
+      },
       {
         pattern: /\bfounders?\b|\bco.founders?\b/i,
         title: 'Founder',
@@ -163,12 +176,19 @@ export class NaturalLanguageSearchFilterService {
     const industryPatterns = [
       { pattern: /\bsaas\b|\bsoftware as a service\b/i, industry: 'SaaS' },
       { pattern: /\bfintech\b|\bfinancial technology\b/i, industry: 'FinTech' },
-      { pattern: /\bhealthtech\b|\bhealthcare\b|\bhealth\b/i, industry: 'Healthcare' },
+      {
+        pattern: /\bhealthtech\b|\bhealthcare\b|\bhealth\b/i,
+        industry: 'Healthcare',
+      },
       {
         pattern: /\benterprise software\b|\benterprise tech\b/i,
         industry: 'Enterprise Software',
       },
-      { pattern: /\bai\b|\bartificial intelligence\b|\bml\b|\bmachine learning\b/i, industry: 'AI/ML' },
+      {
+        pattern:
+          /\bai\b|\bartificial intelligence\b|\bml\b|\bmachine learning\b/i,
+        industry: 'AI/ML',
+      },
       {
         pattern: /\bcybersecurity\b|\bsecurity\b|\bcyber\b/i,
         industry: 'Cybersecurity',
@@ -178,10 +198,17 @@ export class NaturalLanguageSearchFilterService {
         pattern: /\bedtech\b|\beducation tech\b/i,
         industry: 'EdTech',
       },
-      { pattern: /\bcleantech\b|\bclimate\b|\brenewable\b/i, industry: 'CleanTech' },
+      {
+        pattern: /\bcleantech\b|\bclimate\b|\brenewable\b/i,
+        industry: 'CleanTech',
+      },
       { pattern: /\bproptech\b|\breal estate tech\b/i, industry: 'PropTech' },
       { pattern: /\blegaltech\b|\blegal tech\b/i, industry: 'LegalTech' },
-      { pattern: /\bbanking\b|\binvestment\b|\bprivate equity\b|\bventure capital\b/i, industry: 'Financial Services' },
+      {
+        pattern:
+          /\bbanking\b|\binvestment\b|\bprivate equity\b|\bventure capital\b/i,
+        industry: 'Financial Services',
+      },
       {
         pattern: /\bmanufacturing\b|\bindustrial\b/i,
         industry: 'Manufacturing',
@@ -267,7 +294,11 @@ export class NaturalLanguageSearchFilterService {
     }
 
     // International / global experience
-    if (/\binternational\b|\bglobal\b|\bmultinational\b|\bmulti.national\b/i.test(lowerQuery)) {
+    if (
+      /\binternational\b|\bglobal\b|\bmultinational\b|\bmulti.national\b/i.test(
+        lowerQuery,
+      )
+    ) {
       criteria.push({
         field: 'capabilities.name',
         operator: 'contains',
@@ -292,7 +323,9 @@ export class NaturalLanguageSearchFilterService {
     // Board experience
     if (
       /\bboard\b|\bboard member\b|\bdirector\b/i.test(lowerQuery) &&
-      !criteria.some((c) => c.field === 'currentTitle' && c.value === 'Board Director')
+      !criteria.some(
+        (c) => c.field === 'currentTitle' && c.value === 'Board Director',
+      )
     ) {
       criteria.push({
         field: 'boardServices.boardType',

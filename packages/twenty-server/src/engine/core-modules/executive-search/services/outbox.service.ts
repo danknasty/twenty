@@ -68,7 +68,8 @@ export class OutboxService {
    */
   async getPending(workspaceId: string): Promise<OutboxEvent[]> {
     return Array.from(this.store.values()).filter(
-      (event) => event.workspaceId === workspaceId && event.status === 'PENDING',
+      (event) =>
+        event.workspaceId === workspaceId && event.status === 'PENDING',
     );
   }
 

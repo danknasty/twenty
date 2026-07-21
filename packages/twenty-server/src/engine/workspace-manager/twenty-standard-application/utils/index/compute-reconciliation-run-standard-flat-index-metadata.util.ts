@@ -15,7 +15,8 @@ export const buildReconciliationRunStandardFlatIndexMetadatas = ({
 }: Omit<CreateStandardIndexArgs<'reconciliationRun'>, 'context'>): Record<
   AllStandardObjectIndexName<'reconciliationRun'>,
   FlatIndexMetadata
-> => ({} as Record<
-  AllStandardObjectIndexName<'reconciliationRun'>,
-  FlatIndexMetadata
->);
+> =>
+  ({}) as Record<
+    AllStandardObjectIndexName<'reconciliationRun'>,
+    FlatIndexMetadata
+  >;

@@ -381,7 +381,9 @@ export const buildClientStakeholderRoleStandardFlatFieldMetadatas = ({
       morphId: null,
       fieldName: 'clientAccountProfile',
       label: i18nLabel(msg`Client Account Profile`),
-      description: i18nLabel(msg`Client account profile tied to the stakeholder role`),
+      description: i18nLabel(
+        msg`Client account profile tied to the stakeholder role`,
+      ),
       icon: 'IconBuilding',
       isNullable: true,
       targetObjectName: 'clientAccountProfile',

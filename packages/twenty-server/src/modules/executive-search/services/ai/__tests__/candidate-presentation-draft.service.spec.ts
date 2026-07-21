@@ -2,13 +2,16 @@ import { Test, type TestingModule } from '@nestjs/testing';
 
 import { FeatureFlagKey } from 'twenty-shared/types';
 
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => {
-  return {
-    FeatureFlagService: jest.fn().mockImplementation(() => ({
-      isFeatureEnabled: jest.fn(),
-    })),
-  };
-});
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => {
+    return {
+      FeatureFlagService: jest.fn().mockImplementation(() => ({
+        isFeatureEnabled: jest.fn(),
+      })),
+    };
+  },
+);
 
 import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
 import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
@@ -64,10 +67,7 @@ describe('CandidatePresentationDraftService', () => {
       ],
       yearsOfExperience: 20,
       education: 'MBA, Harvard Business School',
-      achievements: [
-        'Led $2B IPO process',
-        'Reduced operational costs by 30%',
-      ],
+      achievements: ['Led $2B IPO process', 'Reduced operational costs by 30%'],
       fitRationale:
         "Jane's experience scaling high-growth companies aligns perfectly...",
       compensationNotes: 'Expects $400k-$500k base + equity',

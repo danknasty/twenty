@@ -191,8 +191,8 @@ describe('ExecutiveProfile standard metadata build', () => {
     expect(fieldsWidget?.universalConfiguration).toMatchObject({
       configurationType: WidgetConfigurationType.FIELDS,
       viewUniversalIdentifier:
-        STANDARD_OBJECTS.executiveProfile.views
-          .executiveProfileRecordPageFields.universalIdentifier,
+        STANDARD_OBJECTS.executiveProfile.views.executiveProfileRecordPageFields
+          .universalIdentifier,
     });
   });
 });

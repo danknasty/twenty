@@ -29,10 +29,7 @@ export class DrainOutboxCronJob {
   ) {}
 
   @Process(DrainOutboxCronJob.name)
-  @SentryCronMonitor(
-    DrainOutboxCronJob.name,
-    OUTBOX_DRAIN_CRON_PATTERN,
-  )
+  @SentryCronMonitor(DrainOutboxCronJob.name, OUTBOX_DRAIN_CRON_PATTERN)
   async handle(): Promise<void> {
     const activeWorkspaces = await this.workspaceRepository.find({
       where: {

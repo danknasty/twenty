@@ -5,78 +5,86 @@ import { buildSearchEngagementTermsStandardFlatFieldMetadatas } from 'src/engine
 import { STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME } from 'src/engine/workspace-manager/twenty-standard-application/utils/object-metadata/create-standard-flat-object-metadata.util';
 import { type StandardObjectMetadataRelatedEntityIds } from 'src/engine/workspace-manager/twenty-standard-application/utils/get-standard-object-metadata-related-entity-ids.util';
 
-const buildMockRelatedEntityIds = (): StandardObjectMetadataRelatedEntityIds => {
-  const objectNames = [
-    'searchEngagementTerms',
-    'opportunity',
-    'taskTarget',
-    'noteTarget',
-    'attachment',
-    'timelineActivity',
-    'workspaceMember',
-  ] as const;
+const buildMockRelatedEntityIds =
+  (): StandardObjectMetadataRelatedEntityIds => {
+    const objectNames = [
+      'searchEngagementTerms',
+      'opportunity',
+      'taskTarget',
+      'noteTarget',
+      'attachment',
+      'timelineActivity',
+      'workspaceMember',
+    ] as const;
 
-  const result = {} as StandardObjectMetadataRelatedEntityIds;
+    const result = {} as StandardObjectMetadataRelatedEntityIds;
 
-  for (const objectName of objectNames) {
-    const objectFields =
-      STANDARD_OBJECTS[objectName as keyof typeof STANDARD_OBJECTS]?.fields;
-    if (!objectFields) continue;
+    for (const objectName of objectNames) {
+      const objectFields =
+        STANDARD_OBJECTS[objectName as keyof typeof STANDARD_OBJECTS]?.fields;
+      if (!objectFields) continue;
 
-    // Clone the fields and add targetSearchEngagementTerms for target objects
-    const fieldEntries = Object.entries(objectFields).map(
-      ([fieldName, fieldDef]) => [fieldName, { ...fieldDef }],
-    );
+      // Clone the fields and add targetSearchEngagementTerms for target objects
+      const fieldEntries = Object.entries(objectFields).map(
+        ([fieldName, fieldDef]) => [fieldName, { ...fieldDef }],
+      );
 
-    // Add targetSearchEngagementTerms for morph target objects that need it
-    if (
-      ['taskTarget', 'noteTarget', 'attachment', 'timelineActivity'].includes(
-        objectName,
-      )
-    ) {
-      fieldEntries.push([
-        'targetSearchEngagementTerms',
-        { universalIdentifier: `mock-${objectName}-targetSearchEngagementTerms-uuid` },
-      ]);
+      // Add targetSearchEngagementTerms for morph target objects that need it
+      if (
+        ['taskTarget', 'noteTarget', 'attachment', 'timelineActivity'].includes(
+          objectName,
+        )
+      ) {
+        fieldEntries.push([
+          'targetSearchEngagementTerms',
+          {
+            universalIdentifier: `mock-${objectName}-targetSearchEngagementTerms-uuid`,
+          },
+        ]);
+      }
+
+      // Add searchEngagementTerms for opportunity (reverse relation)
+      if (objectName === 'opportunity') {
+        fieldEntries.push([
+          'searchEngagementTerms',
+          {
+            universalIdentifier: 'mock-opportunity-searchEngagementTerms-uuid',
+          },
+        ]);
+      }
+
+      // Add ownedSearchEngagementTerms for workspaceMember (reverse relation)
+      if (objectName === 'workspaceMember') {
+        fieldEntries.push([
+          'ownedSearchEngagementTerms',
+          {
+            universalIdentifier:
+              'mock-workspaceMember-ownedSearchEngagementTerms-uuid',
+          },
+        ]);
+      }
+
+      const fieldsObj = Object.fromEntries(fieldEntries);
+
+      const fieldIds = Object.keys(fieldsObj).reduce(
+        (acc, fieldName) => {
+          acc[fieldName] = {
+            id: `mock-${objectName}-${fieldName}-id`,
+          };
+          return acc;
+        },
+        {} as Record<string, { id: string }>,
+      );
+
+      (result as any)[objectName] = {
+        id: `mock-${objectName}-object-id`,
+        fields: fieldIds,
+        views: {} as any,
+      };
     }
 
-    // Add searchEngagementTerms for opportunity (reverse relation)
-    if (objectName === 'opportunity') {
-      fieldEntries.push([
-        'searchEngagementTerms',
-        { universalIdentifier: 'mock-opportunity-searchEngagementTerms-uuid' },
-      ]);
-    }
-
-    // Add ownedSearchEngagementTerms for workspaceMember (reverse relation)
-    if (objectName === 'workspaceMember') {
-      fieldEntries.push([
-        'ownedSearchEngagementTerms',
-        { universalIdentifier: 'mock-workspaceMember-ownedSearchEngagementTerms-uuid' },
-      ]);
-    }
-
-    const fieldsObj = Object.fromEntries(fieldEntries);
-
-    const fieldIds = Object.keys(fieldsObj).reduce(
-      (acc, fieldName) => {
-        acc[fieldName] = {
-          id: `mock-${objectName}-${fieldName}-id`,
-        };
-        return acc;
-      },
-      {} as Record<string, { id: string }>,
-    );
-
-    (result as any)[objectName] = {
-      id: `mock-${objectName}-object-id`,
-      fields: fieldIds,
-      views: {} as any,
-    };
-  }
-
-  return result;
-};
+    return result;
+  };
 
 const mockArgs = {
   now: '2026-07-16T00:00:00.000Z',

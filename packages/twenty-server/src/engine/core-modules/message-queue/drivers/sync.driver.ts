@@ -25,7 +25,7 @@ export class SyncDriver implements MessageQueueDriver {
     data: T,
     options?: QueueJobOptions,
   ): Promise<void> {
-// Idempotency-key dedup: skip duplicate adds for the same key
+    // Idempotency-key dedup: skip duplicate adds for the same key
     if (options?.idempotencyKey) {
       if (this.seenIdempotencyKeys.has(options.idempotencyKey)) {
         return;

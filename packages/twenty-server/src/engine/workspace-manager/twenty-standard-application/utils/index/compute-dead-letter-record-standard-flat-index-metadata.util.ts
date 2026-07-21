@@ -15,7 +15,8 @@ export const buildDeadLetterRecordStandardFlatIndexMetadatas = ({
 }: Omit<CreateStandardIndexArgs<'deadLetterRecord'>, 'context'>): Record<
   AllStandardObjectIndexName<'deadLetterRecord'>,
   FlatIndexMetadata
-> => ({} as Record<
-  AllStandardObjectIndexName<'deadLetterRecord'>,
-  FlatIndexMetadata
->);
+> =>
+  ({}) as Record<
+    AllStandardObjectIndexName<'deadLetterRecord'>,
+    FlatIndexMetadata
+  >;

@@ -114,9 +114,7 @@ export const buildConfidentialityRecordStandardFlatFieldMetadatas = ({
       fieldName: 'searchAssignmentId',
       type: FieldMetadataType.UUID,
       label: i18nLabel(msg`Search Assignment`),
-      description: i18nLabel(
-        msg`Associated search assignment`,
-      ),
+      description: i18nLabel(msg`Associated search assignment`),
       icon: 'IconSearch',
       isNullable: true,
       isUIEditable: true,
@@ -134,7 +132,9 @@ export const buildConfidentialityRecordStandardFlatFieldMetadatas = ({
       morphId: null,
       fieldName: 'company',
       label: i18nLabel(msg`Company`),
-      description: i18nLabel(msg`Company covered by the confidentiality record`),
+      description: i18nLabel(
+        msg`Company covered by the confidentiality record`,
+      ),
       icon: 'IconBuilding',
       isNullable: true,
       isUIEditable: true,

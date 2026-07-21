@@ -171,16 +171,12 @@ export class SearchHealthAdvisoryService {
         const now = new Date();
 
         // --- Build advisory sections ---
-        const pipelineVelocity =
-          this.analyzePipelineVelocity(candidacies);
+        const pipelineVelocity = this.analyzePipelineVelocity(candidacies);
         const candidatePoolDiversity =
           this.analyzeCandidatePoolDiversity(candidacies);
-        const timelineRisk =
-          this.analyzeTimelineRisk(assignment, candidacies);
-        const offLimitsExposure =
-          this.analyzeOffLimitsExposure(restrictions);
-        const marketCoverageGaps =
-          this.analyzeMarketCoverageGaps(candidacies);
+        const timelineRisk = this.analyzeTimelineRisk(assignment, candidacies);
+        const offLimitsExposure = this.analyzeOffLimitsExposure(restrictions);
+        const marketCoverageGaps = this.analyzeMarketCoverageGaps(candidacies);
 
         return {
           assignmentId: assignment.id,

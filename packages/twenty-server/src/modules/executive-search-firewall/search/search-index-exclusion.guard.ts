@@ -1,4 +1,7 @@
-import { scanObjectForProhibitedFields, FirewallLeakageException } from '../guards/firewall-leakage.guard';
+import {
+  scanObjectForProhibitedFields,
+  FirewallLeakageException,
+} from '../guards/firewall-leakage.guard';
 import { FirewallContext } from '../constants/firewall-contexts.constant';
 
 export const assertObjectSearchFieldsContainNoProhibitedSelector = (

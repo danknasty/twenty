@@ -1,4 +1,7 @@
-import { FirewallContext, FirewallRegistryEntry } from '../firewall-registry.types';
+import {
+  FirewallContext,
+  FirewallRegistryEntry,
+} from '../firewall-registry.types';
 
 export const FIREWALL_PROHIBITED_SELECTORS: FirewallRegistryEntry[] = [
   {

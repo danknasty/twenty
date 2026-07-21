@@ -67,7 +67,9 @@ describe('RetentionActionService', () => {
   beforeEach(async () => {
     mockRepo = createMockRepository();
     mockOrmManager = createMockOrmManager(mockRepo);
-    mockOutboxService = { enqueue: jest.fn().mockResolvedValue({ id: 'out-1' }) };
+    mockOutboxService = {
+      enqueue: jest.fn().mockResolvedValue({ id: 'out-1' }),
+    };
     mockFeatureFlagService = { isFeatureEnabled: jest.fn() };
 
     const module: TestingModule = await Test.createTestingModule({
@@ -212,7 +214,9 @@ describe('RetentionActionService', () => {
       expect((result as { status: string }).status).toBe(
         RETENTION_ACTION_STATUS.REQUESTED,
       );
-      expect((result as { propagatedAt: string | null }).propagatedAt).toBeNull();
+      expect(
+        (result as { propagatedAt: string | null }).propagatedAt,
+      ).toBeNull();
     });
 
     it('uses the *.retention_action event type targeting the projection', async () => {
@@ -233,10 +237,8 @@ describe('RetentionActionService', () => {
 
       await service.recordAndPropagate(workspaceId, twentyInput);
 
-      const payload = mockOutboxService.enqueue.mock.calls[0][0].payload as Record<
-        string,
-        unknown
-      >;
+      const payload = mockOutboxService.enqueue.mock.calls[0][0]
+        .payload as Record<string, unknown>;
 
       // Only action-metadata keys are allowed in the payload.
       const allowedKeys = new Set([
@@ -273,7 +275,10 @@ describe('RetentionActionService', () => {
     });
 
     it('soft-deletes the Twenty projection for scope SOFT_DELETE', async () => {
-      const result = await service.recordAndPropagate(workspaceId, directusInput);
+      const result = await service.recordAndPropagate(
+        workspaceId,
+        directusInput,
+      );
 
       expect(mockRepo.softDelete).toHaveBeenCalledWith('rec-1');
       // Directus-initiated never enqueues an outbox event
@@ -298,7 +303,9 @@ describe('RetentionActionService', () => {
       // The repository update call that sets visibility comes through the same
       // mock; find the projection-mutation update (not the status transition).
       const projectionUpdate = mockRepo.update.mock.calls.find(
-        (call) => call[0] === 'rec-1' && (call[1] as { visibility?: string }).visibility,
+        (call) =>
+          call[0] === 'rec-1' &&
+          (call[1] as { visibility?: string }).visibility,
       );
       expect(projectionUpdate).toBeDefined();
       expect((projectionUpdate![1] as { visibility: string }).visibility).toBe(

@@ -20,32 +20,30 @@ export const computeAiPromptTemplateViewFields = (
         size: 180,
       },
     }),
-    allAiPromptTemplatesCategory:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'aiPromptTemplate',
-        context: {
-          viewName: 'allAiPromptTemplates',
-          viewFieldName: 'category',
-          fieldName: 'category',
-          position: 1,
-          isVisible: true,
-          size: 150,
-        },
-      }),
-    allAiPromptTemplatesResponseFormat:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'aiPromptTemplate',
-        context: {
-          viewName: 'allAiPromptTemplates',
-          viewFieldName: 'responseFormat',
-          fieldName: 'responseFormat',
-          position: 2,
-          isVisible: true,
-          size: 150,
-        },
-      }),
+    allAiPromptTemplatesCategory: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'aiPromptTemplate',
+      context: {
+        viewName: 'allAiPromptTemplates',
+        viewFieldName: 'category',
+        fieldName: 'category',
+        position: 1,
+        isVisible: true,
+        size: 150,
+      },
+    }),
+    allAiPromptTemplatesResponseFormat: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'aiPromptTemplate',
+      context: {
+        viewName: 'allAiPromptTemplates',
+        viewFieldName: 'responseFormat',
+        fieldName: 'responseFormat',
+        position: 2,
+        isVisible: true,
+        size: 150,
+      },
+    }),
     allAiPromptTemplatesModelId: createStandardViewFieldFlatMetadata({
       ...args,
       objectName: 'aiPromptTemplate',

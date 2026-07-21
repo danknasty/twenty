@@ -1,26 +1,19 @@
 import { Injectable, Logger, type Type } from '@nestjs/common';
 import { In, type ObjectLiteral } from 'typeorm';
 
-import { buildSystemAuthContext } from
-  'src/engine/twenty-orm/utils/build-system-auth-context.util';
-import { GlobalWorkspaceOrmManager } from
-  'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
-import { CompanyWorkspaceEntity } from
-  'src/modules/company/standard-objects/company.workspace-entity';
-import { PersonWorkspaceEntity } from
-  'src/modules/person/standard-objects/person.workspace-entity';
-import { SearchAssignmentWorkspaceEntity } from
-  'src/modules/executive-search/standard-objects/search-assignment.workspace-entity';
-import { SearchCandidacyWorkspaceEntity } from
-  'src/modules/executive-search/standard-objects/search-candidacy.workspace-entity';
-import { ExternalEntityLinkWorkspaceEntity } from
-  'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
-import type { ReconcileArgs, ReconciliationEngine } from
-  'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
-import { ReconciliationEngineRegistry } from
-  'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
-import type { ReconciliationFinding } from
-  'src/modules/executive-search/reconciliation/reconciliation-finding.type';
+import { buildSystemAuthContext } from 'src/engine/twenty-orm/utils/build-system-auth-context.util';
+import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
+import { CompanyWorkspaceEntity } from 'src/modules/company/standard-objects/company.workspace-entity';
+import { PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
+import { SearchAssignmentWorkspaceEntity } from 'src/modules/executive-search/standard-objects/search-assignment.workspace-entity';
+import { SearchCandidacyWorkspaceEntity } from 'src/modules/executive-search/standard-objects/search-candidacy.workspace-entity';
+import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
+import type {
+  ReconcileArgs,
+  ReconciliationEngine,
+} from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
+import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
+import type { ReconciliationFinding } from 'src/modules/executive-search/reconciliation/reconciliation-finding.type';
 
 type EntityCheck = {
   twentyEntityName: string;

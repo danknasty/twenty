@@ -46,8 +46,10 @@ export class CompanyWorkspaceEntity {
   opportunities: EntityRelation<OpportunityWorkspaceEntity[]>;
   attachments: EntityRelation<AttachmentWorkspaceEntity[]>;
   timelineActivities: EntityRelation<TimelineActivityWorkspaceEntity[]>;
-// Client CRM relations
+  // Client CRM relations
   clientAccountProfiles: EntityRelation<ClientAccountProfileWorkspaceEntity[]>;
-  clientStakeholderRoles: EntityRelation<ClientStakeholderRoleWorkspaceEntity[]>;
+  clientStakeholderRoles: EntityRelation<
+    ClientStakeholderRoleWorkspaceEntity[]
+  >;
   executiveProfiles: EntityRelation<ExecutiveProfileWorkspaceEntity[]>;
 }

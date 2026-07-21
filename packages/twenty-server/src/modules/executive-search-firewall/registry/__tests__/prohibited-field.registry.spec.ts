@@ -42,14 +42,17 @@ describe('prohibited-field.registry', () => {
   describe('isProhibitedSelector', () => {
     it('returns true for subscription_tier in search_filter context', () => {
       expect(
-        isProhibitedSelector('subscription_tier', FirewallContext.SEARCH_FILTER),
+        isProhibitedSelector(
+          'subscription_tier',
+          FirewallContext.SEARCH_FILTER,
+        ),
       ).toBe(true);
     });
 
     it('returns false for name in search_filter context', () => {
-      expect(
-        isProhibitedSelector('name', FirewallContext.SEARCH_FILTER),
-      ).toBe(false);
+      expect(isProhibitedSelector('name', FirewallContext.SEARCH_FILTER)).toBe(
+        false,
+      );
     });
 
     it('returns true for birthdate in ai_context', () => {
@@ -59,15 +62,15 @@ describe('prohibited-field.registry', () => {
     });
 
     it('returns false for email in any context', () => {
-      expect(
-        isProhibitedSelector('email', FirewallContext.SEARCH_FILTER),
-      ).toBe(false);
-      expect(
-        isProhibitedSelector('email', FirewallContext.AI_CONTEXT),
-      ).toBe(false);
-      expect(
-        isProhibitedSelector('email', FirewallContext.CLIENT_REPORT),
-      ).toBe(false);
+      expect(isProhibitedSelector('email', FirewallContext.SEARCH_FILTER)).toBe(
+        false,
+      );
+      expect(isProhibitedSelector('email', FirewallContext.AI_CONTEXT)).toBe(
+        false,
+      );
+      expect(isProhibitedSelector('email', FirewallContext.CLIENT_REPORT)).toBe(
+        false,
+      );
     });
   });
 

@@ -71,9 +71,7 @@ export function readDirectusExternalId(
 }
 
 /** Read a list of emails from a Directus executive/person item. */
-export function readDirectusEmails(
-  item: Record<string, unknown>,
-): string[] {
+export function readDirectusEmails(item: Record<string, unknown>): string[] {
   const collected: string[] = [];
 
   const primary = readStringField(item, [
@@ -107,9 +105,7 @@ export function readDirectusEmails(
 }
 
 /** Read phone-like fields from a Directus item. */
-export function readDirectusPhones(
-  item: Record<string, unknown>,
-): string[] {
+export function readDirectusPhones(item: Record<string, unknown>): string[] {
   const keys = [
     'phone',
     'phone_number',
@@ -133,9 +129,11 @@ export function readDirectusPhones(
 }
 
 /** Read first/last/display name fields from a Directus item. */
-export function readDirectusName(
-  item: Record<string, unknown>,
-): { firstName: string; lastName: string; full: string } {
+export function readDirectusName(item: Record<string, unknown>): {
+  firstName: string;
+  lastName: string;
+  full: string;
+} {
   const firstName = readStringField(item, [
     'first_name',
     'firstName',
@@ -159,7 +157,10 @@ export function readDirectusName(
 
   const full =
     fullName ??
-    [firstName, lastName].filter((p): p is string => !!p).join(' ').trim();
+    [firstName, lastName]
+      .filter((p): p is string => !!p)
+      .join(' ')
+      .trim();
 
   return {
     firstName: firstName ?? '',
@@ -169,9 +170,7 @@ export function readDirectusName(
 }
 
 /** Read generic external/source id fields from a Directus item. */
-export function readDirectusSourceIds(
-  item: Record<string, unknown>,
-): string[] {
+export function readDirectusSourceIds(item: Record<string, unknown>): string[] {
   const keys = [
     'freshsales_id',
     'freshsalesId',
@@ -198,9 +197,7 @@ export function readDirectusSourceIds(
 }
 
 /** Read domain/website fields from a Directus company item. */
-export function readDirectusDomains(
-  item: Record<string, unknown>,
-): string[] {
+export function readDirectusDomains(item: Record<string, unknown>): string[] {
   const raw = readStringField(item, [
     'domain',
     'domain_name',
@@ -221,9 +218,7 @@ export function readDirectusDomains(
  * Extract all email addresses from a Twenty `person` candidate
  * (`emails.primaryEmail` + `emails.additionalEmails`).
  */
-export function readPersonEmails(
-  candidate: Record<string, unknown>,
-): string[] {
+export function readPersonEmails(candidate: Record<string, unknown>): string[] {
   const emails = candidate['emails'];
   const collected: string[] = [];
 
@@ -257,9 +252,7 @@ export function readPersonEmails(
 }
 
 /** Extract phone digits from a Twenty `person` candidate. */
-export function readPersonPhones(
-  candidate: Record<string, unknown>,
-): string[] {
+export function readPersonPhones(candidate: Record<string, unknown>): string[] {
   const collected: string[] = [];
 
   const phones = candidate['phones'];
@@ -294,9 +287,11 @@ export function readPersonPhones(
 }
 
 /** Extract first + last name from a Twenty `person` candidate. */
-export function readPersonName(
-  candidate: Record<string, unknown>,
-): { firstName: string; lastName: string; full: string } {
+export function readPersonName(candidate: Record<string, unknown>): {
+  firstName: string;
+  lastName: string;
+  full: string;
+} {
   const name = candidate['name'];
 
   if (name != null && typeof name === 'object') {
@@ -305,15 +300,16 @@ export function readPersonName(
       typeof meta['firstName'] === 'string' ? meta['firstName'] : '';
     const lastName =
       typeof meta['lastName'] === 'string' ? meta['lastName'] : '';
-    const full = [firstName, lastName].filter((p) => p !== '').join(' ').trim();
+    const full = [firstName, lastName]
+      .filter((p) => p !== '')
+      .join(' ')
+      .trim();
 
     return { firstName, lastName, full };
   }
 
   const fallback =
-    typeof candidate['name'] === 'string'
-      ? (candidate['name'] as string)
-      : '';
+    typeof candidate['name'] === 'string' ? (candidate['name'] as string) : '';
 
   return { firstName: '', lastName: '', full: fallback };
 }

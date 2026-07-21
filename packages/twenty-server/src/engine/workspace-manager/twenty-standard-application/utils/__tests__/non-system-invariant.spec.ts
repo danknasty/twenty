@@ -15,13 +15,15 @@ const NON_SYSTEM_OBJECT_NAMES = [
 
 type NonSystemObjectName = (typeof NON_SYSTEM_OBJECT_NAMES)[number];
 
-const STANDARD_OBJECTS_BY_NAME: Record<NonSystemObjectName, (typeof STANDARD_OBJECTS)[keyof typeof STANDARD_OBJECTS]> =
-  {
-    clientAccountProfile: STANDARD_OBJECTS.clientAccountProfile,
-    clientStakeholderRole: STANDARD_OBJECTS.clientStakeholderRole,
-    searchEngagementTerms: STANDARD_OBJECTS.searchEngagementTerms,
-    opportunity: STANDARD_OBJECTS.opportunity,
-  };
+const STANDARD_OBJECTS_BY_NAME: Record<
+  NonSystemObjectName,
+  (typeof STANDARD_OBJECTS)[keyof typeof STANDARD_OBJECTS]
+> = {
+  clientAccountProfile: STANDARD_OBJECTS.clientAccountProfile,
+  clientStakeholderRole: STANDARD_OBJECTS.clientStakeholderRole,
+  searchEngagementTerms: STANDARD_OBJECTS.searchEngagementTerms,
+  opportunity: STANDARD_OBJECTS.opportunity,
+};
 
 describe('Non-system invariant — ORM field-permission firewall enforcement', () => {
   const { allFlatEntityMaps } =
@@ -38,9 +40,7 @@ describe('Non-system invariant — ORM field-permission firewall enforcement', (
       const universalIdentifier =
         STANDARD_OBJECTS_BY_NAME[objectName].universalIdentifier;
 
-      expect(
-        byUniversalIdentifier[universalIdentifier],
-      ).toBeDefined();
+      expect(byUniversalIdentifier[universalIdentifier]).toBeDefined();
     }
   });
 

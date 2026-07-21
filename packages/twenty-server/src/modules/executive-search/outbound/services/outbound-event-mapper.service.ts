@@ -74,9 +74,10 @@ export class OutboundEventMapperService {
    * Builds a `company.projection_updated` event payload with only allowlisted fields.
    * Maps domainName to both domainName and website keys in the payload.
    */
-  private buildProjectionUpdated(
-    record: Record<string, unknown>,
-  ): { eventType: string; payload: Record<string, unknown> } {
+  private buildProjectionUpdated(record: Record<string, unknown>): {
+    eventType: string;
+    payload: Record<string, unknown>;
+  } {
     const payload: Record<string, unknown> = {};
 
     for (const [key, value] of Object.entries(record)) {

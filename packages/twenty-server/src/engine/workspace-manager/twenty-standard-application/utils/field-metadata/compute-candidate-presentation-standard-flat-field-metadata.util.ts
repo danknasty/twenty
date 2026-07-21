@@ -203,7 +203,9 @@ export const buildCandidatePresentationStandardFlatFieldMetadatas = ({
       fieldName: 'sourceSnapshot',
       type: FieldMetadataType.RAW_JSON,
       label: i18nLabel(msg`Source Snapshot`),
-      description: i18nLabel(msg`Snapshot of source data at time of presentation`),
+      description: i18nLabel(
+        msg`Snapshot of source data at time of presentation`,
+      ),
       icon: 'IconCamera',
       isNullable: true,
       isUIEditable: true,
@@ -220,7 +222,9 @@ export const buildCandidatePresentationStandardFlatFieldMetadatas = ({
       fieldName: 'restrictedFieldLeakageScanResult',
       type: FieldMetadataType.RAW_JSON,
       label: i18nLabel(msg`Restricted Field Leakage Scan Result`),
-      description: i18nLabel(msg`Result of scanning for restricted field leakage`),
+      description: i18nLabel(
+        msg`Result of scanning for restricted field leakage`,
+      ),
       icon: 'IconShield',
       isNullable: true,
       isUIEditable: true,
@@ -362,7 +366,9 @@ export const buildCandidatePresentationStandardFlatFieldMetadatas = ({
       fieldName: 'publishedAt',
       type: FieldMetadataType.DATE_TIME,
       label: i18nLabel(msg`Published At`),
-      description: i18nLabel(msg`When the presentation was published to client`),
+      description: i18nLabel(
+        msg`When the presentation was published to client`,
+      ),
       icon: 'IconCalendarSend',
       isNullable: true,
       isUIEditable: true,

@@ -13,11 +13,7 @@ describe('SyncDriver idempotency', () => {
   });
 
   it('should process job when no idempotencyKey is set', async () => {
-    await driver.add(
-      MessageQueue.taskAssignedQueue,
-      'test-job',
-      { value: 1 },
-    );
+    await driver.add(MessageQueue.taskAssignedQueue, 'test-job', { value: 1 });
 
     expect(handler).toHaveBeenCalledTimes(1);
     expect(handler).toHaveBeenCalledWith({
@@ -92,11 +88,9 @@ describe('SyncDriver idempotency', () => {
       {},
       { idempotencyKey: 'some-key' },
     );
-    await driver.add(
-      MessageQueue.taskAssignedQueue,
-      'normal-job',
-      { value: 'no-key' },
-    );
+    await driver.add(MessageQueue.taskAssignedQueue, 'normal-job', {
+      value: 'no-key',
+    });
 
     expect(handler).toHaveBeenCalledTimes(2);
   });

@@ -12,10 +12,7 @@ export const buildAiProviderCallLogStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'aiProviderCallLog'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'aiProviderCallLog'>, 'context'>): Record<
   AllStandardObjectIndexName<'aiProviderCallLog'>,
   FlatIndexMetadata
 > => ({

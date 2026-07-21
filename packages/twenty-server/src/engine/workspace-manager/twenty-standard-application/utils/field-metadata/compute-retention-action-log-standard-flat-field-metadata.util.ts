@@ -391,7 +391,9 @@ export const buildRetentionActionLogStandardFlatFieldMetadatas = ({
       fieldName: 'actorId',
       type: FieldMetadataType.UUID,
       label: i18nLabel(msg`Actor`),
-      description: i18nLabel(msg`The workspace member who initiated the action`),
+      description: i18nLabel(
+        msg`The workspace member who initiated the action`,
+      ),
       icon: 'IconUser',
       isNullable: true,
       isUIEditable: false,

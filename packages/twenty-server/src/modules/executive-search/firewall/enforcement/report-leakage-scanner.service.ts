@@ -21,17 +21,14 @@ export class ReportLeakageScannerService {
    * Scans against the UNION of all prohibited selectors across all contexts
    * — the spec requires catching *any* firewall-prohibited field.
    */
-  scanPayload(
-    payload: Record<string, unknown>,
-  ): FieldLeakageViolation[] {
+  scanPayload(payload: Record<string, unknown>): FieldLeakageViolation[] {
     const violations: FieldLeakageViolation[] = [];
     const allProhibited =
       this.firewallRegistryService.getAllProhibitedSelectors();
 
     // Scan top-level keys
     for (const [key, value] of Object.entries(payload)) {
-      const normalizedKey =
-        this.firewallRegistryService.normalizeSelector(key);
+      const normalizedKey = this.firewallRegistryService.normalizeSelector(key);
 
       if (allProhibited.has(normalizedKey)) {
         violations.push({
@@ -48,9 +45,7 @@ export class ReportLeakageScannerService {
         typeof value === 'object' &&
         !Array.isArray(value)
       ) {
-        for (const nestedKey of Object.keys(
-          value as Record<string, unknown>,
-        )) {
+        for (const nestedKey of Object.keys(value as Record<string, unknown>)) {
           const normalizedNestedKey =
             this.firewallRegistryService.normalizeSelector(nestedKey);
 

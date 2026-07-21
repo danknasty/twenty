@@ -15,6 +15,8 @@ export class ClientAccountProfileWorkspaceEntity extends BaseWorkspaceEntity {
   clientBillingContactId: string | null;
   company: EntityRelation<CompanyWorkspaceEntity>;
   companyId: string;
-  clientStakeholderRoles: EntityRelation<ClientStakeholderRoleWorkspaceEntity[]>;
+  clientStakeholderRoles: EntityRelation<
+    ClientStakeholderRoleWorkspaceEntity[]
+  >;
   searchVector: string;
 }

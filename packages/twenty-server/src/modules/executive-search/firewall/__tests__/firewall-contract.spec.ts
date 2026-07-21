@@ -200,12 +200,24 @@ describe('Firewall Contract Suite', () => {
      * (from FIREWALL_PROHIBITED_SELECTORS) to the full fieldOrPattern used in
      * FIREWALL_DENYLIST.
      */
-    const knownDenylistMappings: { selector: string; fieldOrPattern: string }[] = [
-      { selector: 'subscription_tier', fieldOrPattern: 'executives.subscription_tier' },
+    const knownDenylistMappings: {
+      selector: string;
+      fieldOrPattern: string;
+    }[] = [
+      {
+        selector: 'subscription_tier',
+        fieldOrPattern: 'executives.subscription_tier',
+      },
       { selector: 'plan_level', fieldOrPattern: 'executives.plan_level' },
       { selector: 'is_premium', fieldOrPattern: 'executives.is_premium' },
-      { selector: 'stripe_customer_id', fieldOrPattern: 'executive_settings.stripe_customer_id' },
-      { selector: 'photo_analysis_scores', fieldOrPattern: 'profile_analyses.photo_analysis_scores' },
+      {
+        selector: 'stripe_customer_id',
+        fieldOrPattern: 'executive_settings.stripe_customer_id',
+      },
+      {
+        selector: 'photo_analysis_scores',
+        fieldOrPattern: 'profile_analyses.photo_analysis_scores',
+      },
       { selector: 'birthdate', fieldOrPattern: 'executives.birthdate' },
       { selector: 'gender', fieldOrPattern: 'executives.gender' },
     ];
@@ -266,9 +278,9 @@ describe('Firewall Contract Suite', () => {
 
         if (directMapping) {
           // Has a direct denylist mapping — verify it
-          expect(registryService.isDenylisted(directMapping.fieldOrPattern)).toBe(
-            true,
-          );
+          expect(
+            registryService.isDenylisted(directMapping.fieldOrPattern),
+          ).toBe(true);
         } else {
           // No direct mapping — must be in the accounted-for set
           expect(selectorsWithoutDirectDenylist.has(selector)).toBe(true);
@@ -284,23 +296,29 @@ describe('Firewall Contract Suite', () => {
       }
 
       // subscription data → NO_SYNC
-      expect(denylistRuleMap['executives.subscription_tier']).toContain('NO_SYNC');
+      expect(denylistRuleMap['executives.subscription_tier']).toContain(
+        'NO_SYNC',
+      );
       expect(denylistRuleMap['executives.plan_level']).toContain('NO_SYNC');
       expect(denylistRuleMap['executives.is_premium']).toContain('NO_SYNC');
 
       // Restricted personal data → NO_SYNC_SELECTION
-      expect(denylistRuleMap['executives.birthdate']).toContain('NO_SYNC_SELECTION');
-      expect(denylistRuleMap['executives.gender']).toContain('NO_SYNC_SELECTION');
+      expect(denylistRuleMap['executives.birthdate']).toContain(
+        'NO_SYNC_SELECTION',
+      );
+      expect(denylistRuleMap['executives.gender']).toContain(
+        'NO_SYNC_SELECTION',
+      );
 
       // Payment data → NO_SYNC
-      expect(denylistRuleMap['executive_settings.stripe_customer_id']).toContain(
-        'NO_SYNC',
-      );
+      expect(
+        denylistRuleMap['executive_settings.stripe_customer_id'],
+      ).toContain('NO_SYNC');
 
       // Photo analysis → NO_SYNC
-      expect(denylistRuleMap['profile_analyses.photo_analysis_scores']).toContain(
-        'NO_SYNC',
-      );
+      expect(
+        denylistRuleMap['profile_analyses.photo_analysis_scores'],
+      ).toContain('NO_SYNC');
     });
   });
 

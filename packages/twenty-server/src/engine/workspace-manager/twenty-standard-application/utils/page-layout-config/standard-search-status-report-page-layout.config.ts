@@ -16,28 +16,30 @@ import {
 const SEARCH_STATUS_REPORT_PAGE_TABS = {
   home: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchStatusReportRecordPage.tabs.home
-        .universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchStatusReportRecordPage
+        .tabs.home.universalIdentifier,
     ...TAB_PROPS.home,
     widgets: {
       fields: {
         universalIdentifier:
-          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchStatusReportRecordPage.tabs
-            .home.widgets.fields.universalIdentifier,
+          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
+            .searchStatusReportRecordPage.tabs.home.widgets.fields
+            .universalIdentifier,
         ...WIDGET_PROPS.fields,
       },
     },
   },
   timeline: {
     universalIdentifier:
-      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchStatusReportRecordPage.tabs
-        .timeline.universalIdentifier,
+      STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchStatusReportRecordPage
+        .tabs.timeline.universalIdentifier,
     ...TAB_PROPS.timeline,
     widgets: {
       timeline: {
         universalIdentifier:
-          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.searchStatusReportRecordPage.tabs
-            .timeline.widgets.timeline.universalIdentifier,
+          STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
+            .searchStatusReportRecordPage.tabs.timeline.widgets.timeline
+            .universalIdentifier,
         ...WIDGET_PROPS.timeline,
       },
     },

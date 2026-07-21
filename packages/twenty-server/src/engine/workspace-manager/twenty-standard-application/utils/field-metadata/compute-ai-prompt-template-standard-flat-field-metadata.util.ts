@@ -334,7 +334,9 @@ export const buildAiPromptTemplateStandardFlatFieldMetadatas = ({
       fieldName: 'modelConfiguration',
       type: FieldMetadataType.RAW_JSON,
       label: i18nLabel(msg`Model Configuration`),
-      description: i18nLabel(msg`Model configuration parameters for this prompt`),
+      description: i18nLabel(
+        msg`Model configuration parameters for this prompt`,
+      ),
       icon: 'IconSettings',
       isNullable: true,
       isUIEditable: true,
@@ -546,7 +548,9 @@ export const buildAiPromptTemplateStandardFlatFieldMetadatas = ({
       fieldName: 'updatedBy',
       type: FieldMetadataType.ACTOR,
       label: i18nLabel(msg`Updated by`),
-      description: i18nLabel(msg`The workspace member who last updated the record`),
+      description: i18nLabel(
+        msg`The workspace member who last updated the record`,
+      ),
       icon: 'IconUserCircle',
       isSystem: true,
       isUIEditable: false,

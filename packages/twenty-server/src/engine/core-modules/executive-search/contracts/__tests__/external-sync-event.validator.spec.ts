@@ -45,9 +45,7 @@ describe('ExternalSyncEventValidator', () => {
       expect(result.valid).toBe(false);
       expect(result.errors).toBeDefined();
       expect(
-        result.errors!.some((e) =>
-          e.toLowerCase().includes('additional'),
-        ),
+        result.errors!.some((e) => e.toLowerCase().includes('additional')),
       ).toBe(true);
     });
   });

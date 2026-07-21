@@ -174,10 +174,7 @@ export class RelationshipPathSuggestionService {
 
         // Source person's relationships
         const sourceEdges = await relationshipEdgeRepo.find({
-          where: [
-            { sourcePersonId },
-            { targetPersonId: sourcePersonId },
-          ],
+          where: [{ sourcePersonId }, { targetPersonId: sourcePersonId }],
         });
 
         // Target person's relationships
@@ -209,10 +206,14 @@ export class RelationshipPathSuggestionService {
 
         const personNameMap = new Map<string, string>();
         for (const person of persons) {
-          const fullName = `${person.name?.firstName ?? ''} ${person.name?.lastName ?? ''}`.trim();
+          const fullName =
+            `${person.name?.firstName ?? ''} ${person.name?.lastName ?? ''}`.trim();
           personNameMap.set(person.id, fullName || person.id);
         }
-        personNameMap.set(sourcePersonId, personNameMap.get(sourcePersonId) ?? 'Source');
+        personNameMap.set(
+          sourcePersonId,
+          personNameMap.get(sourcePersonId) ?? 'Source',
+        );
         personNameMap.set(
           resolvedTargetPersonId,
           personNameMap.get(resolvedTargetPersonId) ?? 'Target',
@@ -407,22 +408,16 @@ export class RelationshipPathSuggestionService {
 
     const targetConnections = new Set<string>();
     for (const edge of targetEdges) {
-      if (
-        edge.sourcePersonId === targetPersonId &&
-        edge.targetPersonId
-      ) {
+      if (edge.sourcePersonId === targetPersonId && edge.targetPersonId) {
         targetConnections.add(edge.targetPersonId);
       }
-      if (
-        edge.targetPersonId === targetPersonId &&
-        edge.sourcePersonId
-      ) {
+      if (edge.targetPersonId === targetPersonId && edge.sourcePersonId) {
         targetConnections.add(edge.sourcePersonId);
       }
     }
 
-    return Array.from(sourceConnections).filter(
-      (id) => targetConnections.has(id),
+    return Array.from(sourceConnections).filter((id) =>
+      targetConnections.has(id),
     );
   }
 

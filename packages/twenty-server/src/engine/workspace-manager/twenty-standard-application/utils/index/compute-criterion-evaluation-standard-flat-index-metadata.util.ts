@@ -12,10 +12,7 @@ export const buildCriterionEvaluationStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'criterionEvaluation'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'criterionEvaluation'>, 'context'>): Record<
   AllStandardObjectIndexName<'criterionEvaluation'>,
   FlatIndexMetadata
 > => ({

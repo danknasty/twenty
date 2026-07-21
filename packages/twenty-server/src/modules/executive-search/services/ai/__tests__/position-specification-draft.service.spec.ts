@@ -2,13 +2,16 @@ import { Test, type TestingModule } from '@nestjs/testing';
 
 import { FeatureFlagKey } from 'twenty-shared/types';
 
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => {
-  return {
-    FeatureFlagService: jest.fn().mockImplementation(() => ({
-      isFeatureEnabled: jest.fn(),
-    })),
-  };
-});
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => {
+    return {
+      FeatureFlagService: jest.fn().mockImplementation(() => ({
+        isFeatureEnabled: jest.fn(),
+      })),
+    };
+  },
+);
 
 import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
 import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
@@ -69,10 +72,7 @@ describe('PositionSpecificationDraftService', () => {
     it('returns null when AI candidate feature flag is disabled', async () => {
       featureFlagService.isFeatureEnabled.mockResolvedValue(false);
 
-      const result = await service.draftPositionSpec(
-        'workspace-1',
-        mockInput,
-      );
+      const result = await service.draftPositionSpec('workspace-1', mockInput);
 
       expect(result).toBeNull();
     });
@@ -80,10 +80,7 @@ describe('PositionSpecificationDraftService', () => {
     it('returns a labeled draft when feature flag is enabled', async () => {
       featureFlagService.isFeatureEnabled.mockResolvedValue(true);
 
-      const result = await service.draftPositionSpec(
-        'workspace-1',
-        mockInput,
-      );
+      const result = await service.draftPositionSpec('workspace-1', mockInput);
 
       expect(result).not.toBeNull();
       expect(result!.content).toContain('AI DRAFT — Requires Human Review');
@@ -119,10 +116,7 @@ describe('PositionSpecificationDraftService', () => {
     it('generates structured position spec content', async () => {
       featureFlagService.isFeatureEnabled.mockResolvedValue(true);
 
-      const result = await service.draftPositionSpec(
-        'workspace-1',
-        mockInput,
-      );
+      const result = await service.draftPositionSpec('workspace-1', mockInput);
 
       expect(result!.content).toContain('Position Specification Draft');
       expect(result!.content).toContain('Requirements');

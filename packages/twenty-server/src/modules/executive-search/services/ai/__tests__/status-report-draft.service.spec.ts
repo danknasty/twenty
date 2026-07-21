@@ -2,13 +2,16 @@ import { Test, type TestingModule } from '@nestjs/testing';
 
 import { FeatureFlagKey } from 'twenty-shared/types';
 
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => {
-  return {
-    FeatureFlagService: jest.fn().mockImplementation(() => ({
-      isFeatureEnabled: jest.fn(),
-    })),
-  };
-});
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => {
+    return {
+      FeatureFlagService: jest.fn().mockImplementation(() => ({
+        isFeatureEnabled: jest.fn(),
+      })),
+    };
+  },
+);
 
 import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
 import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
@@ -54,7 +57,11 @@ describe('StatusReportDraftService', () => {
       currentStatus: 'Active',
       milestones: [
         { name: 'Initial Sourcing', status: 'Complete' },
-        { name: 'Candidate Screening', status: 'In Progress', targetDate: '2026-08-15' },
+        {
+          name: 'Candidate Screening',
+          status: 'In Progress',
+          targetDate: '2026-08-15',
+        },
         { name: 'Client Presentations', status: 'Not Started' },
       ],
       recentActivities: [
@@ -74,10 +81,7 @@ describe('StatusReportDraftService', () => {
     it('returns null when AI candidate feature flag is disabled', async () => {
       featureFlagService.isFeatureEnabled.mockResolvedValue(false);
 
-      const result = await service.draftStatusReport(
-        'workspace-1',
-        mockInput,
-      );
+      const result = await service.draftStatusReport('workspace-1', mockInput);
 
       expect(result).toBeNull();
     });
@@ -85,10 +89,7 @@ describe('StatusReportDraftService', () => {
     it('returns a labeled draft when feature flag is enabled', async () => {
       featureFlagService.isFeatureEnabled.mockResolvedValue(true);
 
-      const result = await service.draftStatusReport(
-        'workspace-1',
-        mockInput,
-      );
+      const result = await service.draftStatusReport('workspace-1', mockInput);
 
       expect(result).not.toBeNull();
       expect(result!.content).toContain('AI DRAFT — Requires Human Review');
@@ -124,10 +125,7 @@ describe('StatusReportDraftService', () => {
     it('includes milestones, activities, and blockers in output', async () => {
       featureFlagService.isFeatureEnabled.mockResolvedValue(true);
 
-      const result = await service.draftStatusReport(
-        'workspace-1',
-        mockInput,
-      );
+      const result = await service.draftStatusReport('workspace-1', mockInput);
 
       expect(result!.content).toContain('Milestones');
       expect(result!.content).toContain('Recent Activities');
@@ -140,10 +138,7 @@ describe('StatusReportDraftService', () => {
     it('uses recent activities as input refs', async () => {
       featureFlagService.isFeatureEnabled.mockResolvedValue(true);
 
-      const result = await service.draftStatusReport(
-        'workspace-1',
-        mockInput,
-      );
+      const result = await service.draftStatusReport('workspace-1', mockInput);
 
       expect(result!.provenance.inputRefs).toContain(
         'Sourced 15 potential candidates from target companies',

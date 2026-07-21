@@ -416,7 +416,9 @@ export const buildRelationshipEdgeStandardFlatFieldMetadatas = ({
       fieldName: 'confidenceLevel',
       type: FieldMetadataType.SELECT,
       label: i18nLabel(msg`Confidence Level`),
-      description: i18nLabel(msg`Confidence in the accuracy of the relationship data`),
+      description: i18nLabel(
+        msg`Confidence in the accuracy of the relationship data`,
+      ),
       icon: 'IconShieldCheck',
       isNullable: false,
       isUIEditable: true,
@@ -491,7 +493,9 @@ export const buildRelationshipEdgeStandardFlatFieldMetadatas = ({
       fieldName: 'observedAt',
       type: FieldMetadataType.DATE,
       label: i18nLabel(msg`Observed At`),
-      description: i18nLabel(msg`When the relationship was observed or recorded`),
+      description: i18nLabel(
+        msg`When the relationship was observed or recorded`,
+      ),
       icon: 'IconCalendar',
       isNullable: true,
       isUIEditable: true,

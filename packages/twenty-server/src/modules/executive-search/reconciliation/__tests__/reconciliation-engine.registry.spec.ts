@@ -1,17 +1,11 @@
 import { Test, type TestingModule } from '@nestjs/testing';
 
-import { GlobalWorkspaceOrmManager } from
-  'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
-import { DirectusClientService } from
-  'src/modules/executive-search/directus/services/directus-client.service';
-import { NoopReconciliationEngine } from
-  'src/modules/executive-search/reconciliation/noop-reconciliation-engine';
-import { CountReconciliationEngine } from
-  'src/modules/executive-search/reconciliation/engines/count-reconciliation.engine';
-import { ReferentialIntegrityEngine } from
-  'src/modules/executive-search/reconciliation/engines/referential-integrity.engine';
-import { ReconciliationEngineRegistry } from
-  'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
+import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
+import { DirectusClientService } from 'src/modules/executive-search/directus/services/directus-client.service';
+import { NoopReconciliationEngine } from 'src/modules/executive-search/reconciliation/noop-reconciliation-engine';
+import { CountReconciliationEngine } from 'src/modules/executive-search/reconciliation/engines/count-reconciliation.engine';
+import { ReferentialIntegrityEngine } from 'src/modules/executive-search/reconciliation/engines/referential-integrity.engine';
+import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
 
 // The real GlobalWorkspaceOrmManager pulls in the twenty-config graph, which
 // fails to load under jest. Mock it so the engines' import graph never touches
@@ -38,9 +32,7 @@ describe('ReconciliationEngineRegistry', () => {
     registry = module.get<ReconciliationEngineRegistry>(
       ReconciliationEngineRegistry,
     );
-    noopEngine = module.get<NoopReconciliationEngine>(
-      NoopReconciliationEngine,
-    );
+    noopEngine = module.get<NoopReconciliationEngine>(NoopReconciliationEngine);
   });
 
   it('registers an engine and retrieves it by name', () => {
@@ -116,11 +108,11 @@ describe('ReconciliationEngineRegistry (executive-search engines)', () => {
     expect(names).toContain('count-reconciliation');
     expect(names).toContain('referential-integrity');
 
-    expect(
-      registry.get('count-reconciliation'),
-    ).toBeInstanceOf(CountReconciliationEngine);
-    expect(
-      registry.get('referential-integrity'),
-    ).toBeInstanceOf(ReferentialIntegrityEngine);
+    expect(registry.get('count-reconciliation')).toBeInstanceOf(
+      CountReconciliationEngine,
+    );
+    expect(registry.get('referential-integrity')).toBeInstanceOf(
+      ReferentialIntegrityEngine,
+    );
   });
 });

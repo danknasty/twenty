@@ -5,37 +5,43 @@ export const FIREWALL_DENYLIST: DenylistEntry[] = [
     fieldOrPattern: 'executives.subscription_tier',
     dataClassification: 'Commercial/subscription data',
     rule: 'NO_SYNC',
-    reason: 'Never enters search, AI context, client reports, or pipeline automation',
+    reason:
+      'Never enters search, AI context, client reports, or pipeline automation',
   },
   {
     fieldOrPattern: 'executives.plan_level',
     dataClassification: 'Commercial/subscription data',
     rule: 'NO_SYNC',
-    reason: 'Never enters search, AI context, client reports, or pipeline automation',
+    reason:
+      'Never enters search, AI context, client reports, or pipeline automation',
   },
   {
     fieldOrPattern: 'executives.is_premium',
     dataClassification: 'Commercial/subscription data',
     rule: 'NO_SYNC',
-    reason: 'Never enters search, AI context, client reports, or pipeline automation',
+    reason:
+      'Never enters search, AI context, client reports, or pipeline automation',
   },
   {
     fieldOrPattern: 'executives.birthdate',
     dataClassification: 'Restricted personal data',
     rule: 'NO_SYNC_SELECTION',
-    reason: 'No indexing, search, rank, AI/client output; compliance reference only',
+    reason:
+      'No indexing, search, rank, AI/client output; compliance reference only',
   },
   {
     fieldOrPattern: 'executives.gender',
     dataClassification: 'Restricted personal data',
     rule: 'NO_SYNC_SELECTION',
-    reason: 'No indexing, search, rank, AI/client output; compliance reference only',
+    reason:
+      'No indexing, search, rank, AI/client output; compliance reference only',
   },
   {
     fieldOrPattern: 'candidate_demographics_voluntary.*',
     dataClassification: 'Restricted voluntary demographics',
     rule: 'NO_SYNC_INDIVIDUAL',
-    reason: 'Aggregate-only by approved policy; never individual recruiter/search/AI context',
+    reason:
+      'Aggregate-only by approved policy; never individual recruiter/search/AI context',
   },
   {
     fieldOrPattern: 'candidate_demographics_justification.*',
@@ -47,7 +53,8 @@ export const FIREWALL_DENYLIST: DenylistEntry[] = [
     fieldOrPattern: 'accommodation_requests.medical_documents',
     dataClassification: 'Restricted medical data',
     rule: 'NO_SYNC',
-    reason: 'Medical docs remain in Directus/restricted store; evaluators must not see',
+    reason:
+      'Medical docs remain in Directus/restricted store; evaluators must not see',
   },
   {
     fieldOrPattern: 'executive_settings.stripe_customer_id',
@@ -131,7 +138,8 @@ export const FIREWALL_DENYLIST: DenylistEntry[] = [
     fieldOrPattern: 'linkedin_*.profile_engagement_content_activity',
     dataClassification: 'Candidate-services reference',
     rule: 'NO_SYNC',
-    reason: 'Exclude engagement, content activity, coaching usage from selection',
+    reason:
+      'Exclude engagement, content activity, coaching usage from selection',
   },
   {
     fieldOrPattern: 'learning_path_*.course_completion_quiz_activity',

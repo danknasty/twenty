@@ -123,6 +123,7 @@ analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFieldGroups,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFieldGroups,
   aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
   aiModelRegistry: computeStandardAiModelRegistryViewFieldGroups,
+  aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
   aiProviderCallLog: computeStandardAiProviderCallLogViewFieldGroups,
   appAgents: computeStandardAppAgentsViewFieldGroups,
 } as const satisfies {

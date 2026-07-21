@@ -52,8 +52,8 @@ export const STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG = {
   objectUniversalIdentifier:
     STANDARD_OBJECTS.analyticsDashboardConfig.universalIdentifier,
   universalIdentifier:
-    STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.analyticsDashboardConfigRecordPage
-      .universalIdentifier,
+    STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS
+      .analyticsDashboardConfigRecordPage.universalIdentifier,
   defaultTabUniversalIdentifier: null,
   tabs: ANALYTICS_DASHBOARD_CONFIG_PAGE_TABS,
 } as const satisfies StandardPageLayoutConfig;

@@ -4,12 +4,8 @@ import { type WorkspaceAuthContext } from 'src/engine/core-modules/auth/types/wo
 import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { FeatureFlagKey } from 'twenty-shared/types';
-import {
-  type CriterionAssessmentSource,
-} from 'src/modules/executive-search/common/enums/criterion-assessment-source.enum';
-import {
-  type ShadowAssessmentStatus,
-} from 'src/modules/executive-search/common/enums/shadow-assessment-status.enum';
+import { type CriterionAssessmentSource } from 'src/modules/executive-search/common/enums/criterion-assessment-source.enum';
+import { type ShadowAssessmentStatus } from 'src/modules/executive-search/common/enums/shadow-assessment-status.enum';
 import {
   ExecutiveSearchException,
   ExecutiveSearchExceptionCode,
@@ -181,9 +177,10 @@ export class CriterionAssessmentShadowService {
               promptVersion: this.PROMPT_VERSION,
               redactionManifest: violations,
               workspaceId,
-              evaluatedBy: authContext.type === 'user'
-                ? authContext.workspaceMemberId
-                : null,
+              evaluatedBy:
+                authContext.type === 'user'
+                  ? authContext.workspaceMemberId
+                  : null,
             });
 
             storedCount++;
@@ -195,12 +192,14 @@ export class CriterionAssessmentShadowService {
           });
         }
 
-        const shadowRunId = crypto.randomUUID() ?? `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+        const shadowRunId =
+          crypto.randomUUID() ??
+          `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
         this.logger.log(
           `[SHADOW-MODE] Completed criterion assessment shadow run ${shadowRunId}: ` +
-          `${evaluations.length} candidacies evaluated, ${storedCount} shadow records stored. ` +
-          `All results are SHADOW — none auto-submitted. Human review required.`,
+            `${evaluations.length} candidacies evaluated, ${storedCount} shadow records stored. ` +
+            `All results are SHADOW — none auto-submitted. Human review required.`,
         );
 
         return {
@@ -223,11 +222,10 @@ export class CriterionAssessmentShadowService {
   // ---------------------------------------------------------------------------
 
   private async assertFeatureFlagsEnabled(workspaceId: string): Promise<void> {
-    const aiEnabled =
-      await this.featureFlagService.isFeatureEnabled(
-        FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED,
-        workspaceId,
-      );
+    const aiEnabled = await this.featureFlagService.isFeatureEnabled(
+      FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED,
+      workspaceId,
+    );
 
     if (!aiEnabled) {
       throw new ExecutiveSearchException(
@@ -236,11 +234,10 @@ export class CriterionAssessmentShadowService {
       );
     }
 
-    const shadowEnabled =
-      await this.featureFlagService.isFeatureEnabled(
-        FeatureFlagKey.IS_CRITERION_ASSESSMENT_SHADOW_ENABLED,
-        workspaceId,
-      );
+    const shadowEnabled = await this.featureFlagService.isFeatureEnabled(
+      FeatureFlagKey.IS_CRITERION_ASSESSMENT_SHADOW_ENABLED,
+      workspaceId,
+    );
 
     if (!shadowEnabled) {
       throw new ExecutiveSearchException(
@@ -425,13 +422,14 @@ export class CriterionAssessmentShadowService {
         redactionManifest: params.redactionManifest,
         evaluatedBy: params.evaluatedBy,
         evaluatedAt: now,
-        warning: 'SHADOW ASSESSMENT — Not reviewed by human. Do not use for client-facing decisions.',
+        warning:
+          'SHADOW ASSESSMENT — Not reviewed by human. Do not use for client-facing decisions.',
       }),
     } as any);
 
     this.logger.debug(
       `[SHADOW-MODE] Stored shadow assessment for candidacy=${params.candidacyId}, ` +
-      `criterion=${params.criterionId} [${params.shadowStatus}]`,
+        `criterion=${params.criterionId} [${params.shadowStatus}]`,
     );
   }
 

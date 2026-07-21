@@ -69,13 +69,11 @@ export const SEARCH_FIELDS_BY_STANDARD_OBJECT_NAME = {
     { name: 'name', type: FieldMetadataType.FULL_NAME },
     { name: 'userEmail', type: FieldMetadataType.TEXT },
   ],
-executiveProfile: [
+  executiveProfile: [
     { name: 'headline', type: FieldMetadataType.TEXT },
     { name: 'currentTitle', type: FieldMetadataType.TEXT },
   ],
-  executiveCareerExperience: [
-    { name: 'title', type: FieldMetadataType.TEXT },
-  ],
+  executiveCareerExperience: [{ name: 'title', type: FieldMetadataType.TEXT }],
   executiveEducation: [
     { name: 'institution', type: FieldMetadataType.TEXT },
     { name: 'degree', type: FieldMetadataType.TEXT },
@@ -84,24 +82,16 @@ executiveProfile: [
     { name: 'companyName', type: FieldMetadataType.TEXT },
     { name: 'role', type: FieldMetadataType.TEXT },
   ],
-  executiveCapability: [
-    { name: 'name', type: FieldMetadataType.TEXT },
-  ],
-  executiveLanguage: [
-    { name: 'language', type: FieldMetadataType.TEXT },
-  ],
-  executiveArtifact: [
-    { name: 'title', type: FieldMetadataType.TEXT },
-  ],
+  executiveCapability: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  executiveLanguage: [{ name: 'language', type: FieldMetadataType.TEXT }],
+  executiveArtifact: [{ name: 'title', type: FieldMetadataType.TEXT }],
   executiveAward: [
     { name: 'title', type: FieldMetadataType.TEXT },
     { name: 'issuer', type: FieldMetadataType.TEXT },
   ],
-  executiveExternalProfile: [
-    { name: 'handle', type: FieldMetadataType.TEXT },
-  ],
-executiveSearchPreference: [],
-searchEngagementTerms: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  executiveExternalProfile: [{ name: 'handle', type: FieldMetadataType.TEXT }],
+  executiveSearchPreference: [],
+  searchEngagementTerms: [{ name: 'name', type: FieldMetadataType.TEXT }],
   searchAssignment: [{ name: 'name', type: FieldMetadataType.TEXT }],
   assignmentTeamMember: [],
   searchMilestone: [],
@@ -138,19 +128,11 @@ searchEngagementTerms: [{ name: 'name', type: FieldMetadataType.TEXT }],
     { name: 'summary', type: FieldMetadataType.TEXT },
     { name: 'counterpartyName', type: FieldMetadataType.TEXT },
   ],
-  boardCompositionProfile: [
-    { name: 'name', type: FieldMetadataType.TEXT },
-  ],
-  boardMatrixCriterion: [
-    { name: 'name', type: FieldMetadataType.TEXT },
-  ],
+  boardCompositionProfile: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  boardMatrixCriterion: [{ name: 'name', type: FieldMetadataType.TEXT }],
   candidateBoardMatrixEvaluation: [],
-  directorIndependenceReview: [
-    { name: 'name', type: FieldMetadataType.TEXT },
-  ],
-  boardCommitmentReview: [
-    { name: 'name', type: FieldMetadataType.TEXT },
-  ],
+  directorIndependenceReview: [{ name: 'name', type: FieldMetadataType.TEXT }],
+  boardCommitmentReview: [{ name: 'name', type: FieldMetadataType.TEXT }],
   compensationExpectation: [{ name: 'name', type: FieldMetadataType.TEXT }],
   offerNegotiation: [{ name: 'name', type: FieldMetadataType.TEXT }],
   placement: [{ name: 'name', type: FieldMetadataType.TEXT }],
@@ -161,7 +143,6 @@ searchEngagementTerms: [{ name: 'name', type: FieldMetadataType.TEXT }],
   searchInterview: [{ name: 'name', type: FieldMetadataType.TEXT }],
   referenceCheck: [{ name: 'name', type: FieldMetadataType.TEXT }],
   diligenceCheck: [{ name: 'name', type: FieldMetadataType.TEXT }],
-
 } satisfies {
   [ObjectName in AllStandardObjectName]: {
     name: AllStandardObjectFieldName<ObjectName>;

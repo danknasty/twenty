@@ -5,10 +5,7 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
 
 export const computeStandardClientStakeholderRoleViewFields = (
-  args: Omit<
-    CreateStandardViewFieldArgs<'clientStakeholderRole'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldArgs<'clientStakeholderRole'>, 'context'>,
 ): Record<string, FlatViewField> => {
   return {
     // allClientStakeholderRoles view fields

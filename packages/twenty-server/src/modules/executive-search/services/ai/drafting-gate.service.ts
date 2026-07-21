@@ -133,7 +133,8 @@ export class DraftingGateService {
       ...draft.provenance,
       humanReviewer: reviewerId,
       reviewDecision: decision,
-      overrideRationale: overrideRationale ?? draft.provenance.overrideRationale,
+      overrideRationale:
+        overrideRationale ?? draft.provenance.overrideRationale,
     };
 
     this.logger.log(

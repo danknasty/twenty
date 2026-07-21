@@ -246,7 +246,11 @@ export function authoritiesAtStage(
   const targetRank = stageRank(stage);
   const byCollection = new Map<
     string,
-    { authority: FieldOwnershipAuthority; cutoverStage: CutoverStage; rank: number }
+    {
+      authority: FieldOwnershipAuthority;
+      cutoverStage: CutoverStage;
+      rank: number;
+    }
   >();
 
   for (const row of rows) {

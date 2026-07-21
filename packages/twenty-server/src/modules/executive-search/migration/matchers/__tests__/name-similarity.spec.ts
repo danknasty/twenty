@@ -118,7 +118,10 @@ describe('name-similarity util', () => {
 
     it('classifies a near-identical name as STRONG (>= 0.92)', () => {
       // Strong: a single transposition / minor typo on a long name.
-      const result = compareNameStrings('Alexander Hamilton', 'Alexnader Hamilton');
+      const result = compareNameStrings(
+        'Alexander Hamilton',
+        'Alexnader Hamilton',
+      );
 
       expect(result.score).toBeGreaterThanOrEqual(STRONG_NAME_MATCH_THRESHOLD);
       expect(result.bucket).toBe('STRONG');

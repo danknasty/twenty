@@ -10,9 +10,7 @@ import { FirewallContext } from '../constants/firewall-contexts.constant';
 export const getProhibitedSelectorsForContext = (
   context: FirewallContext,
 ): string[] => {
-  return FIREWALL_PROHIBITED_SELECTORS[context].map(
-    (entry) => entry.selector,
-  );
+  return FIREWALL_PROHIBITED_SELECTORS[context].map((entry) => entry.selector);
 };
 
 export const isProhibitedSelector = (
@@ -20,9 +18,7 @@ export const isProhibitedSelector = (
   context: FirewallContext,
 ): boolean => {
   const normalisedSelector = camelToSnakeCase(selector);
-  return getProhibitedSelectorsForContext(context).includes(
-    normalisedSelector,
-  );
+  return getProhibitedSelectorsForContext(context).includes(normalisedSelector);
 };
 
 export const getDenylistPatternsForObject = (

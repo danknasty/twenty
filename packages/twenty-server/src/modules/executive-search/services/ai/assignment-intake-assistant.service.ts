@@ -162,7 +162,6 @@ export class AssignmentIntakeAssistantService {
    * Compute a SHA-256 hash of the input text for provenance.
    */
   private computeHash(text: string): string {
-
     return crypto.createHash('sha256').update(text).digest('hex');
   }
 

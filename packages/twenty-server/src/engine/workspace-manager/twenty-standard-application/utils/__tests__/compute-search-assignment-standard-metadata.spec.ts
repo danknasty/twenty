@@ -1,6 +1,4 @@
-import {
-  STANDARD_OBJECTS,
-} from 'twenty-shared/metadata';
+import { STANDARD_OBJECTS } from 'twenty-shared/metadata';
 import { isDefined } from 'twenty-shared/utils';
 import { FieldMetadataType } from 'twenty-shared/types';
 
@@ -75,8 +73,7 @@ describe('Search Assignment standard metadata build', () => {
     ).map((idx) => idx.universalIdentifier);
 
     for (const uid of indexUids) {
-      const index =
-        allFlatEntityMaps.flatIndexMaps.byUniversalIdentifier[uid];
+      const index = allFlatEntityMaps.flatIndexMaps.byUniversalIdentifier[uid];
       expect(index).toBeDefined();
     }
   });
@@ -91,8 +88,9 @@ describe('Search Assignment standard metadata build', () => {
       'searchCriterion',
     ];
     for (const name of expectedNames) {
-      expect(STANDARD_OBJECTS[name as keyof typeof STANDARD_OBJECTS])
-        .toBeDefined();
+      expect(
+        STANDARD_OBJECTS[name as keyof typeof STANDARD_OBJECTS],
+      ).toBeDefined();
     }
   });
 });
@@ -111,9 +109,9 @@ describe('Company inverse fields for search objects', () => {
     const field =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[uid];
     expect(field).toBeDefined();
-    expect(
-      (field?.settings as Record<string, unknown>)?.relationType,
-    ).toBe('ONE_TO_MANY');
+    expect((field?.settings as Record<string, unknown>)?.relationType).toBe(
+      'ONE_TO_MANY',
+    );
   });
 
   it('has searchAssignments inverse field on company', () => {
@@ -122,9 +120,9 @@ describe('Company inverse fields for search objects', () => {
     const field =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[uid];
     expect(field).toBeDefined();
-    expect(
-      (field?.settings as Record<string, unknown>)?.relationType,
-    ).toBe('ONE_TO_MANY');
+    expect((field?.settings as Record<string, unknown>)?.relationType).toBe(
+      'ONE_TO_MANY',
+    );
   });
 });
 
@@ -143,9 +141,9 @@ describe('Opportunity inverse fields for search objects', () => {
     const field =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[uid];
     expect(field).toBeDefined();
-    expect(
-      (field?.settings as Record<string, unknown>)?.relationType,
-    ).toBe('ONE_TO_MANY');
+    expect((field?.settings as Record<string, unknown>)?.relationType).toBe(
+      'ONE_TO_MANY',
+    );
   });
 
   it('has searchAssignments inverse field on opportunity', () => {
@@ -154,9 +152,9 @@ describe('Opportunity inverse fields for search objects', () => {
     const field =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[uid];
     expect(field).toBeDefined();
-    expect(
-      (field?.settings as Record<string, unknown>)?.relationType,
-    ).toBe('ONE_TO_MANY');
+    expect((field?.settings as Record<string, unknown>)?.relationType).toBe(
+      'ONE_TO_MANY',
+    );
   });
 });
 
@@ -175,9 +173,9 @@ describe('WorkspaceMember inverse fields for search objects', () => {
     const field =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[uid];
     expect(field).toBeDefined();
-    expect(
-      (field?.settings as Record<string, unknown>)?.relationType,
-    ).toBe('ONE_TO_MANY');
+    expect((field?.settings as Record<string, unknown>)?.relationType).toBe(
+      'ONE_TO_MANY',
+    );
   });
 
   it('has assignmentTeamMemberships inverse field', () => {
@@ -187,9 +185,9 @@ describe('WorkspaceMember inverse fields for search objects', () => {
     const field =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[uid];
     expect(field).toBeDefined();
-    expect(
-      (field?.settings as Record<string, unknown>)?.relationType,
-    ).toBe('ONE_TO_MANY');
+    expect((field?.settings as Record<string, unknown>)?.relationType).toBe(
+      'ONE_TO_MANY',
+    );
   });
 
   it('has approvedPositionSpecifications inverse field', () => {
@@ -199,8 +197,8 @@ describe('WorkspaceMember inverse fields for search objects', () => {
     const field =
       allFlatEntityMaps.flatFieldMetadataMaps.byUniversalIdentifier[uid];
     expect(field).toBeDefined();
-    expect(
-      (field?.settings as Record<string, unknown>)?.relationType,
-    ).toBe('ONE_TO_MANY');
+    expect((field?.settings as Record<string, unknown>)?.relationType).toBe(
+      'ONE_TO_MANY',
+    );
   });
 });

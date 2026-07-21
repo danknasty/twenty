@@ -8,7 +8,12 @@ import { WorkspaceEventBatch } from 'src/engine/workspace-event-emitter/types/wo
 import { OutboundEventMapperService } from 'src/modules/executive-search/outbound/services/outbound-event-mapper.service';
 import { RetentionActionService } from 'src/modules/executive-search/migration/services/retention-action.service';
 import { ExecutiveSearchOutboxService } from 'src/modules/executive-search/sync/services/outbox.service';
-import { ObjectRecordCreateEvent, ObjectRecordDestroyEvent, ObjectRecordDeleteEvent, ObjectRecordUpdateEvent } from 'twenty-shared/database-events';
+import {
+  ObjectRecordCreateEvent,
+  ObjectRecordDestroyEvent,
+  ObjectRecordDeleteEvent,
+  ObjectRecordUpdateEvent,
+} from 'twenty-shared/database-events';
 
 @Injectable()
 export class OutboundProjectionListener {
@@ -72,7 +77,9 @@ export class OutboundProjectionListener {
       const isDeletion =
         action === DatabaseEventAction.DELETED ||
         action === DatabaseEventAction.DESTROYED;
-      const record = isDeletion ? event.properties.before : event.properties.after;
+      const record = isDeletion
+        ? event.properties.before
+        : event.properties.after;
 
       if (!record) continue;
 

@@ -20,7 +20,8 @@ export class FirewallRegistryService {
 
     // Build context index from prohibited selectors
     for (const entry of FIREWALL_PROHIBITED_SELECTORS) {
-      const selectors = this.contextIndex.get(entry.context) ?? new Set<string>();
+      const selectors =
+        this.contextIndex.get(entry.context) ?? new Set<string>();
       selectors.add(entry.prohibitedSelector);
       this.contextIndex.set(entry.context, selectors);
     }
@@ -49,7 +50,10 @@ export class FirewallRegistryService {
   }
 
   isProhibited(selector: string, context: FirewallContext): boolean {
-    return this.contextIndex.get(context)?.has(this.normalizeSelector(selector)) ?? false;
+    return (
+      this.contextIndex.get(context)?.has(this.normalizeSelector(selector)) ??
+      false
+    );
   }
 
   getProhibitedSelectors(context: FirewallContext): Set<string> {

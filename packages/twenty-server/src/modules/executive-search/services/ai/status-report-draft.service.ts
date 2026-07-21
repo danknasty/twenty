@@ -118,9 +118,8 @@ export class StatusReportDraftService {
   private sanitizeInput(input: StatusReportInput): StatusReportInput {
     const fieldTokens = this.extractFieldTokens(input);
 
-    const filtered = this.aiContextFirewallService.filterProhibited(
-      fieldTokens,
-    );
+    const filtered =
+      this.aiContextFirewallService.filterProhibited(fieldTokens);
 
     const redactedActivities = input.recentActivities.map((act) =>
       this.redactIfProhibited(act, fieldTokens, filtered),
@@ -197,7 +196,6 @@ export class StatusReportDraftService {
    * Compute a SHA-256 hash of the input for provenance.
    */
   private computeHash(text: string): string {
-
     return crypto.createHash('sha256').update(text).digest('hex');
   }
 

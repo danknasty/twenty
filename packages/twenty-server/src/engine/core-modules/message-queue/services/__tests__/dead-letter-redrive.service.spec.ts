@@ -2,9 +2,7 @@ import { Queue } from 'bullmq';
 
 import { BullMQDriver } from 'src/engine/core-modules/message-queue/drivers/bullmq.driver';
 import { DeadLetterRedriveService } from 'src/engine/core-modules/message-queue/services/dead-letter-redrive.service';
-import {
-  MessageQueue,
-} from 'src/engine/core-modules/message-queue/message-queue.constants';
+import { MessageQueue } from 'src/engine/core-modules/message-queue/message-queue.constants';
 
 jest.mock('bullmq', () => {
   const mockAdd = jest.fn().mockResolvedValue(undefined);
@@ -40,11 +38,7 @@ describe('DeadLetterRedriveService', () => {
   beforeEach(async () => {
     jest.clearAllMocks();
 
-    bullMqDriver = new BullMQDriver(
-      {} as any,
-      {} as any,
-      {} as any,
-    );
+    bullMqDriver = new BullMQDriver({} as any, {} as any, {} as any);
 
     bullMqDriver.register(queueName);
 
@@ -77,7 +71,10 @@ describe('DeadLetterRedriveService', () => {
 
     it('should filter by jobName when specified', async () => {
       const matchingJob = createFailedJob({ id: 'job-1', name: 'my-job' });
-      const nonMatchingJob = createFailedJob({ id: 'job-2', name: 'other-job' });
+      const nonMatchingJob = createFailedJob({
+        id: 'job-2',
+        name: 'other-job',
+      });
       mockQueue.getJobs.mockResolvedValue([matchingJob, nonMatchingJob]);
 
       await service.redrive({ queueName, jobName: 'my-job' });

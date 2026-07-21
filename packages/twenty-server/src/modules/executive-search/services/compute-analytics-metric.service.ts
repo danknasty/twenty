@@ -77,9 +77,7 @@ export class ComputeAnalyticsMetricService {
               value: existingSnapshot.value,
               valueText: existingSnapshot.valueText,
               sourceCount: existingSnapshot.sourceCount,
-              computedAt: this.formatDateOrString(
-                existingSnapshot.computedAt,
-              ),
+              computedAt: this.formatDateOrString(existingSnapshot.computedAt),
               computationStatus: 'SUCCESS',
               snapshotId: existingSnapshot.id,
               periodStart: this.formatDateOrString(
@@ -110,9 +108,8 @@ export class ComputeAnalyticsMetricService {
           computedAt: now as any,
           computationStatus: (result.error ? 'PARTIAL' : 'SUCCESS') as any,
           computationNotes: result.error ?? null,
-          computedById: authContext.type === 'user'
-            ? authContext.workspaceMemberId
-            : null,
+          computedById:
+            authContext.type === 'user' ? authContext.workspaceMemberId : null,
           dimensions: parsedDimensions as any,
         } as any);
 

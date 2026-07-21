@@ -8,8 +8,8 @@ export const computeSearchStatusReportViewFields = (
   args: Omit<CreateStandardViewFieldArgs<'searchStatusReport'>, 'context'>,
 ): Record<string, FlatViewField> => {
   return {
-    searchStatusReportRecordPageFieldsName:
-      createStandardViewFieldFlatMetadata({
+    searchStatusReportRecordPageFieldsName: createStandardViewFieldFlatMetadata(
+      {
         ...args,
         objectName: 'searchStatusReport',
         context: {
@@ -21,7 +21,8 @@ export const computeSearchStatusReportViewFields = (
           size: 200,
           viewFieldGroupName: 'general',
         },
-      }),
+      },
+    ),
     searchStatusReportRecordPageFieldsReportType:
       createStandardViewFieldFlatMetadata({
         ...args,

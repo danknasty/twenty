@@ -90,7 +90,11 @@ export class InboundEventLedgerService {
    * Transition status from RECEIVED → PROCESSING.
    */
   async markProcessing(workspaceId: string, eventId: string): Promise<void> {
-    await this.updateStatus(workspaceId, eventId, InboundEventStatus.PROCESSING);
+    await this.updateStatus(
+      workspaceId,
+      eventId,
+      InboundEventStatus.PROCESSING,
+    );
   }
 
   /**
@@ -121,10 +125,7 @@ export class InboundEventLedgerService {
   /**
    * Transition status from PROCESSING → DEAD_LETTERED.
    */
-  async markDeadLettered(
-    workspaceId: string,
-    eventId: string,
-  ): Promise<void> {
+  async markDeadLettered(workspaceId: string, eventId: string): Promise<void> {
     await this.updateStatus(
       workspaceId,
       eventId,
@@ -153,7 +154,9 @@ export class InboundEventLedgerService {
     workspaceId: string,
     eventId: string,
     status: InboundEventStatus,
-    additional?: Partial<Pick<InboundEventRecord, 'processedAt' | 'errorMessage'>>,
+    additional?: Partial<
+      Pick<InboundEventRecord, 'processedAt' | 'errorMessage'>
+    >,
   ): Promise<void> {
     const dedupKey = `${workspaceId}::event::${eventId}`;
     const record = this.store.get(dedupKey);

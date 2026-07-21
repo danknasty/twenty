@@ -7,11 +7,14 @@ import { MarketMapWorkspaceEntity } from 'src/modules/executive-search/standard-
 import { TargetCompanyWorkspaceEntity } from 'src/modules/executive-search/standard-objects/target-company.workspace-entity';
 
 // Mock FeatureFlagService to avoid importing the full engine dependency chain
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => ({
-  FeatureFlagService: jest.fn().mockImplementation(() => ({
-    isFeatureEnabled: jest.fn(),
-  })),
-}));
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => ({
+    FeatureFlagService: jest.fn().mockImplementation(() => ({
+      isFeatureEnabled: jest.fn(),
+    })),
+  }),
+);
 
 // Mock GlobalWorkspaceOrmManager
 jest.mock(

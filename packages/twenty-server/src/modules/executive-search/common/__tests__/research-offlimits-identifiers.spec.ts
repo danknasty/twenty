@@ -121,9 +121,9 @@ describe('Research/offlimits object identifiers determinism', () => {
       const researchCandidate = STANDARD_OBJECTS.researchCandidate;
 
       expect(researchCandidate.fields.executiveProfile).toBeDefined();
-      expect(researchCandidate.fields.executiveProfile.universalIdentifier).toMatch(
-        UUID_V4_REGEX,
-      );
+      expect(
+        researchCandidate.fields.executiveProfile.universalIdentifier,
+      ).toMatch(UUID_V4_REGEX);
       expect(researchCandidate.fields.person).toBeDefined();
       expect(researchCandidate.fields.person.universalIdentifier).toMatch(
         UUID_V4_REGEX,

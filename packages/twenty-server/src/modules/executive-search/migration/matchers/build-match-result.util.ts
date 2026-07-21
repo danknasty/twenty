@@ -33,7 +33,8 @@ export function pickBestCandidate(
   }
 
   return [...scored].sort((a, b) => {
-    const rankDiff = CONFIDENCE_RANK[b.confidence] - CONFIDENCE_RANK[a.confidence];
+    const rankDiff =
+      CONFIDENCE_RANK[b.confidence] - CONFIDENCE_RANK[a.confidence];
 
     if (rankDiff !== 0) {
       return rankDiff;

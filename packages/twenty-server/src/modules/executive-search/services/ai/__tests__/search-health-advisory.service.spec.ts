@@ -77,8 +77,12 @@ describe('SearchHealthAdvisoryService', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    mocks.globalWorkspaceOrmManager.executeInWorkspaceContext.mockImplementation((fn: any) => fn());
-    const { SearchHealthAdvisoryService: SHAS } = require('../search-health-advisory.service');
+    mocks.globalWorkspaceOrmManager.executeInWorkspaceContext.mockImplementation(
+      (fn: any) => fn(),
+    );
+    const {
+      SearchHealthAdvisoryService: SHAS,
+    } = require('../search-health-advisory.service');
     service = new SHAS(
       mocks.globalWorkspaceOrmManager,
       mocks.featureFlagService,
@@ -129,16 +133,26 @@ describe('SearchHealthAdvisoryService', () => {
       { id: 'rest-1', status: 'ACTIVE', clientName: 'Competitor Corp' },
     ];
 
-    const mockAssignmentRepo = { findOne: jest.fn().mockResolvedValue(assignment) };
-    const mockCandidacyRepo = { find: jest.fn().mockResolvedValue(candidacies) };
-    const mockOffLimitsRepo = { find: jest.fn().mockResolvedValue(restrictions) };
+    const mockAssignmentRepo = {
+      findOne: jest.fn().mockResolvedValue(assignment),
+    };
+    const mockCandidacyRepo = {
+      find: jest.fn().mockResolvedValue(candidacies),
+    };
+    const mockOffLimitsRepo = {
+      find: jest.fn().mockResolvedValue(restrictions),
+    };
 
     mocks.globalWorkspaceOrmManager.getRepository
       .mockResolvedValueOnce(mockAssignmentRepo)
       .mockResolvedValueOnce(mockCandidacyRepo)
       .mockResolvedValueOnce(mockOffLimitsRepo);
 
-    const result = await service.generateAdvisory(mockInput, mockWorkspaceId, mockAuthContext);
+    const result = await service.generateAdvisory(
+      mockInput,
+      mockWorkspaceId,
+      mockAuthContext,
+    );
 
     expect(result.assignmentId).toBe('assignment-1');
     expect(result.generatedAt).toBeInstanceOf(Date);

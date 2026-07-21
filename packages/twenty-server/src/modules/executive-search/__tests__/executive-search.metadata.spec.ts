@@ -49,33 +49,33 @@ describe('STANDARD_OBJECTS — executive search metadata registration', () => {
 
   describe('inverse ONE_TO_MANY fields on existing objects', () => {
     it('company has searchEngagementTerms inverse field', () => {
-      expect(
-        STANDARD_OBJECTS.company.fields,
-      ).toHaveProperty('searchEngagementTerms');
+      expect(STANDARD_OBJECTS.company.fields).toHaveProperty(
+        'searchEngagementTerms',
+      );
     });
 
     it('company has searchAssignments inverse field', () => {
-      expect(
-        STANDARD_OBJECTS.company.fields,
-      ).toHaveProperty('searchAssignments');
+      expect(STANDARD_OBJECTS.company.fields).toHaveProperty(
+        'searchAssignments',
+      );
     });
 
     it('opportunity has searchEngagementTerms inverse field', () => {
-      expect(
-        STANDARD_OBJECTS.opportunity.fields,
-      ).toHaveProperty('searchEngagementTerms');
+      expect(STANDARD_OBJECTS.opportunity.fields).toHaveProperty(
+        'searchEngagementTerms',
+      );
     });
 
     it('opportunity has searchAssignments inverse field', () => {
-      expect(
-        STANDARD_OBJECTS.opportunity.fields,
-      ).toHaveProperty('searchAssignments');
+      expect(STANDARD_OBJECTS.opportunity.fields).toHaveProperty(
+        'searchAssignments',
+      );
     });
 
     it('workspaceMember has assignmentTeamMemberships inverse field', () => {
-      expect(
-        STANDARD_OBJECTS.workspaceMember.fields,
-      ).toHaveProperty('assignmentTeamMemberships');
+      expect(STANDARD_OBJECTS.workspaceMember.fields).toHaveProperty(
+        'assignmentTeamMemberships',
+      );
     });
   });
 });

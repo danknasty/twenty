@@ -12,7 +12,10 @@ export const buildExternalIdentityMatchQueueStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<CreateStandardIndexArgs<'externalIdentityMatchQueue'>, 'context'>): Record<
+}: Omit<
+  CreateStandardIndexArgs<'externalIdentityMatchQueue'>,
+  'context'
+>): Record<
   AllStandardObjectIndexName<'externalIdentityMatchQueue'>,
   FlatIndexMetadata
 > => ({

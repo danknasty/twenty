@@ -19,10 +19,7 @@ export class CandidacyStateTransitionService {
     private readonly offLimitsGuardService: OffLimitsGuardService,
   ) {}
 
-  validateTransition(
-    from: CandidacyStatus,
-    to: CandidacyStatus,
-  ): boolean {
+  validateTransition(from: CandidacyStatus, to: CandidacyStatus): boolean {
     const allowed = CANDIDACY_STATUS_TRANSITIONS[from];
 
     return allowed.includes(to);
@@ -57,53 +54,34 @@ export class CandidacyStateTransitionService {
         const workspaceDataSource =
           await this.globalWorkspaceOrmManager.getGlobalWorkspaceDataSource();
 
-        return workspaceDataSource.transaction(
-          async (transactionManager) => {
-            const candidacyRepository =
-              await this.globalWorkspaceOrmManager.getRepository<SearchCandidacyWorkspaceEntity>(
-                getWorkspaceId(),
-                SearchCandidacyWorkspaceEntity,
-                { shouldBypassPermissionChecks: true },
-              );
-
-            const stageEventRepository =
-              await this.globalWorkspaceOrmManager.getRepository<CandidacyStageEventWorkspaceEntity>(
-                getWorkspaceId(),
-                CandidacyStageEventWorkspaceEntity,
-                { shouldBypassPermissionChecks: true },
-              );
-
-            // 3. Update the candidacy status
-            await candidacyRepository.update(
-              { id: candidacy.id },
-              { status: to } as any,
-              // oxlint-disable-next-line typescript/no-explicit-any
-              transactionManager as any,
+        return workspaceDataSource.transaction(async (transactionManager) => {
+          const candidacyRepository =
+            await this.globalWorkspaceOrmManager.getRepository<SearchCandidacyWorkspaceEntity>(
+              getWorkspaceId(),
+              SearchCandidacyWorkspaceEntity,
+              { shouldBypassPermissionChecks: true },
             );
 
-            // 4. Create the stage event record
-            const transitionedAt = new Date().toISOString();
-
-            const eventInsert = await stageEventRepository.insert(
-              {
-                candidacyId: candidacy.id,
-                stage: to,
-                stageFrom: from,
-                stageTo: to,
-                transitionedAt,
-                transitionedById: actorId ?? null,
-                actorKind: actorKind ?? null,
-                reason: reason ?? null,
-              } as any,
-              // oxlint-disable-next-line typescript/no-explicit-any
-              transactionManager as any,
+          const stageEventRepository =
+            await this.globalWorkspaceOrmManager.getRepository<CandidacyStageEventWorkspaceEntity>(
+              getWorkspaceId(),
+              CandidacyStageEventWorkspaceEntity,
+              { shouldBypassPermissionChecks: true },
             );
 
-            const eventId =
-              eventInsert.identifiers[0]?.id as string;
+          // 3. Update the candidacy status
+          await candidacyRepository.update(
+            { id: candidacy.id },
+            { status: to } as any,
+            // oxlint-disable-next-line typescript/no-explicit-any
+            transactionManager as any,
+          );
 
-            return {
-              id: eventId,
+          // 4. Create the stage event record
+          const transitionedAt = new Date().toISOString();
+
+          const eventInsert = await stageEventRepository.insert(
+            {
               candidacyId: candidacy.id,
               stage: to,
               stageFrom: from,
@@ -112,13 +90,29 @@ export class CandidacyStateTransitionService {
               transitionedById: actorId ?? null,
               actorKind: actorKind ?? null,
               reason: reason ?? null,
-              candidacy: null,
-              createdAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString(),
-              deletedAt: null,
-            } as CandidacyStageEventWorkspaceEntity;
-          },
-        );
+            } as any,
+            // oxlint-disable-next-line typescript/no-explicit-any
+            transactionManager as any,
+          );
+
+          const eventId = eventInsert.identifiers[0]?.id as string;
+
+          return {
+            id: eventId,
+            candidacyId: candidacy.id,
+            stage: to,
+            stageFrom: from,
+            stageTo: to,
+            transitionedAt,
+            transitionedById: actorId ?? null,
+            actorKind: actorKind ?? null,
+            reason: reason ?? null,
+            candidacy: null,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+            deletedAt: null,
+          } as CandidacyStageEventWorkspaceEntity;
+        });
       },
     );
   }
@@ -145,8 +139,7 @@ export class CandidacyStateTransitionService {
         }
 
         // Check OffLimitsRestriction records related to the person or company
-        const offLimitsResult =
-          await this.offLimitsGuardService.check();
+        const offLimitsResult = await this.offLimitsGuardService.check();
 
         if (offLimitsResult.status !== 'CLEAR') {
           return {

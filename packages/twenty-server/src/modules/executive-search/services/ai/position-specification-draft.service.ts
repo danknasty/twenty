@@ -45,9 +45,7 @@ export type PositionSpecInput = {
  */
 @Injectable()
 export class PositionSpecificationDraftService {
-  private readonly logger = new Logger(
-    PositionSpecificationDraftService.name,
-  );
+  private readonly logger = new Logger(PositionSpecificationDraftService.name);
 
   /** Current prompt version for this capability. */
   static readonly PROMPT_VERSION = '1.0.0';
@@ -116,9 +114,8 @@ export class PositionSpecificationDraftService {
   private sanitizeInput(input: PositionSpecInput): PositionSpecInput {
     const fieldTokens = this.extractFieldTokens(input);
 
-    const filtered = this.aiContextFirewallService.filterProhibited(
-      fieldTokens,
-    );
+    const filtered =
+      this.aiContextFirewallService.filterProhibited(fieldTokens);
 
     const redactedRequirements = input.requirements.map((req) =>
       this.redactIfProhibited(req, fieldTokens, filtered),
@@ -184,7 +181,6 @@ export class PositionSpecificationDraftService {
    * Compute a SHA-256 hash of the input for provenance.
    */
   private computeHash(text: string): string {
-
     return crypto.createHash('sha256').update(text).digest('hex');
   }
 

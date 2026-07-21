@@ -52,9 +52,7 @@ export type CandidatePresentationInput = {
  */
 @Injectable()
 export class CandidatePresentationDraftService {
-  private readonly logger = new Logger(
-    CandidatePresentationDraftService.name,
-  );
+  private readonly logger = new Logger(CandidatePresentationDraftService.name);
 
   /** Current prompt version for this capability. */
   static readonly PROMPT_VERSION = '1.0.0';
@@ -120,10 +118,7 @@ export class CandidatePresentationDraftService {
       assignmentId,
       model: CandidatePresentationDraftService.MODEL,
       promptVersion: CandidatePresentationDraftService.PROMPT_VERSION,
-      inputRefs: [
-        sanitizedInput.currentCompany,
-        sanitizedInput.currentRole,
-      ],
+      inputRefs: [sanitizedInput.currentCompany, sanitizedInput.currentRole],
       inputHashes: [inputHash],
       redactionManifest: [],
       guardrailChecks: [
@@ -142,9 +137,8 @@ export class CandidatePresentationDraftService {
   ): CandidatePresentationInput {
     const fieldTokens = this.extractFieldTokens(input);
 
-    const filtered = this.aiContextFirewallService.filterProhibited(
-      fieldTokens,
-    );
+    const filtered =
+      this.aiContextFirewallService.filterProhibited(fieldTokens);
 
     const redactedCandidateName = this.redactIfProhibited(
       input.candidateName,
@@ -199,9 +193,7 @@ export class CandidatePresentationDraftService {
   /**
    * Extract field-like tokens for firewall screening.
    */
-  private extractFieldTokens(
-    input: CandidatePresentationInput,
-  ): string[] {
+  private extractFieldTokens(input: CandidatePresentationInput): string[] {
     const tokens: string[] = [];
 
     const textFields = [
@@ -225,9 +217,7 @@ export class CandidatePresentationDraftService {
     }
 
     for (const achievement of input.achievements) {
-      const matches = achievement.match(
-        /\b([a-zA-Z_][a-zA-Z0-9_.]*)\b/g,
-      ) ?? [];
+      const matches = achievement.match(/\b([a-zA-Z_][a-zA-Z0-9_.]*)\b/g) ?? [];
 
       tokens.push(...matches);
     }
@@ -263,7 +253,6 @@ export class CandidatePresentationDraftService {
    * Compute a SHA-256 hash of the input for provenance.
    */
   private computeHash(text: string): string {
-
     return crypto.createHash('sha256').update(text).digest('hex');
   }
 

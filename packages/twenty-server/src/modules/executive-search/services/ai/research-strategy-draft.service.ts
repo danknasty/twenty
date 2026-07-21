@@ -114,14 +114,11 @@ export class ResearchStrategyDraftService {
   /**
    * Sanitize input through the AI context firewall.
    */
-  private sanitizeInput(
-    input: ResearchStrategyInput,
-  ): ResearchStrategyInput {
+  private sanitizeInput(input: ResearchStrategyInput): ResearchStrategyInput {
     const fieldTokens = this.extractFieldTokens(input);
 
-    const filtered = this.aiContextFirewallService.filterProhibited(
-      fieldTokens,
-    );
+    const filtered =
+      this.aiContextFirewallService.filterProhibited(fieldTokens);
 
     const redactedSkills = input.keySkills.map((skill) =>
       this.redactIfProhibited(skill, fieldTokens, filtered),
@@ -187,7 +184,6 @@ export class ResearchStrategyDraftService {
    * Compute a SHA-256 hash of the input for provenance.
    */
   private computeHash(text: string): string {
-
     return crypto.createHash('sha256').update(text).digest('hex');
   }
 

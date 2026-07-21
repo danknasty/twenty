@@ -5,39 +5,34 @@ import {
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
 
 export const computeStandardRetentionActionLogViewFields = (
-  args: Omit<
-    CreateStandardViewFieldArgs<'retentionActionLog'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewFieldArgs<'retentionActionLog'>, 'context'>,
 ): Record<string, FlatViewField> => {
   return {
     // allRetentionActionLogs (table view)
-    allRetentionActionLogsActionType:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'retentionActionLog',
-        context: {
-          viewName: 'allRetentionActionLogs',
-          viewFieldName: 'actionType',
-          fieldName: 'actionType',
-          position: 0,
-          isVisible: true,
-          size: 150,
-        },
-      }),
-    allRetentionActionLogsInitiatorSystem:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'retentionActionLog',
-        context: {
-          viewName: 'allRetentionActionLogs',
-          viewFieldName: 'initiatorSystem',
-          fieldName: 'initiatorSystem',
-          position: 1,
-          isVisible: true,
-          size: 150,
-        },
-      }),
+    allRetentionActionLogsActionType: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'retentionActionLog',
+      context: {
+        viewName: 'allRetentionActionLogs',
+        viewFieldName: 'actionType',
+        fieldName: 'actionType',
+        position: 0,
+        isVisible: true,
+        size: 150,
+      },
+    }),
+    allRetentionActionLogsInitiatorSystem: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'retentionActionLog',
+      context: {
+        viewName: 'allRetentionActionLogs',
+        viewFieldName: 'initiatorSystem',
+        fieldName: 'initiatorSystem',
+        position: 1,
+        isVisible: true,
+        size: 150,
+      },
+    }),
     allRetentionActionLogsTargetTwentyEntityName:
       createStandardViewFieldFlatMetadata({
         ...args,
@@ -64,45 +59,42 @@ export const computeStandardRetentionActionLogViewFields = (
           size: 200,
         },
       }),
-    allRetentionActionLogsStatus:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'retentionActionLog',
-        context: {
-          viewName: 'allRetentionActionLogs',
-          viewFieldName: 'status',
-          fieldName: 'status',
-          position: 4,
-          isVisible: true,
-          size: 150,
-        },
-      }),
-    allRetentionActionLogsRequestedAt:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'retentionActionLog',
-        context: {
-          viewName: 'allRetentionActionLogs',
-          viewFieldName: 'requestedAt',
-          fieldName: 'requestedAt',
-          position: 5,
-          isVisible: true,
-          size: 150,
-        },
-      }),
-    allRetentionActionLogsCreatedAt:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'retentionActionLog',
-        context: {
-          viewName: 'allRetentionActionLogs',
-          viewFieldName: 'createdAt',
-          fieldName: 'createdAt',
-          position: 6,
-          isVisible: true,
-          size: 150,
-        },
-      }),
+    allRetentionActionLogsStatus: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'retentionActionLog',
+      context: {
+        viewName: 'allRetentionActionLogs',
+        viewFieldName: 'status',
+        fieldName: 'status',
+        position: 4,
+        isVisible: true,
+        size: 150,
+      },
+    }),
+    allRetentionActionLogsRequestedAt: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'retentionActionLog',
+      context: {
+        viewName: 'allRetentionActionLogs',
+        viewFieldName: 'requestedAt',
+        fieldName: 'requestedAt',
+        position: 5,
+        isVisible: true,
+        size: 150,
+      },
+    }),
+    allRetentionActionLogsCreatedAt: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'retentionActionLog',
+      context: {
+        viewName: 'allRetentionActionLogs',
+        viewFieldName: 'createdAt',
+        fieldName: 'createdAt',
+        position: 6,
+        isVisible: true,
+        size: 150,
+      },
+    }),
     // retentionActionLogRecordPageFields (fields widget)
     retentionActionLogRecordPageFieldsActionType:
       createStandardViewFieldFlatMetadata({

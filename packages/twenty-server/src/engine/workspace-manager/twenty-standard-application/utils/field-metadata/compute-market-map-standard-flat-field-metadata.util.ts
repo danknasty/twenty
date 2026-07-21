@@ -25,10 +25,7 @@ export const buildMarketMapStandardFlatFieldMetadatas = ({
 }: Omit<
   CreateStandardFieldArgs<'marketMap', FieldMetadataType>,
   'context'
->): Record<
-  AllStandardObjectFieldName<'marketMap'>,
-  FlatFieldMetadata
-> => ({
+>): Record<AllStandardObjectFieldName<'marketMap'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,

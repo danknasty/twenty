@@ -30,7 +30,9 @@ describe('ExecutiveSyncProcessOutboxJob', () => {
   });
 
   it('should log error when projectionService throws but NOT rethrow', async () => {
-    const loggerErrorSpy = jest.spyOn(Logger.prototype, 'error').mockImplementation();
+    const loggerErrorSpy = jest
+      .spyOn(Logger.prototype, 'error')
+      .mockImplementation();
     const projectionError = new Error('Directus connection refused');
 
     mockProjectionService.deliver.mockRejectedValue(projectionError);

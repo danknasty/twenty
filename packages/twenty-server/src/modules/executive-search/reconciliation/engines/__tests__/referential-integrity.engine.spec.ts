@@ -1,12 +1,9 @@
 import { In } from 'typeorm';
 import { Test, type TestingModule } from '@nestjs/testing';
 
-import { GlobalWorkspaceOrmManager } from
-  'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
-import { ReferentialIntegrityEngine } from
-  'src/modules/executive-search/reconciliation/engines/referential-integrity.engine';
-import { ReconciliationEngineRegistry } from
-  'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
+import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
+import { ReferentialIntegrityEngine } from 'src/modules/executive-search/reconciliation/engines/referential-integrity.engine';
+import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
 
 // The real GlobalWorkspaceOrmManager pulls in the twenty-config graph, which
 // fails to load under jest. Mock the manager so it (and its transitive imports)
@@ -37,7 +34,11 @@ type LinkSeed = {
   externalRecordId: string;
 };
 
-type RecordSeed = { id: string; personId?: string | null; searchAssignmentId?: string | null };
+type RecordSeed = {
+  id: string;
+  personId?: string | null;
+  searchAssignmentId?: string | null;
+};
 
 type SeedConfig = {
   persons?: RecordSeed[];
@@ -208,22 +209,20 @@ describe('ReferentialIntegrityEngine', () => {
 
     // l1 (person p-missing) and l5 (candidacy cand-missing)
     expect(orphanLinks).toHaveLength(2);
-    expect(orphanLinks.map((f) => f.recordId).sort()).toEqual(
-      ['cand-missing', 'p-missing'],
-    );
+    expect(orphanLinks.map((f) => f.recordId).sort()).toEqual([
+      'cand-missing',
+      'p-missing',
+    ]);
     expect(orphanLinks.every((f) => f.severity === 'HIGH')).toBe(true);
 
     // l3 references missing person, l4 references missing assignment
     expect(stale).toHaveLength(2);
     expect(
-      stale.some(
-        (f) => f.recordId === 'cand1' && f.detail.includes('person'),
-      ),
+      stale.some((f) => f.recordId === 'cand1' && f.detail.includes('person')),
     ).toBe(true);
     expect(
       stale.some(
-        (f) =>
-          f.recordId === 'cand2' && f.detail.includes('searchAssignment'),
+        (f) => f.recordId === 'cand2' && f.detail.includes('searchAssignment'),
       ),
     ).toBe(true);
     expect(stale.every((f) => f.severity === 'MEDIUM')).toBe(true);
@@ -234,9 +233,7 @@ describe('ReferentialIntegrityEngine', () => {
   it('emits no findings when every link resolves', async () => {
     applySeed({
       persons: [{ id: 'p1' }],
-      candidacies: [
-        { id: 'cand1', personId: 'p1', searchAssignmentId: 'a1' },
-      ],
+      candidacies: [{ id: 'cand1', personId: 'p1', searchAssignmentId: 'a1' }],
       assignments: [{ id: 'a1' }],
       links: [
         {

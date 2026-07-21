@@ -265,7 +265,9 @@ export const buildExecutiveProfileStandardFlatFieldMetadatas = ({
       fieldName: 'isBoardReady',
       type: FieldMetadataType.BOOLEAN,
       label: i18nLabel(msg`Board Ready`),
-      description: i18nLabel(msg`Whether the executive is ready for board service`),
+      description: i18nLabel(
+        msg`Whether the executive is ready for board service`,
+      ),
       icon: 'IconBuilding',
       isNullable: true,
       isUIEditable: true,

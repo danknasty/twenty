@@ -15,11 +15,7 @@ import { CriterionAssessmentShadowService } from 'src/modules/executive-search/s
     WorkspaceEventEmitterModule,
     FirewallModule,
   ],
-  providers: [
-    CriterionAssessmentShadowService,
-  ],
-  exports: [
-    CriterionAssessmentShadowService,
-  ],
+  providers: [CriterionAssessmentShadowService],
+  exports: [CriterionAssessmentShadowService],
 })
 export class CriterionAssessmentShadowModule {}

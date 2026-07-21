@@ -2,13 +2,16 @@ import { Test, type TestingModule } from '@nestjs/testing';
 
 import { FeatureFlagKey } from 'twenty-shared/types';
 
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => {
-  return {
-    FeatureFlagService: jest.fn().mockImplementation(() => ({
-      isFeatureEnabled: jest.fn(),
-    })),
-  };
-});
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => {
+    return {
+      FeatureFlagService: jest.fn().mockImplementation(() => ({
+        isFeatureEnabled: jest.fn(),
+      })),
+    };
+  },
+);
 
 import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
 import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
@@ -111,9 +114,7 @@ describe('AssignmentIntakeAssistantService', () => {
 
       const result = await service.draftIntake('workspace-1', mockInput);
 
-      expect(result!.content).toContain(
-        DraftingGateService.DRAFT_LABEL,
-      );
+      expect(result!.content).toContain(DraftingGateService.DRAFT_LABEL);
     });
 
     it('handles empty notes gracefully', async () => {

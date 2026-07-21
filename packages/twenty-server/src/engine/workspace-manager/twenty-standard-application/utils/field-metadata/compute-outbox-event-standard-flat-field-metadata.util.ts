@@ -11,10 +11,7 @@ export const buildOutboxEventStandardFlatFieldMetadatas = ({
 }: Omit<
   CreateStandardFieldArgs<'outboxEvent', FieldMetadataType>,
   'context'
->): Record<
-  AllStandardObjectFieldName<'outboxEvent'>,
-  FlatFieldMetadata
-> => ({
+>): Record<AllStandardObjectFieldName<'outboxEvent'>, FlatFieldMetadata> => ({
   // System fields
   id: createStandardFieldFlatMetadata({
     objectName,

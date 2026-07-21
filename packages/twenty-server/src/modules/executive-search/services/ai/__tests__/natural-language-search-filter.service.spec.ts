@@ -4,11 +4,14 @@ import { AiContextFirewallService } from 'src/modules/executive-search/firewall/
 import { NaturalLanguageSearchFilterService } from 'src/modules/executive-search/services/ai/natural-language-search-filter.service';
 
 // Mock FeatureFlagService to avoid importing the full engine dependency chain
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => ({
-  FeatureFlagService: jest.fn().mockImplementation(() => ({
-    isFeatureEnabled: jest.fn(),
-  })),
-}));
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => ({
+    FeatureFlagService: jest.fn().mockImplementation(() => ({
+      isFeatureEnabled: jest.fn(),
+    })),
+  }),
+);
 
 import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
 
@@ -20,7 +23,8 @@ describe('NaturalLanguageSearchFilterService', () => {
   const workspaceId = 'workspace-1';
 
   beforeEach(async () => {
-    mockFeatureFlagService = new FeatureFlagService() as jest.Mocked<FeatureFlagService>;
+    mockFeatureFlagService =
+      new FeatureFlagService() as jest.Mocked<FeatureFlagService>;
 
     mockAiContextFirewallService = {
       assertAiContextAllowlistSafe: jest.fn(),
@@ -80,7 +84,10 @@ describe('NaturalLanguageSearchFilterService', () => {
       // Should detect CFO title
       expect(
         result.criteria.some(
-          (c) => c.field === 'currentTitle' && c.operator === 'contains' && c.value === 'CFO',
+          (c) =>
+            c.field === 'currentTitle' &&
+            c.operator === 'contains' &&
+            c.value === 'CFO',
         ),
       ).toBe(true);
 

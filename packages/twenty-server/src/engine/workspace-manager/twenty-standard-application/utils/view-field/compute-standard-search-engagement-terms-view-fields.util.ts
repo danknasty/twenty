@@ -44,19 +44,18 @@ export const computeStandardSearchEngagementTermsViewFields = (
         size: 150,
       },
     }),
-    allSearchEngagementTermsClientCompany:
-      createStandardViewFieldFlatMetadata({
-        ...args,
-        objectName: 'searchEngagementTerms',
-        context: {
-          viewName: 'allSearchEngagementTerms',
-          viewFieldName: 'clientCompany',
-          fieldName: 'clientCompany',
-          position: 3,
-          isVisible: true,
-          size: 150,
-        },
-      }),
+    allSearchEngagementTermsClientCompany: createStandardViewFieldFlatMetadata({
+      ...args,
+      objectName: 'searchEngagementTerms',
+      context: {
+        viewName: 'allSearchEngagementTerms',
+        viewFieldName: 'clientCompany',
+        fieldName: 'clientCompany',
+        position: 3,
+        isVisible: true,
+        size: 150,
+      },
+    }),
     allSearchEngagementTermsOpportunity: createStandardViewFieldFlatMetadata({
       ...args,
       objectName: 'searchEngagementTerms',

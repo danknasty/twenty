@@ -3,9 +3,15 @@ import * as path from 'path';
 
 import { FirewallContext } from 'src/modules/executive-search-firewall/constants/firewall-contexts.constant';
 import { FIREWALL_PROHIBITED_SELECTORS } from 'src/modules/executive-search-firewall/constants/firewall-prohibited-selectors.constant';
-import { FIREWALL_DENYLIST_PATTERNS, DenylistRule } from 'src/modules/executive-search-firewall/constants/firewall-denylist-patterns.constant';
+import {
+  FIREWALL_DENYLIST_PATTERNS,
+  DenylistRule,
+} from 'src/modules/executive-search-firewall/constants/firewall-denylist-patterns.constant';
 
-const CSV_ROOT = path.resolve(__dirname, '../../../../../../docs/executive-search');
+const CSV_ROOT = path.resolve(
+  __dirname,
+  '../../../../../../docs/executive-search',
+);
 
 interface FirewallCsvRow {
   prohibited_selector: string;
@@ -21,9 +27,7 @@ interface DenylistCsvRow {
   reason: string;
 }
 
-const parseCsv = <T extends Record<string, string>>(
-  content: string,
-): T[] => {
+const parseCsv = <T extends Record<string, string>>(content: string): T[] => {
   const lines = content.trim().split('\n');
   const headers = lines[0].split(',').map((h) => h.trim());
   return lines.slice(1).map((line) => {
@@ -138,9 +142,7 @@ describe('firewall-csv-sync', () => {
         );
 
         expect(matchingEntry).toBeDefined();
-        expect(matchingEntry!.dataClassification).toBe(
-          row.data_classification,
-        );
+        expect(matchingEntry!.dataClassification).toBe(row.data_classification);
         expect(matchingEntry!.rule).toBe(row.rule as DenylistRule);
         expect(matchingEntry!.reason).toBe(row.reason);
       }

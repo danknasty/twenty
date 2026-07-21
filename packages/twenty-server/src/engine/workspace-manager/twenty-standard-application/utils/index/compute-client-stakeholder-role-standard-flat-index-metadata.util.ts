@@ -13,10 +13,7 @@ export const buildClientStakeholderRoleStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'clientStakeholderRole'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'clientStakeholderRole'>, 'context'>): Record<
   AllStandardObjectIndexName<'clientStakeholderRole'>,
   FlatIndexMetadata
 > => ({

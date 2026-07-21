@@ -165,7 +165,9 @@ export const buildOffLimitsRestrictionStandardFlatFieldMetadatas = ({
       morphId: null,
       fieldName: 'clientCompany',
       label: i18nLabel(msg`Client Company`),
-      description: i18nLabel(msg`Client whose agreement created the restriction`),
+      description: i18nLabel(
+        msg`Client whose agreement created the restriction`,
+      ),
       icon: 'IconBuilding',
       isNullable: true,
       isUIEditable: false,

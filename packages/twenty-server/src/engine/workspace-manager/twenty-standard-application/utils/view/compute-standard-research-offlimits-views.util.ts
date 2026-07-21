@@ -25,10 +25,7 @@ const buildStandardResearchOfflimitsViews = <P extends string>(
 });
 
 export const computeStandardOffLimitsRestrictionViews = (
-  args: Omit<
-    CreateStandardViewArgs<'offLimitsRestriction'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewArgs<'offLimitsRestriction'>, 'context'>,
 ) => buildStandardResearchOfflimitsViews('allOffLimitsRestrictions', args);
 
 export const computeStandardConflictCheckViews = (
@@ -36,10 +33,7 @@ export const computeStandardConflictCheckViews = (
 ) => buildStandardResearchOfflimitsViews('allConflictChecks', args);
 
 export const computeStandardConfidentialityRecordViews = (
-  args: Omit<
-    CreateStandardViewArgs<'confidentialityRecord'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewArgs<'confidentialityRecord'>, 'context'>,
 ) => buildStandardResearchOfflimitsViews('allConfidentialityRecords', args);
 
 export const computeStandardMarketMapViews = (
@@ -55,10 +49,7 @@ export const computeStandardResearchCandidateViews = (
 ) => buildStandardResearchOfflimitsViews('allResearchCandidates', args);
 
 export const computeStandardResearchStrategyViews = (
-  args: Omit<
-    CreateStandardViewArgs<'researchStrategy'>,
-    'context'
-  >,
+  args: Omit<CreateStandardViewArgs<'researchStrategy'>, 'context'>,
 ) => buildStandardResearchOfflimitsViews('allResearchStrategies', args);
 
 export const computeStandardTargetCompanyViews = (

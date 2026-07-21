@@ -12,13 +12,7 @@ import { WorkspaceEventEmitterModule } from 'src/engine/workspace-event-emitter/
     TypeOrmModule.forFeature([WorkspaceEntity]),
     WorkspaceEventEmitterModule,
   ],
-  providers: [
-    TransactionalOutboxService,
-    DrainOutboxJob,
-    DrainOutboxCronJob,
-  ],
-  exports: [
-    TransactionalOutboxService,
-  ],
+  providers: [TransactionalOutboxService, DrainOutboxJob, DrainOutboxCronJob],
+  exports: [TransactionalOutboxService],
 })
 export class TransactionalOutboxModule {}

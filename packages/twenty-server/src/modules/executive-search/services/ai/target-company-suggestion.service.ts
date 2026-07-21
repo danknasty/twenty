@@ -6,7 +6,10 @@ import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/service
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { type WorkspaceAuthContext } from 'src/engine/core-modules/auth/types/workspace-auth-context.type';
 import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
-import { ExecutiveSearchException, ExecutiveSearchExceptionCode } from 'src/modules/executive-search/exceptions/executive-search.exception';
+import {
+  ExecutiveSearchException,
+  ExecutiveSearchExceptionCode,
+} from 'src/modules/executive-search/exceptions/executive-search.exception';
 import { PositionSpecificationWorkspaceEntity } from 'src/modules/executive-search/standard-objects/position-specification.workspace-entity';
 import { MarketMapWorkspaceEntity } from 'src/modules/executive-search/standard-objects/market-map.workspace-entity';
 import { TargetCompanyWorkspaceEntity } from 'src/modules/executive-search/standard-objects/target-company.workspace-entity';
@@ -272,14 +275,13 @@ export class TargetCompanySuggestionService {
       return `No target companies found for position "${positionName}". No market maps exist for this assignment — consider creating a market map first.`;
     }
 
-    const tiers = suggestions
-      .reduce(
-        (acc, s) => {
-          acc[s.tier] = (acc[s.tier] || 0) + 1;
-          return acc;
-        },
-        {} as Record<string, number>,
-      );
+    const tiers = suggestions.reduce(
+      (acc, s) => {
+        acc[s.tier] = (acc[s.tier] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
     const tierSummary = Object.entries(tiers)
       .map(([tier, count]) => `${count} ${tier.toLowerCase()}`)

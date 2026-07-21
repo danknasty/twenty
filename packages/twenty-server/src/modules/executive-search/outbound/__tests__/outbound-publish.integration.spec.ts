@@ -113,7 +113,10 @@ describe('OutboundPublishIntegration', () => {
       // Verify allowlisting — confidential fields excluded
       expect(input.payload).toHaveProperty('id', companyId);
       expect(input.payload).toHaveProperty('name', 'Integration Corp');
-      expect(input.payload).toHaveProperty('domainName', 'integration-corp.com');
+      expect(input.payload).toHaveProperty(
+        'domainName',
+        'integration-corp.com',
+      );
       expect(input.payload).toHaveProperty('website', 'integration-corp.com');
       expect(input.payload).toHaveProperty('description');
       expect(input.payload).toHaveProperty('industry', 'Technology');
@@ -173,9 +176,13 @@ describe('OutboundPublishIntegration', () => {
       };
 
       // Enqueue returns an existing entity the second time (simulating dedup)
-      const existingEntity = { id: 'existing-outbox' } as ExternalSyncOutboxWorkspaceEntity;
+      const existingEntity = {
+        id: 'existing-outbox',
+      } as ExternalSyncOutboxWorkspaceEntity;
       mockOutboxService.enqueue
-        .mockResolvedValueOnce({ id: 'outbox-new' } as ExternalSyncOutboxWorkspaceEntity)
+        .mockResolvedValueOnce({
+          id: 'outbox-new',
+        } as ExternalSyncOutboxWorkspaceEntity)
         .mockResolvedValueOnce(existingEntity);
 
       await listener.handleCompanyCreated(payload);
@@ -183,10 +190,12 @@ describe('OutboundPublishIntegration', () => {
 
       expect(mockOutboxService.enqueue).toHaveBeenCalledTimes(2);
 
-      const key1 = (mockOutboxService.enqueue.mock.calls[0][0] as OutboxEventInput)
-        .domainIdempotencyKey;
-      const key2 = (mockOutboxService.enqueue.mock.calls[1][0] as OutboxEventInput)
-        .domainIdempotencyKey;
+      const key1 = (
+        mockOutboxService.enqueue.mock.calls[0][0] as OutboxEventInput
+      ).domainIdempotencyKey;
+      const key2 = (
+        mockOutboxService.enqueue.mock.calls[1][0] as OutboxEventInput
+      ).domainIdempotencyKey;
 
       // Both calls produce the same idempotency key
       expect(key1).toBe(key2);

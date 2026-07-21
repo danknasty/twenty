@@ -1,7 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
-import { IdentityMatchingService, type MatchResult } from 'src/modules/executive-search/migration/services/identity-matching.service';
+import {
+  IdentityMatchingService,
+  type MatchResult,
+} from 'src/modules/executive-search/migration/services/identity-matching.service';
 import { AmbiguousMatchQueueService } from 'src/modules/executive-search/migration/services/ambiguous-match-queue.service';
 import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
 import { ExternalIdentityMatchQueueWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-identity-match-queue.workspace-entity';
@@ -97,7 +100,13 @@ export class BackfillService {
       }
 
       try {
-        await this.backfillPair(workspaceId, pair, checkpointKey, report, dryRun);
+        await this.backfillPair(
+          workspaceId,
+          pair,
+          checkpointKey,
+          report,
+          dryRun,
+        );
       } catch (error) {
         this.logger.error(
           `Backfill failed for pair "${pair.directusCollection}" in workspace ${workspaceId}: ${String(error)}`,
@@ -172,11 +181,12 @@ export class BackfillService {
         if (dryRun) {
           report.skips += ambiguous.length;
         } else {
-          const enqueued = await this.ambiguousMatchQueueService.enqueueUnmatched(
-            workspaceId,
-            ambiguous,
-            pair.directusCollection,
-          );
+          const enqueued =
+            await this.ambiguousMatchQueueService.enqueueUnmatched(
+              workspaceId,
+              ambiguous,
+              pair.directusCollection,
+            );
           report.skips += enqueued;
         }
       }
@@ -188,10 +198,7 @@ export class BackfillService {
 
       // 4. Append candidate stage events.
       if (!dryRun) {
-        const stageCount = await this.backfillStageEvents(
-          workspaceId,
-          pair,
-        );
+        const stageCount = await this.backfillStageEvents(workspaceId, pair);
         report.stageEvents += stageCount;
       }
 
@@ -394,9 +401,8 @@ export class BackfillService {
           where: { candidacyId: appLink.twentyRecordId },
         });
 
-        const alreadyBackfilled = existingEvents.some(
-          (e) =>
-            e.notes?.includes(`"sourceEventId":"${directusEventId}"`),
+        const alreadyBackfilled = existingEvents.some((e) =>
+          e.notes?.includes(`"sourceEventId":"${directusEventId}"`),
         );
 
         if (alreadyBackfilled) {
@@ -406,7 +412,8 @@ export class BackfillService {
         await stageRepo.save({
           candidacyId: appLink.twentyRecordId,
           stage: String(event.stage ?? event.stageTo ?? ''),
-          stageFrom: String(event.stageFrom ?? event.previousStage ?? '') || null,
+          stageFrom:
+            String(event.stageFrom ?? event.previousStage ?? '') || null,
           stageTo: String(event.stageTo ?? event.stage ?? ''),
           transitionedAt: new Date(
             event.transitionedAt ?? event.date_created ?? Date.now(),
@@ -597,7 +604,9 @@ export class BackfillService {
     // Minimal payload: the `name` field works for most entities.
     // Entities without a `name` column will need pair-specific handling
     // in future refinements; for now, let the save fail with a clear error.
-    let payload: Record<string, unknown> = { name: `[Migration] ${entityName}` };
+    let payload: Record<string, unknown> = {
+      name: `[Migration] ${entityName}`,
+    };
 
     // Person entity uses a JSON name column, not a flat TEXT.
     if (entityName === 'person') {

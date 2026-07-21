@@ -139,19 +139,17 @@ describe('OutboundEventMapperService', () => {
 
     describe('DELETED action', () => {
       it('should return eventType "company.projection_deleted"', () => {
-        const result = service.mapCompanyEvent(
-          DatabaseEventAction.DELETED,
-          { id: 'company-1' },
-        );
+        const result = service.mapCompanyEvent(DatabaseEventAction.DELETED, {
+          id: 'company-1',
+        });
 
         expect(result.eventType).toBe('company.projection_deleted');
       });
 
       it('should return payload with only id', () => {
-        const result = service.mapCompanyEvent(
-          DatabaseEventAction.DELETED,
-          { id: 'company-1' },
-        );
+        const result = service.mapCompanyEvent(DatabaseEventAction.DELETED, {
+          id: 'company-1',
+        });
 
         expect(result.payload).toEqual({ id: 'company-1' });
         expect(Object.keys(result.payload)).toEqual(['id']);
@@ -160,19 +158,17 @@ describe('OutboundEventMapperService', () => {
 
     describe('DESTROYED action', () => {
       it('should return eventType "company.projection_deleted"', () => {
-        const result = service.mapCompanyEvent(
-          DatabaseEventAction.DESTROYED,
-          { id: 'company-2' },
-        );
+        const result = service.mapCompanyEvent(DatabaseEventAction.DESTROYED, {
+          id: 'company-2',
+        });
 
         expect(result.eventType).toBe('company.projection_deleted');
       });
 
       it('should return payload with only id', () => {
-        const result = service.mapCompanyEvent(
-          DatabaseEventAction.DESTROYED,
-          { id: 'company-2' },
-        );
+        const result = service.mapCompanyEvent(DatabaseEventAction.DESTROYED, {
+          id: 'company-2',
+        });
 
         expect(result.payload).toEqual({ id: 'company-2' });
         expect(Object.keys(result.payload)).toEqual(['id']);
@@ -196,28 +192,21 @@ describe('OutboundEventMapperService', () => {
 
       it('should throw on unknown DatabaseEventAction', () => {
         expect(() =>
-          service.mapCompanyEvent(
-            'UNKNOWN_ACTION' as DatabaseEventAction,
-            { id: 'c-1' },
-          ),
+          service.mapCompanyEvent('UNKNOWN_ACTION' as DatabaseEventAction, {
+            id: 'c-1',
+          }),
         ).toThrow('unknown DatabaseEventAction');
       });
 
       it('should throw on RESTORED action', () => {
         expect(() =>
-          service.mapCompanyEvent(
-            DatabaseEventAction.RESTORED,
-            { id: 'c-1' },
-          ),
+          service.mapCompanyEvent(DatabaseEventAction.RESTORED, { id: 'c-1' }),
         ).toThrow('unknown DatabaseEventAction');
       });
 
       it('should throw on UPSERTED action', () => {
         expect(() =>
-          service.mapCompanyEvent(
-            DatabaseEventAction.UPSERTED,
-            { id: 'c-1' },
-          ),
+          service.mapCompanyEvent(DatabaseEventAction.UPSERTED, { id: 'c-1' }),
         ).toThrow('unknown DatabaseEventAction');
       });
     });

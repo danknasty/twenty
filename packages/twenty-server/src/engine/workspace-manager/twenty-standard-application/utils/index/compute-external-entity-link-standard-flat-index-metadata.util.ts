@@ -29,17 +29,22 @@ export const buildExternalEntityLinkStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex: createStandardIndexFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      indexName: 'systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex',
-      relatedFieldNames: ['system', 'twentyObjectUniversalIdentifier', 'twentyRecordId'],
-      isUnique: true,
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
+  systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex:
+    createStandardIndexFlatMetadata({
+      objectName,
+      workspaceId,
+      context: {
+        indexName: 'systemTwentyObjectUniversalIdentifierTwentyRecordIdIndex',
+        relatedFieldNames: [
+          'system',
+          'twentyObjectUniversalIdentifier',
+          'twentyRecordId',
+        ],
+        isUnique: true,
+      },
+      standardObjectMetadataRelatedEntityIds,
+      dependencyFlatEntityMaps,
+      twentyStandardApplicationId,
+      now,
+    }),
 });

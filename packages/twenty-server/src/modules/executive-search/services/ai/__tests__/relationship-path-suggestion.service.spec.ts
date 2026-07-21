@@ -7,11 +7,14 @@ import { ExecutiveProfileWorkspaceEntity } from 'src/modules/executive-search/st
 import { PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
 
 // Mock FeatureFlagService to avoid importing the full engine dependency chain
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => ({
-  FeatureFlagService: jest.fn().mockImplementation(() => ({
-    isFeatureEnabled: jest.fn(),
-  })),
-}));
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => ({
+    FeatureFlagService: jest.fn().mockImplementation(() => ({
+      isFeatureEnabled: jest.fn(),
+    })),
+  }),
+);
 
 // Mock GlobalWorkspaceOrmManager
 jest.mock(

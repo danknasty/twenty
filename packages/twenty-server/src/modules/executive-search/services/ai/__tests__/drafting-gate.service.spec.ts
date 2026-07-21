@@ -45,9 +45,7 @@ describe('DraftingGateService', () => {
       expect(result.content).toContain('AI DRAFT — Requires Human Review');
       expect(result.content).toContain(content);
       expect(result.status).toBe(AiDraftStatus.PENDING_REVIEW);
-      expect(result.provenance.capability).toBe(
-        AiCapability.ASSIGNMENT_INTAKE,
-      );
+      expect(result.provenance.capability).toBe(AiCapability.ASSIGNMENT_INTAKE);
       expect(result.provenance.subject).toBe('Test Subject');
       expect(result.provenance.reviewDecision).toBeUndefined();
     });
@@ -146,9 +144,7 @@ describe('DraftingGateService', () => {
       const superseded = service.supersede(draft);
 
       expect(superseded.content).toBe(draft.content);
-      expect(superseded.provenance.capability).toBe(
-        mockProvenance.capability,
-      );
+      expect(superseded.provenance.capability).toBe(mockProvenance.capability);
     });
   });
 

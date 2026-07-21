@@ -54,6 +54,10 @@ export class PersonWorkspaceEntity extends BaseWorkspaceEntity {
   searchVector: string;
 
   // Client CRM relations
-  clientStakeholderRoles: EntityRelation<ClientStakeholderRoleWorkspaceEntity[]>;
-  billingContactForClientAccountProfiles: EntityRelation<ClientAccountProfileWorkspaceEntity[]>;
+  clientStakeholderRoles: EntityRelation<
+    ClientStakeholderRoleWorkspaceEntity[]
+  >;
+  billingContactForClientAccountProfiles: EntityRelation<
+    ClientAccountProfileWorkspaceEntity[]
+  >;
 }

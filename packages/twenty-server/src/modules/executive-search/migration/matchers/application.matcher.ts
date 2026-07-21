@@ -143,8 +143,7 @@ export const applicationMatcher: EntityMatcher = {
         );
 
         const personMatch =
-          hasExecutive &&
-          executiveExternalId
+          hasExecutive && executiveExternalId
             ? personIds.includes(executiveExternalId)
             : false;
         const assignmentMatch =
@@ -184,9 +183,11 @@ export const applicationMatcher: EntityMatcher = {
       return scored;
     };
 
-    return runPrecedence(externalId, DIRECTUS_COLLECTION, PRIMARY_TWENTY_ENTITY, [
-      atsUuidKey,
-      compositeKey,
-    ]);
+    return runPrecedence(
+      externalId,
+      DIRECTUS_COLLECTION,
+      PRIMARY_TWENTY_ENTITY,
+      [atsUuidKey, compositeKey],
+    );
   },
 };

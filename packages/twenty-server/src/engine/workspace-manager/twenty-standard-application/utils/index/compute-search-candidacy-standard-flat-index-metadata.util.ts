@@ -12,10 +12,7 @@ export const buildSearchCandidacyStandardFlatIndexMetadatas = ({
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}: Omit<
-  CreateStandardIndexArgs<'searchCandidacy'>,
-  'context'
->): Record<
+}: Omit<CreateStandardIndexArgs<'searchCandidacy'>, 'context'>): Record<
   AllStandardObjectIndexName<'searchCandidacy'>,
   FlatIndexMetadata
 > => ({

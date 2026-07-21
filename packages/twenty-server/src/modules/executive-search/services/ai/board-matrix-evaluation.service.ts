@@ -81,7 +81,7 @@ export class BoardMatrixEvaluationService {
 
     if (!umbrellaEnabled) {
       throw new ExecutiveSearchException(
-        ExecutiveSearchExceptionCode.EXECUTIVE_SEARCH_AI_DISABLED,
+        ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
         'Executive Search AI candidate features are disabled',
       );
     }
@@ -93,7 +93,7 @@ export class BoardMatrixEvaluationService {
 
     if (!boardMatrixEnabled) {
       throw new ExecutiveSearchException(
-        ExecutiveSearchExceptionCode.BOARD_MATRIX_AI_DISABLED,
+        ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
         'Board Matrix AI evaluation is disabled',
       );
     }

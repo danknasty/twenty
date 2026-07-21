@@ -66,14 +66,13 @@ import { buildWorkflowRunStandardFlatFieldMetadatas } from 'src/engine/workspace
 import { buildWorkflowStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-standard-flat-field-metadata.util';
 import { buildWorkflowVersionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-version-standard-flat-field-metadata.util';
 import { buildSearchEngagementTermsStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-engagement-terms-standard-flat-field-metadata.util';
-import { buildWorkspaceEventOutboxStandardFlatFieldMetadatas }
+import { buildWorkspaceEventOutboxStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workspace-event-outbox-standard-flat-field-metadata.util';
 import { buildSearchAssignmentStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-assignment-standard-flat-field-metadata.util';
 import { buildAssignmentTeamMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-assignment-team-member-standard-flat-field-metadata.util';
 import { buildSearchMilestoneStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-milestone-standard-flat-field-metadata.util';
 import { buildPositionSpecificationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-position-specification-standard-flat-field-metadata.util';
 import { buildSearchCriterionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-criterion-standard-flat-field-metadata.util';
 import { buildSearchCandidacyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-candidacy-standard-flat-field-metadata.util';
-import { buildSearchCriterionStandardFlatFieldMetadatas }
 import { buildSearchInterviewStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-interview-standard-flat-field-metadata.util';
 import { buildReferenceCheckStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-reference-check-standard-flat-field-metadata.util';
 import { buildDiligenceCheckStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-diligence-check-standard-flat-field-metadata.util';
@@ -81,7 +80,6 @@ import { buildCompensationExpectationStandardFlatFieldMetadatas } from 'src/engi
 import { buildOfferNegotiationStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-offer-negotiation-standard-flat-field-metadata.util';
 import { buildPlacementStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-placement-standard-flat-field-metadata.util';
 import { buildGuaranteeCaseStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-guarantee-case-standard-flat-field-metadata.util';
- from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-search-criterion-standard-flat-field-metadata.util';
 import { type CreateStandardFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 
 import { buildExecutiveAssessmentStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-executive-assessment-standard-flat-field-metadata.util';

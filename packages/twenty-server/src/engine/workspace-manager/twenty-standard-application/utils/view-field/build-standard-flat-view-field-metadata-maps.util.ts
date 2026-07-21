@@ -43,7 +43,6 @@ import { computeStandardSearchMilestoneViewFields } from 'src/engine/workspace-m
 import { computeStandardPositionSpecificationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-position-specification-view-fields.util';
 import { computeStandardSearchCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-criterion-view-fields.util';
 import { computeStandardSearchCandidacyViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-candidacy-view-fields.util';
-import { computeStandardSearchCriterionViewFields }
 import { computeStandardSearchInterviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-interview-view-fields.util';
 import { computeStandardReferenceCheckViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-reference-check-view-fields.util';
 import { computeStandardDiligenceCheckViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-diligence-check-view-fields.util';
@@ -51,7 +50,6 @@ import { computeStandardCompensationExpectationViewFields } from 'src/engine/wor
 import { computeStandardOfferNegotiationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-offer-negotiation-view-fields.util';
 import { computeStandardPlacementViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-placement-view-fields.util';
 import { computeStandardGuaranteeCaseViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-guarantee-case-view-fields.util';
- from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-criterion-view-fields.util';
 import { type CreateStandardViewFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/create-standard-view-field-flat-metadata.util';
 
 import { computeExecutiveAssessmentViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-executive-assessment-view-fields.util';

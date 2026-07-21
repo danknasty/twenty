@@ -5,7 +5,7 @@ import { type FlatFieldMetadata } from 'src/engine/metadata-modules/flat-field-m
 import { type AllStandardObjectFieldName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
 import { type CreateStandardFieldArgs, createStandardFieldFlatMetadata, } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 
-export const buildBoardCompositionProfileStandardFlatFieldMetadatas = ({ now, objectName, workspaceId, standardObjectMetadataRelatedEntityIds, dependencyFlatEntityMaps, twentyStandardApplicationId, }: Omit<CreateStandardFieldArgs<'boardMatrixCriterion', FieldMetadataType>, 'context'>): Record<AllStandardObjectFieldName<'boardMatrixCriterion'>, FlatFieldMetadata> => ({
+export const buildBoardMatrixCriterionStandardFlatFieldMetadatas = ({ now, objectName, workspaceId, standardObjectMetadataRelatedEntityIds, dependencyFlatEntityMaps, twentyStandardApplicationId, }: Omit<CreateStandardFieldArgs<'boardMatrixCriterion', FieldMetadataType>, 'context'>): Record<AllStandardObjectFieldName<'boardMatrixCriterion'>, FlatFieldMetadata> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,

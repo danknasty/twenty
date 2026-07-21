@@ -5650,6 +5650,53 @@ export const STANDARD_OBJECTS = {
         universalIdentifier: 'a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d',
       },
     },
+    views: {
+      allClientAccountProfiles: {
+        universalIdentifier: '20202020-c001-4a1b-8c2d-3e4f5a6b7c8d',
+        viewFields: {
+          name: {
+            universalIdentifier: '20202020-c002-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+          company: {
+            universalIdentifier: '20202020-c003-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+          createdAt: {
+            universalIdentifier: '20202020-c004-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+        },
+      },
+      clientAccountProfileRecordPageFields: {
+        universalIdentifier: '20202020-c005-4a1b-8c2d-3e4f5a6b7c8d',
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: '20202020-c006-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+          relations: {
+            universalIdentifier: '20202020-c007-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+          system: {
+            universalIdentifier: '20202020-c008-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+        },
+        viewFields: {
+          name: {
+            universalIdentifier: '20202020-c009-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+          accountTier: {
+            universalIdentifier: '20202020-c00a-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+          accountStatus: {
+            universalIdentifier: '20202020-c00b-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+          company: {
+            universalIdentifier: '20202020-c00c-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+          createdAt: {
+            universalIdentifier: '20202020-c00d-4a1b-8c2d-3e4f5a6b7c8d',
+          },
+        },
+      },
+    },
   },
   clientStakeholderRole: {
     universalIdentifier: '20202020-6fbf-44b3-9797-60fe520e0927',

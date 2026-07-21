@@ -43,6 +43,12 @@ import { RollbackService } from 'src/modules/executive-search/migration/services
 import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migration/resolvers/ambiguous-match-queue.resolver';
 import { ComputeAnalyticsMetricResolver } from 'src/modules/executive-search/resolvers/compute-analytics-metric.resolver';
 import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/services/compute-analytics-metric.service';
+import { FirewallModule } from 'src/modules/executive-search/firewall/firewall.module';
+import { FeatureFlagModule } from 'src/engine/core-modules/feature-flag/feature-flag.module';
+import { DraftingSynthesisAiModule } from 'src/modules/executive-search/services/ai/drafting-synthesis-ai.module';
+import { ResearchAiModule } from 'src/modules/executive-search/services/ai/research-ai.module';
+import { CriterionAssessmentShadowModule } from 'src/modules/executive-search/services/ai/criterion-assessment-shadow.module';
+import { BoardMatrixAiModule } from 'src/modules/executive-search/services/ai/board-matrix-ai.module';
 
 @Module({
   imports: [
@@ -59,6 +65,12 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
     TwentyORMModule,
     DirectusModule,
     WorkspaceEventEmitterModule,
+    FirewallModule,
+    FeatureFlagModule,
+    DraftingSynthesisAiModule,
+    ResearchAiModule,
+    CriterionAssessmentShadowModule,
+    BoardMatrixAiModule,
   ],
   providers: [
     ReconciliationEngineRegistry,

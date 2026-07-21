@@ -91,6 +91,21 @@ export const seedFeatureFlags = async ({
         workspaceId: workspaceId,
         value: false,
       },
+      {
+        key: FeatureFlagKey.IS_CRITERION_ASSESSMENT_SHADOW_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_BOARD_MATRIX_AI_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_SEARCH_HEALTH_AI_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
     ])
     .execute();
 };

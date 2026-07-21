@@ -58,3 +58,7 @@ export { AnalyticsMetricStatus } from './analytics-metric-status.enum';
 export { AnalyticsMetricValueType } from './analytics-metric-value-type.enum';
 export { AnalyticsRefreshFrequency } from './analytics-refresh-frequency.enum';
 export { AnalyticsTimeWindow } from './analytics-time-window.enum';
+export { AiDraftStatus } from './ai-draft-status.enum';
+export { AiCapability } from './ai-capability.enum';
+export { CriterionAssessmentSource } from './criterion-assessment-source.enum';
+export { ShadowAssessmentStatus } from './shadow-assessment-status.enum';

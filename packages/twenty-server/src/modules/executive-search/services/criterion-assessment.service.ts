@@ -31,7 +31,7 @@ import { type GenerateCriterionAssessmentsResult } from 'src/modules/executive-s
  */
 const ASSESSMENT_ALLOWLIST = [
   'searchCandidacy.name',
-  'searchCandidacy.stage',
+  'searchCandidacy.currentStage',
   'searchCriterion.name',
   'searchCriterion.description',
   'searchCriterion.category',
@@ -256,7 +256,14 @@ export class CriterionAssessmentService {
           } as any);
           // oxlint-disable-next-line typescript/no-explicit-any
 
-          const evaluationId = insertResult.identifiers[0]?.id as string;
+          const evaluationId = insertResult.identifiers[0]?.id;
+
+          if (!evaluationId) {
+            throw new ExecutiveSearchException(
+              ExecutiveSearchExceptionCode.INTERNAL_ERROR,
+              `Failed to retrieve ID of inserted criterion evaluation for criterion "${criterion.name}"`,
+            );
+          }
 
           results.push({
             evaluationId,
@@ -351,9 +358,9 @@ export class CriterionAssessmentService {
     executiveProfile: ExecutiveProfileWorkspaceEntity | null,
   ): Record<string, unknown> {
     return {
-      name: (candidacy as any).name ?? null,
-      status: (candidacy as any).status ?? null,
-      stage: (candidacy as any).currentStage ?? null,
+      name: candidacy.name ?? null,
+      status: candidacy.status ?? null,
+      stage: candidacy.currentStage ?? null,
       yearsOfExperience: executiveProfile?.yearsOfExperience ?? null,
     };
   }
@@ -366,9 +373,9 @@ export class CriterionAssessmentService {
 
 Criterion: ${criterion.name}
 Description: ${criterion.description ?? 'No description provided'}
-Category: ${(criterion as any).category ?? 'Unknown'}
-Weight: ${(criterion as any).weight ?? 'Unweighted'}
-Required: ${(criterion as any).isRequired ? 'Yes' : 'No'}
+Category: ${criterion.category ?? 'Unknown'}
+Weight: ${criterion.weight ?? 'Unweighted'}
+Required: ${criterion.isRequired ? 'Yes' : 'No'}
 
 Candidate context:
 ${JSON.stringify(candidateContext, null, 2)}

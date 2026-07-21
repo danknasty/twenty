@@ -94,26 +94,41 @@ const CLIENT_CRM_VIEW_FIELD_UNIVERSAL_IDENTIFIERS = [
 ];
 
 const CLIENT_CRM_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = [
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientAccountProfileRecordPage
     .universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
     .universalIdentifier,
 ];
 
 const CLIENT_CRM_PAGE_LAYOUT_TAB_UNIVERSAL_IDENTIFIERS = [
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientAccountProfileRecordPage
     .tabs.home.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientAccountProfileRecordPage
     .tabs.timeline.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
     .tabs.home.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
     .tabs.timeline.universalIdentifier,
 ];
 
 const CLIENT_CRM_PAGE_LAYOUT_WIDGET_UNIVERSAL_IDENTIFIERS = [
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientAccountProfileRecordPage
     .tabs.home.widgets.fields.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientAccountProfileRecordPage
     .tabs.home.widgets.company.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientAccountProfileRecordPage
     .tabs.home.widgets.clientBillingContact.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientAccountProfileRecordPage
     .tabs.timeline.widgets.timeline.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
     .tabs.home.widgets.fields.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
     .tabs.home.widgets.person.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
     .tabs.home.widgets.company.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
     .tabs.home.widgets.clientAccountProfile.universalIdentifier,
+  STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS.clientStakeholderRoleRecordPage
     .tabs.timeline.widgets.timeline.universalIdentifier,
 ];
 

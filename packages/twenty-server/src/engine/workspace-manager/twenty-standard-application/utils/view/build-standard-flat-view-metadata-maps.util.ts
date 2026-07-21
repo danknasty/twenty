@@ -82,10 +82,6 @@ import { computeCandidatePresentationViews } from 'src/engine/workspace-manager/
 import { computeClientFeedbackViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-client-feedback-views.util';
 import { computeSearchStatusReportViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-search-status-report-views.util';
 
-import { computeStandardCompensationExpectationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-compensation-expectation-views.util';
-import { computeStandardOfferNegotiationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-offer-negotiation-views.util';
-import { computeStandardPlacementViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-placement-views.util';
-import { computeStandardGuaranteeCaseViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-guarantee-case-views.util';
 
 import { computeStandardBoardCompositionProfileViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-composition-profile-views.util';
 import { computeStandardBoardMatrixCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-board-matrix-criterion-views.util';
@@ -97,7 +93,8 @@ import { computeStandardExternalIdentityMatchQueueViews } from 'src/engine/works
 import { computeStandardAnalyticsDomainMetricViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-domain-metric-views.util';
 import { computeStandardAnalyticsMetricSnapshotViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-metric-snapshot-views.util';
 import { computeStandardAnalyticsDashboardConfigViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-dashboard-config-views.util';
-import { computeAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-ai-prompt-template-views.util';import { computeStandardAiModelRegistryViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-model-registry-views.util';
+import { computeAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-ai-prompt-template-views.util';
+import { computeStandardAiModelRegistryViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-model-registry-views.util';
 import { computeStandardAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-prompt-template-views.util';
 import { computeStandardAiProviderCallLogViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-provider-call-log-views.util';
 import { computeStandardAppAgentsViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-app-agents-views.util';
@@ -121,7 +118,7 @@ const STANDARD_FLAT_VIEW_METADATA_BUILDERS_BY_OBJECT_NAME = {
     computeStandardConfidentialityRecordViews,
   conflictCheck: computeStandardConflictCheckViews,
   dashboard: computeStandardDashboardViews,
-executiveArtifact: computeStandardExecutiveArtifactViews,
+  executiveArtifact: computeStandardExecutiveArtifactViews,
   executiveAward: computeStandardExecutiveAwardViews,
   executiveBoardService: computeStandardExecutiveBoardServiceViews,
   executiveCapability: computeStandardExecutiveCapabilityViews,
@@ -132,7 +129,6 @@ executiveArtifact: computeStandardExecutiveArtifactViews,
   executiveProfile: computeStandardExecutiveProfileViews,
   executiveSearchPreference: computeStandardExecutiveSearchPreferenceViews,
   marketMap: computeStandardMarketMapViews,
-executiveProfile: computeStandardExecutiveProfileViews,
   externalEntityLink: computeStandardExternalEntityLinkViews,
   message: computeStandardMessageViews,
   messageCampaign: computeStandardMessageCampaignViews,
@@ -196,14 +192,13 @@ boardCompositionProfile:
     computeStandardDirectorIndependenceReviewViews,
   boardCommitmentReview:
     computeStandardBoardCommitmentReviewViews,
-retentionActionLog: computeStandardRetentionActionLogViews,
+  retentionActionLog: computeStandardRetentionActionLogViews,
   externalIdentityMatchQueue:
     computeStandardExternalIdentityMatchQueueViews,
-analyticsDomainMetric: computeStandardAnalyticsDomainMetricViews,
+  analyticsDomainMetric: computeStandardAnalyticsDomainMetricViews,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViews,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViews,
-aiPromptTemplate: computeAiPromptTemplateViews,  aiModelRegistry: computeStandardAiModelRegistryViews,
-  aiPromptTemplate: computeStandardAiPromptTemplateViews,
+  aiPromptTemplate: computeAiPromptTemplateViews,  aiModelRegistry: computeStandardAiModelRegistryViews,
   aiProviderCallLog: computeStandardAiProviderCallLogViews,
   appAgents: computeStandardAppAgentsViews,
 } as const satisfies {

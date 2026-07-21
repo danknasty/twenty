@@ -698,6 +698,14 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
           },
         },
       },
+      timeline: {
+        universalIdentifier: '20202020-b229-4d6e-aad5-d669a48d470c',
+        widgets: {
+          timeline: {
+            universalIdentifier: '20202020-9bd0-4922-8a0d-ad0d29287ad7',
+          },
+        },
+      },
     },
   },
   externalEntityLinkRecordPage: {

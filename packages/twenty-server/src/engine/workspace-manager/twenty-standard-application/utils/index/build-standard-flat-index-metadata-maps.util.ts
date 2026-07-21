@@ -68,10 +68,6 @@ import { buildCandidatePresentationStandardFlatIndexMetadatas } from 'src/engine
 import { buildClientFeedbackStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-client-feedback-standard-flat-index-metadata.util';
 import { buildSearchStatusReportStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-search-status-report-standard-flat-index-metadata.util';
 
-import { buildCompensationExpectationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-compensation-expectation-standard-flat-index-metadata.util';
-import { buildOfferNegotiationStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-offer-negotiation-standard-flat-index-metadata.util';
-import { buildPlacementStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-placement-standard-flat-index-metadata.util';
-import { buildGuaranteeCaseStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-guarantee-case-standard-flat-index-metadata.util';
 
 import { buildBoardCompositionProfileStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-composition-profile-standard-flat-index-metadata.util';
 import { buildBoardMatrixCriterionStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-board-matrix-criterion-standard-flat-index-metadata.util';
@@ -83,7 +79,8 @@ import { buildExternalIdentityMatchQueueStandardFlatIndexMetadatas } from 'src/e
 import { buildAnalyticsDomainMetricStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-domain-metric-standard-flat-index-metadata.util';
 import { buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-metric-snapshot-standard-flat-index-metadata.util';
 import { buildAnalyticsDashboardConfigStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-analytics-dashboard-config-standard-flat-index-metadata.util';
-import { buildAiPromptTemplateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-prompt-template-standard-flat-index-metadata.util';import { buildAiModelRegistryStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-model-registry-standard-flat-index-metadata.util';
+import { buildAiPromptTemplateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-prompt-template-standard-flat-index-metadata.util';
+import { buildAiModelRegistryStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-model-registry-standard-flat-index-metadata.util';
 import { buildAiPromptTemplateStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-prompt-template-standard-flat-index-metadata.util';
 import { buildAiProviderCallLogStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-ai-provider-call-log-standard-flat-index-metadata.util';
 import { buildAppAgentsStandardFlatIndexMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/compute-app-agents-standard-flat-index-metadata.util';
@@ -104,7 +101,7 @@ clientAccountProfile:
     buildClientAccountProfileStandardFlatIndexMetadatas,
   clientStakeholderRole:
     buildClientStakeholderRoleStandardFlatIndexMetadatas,
-clientAccountProfile: buildClientAccountProfileStandardFlatIndexMetadatas,
+  clientAccountProfile: buildClientAccountProfileStandardFlatIndexMetadatas,
   clientStakeholderRole: buildClientStakeholderRoleStandardFlatIndexMetadatas,
   company: buildCompanyStandardFlatIndexMetadatas,
   externalEntityLink: buildExternalEntityLinkStandardFlatIndexMetadatas,
@@ -115,11 +112,10 @@ clientAccountProfile: buildClientAccountProfileStandardFlatIndexMetadatas,
   reconciliationRun: buildReconciliationRunStandardFlatIndexMetadatas,
   reconciliationFinding: buildReconciliationFindingStandardFlatIndexMetadatas,
   dashboard: buildDashboardStandardFlatIndexMetadatas,
-externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatIndexMetadatas,
+  externalSyncCheckpoint: buildExternalSyncCheckpointStandardFlatIndexMetadatas,
   externalSyncInbox: buildExternalSyncInboxStandardFlatIndexMetadatas,
   externalSyncOutbox: buildExternalSyncOutboxStandardFlatIndexMetadatas,
-executiveProfile: buildExecutiveProfileStandardFlatIndexMetadatas,
-  externalEntityLink: buildExternalEntityLinkStandardFlatIndexMetadatas,
+  executiveProfile: buildExecutiveProfileStandardFlatIndexMetadatas,
   messageCampaign: buildMessageCampaignStandardFlatIndexMetadatas,
   messageList: buildMessageListStandardFlatIndexMetadatas,
   messageListMember: buildMessageListMemberStandardFlatIndexMetadatas,
@@ -141,7 +137,7 @@ executiveProfile: buildExecutiveProfileStandardFlatIndexMetadatas,
     buildWorkflowAutomatedTriggerStandardFlatIndexMetadatas,
   workflowRun: buildWorkflowRunStandardFlatIndexMetadatas,
   workflowVersion: buildWorkflowVersionStandardFlatIndexMetadatas,
-workspaceEventOutbox: buildWorkspaceEventOutboxStandardFlatIndexMetadatas,
+  workspaceEventOutbox: buildWorkspaceEventOutboxStandardFlatIndexMetadatas,
 workspaceEventOutbox:
     buildWorkspaceEventOutboxStandardFlatIndexMetadatas,
   workspaceMember: buildWorkspaceMemberStandardFlatIndexMetadatas,
@@ -178,14 +174,13 @@ boardCompositionProfile:
     buildDirectorIndependenceReviewStandardFlatIndexMetadatas,
   boardCommitmentReview:
     buildBoardCommitmentReviewStandardFlatIndexMetadatas,
-retentionActionLog: buildRetentionActionLogStandardFlatIndexMetadatas,
+  retentionActionLog: buildRetentionActionLogStandardFlatIndexMetadatas,
   externalIdentityMatchQueue:
     buildExternalIdentityMatchQueueStandardFlatIndexMetadatas,
-analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatIndexMetadatas,
+  analyticsDomainMetric: buildAnalyticsDomainMetricStandardFlatIndexMetadatas,
   analyticsMetricSnapshot: buildAnalyticsMetricSnapshotStandardFlatIndexMetadatas,
   analyticsDashboardConfig: buildAnalyticsDashboardConfigStandardFlatIndexMetadatas,
-aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,  aiModelRegistry: buildAiModelRegistryStandardFlatIndexMetadatas,
-  aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,
+  aiPromptTemplate: buildAiPromptTemplateStandardFlatIndexMetadatas,  aiModelRegistry: buildAiModelRegistryStandardFlatIndexMetadatas,
   aiProviderCallLog: buildAiProviderCallLogStandardFlatIndexMetadatas,
   appAgents: buildAppAgentsStandardFlatIndexMetadatas,
 } satisfies {

@@ -1138,14 +1138,21 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
       },
     },
   },
-analyticsMetricRecordPage: {
+  analyticsDomainMetricRecordPage: {
     universalIdentifier: '21a31623-62c1-4c93-b987-95a057926824',
     tabs: {
       home: { universalIdentifier: '7ca58390-cac3-46cb-a77f-9ede750826c8', widgets: { fields: { universalIdentifier: 'a1501b70-2ad8-425f-94cd-4507041424df' }, }, },
       timeline: { universalIdentifier: '41005f01-4933-4c93-8ada-6dae9d82d67d', widgets: { timeline: { universalIdentifier: 'af18f8e5-7fc7-42f4-a311-3da10bfd58de' }, }, },
     },
   },
-  analyticsDashboardRecordPage: {
+  analyticsMetricSnapshotRecordPage: {
+    universalIdentifier: 'aeb1a006-0805-4000-8001-000000000805',
+    tabs: {
+      home: { universalIdentifier: 'aeb1a006-0806-4000-8001-000000000806', widgets: { fields: { universalIdentifier: 'aeb1a006-0807-4000-8001-000000000807' }, }, },
+      timeline: { universalIdentifier: 'aeb1a006-0808-4000-8001-000000000808', widgets: { timeline: { universalIdentifier: 'aeb1a006-0809-4000-8001-000000000809' }, }, },
+    },
+  },
+  analyticsDashboardConfigRecordPage: {
     universalIdentifier: 'f46e1fb3-1ab2-4e48-bb6f-fdb212c7ccee',
     tabs: {
       home: { universalIdentifier: '02d50911-b564-4b39-8b73-65078432eaea', widgets: { fields: { universalIdentifier: 'f8d2359f-8819-4373-b080-c6dd6d1bb5db' }, }, },
@@ -1157,15 +1164,8 @@ analyticsMetricRecordPage: {
     tabs: {
       home: { universalIdentifier: 'd4e5f6a7-1002-4000-9001-d4e5f6a7000002', widgets: { fields: { universalIdentifier: 'd4e5f6a7-1003-4000-9001-d4e5f6a7000003' }, }, },
       timeline: { universalIdentifier: 'd4e5f6a7-1004-4000-9001-d4e5f6a7000004', widgets: { timeline: { universalIdentifier: 'd4e5f6a7-1005-4000-9001-d4e5f6a7000005' }, }, },
-      home: { universalIdentifier: 'e38f4a6b-0001-4b7c-9d0e-000000000001', widgets: { fields: { universalIdentifier: 'f49a5b7c-0001-4c8d-0e1f-000000000001' }, }, },
-      home: { universalIdentifier: 'e38f4a6b-0002-4b7c-9d0e-000000000002', widgets: { fields: { universalIdentifier: 'f49a5b7c-0002-4c8d-0e1f-000000000002' }, }, },
-      home: { universalIdentifier: 'e38f4a6b-0003-4b7c-9d0e-000000000003', widgets: { fields: { universalIdentifier: 'f49a5b7c-0003-4c8d-0e1f-000000000003' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0001-4d9e-1f2a-000000000001', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0001-4e0f-2a3b-000000000001' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0002-4d9e-1f2a-000000000002', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0002-4e0f-2a3b-000000000002' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0003-4d9e-1f2a-000000000003', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0003-4e0f-2a3b-000000000003' }, }, },
-    universalIdentifier: 'd27e3f5a-0001-4a6b-8c9d-000000000001',
-    universalIdentifier: 'd27e3f5a-0002-4a6b-8c9d-000000000002',
-    universalIdentifier: 'd27e3f5a-0003-4a6b-8c9d-000000000003',
+    },
+  },
   externalIdentityMatchQueueRecordPage: {
     universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7455',
     tabs: {
@@ -1173,23 +1173,11 @@ analyticsMetricRecordPage: {
       timeline: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7458', widgets: { timeline: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7459' }, }, },
     },
   },
-  analyticsDashboardConfigRecordPage: {
-  analyticsMetricSnapshotRecordPage: {
-analyticsDomainMetricRecordPage: { 85e491f154 (feat(executive-search): Phase 14 — Analytics Semantic Layer (3 standard objects + live GraphQL resolver))
-    },
-  },
   aiModelRegistryRecordPage: {
     universalIdentifier: '2fefc942-c89f-4cc4-a6d7-2bc844eeef86',
     tabs: {
       home: { universalIdentifier: '8ed91b3d-7cbf-47b8-b948-0361bc669176', widgets: { fields: { universalIdentifier: '22578522-4156-41f4-9198-2547a5b5f3c9' } } },
       timeline: { universalIdentifier: 'e386677a-e353-45c9-9965-ab7b0826b2a7', widgets: { timeline: { universalIdentifier: '15ec0740-4b40-4e57-aa6b-fe26fa098e6a' } } },
-    },
-  },
-  aiPromptTemplateRecordPage: {
-    universalIdentifier: '89f0983e-d86e-4a3b-83a7-11020aa561d6',
-    tabs: {
-      home: { universalIdentifier: '6532151d-b0d9-465d-abb5-c0e292983b95', widgets: { fields: { universalIdentifier: '5edce103-f79e-4c04-9a50-eada44d779e2' } } },
-      timeline: { universalIdentifier: 'bdf66a0c-6586-4305-9950-bd5853979456', widgets: { timeline: { universalIdentifier: '443ffb23-312d-4184-8d3a-8b8e577d907e' } } },
     },
   },
   aiProviderCallLogRecordPage: {

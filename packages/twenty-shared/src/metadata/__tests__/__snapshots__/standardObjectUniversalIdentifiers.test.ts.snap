@@ -1765,6 +1765,41 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       },
     },
   },
+  "clientAccountProfile": {
+    "fields": {
+      "clientBillingContact": {
+        "universalIdentifier": "20202020-d8c8-4d45-90eb-5bc21f3c25bc",
+      },
+      "company": {
+        "universalIdentifier": "20202020-72f1-4a2a-a39e-6f27eefc7451",
+      },
+      "createdAt": {
+        "universalIdentifier": "894a23d9-d74c-561f-9ea6-d1afaf8e1f7c",
+      },
+      "createdBy": {
+        "universalIdentifier": "18e663cf-2b11-5944-80b0-0a8e0d375ddd",
+      },
+      "deletedAt": {
+        "universalIdentifier": "3261c2de-6bdb-5c50-bd1d-aa8166bd349b",
+      },
+      "id": {
+        "universalIdentifier": "245239e0-3426-5b57-8638-bbef637d3cba",
+      },
+      "position": {
+        "universalIdentifier": "c04a0c74-59c9-5381-8f81-4a332b702ee6",
+      },
+      "searchVector": {
+        "universalIdentifier": "bcfa2701-4456-5bc1-8060-5676ebd6b2cd",
+      },
+      "updatedAt": {
+        "universalIdentifier": "a90f3672-3d29-5f27-a662-6d8eaac9c3c5",
+      },
+      "updatedBy": {
+        "universalIdentifier": "16c23286-de84-5d45-92bd-ff80c621a9c9",
+      },
+    },
+    "universalIdentifier": "20202020-9cd9-4c20-b0cf-50ba3ed5e65d",
+  },
   "clientFeedback": {
     "fields": {
       "candidacy": {
@@ -3073,14 +3108,6 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
   "executiveAward": {
     "fields": {
       "clientAccountProfile": {
-        "fields": {
-          "clientBillingContact": {
-            "universalIdentifier": "20202020-d8c8-4d45-90eb-5bc21f3c25bc",
-          },
-          "company": {
-            "universalIdentifier": "20202020-72f1-4a2a-a39e-6f27eefc7451",
-          },
-        },
         "universalIdentifier": "20202020-9cd9-4c20-b0cf-50ba3ed5e65d",
       },
       "company": {

@@ -7,8 +7,10 @@ import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspac
 import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
 import { ExternalSyncInboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-inbox.workspace-entity';
 import { INBOX_STATUS } from 'src/modules/executive-search/sync/services/inbox.service';
-import { ReconcileArgs } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
-import { ReconciliationEngine } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
+import {
+  ReconcileArgs,
+  ReconciliationEngine,
+} from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
 import { ReconciliationFinding } from 'src/modules/executive-search/reconciliation/reconciliation-finding.type';
 import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
 import {
@@ -45,12 +47,12 @@ const TWENTY_AUTHORITATIVE = 'TWENTY_AUTHORITATIVE';
  * applies the projection — domain data is never mutated.
  */
 @Injectable()
-export class ShadowSyncDriftReconciliationEngine
-  implements ReconciliationEngine
-{
+export class ShadowSyncDriftReconciliationEngine implements ReconciliationEngine {
   readonly name = 'shadow-sync-drift';
 
-  private readonly logger = new Logger(ShadowSyncDriftReconciliationEngine.name);
+  private readonly logger = new Logger(
+    ShadowSyncDriftReconciliationEngine.name,
+  );
   private fieldOwnershipCache: Record<string, FieldOwnershipRule> | null = null;
 
   constructor(
@@ -191,11 +193,12 @@ export class ShadowSyncDriftReconciliationEngine
     }
 
     try {
-      const repository = await this.globalWorkspaceOrmManager.getRepository<any>(
-        workspaceId,
-        twentyEntityName,
-        { shouldBypassPermissionChecks: true },
-      );
+      const repository =
+        await this.globalWorkspaceOrmManager.getRepository<any>(
+          workspaceId,
+          twentyEntityName,
+          { shouldBypassPermissionChecks: true },
+        );
 
       const record = await repository.findOneBy({ id: twentyRecordId });
 
@@ -234,10 +237,7 @@ export class ShadowSyncDriftReconciliationEngine
     diffs: ProjectionDiff[],
   ): string {
     const summary = diffs
-      .map(
-        (diff) =>
-          `${diff.fieldName} (${diff.authority})`,
-      )
+      .map((diff) => `${diff.fieldName} (${diff.authority})`)
       .join(', ');
 
     return `Shadow-sync drift on ${inboxRow.entityName}/${inboxRow.entityId}: ${diffs.length} field(s) differ — ${summary}`;
@@ -268,10 +268,7 @@ export class ShadowSyncDriftReconciliationEngine
         REPO_ROOT_FROM_ENGINE_DIR,
         FIELD_OWNERSHIP_CSV_REPO_RELATIVE_PATH,
       ),
-      path.resolve(
-        process.cwd(),
-        FIELD_OWNERSHIP_CSV_REPO_RELATIVE_PATH,
-      ),
+      path.resolve(process.cwd(), FIELD_OWNERSHIP_CSV_REPO_RELATIVE_PATH),
     ];
 
     for (const candidate of candidates) {

@@ -1370,68 +1370,6 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
-  executiveExternalProfile: ({
-    now,
-    workspaceId,
-    standardObjectMetadataRelatedEntityIds,
-    twentyStandardApplicationId,
-    dependencyFlatEntityMaps,
-  }: Omit<
-    CreateStandardObjectArgs<'executiveExternalProfile'>,
-    'context' | 'objectName'
-  >) =>
-    createStandardObjectFlatMetadata({
-      objectName: 'executiveExternalProfile',
-      dependencyFlatEntityMaps,
-      context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.executiveExternalProfile.universalIdentifier,
-        nameSingular: 'executiveExternalProfile',
-        namePlural: 'executiveExternalProfiles',
-        labelSingular: i18nLabel(msg`External Profile`),
-        labelPlural: i18nLabel(msg`External Profiles`),
-        description: i18nLabel(msg`An external platform profile`),
-        icon: 'IconLink',
-        isSystem: true,
-        isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'url',
-      },
-      workspaceId,
-      standardObjectMetadataRelatedEntityIds,
-      twentyStandardApplicationId,
-      now,
-    }),
-  executiveSearchPreference: ({
-    now,
-    workspaceId,
-    standardObjectMetadataRelatedEntityIds,
-    twentyStandardApplicationId,
-    dependencyFlatEntityMaps,
-  }: Omit<
-    CreateStandardObjectArgs<'executiveSearchPreference'>,
-    'context' | 'objectName'
-  >) =>
-    createStandardObjectFlatMetadata({
-      objectName: 'executiveSearchPreference',
-      dependencyFlatEntityMaps,
-      context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.executiveSearchPreference.universalIdentifier,
-        nameSingular: 'executiveSearchPreference',
-        namePlural: 'executiveSearchPreferences',
-        labelSingular: i18nLabel(msg`Search Preference`),
-        labelPlural: i18nLabel(msg`Search Preferences`),
-        description: i18nLabel(msg`Search and notification preferences`),
-        icon: 'IconSearch',
-        isSystem: true,
-        isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'boardTypes',
-      },
-      workspaceId,
-      standardObjectMetadataRelatedEntityIds,
-      twentyStandardApplicationId,
-      now,
-    }),
   clientAccountProfile: ({
     now,
     workspaceId,
@@ -1622,34 +1560,6 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
-  outboxEvent: ({
-    now,
-    workspaceId,
-    standardObjectMetadataRelatedEntityIds,
-    twentyStandardApplicationId,
-    dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'outboxEvent'>, 'context' | 'objectName'>) =>
-    createStandardObjectFlatMetadata({
-      objectName: 'outboxEvent',
-      dependencyFlatEntityMaps,
-      context: {
-        universalIdentifier: STANDARD_OBJECTS.outboxEvent.universalIdentifier,
-        nameSingular: 'outboxEvent',
-        namePlural: 'outboxEvents',
-        labelSingular: i18nLabel(msg`Outbox Event`),
-        labelPlural: i18nLabel(msg`Outbox Events`),
-        description: i18nLabel(msg`An outbox event`),
-        icon: 'IconSend',
-        isSystem: true,
-        isAuditLogged: false,
-        isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'eventType',
-      },
-      workspaceId,
-      standardObjectMetadataRelatedEntityIds,
-      twentyStandardApplicationId,
-      now,
-    }),
   relationshipEdge: ({
     now,
     workspaceId,
@@ -1776,33 +1686,6 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         isSystem: true,
         isAuditLogged: false,
         isSearchable: false,
-        labelIdentifierFieldMetadataName: 'name',
-      },
-      workspaceId,
-      standardObjectMetadataRelatedEntityIds,
-      twentyStandardApplicationId,
-      now,
-    }),
-  marketMap: ({
-    now,
-    workspaceId,
-    standardObjectMetadataRelatedEntityIds,
-    twentyStandardApplicationId,
-    dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'marketMap'>, 'context' | 'objectName'>) =>
-    createStandardObjectFlatMetadata({
-      objectName: 'marketMap',
-      dependencyFlatEntityMaps,
-      context: {
-        universalIdentifier: STANDARD_OBJECTS.marketMap.universalIdentifier,
-        nameSingular: 'marketMap',
-        namePlural: 'marketMaps',
-        labelSingular: i18nLabel(msg`Market Map`),
-        labelPlural: i18nLabel(msg`Market Maps`),
-        description: i18nLabel(msg`A market map for a research strategy`),
-        icon: 'IconMap',
-        isSystem: true,
-        isUICreatable: false,
         labelIdentifierFieldMetadataName: 'name',
       },
       workspaceId,

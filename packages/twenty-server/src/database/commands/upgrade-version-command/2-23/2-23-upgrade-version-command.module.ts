@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { WorkspaceIteratorModule } from 'src/database/commands/command-runners/workspace-iterator.module';
 import { AddCandidacyStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1802000000000-add-candidacy-standard-objects.command';
-import { AddAnalyticsStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1803000000000-add-analytics-standard-objects.command';
+import { AddAnalyticsStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1803000000000-add-analytics-standard-objects.command';import { AddAiGovernanceStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1830000000000-add-ai-governance-standard-objects.command';
 import { SyncClientCrmStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1784193573815-sync-client-crm-standard-objects.command';
 import { CreatePhase17StandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1812000000000-create-phase17-standard-objects.command';
 import { ExecutiveSearchBackfillCommand } from 'src/database/commands/upgrade-version-command/2-23/2-23-workspace-command-1813000000000-executive-search-backfill.command';
@@ -26,7 +26,7 @@ import { WorkspaceMigrationRunnerModule } from 'src/engine/workspace-manager/wor
   ],
   providers: [
     AddCandidacyStandardObjectsCommand,
-    AddAnalyticsStandardObjectsCommand,
+    AddAnalyticsStandardObjectsCommand,    AddAiGovernanceStandardObjectsCommand,
     SyncClientCrmStandardObjectsCommand,
     CreatePhase17StandardObjectsCommand,
     ExecutiveSearchBackfillCommand,

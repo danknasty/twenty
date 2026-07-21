@@ -1,0 +1,7 @@
+export enum ProviderCallStatus {
+  SUCCESS = 'SUCCESS',
+  ERROR = 'ERROR',
+  TIMEOUT = 'TIMEOUT',
+  GUARDRAIL_BLOCKED = 'GUARDRAIL_BLOCKED',
+  RATE_LIMITED = 'RATE_LIMITED',
+}

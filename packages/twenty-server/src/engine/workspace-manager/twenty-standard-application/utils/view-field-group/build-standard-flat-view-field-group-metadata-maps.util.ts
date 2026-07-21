@@ -53,7 +53,10 @@ import { computeStandardExternalIdentityMatchQueueViewFieldGroups } from 'src/en
 import { computeStandardAnalyticsDomainMetricViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-domain-metric-view-field-groups.util';
 import { computeStandardAnalyticsMetricSnapshotViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-metric-snapshot-view-field-groups.util';
 import { computeStandardAnalyticsDashboardConfigViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-analytics-dashboard-config-view-field-groups.util';
+import { computeStandardAiPromptTemplateViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-ai-prompt-template-view-field-groups.util';import { computeStandardAiModelRegistryViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-ai-model-registry-view-field-groups.util';
 import { computeStandardAiPromptTemplateViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-ai-prompt-template-view-field-groups.util';
+import { computeStandardAiProviderCallLogViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-ai-provider-call-log-view-field-groups.util';
+import { computeStandardAppAgentsViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-app-agents-view-field-groups.util';
 
 
 type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
@@ -118,7 +121,10 @@ retentionActionLog: computeStandardRetentionActionLogViewFieldGroups,
 analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFieldGroups,
   analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViewFieldGroups,
   analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFieldGroups,
-aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
+aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,  aiModelRegistry: computeStandardAiModelRegistryViewFieldGroups,
+  aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
+  aiProviderCallLog: computeStandardAiProviderCallLogViewFieldGroups,
+  appAgents: computeStandardAppAgentsViewFieldGroups,
 } as const satisfies {
   [P in AllStandardObjectName]?: StandardViewFieldGroupBuilder<P>;
 };

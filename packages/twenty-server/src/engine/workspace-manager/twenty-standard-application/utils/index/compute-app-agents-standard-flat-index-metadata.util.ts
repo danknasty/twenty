@@ -5,7 +5,7 @@ import {
   createStandardIndexFlatMetadata,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/index/create-standard-index-flat-metadata.util';
 
-export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
+export const buildAppAgentsStandardFlatIndexMetadatas = ({
   now,
   objectName,
   workspaceId,
@@ -13,10 +13,10 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
 }: Omit<
-  CreateStandardIndexArgs<'aiPromptTemplate'>,
+  CreateStandardIndexArgs<'appAgents'>,
   'context'
 >): Record<
-  AllStandardObjectIndexName<'aiPromptTemplate'>,
+  AllStandardObjectIndexName<'appAgents'>,
   FlatIndexMetadata
 > => ({
   searchVectorGinIndex: createStandardIndexFlatMetadata({
@@ -32,12 +32,12 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  promptKeyIndex: createStandardIndexFlatMetadata({
+  agentKeyIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'promptKeyIndex',
-      relatedFieldNames: ['promptKey'],
+      indexName: 'agentKeyIndex',
+      relatedFieldNames: ['agentKey'],
       indexType: 'BTREE',
     },
     standardObjectMetadataRelatedEntityIds,
@@ -58,25 +58,12 @@ export const buildAiPromptTemplateStandardFlatIndexMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
-  versionIndex: createStandardIndexFlatMetadata({
+  capabilityIndex: createStandardIndexFlatMetadata({
     objectName,
     workspaceId,
     context: {
-      indexName: 'versionIndex',
-      relatedFieldNames: ['version'],
-      indexType: 'BTREE',
-    },
-    standardObjectMetadataRelatedEntityIds,
-    dependencyFlatEntityMaps,
-    twentyStandardApplicationId,
-    now,
-  }),
-  targetModelIdIndex: createStandardIndexFlatMetadata({
-    objectName,
-    workspaceId,
-    context: {
-      indexName: 'targetModelIdIndex',
-      relatedFieldNames: ['targetModelId'],
+      indexName: 'capabilityIndex',
+      relatedFieldNames: ['capability'],
       indexType: 'BTREE',
     },
     standardObjectMetadataRelatedEntityIds,

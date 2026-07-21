@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AI Governance Enums AppAgentCapability has expected values 1`] = `
+[
+  "ASSIGNMENT_INTAKE",
+  "POSITION_SPECIFICATION_DRAFT",
+  "RESEARCH_STRATEGY_DRAFT",
+  "STATUS_REPORT_DRAFT",
+  "CANDIDATE_PRESENTATION_DRAFT",
+  "NL_SEARCH_FILTERS",
+  "TARGET_COMPANY_SUGGEST",
+  "RELATIONSHIP_PATH_SUGGEST",
+  "CRITERION_ASSESSMENT_SHADOW",
+  "BOARD_MATRIX_EVALUATION",
+  "SEARCH_HEALTH_ADVISORY",
+]
+`;
+
+exports[`AI Governance Enums AppAgentStatus has expected values 1`] = `
+[
+  "ENABLED",
+  "DISABLED",
+  "SHADOW_MODE",
+]
+`;
+
+exports[`AI Governance Enums ModelRegistryStatus has expected values 1`] = `
+[
+  "DRAFT",
+  "CURRENT",
+  "DEPRECATED",
+  "RETIRED",
+]
+`;
+
+exports[`AI Governance Enums PromptTemplateStatus has expected values 1`] = `
+[
+  "DRAFT",
+  "PUBLISHED",
+  "DEPRECATED",
+  "ARCHIVED",
+]
+`;
+
+exports[`AI Governance Enums ProviderCallStatus has expected values 1`] = `
+[
+  "SUCCESS",
+  "ERROR",
+  "TIMEOUT",
+  "GUARDRAIL_BLOCKED",
+  "RATE_LIMITED",
+]
+`;

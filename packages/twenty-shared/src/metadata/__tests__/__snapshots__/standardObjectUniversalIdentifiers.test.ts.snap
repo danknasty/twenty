@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`STANDARD_OBJECTS universal identifiers should never change without an explicit snapshot update 1`] = `
 {
@@ -1798,6 +1798,7 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
         "universalIdentifier": "16c23286-de84-5d45-92bd-ff80c621a9c9",
       },
     },
+    "indexes": {},
     "universalIdentifier": "20202020-9cd9-4c20-b0cf-50ba3ed5e65d",
   },
   "clientFeedback": {

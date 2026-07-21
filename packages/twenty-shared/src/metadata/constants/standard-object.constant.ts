@@ -5599,6 +5599,7 @@ export const STANDARD_OBJECTS = {
         universalIdentifier: '20202020-d8c8-4d45-90eb-5bc21f3c25bc',
       },
     },
+    indexes: {},
   },
   clientStakeholderRole: {
     universalIdentifier: '20202020-6fbf-44b3-9797-60fe520e0927',

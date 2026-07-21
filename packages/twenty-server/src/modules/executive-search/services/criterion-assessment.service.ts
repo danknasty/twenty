@@ -38,8 +38,6 @@ const ASSESSMENT_ALLOWLIST = [
   'searchCriterion.weight',
   'searchCriterion.isRequired',
   'executiveProfile.yearsOfExperience',
-  'executiveProfile.functionalAreas',
-  'executiveProfile.industrySectors',
 ];
 
 @Injectable()

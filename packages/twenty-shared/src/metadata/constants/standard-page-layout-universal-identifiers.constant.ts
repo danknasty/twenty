@@ -1175,7 +1175,7 @@ analyticsMetricRecordPage: {
   },
   analyticsDashboardConfigRecordPage: {
   analyticsMetricSnapshotRecordPage: {
-analyticsDomainMetricRecordPage: { 85e491f154 (feat(executive-search): Phase 14 — Analytics Semantic Layer (3 standard objects + live GraphQL resolver))
+analyticsDomainMetricRecordPage: {
     },
   },
   aiModelRegistryRecordPage: {

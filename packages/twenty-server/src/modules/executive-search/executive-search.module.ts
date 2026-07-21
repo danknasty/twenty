@@ -108,6 +108,7 @@ import { BoardMatrixAiModule } from 'src/modules/executive-search/services/ai/bo
     RetentionActionService,
     CutoverService,
     RollbackService,
+    ExecutiveShadowSyncDriftCronCommand,
   ],
 })
 export class ExecutiveSearchModule {}

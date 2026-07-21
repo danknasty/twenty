@@ -329,8 +329,7 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       objectName: 'conflictCheck',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.conflictCheck.universalIdentifier,
+        universalIdentifier: STANDARD_OBJECTS.conflictCheck.universalIdentifier,
         nameSingular: 'conflictCheck',
         namePlural: 'conflictChecks',
         labelSingular: i18nLabel(msg`Conflict Check`),
@@ -1606,16 +1605,12 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<
-    CreateStandardObjectArgs<'outboxEvent'>,
-    'context' | 'objectName'
-  >) =>
+  }: Omit<CreateStandardObjectArgs<'outboxEvent'>, 'context' | 'objectName'>) =>
     createStandardObjectFlatMetadata({
       objectName: 'outboxEvent',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.outboxEvent.universalIdentifier,
+        universalIdentifier: STANDARD_OBJECTS.outboxEvent.universalIdentifier,
         nameSingular: 'outboxEvent',
         namePlural: 'outboxEvents',
         labelSingular: i18nLabel(msg`Outbox Event`),
@@ -1685,9 +1680,7 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         namePlural: 'clientStakeholderRoles',
         labelSingular: i18nLabel(msg`Client Stakeholder Role`),
         labelPlural: i18nLabel(msg`Client Stakeholder Roles`),
-        description: i18nLabel(
-          msg`Role of a stakeholder at a client company`,
-        ),
+        description: i18nLabel(msg`Role of a stakeholder at a client company`),
         icon: 'IconUserStar',
         isSystem: true,
         isUICreatable: true,
@@ -1719,7 +1712,9 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         namePlural: 'deadLetterRecords',
         labelSingular: i18nLabel(msg`Dead Letter Record`),
         labelPlural: i18nLabel(msg`Dead Letter Records`),
-        description: i18nLabel(msg`A dead-letter record for failed sync events`),
+        description: i18nLabel(
+          msg`A dead-letter record for failed sync events`,
+        ),
         icon: 'IconAlertTriangle',
         isSystem: true,
         isAuditLogged: false,
@@ -1800,16 +1795,12 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<
-    CreateStandardObjectArgs<'marketMap'>,
-    'context' | 'objectName'
-  >) =>
+  }: Omit<CreateStandardObjectArgs<'marketMap'>, 'context' | 'objectName'>) =>
     createStandardObjectFlatMetadata({
       objectName: 'marketMap',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.marketMap.universalIdentifier,
+        universalIdentifier: STANDARD_OBJECTS.marketMap.universalIdentifier,
         nameSingular: 'marketMap',
         namePlural: 'marketMaps',
         labelSingular: i18nLabel(msg`Market Map`),
@@ -2091,8 +2082,7 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       objectName: 'targetCompany',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.targetCompany.universalIdentifier,
+        universalIdentifier: STANDARD_OBJECTS.targetCompany.universalIdentifier,
         nameSingular: 'targetCompany',
         namePlural: 'targetCompanies',
         labelSingular: i18nLabel(msg`Target Company`),
@@ -2128,7 +2118,9 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         namePlural: 'aiModelRegistries',
         labelSingular: i18nLabel(msg`AI Model`),
         labelPlural: i18nLabel(msg`AI Models`),
-        description: i18nLabel(msg`Canonical AI model version and configuration`),
+        description: i18nLabel(
+          msg`Canonical AI model version and configuration`,
+        ),
         icon: 'IconBrain',
         isSystem: true,
         isUICreatable: false,
@@ -2159,7 +2151,9 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         namePlural: 'aiPromptTemplates',
         labelSingular: i18nLabel(msg`Prompt Template`),
         labelPlural: i18nLabel(msg`Prompt Templates`),
-        description: i18nLabel(msg`Versioned AI prompt template with input/output contracts`),
+        description: i18nLabel(
+          msg`Versioned AI prompt template with input/output contracts`,
+        ),
         icon: 'IconMessage',
         isSystem: true,
         isUICreatable: false,
@@ -2190,7 +2184,9 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         namePlural: 'aiProviderCallLogs',
         labelSingular: i18nLabel(msg`AI Call Log`),
         labelPlural: i18nLabel(msg`AI Call Logs`),
-        description: i18nLabel(msg`Immutable audit record of an AI provider call`),
+        description: i18nLabel(
+          msg`Immutable audit record of an AI provider call`,
+        ),
         icon: 'IconActivity',
         isSystem: true,
         isUICreatable: false,
@@ -2207,21 +2203,19 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<
-    CreateStandardObjectArgs<'appAgents'>,
-    'context' | 'objectName'
-  >) =>
+  }: Omit<CreateStandardObjectArgs<'appAgents'>, 'context' | 'objectName'>) =>
     createStandardObjectFlatMetadata({
       objectName: 'appAgents',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.appAgents.universalIdentifier,
+        universalIdentifier: STANDARD_OBJECTS.appAgents.universalIdentifier,
         nameSingular: 'appAgents',
         namePlural: 'appAgents',
         labelSingular: i18nLabel(msg`AI Agent`),
         labelPlural: i18nLabel(msg`AI Agents`),
-        description: i18nLabel(msg`Executive search AI agent or skill registry`),
+        description: i18nLabel(
+          msg`Executive search AI agent or skill registry`,
+        ),
         icon: 'IconRobot',
         isSystem: true,
         isUICreatable: false,

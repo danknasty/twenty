@@ -39,6 +39,7 @@ jobs:
       # ci-privileged for the PR comment *before* running any PR-controlled code.
       - name: Mint ci-public dispatch token
         id: app-token
+        continue-on-error: true
         uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         with:
           client-id: ${{ vars.TWENTY_WORKFLOW_DISPATCHER_CLIENT_ID }}
@@ -48,6 +49,7 @@ jobs:
           permission-actions: write
 
       - name: Dispatch preview-env to ci-public
+        if: steps.app-token.outcome == 'success'
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}

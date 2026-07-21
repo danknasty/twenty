@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   dispatch:
-    if: github.event.pull_request.draft == false
+    if: github.event.pull_request.draft == false && github.repository_owner == 'twentyhq'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

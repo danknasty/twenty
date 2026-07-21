@@ -64,6 +64,7 @@ import { AgentRunService } from './services/agent-run.service';
   exports: [
     AgentAsyncExecutorService,
     AgentActorContextService,
+    AgentRunService,
     TypeOrmModule.forFeature([
       AgentMessageEntity,
       AgentMessagePartEntity,

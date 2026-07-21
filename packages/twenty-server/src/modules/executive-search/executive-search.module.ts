@@ -43,6 +43,7 @@ import { RollbackService } from 'src/modules/executive-search/migration/services
 import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migration/resolvers/ambiguous-match-queue.resolver';
 import { ComputeAnalyticsMetricResolver } from 'src/modules/executive-search/resolvers/compute-analytics-metric.resolver';
 import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/services/compute-analytics-metric.service';
+import { ResearchAiModule } from 'src/modules/executive-search/research-ai/research-ai.module';
 
 @Module({
   imports: [
@@ -59,6 +60,7 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
     TwentyORMModule,
     DirectusModule,
     WorkspaceEventEmitterModule,
+    ResearchAiModule,
   ],
   providers: [
     ReconciliationEngineRegistry,

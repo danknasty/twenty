@@ -1,6 +1,7 @@
 import { UseFilters, UseGuards, UsePipes } from '@nestjs/common';
 import { Args, Query } from '@nestjs/graphql';
 
+import { UUIDScalarType } from 'src/engine/api/graphql/workspace-schema-builder/graphql-types/scalars';
 import { MetadataResolver } from 'src/engine/api/graphql/graphql-config/decorators/metadata-resolver.decorator';
 import { getWorkspaceAuthContext } from 'src/engine/core-modules/auth/storage/workspace-auth-context.storage';
 import { ResolverValidationPipe } from 'src/engine/core-modules/graphql/pipes/resolver-validation.pipe';
@@ -22,7 +23,7 @@ export class SearchHealthAdvisoryResolver {
   @Query(() => SearchHealthAdvisoryDTO)
   @UseGuards(NoPermissionGuard)
   async searchHealthAdvisory(
-    @Args('searchAssignmentId', { type: () => String })
+    @Args('searchAssignmentId', { type: () => UUIDScalarType })
     searchAssignmentId: string,
   ): Promise<SearchHealthAdvisoryDTO> {
     const authContext = getWorkspaceAuthContext();

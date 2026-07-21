@@ -10,8 +10,6 @@ import {
 import { BoardCompositionProfileWorkspaceEntity } from 'src/modules/executive-search/standard-objects/board-composition-profile.workspace-entity';
 import { BoardMatrixCriterionWorkspaceEntity } from 'src/modules/executive-search/standard-objects/board-matrix-criterion.workspace-entity';
 import { CandidateBoardMatrixEvaluationWorkspaceEntity } from 'src/modules/executive-search/standard-objects/candidate-board-matrix-evaluation.workspace-entity';
-import { DirectorIndependenceReviewWorkspaceEntity } from 'src/modules/executive-search/standard-objects/director-independence-review.workspace-entity';
-import { BoardCommitmentReviewWorkspaceEntity } from 'src/modules/executive-search/standard-objects/board-commitment-review.workspace-entity';
 import { SearchCandidacyWorkspaceEntity } from 'src/modules/executive-search/standard-objects/search-candidacy.workspace-entity';
 import {
   type BoardMatrixEvaluationResultDTO,

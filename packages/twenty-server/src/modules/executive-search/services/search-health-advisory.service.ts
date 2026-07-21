@@ -8,6 +8,7 @@ import {
 } from 'src/modules/executive-search/exceptions/executive-search.exception';
 import { SearchAssignmentWorkspaceEntity } from 'src/modules/executive-search/standard-objects/search-assignment.workspace-entity';
 import { SearchCandidacyWorkspaceEntity } from 'src/modules/executive-search/standard-objects/search-candidacy.workspace-entity';
+import { CandidacyStatus } from 'src/modules/executive-search/common/enums/candidacy-status.enum';
 import {
   type SearchHealthAdvisoryDTO,
   type SearchHealthMetricDTO,
@@ -151,8 +152,19 @@ export class SearchHealthAdvisoryService {
 
         const counts: Record<string, number> = {
           total: candidacies.length,
-          interviewed: 0,
-          placed: 0,
+          interviewed: candidacies.filter((c) =>
+            ([
+              CandidacyStatus.CLIENT_INTERVIEW,
+              CandidacyStatus.FINALIST,
+              CandidacyStatus.REFERENCES_STAGE,
+              CandidacyStatus.DILIGENCE,
+              CandidacyStatus.OFFER_NEGOTIATION,
+              CandidacyStatus.PLACED,
+            ] as string[]).includes(c.status),
+          ).length,
+          placed: candidacies.filter(
+            (c) => c.status === CandidacyStatus.PLACED,
+          ).length,
         };
 
         const metrics: SearchHealthMetricDTO[] = PIPELINE_HEALTH_METRICS.map(

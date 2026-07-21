@@ -4,6 +4,7 @@ import { GqlExceptionFilter } from '@nestjs/graphql';
 import {
   InternalServerError,
   NotFoundError,
+  UserInputError,
 } from 'src/engine/core-modules/graphql/utils/graphql-errors.util';
 import {
   ExecutiveSearchException,
@@ -28,6 +29,10 @@ export class ExecutiveSearchGraphqlApiExceptionFilter
         throw new InternalServerError(exception.message);
       case ExecutiveSearchExceptionCode.INVALID_STATUS_TRANSITION:
         throw new InternalServerError(exception.message);
+      case ExecutiveSearchExceptionCode.NOT_FOUND:
+        throw new NotFoundError(exception.message);
+      case ExecutiveSearchExceptionCode.VALIDATION_FAILED:
+        throw new UserInputError(exception.message);
       default:
         throw new InternalServerError(exception.message);
     }

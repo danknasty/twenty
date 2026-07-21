@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 
-import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
-import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
+import { FeatureFlagModule } from 'src/engine/core-modules/feature-flag/feature-flag.module';
+import { FirewallModule } from 'src/modules/executive-search/firewall/firewall.module';
 import { DraftingGateService } from 'src/modules/executive-search/services/ai/drafting-gate.service';
 import { AssignmentIntakeAssistantService } from 'src/modules/executive-search/services/ai/assignment-intake-assistant.service';
 import { PositionSpecificationDraftService } from 'src/modules/executive-search/services/ai/position-specification-draft.service';
@@ -26,12 +26,11 @@ import { CandidatePresentationDraftService } from 'src/modules/executive-search/
  * `IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED` feature flag (checked per-service).
  */
 @Module({
-  imports: [],
+  imports: [
+    FeatureFlagModule,
+    FirewallModule,
+  ],
   providers: [
-    // Shared dependencies
-    FeatureFlagService,
-    AiContextFirewallService,
-
     // Shared human-review gate
     DraftingGateService,
 

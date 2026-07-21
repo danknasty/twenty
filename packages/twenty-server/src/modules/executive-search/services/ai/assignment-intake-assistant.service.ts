@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+
 import { Injectable, Logger } from '@nestjs/common';
 
 import { FeatureFlagKey } from 'twenty-shared/types';
@@ -161,7 +163,7 @@ export class AssignmentIntakeAssistantService {
    * Compute a SHA-256 hash of the input text for provenance.
    */
   private computeHash(text: string): string {
-    const crypto = require('crypto');
+    
 
     return crypto.createHash('sha256').update(text).digest('hex');
   }

@@ -1,428 +1,403 @@
-// Mock deep dependencies before any imports
-jest.mock('twenty-shared/utils', () => ({
-  CustomError: class MockCustomError extends Error {
-    constructor(message: string) {
-      super(message);
-      this.name = 'CustomError';
-    }
+// Mock workspace auth context storage
+jest.mock(
+  'src/engine/core-modules/auth/storage/workspace-auth-context.storage',
+  () => ({
+    getWorkspaceAuthContext: jest.fn(() => ({
+      workspace: { id: 'workspace-1' },
+      type: 'user' as const,
+      workspaceMemberId: 'member-1',
+    })),
+  }),
+);
+
+// Mock the GlobalWorkspaceOrmManager
+jest.mock(
+  'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager',
+  () => {
+    const mockExecuteInWorkspaceContext = jest
+      .fn()
+      .mockImplementation(
+        (fn: () => any, _authContext?: any) => fn(),
+      );
+
+    const mockGetRepository = jest.fn();
+
+    return {
+      GlobalWorkspaceOrmManager: jest.fn().mockImplementation(() => ({
+        executeInWorkspaceContext: mockExecuteInWorkspaceContext,
+        getRepository: mockGetRepository,
+      })),
+    };
   },
-  camelToSnakeCase: (s: string) => s.replace(/([A-Z])/g, '_$1').toLowerCase(),
-}), { virtual: true });
+);
 
-jest.mock('src/engine/core-modules/twenty-config/config-variables', () => {
-  const actual = jest.requireActual('src/engine/core-modules/twenty-config/config-variables');
-  return {
-    ...actual,
-    ENTERPRISE_INSTANCE_TYPE: { PRODUCTION: 'production', DEVELOPMENT: 'development' },
-  };
-}, { virtual: false });
+// Mock the AiContextFirewallService to avoid SWC/CJS dependency resolution
+jest.mock(
+  'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service',
+  () => ({
+    AiContextFirewallService: jest.fn().mockImplementation(() => ({
+      validateAiContextAllowlist: jest.fn().mockReturnValue([]),
+      assertAiContextAllowlistSafe: jest.fn(),
+      filterProhibited: jest.fn().mockImplementation((fields: string[]) => fields),
+    })),
+  }),
+);
 
-jest.mock('src/engine/core-modules/feature-flag/services/feature-flag.service', () => {
-  class MockFeatureFlagService {
-    isFeatureEnabled = jest.fn();
-  }
-  return { FeatureFlagService: MockFeatureFlagService };
-}, { virtual: false });
-
-jest.mock('src/modules/executive-search/firewall/enforcement/ai-context-firewall.service', () => {
-  class MockAiContextFirewallService {
-    validateAiContextAllowlist = jest.fn();
-    assertAiContextAllowlistSafe = jest.fn();
-    filterProhibited = jest.fn();
-  }
-  return { AiContextFirewallService: MockAiContextFirewallService };
-}, { virtual: false });
-
-jest.mock('src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager', () => {
-  class MockGlobalWorkspaceOrmManager {
-    executeInWorkspaceContext = jest.fn();
-    getRepository = jest.fn();
-  }
-  return { GlobalWorkspaceOrmManager: MockGlobalWorkspaceOrmManager };
-}, { virtual: false });
+// Mock the FeatureFlagService to avoid CustomError resolution chain issues
+jest.mock(
+  'src/engine/core-modules/feature-flag/services/feature-flag.service',
+  () => ({
+    FeatureFlagService: jest.fn().mockImplementation(() => ({
+      isFeatureEnabled: jest.fn(),
+    })),
+  }),
+);
 
 import { Test, type TestingModule } from '@nestjs/testing';
 
-import { FeatureFlagKey } from 'twenty-shared/types';
-
-import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
-import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
-import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
 import {
   ExecutiveSearchException,
   ExecutiveSearchExceptionCode,
 } from 'src/modules/executive-search/exceptions/executive-search.exception';
 
-import { BoardMatrixEvaluationService } from '../board-matrix-evaluation.service';
+import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
+import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
+import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
 
 describe('BoardMatrixEvaluationService', () => {
-  let service: BoardMatrixEvaluationService;
-  let featureFlagService: jest.Mocked<FeatureFlagService>;
-  let aiContextFirewallService: jest.Mocked<AiContextFirewallService>;
-  let globalWorkspaceOrmManager: jest.Mocked<GlobalWorkspaceOrmManager>;
+  let service: any;
+  let mockFeatureFlagService: jest.Mocked<FeatureFlagService>;
+  let mockAiContextFirewallService: any;
+  let mockGlobalWorkspaceOrmManager: any;
+  let mockProfileRepository: any;
+  let mockCandidacyRepository: any;
+  let mockCriterionRepository: any;
+  let mockEvalRepository: any;
 
   const mockWorkspaceId = 'workspace-1';
-  const mockAuthContext = { type: 'user' as const, workspaceMemberId: 'member-1' };
+  const mockAuthContext: any = {
+    workspace: { id: 'workspace-1' },
+    type: 'user' as const,
+    workspaceMemberId: 'member-1',
+  };
 
   beforeEach(async () => {
-    featureFlagService = {
+    mockFeatureFlagService = {
       isFeatureEnabled: jest.fn(),
     } as any;
 
-    aiContextFirewallService = {
+    mockAiContextFirewallService = {
+      validateAiContextAllowlist: jest.fn().mockReturnValue([]),
       assertAiContextAllowlistSafe: jest.fn(),
-    } as any;
+      filterProhibited: jest.fn().mockImplementation((fields: string[]) => fields),
+    };
 
-    globalWorkspaceOrmManager = {
-      executeInWorkspaceContext: jest.fn(),
-      getRepository: jest.fn(),
-    } as any;
+    mockProfileRepository = {
+      findOne: jest.fn(),
+    };
+    mockCandidacyRepository = {
+      findOne: jest.fn(),
+    };
+    mockCriterionRepository = {
+      find: jest.fn(),
+      findOne: jest.fn(),
+    };
+    mockEvalRepository = {
+      save: jest.fn(),
+      find: jest.fn(),
+      update: jest.fn(),
+    };
+
+    const { BoardMatrixEvaluationService: BMES } = require('../board-matrix-evaluation.service');
 
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        BoardMatrixEvaluationService,
+        BMES,
         {
           provide: FeatureFlagService,
-          useValue: featureFlagService,
+          useValue: mockFeatureFlagService,
         },
         {
           provide: AiContextFirewallService,
-          useValue: aiContextFirewallService,
+          useValue: mockAiContextFirewallService,
         },
         {
           provide: GlobalWorkspaceOrmManager,
-          useValue: globalWorkspaceOrmManager,
+          useValue: {
+            executeInWorkspaceContext: async (fn: any) => fn(),
+            getRepository: jest.fn(),
+          },
         },
       ],
     }).compile();
 
-    service = module.get<BoardMatrixEvaluationService>(
-      BoardMatrixEvaluationService,
+    service = module.get(BMES);
+    mockGlobalWorkspaceOrmManager = module.get(GlobalWorkspaceOrmManager);
+  });
+
+  const mockInput = {
+    boardCompositionProfileId: 'profile-1',
+    searchCandidacyId: 'candidacy-1',
+  };
+
+  it('should throw when umbrella AI feature flag is disabled', async () => {
+    mockFeatureFlagService.isFeatureEnabled.mockResolvedValue(false);
+
+    await expect(
+      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
+    ).rejects.toThrow(ExecutiveSearchException);
+
+    await expect(
+      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
+    ).rejects.toThrowError(
+      expect.objectContaining({
+        code: ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
+      }),
     );
   });
 
-  describe('evaluateCandidate', () => {
-    const mockInput = {
-      boardCompositionProfileId: 'profile-1',
-      searchCandidacyId: 'candidacy-1',
+  it('should throw when board matrix AI feature flag is disabled', async () => {
+    mockFeatureFlagService.isFeatureEnabled
+      .mockResolvedValueOnce(true)
+      .mockResolvedValueOnce(false);
+
+    await expect(
+      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
+    ).rejects.toThrow(ExecutiveSearchException);
+
+    await expect(
+      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
+    ).rejects.toThrowError(
+      expect.objectContaining({
+        code: ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
+      }),
+    );
+  });
+
+  it('should throw when board composition profile is not found', async () => {
+    mockFeatureFlagService.isFeatureEnabled.mockResolvedValue(true);
+
+    mockGlobalWorkspaceOrmManager.getRepository
+      .mockResolvedValueOnce(mockProfileRepository)
+      .mockResolvedValueOnce(mockCandidacyRepository)
+      .mockResolvedValueOnce(mockCriterionRepository)
+      .mockResolvedValueOnce(mockEvalRepository);
+
+    mockProfileRepository.findOne.mockResolvedValue(null);
+
+    await expect(
+      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
+    ).rejects.toThrow(ExecutiveSearchException);
+
+    await expect(
+      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
+    ).rejects.toThrowError(
+      expect.objectContaining({
+        code: ExecutiveSearchExceptionCode.BOARD_COMPOSITION_PROFILE_NOT_FOUND,
+      }),
+    );
+  });
+
+  it('should throw when no criteria found for profile', async () => {
+    mockFeatureFlagService.isFeatureEnabled.mockResolvedValue(true);
+
+    const profile = { id: 'profile-1', name: 'Test Profile' };
+    const candidacy = { id: 'candidacy-1' };
+
+    mockGlobalWorkspaceOrmManager.getRepository
+      .mockResolvedValueOnce(mockProfileRepository)
+      .mockResolvedValueOnce(mockCandidacyRepository)
+      .mockResolvedValueOnce(mockCriterionRepository)
+      .mockResolvedValueOnce(mockEvalRepository);
+
+    mockProfileRepository.findOne.mockResolvedValue(profile);
+    mockCandidacyRepository.findOne.mockResolvedValue(candidacy);
+    mockCriterionRepository.find.mockResolvedValue([]);
+
+    await expect(
+      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
+    ).rejects.toThrow(ExecutiveSearchException);
+
+    await expect(
+      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
+    ).rejects.toThrowError(
+      expect.objectContaining({
+        code: ExecutiveSearchExceptionCode.BOARD_MATRIX_CRITERIA_NOT_FOUND,
+      }),
+    );
+  });
+
+  it('should successfully evaluate a candidate against criteria', async () => {
+    mockFeatureFlagService.isFeatureEnabled.mockResolvedValue(true);
+
+    const profile = {
+      id: 'profile-1',
+      name: 'Tech Board Profile',
+      status: 'ACTIVE',
     };
+    const candidacy = { id: 'candidacy-1' };
+    const criteria: any[] = [
+      {
+        id: 'crit-1',
+        name: 'Financial Expertise',
+        category: 'FINANCIAL_EXPERTISE',
+        weight: 0.4,
+        description: 'CFO or audit committee experience',
+        isRequired: true,
+        boardCompositionProfileId: 'profile-1',
+      },
+      {
+        id: 'crit-2',
+        name: 'Industry Knowledge',
+        category: 'INDUSTRY_KNOWLEDGE',
+        weight: 0.3,
+        description: 'Deep SaaS industry experience',
+        isRequired: false,
+        boardCompositionProfileId: 'profile-1',
+      },
+      {
+        id: 'crit-3',
+        name: 'Independence',
+        category: 'INDEPENDENCE',
+        weight: 0.3,
+        description: 'No material relationships with company',
+        isRequired: true,
+        boardCompositionProfileId: 'profile-1',
+      },
+    ];
 
-    it('should throw when umbrella AI feature flag is disabled', async () => {
-      featureFlagService.isFeatureEnabled.mockResolvedValue(false);
+    mockGlobalWorkspaceOrmManager.getRepository
+      .mockResolvedValueOnce(mockProfileRepository)
+      .mockResolvedValueOnce(mockCandidacyRepository)
+      .mockResolvedValueOnce(mockCriterionRepository)
+      .mockResolvedValueOnce(mockEvalRepository);
 
-      await expect(
-        service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-      ).rejects.toThrow(ExecutiveSearchException);
+    mockProfileRepository.findOne.mockResolvedValue(profile);
+    mockCandidacyRepository.findOne.mockResolvedValue(candidacy);
+    mockCriterionRepository.find.mockResolvedValue(criteria);
+    mockEvalRepository.save.mockResolvedValue({});
+    mockEvalRepository.find.mockResolvedValue([]);
 
-      await expect(
-        service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-      ).rejects.toThrowError(
-        expect.objectContaining({
-          code: ExecutiveSearchExceptionCode.EXECUTIVE_SEARCH_AI_DISABLED,
-        }),
-      );
-    });
+    const result = await service.evaluateCandidate(
+      mockInput,
+      mockWorkspaceId,
+      mockAuthContext,
+    );
 
-    it('should throw when board matrix AI feature flag is disabled', async () => {
-      featureFlagService.isFeatureEnabled
-        .mockResolvedValueOnce(true)  // umbrella flag
-        .mockResolvedValueOnce(false); // board matrix flag
+    expect(result.candidacyId).toBe('candidacy-1');
+    expect(result.profileId).toBe('profile-1');
+    expect(result.profileName).toBe('Tech Board Profile');
+    expect(result.perCriterionEvaluations).toHaveLength(3);
+    expect(result.requiresHumanReview).toBe(true);
+    expect(result.humanReviewedAt).toBeNull();
+    expect(result.weightedScore).not.toBeNull();
+    expect(result.maxWeightedScore).not.toBeNull();
+    expect(typeof result.summary).toBe('string');
+    expect(typeof result.independenceAssessment).toBe('string');
+    expect(typeof result.commitmentCapacityReview).toBe('string');
+    expect(typeof result.diversityComplement).toBe('string');
 
-      await expect(
-        service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-      ).rejects.toThrow(ExecutiveSearchException);
+    for (const evalItem of result.perCriterionEvaluations) {
+      expect(evalItem.score).toBe(7);
+      expect(evalItem.maxScore).toBe(10);
+      expect(evalItem.evidence).toContain(evalItem.criterionName);
+      expect(evalItem.assessment).toContain(evalItem.criterionName);
+    }
 
-      await expect(
-        service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-      ).rejects.toThrowError(
-        expect.objectContaining({
-          code: ExecutiveSearchExceptionCode.BOARD_MATRIX_AI_DISABLED,
-        }),
-      );
-    });
+    expect(mockEvalRepository.save).toHaveBeenCalledTimes(3);
 
-    it('should throw when board composition profile is not found', async () => {
-      featureFlagService.isFeatureEnabled.mockResolvedValue(true);
-
-      const mockRepo = {
-        findOne: jest.fn().mockResolvedValue(null),
-        find: jest.fn(),
-        save: jest.fn(),
-        update: jest.fn(),
-      };
-
-      globalWorkspaceOrmManager.getRepository.mockResolvedValue(mockRepo);
-      globalWorkspaceOrmManager.executeInWorkspaceContext.mockImplementation(
-        async (fn: any) => fn(),
-      );
-
-      await expect(
-        service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-      ).rejects.toThrow(ExecutiveSearchException);
-
-      await expect(
-        service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-      ).rejects.toThrowError(
-        expect.objectContaining({
-          code: ExecutiveSearchExceptionCode.BOARD_COMPOSITION_PROFILE_NOT_FOUND,
-        }),
-      );
-    });
-
-    it('should throw when no criteria found for profile', async () => {
-      featureFlagService.isFeatureEnabled.mockResolvedValue(true);
-
-      const profile = { id: 'profile-1', name: 'Test Profile' };
-      const candidacy = { id: 'candidacy-1' };
-
-      const mockProfileRepo = {
-        findOne: jest.fn().mockResolvedValue(profile),
-      };
-      const mockCandidacyRepo = {
-        findOne: jest.fn().mockResolvedValue(candidacy),
-      };
-      const mockCriterionRepo = {
-        find: jest.fn().mockResolvedValue([]),
-        findOne: jest.fn(),
-      };
-      const mockEvalRepo = {
-        save: jest.fn(),
-        find: jest.fn(),
-        update: jest.fn(),
-      };
-
-      globalWorkspaceOrmManager.getRepository
-        .mockResolvedValueOnce(mockProfileRepo)
-        .mockResolvedValueOnce(mockCandidacyRepo)
-        .mockResolvedValueOnce(mockCriterionRepo)
-        .mockResolvedValueOnce(mockEvalRepo);
-
-      globalWorkspaceOrmManager.executeInWorkspaceContext.mockImplementation(
-        async (fn: any) => fn(),
-      );
-
-      await expect(
-        service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-      ).rejects.toThrow(ExecutiveSearchException);
-
-      await expect(
-        service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-      ).rejects.toThrowError(
-        expect.objectContaining({
-          code: ExecutiveSearchExceptionCode.BOARD_MATRIX_CRITERIA_NOT_FOUND,
-        }),
-      );
-    });
-
-    it('should successfully evaluate a candidate against criteria', async () => {
-      featureFlagService.isFeatureEnabled.mockResolvedValue(true);
-
-      const profile = {
-        id: 'profile-1',
-        name: 'Tech Board Profile',
-        status: 'ACTIVE',
-      };
-      const candidacy = { id: 'candidacy-1' };
-      const criteria: any[] = [
-        {
-          id: 'crit-1',
-          name: 'Financial Expertise',
-          category: 'FINANCIAL_EXPERTISE',
-          weight: 0.4,
-          description: 'CFO or audit committee experience',
-          isRequired: true,
-          boardCompositionProfileId: 'profile-1',
-        },
-        {
-          id: 'crit-2',
-          name: 'Industry Knowledge',
-          category: 'INDUSTRY_KNOWLEDGE',
-          weight: 0.3,
-          description: 'Deep SaaS industry experience',
-          isRequired: false,
-          boardCompositionProfileId: 'profile-1',
-        },
-        {
-          id: 'crit-3',
-          name: 'Independence',
-          category: 'INDEPENDENCE',
-          weight: 0.3,
-          description: 'No material relationships with company',
-          isRequired: true,
-          boardCompositionProfileId: 'profile-1',
-        },
-      ];
-
-      const mockProfileRepo = {
-        findOne: jest.fn().mockResolvedValue(profile),
-      };
-      const mockCandidacyRepo = {
-        findOne: jest.fn().mockResolvedValue(candidacy),
-      };
-      const mockCriterionRepo = {
-        find: jest.fn().mockResolvedValue(criteria),
-      };
-      const mockEvalRepo = {
-        save: jest.fn().mockResolvedValue({}),
-        find: jest.fn().mockResolvedValue([]),
-      };
-
-      globalWorkspaceOrmManager.getRepository
-        .mockResolvedValueOnce(mockProfileRepo)
-        .mockResolvedValueOnce(mockCandidacyRepo)
-        .mockResolvedValueOnce(mockCriterionRepo)
-        .mockResolvedValueOnce(mockEvalRepo);
-
-      globalWorkspaceOrmManager.executeInWorkspaceContext.mockImplementation(
-        async (fn: any) => fn(),
-      );
-
-      const result = await service.evaluateCandidate(
-        mockInput,
-        mockWorkspaceId,
-        mockAuthContext,
-      );
-
-      expect(result.candidacyId).toBe('candidacy-1');
-      expect(result.profileId).toBe('profile-1');
-      expect(result.profileName).toBe('Tech Board Profile');
-      expect(result.perCriterionEvaluations).toHaveLength(3);
-      expect(result.requiresHumanReview).toBe(true);
-      expect(result.humanReviewedAt).toBeNull();
-      expect(result.weightedScore).not.toBeNull();
-      expect(result.maxWeightedScore).not.toBeNull();
-      expect(typeof result.summary).toBe('string');
-      expect(typeof result.independenceAssessment).toBe('string');
-      expect(typeof result.commitmentCapacityReview).toBe('string');
-      expect(typeof result.diversityComplement).toBe('string');
-
-      // Verify each criterion was evaluated
-      for (const evalItem of result.perCriterionEvaluations) {
-        expect(evalItem.score).toBe(7);
-        expect(evalItem.maxScore).toBe(10);
-        expect(evalItem.evidence).toContain(evalItem.criterionName);
-        expect(evalItem.assessment).toContain(evalItem.criterionName);
-      }
-
-      // Verify persistence
-      expect(mockEvalRepo.save).toHaveBeenCalledTimes(3);
-
-      // Verify weighted score computation
-      expect(result.weightedScore).toBeCloseTo(
-        (7 / 10) * 0.4 + (7 / 10) * 0.3 + (7 / 10) * 0.3,
-      );
-      expect(result.maxWeightedScore).toBe(1.0);
-    });
-
-    it('should call AI context firewall for input sanitization', async () => {
-      featureFlagService.isFeatureEnabled.mockResolvedValue(true);
-
-      const profile = { id: 'profile-1', name: 'Test Profile' };
-      const candidacy = { id: 'candidacy-1' };
-
-      const mockProfileRepo = {
-        findOne: jest.fn().mockResolvedValue(profile),
-      };
-      const mockCandidacyRepo = {
-        findOne: jest.fn().mockResolvedValue(candidacy),
-      };
-      const mockCriterionRepo = {
-        find: jest.fn().mockResolvedValue([{
-          id: 'crit-1',
-          name: 'Test',
-          category: 'OTHER',
-          weight: 1,
-          description: 'Test',
-          isRequired: false,
-          boardCompositionProfileId: 'profile-1',
-        }]),
-      };
-      const mockEvalRepo = {
-        save: jest.fn().mockResolvedValue({}),
-        find: jest.fn().mockResolvedValue([]),
-      };
-
-      globalWorkspaceOrmManager.getRepository
-        .mockResolvedValueOnce(mockProfileRepo)
-        .mockResolvedValueOnce(mockCandidacyRepo)
-        .mockResolvedValueOnce(mockCriterionRepo)
-        .mockResolvedValueOnce(mockEvalRepo);
-
-      globalWorkspaceOrmManager.executeInWorkspaceContext.mockImplementation(
-        async (fn: any) => fn(),
-      );
-
-      await service.evaluateCandidate(
-        mockInput,
-        mockWorkspaceId,
-        mockAuthContext,
-      );
-
-      expect(
-        aiContextFirewallService.assertAiContextAllowlistSafe,
-      ).toHaveBeenCalledWith(
-        expect.arrayContaining([
-          'boardCompositionProfileId',
-          'searchCandidacyId',
-        ]),
-      );
-    });
+    expect(result.weightedScore).toBeCloseTo(
+      (7 / 10) * 0.4 + (7 / 10) * 0.3 + (7 / 10) * 0.3,
+    );
+    expect(result.maxWeightedScore).toBe(1.0);
   });
 
-  describe('markHumanReviewComplete', () => {
-    it('should update evaluation records with human review timestamp', async () => {
-      const mockEvalRepo = {
-        find: jest.fn().mockResolvedValue([
-          { id: 'eval-1', notes: 'Initial notes' },
-          { id: 'eval-2', notes: null },
-        ]),
-        update: jest.fn().mockResolvedValue({}),
-      };
+  it('should call AI context firewall for input sanitization', async () => {
+    mockFeatureFlagService.isFeatureEnabled.mockResolvedValue(true);
 
-      globalWorkspaceOrmManager.getRepository.mockResolvedValue(mockEvalRepo);
-      globalWorkspaceOrmManager.executeInWorkspaceContext.mockImplementation(
-        async (fn: any) => fn(),
-      );
+    const profile = { id: 'profile-1', name: 'Test Profile' };
+    const candidacy = { id: 'candidacy-1' };
 
-      await service.markHumanReviewComplete(
-        'candidacy-1',
-        mockWorkspaceId,
-        mockAuthContext,
-      );
+    mockGlobalWorkspaceOrmManager.getRepository
+      .mockResolvedValueOnce(mockProfileRepository)
+      .mockResolvedValueOnce(mockCandidacyRepository)
+      .mockResolvedValueOnce(mockCriterionRepository)
+      .mockResolvedValueOnce(mockEvalRepository);
 
-      expect(mockEvalRepo.find).toHaveBeenCalledWith({
-        where: { searchCandidacyId: 'candidacy-1' },
-      });
-      expect(mockEvalRepo.update).toHaveBeenCalledTimes(2);
-      expect(mockEvalRepo.update).toHaveBeenCalledWith(
-        'eval-1',
-        expect.objectContaining({
-          notes: expect.stringContaining('HUMAN REVIEWED'),
-        }),
-      );
-    });
+    mockProfileRepository.findOne.mockResolvedValue(profile);
+    mockCandidacyRepository.findOne.mockResolvedValue(candidacy);
+    mockCriterionRepository.find.mockResolvedValue([{
+      id: 'crit-1',
+      name: 'Test',
+      category: 'OTHER',
+      weight: 1,
+      description: 'Test',
+      isRequired: false,
+      boardCompositionProfileId: 'profile-1',
+    }]);
+    mockEvalRepository.save.mockResolvedValue({});
+    mockEvalRepository.find.mockResolvedValue([]);
+
+    await service.evaluateCandidate(
+      mockInput,
+      mockWorkspaceId,
+      mockAuthContext,
+    );
+
+    expect(
+      mockAiContextFirewallService.assertAiContextAllowlistSafe,
+    ).toHaveBeenCalledWith(
+      expect.arrayContaining([
+        'boardCompositionProfileId',
+        'searchCandidacyId',
+      ]),
+    );
   });
 
-  describe('feature flag checking order', () => {
-    it('should check umbrella flag before board matrix flag', async () => {
-      featureFlagService.isFeatureEnabled
-        .mockResolvedValueOnce(false) // umbrella flag returns false
-        .mockResolvedValueOnce(true); // board matrix flag would return true
+  it('should update evaluation records with human review timestamp', async () => {
+    mockGlobalWorkspaceOrmManager.getRepository.mockResolvedValue(mockEvalRepository);
 
-      await expect(
-        service.evaluateCandidate(
-          { boardCompositionProfileId: 'any', searchCandidacyId: 'any' },
-          mockWorkspaceId,
-          mockAuthContext,
-        ),
-      ).rejects.toThrow(
-        expect.objectContaining({
-          code: ExecutiveSearchExceptionCode.EXECUTIVE_SEARCH_AI_DISABLED,
-        }),
-      );
+    mockEvalRepository.find.mockResolvedValue([
+      { id: 'eval-1', notes: 'Initial notes' },
+      { id: 'eval-2', notes: null },
+    ]);
+    mockEvalRepository.update.mockResolvedValue({});
 
-      // Should NOT have checked the board matrix flag
-      expect(featureFlagService.isFeatureEnabled).toHaveBeenCalledTimes(1);
+    await service.markHumanReviewComplete(
+      'candidacy-1',
+      mockWorkspaceId,
+      mockAuthContext,
+    );
+
+    expect(mockEvalRepository.find).toHaveBeenCalledWith({
+      where: { searchCandidacyId: 'candidacy-1' },
     });
+    expect(mockEvalRepository.update).toHaveBeenCalledTimes(2);
+    expect(mockEvalRepository.update).toHaveBeenCalledWith(
+      'eval-1',
+      expect.objectContaining({
+        notes: expect.stringContaining('HUMAN REVIEWED'),
+      }),
+    );
+  });
+
+  it('should check umbrella flag before board matrix flag', async () => {
+    mockFeatureFlagService.isFeatureEnabled
+      .mockResolvedValueOnce(false)
+      .mockResolvedValueOnce(true);
+
+    await expect(
+      service.evaluateCandidate(
+        { boardCompositionProfileId: 'any', searchCandidacyId: 'any' },
+        mockWorkspaceId,
+        mockAuthContext,
+      ),
+    ).rejects.toThrow(
+      expect.objectContaining({
+        code: ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
+      }),
+    );
+
+    expect(mockFeatureFlagService.isFeatureEnabled).toHaveBeenCalledTimes(1);
   });
 });

@@ -93,7 +93,7 @@ export class SearchHealthAdvisoryService {
 
     if (!umbrellaEnabled) {
       throw new ExecutiveSearchException(
-        ExecutiveSearchExceptionCode.EXECUTIVE_SEARCH_AI_DISABLED,
+        ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
         'Executive Search AI candidate features are disabled',
       );
     }
@@ -105,7 +105,7 @@ export class SearchHealthAdvisoryService {
 
     if (!searchHealthEnabled) {
       throw new ExecutiveSearchException(
-        ExecutiveSearchExceptionCode.SEARCH_HEALTH_AI_DISABLED,
+        ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
         'Search Health AI advisory is disabled',
       );
     }

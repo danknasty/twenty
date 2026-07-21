@@ -62,7 +62,7 @@ export class CriterionAssessmentService {
     workspaceId: string,
     authContext: WorkspaceAuthContext,
   ): Promise<GenerateCriterionAssessmentsResult> {
-    // 1. Kill switch — IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED must be true
+    // 1. Kill switch — both feature flags must be true
     const aiEnabled = await this.featureFlagService.isFeatureEnabled(
       FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED,
       workspaceId,
@@ -72,6 +72,18 @@ export class CriterionAssessmentService {
       throw new ExecutiveSearchException(
         ExecutiveSearchExceptionCode.OPERATION_REQUIRES_FEATURE_FLAG,
         'AI candidate features are not enabled. Enable IS_EXECUTIVE_SEARCH_AI_CANDIDATE_ENABLED.',
+      );
+    }
+
+    const shadowEnabled = await this.featureFlagService.isFeatureEnabled(
+      FeatureFlagKey.IS_CRITERION_ASSESSMENT_SHADOW_ENABLED,
+      workspaceId,
+    );
+
+    if (!shadowEnabled) {
+      throw new ExecutiveSearchException(
+        ExecutiveSearchExceptionCode.OPERATION_REQUIRES_FEATURE_FLAG,
+        'Criterion assessment shadow mode is not enabled. Enable IS_CRITERION_ASSESSMENT_SHADOW_ENABLED.',
       );
     }
 

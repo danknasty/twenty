@@ -9,7 +9,8 @@ import { SettingsPageContainer } from '@/settings/components/SettingsPageContain
 import { SettingsPageLayout } from '@/settings/components/layout/SettingsPageLayout';
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 import { SettingsTextInput } from '@/ui/input/components/SettingsTextInput';
-import { FeatureFlagKey, SettingsPath } from 'twenty-shared/types';
+import { FeatureFlagKey } from '~/generated-metadata/graphql';
+import { SettingsPath } from 'twenty-shared/types';
 import { getSettingsPath } from 'twenty-shared/utils';
 import { UnsubscribeTopicVisibility } from '~/generated-metadata/graphql';
 import { IconEye } from 'twenty-ui/icon';

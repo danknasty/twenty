@@ -1141,36 +1141,106 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
   analyticsDomainMetricRecordPage: {
     universalIdentifier: '21a31623-62c1-4c93-b987-95a057926824',
     tabs: {
-      home: { universalIdentifier: '7ca58390-cac3-46cb-a77f-9ede750826c8', widgets: { fields: { universalIdentifier: 'a1501b70-2ad8-425f-94cd-4507041424df' }, }, },
-      timeline: { universalIdentifier: '41005f01-4933-4c93-8ada-6dae9d82d67d', widgets: { timeline: { universalIdentifier: 'af18f8e5-7fc7-42f4-a311-3da10bfd58de' }, }, },
+      home: {
+        universalIdentifier: '7ca58390-cac3-46cb-a77f-9ede750826c8',
+        widgets: {
+          fields: {
+            universalIdentifier: 'a1501b70-2ad8-425f-94cd-4507041424df',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '41005f01-4933-4c93-8ada-6dae9d82d67d',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'af18f8e5-7fc7-42f4-a311-3da10bfd58de',
+          },
+        },
+      },
     },
   },
   analyticsMetricSnapshotRecordPage: {
     universalIdentifier: '4b792d08-1dc3-43d8-9ebd-b05be6e5d296',
     tabs: {
-      home: { universalIdentifier: '0d1e21d4-236e-443a-aba5-2d850dbe56b5', widgets: { fields: { universalIdentifier: '3d34e99e-f309-452d-b6bb-130a8ef596ef' }, }, },
-      timeline: { universalIdentifier: '30661ee1-8b62-470e-9575-e4dc10faddec', widgets: { timeline: { universalIdentifier: '5923c7bd-707c-4bd6-9021-60cd10cda9f4' }, }, },
+      home: {
+        universalIdentifier: '0d1e21d4-236e-443a-aba5-2d850dbe56b5',
+        widgets: {
+          fields: {
+            universalIdentifier: '3d34e99e-f309-452d-b6bb-130a8ef596ef',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '30661ee1-8b62-470e-9575-e4dc10faddec',
+        widgets: {
+          timeline: {
+            universalIdentifier: '5923c7bd-707c-4bd6-9021-60cd10cda9f4',
+          },
+        },
+      },
     },
   },
   analyticsDashboardConfigRecordPage: {
     universalIdentifier: 'f46e1fb3-1ab2-4e48-bb6f-fdb212c7ccee',
     tabs: {
-      home: { universalIdentifier: '02d50911-b564-4b39-8b73-65078432eaea', widgets: { fields: { universalIdentifier: 'f8d2359f-8819-4373-b080-c6dd6d1bb5db' }, }, },
-      timeline: { universalIdentifier: '9305ffae-3c60-4af7-95f5-ce3afcecfd1b', widgets: { timeline: { universalIdentifier: '0531bb0f-e3ff-4848-91d5-7313e73ee3e4' }, }, },
+      home: {
+        universalIdentifier: '02d50911-b564-4b39-8b73-65078432eaea',
+        widgets: {
+          fields: {
+            universalIdentifier: 'f8d2359f-8819-4373-b080-c6dd6d1bb5db',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '9305ffae-3c60-4af7-95f5-ce3afcecfd1b',
+        widgets: {
+          timeline: {
+            universalIdentifier: '0531bb0f-e3ff-4848-91d5-7313e73ee3e4',
+          },
+        },
+      },
     },
   },
   aiPromptTemplateRecordPage: {
     universalIdentifier: 'd4e5f6a7-1001-4000-9001-d4e5f6a7000001',
     tabs: {
-      home: { universalIdentifier: 'd4e5f6a7-1002-4000-9001-d4e5f6a7000002', widgets: { fields: { universalIdentifier: 'd4e5f6a7-1003-4000-9001-d4e5f6a7000003' }, }, },
-      timeline: { universalIdentifier: 'd4e5f6a7-1004-4000-9001-d4e5f6a7000004', widgets: { timeline: { universalIdentifier: 'd4e5f6a7-1005-4000-9001-d4e5f6a7000005' }, }, },
+      home: {
+        universalIdentifier: 'd4e5f6a7-1002-4000-9001-d4e5f6a7000002',
+        widgets: {
+          fields: {
+            universalIdentifier: 'd4e5f6a7-1003-4000-9001-d4e5f6a7000003',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'd4e5f6a7-1004-4000-9001-d4e5f6a7000004',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'd4e5f6a7-1005-4000-9001-d4e5f6a7000005',
+          },
+        },
+      },
     },
   },
   externalIdentityMatchQueueRecordPage: {
     universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7455',
     tabs: {
-      home: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7456', widgets: { fields: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7457' }, }, },
-      timeline: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7458', widgets: { timeline: { universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7459' }, }, },
+      home: {
+        universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7456',
+        widgets: {
+          fields: {
+            universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7457',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7458',
+        widgets: {
+          timeline: {
+            universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7459',
+          },
+        },
+      },
     },
   },
   aiModelRegistryRecordPage: {

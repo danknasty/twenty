@@ -1,8 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 
 import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
-import { IdentityMatchingService } from 'src/modules/executive-search/migration/services/identity-matching.service';
-import type { MatchResult } from 'src/modules/executive-search/migration/services/identity-matching.service';
+import { IdentityMatchingService, MatchResult } from 'src/modules/executive-search/migration/services/identity-matching.service';
 import { AmbiguousMatchQueueService } from 'src/modules/executive-search/migration/services/ambiguous-match-queue.service';
 import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
 import { ExternalIdentityMatchQueueWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-identity-match-queue.workspace-entity';

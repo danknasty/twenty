@@ -23,7 +23,6 @@ import {
   computeStandardExecutiveEducationViews,
   computeStandardExecutiveExternalProfileViews,
   computeStandardExecutiveLanguageViews,
-  computeStandardExecutiveProfileViews,
   computeStandardExecutiveSearchPreferenceViews,
 } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-executive-views.util';
 import { computeStandardExecutiveProfileViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-executive-profile-views.util';
@@ -99,7 +98,8 @@ import { computeStandardExternalIdentityMatchQueueViews } from 'src/engine/works
 import { computeStandardAnalyticsDomainMetricViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-domain-metric-views.util';
 import { computeStandardAnalyticsMetricSnapshotViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-metric-snapshot-views.util';
 import { computeStandardAnalyticsDashboardConfigViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-analytics-dashboard-config-views.util';
-import { computeAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-ai-prompt-template-views.util';import { computeStandardAiModelRegistryViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-model-registry-views.util';
+import { computeAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-ai-prompt-template-views.util';
+import { computeStandardAiModelRegistryViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-model-registry-views.util';
 import { computeStandardAiPromptTemplateViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-prompt-template-views.util';
 import { computeStandardAiProviderCallLogViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-ai-provider-call-log-views.util';
 import { computeStandardAppAgentsViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-app-agents-views.util';

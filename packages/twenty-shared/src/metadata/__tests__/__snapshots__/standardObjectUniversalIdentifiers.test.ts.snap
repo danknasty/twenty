@@ -1782,6 +1782,9 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
       "attachments": {
         "universalIdentifier": "20202020-b0f4-57bf-0172-410bb9f8cff8",
       },
+      "clientBillingContact": {
+        "universalIdentifier": "20202020-c5b1-466a-8b6d-126e6ef9d306",
+      },
       "company": {
         "universalIdentifier": "20202020-48c9-1bd7-1928-4ed5be0b4452",
       },

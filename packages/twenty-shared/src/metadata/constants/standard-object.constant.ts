@@ -5626,6 +5626,9 @@ export const STANDARD_OBJECTS = {
       accountNotes: {
         universalIdentifier: '20202020-66d6-8fd2-ee79-46d3b4add9f6',
       },
+      clientBillingContact: {
+        universalIdentifier: '20202020-c5b1-466a-8b6d-126e6ef9d306',
+      },
       taskTargets: {
         universalIdentifier: '20202020-8081-28e1-d8ae-4e6a8268dc6f',
       },

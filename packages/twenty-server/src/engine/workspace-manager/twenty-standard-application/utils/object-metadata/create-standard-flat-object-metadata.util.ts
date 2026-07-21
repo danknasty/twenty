@@ -1521,9 +1521,7 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         namePlural: 'clientStakeholderRoles',
         labelSingular: i18nLabel(msg`Client Stakeholder Role`),
         labelPlural: i18nLabel(msg`Client Stakeholder Roles`),
-        description: i18nLabel(
-          msg`Role of a stakeholder at a client company`,
-        ),
+        description: i18nLabel(msg`Role of a stakeholder at a client company`),
         icon: 'IconUserStar',
         isSystem: true,
         isUICreatable: true,
@@ -1541,12 +1539,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'offLimitsRestriction'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'offLimitsRestriction'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'offLimitsRestriction',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.offLimitsRestriction.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.offLimitsRestriction.universalIdentifier,
         nameSingular: 'offLimitsRestriction',
         namePlural: 'offLimitsRestrictions',
         labelSingular: i18nLabel(msg`Off-Limits Restriction`),
@@ -1568,12 +1570,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'confidentialityRecord'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'confidentialityRecord'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'confidentialityRecord',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.confidentialityRecord.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.confidentialityRecord.universalIdentifier,
         nameSingular: 'confidentialityRecord',
         namePlural: 'confidentialityRecords',
         labelSingular: i18nLabel(msg`Confidentiality Record`),
@@ -1595,7 +1601,10 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'conflictCheck'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'conflictCheck'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'conflictCheck',
       dependencyFlatEntityMaps,
@@ -1622,12 +1631,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'workspaceEventOutbox'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'workspaceEventOutbox'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'workspaceEventOutbox',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.workspaceEventOutbox.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.workspaceEventOutbox.universalIdentifier,
         nameSingular: 'workspaceEventOutbox',
         namePlural: 'workspaceEventOutboxes',
         labelSingular: i18nLabel(msg`Workspace Event Outbox`),
@@ -1678,19 +1691,23 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'relationshipEdge'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'relationshipEdge'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'relationshipEdge',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.relationshipEdge.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.relationshipEdge.universalIdentifier,
         nameSingular: 'relationshipEdge',
         namePlural: 'relationshipEdges',
         labelSingular: i18nLabel(msg`Relationship Edge`),
         labelPlural: i18nLabel(msg`Relationship Edges`),
         description: i18nLabel(
-        msg`A relationship-graph edge between people or companies`,
-      ),
+          msg`A relationship-graph edge between people or companies`,
+        ),
         icon: 'IconShare2',
         isSystem: true,
         isUICreatable: false,
@@ -1707,17 +1724,23 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'deadLetterRecord'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'deadLetterRecord'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'deadLetterRecord',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.deadLetterRecord.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.deadLetterRecord.universalIdentifier,
         nameSingular: 'deadLetterRecord',
         namePlural: 'deadLetterRecords',
         labelSingular: i18nLabel(msg`Dead Letter Record`),
         labelPlural: i18nLabel(msg`Dead Letter Records`),
-        description: i18nLabel(msg`A dead-letter record for failed external sync`),
+        description: i18nLabel(
+          msg`A dead-letter record for failed external sync`,
+        ),
         icon: 'IconMailX',
         isSystem: true,
         isAuditLogged: false,
@@ -1735,12 +1758,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'reconciliationRun'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'reconciliationRun'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'reconciliationRun',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.reconciliationRun.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.reconciliationRun.universalIdentifier,
         nameSingular: 'reconciliationRun',
         namePlural: 'reconciliationRuns',
         labelSingular: i18nLabel(msg`Reconciliation Run`),
@@ -1763,19 +1790,23 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'searchEngagementTerms'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'searchEngagementTerms'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'searchEngagementTerms',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.searchEngagementTerms.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.searchEngagementTerms.universalIdentifier,
         nameSingular: 'searchEngagementTerms',
         namePlural: 'searchEngagementTerms',
         labelSingular: i18nLabel(msg`Search Engagement Terms`),
         labelPlural: i18nLabel(msg`Search Engagement Terms`),
         description: i18nLabel(
-        msg`Terms, fee structure, exclusivity, and payment schedule for a retained-search engagement`,
-      ),
+          msg`Terms, fee structure, exclusivity, and payment schedule for a retained-search engagement`,
+        ),
         icon: 'IconFileDollar',
         isSystem: true,
         isAuditLogged: false,
@@ -1820,12 +1851,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'reconciliationFinding'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'reconciliationFinding'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'reconciliationFinding',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.reconciliationFinding.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.reconciliationFinding.universalIdentifier,
         nameSingular: 'reconciliationFinding',
         namePlural: 'reconciliationFindings',
         labelSingular: i18nLabel(msg`Reconciliation Finding`),
@@ -1848,12 +1883,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'searchAssignment'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'searchAssignment'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'searchAssignment',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.searchAssignment.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.searchAssignment.universalIdentifier,
         nameSingular: 'searchAssignment',
         namePlural: 'searchAssignments',
         labelSingular: i18nLabel(msg`Search Assignment`),
@@ -1875,12 +1914,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'researchCandidate'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'researchCandidate'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'researchCandidate',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.researchCandidate.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.researchCandidate.universalIdentifier,
         nameSingular: 'researchCandidate',
         namePlural: 'researchCandidates',
         labelSingular: i18nLabel(msg`Research Candidate`),
@@ -1902,12 +1945,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'researchStrategy'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'researchStrategy'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'researchStrategy',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.researchStrategy.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.researchStrategy.universalIdentifier,
         nameSingular: 'researchStrategy',
         namePlural: 'researchStrategies',
         labelSingular: i18nLabel(msg`Research Strategy`),
@@ -1929,12 +1976,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'assignmentTeamMember'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'assignmentTeamMember'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'assignmentTeamMember',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.assignmentTeamMember.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.assignmentTeamMember.universalIdentifier,
         nameSingular: 'assignmentTeamMember',
         namePlural: 'assignmentTeamMembers',
         labelSingular: i18nLabel(msg`Assignment Team Member`),
@@ -1957,12 +2008,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'searchMilestone'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'searchMilestone'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'searchMilestone',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.searchMilestone.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.searchMilestone.universalIdentifier,
         nameSingular: 'searchMilestone',
         namePlural: 'searchMilestones',
         labelSingular: i18nLabel(msg`Search Milestone`),
@@ -1985,12 +2040,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'positionSpecification'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'positionSpecification'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'positionSpecification',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.positionSpecification.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.positionSpecification.universalIdentifier,
         nameSingular: 'positionSpecification',
         namePlural: 'positionSpecifications',
         labelSingular: i18nLabel(msg`Position Specification`),
@@ -2013,12 +2072,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'searchCriterion'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'searchCriterion'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'searchCriterion',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.searchCriterion.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.searchCriterion.universalIdentifier,
         nameSingular: 'searchCriterion',
         namePlural: 'searchCriteria',
         labelSingular: i18nLabel(msg`Search Criterion`),
@@ -2041,7 +2104,10 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'targetCompany'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'targetCompany'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'targetCompany',
       dependencyFlatEntityMaps,
@@ -2068,17 +2134,23 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'aiPromptTemplate'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'aiPromptTemplate'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'aiPromptTemplate',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.aiPromptTemplate.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.aiPromptTemplate.universalIdentifier,
         nameSingular: 'aiPromptTemplate',
         namePlural: 'aiPromptTemplates',
         labelSingular: i18nLabel(msg`AI Prompt Template`),
         labelPlural: i18nLabel(msg`AI Prompt Templates`),
-        description: i18nLabel(msg`An AI prompt template for governed model interactions`),
+        description: i18nLabel(
+          msg`An AI prompt template for governed model interactions`,
+        ),
         icon: 'IconMessage',
         isSystem: true,
         isUICreatable: false,
@@ -2095,19 +2167,23 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'retentionActionLog'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'retentionActionLog'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'retentionActionLog',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.retentionActionLog.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.retentionActionLog.universalIdentifier,
         nameSingular: 'retentionActionLog',
         namePlural: 'retentionActionLogs',
         labelSingular: i18nLabel(msg`Retention Action Log`),
         labelPlural: i18nLabel(msg`Retention Action Logs`),
         description: i18nLabel(
-        msg`Append-only cross-system retention and legal-hold action log`,
-      ),
+          msg`Append-only cross-system retention and legal-hold action log`,
+        ),
         icon: 'IconHistory',
         isSystem: true,
         isAuditLogged: false,
@@ -2125,19 +2201,23 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'externalIdentityMatchQueue'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'externalIdentityMatchQueue'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'externalIdentityMatchQueue',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.externalIdentityMatchQueue.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.externalIdentityMatchQueue.universalIdentifier,
         nameSingular: 'externalIdentityMatchQueue',
         namePlural: 'externalIdentityMatchQueues',
         labelSingular: i18nLabel(msg`External Identity Match Queue`),
         labelPlural: i18nLabel(msg`External Identity Match Queues`),
         description: i18nLabel(
-        msg`Match-queue entry for external identity resolution`,
-      ),
+          msg`Match-queue entry for external identity resolution`,
+        ),
         icon: 'IconListSearch',
         isSystem: true,
         isAuditLogged: false,
@@ -2155,17 +2235,23 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'aiProviderCallLog'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'aiProviderCallLog'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'aiProviderCallLog',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.aiProviderCallLog.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.aiProviderCallLog.universalIdentifier,
         nameSingular: 'aiProviderCallLog',
         namePlural: 'aiProviderCallLogs',
         labelSingular: i18nLabel(msg`AI Call Log`),
         labelPlural: i18nLabel(msg`AI Call Logs`),
-        description: i18nLabel(msg`Immutable audit record of an AI provider call`),
+        description: i18nLabel(
+          msg`Immutable audit record of an AI provider call`,
+        ),
         icon: 'IconActivity',
         isSystem: true,
         isUICreatable: false,
@@ -2192,7 +2278,9 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
         namePlural: 'appAgents',
         labelSingular: i18nLabel(msg`AI Agent`),
         labelPlural: i18nLabel(msg`AI Agents`),
-        description: i18nLabel(msg`Executive search AI agent or skill registry`),
+        description: i18nLabel(
+          msg`Executive search AI agent or skill registry`,
+        ),
         icon: 'IconRobot',
         isSystem: true,
         isUICreatable: false,
@@ -2203,7 +2291,6 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
-
 } satisfies {
   [P in AllStandardObjectName]: (
     args: Omit<CreateStandardObjectArgs<P>, 'context' | 'objectName'>,

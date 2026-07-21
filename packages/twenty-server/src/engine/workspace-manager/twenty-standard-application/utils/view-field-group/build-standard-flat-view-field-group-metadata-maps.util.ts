@@ -58,7 +58,6 @@ import { computeStandardAiModelRegistryViewFieldGroups } from 'src/engine/worksp
 import { computeStandardAiProviderCallLogViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-ai-provider-call-log-view-field-groups.util';
 import { computeStandardAppAgentsViewFieldGroups } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field-group/compute-standard-app-agents-view-field-groups.util';
 
-
 type StandardViewFieldGroupBuilder<P extends AllStandardObjectName> = (
   args: Omit<CreateStandardViewFieldGroupArgs<P>, 'context'>,
 ) => Record<string, FlatViewFieldGroup>;
@@ -89,8 +88,7 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowAutomatedTrigger:
     computeStandardWorkflowAutomatedTriggerViewFieldGroups,
   workflowRun: computeStandardWorkflowRunViewFieldGroups,
-  workspaceEventOutbox:
-    computeStandardWorkspaceEventOutboxViewFieldGroups,
+  workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFieldGroups,
   workflowVersion: computeStandardWorkflowVersionViewFieldGroups,
   searchCandidacy: computeStandardSearchCandidacyViewFieldGroups,
 
@@ -101,26 +99,27 @@ const STANDARD_FLAT_VIEW_FIELD_GROUP_METADATA_BUILDERS_BY_OBJECT_NAME = {
   candidatePresentation: computeStandardCandidatePresentationViewFieldGroups,
   clientFeedback: computeStandardClientFeedbackViewFieldGroups,
   searchStatusReport: computeStandardSearchStatusReportViewFieldGroups,
-  compensationExpectation: computeStandardCompensationExpectationViewFieldGroups,
+  compensationExpectation:
+    computeStandardCompensationExpectationViewFieldGroups,
   offerNegotiation: computeStandardOfferNegotiationViewFieldGroups,
   placement: computeStandardPlacementViewFieldGroups,
   guaranteeCase: computeStandardGuaranteeCaseViewFieldGroups,
-boardCompositionProfile:
+  boardCompositionProfile:
     computeStandardBoardCompositionProfileViewFieldGroups,
-  boardMatrixCriterion:
-    computeStandardBoardMatrixCriterionViewFieldGroups,
+  boardMatrixCriterion: computeStandardBoardMatrixCriterionViewFieldGroups,
   candidateBoardMatrixEvaluation:
     computeStandardCandidateBoardMatrixEvaluationViewFieldGroups,
   directorIndependenceReview:
     computeStandardDirectorIndependenceReviewViewFieldGroups,
-  boardCommitmentReview:
-    computeStandardBoardCommitmentReviewViewFieldGroups,
-retentionActionLog: computeStandardRetentionActionLogViewFieldGroups,
+  boardCommitmentReview: computeStandardBoardCommitmentReviewViewFieldGroups,
+  retentionActionLog: computeStandardRetentionActionLogViewFieldGroups,
   externalIdentityMatchQueue:
     computeStandardExternalIdentityMatchQueueViewFieldGroups,
-analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFieldGroups,
-  analyticsMetricSnapshot: computeStandardAnalyticsMetricSnapshotViewFieldGroups,
-  analyticsDashboardConfig: computeStandardAnalyticsDashboardConfigViewFieldGroups,
+  analyticsDomainMetric: computeStandardAnalyticsDomainMetricViewFieldGroups,
+  analyticsMetricSnapshot:
+    computeStandardAnalyticsMetricSnapshotViewFieldGroups,
+  analyticsDashboardConfig:
+    computeStandardAnalyticsDashboardConfigViewFieldGroups,
   aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
   aiModelRegistry: computeStandardAiModelRegistryViewFieldGroups,
   aiPromptTemplate: computeStandardAiPromptTemplateViewFieldGroups,
@@ -162,9 +161,9 @@ export const buildStandardFlatViewFieldGroupMetadataMaps = (
     flatViewFieldGroupMaps = addFlatEntityToFlatEntityMapsOrThrow({
       flatEntity: viewFieldGroupMetadata,
       flatEntityMaps: flatViewFieldGroupMaps,
-  searchInterview: computeStandardSearchInterviewViewFieldGroups,
-  referenceCheck: computeStandardReferenceCheckViewFieldGroups,
-  diligenceCheck: computeStandardDiligenceCheckViewFieldGroups,
+      searchInterview: computeStandardSearchInterviewViewFieldGroups,
+      referenceCheck: computeStandardReferenceCheckViewFieldGroups,
+      diligenceCheck: computeStandardDiligenceCheckViewFieldGroups,
     });
   }
 

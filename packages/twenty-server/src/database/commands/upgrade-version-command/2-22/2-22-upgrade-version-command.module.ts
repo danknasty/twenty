@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { WorkspaceIteratorModule } from 'src/database/commands/command-runners/workspace-iterator.module';
-import { AddSyncPrimitiveStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-22/2-22-workspace-command-1784150000000-add-sync-primitive-standard-objects.command';
 import { SyncClientStakeholderRoleStandardObjectsCommand } from 'src/database/commands/upgrade-version-command/2-22/2-22-workspace-command-1799000056000-create-client-stakeholder-role-standard-object.command';
 import { AddOpportunityBdFieldsCommand } from 'src/database/commands/upgrade-version-command/2-22/2-22-workspace-command-1801000020000-add-opportunity-bd-fields.command';
 import { CreateClientAccountProfileStandardObjectCommand } from 'src/database/commands/upgrade-version-command/2-22/2-22-workspace-command-1799000057000-create-client-account-profile-standard-object.command';
@@ -24,7 +23,6 @@ import { WorkspaceMigrationRunnerModule } from 'src/engine/workspace-manager/wor
     WorkspaceMigrationRunnerModule,
   ],
   providers: [
-    AddSyncPrimitiveStandardObjectsCommand,
     SyncClientStakeholderRoleStandardObjectsCommand,
     AddOpportunityBdFieldsCommand,
     CreateClientAccountProfileStandardObjectCommand,

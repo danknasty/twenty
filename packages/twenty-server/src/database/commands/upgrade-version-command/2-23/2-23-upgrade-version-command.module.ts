@@ -13,10 +13,12 @@ import { WorkspaceMetadataVersionModule } from 'src/engine/metadata-modules/work
 import { WorkspaceCacheModule } from 'src/engine/workspace-cache/workspace-cache.module';
 import { WorkspaceMigrationModule } from 'src/engine/workspace-manager/workspace-migration/workspace-migration.module';
 import { WorkspaceMigrationRunnerModule } from 'src/engine/workspace-manager/workspace-migration/workspace-migration-runner/workspace-migration-runner.module';
+import { ExecutiveSearchModule } from 'src/modules/executive-search/executive-search.module';
 
 @Module({
   imports: [
     ApplicationModule,
+    ExecutiveSearchModule,
     TypeOrmModule.forFeature([FieldMetadataEntity]),
     WorkspaceCacheModule,
     WorkspaceIteratorModule,

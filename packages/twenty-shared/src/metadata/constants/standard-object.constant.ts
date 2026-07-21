@@ -6882,7 +6882,7 @@ export const STANDARD_OBJECTS = {
       },
     },
   },
-analyticsDomainMetric: {
+  analyticsDomainMetric: {
     universalIdentifier: 'aeb1a006-0001-4000-8001-000000000001',
     fields: {
       ...buildStandardObjectSystemFields('aeb1a006-0001-4000-8001-000000000001'),
@@ -7148,6 +7148,144 @@ analyticsDomainMetric: {
           },
           createdBy: {
             universalIdentifier: 'ca04e96b-9745-49f2-b6a6-f16f9f9093fc',
+          },
+        },
+      },
+    },
+  },
+  retentionActionLog: {
+    universalIdentifier: '6b0761ed-1001-4d00-9001-6b0761ed0001',
+    fields: {
+      ...buildStandardObjectSystemFields(
+        '6b0761ed-1001-4d00-9001-6b0761ed0001',
+      ),
+      actionType: {
+        universalIdentifier: '6b0761ed-1101-4d00-9001-6b0761ed0101',
+      },
+      initiatorSystem: {
+        universalIdentifier: '6b0761ed-1102-4d00-9001-6b0761ed0102',
+      },
+      targetTwentyEntityName: {
+        universalIdentifier: '6b0761ed-1103-4d00-9001-6b0761ed0103',
+      },
+      targetTwentyRecordId: {
+        universalIdentifier: '6b0761ed-1104-4d00-9001-6b0761ed0104',
+      },
+      externalSystemName: {
+        universalIdentifier: '6b0761ed-1105-4d00-9001-6b0761ed0105',
+      },
+      externalRecordId: {
+        universalIdentifier: '6b0761ed-1106-4d00-9001-6b0761ed0106',
+      },
+      scope: {
+        universalIdentifier: '6b0761ed-1107-4d00-9001-6b0761ed0107',
+      },
+      legalHoldReference: {
+        universalIdentifier: '6b0761ed-1108-4d00-9001-6b0761ed0108',
+      },
+      status: {
+        universalIdentifier: '6b0761ed-1109-4d00-9001-6b0761ed0109',
+      },
+      requestedAt: {
+        universalIdentifier: '6b0761ed-1110-4d00-9001-6b0761ed0110',
+      },
+      propagatedAt: {
+        universalIdentifier: '6b0761ed-1111-4d00-9001-6b0761ed0111',
+      },
+      actorId: {
+        universalIdentifier: '6b0761ed-1112-4d00-9001-6b0761ed0112',
+      },
+      sourceHash: {
+        universalIdentifier: '6b0761ed-1113-4d00-9001-6b0761ed0113',
+      },
+    },
+    indexes: {
+      sourceHashIndex: {
+        universalIdentifier: '6b0761ed-1901-4d00-9001-6b0761ed0901',
+      },
+      statusIndex: {
+        universalIdentifier: '6b0761ed-1902-4d00-9001-6b0761ed0902',
+      },
+    },
+    views: {
+      allRetentionActionLogs: {
+        universalIdentifier: '6b0761ed-1801-4d00-9001-6b0761ed0801',
+        viewFields: {
+          actionType: {
+            universalIdentifier: '6b0761ed-1701-4d00-9001-6b0761ed0701',
+          },
+          initiatorSystem: {
+            universalIdentifier: '6b0761ed-1702-4d00-9001-6b0761ed0702',
+          },
+          scope: {
+            universalIdentifier: '6b0761ed-1703-4d00-9001-6b0761ed0703',
+          },
+          status: {
+            universalIdentifier: '6b0761ed-1704-4d00-9001-6b0761ed0704',
+          },
+          requestedAt: {
+            universalIdentifier: '6b0761ed-1705-4d00-9001-6b0761ed0705',
+          },
+          createdAt: {
+            universalIdentifier: '6b0761ed-1706-4d00-9001-6b0761ed0706',
+          },
+        },
+      },
+      retentionActionLogRecordPageFields: {
+        universalIdentifier: '6b0761ed-1802-4d00-9001-6b0761ed0802',
+        viewFieldGroups: {
+          general: {
+            universalIdentifier: '6b0761ed-1803-4d00-9001-6b0761ed0803',
+          },
+          system: {
+            universalIdentifier: '6b0761ed-1804-4d00-9001-6b0761ed0804',
+          },
+        },
+        viewFields: {
+          actionType: {
+            universalIdentifier: '6b0761ed-1707-4d00-9001-6b0761ed0707',
+          },
+          initiatorSystem: {
+            universalIdentifier: '6b0761ed-1708-4d00-9001-6b0761ed0708',
+          },
+          targetTwentyEntityName: {
+            universalIdentifier: '6b0761ed-1709-4d00-9001-6b0761ed0709',
+          },
+          targetTwentyRecordId: {
+            universalIdentifier: '6b0761ed-1710-4d00-9001-6b0761ed0710',
+          },
+          externalSystemName: {
+            universalIdentifier: '6b0761ed-1711-4d00-9001-6b0761ed0711',
+          },
+          externalRecordId: {
+            universalIdentifier: '6b0761ed-1712-4d00-9001-6b0761ed0712',
+          },
+          scope: {
+            universalIdentifier: '6b0761ed-1713-4d00-9001-6b0761ed0713',
+          },
+          legalHoldReference: {
+            universalIdentifier: '6b0761ed-1714-4d00-9001-6b0761ed0714',
+          },
+          status: {
+            universalIdentifier: '6b0761ed-1715-4d00-9001-6b0761ed0715',
+          },
+          requestedAt: {
+            universalIdentifier: '6b0761ed-1716-4d00-9001-6b0761ed0716',
+          },
+          propagatedAt: {
+            universalIdentifier: '6b0761ed-1717-4d00-9001-6b0761ed0717',
+          },
+          actorId: {
+            universalIdentifier: '6b0761ed-1718-4d00-9001-6b0761ed0718',
+          },
+          sourceHash: {
+            universalIdentifier: '6b0761ed-1719-4d00-9001-6b0761ed0719',
+          },
+          createdAt: {
+            universalIdentifier: '6b0761ed-1720-4d00-9001-6b0761ed0720',
+          },
+          createdBy: {
+            universalIdentifier: '6b0761ed-1721-4d00-9001-6b0761ed0721',
           },
         },
       },

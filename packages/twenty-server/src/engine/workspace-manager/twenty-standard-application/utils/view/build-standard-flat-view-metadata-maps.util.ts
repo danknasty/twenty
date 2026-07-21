@@ -55,7 +55,7 @@ import { computeStandardSearchMilestoneViews } from 'src/engine/workspace-manage
 import { computeStandardPositionSpecificationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-position-specification-views.util';
 import { computeStandardSearchCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';
 import { computeStandardSearchCandidacyViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-candidacy-views.util';
-import { computeStandardSearchCriterionViews }
+import { computeStandardSearchCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';
 import { computeStandardSearchInterviewViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-interview-views.util';
 import { computeStandardReferenceCheckViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-reference-check-views.util';
 import { computeStandardDiligenceCheckViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-diligence-check-views.util';
@@ -63,7 +63,6 @@ import { computeStandardCompensationExpectationViews } from 'src/engine/workspac
 import { computeStandardOfferNegotiationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-offer-negotiation-views.util';
 import { computeStandardPlacementViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-placement-views.util';
 import { computeStandardGuaranteeCaseViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-guarantee-case-views.util';
- from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';
 import {
   computeStandardConfidentialityRecordViews,
   computeStandardConflictCheckViews,

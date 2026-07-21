@@ -7,8 +7,7 @@ import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspac
 import { ExternalEntityLinkWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-entity-link.workspace-entity';
 import { ExternalSyncInboxWorkspaceEntity } from 'src/modules/executive-search/standard-objects/external-sync-inbox.workspace-entity';
 import { INBOX_STATUS } from 'src/modules/executive-search/sync/services/inbox.service';
-import { ReconcileArgs } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
-import { ReconciliationEngine } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
+import { ReconcileArgs, ReconciliationEngine } from 'src/modules/executive-search/reconciliation/reconciliation-engine.interface';
 import { ReconciliationFinding } from 'src/modules/executive-search/reconciliation/reconciliation-finding.type';
 import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
 import {

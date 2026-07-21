@@ -195,7 +195,7 @@ export class CriterionAssessmentShadowService {
           });
         }
 
-        const shadowRunId = crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+        const shadowRunId = crypto.randomUUID() ?? `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
         this.logger.log(
           `[SHADOW-MODE] Completed criterion assessment shadow run ${shadowRunId}: ` +
@@ -437,7 +437,7 @@ export class CriterionAssessmentShadowService {
 
   private buildEmptyOutput(): ShadowEvaluationOutput {
     return {
-      shadowRunId: crypto.randomUUID?.() ?? `${Date.now()}-empty`,
+      shadowRunId: crypto.randomUUID() ?? `${Date.now()}-empty`,
       evaluatedAt: new Date().toISOString(),
       aiModelVersion: this.AI_MODEL_VERSION,
       promptVersion: this.PROMPT_VERSION,

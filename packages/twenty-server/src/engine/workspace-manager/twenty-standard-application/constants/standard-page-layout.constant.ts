@@ -52,8 +52,8 @@ import { STANDARD_RETENTION_ACTION_LOG_PAGE_LAYOUT_CONFIG } from 'src/engine/wor
 import { STANDARD_EXTERNAL_IDENTITY_MATCH_QUEUE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-external-identity-match-queue-page-layout.config';
 import { STANDARD_ANALYTICS_DOMAIN_METRIC_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-domain-metric-page-layout.config';
 import { STANDARD_ANALYTICS_METRIC_SNAPSHOT_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-metric-snapshot-page-layout.config';
-import { STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-dashboard-config-page-layout.config';import { STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-model-registry-page-layout.config';
-import { STANDARD_AI_PROMPT_TEMPLATE_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-prompt-template-page-layout.config';
+import { STANDARD_ANALYTICS_DASHBOARD_CONFIG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-analytics-dashboard-config-page-layout.config';
+import { STANDARD_AI_MODEL_REGISTRY_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-model-registry-page-layout.config';
 import { STANDARD_AI_PROVIDER_CALL_LOG_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-ai-provider-call-log-page-layout.config';
 import { STANDARD_APP_AGENTS_PAGE_LAYOUT_CONFIG } from 'src/engine/workspace-manager/twenty-standard-application/utils/page-layout-config/standard-app-agents-page-layout.config';
 

@@ -86,7 +86,6 @@ export class NaturalLanguageSearchFilterService {
       'summary',
       'location',
       'yearsOfExperience',
-      'currentTitle',
       'careerExperiences.industry',
       'careerExperiences.companyName',
       'capabilities.name',

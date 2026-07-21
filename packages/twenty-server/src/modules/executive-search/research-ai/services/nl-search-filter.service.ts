@@ -1,11 +1,15 @@
 import { Injectable, Logger } from '@nestjs/common';
 
 import { type FlatWorkspace } from 'src/engine/core-modules/workspace/types/flat-workspace.type';
+import { AgentEntity } from 'src/engine/metadata-modules/ai/ai-agent/entities/agent.entity';
 import { AgentRunService } from 'src/engine/metadata-modules/ai/ai-agent-execution/services/agent-run.service';
+import { InjectWorkspaceScopedRepository } from 'src/engine/twenty-orm/workspace-scoped-repository/inject-workspace-scoped-repository.decorator';
+import { WorkspaceScopedRepository } from 'src/engine/twenty-orm/workspace-scoped-repository/workspace-scoped-repository';
 import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
 import { RESEARCH_AI_KILL_SWITCHES } from 'src/modules/executive-search/research-ai/constants/research-ai-kill-switches.const';
 import { ResearchAiProvenanceService } from 'src/modules/executive-search/research-ai/services/research-ai-provenance.service';
 import type {
+  AiGeneratedFilter,
   KillSwitchDisabledResponse,
   NlSearchFilterResult,
 } from 'src/modules/executive-search/research-ai/types/research-ai.types';
@@ -46,6 +50,8 @@ export class NlSearchFilterService {
     private readonly agentRunService: AgentRunService,
     private readonly aiContextFirewallService: AiContextFirewallService,
     private readonly provenanceService: ResearchAiProvenanceService,
+    @InjectWorkspaceScopedRepository(AgentEntity)
+    private readonly agentRepository: WorkspaceScopedRepository<AgentEntity>,
   ) {}
 
   /**
@@ -111,6 +117,22 @@ export class NlSearchFilterService {
       );
     }
 
+    // 5b. Resolve the actual model ID from the agent entity
+    let modelId = 'unknown';
+    try {
+      const agent = await this.agentRepository.findOne(workspace.id, {
+        where: { universalIdentifier: agentUniversalIdentifier },
+      });
+
+      if (agent) {
+        modelId = agent.modelId;
+      }
+    } catch (err) {
+      this.logger.warn(
+        `Could not resolve model ID for agent "${agentUniversalIdentifier}": ${String(err)}`,
+      );
+    }
+
     // 6. Parse the result into structured filters
     const parsed = this.parseAgentResult(runResult.result, query);
 
@@ -120,7 +142,7 @@ export class NlSearchFilterService {
         capability: 'natural_language_search',
         subject: query,
         assignmentId: searchAssignmentId ?? null,
-        modelUsed: agentUniversalIdentifier,
+        modelUsed: modelId,
         promptVersion,
         inputReferences: [query],
         output: parsed,
@@ -153,7 +175,7 @@ export class NlSearchFilterService {
       'Allowed filter fields (snake_case):',
       ...this.ALLOWLISTED_FIELDS.map((f) => `  - ${f}`),
       '',
-      'Operators: eq, neq, gt, gte, lt, lte, in, nin, like, ilike',
+      'Operators: eq, neq, gt, gte, lt, lte, in, like, ilike, startsWith, is',
       '',
       'Respond with a JSON object exactly like this (no markdown, no wrapping):',
       JSON.stringify({
@@ -174,6 +196,10 @@ export class NlSearchFilterService {
 
   /**
    * Safely parse the agent result into NlSearchFilterResult.
+   *
+   * Filters returned by the AI are validated against the ALLOWLISTED_FIELDS
+   * set; any filter whose fieldName is not in the allowlist is dropped and a
+   * warning is logged.
    */
   private parseAgentResult(
     result: object,
@@ -182,16 +208,29 @@ export class NlSearchFilterService {
     const raw = result as Record<string, unknown>;
     const rawFilters = raw.filters;
 
-    const filters = Array.isArray(rawFilters)
-      ? rawFilters.map((f: unknown) => {
-          const filter = f as Record<string, unknown>;
+    const allowlistSet = new Set(this.ALLOWLISTED_FIELDS);
 
-          return {
-            fieldName: String(filter.fieldName ?? ''),
+    const filters = Array.isArray(rawFilters)
+      ? rawFilters.reduce<AiGeneratedFilter[]>((acc, f: unknown) => {
+          const filter = f as Record<string, unknown>;
+          const fieldName = String(filter.fieldName ?? '');
+
+          if (!fieldName || !allowlistSet.has(fieldName)) {
+            this.logger.warn(
+              `AI returned filter on non-allowlisted field "${fieldName}"; dropping`,
+            );
+
+            return acc;
+          }
+
+          acc.push({
+            fieldName,
             operator: this.normalizeOperator(String(filter.operator ?? 'eq')),
             value: filter.value,
-          };
-        })
+          });
+
+          return acc;
+        }, [])
       : [];
 
     return {
@@ -207,12 +246,19 @@ export class NlSearchFilterService {
    */
   private normalizeOperator(
     op: string,
-  ): 'eq' | 'neq' | 'gt' | 'gte' | 'lt' | 'lte' | 'in' | 'nin' | 'like' | 'ilike' {
-    const valid = ['eq', 'neq', 'gt', 'gte', 'lt', 'lte', 'in', 'nin', 'like', 'ilike'] as const;
+  ): AiGeneratedFilter['operator'] {
+    const valid: AiGeneratedFilter['operator'][] = [
+      'eq', 'neq', 'gt', 'gte', 'lt', 'lte', 'in',
+      'like', 'ilike', 'startsWith', 'is',
+    ];
 
-    if (valid.includes(op as (typeof valid)[number])) {
-      return op as (typeof valid)[number];
+    if (valid.includes(op as AiGeneratedFilter['operator'])) {
+      return op as AiGeneratedFilter['operator'];
     }
+
+    this.logger.warn(
+      `Unknown filter operator "${op}" received from AI; defaulting to "eq"`,
+    );
 
     return 'eq';
   }

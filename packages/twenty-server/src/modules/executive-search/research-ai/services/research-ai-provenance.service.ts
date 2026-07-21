@@ -20,8 +20,15 @@ import type {
  *   - Client/candidate visibility
  *   - Contest/appeal linkage
  *
- * This service is a synchronous provenance recorder; future iterations
- * may persist records to a dedicated provenance store.
+ * This service records the full provenance payload as structured JSON
+ * to the application log. Future iterations will persist records to a
+ * dedicated provenance standard object (e.g. `researchAiProvenance`)
+ * with database-level retention.
+ *
+ * TODO(PR32): Create a `researchAiProvenance` standard object and
+ *             persist each {@link ResearchAiProvenance} record to the
+ *             database via a workspace-scoped repository so the full
+ *             payload is durable and queryable, not just logged.
  */
 @Injectable()
 export class ResearchAiProvenanceService {
@@ -30,12 +37,21 @@ export class ResearchAiProvenanceService {
   /**
    * Record an evidence/provenance entry for an AI capability execution.
    *
-   * Currently logs to the application log. Future iterations will persist
-   * to a dedicated provenance table or external store.
+   * The full provenance payload is logged as structured JSON. A summary
+   * log line (one-liner) is also emitted for quick scanning.
+   *
+   * Future: persist to a {@code researchAiProvenance} standard object.
    */
   recordProvenance(provenance: ResearchAiProvenance): void {
+    // Structured JSON log for full payload retention (machine-parseable)
+    this.logger.log({
+      message: '[AI PROVENANCE] Full payload recorded',
+      provenance,
+    });
+
+    // Human-readable summary line for quick log scanning
     this.logger.log(
-      `[AI PROVENANCE] capability="${provenance.capability}" ` +
+      `[AI PROVENANCE SUMMARY] capability="${provenance.capability}" ` +
         `subject="${provenance.subject}" ` +
         `assignmentId="${provenance.assignmentId ?? 'N/A'}" ` +
         `model="${provenance.modelUsed}" ` +

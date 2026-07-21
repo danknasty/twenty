@@ -11,12 +11,30 @@
 // ---------------------------------------------------------------------------
 
 /**
- * A single filter expression produced by the AI, compatible with
- * Twenty's filter system (field name, operator, value).
+ * A single filter expression produced by the AI as an intermediate
+ * flat representation. This is NOT Twenty's native
+ * {@link RecordGqlOperationFilter} shape — it is an AI output format
+ * that callers must map into the appropriate nested filter type
+ * (e.g. {@link StringFilter}, {@link UUIDFilter}, {@link FloatFilter})
+ * before constructing a final {@link RecordGqlOperationFilter}.
+ *
+ * Operators are the subset of Twenty filter capabilities that are
+ * meaningful in a flat key-operator-value form.
  */
 export type AiGeneratedFilter = {
   fieldName: string;
-  operator: 'eq' | 'neq' | 'gt' | 'gte' | 'lt' | 'lte' | 'in' | 'nin' | 'like' | 'ilike';
+  operator:
+    | 'eq'
+    | 'neq'
+    | 'gt'
+    | 'gte'
+    | 'lt'
+    | 'lte'
+    | 'in'
+    | 'like'
+    | 'ilike'
+    | 'startsWith'
+    | 'is';
   value: unknown;
 };
 

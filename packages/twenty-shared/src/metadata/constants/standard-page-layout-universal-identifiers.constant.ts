@@ -1157,15 +1157,8 @@ analyticsMetricRecordPage: {
     tabs: {
       home: { universalIdentifier: 'd4e5f6a7-1002-4000-9001-d4e5f6a7000002', widgets: { fields: { universalIdentifier: 'd4e5f6a7-1003-4000-9001-d4e5f6a7000003' }, }, },
       timeline: { universalIdentifier: 'd4e5f6a7-1004-4000-9001-d4e5f6a7000004', widgets: { timeline: { universalIdentifier: 'd4e5f6a7-1005-4000-9001-d4e5f6a7000005' }, }, },
-      home: { universalIdentifier: 'e38f4a6b-0001-4b7c-9d0e-000000000001', widgets: { fields: { universalIdentifier: 'f49a5b7c-0001-4c8d-0e1f-000000000001' }, }, },
-      home: { universalIdentifier: 'e38f4a6b-0002-4b7c-9d0e-000000000002', widgets: { fields: { universalIdentifier: 'f49a5b7c-0002-4c8d-0e1f-000000000002' }, }, },
-      home: { universalIdentifier: 'e38f4a6b-0003-4b7c-9d0e-000000000003', widgets: { fields: { universalIdentifier: 'f49a5b7c-0003-4c8d-0e1f-000000000003' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0001-4d9e-1f2a-000000000001', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0001-4e0f-2a3b-000000000001' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0002-4d9e-1f2a-000000000002', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0002-4e0f-2a3b-000000000002' }, }, },
-      timeline: { universalIdentifier: 'a50b6c8d-0003-4d9e-1f2a-000000000003', widgets: { timeline: { universalIdentifier: 'b61c7d9e-0003-4e0f-2a3b-000000000003' }, }, },
-    universalIdentifier: 'd27e3f5a-0001-4a6b-8c9d-000000000001',
-    universalIdentifier: 'd27e3f5a-0002-4a6b-8c9d-000000000002',
-    universalIdentifier: 'd27e3f5a-0003-4a6b-8c9d-000000000003',
+    },
+  },
   externalIdentityMatchQueueRecordPage: {
     universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7455',
     tabs: {
@@ -1174,8 +1167,24 @@ analyticsMetricRecordPage: {
     },
   },
   analyticsDashboardConfigRecordPage: {
+    universalIdentifier: 'c7a9b1d3-5001-4000-8001-c7a9b1d30001',
+    tabs: {
+      home: { universalIdentifier: 'c7a9b1d3-5002-4000-8001-c7a9b1d30002', widgets: { fields: { universalIdentifier: 'c7a9b1d3-5003-4000-8001-c7a9b1d30003' }, }, },
+      timeline: { universalIdentifier: 'c7a9b1d3-5004-4000-8001-c7a9b1d30004', widgets: { timeline: { universalIdentifier: 'c7a9b1d3-5005-4000-8001-c7a9b1d30005' }, }, },
+    },
+  },
   analyticsMetricSnapshotRecordPage: {
-analyticsDomainMetricRecordPage: { 85e491f154 (feat(executive-search): Phase 14 — Analytics Semantic Layer (3 standard objects + live GraphQL resolver))
+    universalIdentifier: 'd8b0a2c4-5001-4000-8001-d8b0a2c40001',
+    tabs: {
+      home: { universalIdentifier: 'd8b0a2c4-5002-4000-8001-d8b0a2c40002', widgets: { fields: { universalIdentifier: 'd8b0a2c4-5003-4000-8001-d8b0a2c40003' }, }, },
+      timeline: { universalIdentifier: 'd8b0a2c4-5004-4000-8001-d8b0a2c40004', widgets: { timeline: { universalIdentifier: 'd8b0a2c4-5005-4000-8001-d8b0a2c40005' }, }, },
+    },
+  },
+  analyticsDomainMetricRecordPage: {
+    universalIdentifier: 'e9c1b3d5-5001-4000-8001-e9c1b3d50001',
+    tabs: {
+      home: { universalIdentifier: 'e9c1b3d5-5002-4000-8001-e9c1b3d50002', widgets: { fields: { universalIdentifier: 'e9c1b3d5-5003-4000-8001-e9c1b3d50003' }, }, },
+      timeline: { universalIdentifier: 'e9c1b3d5-5004-4000-8001-e9c1b3d50004', widgets: { timeline: { universalIdentifier: 'e9c1b3d5-5005-4000-8001-e9c1b3d50005' }, }, },
     },
   },
 };

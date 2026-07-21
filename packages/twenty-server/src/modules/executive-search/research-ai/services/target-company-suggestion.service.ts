@@ -1,7 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 
 import { type FlatWorkspace } from 'src/engine/core-modules/workspace/types/flat-workspace.type';
+import { AgentEntity } from 'src/engine/metadata-modules/ai/ai-agent/entities/agent.entity';
 import { AgentRunService } from 'src/engine/metadata-modules/ai/ai-agent-execution/services/agent-run.service';
+import { InjectWorkspaceScopedRepository } from 'src/engine/twenty-orm/workspace-scoped-repository/inject-workspace-scoped-repository.decorator';
+import { WorkspaceScopedRepository } from 'src/engine/twenty-orm/workspace-scoped-repository/workspace-scoped-repository';
 import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
 import { RESEARCH_AI_KILL_SWITCHES } from 'src/modules/executive-search/research-ai/constants/research-ai-kill-switches.const';
 import { ResearchAiProvenanceService } from 'src/modules/executive-search/research-ai/services/research-ai-provenance.service';
@@ -59,6 +62,8 @@ export class TargetCompanySuggestionService {
     private readonly agentRunService: AgentRunService,
     private readonly aiContextFirewallService: AiContextFirewallService,
     private readonly provenanceService: ResearchAiProvenanceService,
+    @InjectWorkspaceScopedRepository(AgentEntity)
+    private readonly agentRepository: WorkspaceScopedRepository<AgentEntity>,
   ) {}
 
   /**
@@ -124,6 +129,22 @@ export class TargetCompanySuggestionService {
       );
     }
 
+    // 5b. Resolve the actual model ID from the agent entity
+    let modelId = 'unknown';
+    try {
+      const agent = await this.agentRepository.findOne(workspace.id, {
+        where: { universalIdentifier: agentUniversalIdentifier },
+      });
+
+      if (agent) {
+        modelId = agent.modelId;
+      }
+    } catch (err) {
+      this.logger.warn(
+        `Could not resolve model ID for agent "${agentUniversalIdentifier}": ${String(err)}`,
+      );
+    }
+
     // 6. Parse the result into structured suggestions
     const parsed = this.parseAgentResult(runResult.result);
 
@@ -133,7 +154,7 @@ export class TargetCompanySuggestionService {
         capability: 'target_company_suggestion',
         subject: `searchAssignmentId=${searchAssignmentId}`,
         assignmentId: searchAssignmentId,
-        modelUsed: agentUniversalIdentifier,
+        modelUsed: modelId,
         promptVersion,
         inputReferences: [
           `searchAssignmentId=${searchAssignmentId}`,

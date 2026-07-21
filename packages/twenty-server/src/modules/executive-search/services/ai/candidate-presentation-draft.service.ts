@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import { Injectable, Logger } from '@nestjs/common';
 
 import { FeatureFlagKey } from 'twenty-shared/types';
@@ -145,6 +146,36 @@ export class CandidatePresentationDraftService {
       fieldTokens,
     );
 
+    const redactedCandidateName = this.redactIfProhibited(
+      input.candidateName,
+      fieldTokens,
+      filtered,
+    );
+
+    const redactedCurrentRole = this.redactIfProhibited(
+      input.currentRole,
+      fieldTokens,
+      filtered,
+    );
+
+    const redactedCurrentCompany = this.redactIfProhibited(
+      input.currentCompany,
+      fieldTokens,
+      filtered,
+    );
+
+    const redactedBackgroundSummary = this.redactIfProhibited(
+      input.backgroundSummary,
+      fieldTokens,
+      filtered,
+    );
+
+    const redactedFitRationale = this.redactIfProhibited(
+      input.fitRationale,
+      fieldTokens,
+      filtered,
+    );
+
     const redactedStrengths = input.strengths.map((s) =>
       this.redactIfProhibited(s, fieldTokens, filtered),
     );
@@ -155,6 +186,11 @@ export class CandidatePresentationDraftService {
 
     return {
       ...input,
+      candidateName: redactedCandidateName,
+      currentRole: redactedCurrentRole,
+      currentCompany: redactedCurrentCompany,
+      backgroundSummary: redactedBackgroundSummary,
+      fitRationale: redactedFitRationale,
       strengths: redactedStrengths,
       achievements: redactedAchievements,
     };
@@ -227,7 +263,6 @@ export class CandidatePresentationDraftService {
    * Compute a SHA-256 hash of the input for provenance.
    */
   private computeHash(text: string): string {
-    const crypto = require('crypto');
 
     return crypto.createHash('sha256').update(text).digest('hex');
   }

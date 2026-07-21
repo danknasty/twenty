@@ -43,7 +43,6 @@ import { computeStandardSearchMilestoneViewFields } from 'src/engine/workspace-m
 import { computeStandardPositionSpecificationViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-position-specification-view-fields.util';
 import { computeStandardSearchCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-criterion-view-fields.util';
 import { computeStandardSearchCandidacyViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-candidacy-view-fields.util';
-import { computeStandardSearchCriterionViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-criterion-view-fields.util';
 import { computeStandardSearchInterviewViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-search-interview-view-fields.util';
 import { computeStandardReferenceCheckViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-reference-check-view-fields.util';
 import { computeStandardDiligenceCheckViewFields } from 'src/engine/workspace-manager/twenty-standard-application/utils/view-field/compute-standard-diligence-check-view-fields.util';

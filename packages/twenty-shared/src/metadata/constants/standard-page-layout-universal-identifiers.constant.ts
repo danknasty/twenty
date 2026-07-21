@@ -1152,13 +1152,6 @@ analyticsMetricRecordPage: {
       timeline: { universalIdentifier: '9305ffae-3c60-4af7-95f5-ce3afcecfd1b', widgets: { timeline: { universalIdentifier: '0531bb0f-e3ff-4848-91d5-7313e73ee3e4' }, }, },
     },
   },
-  aiPromptTemplateRecordPage: {
-    universalIdentifier: 'd4e5f6a7-1001-4000-9001-d4e5f6a7000001',
-    tabs: {
-      home: { universalIdentifier: 'd4e5f6a7-1002-4000-9001-d4e5f6a7000002', widgets: { fields: { universalIdentifier: 'd4e5f6a7-1003-4000-9001-d4e5f6a7000003' }, }, },
-      timeline: { universalIdentifier: 'd4e5f6a7-1004-4000-9001-d4e5f6a7000004', widgets: { timeline: { universalIdentifier: 'd4e5f6a7-1005-4000-9001-d4e5f6a7000005' }, }, },
-    },
-  },
   externalIdentityMatchQueueRecordPage: {
     universalIdentifier: '32a08662-7e27-412f-bf64-07ddeaba7455',
     tabs: {

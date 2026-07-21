@@ -55,7 +55,6 @@ import { computeStandardSearchMilestoneViews } from 'src/engine/workspace-manage
 import { computeStandardPositionSpecificationViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-position-specification-views.util';
 import { computeStandardSearchCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';
 import { computeStandardSearchCandidacyViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-candidacy-views.util';
-import { computeStandardSearchCriterionViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-criterion-views.util';
 import { computeStandardSearchInterviewViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-search-interview-views.util';
 import { computeStandardReferenceCheckViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-reference-check-views.util';
 import { computeStandardDiligenceCheckViews } from 'src/engine/workspace-manager/twenty-standard-application/utils/view/compute-standard-diligence-check-views.util';

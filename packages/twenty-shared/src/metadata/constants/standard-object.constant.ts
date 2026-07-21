@@ -6222,27 +6222,27 @@ export const STANDARD_OBJECTS = {
     },
     indexes: {
       searchAssignmentIdIndex: {
-        universalIdentifier: 'aeb1d000-0002-4000-800d-aeb1d000i001',
+        universalIdentifier: 'aeb1d000-0002-4000-800d-aeb1d000e001',
       },
       searchCandidacyIdIndex: {
-        universalIdentifier: 'aeb1d000-0002-4000-800d-aeb1d000i002',
+        universalIdentifier: 'aeb1d000-0002-4000-800d-aeb1d000e002',
       },
       statusIndex: {
-        universalIdentifier: 'aeb1d000-0002-4000-800d-aeb1d000i003',
+        universalIdentifier: 'aeb1d000-0002-4000-800d-aeb1d000e003',
       },
       scheduledDateIndex: {
-        universalIdentifier: 'aeb1d000-0002-4000-800d-aeb1d000i004',
+        universalIdentifier: 'aeb1d000-0002-4000-800d-aeb1d000e004',
       },
     },
     views: {
       searchInterviewRecordPageFields: {
-        universalIdentifier: 'aeb1d000-0030-4000-800d-aeb1d000v001',
+        universalIdentifier: 'aeb1d000-0030-4000-800d-aeb1d000e001',
         viewFieldGroups: {
           general: {
-            universalIdentifier: 'aeb1d000-0040-4000-800d-aeb1d000g001',
+            universalIdentifier: 'aeb1d000-0040-4000-800d-aeb1d000e001',
           },
           system: {
-            universalIdentifier: 'aeb1d000-0040-4000-800d-aeb1d000g002',
+            universalIdentifier: 'aeb1d000-0040-4000-800d-aeb1d000e002',
           },
         },
         viewFields: {
@@ -6336,21 +6336,21 @@ export const STANDARD_OBJECTS = {
     },
     indexes: {
       searchCandidacyIdIndex: {
-        universalIdentifier: 'aeb1e000-0002-4000-800e-aeb1e000i001',
+        universalIdentifier: 'aeb1e000-0002-4000-800e-aeb1e000e001',
       },
       statusIndex: {
-        universalIdentifier: 'aeb1e000-0002-4000-800e-aeb1e000i002',
+        universalIdentifier: 'aeb1e000-0002-4000-800e-aeb1e000e002',
       },
     },
     views: {
       referenceCheckRecordPageFields: {
-        universalIdentifier: 'aeb1e000-0030-4000-800e-aeb1e000v001',
+        universalIdentifier: 'aeb1e000-0030-4000-800e-aeb1e000e001',
         viewFieldGroups: {
           general: {
-            universalIdentifier: 'aeb1e000-0040-4000-800e-aeb1e000g001',
+            universalIdentifier: 'aeb1e000-0040-4000-800e-aeb1e000e001',
           },
           system: {
-            universalIdentifier: 'aeb1e000-0040-4000-800e-aeb1e000g002',
+            universalIdentifier: 'aeb1e000-0040-4000-800e-aeb1e000e002',
           },
         },
         viewFields: {
@@ -6420,21 +6420,21 @@ export const STANDARD_OBJECTS = {
     },
     indexes: {
       searchCandidacyIdIndex: {
-        universalIdentifier: 'aeb1f000-0002-4000-800f-aeb1f000i001',
+        universalIdentifier: 'aeb1f000-0002-4000-800f-aeb1f000e001',
       },
       statusIndex: {
-        universalIdentifier: 'aeb1f000-0002-4000-800f-aeb1f000i002',
+        universalIdentifier: 'aeb1f000-0002-4000-800f-aeb1f000e002',
       },
     },
     views: {
       diligenceCheckRecordPageFields: {
-        universalIdentifier: 'aeb1f000-0030-4000-800f-aeb1f000v001',
+        universalIdentifier: 'aeb1f000-0030-4000-800f-aeb1f000e001',
         viewFieldGroups: {
           general: {
-            universalIdentifier: 'aeb1f000-0040-4000-800f-aeb1f000g001',
+            universalIdentifier: 'aeb1f000-0040-4000-800f-aeb1f000e001',
           },
           system: {
-            universalIdentifier: 'aeb1f000-0040-4000-800f-aeb1f000g002',
+            universalIdentifier: 'aeb1f000-0040-4000-800f-aeb1f000e002',
           },
         },
         viewFields: {

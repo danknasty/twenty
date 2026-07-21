@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`STANDARD_OBJECTS universal identifiers should never change without an explicit snapshot update 1`] = `
 {
@@ -1767,39 +1767,88 @@ exports[`STANDARD_OBJECTS universal identifiers should never change without an e
   },
   "clientAccountProfile": {
     "fields": {
-      "clientBillingContact": {
-        "universalIdentifier": "20202020-d8c8-4d45-90eb-5bc21f3c25bc",
+      "accountNotes": {
+        "universalIdentifier": "20202020-66d6-8fd2-ee79-46d3b4add9f6",
+      },
+      "accountStatus": {
+        "universalIdentifier": "20202020-cae3-4163-09ab-4552b9fa6153",
+      },
+      "accountTier": {
+        "universalIdentifier": "20202020-7ef3-b8f3-a4a1-4988a9571931",
+      },
+      "annualRevenue": {
+        "universalIdentifier": "20202020-0c5b-56a6-7d09-4aebb69d92cb",
+      },
+      "attachments": {
+        "universalIdentifier": "20202020-b0f4-57bf-0172-410bb9f8cff8",
       },
       "company": {
-        "universalIdentifier": "20202020-72f1-4a2a-a39e-6f27eefc7451",
+        "universalIdentifier": "20202020-48c9-1bd7-1928-4ed5be0b4452",
+      },
+      "contractStatus": {
+        "universalIdentifier": "20202020-2699-a9b8-4079-43738c7c674e",
       },
       "createdAt": {
-        "universalIdentifier": "894a23d9-d74c-561f-9ea6-d1afaf8e1f7c",
+        "universalIdentifier": "1c0e7a0d-9089-5a1e-b8a9-e9e18c1fdc0d",
       },
       "createdBy": {
-        "universalIdentifier": "18e663cf-2b11-5944-80b0-0a8e0d375ddd",
+        "universalIdentifier": "247748d8-a88f-5bfc-a1fb-188728e00dd3",
       },
       "deletedAt": {
-        "universalIdentifier": "3261c2de-6bdb-5c50-bd1d-aa8166bd349b",
+        "universalIdentifier": "d23b0d34-4e72-5d3d-b125-6a370bc55f86",
       },
       "id": {
-        "universalIdentifier": "245239e0-3426-5b57-8638-bbef637d3cba",
+        "universalIdentifier": "02276152-790b-50e7-88a6-ca30d2792928",
+      },
+      "lastEngagementDate": {
+        "universalIdentifier": "20202020-1601-e2b7-61e1-480e8a91e7cb",
+      },
+      "lifetimeRevenue": {
+        "universalIdentifier": "20202020-352d-2675-5946-418ba8330dae",
+      },
+      "name": {
+        "universalIdentifier": "20202020-0dfb-65f0-6c3f-47f3a8f2ef47",
+      },
+      "noteTargets": {
+        "universalIdentifier": "20202020-a0ae-7592-3f81-4abbab3cceb0",
+      },
+      "owner": {
+        "universalIdentifier": "20202020-6fad-88b9-1fc8-494fb96cf06d",
       },
       "position": {
-        "universalIdentifier": "c04a0c74-59c9-5381-8f81-4a332b702ee6",
+        "universalIdentifier": "5aef38bc-e60f-5fa1-92de-82f1b203b35d",
+      },
+      "relationshipOwner": {
+        "universalIdentifier": "20202020-46e7-0dd5-54c0-4169929c8bde",
+      },
+      "satisfactionScore": {
+        "universalIdentifier": "20202020-9f3e-83d0-15d1-4019ad04c0e8",
       },
       "searchVector": {
-        "universalIdentifier": "bcfa2701-4456-5bc1-8060-5676ebd6b2cd",
+        "universalIdentifier": "86a43e25-2a5e-5508-b61b-af93d2098f7d",
+      },
+      "taskTargets": {
+        "universalIdentifier": "20202020-8081-28e1-d8ae-4e6a8268dc6f",
+      },
+      "timelineActivities": {
+        "universalIdentifier": "20202020-e6ee-7877-4b1e-4447a8f926ee",
+      },
+      "totalEngagements": {
+        "universalIdentifier": "20202020-a6e5-56bf-174e-480292dc1335",
       },
       "updatedAt": {
-        "universalIdentifier": "a90f3672-3d29-5f27-a662-6d8eaac9c3c5",
+        "universalIdentifier": "ae247530-a790-5a0c-9bd2-db298ea76687",
       },
       "updatedBy": {
-        "universalIdentifier": "16c23286-de84-5d45-92bd-ff80c621a9c9",
+        "universalIdentifier": "436ba37d-35e2-53b7-868b-a4ed47da93a9",
       },
     },
-    "indexes": {},
-    "universalIdentifier": "20202020-9cd9-4c20-b0cf-50ba3ed5e65d",
+    "indexes": {
+      "companyIdIndex": {
+        "universalIdentifier": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+      },
+    },
+    "universalIdentifier": "20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f",
   },
   "clientFeedback": {
     "fields": {

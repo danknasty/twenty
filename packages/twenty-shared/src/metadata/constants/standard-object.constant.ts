@@ -5587,19 +5587,66 @@ export const STANDARD_OBJECTS = {
     },
   },
   clientAccountProfile: {
-    universalIdentifier: '20202020-9cd9-4c20-b0cf-50ba3ed5e65d',
+    universalIdentifier: '20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f',
     fields: {
       ...buildStandardObjectSystemFields(
-        '20202020-9cd9-4c20-b0cf-50ba3ed5e65d',
+        '20202020-a1b2-4c3d-8e5f-6a7b8c9d0e1f',
       ),
-      company: {
-        universalIdentifier: '20202020-72f1-4a2a-a39e-6f27eefc7451',
+      name: { universalIdentifier: '20202020-0dfb-65f0-6c3f-47f3a8f2ef47' },
+      accountTier: {
+        universalIdentifier: '20202020-7ef3-b8f3-a4a1-4988a9571931',
       },
-      clientBillingContact: {
-        universalIdentifier: '20202020-d8c8-4d45-90eb-5bc21f3c25bc',
+      accountStatus: {
+        universalIdentifier: '20202020-cae3-4163-09ab-4552b9fa6153',
+      },
+      relationshipOwner: {
+        universalIdentifier: '20202020-46e7-0dd5-54c0-4169929c8bde',
+      },
+      company: {
+        universalIdentifier: '20202020-48c9-1bd7-1928-4ed5be0b4452',
+      },
+      lifetimeRevenue: {
+        universalIdentifier: '20202020-352d-2675-5946-418ba8330dae',
+      },
+      annualRevenue: {
+        universalIdentifier: '20202020-0c5b-56a6-7d09-4aebb69d92cb',
+      },
+      totalEngagements: {
+        universalIdentifier: '20202020-a6e5-56bf-174e-480292dc1335',
+      },
+      lastEngagementDate: {
+        universalIdentifier: '20202020-1601-e2b7-61e1-480e8a91e7cb',
+      },
+      contractStatus: {
+        universalIdentifier: '20202020-2699-a9b8-4079-43738c7c674e',
+      },
+      satisfactionScore: {
+        universalIdentifier: '20202020-9f3e-83d0-15d1-4019ad04c0e8',
+      },
+      accountNotes: {
+        universalIdentifier: '20202020-66d6-8fd2-ee79-46d3b4add9f6',
+      },
+      taskTargets: {
+        universalIdentifier: '20202020-8081-28e1-d8ae-4e6a8268dc6f',
+      },
+      noteTargets: {
+        universalIdentifier: '20202020-a0ae-7592-3f81-4abbab3cceb0',
+      },
+      attachments: {
+        universalIdentifier: '20202020-b0f4-57bf-0172-410bb9f8cff8',
+      },
+      timelineActivities: {
+        universalIdentifier: '20202020-e6ee-7877-4b1e-4447a8f926ee',
+      },
+      owner: {
+        universalIdentifier: '20202020-6fad-88b9-1fc8-494fb96cf06d',
       },
     },
-    indexes: {},
+    indexes: {
+      companyIdIndex: {
+        universalIdentifier: 'a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d',
+      },
+    },
   },
   clientStakeholderRole: {
     universalIdentifier: '20202020-6fbf-44b3-9797-60fe520e0927',

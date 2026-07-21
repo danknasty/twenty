@@ -732,6 +732,14 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
           },
         },
       },
+      timeline: {
+        universalIdentifier: 'aeb1c000-6004-4e18-b24d-cdb5d3178604',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'aeb1c000-6005-4e18-b24d-cdb5d3178605',
+          },
+        },
+      },
     },
   },
   searchInterviewRecordPage: {

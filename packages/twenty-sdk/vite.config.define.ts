@@ -48,12 +48,8 @@ export default defineConfig(() => {
           }
 
           const deps = [
-            ...Object.keys(
-              (packageJson as PackageJson).dependencies || {},
-            ),
-            ...Object.keys(
-              (packageJson as PackageJson).devDependencies || {},
-            ),
+            ...Object.keys((packageJson as PackageJson).dependencies || {}),
+            ...Object.keys((packageJson as PackageJson).devDependencies || {}),
           ];
 
           return deps.some((dep) => id === dep || id.startsWith(dep + '/'));

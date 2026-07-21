@@ -4,6 +4,7 @@ import { ObjectMetadataRepositoryModule } from 'src/engine/object-metadata-repos
 import { TwentyORMModule } from 'src/engine/twenty-orm/twenty-orm.module';
 import { WorkspaceEventEmitterModule } from 'src/engine/workspace-event-emitter/workspace-event-emitter.module';
 import { DirectusModule } from 'src/modules/executive-search/directus/directus.module';
+import { FirewallModule } from 'src/modules/executive-search/firewall/firewall.module';
 import { CountReconciliationEngine } from 'src/modules/executive-search/reconciliation/engines/count-reconciliation.engine';
 import { ReferentialIntegrityEngine } from 'src/modules/executive-search/reconciliation/engines/referential-integrity.engine';
 import { ReconciliationEngineRegistry } from 'src/modules/executive-search/reconciliation/reconciliation-engine.registry';
@@ -61,6 +62,7 @@ import { CriterionAssessmentShadowService } from 'src/modules/executive-search/s
     ]),
     TwentyORMModule,
     DirectusModule,
+    FirewallModule,
     WorkspaceEventEmitterModule,
     BoardMatrixAiModule,
     CriterionAssessmentShadowModule,

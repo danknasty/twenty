@@ -28,6 +28,10 @@ export enum ExecutiveSearchExceptionCode {
   AI_CONTEXT_VIOLATION = 'AI_CONTEXT_VIOLATION',
   /** Feature flag check failed for a required feature flag */
   FEATURE_FLAG_DISABLED = 'FEATURE_FLAG_DISABLED',
+  OPERATION_REQUIRES_FEATURE_FLAG = 'OPERATION_REQUIRES_FEATURE_FLAG',
+  NOT_FOUND = 'NOT_FOUND',
+  INVALID_STATE = 'INVALID_STATE',
+  INTERNAL_ERROR = 'INTERNAL_ERROR',
 }
 
 export class ExecutiveSearchException extends Error {

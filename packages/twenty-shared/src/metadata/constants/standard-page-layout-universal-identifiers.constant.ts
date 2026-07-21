@@ -792,6 +792,27 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
       },
     },
   },
+  retentionActionLogRecordPage: {
+    universalIdentifier: '6b0761ed-2001-4d00-9001-6b0761ed1001',
+    tabs: {
+      home: {
+        universalIdentifier: '6b0761ed-2002-4d00-9001-6b0761ed1002',
+        widgets: {
+          fields: {
+            universalIdentifier: '6b0761ed-2003-4d00-9001-6b0761ed1003',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '6b0761ed-2004-4d00-9001-6b0761ed1004',
+        widgets: {
+          timeline: {
+            universalIdentifier: '6b0761ed-2005-4d00-9001-6b0761ed1005',
+          },
+        },
+      },
+    },
+  },
   diligenceCheckRecordPage: {
     standardObjectName: 'diligenceCheck',
     tabs: {

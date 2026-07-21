@@ -91,6 +91,31 @@ export const seedFeatureFlags = async ({
         workspaceId: workspaceId,
         value: false,
       },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_BOARD_MATRIX_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_RESEARCH_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_NL_SEARCH_FILTERS_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_TARGET_COMPANY_SUGGESTIONS_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
+      {
+        key: FeatureFlagKey.IS_EXECUTIVE_SEARCH_AI_RELATIONSHIP_PATH_SUGGESTIONS_ENABLED,
+        workspaceId: workspaceId,
+        value: false,
+      },
     ])
     .execute();
 };

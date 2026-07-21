@@ -43,9 +43,16 @@ import { RollbackService } from 'src/modules/executive-search/migration/services
 import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migration/resolvers/ambiguous-match-queue.resolver';
 import { ComputeAnalyticsMetricResolver } from 'src/modules/executive-search/resolvers/compute-analytics-metric.resolver';
 import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/services/compute-analytics-metric.service';
+import { BoardMatrixEvaluationService } from 'src/modules/executive-search/services/board-matrix-evaluation.service';
+import { SearchHealthAdvisoryService } from 'src/modules/executive-search/services/search-health-advisory.service';
+import { AiResearchModule } from 'src/modules/executive-search/ai-research/ai-research.module';
+import { NaturalLanguageSearchFilterService } from 'src/modules/executive-search/ai-research/services/natural-language-search-filter.service';
+import { TargetCompanySuggestionService } from 'src/modules/executive-search/ai-research/services/target-company-suggestion.service';
+import { RelationshipPathSuggestionService } from 'src/modules/executive-search/ai-research/services/relationship-path-suggestion.service';
 
 @Module({
   imports: [
+    AiResearchModule,
     ObjectMetadataRepositoryModule.forFeature([
       ExternalEntityLinkWorkspaceEntity,
       ExternalSyncOutboxWorkspaceEntity,
@@ -92,6 +99,11 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
     AmbiguousMatchQueueResolver,
     ComputeAnalyticsMetricResolver,
     ComputeAnalyticsMetricService,
+    BoardMatrixEvaluationService,
+    SearchHealthAdvisoryService,
+    NaturalLanguageSearchFilterService,
+    TargetCompanySuggestionService,
+    RelationshipPathSuggestionService,
   ],
   exports: [
     ExecutiveSearchOutboxService,
@@ -115,6 +127,12 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
     RetentionActionService,
     CutoverService,
     RollbackService,
+    BoardMatrixEvaluationService,
+    SearchHealthAdvisoryService,
+    AiResearchModule,
+    NaturalLanguageSearchFilterService,
+    TargetCompanySuggestionService,
+    RelationshipPathSuggestionService,
   ],
 })
 export class ExecutiveSearchModule {}

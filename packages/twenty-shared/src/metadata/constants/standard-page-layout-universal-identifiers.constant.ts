@@ -1246,22 +1246,64 @@ export const STANDARD_PAGE_LAYOUT_UNIVERSAL_IDENTIFIERS = {
   aiModelRegistryRecordPage: {
     universalIdentifier: '2fefc942-c89f-4cc4-a6d7-2bc844eeef86',
     tabs: {
-      home: { universalIdentifier: '8ed91b3d-7cbf-47b8-b948-0361bc669176', widgets: { fields: { universalIdentifier: '22578522-4156-41f4-9198-2547a5b5f3c9' } } },
-      timeline: { universalIdentifier: 'e386677a-e353-45c9-9965-ab7b0826b2a7', widgets: { timeline: { universalIdentifier: '15ec0740-4b40-4e57-aa6b-fe26fa098e6a' } } },
+      home: {
+        universalIdentifier: '8ed91b3d-7cbf-47b8-b948-0361bc669176',
+        widgets: {
+          fields: {
+            universalIdentifier: '22578522-4156-41f4-9198-2547a5b5f3c9',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'e386677a-e353-45c9-9965-ab7b0826b2a7',
+        widgets: {
+          timeline: {
+            universalIdentifier: '15ec0740-4b40-4e57-aa6b-fe26fa098e6a',
+          },
+        },
+      },
     },
   },
   aiProviderCallLogRecordPage: {
     universalIdentifier: '2fc665b9-f31b-483b-9c4b-54db7fa3a523',
     tabs: {
-      home: { universalIdentifier: '6af7065b-1ddf-44a4-bd57-523b9ef8e046', widgets: { fields: { universalIdentifier: '912de34b-f835-45aa-914a-2611460201ac' } } },
-      timeline: { universalIdentifier: '159a6426-e6fa-45f3-9050-eaec5715d7be', widgets: { timeline: { universalIdentifier: 'fc09606d-57bb-40e0-8e66-120606ec300f' } } },
+      home: {
+        universalIdentifier: '6af7065b-1ddf-44a4-bd57-523b9ef8e046',
+        widgets: {
+          fields: {
+            universalIdentifier: '912de34b-f835-45aa-914a-2611460201ac',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: '159a6426-e6fa-45f3-9050-eaec5715d7be',
+        widgets: {
+          timeline: {
+            universalIdentifier: 'fc09606d-57bb-40e0-8e66-120606ec300f',
+          },
+        },
+      },
     },
   },
   appAgentsRecordPage: {
     universalIdentifier: '9a6a505d-f418-45a0-a5e7-a2d7461558ca',
     tabs: {
-      home: { universalIdentifier: '973fc0e5-7d00-4419-90f5-e008ccfe36e6', widgets: { fields: { universalIdentifier: '1007c5cb-6fc4-43f1-9f8d-ad04e344cabf' } } },
-      timeline: { universalIdentifier: 'ee7caa3e-d9af-42fa-aa18-cebf3c5733f7', widgets: { timeline: { universalIdentifier: '21324043-7280-44df-ae97-5038af772ca9' } } },
+      home: {
+        universalIdentifier: '973fc0e5-7d00-4419-90f5-e008ccfe36e6',
+        widgets: {
+          fields: {
+            universalIdentifier: '1007c5cb-6fc4-43f1-9f8d-ad04e344cabf',
+          },
+        },
+      },
+      timeline: {
+        universalIdentifier: 'ee7caa3e-d9af-42fa-aa18-cebf3c5733f7',
+        widgets: {
+          timeline: {
+            universalIdentifier: '21324043-7280-44df-ae97-5038af772ca9',
+          },
+        },
+      },
     },
   },
 };

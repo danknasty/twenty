@@ -1,3 +1,13 @@
+import { Test, type TestingModule } from '@nestjs/testing';
+
+import { FeatureFlagKey } from 'twenty-shared/types';
+import { BoardMatrixEvaluationService } from 'src/modules/executive-search/services/ai/board-matrix-evaluation.service';
+import {
+  ExecutiveSearchException,
+  ExecutiveSearchExceptionCode,
+} from 'src/modules/executive-search/exceptions/executive-search.exception';
+
+// Mock workspace auth context storage
 jest.mock(
   'src/engine/core-modules/auth/storage/workspace-auth-context.storage',
   () => ({
@@ -9,32 +19,41 @@ jest.mock(
   }),
 );
 
+// Mock the GlobalWorkspaceOrmManager
 jest.mock(
   'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager',
   () => {
     const mockExecuteInWorkspaceContext = jest
       .fn()
-      .mockImplementation((fn: () => any) => fn());
+      .mockImplementation((fn: () => any, _authContext?: any) => fn());
+
+    const mockGetRepository = jest.fn();
+
     return {
       GlobalWorkspaceOrmManager: jest.fn().mockImplementation(() => ({
         executeInWorkspaceContext: mockExecuteInWorkspaceContext,
-        getRepository: jest.fn(),
+        getRepository: mockGetRepository,
       })),
     };
   },
 );
 
+// Mock the AiContextFirewallService to avoid SWC/CJS dependency resolution
+// issues with twenty-shared/utils (camelToSnakeCase)
 jest.mock(
   'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service',
   () => ({
     AiContextFirewallService: jest.fn().mockImplementation(() => ({
       validateAiContextAllowlist: jest.fn().mockReturnValue([]),
       assertAiContextAllowlistSafe: jest.fn(),
-      filterProhibited: jest.fn((fields: string[]) => fields),
+      filterProhibited: jest
+        .fn()
+        .mockImplementation((fields: string[]) => fields),
     })),
   }),
 );
 
+// Mock the FeatureFlagService to avoid CustomError resolution chain issues
 jest.mock(
   'src/engine/core-modules/feature-flag/services/feature-flag.service',
   () => ({
@@ -44,50 +63,62 @@ jest.mock(
   }),
 );
 
-let ExecutiveSearchException: any;
-let ExecutiveSearchExceptionCode: any;
+import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
+import { FeatureFlagService } from 'src/engine/core-modules/feature-flag/services/feature-flag.service';
+import { AiContextFirewallService } from 'src/modules/executive-search/firewall/enforcement/ai-context-firewall.service';
 
 describe('BoardMatrixEvaluationService', () => {
-  let service: any;
-  const mocks: any = {};
+  let service: BoardMatrixEvaluationService;
+  let mockFeatureFlagService: jest.Mocked<FeatureFlagService>;
+  let mockAiContextFirewallService: any;
+  let mockGlobalWorkspaceOrmManager: any;
 
   const mockWorkspaceId = 'workspace-1';
   const mockAuthContext: any = {
     workspace: { id: 'workspace-1' },
-    type: 'user',
+    type: 'user' as const,
     workspaceMemberId: 'member-1',
   };
 
-  beforeAll(() => {
-    const excModule = require('src/modules/executive-search/exceptions/executive-search.exception');
-    ExecutiveSearchException = excModule.ExecutiveSearchException;
-    ExecutiveSearchExceptionCode = excModule.ExecutiveSearchExceptionCode;
+  beforeEach(async () => {
+    mockFeatureFlagService = {
+      isFeatureEnabled: jest.fn(),
+    } as any;
 
-    mocks.featureFlagService = { isFeatureEnabled: jest.fn() };
-    mocks.aiContextFirewallService = {
+    mockAiContextFirewallService = {
       validateAiContextAllowlist: jest.fn().mockReturnValue([]),
       assertAiContextAllowlistSafe: jest.fn(),
-      filterProhibited: jest.fn((fields: string[]) => fields),
+      filterProhibited: jest
+        .fn()
+        .mockImplementation((fields: string[]) => fields),
     };
-    mocks.globalWorkspaceOrmManager = {
-      executeInWorkspaceContext: jest.fn((fn: any) => fn()),
+
+    mockGlobalWorkspaceOrmManager = {
+      executeInWorkspaceContext: jest
+        .fn()
+        .mockImplementation((fn: any) => fn()),
       getRepository: jest.fn(),
     };
-  });
 
-  beforeEach(() => {
-    jest.clearAllMocks();
-    mocks.globalWorkspaceOrmManager.executeInWorkspaceContext.mockImplementation(
-      (fn: any) => fn(),
-    );
-    const {
-      BoardMatrixEvaluationService: BMES,
-    } = require('../board-matrix-evaluation.service');
-    service = new BMES(
-      mocks.globalWorkspaceOrmManager,
-      mocks.featureFlagService,
-      mocks.aiContextFirewallService,
-    );
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [
+        BoardMatrixEvaluationService,
+        {
+          provide: FeatureFlagService,
+          useValue: mockFeatureFlagService,
+        },
+        {
+          provide: AiContextFirewallService,
+          useValue: mockAiContextFirewallService,
+        },
+        {
+          provide: GlobalWorkspaceOrmManager,
+          useValue: mockGlobalWorkspaceOrmManager,
+        },
+      ],
+    }).compile();
+
+    service = module.get(BoardMatrixEvaluationService);
   });
 
   const mockInput = {
@@ -96,15 +127,11 @@ describe('BoardMatrixEvaluationService', () => {
   };
 
   it('should throw when umbrella AI feature flag is disabled', async () => {
-    mocks.featureFlagService.isFeatureEnabled.mockResolvedValue(false);
+    mockFeatureFlagService.isFeatureEnabled.mockResolvedValue(false);
 
     await expect(
       service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-    ).rejects.toThrow(ExecutiveSearchException);
-
-    await expect(
-      service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-    ).rejects.toThrowError(
+    ).rejects.toThrow(
       expect.objectContaining({
         code: ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
       }),
@@ -112,17 +139,21 @@ describe('BoardMatrixEvaluationService', () => {
   });
 
   it('should throw when board matrix AI feature flag is disabled', async () => {
-    mocks.featureFlagService.isFeatureEnabled
+    mockFeatureFlagService.isFeatureEnabled
       .mockResolvedValueOnce(true)
       .mockResolvedValueOnce(false);
 
     await expect(
       service.evaluateCandidate(mockInput, mockWorkspaceId, mockAuthContext),
-    ).rejects.toThrow(ExecutiveSearchException);
+    ).rejects.toThrow(
+      expect.objectContaining({
+        code: ExecutiveSearchExceptionCode.FEATURE_FLAG_DISABLED,
+      }),
+    );
   });
 
   it('should successfully evaluate a candidate against criteria', async () => {
-    mocks.featureFlagService.isFeatureEnabled.mockResolvedValue(true);
+    mockFeatureFlagService.isFeatureEnabled.mockResolvedValue(true);
 
     const criteria = [
       {
@@ -159,7 +190,7 @@ describe('BoardMatrixEvaluationService', () => {
       find: jest.fn().mockResolvedValue([]),
     };
 
-    mocks.globalWorkspaceOrmManager.getRepository
+    mockGlobalWorkspaceOrmManager.getRepository
       .mockResolvedValueOnce(mockProfileRepo)
       .mockResolvedValueOnce(mockCandidacyRepo)
       .mockResolvedValueOnce(mockCriterionRepo)
@@ -181,9 +212,7 @@ describe('BoardMatrixEvaluationService', () => {
       find: jest.fn().mockResolvedValue([{ id: 'eval-1', notes: 'Test' }]),
       update: jest.fn().mockResolvedValue({}),
     };
-    mocks.globalWorkspaceOrmManager.getRepository.mockResolvedValue(
-      mockEvalRepo,
-    );
+    mockGlobalWorkspaceOrmManager.getRepository.mockResolvedValue(mockEvalRepo);
 
     await service.markHumanReviewComplete(
       'candidacy-1',

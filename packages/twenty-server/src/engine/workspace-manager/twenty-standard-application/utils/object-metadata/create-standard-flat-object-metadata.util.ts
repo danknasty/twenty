@@ -343,41 +343,6 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
-  externalEntityLink: ({
-    now,
-    workspaceId,
-    standardObjectMetadataRelatedEntityIds,
-    twentyStandardApplicationId,
-    dependencyFlatEntityMaps,
-  }: Omit<
-    CreateStandardObjectArgs<'externalEntityLink'>,
-    'context' | 'objectName'
-  >) =>
-    createStandardObjectFlatMetadata({
-      objectName: 'externalEntityLink',
-      dependencyFlatEntityMaps,
-      context: {
-        universalIdentifier:
-          STANDARD_OBJECTS.externalEntityLink.universalIdentifier,
-        nameSingular: 'externalEntityLink',
-        namePlural: 'externalEntityLinks',
-        labelSingular: i18nLabel(msg`External Entity Link`),
-        labelPlural: i18nLabel(msg`External Entity Links`),
-        description: i18nLabel(
-          msg`Links between Twenty records and external entity records`,
-        ),
-        icon: 'IconLink',
-        isSystem: true,
-        isSearchable: false,
-        isAuditLogged: false,
-        isUICreatable: false,
-        labelIdentifierFieldMetadataName: 'id',
-      },
-      workspaceId,
-      standardObjectMetadataRelatedEntityIds,
-      twentyStandardApplicationId,
-      now,
-    }),
   externalSyncCheckpoint: ({
     now,
     workspaceId,

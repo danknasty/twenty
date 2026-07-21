@@ -115,7 +115,6 @@ const STANDARD_FLAT_VIEW_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowRun: computeStandardWorkflowRunViewFields,
   workflowVersion: computeStandardWorkflowVersionViewFields,
   workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFields,
-  workspaceEventOutbox: computeStandardWorkspaceEventOutboxViewFields,
   workspaceMember: computeStandardWorkspaceMemberViewFields,
   searchEngagementTerms: computeStandardSearchEngagementTermsViewFields,
   searchAssignment: computeStandardSearchAssignmentViewFields,

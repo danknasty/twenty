@@ -43,6 +43,9 @@ import { RollbackService } from 'src/modules/executive-search/migration/services
 import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migration/resolvers/ambiguous-match-queue.resolver';
 import { ComputeAnalyticsMetricResolver } from 'src/modules/executive-search/resolvers/compute-analytics-metric.resolver';
 import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/services/compute-analytics-metric.service';
+import { AiDraftingResolver } from 'src/modules/executive-search/resolvers/ai-drafting.resolver';
+import { AiDraftingService } from 'src/modules/executive-search/services/ai-drafting.service';
+import { FirewallModule } from 'src/modules/executive-search/firewall/firewall.module';
 
 @Module({
   imports: [
@@ -59,6 +62,7 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
     TwentyORMModule,
     DirectusModule,
     WorkspaceEventEmitterModule,
+    FirewallModule,
   ],
   providers: [
     ReconciliationEngineRegistry,
@@ -92,6 +96,8 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
     AmbiguousMatchQueueResolver,
     ComputeAnalyticsMetricResolver,
     ComputeAnalyticsMetricService,
+    AiDraftingResolver,
+    AiDraftingService,
   ],
   exports: [
     ExecutiveSearchOutboxService,

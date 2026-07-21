@@ -10,6 +10,9 @@ export enum ExecutiveSearchExceptionCode {
   /** Reverting to a stage that is not behind the current stage. */
   CUTOVER_INVALID_REVERT = 'CUTOVER_INVALID_REVERT',
   METRIC_NOT_FOUND = 'METRIC_NOT_FOUND',
+  AI_KILL_SWITCH_ACTIVE = 'AI_KILL_SWITCH_ACTIVE',
+  INVALID_INPUT = 'INVALID_INPUT',
+  ENTITY_NOT_FOUND = 'ENTITY_NOT_FOUND',
 }
 
 export class ExecutiveSearchException extends Error {

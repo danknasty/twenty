@@ -43,6 +43,10 @@ import { RollbackService } from 'src/modules/executive-search/migration/services
 import { AmbiguousMatchQueueResolver } from 'src/modules/executive-search/migration/resolvers/ambiguous-match-queue.resolver';
 import { ComputeAnalyticsMetricResolver } from 'src/modules/executive-search/resolvers/compute-analytics-metric.resolver';
 import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/services/compute-analytics-metric.service';
+import { EvaluateBoardMatrixResolver } from 'src/modules/executive-search/resolvers/evaluate-board-matrix.resolver';
+import { BoardMatrixEvaluationService } from 'src/modules/executive-search/services/board-matrix-evaluation.service';
+import { SearchHealthAdvisoryResolver } from 'src/modules/executive-search/resolvers/search-health-advisory.resolver';
+import { SearchHealthAdvisoryService } from 'src/modules/executive-search/services/search-health-advisory.service';
 
 @Module({
   imports: [
@@ -92,6 +96,10 @@ import { ComputeAnalyticsMetricService } from 'src/modules/executive-search/serv
     AmbiguousMatchQueueResolver,
     ComputeAnalyticsMetricResolver,
     ComputeAnalyticsMetricService,
+    EvaluateBoardMatrixResolver,
+    BoardMatrixEvaluationService,
+    SearchHealthAdvisoryResolver,
+    SearchHealthAdvisoryService,
   ],
   exports: [
     ExecutiveSearchOutboxService,

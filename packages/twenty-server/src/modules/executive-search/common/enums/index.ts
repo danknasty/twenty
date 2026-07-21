@@ -63,3 +63,7 @@ export { PromptTemplateStatus } from './prompt-template-status.enum';
 export { ProviderCallStatus } from './provider-call-status.enum';
 export { AppAgentStatus } from './app-agent-status.enum';
 export { AppAgentCapability } from './app-agent-capability.enum';
+export { AiCapability } from './ai-capability.enum';
+export { AiDraftStatus } from './ai-draft-status.enum';
+export { CriterionAssessmentSource } from './criterion-assessment-source.enum';
+export { ShadowAssessmentStatus } from './shadow-assessment-status.enum';

@@ -1,0 +1,6 @@
+export enum ShadowAssessmentStatus {
+  PENDING_REVIEW = 'PENDING_REVIEW',
+  ACCEPTED = 'ACCEPTED',
+  MODIFIED = 'MODIFIED',
+  REJECTED = 'REJECTED',
+}
